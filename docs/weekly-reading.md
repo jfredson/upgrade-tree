@@ -130,6 +130,44 @@ missed is a `flagged` item, not a stage change, because dating the rung is John'
   `verify` claim is settled, when an upgrade seems to be missing or wrongly placed, or when a
   withdrawal or recount bears on a `top` entry.
 
+## The stage-agreement check with Outrunning Ageing
+
+Added 2026-10-17. Five of the lifespan-and-repair upgrades are shared with the sibling site
+Outrunning Ageing (outrunningageing.com), which asks when repair overtakes ageing and uses the
+same five-rung ladder with the same keys. Each site keeps its own record of those five; each
+entry here carries a `sibling` field naming the matching leaf there, and each leaf there names
+the entry here (its kickoff of 2026-10-16, "How it is built", item 7, ruled by John). Two records
+of one test can drift apart: a reading on one site moves a rung, a correction lands on one side
+only. The weekly reading is where the drift is caught.
+
+Every run, after the upgrades are read and before the reading record is written, the scanner
+runs `python3 scripts/sibling_check.py`. The script reads every upgrade here that carries a
+`sibling`, fetches the named leaf's record from the sibling's public repository
+(`github.com/jfredson/outrunning-ageing`, `data/leaves/<id>.toml`), and prints, per pair, both
+stages with their dates and records, and a verdict: agree, differ, or could not be read. It moves
+nothing. The reading then:
+
+- **when every pair agrees**: nothing more; the items for the five stand as the week's reading
+  gave them (a line in `found` saying the sibling agrees is welcome and not required);
+- **when a pair differs**: the item for that upgrade is `flagged`, whatever else the week held,
+  with `for_john` stating both stages, both dates and both records, which site moved and on
+  what, and that the scanner changed nothing; `sources` includes the leaf's page on Outrunning
+  Ageing (`https://outrunningageing.com/leaves/<id>/`). The scanner may not copy the sibling's
+  stage: a rung here moves on a record of the kind the entry names, and the other site's record
+  is not that, however right it may be. If the week's own reading moved the stage here (a
+  `stage-change` item), the move stands and the item keeps that verdict, with a sentence in
+  `found` saying the sibling is now a rung behind; the next run flags it if it still differs;
+- **when a leaf could not be read** (the network, a moved file, a renamed id): the item is
+  `flagged` with the script's message in `for_john`, since an id that no longer resolves is a
+  broken link on a public page and John's to fix.
+
+The comparison is of stages only, which share their keys. Dates there are text and may be a
+year or a year-month where a record settles no finer; the write-up quotes them as written.
+
+John rules after the fact, as for any flagged item: by moving the rung here with a dated
+revision when the sibling is right, or by opening an issue on the sibling repository when it is
+wrong. The check does not write to the other site.
+
 ## The reading record
 
 One file per run, `data/readings/YYYY-MM-DD.toml`, appended and never edited. The layout is in
@@ -172,6 +210,9 @@ can change without touching the task. The steps, in brief:
    current stage into `earlier_stages` with its date and record; append the revision marked
    `[reading YYYY-MM-DD]`. Run `python3 scripts/export.py --check` after every edit; if it fails,
    revert that file and flag the item with the error.
+2a. **Compare the five shared entries with Outrunning Ageing** (added 2026-10-17): run
+   `python3 scripts/sibling_check.py` and apply "The stage-agreement check" above: a pair that
+   differs, or a leaf that could not be read, makes that upgrade's item `flagged`; nothing moves.
 3. **Write the reading record.**
 4. **Changelog**: one line under today's heading, in the form "Weekly reading (scheduled task,
    YYYY-MM-DD): N upgrades read, M moved, F flagged for John; record at
@@ -242,6 +283,24 @@ ruled yet unless the line says so.
     stage whenever the record qualifies, whatever its date. Faster, and the first audit should
     decide whether the distinction earns its place; if every missed record turns out to be a
     clean one-rung move, drop the rule.
+
+12. **The stage-agreement check with Outrunning Ageing is a step of the reading, done by a
+    script, and a disagreement is a flagged item, never a move.** *Proposed 2026-10-17; waits on
+    John.* High confidence that the check belongs in the reading and not in the validator: both
+    sites' layouts say so (a build on GitHub has no copy of the other repository), and the
+    sibling's kickoff item 7 names the weekly reading as the place. Moderate on the two
+    judgment calls inside it. First, a small script (`scripts/sibling_check.py`) rather than a
+    paragraph telling a fresh session what to fetch and compare: the script is testable, prints
+    the same table every week, and cannot misread a TOML date; it costs one more file to keep.
+    Alternative: the instruction in prose only, which is what the sibling's layout document
+    assumes and is one less script. Second, a disagreement is `flagged` rather than a copy of
+    the sibling's stage: the kickoff says the reading "files a held-steady or a move on both when
+    they do not" agree, but on this side a rung moves only on a record of the kind the entry
+    names, and the other site's record is not that; so the reading flags and John moves. The
+    cost is a ruling from John for every real drift, which should be rare, since both sites
+    read the same news. Alternative: let the scanner copy a one-rung move across when the
+    sibling's `stage_record` is a record of the kind this entry's `source` names; faster, and
+    the first audit can say whether the flags were all clean copies.
 
 ## Deferred, and why
 
