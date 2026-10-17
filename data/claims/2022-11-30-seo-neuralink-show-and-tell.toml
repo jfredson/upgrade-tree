@@ -16,7 +16,7 @@ from South Korea at 13, which fits Seo. Attribution rests on that, not on a spea
 transcript. The passage runs 37:19 to 40:10."""
 source_url = "https://www.youtube.com/watch?v=YreDYmXTYi4"
 source_locator = "37:19 to 40:10"
-checked_how = "Automatic captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account, except that in one run of the program the word bandwidth in the quoted question came out as 'bandless' (in a second run it came out as bandwidth, as in the captions). No person has listened to the recording."
+checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one."
 words = "how do you create a high bandwidth generalized interface to the brain"
 words_locator = "at 39:14 to 39:22"
 claimed = """
@@ -29,6 +29,8 @@ expanded. He does not say merge or symbiosis; the Matrix line is framed as a chi
 not a timeline."""
 bears_on = ["link", "mind"]
 bears_on_note = "The link to machines; memory and thinking (download-style learning is the long-shot version)."
-verify = [
-  "No person has listened to the passage (37:19 to 40:10); the words rest on automatic captions and a separate machine transcription, which agree apart from the one word noted above. Listen once to settle that word.",
-]
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-10-17
+whisper_model = "mlx-community/whisper-large-v3-turbo"

@@ -13,7 +13,7 @@ The Forum's recording, YouTube video id hL9uk4hKyg4 (World Economic Forum channe
 to 5:56, 7:20 to 7:45 and 13:29 to 14:00."""
 source_url = "https://www.youtube.com/watch?v=hL9uk4hKyg4"
 source_locator = "4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00"
-checked_how = "Automatic captions only (the recording has no human-made subtitle track and no Forum transcript was found). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words, on all three passages (within about three seconds of the captions' times) and on the account, and the word hackable occurs nowhere in the talk. No person has listened to the recording."
+checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track and no Forum transcript was found) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 4:56 and Whisper at 4:56. An earlier pass the same day, over the whole recording, also agreed on the other two passages (within about three seconds of the captions' times) and found the word hackable nowhere in the talk. No person has listened to the recording; the project's rule does not need one."
 words = "we can hack not just computers we can hack human beings"
 words_locator = "at 4:55 to 5:03"
 claimed = """
@@ -28,6 +28,8 @@ may, if indeed we succeed."""
 bears_on = ["mind", "mood", "inheritance"]
 bears_on_note = "Memory and thinking, and mood and drive (the claim is about reading and steering people, not implanting them); inheritance (re-engineering life)."
 paraphrase = { repeated = "Humans are now hackable animals.", seen = "Widely quoted.", differs = "Not in this recording (the word hackable occurs nowhere in it, in the captions or in a second machine transcription of the whole talk). The 2018 wording is hack human beings. The hackable-animals phrasing belongs to his later talks. His Davos address of 2020-01-23 (\"How to Survive the 21st Century\", video id eOsKFOrW5h8) gives the formula of biological knowledge times computing power times data equals the ability to hack humans, at about 10:35 to 11:05, and then, at about 12:13, says \"We are now hackable animals.\" That is very probably where the circulating phrase comes from. The earlier version of this note said the word was absent from that talk; it was not, the automatic captions render it as \"packable\" (corrected 2026-10-17 from a transcription of the audio; no person has listened to that passage either). The 2020 talk is a different occasion and is not entered as a claim.", primary_found = true }
-verify = [
-  "No person has listened to the three passages (4:55 to 5:56, 7:20 to 7:45, 13:29 to 14:00); the words rest on automatic captions and one separate machine transcription, which agree.",
-]
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-10-17
+whisper_model = "mlx-community/whisper-large-v3-turbo"
