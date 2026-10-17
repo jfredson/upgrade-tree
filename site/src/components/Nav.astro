@@ -3,15 +3,16 @@
 // section 6): the spine of the site in heavier ink, the reference pages lighter after a rule,
 // the theme toggle last. Collapses to a menu on small screens. Copied from The Belt Equation's
 // Nav.astro on 2026-10-16. The page names follow the tracker pattern John ruled the same day:
-// the spine is Home, Branches and the story so far; the method page and the disagree page sit
-// in the lighter tier. "This week's reading" joins the spine once a weekly scan exists. "The
-// claims" joined the spine on 2026-10-16 (tracker pattern rule 4.6: the page a site is built
-// around sits in the heavier tier).
+// the spine is Home, Branches, the claims, this week's reading and the story so far; the method
+// page and the disagree page sit in the lighter tier. "This week's reading" joined the spine on
+// 2026-10-16 with the first weekly reading (docs/weekly-reading.md), and "The claims" the same
+// day (tracker pattern rule 4.6: the page a site is built around sits in the heavier tier).
 const path = Astro.url.pathname;
 const primary = [
   { href: '/', label: 'Home' },
   { href: '/branches/', label: 'Branches' },
   { href: '/claims/', label: 'The claims' },
+  { href: '/reading/', label: "This week's reading" },
   { href: '/story/', label: 'The story so far' },
 ];
 const secondary = [
@@ -66,7 +67,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       if (e.target.closest('a')) setOpen(false);
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 820) setOpen(false);
+      if (window.innerWidth > 1320) setOpen(false); // the bar collapses up to 1320 on this site (global.css, the top bar with seven page names)
     });
   })();
 </script>
@@ -76,12 +77,12 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     var btn = document.querySelector('.theme-toggle');
     if (!btn) return;
     var meta = document.getElementById('theme-color-meta');
-    var COLORS = { dark: '#08070f', light: '#faf9f7' };
+    var COLORS = { dark: '#141a18', light: '#f3eee3' };
     function sync(theme) {
       document.documentElement.dataset.theme = theme;
       if (meta) meta.setAttribute('content', COLORS[theme] || COLORS.dark);
     }
-    sync(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+    sync(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
     btn.addEventListener('click', function () {
       var next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       try { localStorage.setItem('theme', next); } catch (e) {}

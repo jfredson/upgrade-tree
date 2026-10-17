@@ -1,70 +1,24 @@
 /* ---------------------------------------------------------------
-   Sentient Horizons design standard · "Deep Field"
-   deep-field.css version 1.3.0 (2026-10-08): the "with Claude" link style removed with the link itself
-   Canonical copy: sentient-horizons/design/deep-field.css. Sites copy this
-   file unchanged and add their own styles below it; see design/README.md.
-   Near-black cosmic field, warm-white serif, amber accent; a warm-paper
-   light theme ("Day Field") with the accents deepened.
+   The Upgrade Tree · stylesheet (2026-10-16)
+   Three parts, in order: the skin (skin.css, this site's own tokens for
+   both themes, ruled 2026-10-16), the skeleton (shell.css version 2.0.1
+   from sentient-horizons/design, copied unchanged below), and this site's
+   own rules after the marked line. Never edit the skeleton here; update
+   the copy when the standard changes.
    --------------------------------------------------------------- */
-:root {
-  --bg: #08070f;
-  --bg-soft: #0c0b16;
-  --panel: #110f20;
-  --text: #f2eee7;
-  --text-soft: #d7d2c7;
-  --muted: #968fa3;
-  --line: rgba(255, 255, 255, 0.10);
-  --line-strong: rgba(255, 255, 255, 0.18);
-  --accent: #e3a96b;      /* galaxy-core amber */
-  --accent-2: #9b7bc0;    /* nebula violet */
-  --accent-3: #6fb6c9;    /* cool arm / data */
-  --on-accent: #1a1206;
-  --accent-hover: #efb87d;
-  --glow: rgba(155, 123, 192, 0.45);
-  --header-bg: rgba(8, 7, 15, 0.72);
-  --hover-bg: rgba(255, 255, 255, 0.06);
-  --active-bg: rgba(255, 255, 255, 0.08);
-  --chip-bg: rgba(255, 255, 255, 0.03);
-  --callout-bg: rgba(155, 123, 192, 0.10);
-  --ok: #7fc48a;
-  --no: #d98a7a;
-  --star: #fff;
-  --radius: 11px;
-  --maxw: 1080px;
-  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-  --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-}
+@import './skin.css';
 
-/* Light mode — "Day Field": warm paper, near-black ink, deepened accents. */
-:root[data-theme='light'] {
-  --bg: #faf9f7;
-  --bg-soft: #f1efea;
-  --panel: #ffffff;
-  --text: #1a1916;
-  --text-soft: #34322d;
-  --muted: #6b665e;
-  --line: rgba(23, 21, 18, 0.11);
-  --line-strong: rgba(23, 21, 18, 0.18);
-  --accent: #4a4566;
-  --accent-2: #6d4f96;
-  --accent-3: #2f7c90;
-  --on-accent: #fbfaf8;
-  --accent-hover: #5b5580;
-  --link: #5b4a7e;
-  --link-hover: #6d4f96;
-  --glow: rgba(74, 69, 102, 0.16);
-  --header-bg: rgba(250, 249, 247, 0.86);
-  --hover-bg: rgba(23, 21, 18, 0.05);
-  --active-bg: rgba(23, 21, 18, 0.08);
-  --chip-bg: transparent;
-  --callout-bg: rgba(74, 69, 102, 0.06);
-  --ok: #2f7c4a;
-  --no: #a5432f;
-  --star: #c9bfa8;
-  --radius: 5px;
-}
-
+/* ---------------------------------------------------------------
+   Sentient Horizons design standard · the skeleton
+   shell.css version 2.0.1 (2026-10-16): split out of deep-field.css 1.3.0; light-theme button text fixed.
+   What every site shares and a reader learns once: the base, the links,
+   the page width, the top bar, the type roles and heading scale, the
+   layout helpers, buttons, chips, callouts, tables, the footer and the
+   responsive rules. It defines no colour: every colour here is a token
+   that the site's skin (design/skins/<name>.css) supplies. A site copies
+   this file and one skin, in that order, into its own stylesheet and adds
+   its own rules below a marked line; see design/README.md.
+   --------------------------------------------------------------- */
 * { box-sizing: border-box; }
 /* The hidden attribute must win over component display rules (e.g. .run-out { display: flex }). */
 [hidden] { display: none !important; }
@@ -94,32 +48,6 @@ code { font-family: var(--mono); font-size: 0.88em; color: var(--text-soft); bac
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 26px; position: relative; z-index: 1; }
 .narrow { max-width: 760px; }
 
-/* ---- cosmic backdrop (top band; scrolls away so reading is calm) ---- */
-.space-bg {
-  position: absolute; top: 0; left: 0; right: 0; height: 760px; z-index: 0;
-  overflow: hidden; pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
-}
-.space-bg .galaxy {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(46% 58% at 80% 26%, rgba(227, 169, 107, 0.22), transparent 46%),
-    radial-gradient(62% 78% at 76% 25%, rgba(155, 123, 192, 0.24), transparent 60%),
-    radial-gradient(100% 120% at 72% 22%, rgba(70, 105, 165, 0.16), transparent 78%);
-}
-.space-bg .core {
-  position: absolute; right: 7%; top: 90px; width: 400px; height: 400px; border-radius: 50%;
-  filter: blur(34px); opacity: 0.6;
-  background: conic-gradient(from 210deg,
-    rgba(227, 169, 107, 0.20), rgba(155, 123, 192, 0.12),
-    rgba(70, 105, 165, 0.06), rgba(155, 123, 192, 0.12), rgba(227, 169, 107, 0.20));
-}
-.starfield { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.starfield span { position: absolute; border-radius: 50%; background: var(--star); }
-@keyframes twk { 0%, 100% { opacity: 0.14; } 50% { opacity: 0.95; } }
-@media (prefers-reduced-motion: reduce) { .starfield span { animation: none !important; } }
-:root[data-theme='light'] .space-bg { display: none; }
 
 /* ---- header / nav ---- */
 .site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: var(--header-bg); backdrop-filter: blur(10px); }
@@ -188,6 +116,10 @@ a.dim:hover { color: var(--accent); }
 .btn:hover { color: var(--on-accent); filter: brightness(1.08); }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn.ghost:hover { background: var(--accent); color: var(--on-accent); }
+/* the light theme's link colour must not reach into buttons (the rule above for `a` outranks .btn) */
+:root[data-theme='light'] a.btn { color: var(--on-accent); }
+:root[data-theme='light'] a.btn.ghost { color: var(--accent); }
+:root[data-theme='light'] a.btn.ghost:hover { color: var(--on-accent); }
 .ctas { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 4px; }
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .chip { display: inline-block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.02em; border: 1px solid var(--line); border-radius: 20px; padding: 3px 10px; color: var(--muted); background: var(--chip-bg); white-space: nowrap; }
@@ -237,14 +169,23 @@ a.dim:hover { color: var(--accent); }
 }
 
 /* ===============================================================
-   Everything above this line is deep-field.css version 1.3.0 (2026-10-08), copied
-   unchanged from sentient-horizons/design/deep-field.css on 2026-10-16.
-   Everything below is The Upgrade Tree's own. Every colour is a token; the site's
-   data colour is --accent-3, never amber (design standard, sections 4 and 9).
+   Everything above this line is shell.css version 2.0.1 (2026-10-16), copied
+   unchanged from sentient-horizons/design/shell.css on 2026-10-16; the tokens it
+   uses come from skin.css. Everything below is The Upgrade Tree's own. Every
+   colour is a token; data is shaded with --accent-3 (design standard, sections
+   3a, 4 and 9).
    =============================================================== */
 
+/* ---- the paper (the Plate skin, ruled 2026-10-16) ----
+   A faint grain over the light theme so the ground reads as paper rather than a white screen. */
+:root[data-theme='light'] body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.35;
+  background-image: radial-gradient(rgba(28, 26, 22, 0.06) 0.6px, transparent 0.7px); background-size: 3px 3px; }
+
 /* ---- home: the question, the figure, the count (2026-10-16) ---- */
-.figure-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 20px 18px 14px; }
+/* The figure stands on the page like a plate in an anatomy book: a double rule above and
+   below, a plate label, no card (the Plate skin, ruled 2026-10-16). */
+.figure-card { border-top: 3px double var(--line-strong); border-bottom: 3px double var(--line-strong); padding: 18px 6px 14px; }
+.figure-card .plate-label { margin: 0 0 10px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-align: center; }
 .figure-card svg { display: block; width: 100%; height: auto; max-width: 360px; margin: 0 auto; }
 .figure-card .legend { list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
 .figure-card .legend li { display: flex; align-items: center; gap: 6px; }
@@ -254,7 +195,7 @@ a.dim:hover { color: var(--accent); }
 /* The human figure: one shaded region per branch, deeper as the furthest stage rises.
    Nothing recorded yet is a grey outline. Hover and focus lift the region. */
 .figure .region { cursor: pointer; }
-.figure .region path, .figure .region circle, .figure .region rect, .figure .region ellipse { fill: var(--line); stroke: var(--line-strong); stroke-width: 1.5; transition: fill 0.2s ease, stroke 0.2s ease; }
+.figure .region path, .figure .region circle, .figure .region rect, .figure .region ellipse { fill: var(--line); stroke: var(--text-soft); stroke-width: 1.4; transition: fill 0.2s ease, stroke 0.2s ease; }
 .figure .region.stage-0 * { fill: color-mix(in srgb, var(--accent-3) 18%, transparent); }
 .figure .region.stage-1 * { fill: color-mix(in srgb, var(--accent-3) 36%, transparent); }
 .figure .region.stage-2 * { fill: color-mix(in srgb, var(--accent-3) 56%, transparent); }
@@ -262,8 +203,8 @@ a.dim:hover { color: var(--accent); }
 .figure .region.stage-4 * { fill: var(--accent-3); }
 .figure .region:hover *, .figure .region:focus-visible * { stroke: var(--text); }
 .figure .region:focus-visible { outline: none; }
-.figure .outline { fill: none; stroke: var(--line-strong); stroke-width: 1.5; }
-.figure .wire { fill: none; stroke: var(--line-strong); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.figure .outline { fill: none; stroke: var(--text-soft); stroke-width: 1.4; }
+.figure .wire { fill: none; stroke: var(--text-soft); stroke-width: 1.4; stroke-dasharray: 3 3; }
 .figure .label { font-family: var(--sans); font-size: 9px; fill: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; pointer-events: none; }
 .figure .label.bright { fill: var(--text-soft); }
 .legend i.stage-none { background: var(--line); }
@@ -476,3 +417,111 @@ a.dim:hover { color: var(--accent); }
   .chart-note { text-align: left; }
   .claim-words p { font-size: 19px; }
 }
+/* ---- the top bar with seven page names (2026-10-16) ----
+   The tracker pattern's public names are long, and with "This week's reading" and "The claims"
+   in the spine the seven links no longer sit on one line beside the brand at 1280 pixels. Below
+   1320 the links are set tighter and the brand stops wrapping, and the bar collapses behind the
+   menu button, as The Quiet Galaxy's does, by repeating the standard's collapse rules for that
+   band (the threshold was 1080 with six names; with "The claims" added the same evening it is
+   1320, so a 1280-pixel laptop gets the menu button rather than a wrapped bar). Nothing above
+   the marked line is changed. */
+@media (max-width: 1320px) {
+  .brand { white-space: nowrap; }
+  .navlinks { gap: 2px; }
+  .navlinks a { padding: 6px 8px; letter-spacing: 0.02em; }
+  .nav-divider { margin: 0 4px; }
+  .theme-toggle { margin-left: 4px; }
+}
+@media (max-width: 1320px) and (min-width: 821px) {
+  .nav-toggle { display: inline-flex; }
+  .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; padding: 8px 26px 16px; background: var(--header-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-header.nav-open .navlinks { display: flex; }
+  .navlinks a { padding: 11px 6px; border-radius: 6px; font-size: 15px; text-align: right; }
+  .navlinks a.nav-secondary { font-size: 15px; }
+  .nav-divider { display: none; }
+  .theme-toggle { margin: 10px 0 0; }
+}
+
+/* ---- the weekly reading: verdict badges, cards, the key, an upgrade page's last readings ----
+   Copied from The Belt Equation's site/src/styles/global.css (its Radar page) on 2026-10-16, the
+   tracker pattern's section 7.1, with the five verdicts cut to this site's four. Every colour is a
+   token; "noted" is shaded with --accent-3 like the rest of this site's data, never amber. */
+.badge { display: inline-block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.02em; border: 1px solid var(--line-strong); border-radius: 20px; padding: 2px 10px; color: var(--muted); background: var(--chip-bg); white-space: nowrap; }
+.badge.v-quiet { color: var(--muted); }
+.badge.v-noted { color: var(--accent-3); border-color: color-mix(in srgb, var(--accent-3) 55%, transparent); }
+.badge.v-stage-change { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 60%, transparent); }
+.badge.v-flagged { color: var(--accent-2); border-color: color-mix(in srgb, var(--accent-2) 60%, transparent); }
+.badge.v-test { color: var(--muted); border-style: dashed; }
+.scan-strip .strip-test { display: block; margin-top: 2px; font-size: 12.5px; font-style: italic; }
+
+.test-callout { border-left-color: var(--muted); margin-bottom: 20px; }
+.scan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
+.scan-facts { flex: 1 1 380px; }
+.scan-line { margin: 0 0 6px; font-family: var(--sans); font-size: 20px; font-weight: 500; line-height: 1.3; color: var(--text); }
+.scan-meta { margin: 0; font-size: 13px; font-family: var(--sans); line-height: 1.6; }
+.verdict-counts { display: flex; gap: 6px; flex-wrap: wrap; align-items: flex-start; }
+.waiting { border: 1px solid color-mix(in srgb, var(--accent-2) 45%, transparent); border-left-width: 3px; border-radius: var(--radius); background: var(--panel); padding: 16px 20px; margin-bottom: 26px; }
+.waiting h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); margin: 0 0 6px; }
+.waiting > p { margin: 0 0 10px; font-size: 14px; }
+.waiting-list { list-style: none; margin: 0; padding: 0; }
+.waiting-list li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.waiting-list li p { margin: 4px 0 0; color: var(--text-soft); font-size: 14.5px; }
+.link-group { margin-bottom: 26px; }
+.link-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.link-head h3 { font-family: var(--sans); font-size: 16px; font-weight: 600; margin: 0; }
+.link-head h3 a { color: var(--text); text-decoration: none; }
+.link-head h3 a:hover { color: var(--accent); }
+.link-head span { font-family: var(--sans); font-size: 13px; }
+.scan-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+.scan-card { border: 1px solid var(--line); border-left: 3px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); padding: 15px 17px; display: flex; flex-direction: column; gap: 9px; }
+.scan-card.v-noted { border-left-color: var(--accent-3); }
+.scan-card.v-stage-change { border-left-color: var(--ok); }
+.scan-card.v-flagged { border-left-color: var(--accent-2); }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.card-name { font-size: 15.5px; line-height: 1.3; color: var(--text); text-decoration: none; }
+.card-name:hover { color: var(--accent); }
+.card-move { margin: 0; font-family: var(--sans); font-size: 13.5px; color: var(--ok); }
+.card-found { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); }
+.card-john { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); border-left: 2px solid var(--accent-2); padding-left: 10px; }
+.card-foot { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; font-family: var(--sans); font-size: 12.5px; margin-top: auto; padding-top: 4px; }
+.card-sources a { margin-right: 10px; }
+.card-queries { font-size: 12.5px; color: var(--muted); }
+.card-queries summary { cursor: pointer; }
+.card-queries ul { margin: 6px 0 0; padding-left: 1.2em; }
+.card-queries li { margin: 2px 0; }
+.verdict-key { border-top: 1px solid var(--line); padding-top: 16px; }
+.verdict-key h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.verdict-key dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 0; font-size: 14.5px; }
+.verdict-key dt { white-space: nowrap; }
+.verdict-key dd { margin: 0; color: var(--text-soft); }
+
+.old-scan { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 12px 16px; margin-bottom: 8px; }
+.old-scan summary { cursor: pointer; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; color: var(--text-soft); list-style: none; }
+.old-scan summary::-webkit-details-marker { display: none; }
+.old-scan summary::after { content: '\25B8'; margin-left: auto; color: var(--muted); }
+.old-scan[open] summary::after { content: '\25BE'; }
+.old-date { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.old-items { list-style: none; margin: 12px 0 0; padding: 0; }
+.old-items li { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.old-items li p { grid-column: 2; margin: 0; color: var(--text-soft); font-size: 14px; }
+
+.checks { list-style: none; margin: 0 0 1.1em; padding: 0; }
+.checks li { border-bottom: 1px solid var(--line); }
+.checks summary { cursor: pointer; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 10px 0; font-family: var(--sans); font-size: 14px; color: var(--text-soft); list-style: none; }
+.checks summary::-webkit-details-marker { display: none; }
+.checks summary::after { content: '\25B8'; margin-left: auto; color: var(--muted); }
+.checks details[open] summary::after { content: '\25BE'; }
+.checks summary:hover { color: var(--text); }
+.check-date { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.check-body { padding: 0 0 12px 2px; font-size: 15px; line-height: 1.6; }
+.check-body p { margin: 0 0 6px; }
+.check-body a { margin-right: 10px; font-family: var(--sans); font-size: 13px; }
+.home-meta { font-family: var(--sans); font-size: 13px; margin-top: 30px; }
+.home-meta .sep { margin: 0 8px; color: var(--line-strong); }
+
+@media (max-width: 720px) {
+  .scan-cards { grid-template-columns: 1fr; }
+  .verdict-key dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .verdict-key dd { margin-bottom: 10px; }
+}
+

@@ -1,0 +1,206 @@
+---
+// This week's reading: every weekly check of the upgrades against the news, every verdict
+// (docs/weekly-reading.md). Once a week a fresh session reads each upgrade's test against what
+// the world did that week and writes a record to data/readings/; the export script checks it
+// and hands it to this page. The point of showing all of it, including the weeks where nothing
+// happened, is that a reader can watch the tree being watched instead of taking it on faith.
+//
+// Copied from The Belt Equation's site/src/pages/radar.astro on 2026-10-16 (the tracker
+// pattern's section 7.1), with the Belt Equation's five verdicts cut to this site's four and
+// its chain-link groups replaced by the seven branches. The public name is the tracker
+// pattern's, "This week's reading"; the address is /reading/.
+import Base from '../layouts/Base.astro';
+import { tree, longDate } from '../lib/tree';
+import {
+  readings, latestReading, verdictLabel, verdictMeaning, scopeLabel, readingSummary, plainCount, ranAtLabel,
+  type Reading, type ReadingItem, type Verdict,
+} from '../lib/readings';
+
+const VERDICT_ORDER: Verdict[] = ['stage-change', 'flagged', 'noted', 'quiet'];
+const older = readings.readings.slice(1);
+const waiting = readings.waiting_on_john;
+
+// Items grouped by branch, in the order the home page lists the branches.
+function groupByBranch(reading: Reading): { key: string; name: string; path: string; items: ReadingItem[] }[] {
+  return tree.branches
+    .map((b) => ({ key: b.key, name: b.name, path: b.path, items: reading.items.filter((i) => i.branch === b.key) }))
+    .filter((g) => g.items.length > 0);
+}
+
+const groups = latestReading ? groupByBranch(latestReading) : [];
+const description = latestReading
+  ? `The Upgrade Tree's weekly reading: ${readingSummary(latestReading)} on ${longDate(latestReading.date)}. Every upgrade checked, what was searched, what was found, and the verdict.`
+  : "The Upgrade Tree's weekly reading of the upgrades against the news. The first reading has not run yet.";
+---
+
+<Base title="This week's reading — The Upgrade Tree" description={description}>
+  <section class="hero">
+    <p class="eyebrow">This week's reading</p>
+    <h1>Every upgrade, checked against the news every week</h1>
+    <p class="lede">
+      Each upgrade on the tree carries a test that says exactly what would count as a person having it, and a
+      line saying what kind of public record settles that. Once a week a fresh session searches for what the
+      world did against each of those tests and writes down what it found, whether or not anything moved.
+    </p>
+    <p class="dim" style="font-size: 14px;">
+      The reading may move an upgrade up one stage when a record of the kind the upgrade itself names shows the
+      next stage reached. It may not move a stage on press coverage alone, change a test, or clear a claim still
+      to be checked; anything like that it leaves for me and says so. Each record is a file in the repository,
+      written once and never edited; the site refuses to build if one of them does not add up. The procedure is
+      in the repository at <code>docs/weekly-reading.md</code>.
+    </p>
+  </section>
+
+  {!latestReading && (
+    <section class="section narrow">
+      <div class="callout">
+        <h3>No reading yet</h3>
+        <p>
+          The first weekly reading has not run. When it does, this page fills with what it read and what it
+          found.
+        </p>
+      </div>
+    </section>
+  )}
+
+  {latestReading && (
+    <section class="section">
+      <div class="shead">
+        <h2>The latest reading</h2>
+        <span>{longDate(latestReading.date)}, reading {scopeLabel[latestReading.scope]}</span>
+      </div>
+
+      {latestReading.test && (
+        <div class="callout test-callout">
+          <h3>This is a test record, not a real reading</h3>
+          <p>
+            Nothing in it happened. It was written by hand so that this page, the home page and the upgrade pages
+            had something to show before the first real reading ran. No stage was changed on the strength of it.
+          </p>
+        </div>
+      )}
+
+      <div class="scan-head">
+        <div class="scan-facts">
+          <p class="scan-line">{readingSummary(latestReading)}.</p>
+          <p class="dim scan-meta">
+            {latestReading.searches} searches across {latestReading.upgrades_read} upgrade{latestReading.upgrades_read === 1 ? '' : 's'},
+            read against the record as it stood that day (<a href={`https://github.com/jfredson/upgrade-tree/tree/${latestReading.commit_before}`} rel="noopener">this version</a>),
+            {latestReading.by === 'hand' ? ' done by hand in a working session' : ' by the scheduled task'}. The run finished {ranAtLabel(latestReading)}.
+            The record is <code>data/readings/{latestReading.file}</code>.
+          </p>
+        </div>
+        <div class="verdict-counts">
+          {VERDICT_ORDER.filter((v) => latestReading.counts[v] > 0).map((v) => (
+            <span class={`badge v-${v}`}>{latestReading.counts[v]} · {verdictLabel[v]}</span>
+          ))}
+        </div>
+      </div>
+
+      {waiting.length > 0 && (
+        <div class="waiting">
+          <h3>Waiting on me</h3>
+          <p class="dim">
+            {plainCount(waiting.length)} thing{waiting.length === 1 ? '' : 's'} the reading found and was not allowed to act on by
+            itself. Each stays on this list until a later reading checks that upgrade again, or a change to the
+            entry names this reading.
+          </p>
+          <ul class="waiting-list">
+            {waiting.map((w) => (
+              <li>
+                <a href={w.path}>{w.upgrade_name}</a>
+                <span class="dim"> · {w.branch_name} · flagged {longDate(w.reading_date)}{w.test ? ', in the test record' : ''}</span>
+                <p>{w.for_john}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {groups.map((g) => (
+        <div class="link-group">
+          <div class="link-head">
+            <h3><span class="dim">Branch: </span><a href={g.path}>{g.name}</a></h3>
+            <span class="dim">{g.items.length} upgrade{g.items.length === 1 ? '' : 's'} read</span>
+          </div>
+          <div class="scan-cards">
+            {g.items.map((item) => (
+              <article class={`scan-card v-${item.verdict}`}>
+                <div class="card-top">
+                  <a class="card-name" href={item.path}>{item.upgrade_name}</a>
+                  <span class={`badge v-${item.verdict}`}>{item.picked_up ? 'Ruled' : verdictLabel[item.verdict]}</span>
+                </div>
+                {item.verdict === 'stage-change' && (
+                  <p class="card-move"><strong>{item.moved_from_label}</strong> to <strong>{item.moved_to_label}</strong></p>
+                )}
+                <p class="card-found">{item.found}</p>
+                {item.for_john && (
+                  <p class="card-john"><strong>For me:</strong> {item.for_john}</p>
+                )}
+                {item.picked_up && (
+                  <p class="card-john dim">Taken off my list on {longDate(item.picked_up.on)}, by {item.picked_up.how}.</p>
+                )}
+                <div class="card-foot">
+                  {item.sources.length > 0 && (
+                    <span class="card-sources">
+                      {item.sources.map((s, i) => (
+                        <a href={s} rel="noopener nofollow">source {item.sources.length > 1 ? i + 1 : ''}</a>
+                      ))}
+                    </span>
+                  )}
+                  <details class="card-queries">
+                    <summary>What was searched</summary>
+                    <ul>{item.queries.map((q) => <li>{q}</li>)}</ul>
+                  </details>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="verdict-key">
+        <h3>What the four verdicts mean</h3>
+        <dl>
+          {VERDICT_ORDER.map((v) => (
+            <>
+              <dt><span class={`badge v-${v}`}>{verdictLabel[v]}</span></dt>
+              <dd>{verdictMeaning[v]}</dd>
+            </>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )}
+
+  {older.length > 0 && (
+    <section class="section">
+      <div class="shead"><h2>Earlier readings</h2><span>{older.length} of them, newest first</span></div>
+      {older.map((reading) => (
+        <details class="old-scan">
+          <summary>
+            <span class="old-date">{longDate(reading.date)}</span>
+            <span class="old-sum">{readingSummary(reading)}</span>
+            {reading.test && <span class="badge v-test">Test record</span>}
+          </summary>
+          <ul class="old-items">
+            {reading.items.map((item) => (
+              <li>
+                <span class={`badge v-${item.verdict}`}>{verdictLabel[item.verdict]}</span>
+                <a href={item.path}>{item.upgrade_name}</a>
+                <p>{item.found}</p>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </section>
+  )}
+
+  <p class="dim home-meta">
+    {readings.counts.readings === 0
+      ? 'No reading has run yet.'
+      : `${readings.counts.readings} reading${readings.counts.readings === 1 ? '' : 's'} on the record, ${readings.counts.items} upgrade check${readings.counts.items === 1 ? '' : 's'} in all${readings.counts.test_readings ? `, ${readings.counts.test_readings} of them a hand-made test record` : ''}.`}
+    <span class="sep">|</span><a href="/branches/">The branches</a><span class="sep">|</span><a href="/story/">The story so far</a>
+  </p>
+</Base>

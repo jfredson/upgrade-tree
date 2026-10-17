@@ -69,6 +69,8 @@ export type Upgrade = {
   breaking_point: string | null;
   revisions: Revision[];
   verify: string[];
+  /** Extra search terms for the weekly reading; a search aid only. */
+  watch: string[];
   notes: string | null;
   example: boolean;
 };
@@ -90,7 +92,19 @@ export type Tree = {
     branches_with_upgrades: number;
     to_verify: number;
   };
-  last_checked: string | null;
+  /** The latest weekly reading, or null before the first one (scripts/export.py, export_readings). */
+  last_checked: {
+    date: string;
+    scope: 'weekly' | 'monthly';
+    by: 'hand' | 'scheduled';
+    test: boolean;
+    upgrades_read: number;
+    moved: number;
+    flagged: number;
+    noted: number;
+    flagged_waiting: number;
+    movers: { id: string; name: string; path: string; moved_to_label: string | null }[];
+  } | null;
 };
 
 export type Changelog = { source: string; intro: string; days: { date: string; items: string[] }[] };

@@ -8,12 +8,24 @@
 // Every number comes from tree.json (scripts/export.py).
 import Base from '../layouts/Base.astro';
 import Figure from '../components/Figure.astro';
-import { tree } from '../lib/tree';
+import { tree, longDate } from '../lib/tree';
 
 const c = tree.counts;
 const stages = tree.stages;
 const examplesOnly = c.upgrades > 0 && c.examples === c.upgrades;
 const plural = c.first_human_or_beyond === 1;
+// The last-checked strip (tracker pattern section 5; copied from The Belt Equation's
+// index.astro, `scan-strip`, on 2026-10-16): the date of the latest reading written out, how
+// many upgrades were read, and what moved, with the one mover linked when there is exactly one.
+const checked = tree.last_checked;
+const loneMover = checked && checked.movers.length === 1 ? checked.movers[0] : null;
+const movedLine = !checked
+  ? ''
+  : checked.moved === 0
+    ? 'none moved'
+    : checked.moved === 1
+      ? 'one moved'
+      : `${checked.moved} moved`;
 ---
 
 <Base>
@@ -41,10 +53,12 @@ const plural = c.first_human_or_beyond === 1;
       <p class="scan-strip">
         <span class="strip-dot" aria-hidden="true"></span>
         <span>
-          {tree.last_checked
-            ? <>Last checked {tree.last_checked}.</>
-            : <>No reading of the news against the upgrades has run yet; the first one is coming, and this line will say when it ran.</>}
-          {' '}<a href="/story/">See the story so far.</a>
+          {checked
+            ? <>Last checked {longDate(checked.date)}: {checked.upgrades_read} upgrade{checked.upgrades_read === 1 ? '' : 's'} read, {movedLine}{loneMover ? <>: <a href={loneMover.path}>{loneMover.name}</a></> : ''}{checked.flagged_waiting > 0 ? <>, {checked.flagged_waiting === 1 ? 'one thing' : `${checked.flagged_waiting} things`} waiting on me</> : ''}.
+              {' '}<a href="/reading/">See the week's reading.</a>
+              {checked.test && <span class="strip-test">This one is a hand-made test record; no real reading has run yet.</span>}</>
+            : <>No reading of the news against the upgrades has run yet; the first one is coming, and this line will say when it ran.
+              {' '}<a href="/reading/">About the weekly reading.</a></>}
         </span>
       </p>
       <p class="actions">
@@ -54,6 +68,7 @@ const plural = c.first_human_or_beyond === 1;
     </div>
 
     <div class="first-side figure-card">
+      <p class="plate-label">Plate I · The seven branches</p>
       <Figure />
       <ul class="legend">
         <li><i class="stage-none"></i> nothing recorded yet</li>
