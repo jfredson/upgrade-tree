@@ -50,6 +50,9 @@ comments, one field per line, multi-line text for prose.
       link.toml           upgrades under The link to machines
       bandwidth.toml      the brain-to-machine bandwidth series (added 2026-10-16, see below)
       claims/             one TOML file per claim (added 2026-10-16, see below)
+      readings/           one TOML file per weekly reading (added 2026-10-16, see below)
+      headline.json       the headline file, written by the export and never by hand
+                          (added 2026-10-17, see below)
 
 Each branch file is a list of `[[upgrade]]` tables. A branch file may be empty but for
 comments. Ids must be unique across all files.
@@ -129,6 +132,11 @@ happened; a probability would say what someone guesses, and this project does no
     own layout gives for not checking ours: a build on GitHub has no copy of the sibling
     repository, and a check that passes on one machine and skips on another is confusing. The
     weekly reading does the check that needs the other repository.
+12. The committed headline file, `data/headline.json`, says what the record says (added
+    2026-10-17, see "The headline file" below): `--check` refuses to pass while it is missing
+    or carries a count, a rung total, a last-reading date or a latest bandwidth point that the
+    record no longer gives. The day it was computed and the commit it came from may differ.
+    `scripts/test_headline.py` tests the same thing from the outside.
 
 If any rule fails, nothing is written and the build stops.
 
@@ -381,10 +389,50 @@ point has `value` and `unit` unless `no_figure`; units are from the list above a
 converts to its measure's axis; `source` is a web address; `upgrade` exists; ids unique. The
 script also works out `best` per measure: the highest `plot_value` and its point.
 
+## The headline file (`data/headline.json`, added 2026-10-17)
+
+The one small file another site, or a person with a script, reads for the project's number
+without rebuilding the project or scraping a page. It adopts lesson 1 of the family's lessons
+ledger (`sentient-horizons/design/lessons.md`, "A published headline file"), which the
+cross-project lessons review of 2026-10-17 (`design/reviews/2026-10-17-lessons-review.md`,
+section 6) ranked as this site's first adoption; John ruled on 2026-10-17 that each project takes
+its first adoption and that every tracker also serves the file from its own site. The family's
+Projects page read the whole of `site/src/data/tree.json` from the repository until this file
+existed.
+
+Written by `scripts/export.py` on every run, from the same records as everything else, and never
+by hand. Two copies: the committed one at `data/headline.json`, which other sites read from the
+repository, and the one the build writes to `site/public/data/headline.json` (not committed) so
+the site serves it at https://theupgradetree.com/data/headline.json. The two are byte for byte
+the same.
+
+| Field | Meaning |
+|---|---|
+| `computed_on` | The day the export ran (YYYY-MM-DD). |
+| `commit` | The short commit the export ran from, or null when it cannot be read. |
+| `last_reading` | The date of the latest weekly reading on record, or null before the first. |
+| `method` | `document` (this file), `headline_stage` and its label, `status` (one line: the ruling the count rests on), and `to_verify`, the number of claims written from memory and not yet checked, across upgrades, bandwidth points and claims; there are no estimates here to grade, so this count is the nearest thing to how settled the number is. |
+| `headline` | `count` (upgrades at the headline rung or above), `total` (upgrades not superseded), `stage` and `words`, the count in the sentence the home page prints under it. |
+| `by_stage` | The five rungs in order, each with `key`, `label` and `count`. |
+| `second_number` | The bandwidth series: `latest`, the point with the latest date (its id, date, measure, value, unit, the value on the chart's axis, whether peer reviewed, and the upgrade it belongs with), `best`, the best figure so far on each measure, and `points`, how many there are. |
+| `counts` | Branches, upgrades, long shots, claims, readings on record, flagged items waiting on John, entries linked to Outrunning Ageing. |
+| `site` | The site's address and the path the file is served at. |
+
+**The check.** Rule 12 above: `python3 scripts/export.py --check` refuses to pass while the
+committed file is missing or stale, comparing everything but `computed_on` and `commit`, which
+change with every run and every commit. So a reading that moved a stage, or a session that
+edited the record, and forgot to run the export is caught before the deploy, which runs the
+check first. The weekly reading's publish step runs the export before the check for this
+reason. `scripts/test_headline.py` tests the check: the committed file is current; a missing
+file is named; writing it twice changes nothing; a newer reading or a moved stage makes it
+stale; doctored numbers are caught when the dates agree; the day and the commit may differ.
+
 ## Decisions (2026-10-16 and 2026-10-17)
 
-Every row is ruled or was accepted with the first list. The last five rows were proposed on
-2026-10-17 and John ruled them as proposed the same day ("yes to all").
+Every row is ruled or was accepted with the first list. Five rows (the quoted-recordings check
+and the cross-links) were proposed on 2026-10-17 and John ruled them as proposed the same day
+("yes to all"). The last three rows are the adoptions from the cross-project lessons review of
+2026-10-17, ruled by John the same day.
 
 | choice | confidence | standard or judgment | alternative |
 |---|---|---|---|
@@ -410,3 +458,6 @@ Every row is ruled or was accepted with the first list. The last five rows were 
 | `transcript_check` as a small table in the claim record, with `checked_how` opening with a set sentence (2026-10-17) | moderate | judgment call (Claude) | prose in `checked_how` alone; simpler, but then nothing can check that a record that says "agree" has a date and a model named |
 | An optional `sibling` field on the upgrade, holding the id of the matching Outrunning Ageing leaf, by the same name that site uses for the field pointing back here; set on the five lifespan-and-repair entries; checked for shape only; the upgrade page links across and the weekly reading compares the stages (proposed 2026-10-17; John ruled it as proposed the same day: "yes to all") | high that the field belongs here: the Outrunning Ageing kickoff's item 7 (ruled by John 2026-10-16) says each entry carries the other's id, and that site's five leaves already carry ours. Moderate on the name: `sibling` is what the other site chose, and one name on both sides is simpler than two | following the kickoff's ruling; the name and the shape check are judgment calls (Claude) | a web address instead of an id (`sibling_url`), which needs no knowledge of the other site's page layout but breaks silently if that site moves its pages, and cannot be compared with its records; or checking that the leaf exists by reading the sibling repository, rejected for the reason in rule 11 |
 | Unknown fields on an upgrade are refused (proposed 2026-10-17; John ruled it as proposed the same day: "yes to all") | high | standard practice for a strict validator; both sibling sites do it, and this one did not until now | leave unknown fields ignored, as before; costs nothing today and lets a misspelt `sibling` or `watch` vanish without a word |
+| A headline file, `data/headline.json`, written by the export from the records and never by hand, with the count and its words, the five-rung totals, the bandwidth series' latest point, the day computed, the last reading's date and a method status line; `--check` refuses a missing or stale copy (lesson 1 of the family's lessons ledger; the lessons review of 2026-10-17 ranked it this site's first adoption; ruled by John 2026-10-17) | high that the file belongs here: John ruled it, and the three sibling trackers already publish one. Moderate on the shape: the field names follow The Quiet Galaxy's and The Belt Equation's (`computed_on`, `last_reading`, `method.status`) so one reader can read all four, and the check ignores the day and the commit because both change with every run | John's ruling; the shape and the check are judgment calls (Claude), with the check copied from The Belt Equation's `scripts/test_headline.py` | let the parent keep reading the whole `tree.json` (35 kilobytes for one number, and no last-reading date in a stable place); or a check that also compares `computed_on`, which would fail every build on a day no export ran |
+| The headline file is also served from the site, at `/data/headline.json`, as a copy the build writes to `site/public/data/` from the committed file (ruled by John 2026-10-17 for every tracker, from the lessons review's section 9) | high: John ruled it; a reader who knows only the site can find the number | John's ruling; the copy being generated and not committed is a judgment call (Claude) | commit the public copy as well, so the repository holds the file twice and the two can drift; or serve it with a redirect to the repository's raw address, which depends on GitHub |
+| A subject notice, one line in every page's footer between the attribution line and the parent line, in the place and register of Outrunning Ageing's medical notice: "This site records what has been shown and what has been promised about changing a human being on purpose. It recommends nothing, and nothing on it is medical advice." (lesson 23; the review left it to John; ruled by John 2026-10-17) | high: John ruled it, and the site lists gene therapies, implants, drugs and psychedelics a reader might act on | John's ruling; the wording is a judgment call (Claude), Outrunning Ageing's sentence with the subject named | no notice, as before, since the site reports a count and not a treatment; or the sentence repeated on the home, method and disagree pages as Outrunning Ageing does, which can follow if John wants it |

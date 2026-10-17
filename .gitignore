@@ -10,6 +10,10 @@ node_modules/
 dist/
 *.bak
 
+# the public copy of data/headline.json, written by scripts/export.py on every build and
+# served at /data/headline.json (2026-10-17); the committed copy is the one in data/
+site/public/data/
+
 # private reference material (copyrighted transcripts, personal notes)
 docs/private/
 

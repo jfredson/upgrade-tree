@@ -84,7 +84,10 @@ order). For a `stage-change`:
 - You may add a `watch` term the search needed (a product or trial name the test does not
   say), with a revision in the same form, field `"watch"`.
 
-After every file edit run `python3 scripts/export.py --check`. If it fails, revert that file
+After every file edit run `python3 scripts/export.py` (the export, not `--check`: it validates
+the record the same way, writes nothing when the record breaks a rule, and when it passes
+rewrites the site's data and the headline file, which `--check` would otherwise refuse as
+stale after a stage change; 2026-10-17). If it fails, revert that file
 (`git checkout -- data/X.toml`), mark the item `flagged` with the error in `for_john`, and
 continue. Never edit any other field. Never edit an upgrade you did not mark `stage-change`.
 
@@ -120,7 +123,8 @@ under "The reading record": a `[reading]` table with `date`, `ran_at` (universal
 `verdict`, `queries`, `found` (one to three plain sentences, absolute dates), `sources` for
 every verdict but `quiet`, `moved_from` and `moved_to` for a stage change, `for_john` for a
 flagged item, `reused` where step 1 asked for it. If the folder already has a file with today's
-date, suffix `-2`. Then run `python3 scripts/export.py --check`; it must pass.
+date, suffix `-2`. Then run `python3 scripts/export.py`; it must pass (it rewrites the headline
+file with this reading's date, so the check at step 5 can pass).
 
 ## 4. Changelog
 
@@ -131,9 +135,11 @@ before and after in the same line.
 
 ## 5. Publish
 
-One commit, one push:
+One commit, one push. The first command rewrites the site's data and the headline file
+(`data/headline.json`) from the record; the check that follows refuses a headline file that no
+longer says what the record says (added 2026-10-17), so the two run in this order:
 
-    python3 scripts/export.py --check && git add -A && git commit -m "Weekly reading YYYY-MM-DD: N read, M moved, F flagged" -m "<one line per move, with before and after; or 'Nothing moved.'>" -m "<the attribution lines this session was given>" && git push origin main
+    python3 scripts/export.py && python3 scripts/export.py --check && git add -A && git commit -m "Weekly reading YYYY-MM-DD: N read, M moved, F flagged" -m "<one line per move, with before and after; or 'Nothing moved.'>" -m "<the attribution lines this session was given>" && git push origin main
 
 A refused push: push the same commit once to `claude/reading-YYYY-MM-DD` and say so in the
 report; the site does not update until John merges it. If that push is refused too, do not
