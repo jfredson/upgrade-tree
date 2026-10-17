@@ -1,0 +1,28 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2018-04-05-musk-do-you-trust-this-computer"
+speaker = "Elon Musk"
+when = "2018-04-05"
+when_note = "The film's premiere; the interview footage was recorded some time before release, and the film does not date it."
+occasion = "In the documentary \"Do You Trust This Computer?\" (directed by Chris Paine)"
+status = "sourced"
+source = """
+The film itself. It premiered in Los Angeles on 2018-04-05 and streamed free online 2018-04-05 to
+2018-04-08 at Musk's expense. The interview footage was recorded some time before release; the
+film does not date it. Checked through an unofficial full upload on YouTube, video id 1-bLflj11fY
+(1 h 18 min); the passage runs about 01:10:08 to 01:11:50."""
+source_url = "https://www.youtube.com/watch?v=1-bLflj11fY"
+source_locator = "about 01:10:08 to 01:11:50"
+checked_how = "Machine captions on that upload. The captions carry no speaker labels. The quoted line sits inside a stretch that is clearly Musk (the dictator passage matches CNBC's transcription word for word)."
+words = "an immortal dictator from which we can never escape"
+words_locator = "at 01:11:47 to 01:11:50"
+claimed = """
+At 01:10:08 he says it is important that AI not be something separate from us, and at 01:10:24
+that humanity will have to either merge with AI or be left behind (the captions garble this line).
+The least frightening future, he says, is one where AI is spread widely, because if one company or
+small group builds a godlike digital superintelligence it could take over the world, and unlike a
+human dictator it would never die. He adds that he could be wrong and is open to a better path."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+coverage = ["CNBC, 2018-04-06, \"Elon Musk warns A.I. could create an 'immortal dictator from which we can never escape'\" (published 13:40 UTC). The article quotes the dictator passage and the spread-widely passage, and says in its own voice that Musk believes humans should merge with AI to avoid becoming irrelevant. It does not quote any merge sentence from the film."]
+paraphrase = { repeated = "The remarks were about an immortal dictator and a new superior species.", seen = "The project brief described them this way. The phrase \"a new superior species of beings\" appears in a 2018 syndicated column by Jim Hightower (OtherWords and the Hightower Lowdown) as his own description of what Musk warned about, with no quotation.", differs = "The CNBC article contains no \"species\" or \"superior\". The film's captions do contain, at about 01:10:56, a line about creating a new life-form on Earth, but the film has many speakers and the captions do not say who says it; it is not attributed to Musk here until someone listens. Treat \"new superior species\" as a columnist's paraphrase.", primary_found = false }

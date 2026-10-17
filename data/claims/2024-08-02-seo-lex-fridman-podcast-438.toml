@@ -1,0 +1,37 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2024-08-02-seo-lex-fridman-podcast-438"
+speaker = "DJ Seo"
+role = "Neuralink co-founder and president"
+when = "2024-08-02"
+occasion = "Lex Fridman Podcast, episode 438"
+status = "sourced"
+source = """
+The episode on YouTube, video id Kbk9BiPhm7o (Lex Fridman channel, uploaded 2024-08-02, titled
+"Elon Musk: Neuralink and the Future of Humanity"), with the official human-made transcript at
+lexfridman.com/elon-musk-and-neuralink-team-transcript (the page says it is human-generated and
+may have errors). Speaker names are labels in that transcript. Seo's part starts at 1:28:12; the
+long-run passage runs 3:30:49 to 3:35:21."""
+source_url = "https://lexfridman.com/elon-musk-and-neuralink-team-transcript"
+source_locator = "3:30:49 to 3:35:21"
+checked_how = "The official transcript, read on 2026-10-16."
+words = "Neuralink's eventual goal is to understand those things"
+words_locator = "at 3:32:31, of the brain's higher language areas"
+claimed = """
+Two programmes today, movement and vision. Movement is about what he calls digital freedom and is
+being extended to robotic arms and wheelchairs, which needs regulator conversations and safety
+data. Vision: edge detection in the short to medium term so people do not bump into things
+(3:18:08), naturalistic vision possibly in the long term. The eventual goal he states is a platform
+and tools for understanding the higher language regions of the brain, which he calls a very big
+mystery. Asked whether thoughts could be read, he hedges heavily (3:33:35 to 3:34:47): he is not
+sure, would not rule it out, and a brain-computer interface alone probably cannot do it. He never
+says merge or symbiosis himself."""
+bears_on = ["link", "movement"]
+bears_on_note = "The link to machines; movement and body."
+notes = """
+Attribution note: the symbiosis and bandwidth lines in this episode are Musk's, not Seo's: at
+10:09 Musk, labelled in the transcript, says the long-term aspiration of Neuralink is to improve
+the AI-human symbiosis. That is a restatement for the Musk series and is noted in the "To add"
+list. Bliss Chapman (brain interface software lead) at 5:43:38 talks of building the world's best
+mouse, a superhuman version of cursor control, not of merging; Matthew MacDougall's chapters cover
+surgery and consciousness, with no merging claim found."""

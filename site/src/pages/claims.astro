@@ -1,0 +1,184 @@
+---
+// The claims: what people have said about merging with machines, in date order, beside what the
+// seven branches have actually reached, so a reader sees the gap between talk and delivery
+// (tracker pattern, rule 6.4, ruled by John 2026-10-16). Every claim comes from data/claims/
+// through scripts/export.py; the delivery column comes from tree.json and bandwidth.json.
+import Base from '../layouts/Base.astro';
+import { tree, claims, bandwidth, longDate, hostOf, REPO } from '../lib/tree';
+
+const c = tree.counts;
+const k = claims.counts;
+const list = claims.claims;
+const first = list[0]?.when.slice(0, 4);
+const last = list[list.length - 1]?.when.slice(0, 4);
+const text = bandwidth.measures.find((m) => m.key === 'text');
+const speech = text?.baselines.find((b) => b.id === 'speech-in-conversation');
+const textBest = text?.best ? text.points.find((p) => p.id === text.best!.id) : null;
+const plural = c.first_human_or_beyond === 1;
+---
+
+<Base title="The claims — The Upgrade Tree" description="What people have said about humans merging with machines, each on a dated occasion with the recording or text it can be checked against, set beside what the seven branches of The Upgrade Tree have actually reached.">
+  <section class="hero wide">
+    <p class="eyebrow">The claims</p>
+    <h1>What people have claimed, beside what has been done</h1>
+    <p class="lede">
+      {k.claims} claims by {k.speakers} people, {first} to {last}, oldest first, each one checked against the
+      recording or the text. On the right, what the seven branches have actually reached. The two never mix: a claim
+      moves nothing on the tree, and nothing on the tree makes a claim true.
+    </p>
+  </section>
+
+  <section class="section explain narrow">
+    <p>
+      A <em>claim</em>, here, is one person saying one thing about humans merging with or upgrading themselves by
+      machines, on one dated occasion: a talk, an interview, a book, a post. It is not a summary of what someone
+      thinks in general. Each entry names who spoke and when, links the recording or the original text with the
+      timestamp or page, and says how the words were checked (listened to, an official transcript, machine-made
+      captions, or the published text). It quotes <em>at most one short phrase</em>, in quotation marks, exactly as
+      it is in the source; everything else is in our own words, with the speaker's hedges and conditions kept,
+      because a hedge is part of what was claimed. When a sentence circulates as a quote and the recording has
+      different words or none, the entry says so and shows what differs. When only a reporter's account of a remark
+      exists, the entry is held as <em>unsourced, coverage only</em>, carries no quoted words, and names the reporter.
+      Critics of the merger idea are entered on the same terms as its advocates.
+    </p>
+  </section>
+
+  <div class="claims-grid">
+    <div class="claims-list">
+      <div class="shead">
+        <h2>The talk: {k.claims} claims</h2>
+        <span>{k.sourced} sourced, {k.unsourced} held on coverage only, {k.critics} from critics</span>
+      </div>
+      <ol class="claims">
+        {list.map((cl) => (
+          <li id={cl.id} class={`claim ${cl.status} ${cl.critic ? 'critic' : ''}`}>
+            <header class="claim-head">
+              <p class="claim-when">
+                <a href={`#${cl.id}`}>{cl.when_label}</a>
+                {cl.released_on && <span class="dim"> · published {longDate(cl.released_on)}</span>}
+              </p>
+              <p class="claim-who">
+                <strong>{cl.speaker}</strong>{cl.role && <span class="dim">, {cl.role}</span>}
+              </p>
+              <p class="claim-where">{cl.occasion}</p>
+              <p class="chips">
+                {cl.critic && <span class="chip accent">a critic's entry</span>}
+                {cl.status === 'unsourced' && <span class="chip no">unsourced: coverage only</span>}
+                {cl.paraphrase && !cl.paraphrase.primary_found && <span class="chip no">a circulating version has no primary source</span>}
+                {cl.verify.length > 0 && <span class="chip">still to check</span>}
+              </p>
+            </header>
+
+            {cl.words ? (
+              <blockquote class="claim-words">
+                <p>“{cl.words}”</p>
+                {cl.words_locator && <footer>{cl.words_locator}</footer>}
+              </blockquote>
+            ) : (
+              <p class="claim-nowords">
+                No words are quoted. This entry rests on a reporter's account, which is coverage, not the speaker's own
+                words, so it is held as unsourced.
+              </p>
+            )}
+
+            <p class="claim-text"><strong>{cl.status === 'sourced' ? 'What was claimed.' : 'What was reported.'}</strong> {cl.claimed}</p>
+            {cl.not_in_source && <p class="claim-text"><strong>Not in the source.</strong> {cl.not_in_source}</p>}
+
+            <p class="claim-source">
+              <strong>Where to check.</strong>{' '}
+              <a href={cl.source_url} rel="noopener">{hostOf(cl.source_url)}</a>{cl.source_locator && <>, {cl.source_locator}</>}.{' '}
+              <span class="dim">How the words were checked: {cl.checked_how}</span>
+            </p>
+            {cl.ruling && <p class="claim-ruling">{cl.ruling}</p>}
+
+            {cl.paraphrase && (
+              <div class="claim-para">
+                <p><strong>{cl.paraphrase.primary_found ? 'A version that circulates.' : 'A version that circulates, with no primary source found.'}</strong></p>
+                <p><span class="k">Repeated as</span> {cl.paraphrase.repeated}</p>
+                <p><span class="k">Seen</span> {cl.paraphrase.seen}</p>
+                <p><span class="k">What differs</span> {cl.paraphrase.differs}</p>
+              </div>
+            )}
+
+            {cl.bears_on.length > 0 && (
+              <p class="claim-bears">
+                <span class="k">Bears on</span>{' '}
+                {cl.bears_on.map((b, i) => (
+                  <><a href={b.path} class={b.kind === 'upgrade' ? 'bears-upgrade' : 'bears-branch'}>{b.name}</a>{i < cl.bears_on.length - 1 ? '; ' : ''}</>
+                ))}
+                {cl.bears_on_note && <span class="dim"> ({cl.bears_on_note})</span>}
+              </p>
+            )}
+
+            <details class="claim-more">
+              <summary>The source in full, the coverage, and the notes</summary>
+              <p><span class="k">Primary source</span> {cl.source}</p>
+              {cl.when_note && <p><span class="k">On the date</span> {cl.when_note}</p>}
+              {cl.coverage.length > 0 && (
+                <p><span class="k">Coverage</span> {cl.coverage.join(' ')}</p>
+              )}
+              {cl.why_here && <p><span class="k">Why it is here</span> {cl.why_here}</p>}
+              {cl.notes && <p><span class="k">Notes</span> {cl.notes}</p>}
+              {cl.verify.length > 0 && (
+                <p><span class="k">Still to check</span> {cl.verify.join(' ')}</p>
+              )}
+              <p class="dim">This entry is <a href={`${REPO}/blob/main/${cl.file}`} rel="noopener">{cl.file}</a> in the public repository.</p>
+            </details>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <aside class="claims-side">
+      <div class="side-card delivered">
+        <h3>The delivery: what has actually been done</h3>
+        <p class="big-number">{c.first_human_or_beyond}<small>of {c.upgrades}</small></p>
+        <p class="delivered-claim">
+          {plural ? 'way' : 'ways'} of changing a human being on purpose {plural ? 'has' : 'have'} been tried in at least one living person, counted from the public record.
+        </p>
+        <ul class="delivered-branches">
+          {tree.branches.map((b) => (
+            <li>
+              <a href={b.path}>{b.name}</a>
+              <span class={`stage-badge stage-${b.furthest_rank ?? 'none'}`}><i aria-hidden="true"></i>{b.furthest_label ? b.furthest_label.toLowerCase() : 'nothing recorded'}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="delivered-note">Each branch is shown at the furthest stage any upgrade under it has reached. <a href="/branches/">The branches</a> have the full list.</p>
+      </div>
+      {textBest && speech && (
+        <div class="side-card">
+          <h3>The number the claims rest on</h3>
+          <p>
+            The fastest a brain has yet talked to a machine is <strong>{textBest.value} {textBest.unit}</strong>
+            of decoded attempted speech, reported on {longDate(textBest.date)}. Speech in conversation runs at about
+            {' '}{speech.value} {speech.unit}. <a href="/branches/link/#bandwidth">The whole series, with its sources.</a>
+          </p>
+        </div>
+      )}
+      <div class="side-card">
+        <h3>Disagree with something</h3>
+        <p>A claim missing, a date wrong, a phrase misquoted, a hedge dropped. <a href="/disagree/">Say so.</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section narrow prose" id="not-entered">
+    <h2>Looked for and not found</h2>
+    {claims.not_entered.checked.map((x) => (
+      <p>
+        <strong>{x.who}</strong>{x.role && <>, {x.role}</>}. {x.result} What was checked: {x.checked}
+      </p>
+    ))}
+
+    <h2>Noted, not yet checked</h2>
+    <p class="dim" style="font-size: 15px;">Occasions that may belong on this page once the recording or text has been reached. Nothing here is a claim yet.</p>
+    <ul class="to-add">
+      {claims.not_entered.to_add.map((x) => <li>{x.lead} <span class="dim">{x.status}</span></li>)}
+    </ul>
+
+    <p class="dim" style="font-size: 14px; margin-top: 24px;">
+      The record itself is one file per claim in <a href={`${REPO}/tree/main/data/claims`} rel="noopener">data/claims</a> in the public repository; the rules are in <a href="/method/">how the numbers are worked out</a>.
+    </p>
+  </section>
+</Base>

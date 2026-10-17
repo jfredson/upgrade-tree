@@ -1,0 +1,28 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2017-04-20-musk-wait-but-why-neuralink-essay"
+speaker = "Elon Musk"
+role = "as reported by Tim Urban"
+when = "2017-04-20"
+occasion = "Tim Urban's Wait But Why essay Neuralink and the Brain's Magical Future"
+status = "unsourced"
+ruling = "Ruled by John 2026-10-16: a reporter's account of what someone said is coverage, not the speaker's own words."
+source = """
+Unsourced, coverage only. The source is the essay at waitbutwhy.com/2017/04/neuralink.html,
+published 2017-04-20, written by Tim Urban after interviews with Musk and the founding Neuralink
+team and with their cooperation. It is the first long public statement of Neuralink's purpose,
+but it is not a recording: the words it attributes to Musk are Urban's transcription of his
+interviews, and Urban is the source of every paraphrase below."""
+source_url = "https://waitbutwhy.com/2017/04/neuralink.html"
+checked_how = "The published text, retrieved 2026-10-16. No recording or transcript in Musk's own words exists for these interviews. None of the speaker's words are quoted: Urban's rendering has Musk saying the aim is to be symbiotic with AI and to merge with it."
+claimed = """
+The choice, as Urban reports him putting it, is between being left behind by AI and becoming
+useless or pet-like (his comparison is a house cat), or finding a way to merge with it. He says
+communication bandwidth decides how far the two integrate, and that if the link is tight enough
+the AI stops being a separate thing and becomes part of you, the way the thinking brain relates to
+the animal brain. Urban reports that Musk started Neuralink to speed this up, toward a world of
+billions of people each with an AI extension of themselves, deciding the future together. Hedge,
+added a second later per Urban: a house cat would be a good outcome."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+why_here = "This is the earliest Neuralink-era statement of the merger goal attributed to Musk, and the source most later merge-or-become-a-pet paraphrases trace to."

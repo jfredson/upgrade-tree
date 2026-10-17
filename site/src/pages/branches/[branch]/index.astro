@@ -1,7 +1,8 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import StageBadge from '../../../components/StageBadge.astro';
-import { tree, type Branch } from '../../../lib/tree';
+import BandwidthChart from '../../../components/BandwidthChart.astro';
+import { tree, bandwidth, longDate, hostOf, REPO, type Branch } from '../../../lib/tree';
 
 export function getStaticPaths() {
   return tree.branches.map((b) => ({ params: { branch: b.key }, props: { branch: b } }));
@@ -11,6 +12,28 @@ const { branch } = Astro.props as { branch: Branch };
 const upgrades = tree.upgrades.filter((u) => u.branch === branch.key && u.status !== 'superseded');
 const prev = tree.branches.find((b) => b.order === branch.order - 1);
 const next = tree.branches.find((b) => b.order === branch.order + 1);
+
+// The bandwidth series lives on the link branch (data/bandwidth.toml).
+const text = bandwidth.measures.find((m) => m.key === 'text');
+const cursor = bandwidth.measures.find((m) => m.key === 'cursor');
+const bestOf = (m: typeof text) => (m?.best ? m.points.find((p) => p.id === m.best!.id) ?? null : null);
+const textBest = bestOf(text);
+const cursorBest = bestOf(cursor);
+const cursorBestReviewed = cursor?.points.filter((p) => p.peer_reviewed && p.plot_value !== null).sort((a, b) => (b.plot_value ?? 0) - (a.plot_value ?? 0))[0] ?? null;
+const speech = text?.baselines.find((b) => b.id === 'speech-in-conversation');
+const fmt = (v: number | null) => (v === null ? '' : String(v));
+// The pointing sentence is built here as two strings so no stray spaces land around the punctuation.
+const pointingLead = cursorBest ? `For pointing at a screen, the best figure is ${fmt(cursorBest.value)} ${cursorBest.unit}` : '';
+const pointingRest = cursorBest && cursorBestReviewed
+  ? (cursorBest.peer_reviewed
+      ? `, reported on ${longDate(cursorBest.date)}`
+      : `, the maker's own figure and not yet in a peer-reviewed paper, reported on ${longDate(cursorBest.date)}`) +
+    (cursorBest.id !== cursorBestReviewed.id
+      ? `; the best peer-reviewed figure is ${fmt(cursorBestReviewed.value)} ${cursorBestReviewed.unit}, from ${longDate(cursorBestReviewed.date)}.`
+      : '.') +
+    ' An engineer with a mouse scores about ten.'
+  : '';
+const years = bandwidth.counts.first_date && bandwidth.counts.last_date ? `${bandwidth.counts.first_date.slice(0, 4)} to ${bandwidth.counts.last_date.slice(0, 4)}` : '';
 ---
 
 <Base title={`${branch.name} — The Upgrade Tree`} description={`${branch.tagline} What has been recorded under this branch of The Upgrade Tree, with the stage each upgrade has reached.`}>
@@ -50,16 +73,69 @@ const next = tree.branches.find((b) => b.order === branch.order + 1);
   </section>
 
   {branch.key === 'link' && (
-    <section class="section">
-      <div class="placeholder-card">
-        <h3>The second number: how much can pass between a brain and a machine</h3>
-        <p>
-          The project's second number is how much information a direct link between a brain and a
-          computer can carry each second, and how that has grown. It will be plotted here, with its
-          sources and the table of plotted numbers, once there is a series to plot. Nothing is
-          plotted yet.
-        </p>
+    <section class="section" id="bandwidth">
+      <div class="shead">
+        <h2>The second number: how much can pass between a brain and a machine</h2>
+        <span>{bandwidth.counts.points} figures, {years}</span>
       </div>
+      <div class="prose bw-intro">
+        <p>
+          The merger argument has rested on one number since 2017: how much information can pass between a brain and a
+          computer each second, and whether that can beat the mouth and the hands. This is the record of what has
+          actually been demonstrated, each figure in the unit its source used, from the peer-reviewed papers and the
+          makers' own releases, against the rates a reader already has. Two kinds of figure are kept apart, because a
+          rate of text and a rate of pointing at a screen cannot share an axis without an assumption the sources did not
+          make.
+        </p>
+        {textBest && speech && (
+          <p>
+            <strong>The best figure so far for text is {fmt(textBest.value)} {textBest.unit}</strong>, from attempted
+            speech decoded by a brain implant, reported on {longDate(textBest.date)}: {textBest.who} Speech in
+            conversation runs at about {speech.value} {speech.unit}, so the fastest brain link yet talks at about half
+            the speed of talking, with one word in four wrong.
+          </p>
+        )}
+        {cursorBest && cursorBestReviewed && <p><strong>{pointingLead}</strong>{pointingRest}</p>}
+      </div>
+
+      {bandwidth.measures.map((m) => <BandwidthChart measure={m} />)}
+
+      <h3 class="bw-h3">Every figure, oldest first</h3>
+      <ol class="bw-points">
+        {bandwidth.points.map((p) => (
+          <li id={p.id}>
+            <p class="bw-point-head">
+              <span class="bw-date">{longDate(p.date)}</span>
+              <span class="bw-value">{p.no_figure ? 'no rate stated' : `${fmt(p.value)} ${p.unit}`}</span>
+              <span class={`chip ${p.peer_reviewed ? '' : 'no'}`}>{p.peer_reviewed ? 'peer-reviewed paper' : "the maker's own release"}</span>
+            </p>
+            <p class="bw-what">{p.what}</p>
+            <p class="bw-meta">
+              <span><span class="k">Who</span> {p.who}</span>
+              <span><span class="k">In whom</span> {p.in_whom}</span>
+              <span><span class="k">Repeated</span> {p.repeated}</span>
+              <span><span class="k">Source</span> <a href={p.source} rel="noopener">{hostOf(p.source)}</a>{p.source_note && <>. {p.source_note}</>}</span>
+              {p.upgrade && <span><span class="k">Belongs with</span> <a href={p.upgrade.path}>{p.upgrade.name}</a></span>}
+              {p.note && <span><span class="k">Note</span> {p.note}</span>}
+              {p.verify.length > 0 && <span><span class="k">Still to check</span> {p.verify.join(' ')}</span>}
+            </p>
+          </li>
+        ))}
+      </ol>
+
+      <h3 class="bw-h3">The rates a reader already has</h3>
+      <ul class="bw-baselines">
+        {bandwidth.measures.flatMap((m) => m.baselines).map((b) => (
+          <li>
+            <strong>{b.label}: {b.value} {b.unit}.</strong> {b.who} <a href={b.source} rel="noopener">{hostOf(b.source)}</a>{b.source_note && <>. {b.source_note}</>}
+          </li>
+        ))}
+      </ul>
+      <p class="dim" style="font-size: 14px;">
+        The series is <a href={`${REPO}/blob/main/data/bandwidth.toml`} rel="noopener">data/bandwidth.toml</a> in the
+        public repository, and the rules for a point are in its layout document there. A figure missing or misread:
+        <a href="/disagree/">say so</a>.
+      </p>
     </section>
   )}
 

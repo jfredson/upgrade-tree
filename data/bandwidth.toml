@@ -1,0 +1,204 @@
+# The brain-to-machine bandwidth series: the best demonstrated rate at which information has
+# passed from a brain to a machine, over time, against the rates a reader already has (typing,
+# speech). Layout: docs/upgrade-schema.md, "The bandwidth series". Seeded 2026-10-16; every
+# figure below was read in its primary source that day (abstracts and open full texts for the
+# papers; the company's own posts for Neuralink), and anything not read is in a verify list.
+# A point is a measurement in the unit its source used. A rate of text and a rate of pointing
+# cannot share one axis without an assumption the sources did not make, so they are two measures.
+
+[[measure]]
+key = "text"
+name = "Text out of the head"
+unit = "words a minute"
+conversion = "Characters a minute are shown as words at five characters a word, the convention typing speed is measured by (so 90 characters a minute is shown as 18 words a minute, which is also how the 2023 Stanford paper restates the 2021 figure)."
+meaning = """
+How fast a person produced text through a brain link, in words or characters a minute as the paper
+gave it, with the vocabulary and the error rate beside it. A high rate with a small vocabulary or a
+high error rate is not the same thing as a high rate with neither; the table says which is which."""
+
+[[measure]]
+key = "cursor"
+name = "Pointing at a screen"
+unit = "bits a second"
+meaning = """
+How much information a person's cursor control carried, in bits a second, measured by the field's
+grid task: targets appear on a grid, the person moves to and selects them, and the rate counts
+how many right selections were made per second against how many targets there were to choose
+from. It measures pointing, not language, so a figure here is not comparable to a figure for
+text."""
+
+# ---- points, in date order ----
+
+[[point]]
+id = "2006-braingate-first-participant"
+date = 2006-07-13
+measure = "cursor"
+no_figure = true
+what = "The first BrainGate participant moving a cursor, opening simulated e-mail and operating a television through a 96-electrode array in the part of the brain that plans hand movement. The paper states no rate: no bits a second, no characters a minute."
+who = "Leigh Hochberg and colleagues at Massachusetts General Hospital and Brown University, with Cyberkinetics Neurotechnology Systems (John Donoghue, senior author)."
+in_whom = "A tetraplegic man, MN (Matt Nagle), three years after a spinal cord injury."
+repeated = "The paper's readable text makes no claim of repetition; a supplementary video names a second trial participant, but the text does not report his results."
+peer_reviewed = true
+source = "https://doi.org/10.1038/nature04970"
+source_note = "Nature 442, pages 164 to 171, published 2006-07-13. The abstract names the 96-microelectrode array and describes the neural cursor; it gives no rate."
+upgrade = "link-wired-brain-implant-controls-a-cursor"
+note = "Here as the series' starting mark: the first hundred-electrode implant in a person, from which every later point descends. The implant date (June 2004) is not in the paper's readable text and is not stated here."
+
+[[point]]
+id = "2017-braingate2-typing-correct-characters"
+date = 2017-02-21
+measure = "text"
+value = 39.2
+unit = "correct characters a minute"
+what = "Copy typing on an on-screen keyboard by cursor control: 39.2 correct characters a minute (the paper's own 7.8 words a minute) for participant T5 with an optimised keyboard layout; 31.6 for T6 and 13.5 for T7. Free typing by T6 ran at 24.4 correct characters a minute over three days."
+who = "Chethan Pandarinath, Paul Nuyujukian and colleagues at Stanford (Krishna Shenoy and Jaimie Henderson, senior authors), in the BrainGate2 pilot trial."
+in_whom = "Three people with paralysis: T6, a woman of 51 with motor neurone disease; T5, a man of 63 with tetraplegia from a spinal cord injury; T7, a man of 54 with motor neurone disease."
+repeated = "Three participants, over two to five days each; the paper reports every one. The 39.2 figure is T5's average, not a one-off peak."
+peer_reviewed = true
+source = "https://doi.org/10.7554/eLife.18554"
+source_note = "eLife 6:e18554, published 2017-02-21. The Results give the per-participant figures; the Discussion restates them as 6.3, 7.8 and 2.7 words a minute."
+upgrade = "link-wired-brain-implant-controls-a-cursor"
+
+[[point]]
+id = "2017-braingate2-cursor-bits-per-second"
+date = 2017-02-21
+measure = "cursor"
+value = 4.16
+unit = "bits a second"
+what = "Cursor control on a grid task: 4.16 bits a second for participant T5 on a 9 by 9 grid, which the paper calls, to its authors' knowledge, the highest documented brain-computer interface communication rate for a person with motor impairment. On the 6 by 6 grid the averages were 2.2 (T6), 3.7 (T5) and 1.4 (T7) bits a second."
+who = "Chethan Pandarinath, Paul Nuyujukian and colleagues at Stanford (Krishna Shenoy and Jaimie Henderson, senior authors), in the BrainGate2 pilot trial."
+in_whom = "Three people with paralysis: T6, T5 and T7, as above; the 4.16 figure is T5's."
+repeated = "Three participants over two to five days each; the 4.16 figure is one participant's average over his sessions on the denser grid."
+peer_reviewed = true
+source = "https://doi.org/10.7554/eLife.18554"
+source_note = "eLife 6:e18554, published 2017-02-21, Results and Table 1."
+upgrade = "link-wired-brain-implant-controls-a-cursor"
+
+[[point]]
+id = "2021-stanford-handwriting-decoder"
+date = 2021-05-12
+measure = "text"
+value = 90
+unit = "characters a minute"
+what = "Attempted handwriting decoded into text: 90 characters a minute with 94.1 per cent raw accuracy online, and above 99 per cent offline with a general-purpose autocorrect. The paper compares it with smartphone typing in the participant's age group, 115 characters a minute."
+who = "Francis Willett and colleagues at Stanford (Jaimie Henderson and Krishna Shenoy, senior authors), in the BrainGate2 pilot trial."
+in_whom = "One man, T5, paralysed from the neck down by a spinal cord injury."
+repeated = "A single participant. The paper reports consistency across its own decoder training runs and across ten days of data, not a second person."
+peer_reviewed = true
+source = "https://doi.org/10.1038/s41586-021-03506-2"
+source_note = "Nature 593, pages 249 to 254, published 2021-05-12; the figures are in the abstract."
+upgrade = "link-wired-brain-implant-controls-a-cursor"
+
+[[point]]
+id = "2023-stanford-speech-decoder"
+date = 2023-08-23
+measure = "text"
+value = 62
+unit = "words a minute"
+what = "Attempted speech decoded into text: 62 words a minute, with a 23.8 per cent word error rate on a 125,000-word vocabulary and 9.1 per cent on a 50-word vocabulary. The paper calls it 3.4 times the previous record and says it begins to approach the speed of natural conversation, which it puts at 160 words a minute."
+who = "Francis Willett, Erin Kunz, Chaofei Fan and colleagues at Stanford (Jaimie Henderson, senior author), in the BrainGate2 pilot trial."
+in_whom = "One person, T12, with bulbar-onset motor neurone disease, unable to produce intelligible speech."
+repeated = "A single participant, over five days of attempted speech aloud and three of silent attempts; the paper says the results must be confirmed in more people."
+peer_reviewed = true
+source = "https://doi.org/10.1038/s41586-023-06377-x"
+source_note = "Nature 620, pages 1031 to 1036, published 2023-08-23; the figures are in the abstract and the first results paragraph."
+upgrade = "link-brain-implant-turns-intended-speech-into-text"
+
+[[point]]
+id = "2023-ucsf-speech-decoder-and-avatar"
+date = 2023-08-23
+measure = "text"
+value = 78
+unit = "words a minute"
+what = "Silently attempted speech decoded into text, speech sounds and a talking avatar: a median of 78 words a minute with a median word error rate of 25 per cent on a large vocabulary (a 1,024-word sentence set, per the paper's extended data), from high-density recordings on the surface of the speech cortex."
+who = "Sean Metzger, Kaylo Littlejohn, Alexander Silva, David Moses, Margaret Seaton and colleagues at the University of California, San Francisco (Edward Chang, senior author)."
+in_whom = "One woman, the trial's participant Bravo-3, with severe limb and vocal paralysis."
+repeated = "A single participant; the paper's readable text makes no claim of repetition."
+peer_reviewed = true
+source = "https://doi.org/10.1038/s41586-023-06443-4"
+source_note = "Nature 620, pages 1037 to 1046, published 2023-08-23; the 78 words a minute and 25 per cent figures are in the abstract. The vocabulary of the headline figure is from the extended data captions, not the abstract."
+upgrade = "link-brain-implant-turns-intended-speech-into-text"
+verify = ["Which vocabulary the headline 78 words a minute belongs to (the 1,024-word set) was read from the extended-data captions as summarised, not from the main text; confirm in the full paper."]
+
+[[point]]
+id = "2024-neuralink-cursor-bits-per-second"
+date = 2024-05-08
+measure = "cursor"
+value = 8.0
+unit = "bits a second"
+what = "Cursor control on the company's grid task: 8.0 bits a second, after a first-session figure of 4.6 that the company called a new world record for human brain-computer interface cursor control. The post says he was trying to beat the company's engineers using a mouse, about 10 bits a second. A later post (2024-08-21) says his performance has since more than doubled the prior record, without a new number."
+who = "Neuralink, in its own progress post; measured by the company, not in a peer-reviewed paper."
+in_whom = "One man, Noland Arbaugh, the first participant in the company's PRIME trial, paralysed below the shoulders by a spinal cord injury; the implant has 1,024 electrodes on 64 threads."
+repeated = "A single participant with a stated figure. The company's 2024-08-21 post says a second participant, Alex, broke the previous record with another company's device on his first day, with no figure given."
+peer_reviewed = false
+source = "https://neuralink.com/updates/prime-study-progress-update-user-experience/"
+source_note = "Neuralink, \"PRIME Study Progress Update, User Experience\", 2024-05-08, the section headed BCI Use. The same post says threads retracted from the brain in the weeks after surgery, cutting the rate until the software was changed."
+upgrade = "link-wireless-brain-implant-controls-a-computer"
+
+[[point]]
+id = "2024-uc-davis-speech-decoder"
+date = 2024-08-15
+measure = "text"
+value = 31.6
+unit = "words a minute"
+what = "Attempted speech decoded into text at the participant's own pace: 31.6 words a minute with a 2.5 per cent word error rate on a vocabulary of over 125,000 words, sustained at 97.5 per cent accuracy over 248 hours of use across eight months. Slower than the 2023 decoders and far more accurate; included because the series records every demonstrated figure, not only the records."
+who = "Nicholas Card, Sergey Stavisky, David Brandman and colleagues at the University of California, Davis, in the BrainGate2 pilot trial."
+in_whom = "One man of 45 with motor neurone disease and severe speech impairment, with four 64-electrode arrays (256 electrodes) in the left precentral gyrus."
+repeated = "A single participant, over 84 research sessions and eight months; the accuracy held across them."
+peer_reviewed = true
+source = "https://doi.org/10.1056/NEJMoa2314132"
+source_note = "New England Journal of Medicine 391, pages 609 to 618, issue dated 2024-08-15; the 31.6 words a minute and 2.5 per cent figures are in the Results, the 97.5 per cent and 125,000 in the abstract."
+upgrade = "link-brain-implant-turns-intended-speech-into-text"
+verify = ["The date here is the print issue's, 2024-08-15; the journal's online-first date (thought to be 2024-08-14) could not be read because the journal's site refused automated readers."]
+
+# ---- baselines: the rates a reader already has ----
+
+[[baseline]]
+id = "speech-in-conversation"
+measure = "text"
+label = "Speech in conversation"
+value = 160
+unit = "words a minute"
+who = "The rate the 2023 Stanford speech paper gives for natural conversation, citing a 2006 study of conversational speaking rate by Jiahong Yuan, Mark Liberman and Christopher Cieri."
+source = "https://doi.org/10.1038/s41586-023-06377-x"
+source_note = "Willett and colleagues, Nature 2023, abstract: \"begins to approach the speed of natural conversation (160 words per minute)\", with the citation to Yuan, Liberman and Cieri, Interspeech 2006 (DOI 10.21437/Interspeech.2006-204)."
+
+[[baseline]]
+id = "fast-typist"
+measure = "text"
+label = "A fast typist"
+value = 120
+unit = "words a minute"
+who = "The rate Jieyu Zheng and Markus Meister (California Institute of Technology) give for an advanced typist working from a manuscript, in their 2024 analysis of the speed of human behaviour."
+source = "https://doi.org/10.1016/j.neuron.2024.11.008"
+source_note = "Zheng and Meister, Neuron, published online 2024-12-17: \"An advanced typist produces 120 words per minute\", which they put at about 10 bits a second."
+
+[[baseline]]
+id = "typing-on-a-phone"
+measure = "text"
+label = "Typing on a phone"
+value = 115
+unit = "characters a minute"
+who = "The rate the 2021 Stanford handwriting paper gives for smartphone typing by people in its participant's age group."
+source = "https://doi.org/10.1038/s41586-021-03506-2"
+source_note = "Willett and colleagues, Nature 2021, abstract: \"typical smartphone typing speeds of individuals in the age group of our participant (115 characters per minute)\"."
+
+[[baseline]]
+id = "engineers-with-a-mouse"
+measure = "cursor"
+label = "Engineers with a mouse"
+value = 10
+unit = "bits a second"
+who = "Neuralink's own figure for its engineers using a mouse on the same grid task, about 10 bits a second."
+source = "https://neuralink.com/updates/prime-study-progress-update-user-experience/"
+source_note = "Neuralink, 2024-05-08: \"currently trying to beat scores of the Neuralink engineers using a mouse (~10 BPS)\"."
+
+[[baseline]]
+id = "speech-information-rate"
+measure = "cursor"
+label = "Speech, as information"
+value = 39
+unit = "bits a second"
+who = "The information rate of speech across 17 languages, measured by Christophe Coupé, Yoon Mi Oh, Dan Dediu and François Pellegrino (CNRS and the University of Lyon) in 170 speakers reading texts aloud: a mean of 39.15 bits a second. Shown here because it is the number the merger argument compares a brain link against; it is a rate of language, not of pointing."
+source = "https://doi.org/10.1126/sciadv.aaw2594"
+source_note = "Science Advances 5, eaaw2594, published 2019-09-04: \"languages encoding similar information rates (~39 bits/s)\"; Results give 39.15 bits a second with a standard deviation of 5.10."

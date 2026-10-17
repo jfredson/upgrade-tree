@@ -1,0 +1,70 @@
+# What was looked for and not found, and what is noted but not yet checked. Moved from the
+# TimeAssembler "Claims log" document on 2026-10-16, as it stood there. Neither list is a claim.
+# Layout: docs/upgrade-schema.md, "The claim record".
+
+[[checked]]
+who = "Shivon Zilis"
+role = "Neuralink director of operations and special projects"
+checked = """
+Web searches on 2026-10-16 for her name with merge, merger, symbiosis, keynote, podcast and
+transcript; the Lex Fridman episode 438 transcript (no mention of her); profiles and coverage that
+attribute the symbiosis goal to Musk and quote her only on the company being complicated and
+fascinating, reported from a 2021 talk at the Canadian Undergraduate Conference on Artificial
+Intelligence for which no recording was located."""
+result = "Unsourced: no dated recording or text in her own words about merging was found. Not entered as a claim."
+
+[[to_add]]
+lead = "Musk, 2016-06-01, Code Conference (Recode), first public \"neural lace\" remarks about a digital layer above the cortex."
+status = "Recording not yet pulled."
+
+[[to_add]]
+lead = "Musk, 2018-11, Axios on HBO interview: digital intelligence exceeding biological intelligence by a substantial margin, and the chip with tiny wires."
+status = "Recording not yet pulled."
+
+[[to_add]]
+lead = "Musk, 2019-08-29, World AI Conference, Shanghai, conversation with Jack Ma, and the 2018-09-06 Joe Rogan appearance: earlier uses of the join-them line."
+status = "Not yet checked."
+
+[[to_add]]
+lead = "Musk, 2024-08-02, Lex Fridman episode 438 at 10:09: the long-term aspiration of Neuralink is to improve the AI-human symbiosis (official transcript, located 2026-10-16 while sourcing the DJ Seo entry)."
+status = "Not yet written up as its own entry."
+
+[[to_add]]
+lead = "Neuralink progress events 2021 (monkey playing Pong) and the 2024 to 2025 patient updates, for any restatement of the merger goal (the 2022-11-30 Show and Tell is now entered for DJ Seo; Musk's own remarks at it are not yet entered)."
+status = "Not yet checked."
+
+[[to_add]]
+lead = "Listening pass: the Harari 2018-01-24 Davos passages and the DJ Seo 2022-11-30 passage rest on auto-captions and should be checked against audio before either quote is published."
+status = "Not yet done."
+
+[[to_add]]
+lead = "Harari, 2020-01-23, Davos, \"How to Survive the 21st Century\": the hack-humans formula, auto-captions pulled, not yet written up. Also the 2019-04-22 Stanford conversation with Fei-Fei Li, not checked."
+status = "Captions pulled; not yet written up."
+
+[[to_add]]
+lead = "Schneider, 2019-08 Financial Times op-ed: body text behind a paywall; needs someone with access. Her 2019 book's uploading chapter and the 2012 Corabi and Schneider paper, not retrieved."
+status = "Needs someone with access."
+
+[[to_add]]
+lead = "Warwick, \"I, Cyborg\" (2002), for a page reference; and the full text of the 2004 Irena-link paper, which the publisher's site refused."
+status = "Not yet reached."
+
+[[to_add]]
+lead = "Bostrom, \"In Defense of Posthuman Dignity\" (Bioethics, 2005): confirmed on his site, not yet written up."
+status = "Not yet written up."
+
+[[to_add]]
+lead = "Kurzweil, Joe Rogan Experience episode 2117 (2024): a spoken 2045 merge claim, not pursued because the TED talk was fully sourced."
+status = "Not pursued."
+
+[[to_add]]
+lead = "Oxley, 2023 Forbes Australia interview on transhumanism."
+status = "Lead only."
+
+[[to_add]]
+lead = "Jackson, 2019-07-17 Guardian remarks after the Neuralink launch."
+status = "Not reached."
+
+[[to_add]]
+lead = "Nicolelis, \"The Relativistic Brain\" (2015): the full argument that the brain is not computable."
+status = "Not retrieved."

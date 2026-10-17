@@ -1,0 +1,25 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2014-03-02-schneider-the-philosophy-of-her"
+speaker = "Susan Schneider"
+role = "philosopher"
+critic = true
+when = "2014-03-02"
+occasion = "\"The Philosophy of 'Her'\", New York Times, The Stone column"
+status = "sourced"
+source = """
+The column under her own byline, dated 2014-03-02, at
+opinionator.blogs.nytimes.com/2014/03/02/the-philosophy-of-her, read through an Internet Archive
+capture of 2022-05-23 because the newspaper's site blocks automated readers."""
+source_url = "https://opinionator.blogs.nytimes.com/2014/03/02/the-philosophy-of-her/"
+checked_how = "The published text."
+words = "succeed only in killing himself, leaving behind a computational copy of his mind"
+words_locator = "of the film's protagonist uploading himself"
+claimed = """
+Uploading a mind would copy it, not move it. Her reasons: ordinary objects follow a continuous
+path through space and an upload does not; if the scan left the brain intact the original person
+would still be there, so there is no reason to think consciousness travelled; and if five copies
+were made there is no non-arbitrary answer to which is the real person. Hedged as her suspicion.
+She allows that people may still want backup copies of themselves."""
+bears_on = ["link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The uploading long shot on the link-to-machines branch."

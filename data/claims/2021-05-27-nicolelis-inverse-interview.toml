@@ -1,0 +1,30 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2021-05-27-nicolelis-inverse-interview"
+speaker = "Miguel Nicolelis"
+role = "Duke University neuroscientist"
+critic = true
+when = "2021-05-27"
+when_note = "The article's first publication date (updated 2024-02-20); the interview date is not given."
+occasion = "Interview with Inverse"
+status = "unsourced"
+ruling = "Ruled by John 2026-10-16: a written-up interview is a reporter's account, not the speaker's own words."
+source = """
+Unsourced, coverage only. The source is the Inverse article headlined Elon Musk's Neuralink is bad
+science fiction, brain science pioneer says, by Tara Yarlagadda, first published 2021-05-27
+(updated 2024-02-20), at inverse.com/science/neuralink-bad-sci-fi. The piece reports a recent
+interview with the magazine; the interview date is not given, and no recording was published.
+Yarlagadda is the source of every paraphrase below. The context is Neuralink's
+monkey-playing-Pong video of April 2021."""
+source_url = "https://www.inverse.com/science/neuralink-bad-sci-fi"
+checked_how = "The published article, retrieved on 2026-10-16. None of the speaker's words are quoted: Yarlagadda's account has Nicolelis saying the company will never make people download their emotions or their deep cognitive functions."
+claimed = """
+Two criticisms. Neuralink is not innovative and takes credit for decades of brain-computer
+interface work (his lab had a wireless monkey implant in 2014). And Musk overpromises:
+downloading emotions or uploading a language's grammar will never work, because things like the
+meaning behind language cannot be reproduced by an algorithm; fine for a science-fiction film,
+bogus as a company claim. He calls the demonstrations marketing and theatre. He does not use the
+words merger or symbiosis in the piece; the transhumanism framing is the writer's. No dated
+reaction from him to the 2020 pig demonstration was found."""
+bears_on = ["link", "link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The link to machines; the uploading long shot."

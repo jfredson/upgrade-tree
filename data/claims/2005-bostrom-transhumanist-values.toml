@@ -1,0 +1,32 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2005-bostrom-transhumanist-values"
+speaker = "Nick Bostrom"
+role = "Oxford philosopher"
+when = "2005"
+when_note = "The page gives no composition date; the often-stated 2003 origin is not confirmed from the primary."
+occasion = "\"Transhumanist Values\", a published essay"
+status = "sourced"
+source = """
+The essay on the author's own site at nickbostrom.com/ethics/values, which cites its publication
+as Ethical Issues for the Twenty-First Century, edited by Frederick Adams, Philosophy
+Documentation Center, 2005, reprinted in Review of Contemporary Philosophy, volume 4, numbers 1
+and 2, 2005. The page gives no composition date; the often-stated 2003 origin is not confirmed
+from the primary (a sibling essay on the same site, "In Defense of Posthuman Dignity", Bioethics,
+volume 19, number 3, 2005, pages 202 to 214, says earlier versions were presented at Transvision
+2003 at Yale)."""
+source_url = "https://nickbostrom.com/ethics/values"
+source_locator = "section 1"
+checked_how = "The published text on the author's site, downloaded and read on 2026-10-16."
+words = "become posthuman, beings with vastly greater capacities than present human beings have"
+words_locator = "section 1, of what transhumanists hope that by responsible use of science and technology we shall eventually do"
+claimed = """
+He defines transhumanism as a loosely defined movement that promotes using technology to enhance
+the human condition and the human organism: radically longer healthy life, the end of disease, and
+greater intellectual, physical and emotional capacities. Current humanity, he writes, need not be
+the endpoint of evolution. Section 3 states the core value as exploring what he calls the
+posthuman realm, and says technological enhancement of human organisms is a means we ought to
+pursue toward it. The claim is a value statement about what ought to be pursued, not a forecast
+with a date."""
+bears_on = ["lifespan", "mind"]
+bears_on_note = "All seven branches by scope; most directly lifespan and repair, and memory and thinking."

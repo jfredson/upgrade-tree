@@ -1,0 +1,37 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2000-02-01-warwick-wired-cyborg-essay"
+speaker = "Kevin Warwick"
+role = "professor of cybernetics at the University of Reading"
+when = "2000-02-01"
+occasion = "Essay \"Cyborg 1.0\" in Wired, about the implant of 1998-08-24"
+status = "sourced"
+source = """
+The essay at wired.com/2000/02/warwick/, under Warwick's own byline, Wired issue 8.02, published
+2000-02-01 (date read from the page's metadata; the original address was
+wired.com/wired/archive/8.02/warwick.html). The implant it describes, a small radio transponder in
+his left forearm, went in on 1998-08-24 at a surgery in Tilehurst, Reading; that date is from
+Warwick's own site (kevinwarwick.com, Project Cyborg 1.0 page, read through an Internet Archive
+capture of 2025-02-13 because the live site blocks automated readers). The essay itself says only
+August 1998."""
+source_url = "https://www.wired.com/2000/02/warwick/"
+source_locator = "last third of the essay"
+checked_how = "The published text, downloaded and read on 2026-10-16."
+words = "I believe humans will become cyborgs and no longer be stand-alone entities."
+words_locator = "last third of the essay"
+claimed = """
+The 1998 implant, he says, was a test of whether information could pass to and from an implant;
+it did, and for nine days doors opened and lights came on as he walked through his department.
+From that he argues that highly intelligent machines will overtake people later this century, that
+linking people to those machines by implant is a natural next step that would make superhumans in
+effect, and that the alternative is machines ruling and people as second-class citizens. He also
+predicts thought-to-thought communication replacing speech. Hedged as belief and envisioning
+throughout; the plan for a second implant linked to his wife and an internet link from New York
+are stated as intentions, not results. The essay opens with the line, often quoted, that he was
+born human by accident of fate; that line is really there, as its first words."""
+bears_on = ["link", "senses-device-gives-a-person-a-new-sense"]
+bears_on_note = "The link to machines; also the new-sense leaf on the senses branch (he raises an extra sense as a later aim)."
+paraphrase = { repeated = "Warwick's own site describes the 1998 chip in softer terms, as carrying identification and medical data.", seen = "kevinwarwick.com, Project Cyborg 1.0 page", differs = "The superhuman and second-class-citizen claims are in the Wired essay, not on the site's project page.", primary_found = true }
+notes = """
+His book "I, Cyborg" (Century, 2002; University of Illinois Press, 2004) could not be opened
+(archive.org lending copies only, no searchable preview), so no page from it is cited here."""

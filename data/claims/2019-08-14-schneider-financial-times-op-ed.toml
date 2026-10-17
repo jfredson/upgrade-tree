@@ -1,0 +1,30 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2019-08-14-schneider-financial-times-op-ed"
+speaker = "Susan Schneider"
+role = "philosopher"
+critic = true
+when = "2019-08-14"
+when_note = "About. Inferred from the first archive capture and from Futurism's coverage of 2019-08-15 saying this week; not verified."
+occasion = "\"Merging with AI would be suicide for the human mind\", Financial Times"
+status = "unsourced"
+source = """
+Unsourced. Only the headline was confirmed, from the paywalled page at
+ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848 as captured by the Internet Archive on
+2019-08-14, and from the link on her own research page. The body text was not read: the
+newspaper's site refuses automated readers and two archive captures show only the paywall. The
+date is inferred from the first archive capture and from Futurism's coverage of 2019-08-15 saying
+this week; not verified."""
+source_url = "https://www.ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848"
+checked_how = "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read."
+claimed = """
+Only the headline is on the record here: that merging with AI would be suicide for the human
+mind. What the piece argues beyond its headline was not read."""
+bears_on = ["link"]
+bears_on_note = "The headline is about merging with AI; the entry names no leaf because the body was not read."
+paraphrase = { repeated = "The widely quoted line about a brain drain.", seen = "Coverage only (Futurism, Observer), not anything read here.", differs = "Not found in anything read for this entry.", primary_found = false }
+notes = """
+Her book "Artificial You: AI and the Future of Your Mind" (Princeton University Press, hardcover
+2019-10-01, ISBN 9780691180144) carries the fuller argument; its chapter text was not checked.
+Her 2012 paper with Joseph Corabi, "The Metaphysics of Uploading" (Journal of Consciousness
+Studies), was not retrieved."""

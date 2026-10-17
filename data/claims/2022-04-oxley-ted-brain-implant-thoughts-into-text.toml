@@ -1,0 +1,36 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2022-04-oxley-ted-brain-implant-thoughts-into-text"
+speaker = "Tom Oxley"
+role = "chief executive of Synchron"
+when = "2022-04"
+when_note = "The page says April 2022 beside the event name; the exact recording day is not on it."
+released_on = "2022-06-01"
+occasion = "TED2022, Vancouver, \"A brain implant that turns your thoughts into text\""
+status = "sourced"
+source = """
+The talk on ted.com (ted.com/talks/tom_oxley_a_brain_implant_that_turns_your_thoughts_into_text),
+event TED2022, published 2022-06-01 per the page's own data, 12 min 41 s. The page says April 2022
+beside the event name; the exact recording day is not on it. Single speaker, so attribution is
+not in question."""
+source_url = "https://www.ted.com/talks/tom_oxley_a_brain_implant_that_turns_your_thoughts_into_text"
+source_locator = "11:40 to 11:43, within 10:59 to 12:23"
+checked_how = "TED's own timed transcript cues, parsed from the page on 2026-10-16."
+words = "what if, rather than using your words, you could throw your emotion"
+words_locator = "at 11:40 to 11:43"
+claimed = """
+After describing the stent-like implant placed through a blood vessel and the paralysed patients
+using it to text, he says at 1:56 to 2:05 that today's typing speeds are like dial-up at the start
+of the internet, calls it a new Moore's law and says they are just getting started; at 10:18 that
+they are building a dictionary of the brain across all humans; and at 10:59 to 12:23 that beyond
+paralysis he is excited about epilepsy, depression and dementia, and that what has him thinking is
+the future of communication: expressing an emotion now means reflecting, packaging it into words
+and speaking, and if instead you could transmit the feeling itself for a few seconds, so others
+really feel how you feel, we would realise words were always going to fall short and the brain's
+full potential would be unlocked. Hedge at 12:08: for right now, the technology is about restoring
+the lives of millions of people with paralysis, and the promise is autonomy, independence and
+dignity. He never says merge or AI; his one film reference, at 1:30, is to reject the
+cable-in-the-skull image."""
+bears_on = ["link-wireless-brain-implant-controls-a-computer", "link-brain-link-carries-more-information-than-speech", "movement"]
+bears_on_note = "The link to machines (the fully implanted wireless chip leaf and the bandwidth series), and movement and body."
+notes = "Coverage lead, not entered: a 2023 Forbes Australia piece reportedly quotes Oxley calling the company's use of AI a step toward transhumanism while saying that was not why they did it; not fetched."

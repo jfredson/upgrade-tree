@@ -48,6 +48,8 @@ comments, one field per line, multi-line text for prose.
       lifespan.toml       upgrades under Lifespan and repair
       inheritance.toml    upgrades under Inheritance
       link.toml           upgrades under The link to machines
+      bandwidth.toml      the brain-to-machine bandwidth series (added 2026-10-16, see below)
+      claims/             one TOML file per claim (added 2026-10-16, see below)
 
 Each branch file is a list of `[[upgrade]]` tables. A branch file may be empty but for
 comments. Ids must be unique across all files.
@@ -133,9 +135,132 @@ If any rule fails, nothing is written and the build stops.
 
 - **A probability.** See above.
 - **The brain-to-machine bandwidth series.** The project's second number (how much
-  information passes between a brain and a computer each second) gets its own data file when
-  there is a series to plot; it is not a field on an upgrade.
+  information passes between a brain and a computer each second) has its own data file,
+  `data/bandwidth.toml`, laid out below; it is not a field on an upgrade. (Seeded 2026-10-16.)
+- **The claims.** What people have said about merging with machines is a separate record,
+  `data/claims/`, laid out below. A claim never moves a stage (the tracker pattern's rule 6.1:
+  talk and delivery are never mixed).
 - **Opinion about whether an upgrade is good.** The record says what happened and who says so.
+
+## The claim record (`data/claims/`, added 2026-10-16)
+
+The claims are the project's record of talk: who said what about humans merging with or
+upgrading themselves by machines, when, in what words, and where it can be checked. They were
+kept in a TimeAssembler document ("Claims log") from 2026-10-16 until they moved here the same
+day. The charter's "What counts as a claim entry" and "Sourcing standard" sections define them;
+this section is the file layout. A claim never moves an upgrade's stage.
+
+**One file per claim, not one per speaker.** A claim is one person saying one thing on one dated
+occasion, and the record is read in date order, so each occasion gets its own file, named by its
+date and then its id: `data/claims/2017-02-13-musk-world-governments-summit.toml`. The folder then
+lists itself in date order, a restatement on a new date is a new file (the charter says repetition
+is part of what the log shows), and two sessions adding claims never edit the same file. Moderate
+to high confidence; a judgment call (Claude, 2026-10-16). The alternative is one file per speaker
+holding a list of their claims: fewer files and a speaker's whole series in one place, at the cost
+of ordering across files, a heavier diff for each addition, and a decision about where a claim
+with two speakers goes.
+
+Each file holds one `[claim]` table.
+
+| Field | Required | Meaning |
+|---|---|---|
+| `id` | yes | The file name without `.toml`: the date as far as it is known (`2017-02-13`, `2003-10` or `2005`), a dash, a short lowercase slug. Never renamed. |
+| `speaker` | yes | Who said it, as a plain name. For a company's own statement, the company. |
+| `role` | no | The role the speaker held at the time, where it matters. |
+| `critic` | no | `true` when the entry is a critic of the merger idea, entered on the same terms as its advocates (the log marks these in their headings). |
+| `when` | yes | The date of the occasion as a string: `YYYY-MM-DD`, or `YYYY-MM` or `YYYY` when the record settles no finer. Entries sort by this. |
+| `when_note` | no | How the date was settled when it is inferred or approximate ("about", "inferred from the first archive capture"). |
+| `released_on` | no | When the recording or text was published, if later than the occasion (a talk recorded in April and published in June). |
+| `occasion` | yes | Where: a talk, an interview, a product event, a published essay, a book, a post. |
+| `status` | yes | `"sourced"` (the speaker's own words, as recorded on that occasion, were reached) or `"unsourced"` (held on coverage only: a reporter's account, a paywalled text, a headline). An unsourced entry carries no quoted words. |
+| `ruling` | no | A ruling of John's that the entry rests on, in one sentence, as the log records it. |
+| `source` | yes | The primary source in prose: the recording or text, its identifiers (video id, DOI, ISBN, archive capture), how it was reached, and what could not be. For an unsourced entry, the coverage the entry rests on and who wrote it. |
+| `source_url` | yes | The one address a reader should open: the recording, the text, or (unsourced) the coverage. |
+| `source_locator` | no | Where in the source: a timestamp range, a page, a section. |
+| `checked_how` | yes | How the words were checked: listened to, an official transcript, machine-made captions, the published text; and when. |
+| `words` | if sourced | The exact short phrase, at most one, without the quotation marks (the site adds them). At most twenty-five words. Forbidden on an unsourced entry. |
+| `words_locator` | no | The timestamp or page of the phrase. |
+| `claimed` | yes | What was claimed, in our own words, hedges and conditions kept. On an unsourced entry, what was reported, with the reporter named as the source of the paraphrase. |
+| `not_in_source` | no | What a reader might expect to find in the source and does not. |
+| `bears_on` | yes | Branch keys and upgrade ids the claim bears on; may be empty. Every entry must exist. |
+| `bears_on_note` | no | The log's own words on what the claim bears on and why. |
+| `coverage` | no | List of news or secondary accounts that carried the remark, in prose, so a reader can see how it spread. |
+| `paraphrase` | no | A table `{ repeated, seen, differs, primary_found }` for a version that circulates as a quote: the repeated version in our words, where it was seen, what differs from the source, and `primary_found = false` when no primary source with the repeated words was found after checking. |
+| `why_here` | no | Why the entry is in the record when that is not obvious. |
+| `notes` | no | Anything else worth keeping: attribution notes, leads not entered, related works not reached. |
+| `verify` | no | Plain-language claims in the entry not yet checked against a source, as on an upgrade. |
+
+Two more files sit beside the claims and are exported with them:
+
+- `data/claims/not-entered.toml`: `[[checked]]` items, each `{ who, role, checked, result }`, for a
+  speaker who was looked for and not found on any dated occasion (the charter: exclusions are
+  written down); and `[[to_add]]` items, each `{ lead, status }`, for occasions noted and not yet
+  checked. Neither is a claim and neither appears in the count of claims.
+
+**Rules the export script enforces for claims:** every required field; `status` one of the two
+values; `when` in one of the three date forms and matching the start of the file name; `id`
+matching the file name; `source_url` a web address; `words` present on a sourced entry and absent
+on an unsourced one, and at most twenty-five words; every `bears_on` entry an existing branch key
+or upgrade id; a `paraphrase` table with all four of its fields.
+
+## The bandwidth series (`data/bandwidth.toml`, added 2026-10-16)
+
+The project's second number: the best demonstrated rate at which information has passed from a
+brain to a machine, over time, against the rates a reader already has (typing, speech). One file,
+not a list on the link branch's upgrades: a point is a measurement, an upgrade is a capability,
+and most points come from papers that also settle an upgrade's stage, so a point names the upgrade
+it belongs with rather than living inside it. High confidence; the charter said "its own data
+file". Alternative: a `bandwidth_points` list on each link-branch upgrade, which would scatter one
+series over several records and leave the baselines nowhere to live.
+
+Three kinds of table:
+
+**`[[measure]]`**, one per kind of thing measured, since a rate of text and a rate of pointing
+cannot share an axis without an assumption the source did not make:
+
+| Field | Required | Meaning |
+|---|---|---|
+| `key` | yes | `text` (words or characters produced per minute) or `cursor` (bits per second of pointing at targets, the field's grid task). More may be added. |
+| `name` | yes | Plain name for the chart. |
+| `unit` | yes | The unit the chart's axis uses. |
+| `conversion` | no | How a point in another unit is shown on this axis, stated once ("characters a minute are shown as words at five characters a word, the convention typing speed is measured by"). |
+| `meaning` | yes | A sentence on what the measure is and is not. |
+
+**`[[point]]`**, one per demonstrated figure:
+
+| Field | Required | Meaning |
+|---|---|---|
+| `id` | yes | Lowercase slug, unique. |
+| `date` | yes | Publication date of the paper or release, as the charter dates milestones. |
+| `measure` | yes | A `measure` key. |
+| `value` | unless `no_figure` | The figure, as the source gave it. |
+| `unit` | unless `no_figure` | The unit the source used: `words a minute`, `characters a minute`, `correct characters a minute`, `bits a second`. |
+| `plot_value` | computed | Written by the export script: `value` converted to the measure's axis unit (characters ÷ 5 for words), or absent when `no_figure`. Not written in the file. |
+| `no_figure` | no | `true` when the source states no rate; the point appears in the table and not on the chart. Needs `note`. |
+| `what` | yes | What was measured, in a sentence, with vocabulary and error rate where the source gives them. |
+| `who` | yes | Who measured it: institution and named people. |
+| `in_whom` | yes | The participant as the source describes them. |
+| `repeated` | yes | Plain sentence: repeated in how many people and sessions, or a single participant, as far as the source shows. |
+| `peer_reviewed` | yes | `true` for a paper; `false` for a maker's own release. |
+| `source` | yes | Web address of the paper or release. |
+| `source_note` | no | Where in the source the figure is, and anything a reader needs to read it right. |
+| `upgrade` | no | The id of the upgrade this point belongs with. Must exist. |
+| `verify` | no | Claims written from memory and not yet checked. |
+| `note` | no | Anything else. |
+
+**`[[baseline]]`**, one per reference line:
+
+| Field | Required | Meaning |
+|---|---|---|
+| `id`, `measure`, `value`, `unit`, `source` | yes | As for a point. |
+| `label` | yes | Short label drawn beside the line. |
+| `who` | yes | Who measured it and in what. |
+| `source_note` | no | Where in the source. |
+
+**Rules the export script enforces:** every required field; every `measure` named exists; a
+point has `value` and `unit` unless `no_figure`; units are from the list above and a point's unit
+converts to its measure's axis; `source` is a web address; `upgrade` exists; ids unique. The
+script also works out `best` per measure: the highest `plot_value` and its point.
 
 ## Decisions (2026-10-16)
 
@@ -148,3 +273,7 @@ If any rule fails, nothing is written and the build stops.
 | `earlier_stages` as an optional list rather than one field per rung | moderate | judgment call | five fixed date fields; simpler to validate, but most records will only ever know one or two dates |
 | A fourth horizon value, `top`, for entries already in wide use (added 2026-10-16) | moderate | judgment call (Claude, while writing the first list) | force `root` on them and let the page say "longer than 20 years, if ever" about a thing that is finished; misleading |
 | The stage date for an event the record itself dates (a birth, an operation) is the event's date; for a trial or study it is the publication date (2026-10-16) | moderate | judgment call, following the charter's "dated by the event, not by the coverage" | always the publication date; simpler, but puts the first pig heart in June instead of January |
+| One file per claim under `data/claims/`, named by date then slug (added 2026-10-16) | moderate to high | judgment call (Claude) | one file per speaker; fewer files, worse ordering and diffs |
+| The bandwidth series as one file with measures, points and baselines, not a list on upgrades (added 2026-10-16) | high: the charter said its own file | the charter | points on each link-branch upgrade; scatters one series |
+| Two measures (text and pointing) on separate axes rather than one axis in bits per second (added 2026-10-16) | moderate | judgment call (Claude) | convert everything to bits a second; needs assumptions about vocabulary and error rate the sources did not make, which the record refuses to add |
+| Characters a minute shown as words at five characters a word (added 2026-10-16) | high | standard practice (how typing speed is measured) | plot characters and words as separate measures; three charts for five points |

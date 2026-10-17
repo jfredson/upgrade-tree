@@ -1,0 +1,32 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2022-11-30-seo-neuralink-show-and-tell"
+speaker = "DJ Seo"
+role = "Neuralink co-founder"
+when = "2022-11-30"
+when_note = "The evening of 2022-11-30 Pacific time; the recording was uploaded 2022-12-01."
+occasion = "\"Show and Tell, Fall 2022\", Neuralink"
+status = "sourced"
+source = """
+Neuralink's own recording, YouTube video id YreDYmXTYi4 (Neuralink channel, uploaded 2022-12-01,
+2 h 48 min; the event was the evening of 2022-11-30 Pacific time). His segment is listed in the
+company's own chapter list as "Generalized Interface to the Brain (DJ)" starting at 36:38; Musk
+hands over at 36:37, naming him as a founding team member, and the speaker at 37:19 says he moved
+from South Korea at 13, which fits Seo. Attribution rests on that, not on a speaker-labelled
+transcript. The passage runs 37:19 to 40:10."""
+source_url = "https://www.youtube.com/watch?v=YreDYmXTYi4"
+source_locator = "37:19 to 40:10"
+checked_how = "Auto-captions."
+words = "how do you create a high bandwidth generalized interface to the brain"
+words_locator = "at 39:15 to 39:17"
+claimed = """
+He recalls watching the hero of The Matrix learn kung fu by download and wanting to work on making
+that possible. Since intentions, thoughts and experiences all sit in the brain as patterns of
+nerve firing, he says, electrodes in the right places with the right sensing and stimulation make
+that and the other applications Musk had described possible, and would help a lot of people. His
+three design axes are safety, scale, and access to more brain regions so that functions can be
+expanded. He does not say merge or symbiosis; the Matrix line is framed as a childhood ambition,
+not a timeline."""
+bears_on = ["link", "mind"]
+bears_on_note = "The link to machines; memory and thinking (download-style learning is the long-shot version)."
+verify = ["The quote rests on auto-captions; check against the audio before publishing it anywhere else."]

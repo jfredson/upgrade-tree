@@ -1,0 +1,42 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2003-10-warwick-archives-of-neurology"
+speaker = "Kevin Warwick and seven co-authors"
+role = "professor of cybernetics at the University of Reading, and the paper's subject"
+when = "2003-10"
+when_note = "Dated by the paper, as John ruled on 2026-10-16; the implant it describes went in on 2002-03-14."
+occasion = "Paper in Archives of Neurology on the implant of 2002-03-14"
+status = "sourced"
+ruling = "Ruled by John 2026-10-16: a claim made in a scientific paper about work done earlier is dated by the paper, and the entry gives the date of the work as well."
+source = """
+Warwick K., Gasson M., Hutt B., Goodhew I., Kyberd P., Andrews B., Teddy P., Shad A., "The
+application of implant technology for cybernetic systems", Archives of Neurology, volume 60,
+number 10, pages 1369 to 1373, October 2003, DOI 10.1001/archneur.60.10.1369. Full text read on
+the journal's site on 2026-10-16 and checked against the University of Reading repository record
+(centaur.reading.ac.uk/15440). The implant, a hundred-electrode array in the median nerve of his
+left arm, went in on 2002-03-14 at the Radcliffe Infirmary, Oxford (date confirmed by the paper,
+a University of Reading press release of 2002-03-22, and Warwick's own site via an Internet
+Archive capture of 2025-02-18)."""
+source_url = "https://doi.org/10.1001/archneur.60.10.1369"
+source_locator = "the abstract"
+checked_how = "The published text."
+words = "may allow recipients to have abilities they would otherwise not possess"
+words_locator = "from the abstract, of implants of this kind"
+claimed = """
+The paper describes the subject as a healthy 48-year-old man, identified as one of the authors
+(Warwick), with the array in place for 96 days until the wire connection fatigued; only 20 of the
+100 electrodes were connected. It reports controlling an artificial hand and a wheelchair from
+nerve signals, and on 2002-05-20, from a laboratory at Columbia University in New York, operating
+the hand in Reading over the internet despite a delay. The framing is clinical: paralysis,
+amputation, and a future fully implanted device. The words cyborg, telepathy and upgrade do not
+appear. The nerve-to-nerve link with his wife Irena is in a separate paper (Warwick and others,
+"Thought communication and control: a first step using radiotelegraphy", IEE
+Proceedings-Communications, volume 151, number 3, 2004), whose abstract calls it a first step
+toward thought communication and says real thought communication would need implants in the
+central nervous system; its full text was not reached, and the date of the Irena session was not
+found in any primary source. The ultrasonic extra sense is in a 2005 conference paper (IEEE
+Systems, Man and Cybernetics, Waikoloa, 2005-10-10 to 12), abstract only, described there as a
+one-off trial."""
+bears_on = ["link", "senses-device-gives-a-person-a-new-sense"]
+bears_on_note = "The link to machines (a wired nerve implant controlling a device), and the new-sense leaf on the senses branch."
+paraphrase = { repeated = "\"First human to communicate telepathically\" and \"first cyborg\".", seen = "Press framings of the 2002 implant; the grand claims (superhumans, a subspecies) come from the 2000 Wired essay and later interviews such as Scientific American, 2008-03-10, not from the papers.", differs = "The peer-reviewed wording is a first step toward thought communication; Discover magazine (November 2002) itself called the result barely more than cyborg baby talk.", primary_found = true }

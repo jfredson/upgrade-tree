@@ -1,0 +1,30 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2013-02-17-nicolelis-aaas-boston"
+speaker = "Miguel Nicolelis"
+role = "Duke University neuroscientist"
+critic = true
+when = "2013-02-17"
+when_note = "The meeting ran 2013-02-14 to 18; the article reports remarks made on the Sunday, which was 2013-02-17. The calendar date is inferred from the article's wording, not stated in it."
+occasion = "Talk at the American Association for the Advancement of Science annual meeting, Boston"
+status = "unsourced"
+ruling = "Ruled by John 2026-10-16: a reporter's account of a talk is coverage, not the speaker's own words."
+source = """
+Unsourced, coverage only. No recording or transcript of the talk was reached. It is known through
+the MIT Technology Review piece headlined The Brain Is Not Computable, by Antonio Regalado,
+2013-02-18 (technologyreview.com/2013/02/18/180012/the-brain-is-not-computable/), a short news
+story reporting remarks Nicolelis made at the meeting on the Sunday, which was 2013-02-17 (the
+meeting ran 2013-02-14 to 18; the calendar date is inferred from the article's wording, not
+stated in it). Regalado is the source of every paraphrase below."""
+source_url = "https://www.technologyreview.com/2013/02/18/180012/the-brain-is-not-computable/"
+checked_how = "The published article, retrieved and read on 2026-10-16. None of the speaker's words are quoted: Regalado's account has Nicolelis saying that the brain is not computable and no engineering can reproduce it, and that downloads will never happen."
+claimed = """
+He calls the Singularity hot air and says downloading thoughts and memories into a computer will
+never happen, because consciousness arises from unpredictable, nonlinear interactions among
+billions of cells and so cannot be computed. He does not reject brain implants: the article's
+subtitle has him expecting humans to assimilate machines, and he allows, hedged with might, that
+implant users could one day sense X-rays or steer distant machines. His book The Relativistic
+Brain (2015, with Ronald Cicurel) makes the fuller argument and was not retrieved."""
+bears_on = ["link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The uploading long shot (an uploaded animal brain reproduces something it learned) on the link-to-machines branch; the position is that the leaf cannot be reached."
+coverage = ["Singularity Hub, 2013-03-10, repeating the same quotations faithfully."]

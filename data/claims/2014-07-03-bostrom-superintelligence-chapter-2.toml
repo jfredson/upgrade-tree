@@ -1,0 +1,36 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2014-07-03-bostrom-superintelligence-chapter-2"
+speaker = "Nick Bostrom"
+role = "Oxford philosopher"
+when = "2014-07-03"
+when_note = "The UK publication date, consistent across Wikipedia and a bookseller record; the US date is given as 2014-09-01 or 2014-09-03 by different sources and is not settled."
+occasion = "\"Superintelligence: Paths, Dangers, Strategies\" (Oxford University Press), chapter 2, \"Paths to superintelligence\""
+status = "sourced"
+source = """
+The book, Oxford University Press, 2014 hardcover, ISBN 9780199678112, 328 pages; chapter 2 runs
+pages 22 to 51. The UK publication date 2014-07-03 is consistent across Wikipedia and a bookseller
+record; the US date is given as 2014-09-01 or 2014-09-03 by different sources and is not settled.
+Read through Google Books search-inside snippets of that edition, which show the printed running
+heads, so the page numbers are the book's."""
+source_url = "https://books.google.com/books?vid=ISBN9780199678112"
+source_locator = "pages 50 to 51"
+checked_how = "The published text, by preview snippets, on 2026-10-16."
+words = "look unlikely as a source of superintelligence"
+words_locator = "pages 50 to 51, across the page break, of brain-computer interfaces"
+claimed = """
+Three routes are weighed. Whole brain emulation (pages 30 to 34): scanning, translation and
+simulation; he says there is good reason to think the enabling technologies are attainable though
+not soon, and that a first emulation would likely be imperfect; no date is attached. Biological
+enhancement (pages 38 to 43 and 50): iterated embryo selection is set out step by step, could
+select strongly for several traits at once, and seems to him an especially promising technology,
+though slow and gradual next to machine intelligence; cohorts enhanced this way could be adults by
+mid-century (page 43). Brain-computer interfaces (pages 44 to 51): implants could let people
+borrow the strengths of digital computing, but he thinks it unlikely they will be widely used as
+enhancements any time soon, and argues (page 46) that the limiting step in human intelligence is
+not how fast data can be fed into the brain but how quickly the brain can make sense of it, so
+more input bandwidth would do little unless the brain's own machinery were upgraded. He allows
+the cyborg route is not without promise, citing a rat hippocampus prosthesis (page 47)."""
+bears_on = ["link-brain-link-carries-more-information-than-speech", "inheritance-embryos-chosen-by-a-genetic-score-for-traits", "link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The link to machines (the bandwidth long shot, which he argues is the wrong bottleneck); inheritance (embryos chosen by a genetic score); the uploading long shot."
+paraphrase = { repeated = "Bostrom endorses implants as a path to superintelligence.", seen = "Often cited this way.", differs = "The chapter says the opposite, while allowing modest enhancement value. This is the direct counter to the bandwidth argument Musk made in Dubai in 2017.", primary_found = true }

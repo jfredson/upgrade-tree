@@ -1,0 +1,30 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2017-02-13-musk-world-governments-summit"
+speaker = "Elon Musk"
+when = "2017-02-13"
+occasion = "World Governments Summit, Dubai, on stage, interviewed by Mohammad Al Gergawi"
+status = "sourced"
+source = """
+Recording on the World Governments Summit YouTube channel, video id rCoFKUJ_8Yo ("Mohammad Al
+Gergawi in a conversation with Elon Musk during WGS17", uploaded 2017-02-15, 35 min). The passage
+runs about 24:48 to 27:14."""
+source_url = "https://www.youtube.com/watch?v=rCoFKUJ_8Yo"
+source_locator = "about 24:48 to 27:14"
+checked_how = "English captions on the official upload. These are punctuated and look human-made rather than machine-made, but they were not checked against the audio."
+words = "a closer merger of biological intelligence and digital intelligence"
+words_locator = "at 26:09 to 26:15"
+claimed = """
+Asked how people find meaning in a future run by AI, he offers what he himself calls a potential
+path bordering on science fiction: some merger of biological and machine intelligence. He argues
+people are already partly machine because of phones and computers, which he calls a digital third
+layer on top of the animal brain and the thinking brain. The limit, he says at 26:20, is mostly
+the bandwidth of the link between brain and device, especially output: typing with thumbs is
+around ten bits per second against a computer's trillion. A high-bandwidth interface to the
+brain, he says at 27:00, would help reach symbiosis between human and machine intelligence and
+might solve the control problem and the usefulness problem. He closes by calling himself
+esoteric. Hedged throughout: a potential path, probably, maybe."""
+not_in_source = "Elimination, extinction, a new species, or any instruction that people must merge. Neuralink is not named (it was reported publicly on 2017-03-27)."
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+coverage = ["Fortune, 2017-02-13, and many others that week; CNBC's 2018-02-13 anniversary recap. Most coverage led with \"must become cyborgs\", which is a tighter claim than the recording."]

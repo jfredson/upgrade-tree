@@ -1,0 +1,34 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2020-08-29-jackson-science-media-centre"
+speaker = "Andrew Jackson"
+role = "professor of neural interfaces, Newcastle University"
+critic = true
+when = "2020-08-29"
+occasion = "Written statement to the Science Media Centre after Neuralink's pig demonstration of 2020-08-28"
+status = "sourced"
+source = """
+The Science Media Centre page "expert reaction to Elon Musk's Neuralink demonstration involving
+pigs", dated 2020-08-29
+(sciencemediacentre.org/expert-reaction-to-elon-musks-neuralink-demonstration-involving-pigs/).
+The Centre publishes scientists' statements as submitted, so this is his own text, not a
+reporter's paraphrase; declared interests: none. A shorter statement from him the day before is
+on the Centre's page dated 2020-08-28."""
+source_url = "https://www.sciencemediacentre.org/expert-reaction-to-elon-musks-neuralink-demonstration-involving-pigs/"
+source_locator = "third paragraph of his statement"
+checked_how = "The published text, retrieved on 2026-10-16."
+words = "a big difference between recording brain cells and 'reading thoughts'"
+words_locator = "third paragraph of his statement, of there being"
+claimed = """
+A channel count of 1,024 is not that impressive these days, he writes, though the wireless
+electronics are state of the art and the robotic insertion is good; the hard part is interpreting
+the data, and the demonstration showed nothing not done before (decoding limb position while an
+animal walks). Writing to the brain he calls even more questionable, because electrical
+stimulation cannot target specific networks of neurons meaningfully. He regrets that the claims
+are made at events rather than in peer-reviewed papers, and his closing verdict is solid
+engineering but mediocre neuroscience. The day before he had noted that Neuralink's 2019 preprint
+showed rat data and that it is one of a number of such efforts."""
+bears_on = ["link", "link-brain-link-carries-more-information-than-speech"]
+bears_on_note = "The link to machines, and the bandwidth series directly (the entry is a dated expert reading of a channel-count figure)."
+coverage = ["Business Insider and Fortune quoted the channel-count line accurately but dropped the reading-thoughts and peer-review points."]
+notes = "His quoted remarks to The Guardian after the 2019-07-16 launch were not reached (no archive capture found) and are not entered."

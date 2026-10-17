@@ -1,0 +1,32 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2019-07-16-musk-neuralink-launch-event"
+speaker = "Elon Musk"
+when = "2019-07-16"
+when_note = "The evening of 2019-07-16 Pacific time; the recording was uploaded 2019-07-17."
+occasion = "Neuralink launch event, San Francisco"
+status = "sourced"
+source = """
+Neuralink's own recording, YouTube video id r-vbh3t7WVI ("Neuralink Launch Event", Neuralink
+channel, uploaded 2019-07-17, 1 h 45 min). The event was the evening of 2019-07-16 Pacific time.
+The merger passage runs about 05:30 to 08:21; a second remark is in the audience questions at
+about 01:22:13 to 01:22:27."""
+source_url = "https://www.youtube.com/watch?v=r-vbh3t7WVI"
+source_locator = "about 05:30 to 08:21, and 01:22:13 to 01:22:27"
+checked_how = "Machine captions."
+words = "a sort of symbiosis with artificial intelligence"
+words_locator = "at 05:53 to 05:58"
+claimed = """
+After describing the medical uses the company will pursue first, he says the long-run aim is a
+full brain-machine interface and, by his own warning sounding weird, a kind of symbiosis with AI.
+At 06:01 he stresses it would be optional, not mandatory. He says that even in a benign AI
+scenario people will be left behind, and that a high-bandwidth interface would let people keep up,
+giving them, at 06:43, the option of merging with AI. He repeats the three-layer picture (animal
+brain, thinking brain, a digital superintelligence layer that phones already roughly supply) and
+says bandwidth is the constraint. At 08:07 he states the point of the company in the limit, after
+solving brain diseases, is reducing the existential threat of AI. In the questions, asked how the
+device will be paid for, he says someone who chooses symbiosis with AI could repay a loan with
+superhuman intelligence, and that the first order of business is making it work safely."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+coverage = ["Vice, Axios, Euronews and 1News on 2019-07-17, most leading with the symbiosis phrase and carrying the not-mandatory hedge."]

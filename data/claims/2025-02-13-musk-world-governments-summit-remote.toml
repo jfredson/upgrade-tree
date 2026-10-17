@@ -1,0 +1,30 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2025-02-13-musk-world-governments-summit-remote"
+speaker = "Elon Musk"
+when = "2025-02-13"
+occasion = "Remote talk to the World Governments Summit, Dubai"
+status = "sourced"
+source = """
+Reuters' recording, YouTube video id eV396ioBs3g ("LIVE: Elon Musk speaks at Dubai's World
+Governments Summit", Reuters channel, 2025-02-13, 35 min). The relevant passage runs about 22:26
+to 24:57."""
+source_url = "https://www.youtube.com/watch?v=eV396ioBs3g"
+source_locator = "about 22:26 to 24:57"
+checked_how = "Machine captions, the whole file searched, not just the passage."
+words = "human intelligence I think will be dwarfed by machine intelligence"
+words_locator = "at 23:03 to 23:09"
+claimed = """
+Answering a question about a society that depends on AI, he first talks about birth rates and a
+possible split in human intelligence. He then says human intelligence will be dwarfed by machine
+intelligence, that this appears inevitable, that digital intelligence will be more than 99 percent
+of all intelligence in the future (23:25), and that he is not sure how to feel about it beyond
+hoping the computers are nice to us. His remedy in this talk is how AI is raised: treat it like a
+gifted child, make it maximally truth-seeking and curious, because such an AI would foster
+humanity and avoid dystopian outcomes. He then moves on to Google Gemini image generation as an
+example of an AI built to put a value above truth."""
+not_in_source = "The whole caption file has no occurrence of merge, merger, species, eliminate, symbiosis, Neuralink, bandwidth, cyborg, brain, implant, chip or interface. Brain-computer interfaces are not mentioned at all."
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+paraphrase = { repeated = "A sentence circulating online as a quote from this talk says, roughly, that the only way humans escape being eliminated by AI is to voluntarily merge with machines and become a new species.", seen = "Online, as a quote from this talk. It arrived in this project on 2026-10-16 as a sentence John had been given; where it was first published has not been traced.", differs = "It is not in the recording. It reads as a stitch of the 2017 Dubai merger remark, the 2018 film's merge-or-be-left-behind line, and the 2019 launch event's left-behind-even-in-a-benign-scenario remark, with \"eliminated\" and \"new species\" added from no source found.", primary_found = false }
+why_here = "This talk is the occasion the project was started over: the gap between the sentence that circulates and the recording."

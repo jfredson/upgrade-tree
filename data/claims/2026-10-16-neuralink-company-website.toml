@@ -1,0 +1,26 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2026-10-16-neuralink-company-website"
+speaker = "Neuralink"
+role = "the company, on its own website"
+when = "2026-10-16"
+when_note = "The date the page was retrieved; the page itself is undated."
+occasion = "Company website, home page"
+status = "sourced"
+source = """
+neuralink.com home page, read on 2026-10-16 in a browser (the page needs scripts to render; a
+plain fetch returns an empty shell)."""
+source_url = "https://neuralink.com/"
+checked_how = "Read on 2026-10-16 in a browser."
+words = "unlock new dimensions of human potential"
+claimed = """
+The site describes a brain-computer interface that turns neural signals into actions, lists five
+named trial participants with implant dates from 2024-01 to 2025-04, and states a two-part
+purpose: restoring autonomy to people with unmet medical needs, and the phrase quoted above. It
+does not mention artificial intelligence, symbiosis or merging anywhere on the home page.
+Third-party pages from 2024 quote an earlier version of the mission that spoke of a generalized
+brain interface restoring autonomy today and unlocking human potential tomorrow; that older
+wording was not retrieved from the company's own site and is listed as secondary."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+why_here = "It is the company's current public statement of purpose, and the gap between it and the 2019 to 2020 statements (reducing the existential threat of AI as the point of the company) is itself part of the record."

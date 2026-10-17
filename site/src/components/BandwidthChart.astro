@@ -1,0 +1,124 @@
+---
+// One measure of the bandwidth series as a dot chart over calendar time, drawn as plain SVG at
+// build time from data/bandwidth.toml (through scripts/export.py). Copied in approach from The
+// Belt Equation's HistoryChart.astro on 2026-10-16: no chart library, a handful of points, every
+// mark a plain anchor. The dots are the demonstrated figures, the stepped line is the best figure
+// so far, and the dashed lines are the rates a reader already has (typing, speech). Points the
+// source gave no figure for are not drawn; the table under the chart lists them.
+import type { Measure } from '../lib/tree';
+
+interface Props {
+  measure: Measure;
+  height?: number;
+}
+
+const { measure: m, height = 280 } = Astro.props;
+
+const points = m.points.filter((p) => p.plot_value !== null);
+const day = (d: string) => Date.parse(d + 'T00:00:00Z');
+const YEAR = 365.25 * 86400000;
+
+const dates = points.map((p) => day(p.date));
+const xMin = (dates.length ? Math.min(...dates) : day('2004-01-01')) - YEAR;
+const xMax = Math.max(dates.length ? Math.max(...dates) : day('2026-01-01'), day('2026-01-01')) + YEAR;
+
+const values = [...points.map((p) => p.plot_value as number), ...m.baselines.map((b) => b.plot_value)];
+const top = Math.max(...values, 1);
+const yMax = top * 1.12;
+
+const W = 720;
+const H = height;
+const PAD = { top: 22, right: 18, bottom: 36, left: 54 };
+const plotW = W - PAD.left - PAD.right;
+const plotH = H - PAD.top - PAD.bottom;
+const px = (t: number) => PAD.left + ((t - xMin) / (xMax - xMin)) * plotW;
+const py = (v: number) => PAD.top + plotH - (v / yMax) * plotH;
+
+// Gridlines at round numbers.
+const step = yMax > 100 ? 40 : yMax > 40 ? 20 : yMax > 12 ? 5 : 2;
+const ticks: number[] = [];
+for (let v = 0; v <= yMax; v += step) ticks.push(v);
+
+// Year labels on the x axis, every few years so they do not collide.
+const firstYear = new Date(xMin).getUTCFullYear() + 1;
+const lastYear = new Date(xMax).getUTCFullYear();
+const span = lastYear - firstYear;
+const every = span > 16 ? 4 : span > 8 ? 2 : 1;
+const years: number[] = [];
+for (let y = firstYear; y <= lastYear; y += 1) if (y % every === 0) years.push(y);
+
+// The best figure so far, as a stepped line through time.
+const sorted = [...points].sort((a, b) => day(a.date) - day(b.date));
+let running = 0;
+const stepPts: { x: number; y: number }[] = [];
+for (const p of sorted) {
+  const v = p.plot_value as number;
+  const x = px(day(p.date));
+  if (stepPts.length === 0) {
+    running = v;
+    stepPts.push({ x, y: py(v) });
+  } else if (v > running) {
+    stepPts.push({ x, y: py(running) });
+    running = v;
+    stepPts.push({ x, y: py(v) });
+  }
+}
+if (stepPts.length) stepPts.push({ x: px(xMax), y: py(running) });
+const stepPath = stepPts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+
+const fmt = (v: number) => (Number.isInteger(v) ? String(v) : v.toFixed(1));
+const shortDate = (iso: string) => {
+  const [y, mo] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, mo - 1, 1)).toLocaleDateString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+};
+---
+
+<figure class="chart bw-chart">
+  <figcaption class="chart-head">
+    <span class="chart-title">{m.name}, in {m.unit}</span>
+    <span class="chart-note">{m.meaning}</span>
+  </figcaption>
+
+  {points.length === 0 ? (
+    <p class="dim chart-empty">No figure recorded for this measure yet, so there is nothing to draw.</p>
+  ) : (
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${m.name}: ${points.length} demonstrated figures over time, with ${m.baselines.length} reference lines`} class="chart-svg">
+      {ticks.map((v) => (
+        <>
+          <line class="chart-grid" x1={PAD.left} x2={W - PAD.right} y1={py(v)} y2={py(v)} />
+          <text class="chart-axis" x={PAD.left - 8} y={py(v) + 4} text-anchor="end">{fmt(v)}</text>
+        </>
+      ))}
+      {years.map((y) => (
+        <text class="chart-axis" x={px(day(`${y}-01-01`))} y={H - 12} text-anchor="middle">{y}</text>
+      ))}
+
+      {/* Reference lines, labelled inside the plot just above each line at its right end. */}
+      {m.baselines.map((b) => (
+        <g class="bw-baseline">
+          <line x1={PAD.left} x2={W - PAD.right} y1={py(b.plot_value)} y2={py(b.plot_value)} />
+          <text x={W - PAD.right - 6} y={py(b.plot_value) - 5} text-anchor="end">{b.label}, {fmt(b.plot_value)}</text>
+        </g>
+      ))}
+
+      <path class="chart-line lead bw-best" d={stepPath} />
+
+      <g class="chart-marks lead">
+        {points.map((p) => (
+          <a href={`#${p.id}`} class="chart-mark">
+            <circle class={`chart-dot ${p.peer_reviewed ? '' : 'bw-unreviewed'}`} cx={px(day(p.date))} cy={py(p.plot_value as number)} r="5" />
+            <title>{`${shortDate(p.date)}: ${fmt(p.value as number)} ${p.unit}${p.plot_value !== p.value ? ` (shown as ${fmt(p.plot_value as number)} ${m.unit})` : ''}. ${p.who}`}</title>
+          </a>
+        ))}
+      </g>
+    </svg>
+  )}
+
+  <ul class="chart-legend">
+    <li class="on"><span class="swatch dot" aria-hidden="true"></span>a demonstrated figure, from a peer-reviewed paper</li>
+    <li class="on"><span class="swatch dot hollow" aria-hidden="true"></span>a demonstrated figure, from the maker's own release</li>
+    <li class="on"><span class="swatch" aria-hidden="true"></span>the best figure so far</li>
+    <li><span class="swatch dashed" aria-hidden="true"></span>a rate a reader already has</li>
+  </ul>
+  {m.conversion && <p class="dim chart-empty">{m.conversion}</p>}
+</figure>

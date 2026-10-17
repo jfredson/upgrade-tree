@@ -1,0 +1,31 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2018-01-24-harari-davos-will-the-future-be-human"
+speaker = "Yuval Noah Harari"
+when = "2018-01-24"
+when_note = "The session date and time (15:15) are from the Forum's session page, reached only through search-engine snippets; a direct fetch was refused."
+occasion = "World Economic Forum annual meeting, Davos, \"Will the Future Be Human?\""
+status = "sourced"
+source = """
+The Forum's recording, YouTube video id hL9uk4hKyg4 (World Economic Forum channel, uploaded
+2018-01-25, 29 min). The session date, 2018-01-24 at 15:15, is from the Forum's session page
+(reached only through search-engine snippets; a direct fetch was refused). The passages run 4:55
+to 5:56, 7:20 to 7:45 and 13:29 to 14:00."""
+source_url = "https://www.youtube.com/watch?v=hL9uk4hKyg4"
+source_locator = "4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00"
+checked_how = "Auto-captions only; the recording has no human-made subtitle track and no Forum transcript was found. Recommend a listen at the three timestamp ranges before the quote is published anywhere."
+words = "we can hack not just computers we can hack human beings"
+words_locator = "at 4:55 to 5:03"
+claimed = """
+Data matters, he says, because we have reached the point of being able to hack human beings,
+which needs two things, a lot of computing power and a lot of biometric data, neither of which
+anyone had before, not even the KGB or the Spanish Inquisition. When the information-technology
+revolution merges with the biotechnology revolution, the result is that ability, and its key
+invention is the biometric sensor. By hacking organisms, elites may gain the power to re-engineer
+the future of life itself; once you can hack something you can usually engineer it, and if that
+succeeds it would be the greatest revolution not only in human history but in biology. Hedged:
+may, if indeed we succeed."""
+bears_on = ["mind", "mood", "inheritance"]
+bears_on_note = "Memory and thinking, and mood and drive (the claim is about reading and steering people, not implanting them); inheritance (re-engineering life)."
+paraphrase = { repeated = "Humans are now hackable animals.", seen = "Widely quoted.", differs = "Not in this recording's captions (the word hackable does not occur). The 2018 wording is hack human beings. The hackable-animals phrasing belongs to his later talks. His Davos address of 2020-01-23 (\"How to Survive the 21st Century\", video id eOsKFOrW5h8, auto-captions) gives the formula of biological knowledge times computing power times data equals the ability to hack humans, at 10:41 to 11:03, and the word hackable is absent there too.", primary_found = true }
+verify = ["The quote rests on auto-captions; listen at the three timestamp ranges before publishing it anywhere else."]

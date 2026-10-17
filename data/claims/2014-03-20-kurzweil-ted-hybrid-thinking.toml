@@ -1,0 +1,28 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2014-03-20-kurzweil-ted-hybrid-thinking"
+speaker = "Ray Kurzweil"
+when = "2014-03-20"
+released_on = "2014-06-02"
+occasion = "TED2014, Vancouver, \"Get ready for hybrid thinking\""
+status = "sourced"
+source = """
+The talk on ted.com (ted.com/talks/ray_kurzweil_get_ready_for_hybrid_thinking), recorded
+2014-03-20 and published 2014-06-02 per the page's own data; the YouTube copy on the TED channel
+is video id PVXQUItNEDQ, uploaded 2014-06-02. The passage runs 7:26 to 8:33 in ted.com's timing
+(YouTube's runs about twelve seconds later)."""
+source_url = "https://www.ted.com/talks/ray_kurzweil_get_ready_for_hybrid_thinking"
+source_locator = "7:26 to 8:33 in ted.com's timing"
+checked_how = "TED's official transcript cues on ted.com, matched word for word against the subtitle track TED uploaded to YouTube (a human-made track, not auto-captions)."
+words = "In the 2030s, if you need some extra neocortex,"
+words_locator = "at 7:57"
+claimed = """
+Twenty years from now, he says, nanobots will enter the brain through the capillaries and connect
+the neocortex to a synthetic neocortex in the cloud, so that someone needing more thinking
+capacity would connect to it directly from the brain. Our thinking would then be a hybrid of
+biological and non-biological thinking, with the non-biological part growing exponentially under
+what he calls the law of accelerating returns. Stated as prediction, with both twenty years from
+now and the 2030s as his own timing; 2045 is not said in this passage."""
+bears_on = ["mind", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "link"]
+bears_on_note = "Memory and thinking (the always-on assistant leaf is the soft version of this; the nanobot version is a long shot), and the link to machines."
+paraphrase = { repeated = "Nanobots will make us godlike.", seen = "Lines such as this in coverage.", differs = "They come from a 2015 interview, not this talk.", primary_found = true }

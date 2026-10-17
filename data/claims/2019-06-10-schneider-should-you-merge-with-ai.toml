@@ -1,0 +1,34 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2019-06-10-schneider-should-you-merge-with-ai"
+speaker = "Susan Schneider"
+role = "philosopher"
+critic = true
+when = "2019-06-10"
+occasion = "\"Should You Merge With A.I.?\", New York Times, \"Op-Eds From the Future\" series"
+status = "sourced"
+ruling = "Ruled by John 2026-10-16: a fiction-framed piece counts as a claim when the argument is in the author's own voice, with the framing recorded as a hedge."
+source = """
+The piece under her own byline, dated 2019-06-10, at
+nytimes.com/2019/06/10/opinion/future-artificial-intelligence-transhumanism.html, read through an
+Internet Archive capture of the same day. Her own site lists it as "Should You Add a Microchip to
+Your Brain?", which may be the print headline (not verified). The series carries an editors' note
+that these are imagined future op-eds and that the piece is a work of fiction."""
+source_url = "https://www.nytimes.com/2019/06/10/opinion/future-artificial-intelligence-transhumanism.html"
+checked_how = "The published text."
+words = "knowingly trading away one or more of your essential properties would be tantamount to suicide"
+claimed = """
+Framing hedge first: the piece is published under the newspaper's label of fiction, set in an
+imagined Manhattan clinic selling an enhancement bundle it calls Merge, so its claims are offered
+as an imagined future rather than a forecast; the argument itself is hers. Two possible ceilings on
+merging with AI. A consciousness ceiling: if microchips turn out to be the wrong material for
+consciousness (which she assumes for the sake of argument), replacing brain parts with chips would
+diminish or end your life as a conscious being, and because working memory and attention seem
+tied to consciousness, we may be stuck with our existing bandwidth limits. A self ceiling: the
+mind-is-software view does not hold, since programs are abstract objects while minds act in space
+and time, so there is no ground for confidence that the self survives a merge or even less radical
+enhancements. She hedges explicitly that we do not know whether there is a self ceiling or where
+it sits, and closes by asking for humility. She does not say partial enhancement is safe; she says
+it is uncertain."""
+bears_on = ["link-brain-link-carries-more-information-than-speech", "link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The link to machines (the bandwidth long shot, which she argues may be capped by consciousness), and the uploading long shot."

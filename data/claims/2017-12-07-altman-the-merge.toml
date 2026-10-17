@@ -1,0 +1,33 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2017-12-07-altman-the-merge"
+speaker = "Sam Altman"
+role = "then president of Y Combinator"
+when = "2017-12-07"
+when_note = "The page shows no date in its text; its date element carries the Unix time 1512665788, which is 2017-12-07 at 08:56 Pacific, and a same-day reply post elsewhere corroborates."
+occasion = "Blog post \"The Merge\""
+status = "sourced"
+source = """
+blog.samaltman.com/the-merge. The page shows no date in its text; its date element carries the
+Unix time 1512665788, which is 2017-12-07 at 08:56 Pacific, and a same-day reply post elsewhere
+corroborates. The post says it was cross-posted from a Medium piece titled "Merge Now", whose
+date was not retrieved."""
+source_url = "https://blog.samaltman.com/the-merge"
+source_locator = "the opening sentence"
+checked_how = "The published text, fetched and read on 2026-10-16."
+words = "A popular topic in Silicon Valley is talking about what year humans and machines will merge"
+words_locator = "the opening sentence"
+claimed = """
+His own claim is that the merge has already started and is a few years in, that it will be
+gradual, and that it will probably come sooner than most people think; he gives no year of his
+own. The 2025 to 2075 range in the post is explicitly other people's guesses, not his. The forms
+he names: phones, feeds and search already steering us; co-evolution in which AI designs the chips
+that improve AI; and superhuman AI, genetic enhancement and brain-machine interfaces, which he
+says are going to happen. His line of alternatives is electrodes in the brain or becoming very
+close friends with a chatbot. Hedges and conditions: it probably cannot be stopped, unless we
+destroy ourselves first; the merge is probably the best case against the alternative of two
+species competing for dominance; his guess is that we are either the biological bootloader for
+digital intelligence or we work out a successful merge; and he calls for worldwide coordination."""
+bears_on = ["link", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "inheritance"]
+bears_on_note = "The link to machines; memory and thinking (the always-on assistant leaf is his already-merged-by-phones point); inheritance (genetic enhancement)."
+paraphrase = { repeated = "The 2025 to 2075 window, and sometimes 2027, as Altman's prediction.", seen = "Later coverage (for example around his 2025 brain-interface venture).", differs = "The text attributes the window to Silicon Valley chatter, and 2027 appears nowhere in it.", primary_found = true }

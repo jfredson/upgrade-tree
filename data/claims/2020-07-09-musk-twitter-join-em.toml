@@ -1,0 +1,25 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2020-07-09-musk-twitter-join-em"
+speaker = "Elon Musk"
+when = "2020-07-09"
+when_note = "02:01 in the timezone shown by the search result."
+occasion = "Post on Twitter"
+status = "sourced"
+source = """
+The post at x.com/elonmusk/status/1281121339584114691, dated 2020-07-09 (02:01 in the timezone
+shown by the search result; not opened directly, text and date taken from the search engine's
+rendering of the page on 2026-10-16)."""
+source_url = "https://x.com/elonmusk/status/1281121339584114691"
+checked_how = "Not opened directly; text and date taken from the search engine's rendering of the page on 2026-10-16."
+words = "If you can't beat em, join em"
+words_locator = "the post, followed on the next line by the words Neuralink mission statement"
+claimed = """
+A one-line statement of purpose, in the same thread that announced the 2020-08-28 progress update.
+Coverage (Business Insider India, 2020-07-09) noted he had used the line before, on the Joe Rogan
+podcast and in his 2019 Shanghai conversation with Jack Ma. Whether this is a formal mission
+statement or a quip is not settled by the post; the company's website has never used the line
+(see the 2026 entry)."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+coverage = ["Business Insider India, 2020-07-09, noting he had used the line before, on the Joe Rogan podcast and in his 2019 Shanghai conversation with Jack Ma."]

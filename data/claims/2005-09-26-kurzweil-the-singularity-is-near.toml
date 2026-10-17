@@ -1,0 +1,38 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2005-09-26-kurzweil-the-singularity-is-near"
+speaker = "Ray Kurzweil"
+when = "2005-09-26"
+when_note = "The publisher's on-sale date; retail listings and the author's excerpts page say 2005-09-22. Both come from the publisher's own materials; the on-sale date is used here."
+occasion = "\"The Singularity Is Near: When Humans Transcend Biology\" (Viking), a book"
+status = "sourced"
+source = """
+The book, Viking, 2005, ISBN 0-670-03384-7, xvii + 652 pages; page numbers are the hardcover's.
+The publisher's press release (archived from the author's site singularity.com, Internet Archive
+capture of 2023-08-04) gives the on-sale date as 2005-09-26; retail listings and the author's
+excerpts page say 2005-09-22. Both come from the publisher's own materials; the on-sale date is
+used here. Checked through the publisher-typeset chapter 1 PDF the author's site linked
+(media.kurzweilai.net, Internet Archive capture of 2006-06-15), a Google Books search-inside
+preview of the 2006 Penguin paperback (ISBN 9780143037880), and a community full-text upload on
+archive.org of the Viking edition."""
+source_url = "https://books.google.com/books?vid=ISBN9780143037880"
+source_locator = "page 9, chapter 1"
+checked_how = "The published text, through those three copies, on 2026-10-16."
+words = "transcend these limitations of our biological bodies and brains"
+words_locator = "page 9, chapter 1, of what the Singularity will allow us to do"
+claimed = """
+Chapter 1 says the Singularity will let us control our fate and live as long as we want, which he
+distinguishes from living forever, and that by the end of this century the non-biological part of
+our intelligence will be vastly stronger than unaided human intelligence. In chapter 3 ("Setting
+a Date for the Singularity") he sets the Singularity, which he calls a profound and disruptive
+transformation in human capability, at 2045, and says the non-biological intelligence created that
+year will be a billion times more powerful than all human intelligence today; the page is 136 per
+the standard citation, bracketed by the contents page (section begins page 127, chapter 4 begins
+page 143) but not seen directly, because the lending scans could not be searched. He adds that we
+will transcend biology but not our humanity. Chapter 1 also lists, as a projection, billions of
+nanobots in the capillaries of the brain vastly extending human intelligence, and the chapter 5
+dialogue has him say we are going to merge with our technology. The nanobot era is placed in the
+2020s elsewhere (chapter 4)."""
+bears_on = ["link", "mind", "lifespan"]
+bears_on_note = "The link to machines; memory and thinking (nanobots in the brain); lifespan and repair."
+paraphrase = { repeated = "Kurzweil said humans will merge with machines by 2045.", seen = "The common line in coverage of the book.", differs = "Not the 2005 wording. The 2045 claim in this book is about non-biological intelligence being a billion times more powerful; the merging and nanobot material is separate and undated there.", primary_found = true }

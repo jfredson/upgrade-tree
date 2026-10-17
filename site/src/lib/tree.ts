@@ -3,6 +3,8 @@
 // committed; run `npm run export` (or any build) to create them.
 import treeJson from '../data/tree.json';
 import changelogJson from '../data/changelog.json';
+import claimsJson from '../data/claims.json';
+import bandwidthJson from '../data/bandwidth.json';
 
 export const REPO = 'https://github.com/jfredson/upgrade-tree';
 
@@ -93,8 +95,92 @@ export type Tree = {
 
 export type Changelog = { source: string; intro: string; days: { date: string; items: string[] }[] };
 
+// The claims: what people have said about merging with machines (data/claims/, added 2026-10-16).
+export type BearsOn = { kind: 'branch' | 'upgrade'; key: string; name: string; path: string; branch?: string; stage_label?: string };
+export type Paraphrase = { repeated: string; seen: string; differs: string; primary_found: boolean };
+export type Claim = {
+  id: string;
+  speaker: string;
+  role: string | null;
+  critic: boolean;
+  when: string;
+  when_label: string;
+  when_note: string | null;
+  released_on: string | null;
+  occasion: string;
+  status: 'sourced' | 'unsourced';
+  ruling: string | null;
+  source: string;
+  source_url: string;
+  source_locator: string | null;
+  checked_how: string;
+  words: string | null;
+  words_locator: string | null;
+  claimed: string;
+  not_in_source: string | null;
+  bears_on: BearsOn[];
+  bears_on_note: string | null;
+  coverage: string[];
+  paraphrase: Paraphrase | null;
+  why_here: string | null;
+  notes: string | null;
+  verify: string[];
+  file: string;
+};
+export type Claims = {
+  exported_on: string;
+  claims: Claim[];
+  not_entered: {
+    checked: { who: string; role: string | null; checked: string; result: string }[];
+    to_add: { lead: string; status: string }[];
+  };
+  counts: {
+    claims: number; sourced: number; unsourced: number; critics: number; speakers: number;
+    paraphrases: number; no_primary_found: number; to_verify: number;
+    first_when: string | null; last_when: string | null;
+  };
+};
+
+// The bandwidth series (data/bandwidth.toml, added 2026-10-16).
+export type BandwidthPoint = {
+  id: string;
+  date: string;
+  measure: string;
+  value: number | null;
+  unit: string | null;
+  plot_value: number | null;
+  no_figure: boolean;
+  what: string;
+  who: string;
+  in_whom: string;
+  repeated: string;
+  peer_reviewed: boolean;
+  source: string;
+  source_note: string | null;
+  upgrade: { id: string; name: string; path: string } | null;
+  verify: string[];
+  note: string | null;
+};
+export type Baseline = {
+  id: string; measure: string; label: string; value: number; unit: string; plot_value: number;
+  who: string; source: string; source_note: string | null;
+};
+export type Measure = {
+  key: string; name: string; unit: string; conversion: string | null; meaning: string;
+  points: BandwidthPoint[]; baselines: Baseline[];
+  best: { id: string; date: string; value: number; unit: string; plot_value: number; peer_reviewed: boolean } | null;
+};
+export type Bandwidth = {
+  exported_on: string;
+  measures: Measure[];
+  points: BandwidthPoint[];
+  counts: { points: number; with_figures: number; baselines: number; to_verify: number; first_date: string | null; last_date: string | null };
+};
+
 export const tree = treeJson as Tree;
 export const changelog = changelogJson as Changelog;
+export const claims = claimsJson as Claims;
+export const bandwidth = bandwidthJson as Bandwidth;
 
 export const branchByKey = (key: string) => tree.branches.find((b) => b.key === key);
 export const stageByKey = (key: StageKey) => tree.stages.find((s) => s.key === key)!;

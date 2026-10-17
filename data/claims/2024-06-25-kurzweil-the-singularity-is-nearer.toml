@@ -1,0 +1,34 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2024-06-25-kurzweil-the-singularity-is-nearer"
+speaker = "Ray Kurzweil"
+when = "2024-06-25"
+when_note = "The e-book and audiobook date, verified on the publisher's page; the hardcover date was seen only in a search summary of that page and is marked unverified to the day."
+occasion = "\"The Singularity Is Nearer: When We Merge with AI\" (Viking), a book"
+status = "sourced"
+source = """
+The book, Viking, 2024, hardcover ISBN 978-0-399-56276-1. The e-book and audiobook date of
+2024-06-25 is verified on the publisher's page; the hardcover date was seen only in a search
+summary of that page and is marked unverified to the day. Read through a Google Books
+search-inside preview of the Viking edition, so page numbers are as Google displays them for that
+edition."""
+source_url = "https://books.google.com/books?vid=ISBN9780399562761"
+source_locator = "page 72, chapter 2"
+checked_how = "The published text, by preview, on 2026-10-16."
+words = "connect the top layers of our neocortex to the cloud"
+words_locator = "page 72, chapter 2, of what we will do in the 2030s"
+claimed = """
+Chapter 2 says the connection will be made by microscopic devices he calls nanobots, entering the
+brain through the bloodstream without surgery, letting our neurons talk directly to simulated
+neurons hosted online; chapter 1 (page 9) gives the shorter version, that the key change of the
+2030s is connecting the upper neocortex to the cloud so that AI becomes an extension of ourselves
+rather than a competitor, and the chapter 8 dialogue (page 291) softens the timing to the early
+2030s. He restates that a valid Turing test would be passed by 2029 (page 9), noting that other
+experts' forecasts have since moved as early as 2026 (page 14), and that 2045 remains the
+Singularity date set in his 2005 book (page 2). Page 4 says that by 2045 we will transform life on
+earth profoundly for the better, on the condition that we meet the scientific, ethical, social and
+political challenges, with the warning that if we fail our survival is in question. Page 192 says
+that with cloud models of the neocortex, thinking becomes a hybrid."""
+bears_on = ["mind", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "link"]
+bears_on_note = "Memory and thinking (the always-on assistant leaf as the soft version, the nanobot connection as the long shot); the link to machines."
+paraphrase = { repeated = "\"When we merge with AI\", the title's framing.", seen = "The book's title and jacket.", differs = "The publisher's framing; inside, the merge is the 2030s neocortex connection and the 2045 date is conditional.", primary_found = true }

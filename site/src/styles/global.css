@@ -387,3 +387,92 @@ a.dim:hover { color: var(--accent); }
   .first-side { margin-top: 0; }
   .first-main .big-number { font-size: clamp(72px, 20vw, 110px); }
 }
+
+/* ---- the claims page: talk on the left, delivery on the right (2026-10-16) ---- */
+.claims-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 40px; align-items: start; margin-top: 8px; }
+.claims-side { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 18px; }
+.claims { list-style: none; margin: 0; padding: 0; }
+.claim { padding: 26px 0 22px; border-top: 1px solid var(--line); }
+.claim:first-child { border-top: 0; padding-top: 8px; }
+.claim-head p { margin: 0; }
+.claim-when { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); }
+.claim-when a { color: inherit; text-decoration: none; }
+.claim-when a:hover { text-decoration: underline; }
+.claim-who { font-family: var(--sans); font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); margin-top: 4px; }
+.claim-who .dim { font-weight: 400; font-size: 15px; }
+.claim-where { font-size: 15px; color: var(--muted); margin-top: 2px; }
+.claim .chips { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.claim-words { margin: 16px 0 12px; padding: 0 0 0 18px; border-left: 3px solid var(--accent-3); }
+.claim-words p { margin: 0; font-size: 22px; line-height: 1.35; letter-spacing: -0.01em; color: var(--text); }
+.claim-words footer { margin-top: 6px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+.claim-nowords { margin: 16px 0 12px; padding: 12px 16px; border: 1px dashed var(--line-strong); border-radius: var(--radius); font-size: 14.5px; color: var(--muted); }
+.claim-text, .claim-source, .claim-ruling, .claim-bears { margin: 0 0 10px; font-size: 15.5px; line-height: 1.6; color: var(--text-soft); }
+.claim-source .dim { font-size: 14px; }
+.claim-ruling { font-family: var(--sans); font-size: 13.5px; color: var(--muted); padding: 8px 12px; border-left: 2px solid var(--line-strong); }
+.claim-para { margin: 0 0 12px; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--callout-bg); font-size: 14.5px; line-height: 1.55; color: var(--text-soft); }
+.claim-para p { margin: 0 0 6px; }
+.claim-para p:last-child { margin-bottom: 0; }
+.claim .k, .bw-meta .k, .claim-more .k { font-family: var(--sans); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
+.claim-bears { font-size: 14.5px; }
+.claim-bears a { color: var(--text-soft); }
+.claim-bears a.bears-upgrade { font-style: italic; }
+.claim-more { margin-top: 6px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.claim-more summary { cursor: pointer; font-family: var(--sans); font-size: 13px; color: var(--text-soft); }
+.claim-more summary:hover { color: var(--accent); }
+.claim-more p { margin: 10px 0 0; }
+.claim.unsourced .claim-who { color: var(--text-soft); }
+.delivered .big-number { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 56px; font-weight: 500; line-height: 1; letter-spacing: -0.04em; color: var(--text); margin: 4px 0 8px; }
+.delivered .big-number small { font-size: 0.38em; color: var(--muted); letter-spacing: -0.01em; margin-left: 0.18em; }
+.delivered-claim { font-family: var(--sans); font-size: 14.5px; line-height: 1.45; }
+.delivered-branches { list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.delivered-branches li { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14.5px; }
+.delivered-branches a { color: var(--text-soft); text-decoration: none; }
+.delivered-branches a:hover { color: var(--accent); }
+.delivered-note { margin-top: 12px; font-family: var(--sans); font-size: 12.5px; color: var(--muted); }
+.to-add { font-size: 15px; line-height: 1.55; color: var(--text-soft); }
+.to-add li { margin: 0.5em 0; }
+.to-add .dim { font-size: 13.5px; }
+
+/* ---- charts: the bandwidth series on the link branch (from The Belt Equation's chart styles, 2026-10-16) ---- */
+.chart { margin: 20px 0 8px; padding: 0; }
+.chart-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px; }
+.chart-title { font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.chart-note { font-size: 13.5px; line-height: 1.5; color: var(--muted); flex: 1 1 320px; text-align: right; }
+.chart-svg { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
+.chart-grid { stroke: var(--line); stroke-width: 1; }
+.chart-axis { font-family: var(--sans); font-size: 11px; fill: var(--muted); }
+.chart-line { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.chart-line.lead { stroke: var(--accent-3); stroke-width: 2; }
+.chart-dot { fill: var(--accent-3); stroke: var(--panel); stroke-width: 2; }
+.chart-dot.bw-unreviewed { fill: var(--panel); stroke: var(--accent-3); stroke-width: 2.5; }
+.chart-mark { cursor: pointer; }
+.chart-mark:hover .chart-dot { fill: var(--text); }
+.bw-baseline line { stroke: var(--line-strong); stroke-width: 1.2; stroke-dasharray: 5 4; }
+.bw-baseline text { font-family: var(--sans); font-size: 11px; fill: var(--text-soft); }
+.chart-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0 0; padding: 0; font-family: var(--sans); font-size: 12px; color: var(--muted); }
+.chart-legend li { display: flex; align-items: center; gap: 6px; }
+.chart-legend .swatch { width: 14px; height: 2px; background: var(--accent-3); border-radius: 2px; }
+.chart-legend .swatch.dot { width: 10px; height: 10px; border-radius: 50%; }
+.chart-legend .swatch.dot.hollow { background: transparent; border: 2px solid var(--accent-3); box-sizing: border-box; }
+.chart-legend .swatch.dashed { background: repeating-linear-gradient(90deg, var(--line-strong) 0 5px, transparent 5px 9px); }
+.chart-empty { font-size: 13.5px; margin: 10px 0 0; }
+.bw-intro p { font-size: 16.5px; }
+.bw-h3 { font-family: var(--sans); font-size: 13px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin: 32px 0 6px; }
+.bw-points { list-style: none; margin: 0; padding: 0; }
+.bw-points li { padding: 16px 0; border-top: 1px solid var(--line); }
+.bw-points li:first-child { border-top: 0; }
+.bw-point-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; margin: 0 0 6px; }
+.bw-date { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); }
+.bw-value { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; color: var(--text); }
+.bw-what { margin: 0 0 8px; font-size: 15.5px; line-height: 1.55; color: var(--text-soft); }
+.bw-meta { display: flex; flex-direction: column; gap: 4px; margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.bw-baselines { font-size: 14.5px; line-height: 1.55; color: var(--text-soft); padding-left: 1.1em; }
+.bw-baselines li { margin: 0.5em 0; }
+@media (max-width: 1000px) {
+  .claims-grid { grid-template-columns: 1fr; }
+  .claims-side { position: static; }
+}
+@media (max-width: 600px) {
+  .chart-note { text-align: left; }
+  .claim-words p { font-size: 19px; }
+}

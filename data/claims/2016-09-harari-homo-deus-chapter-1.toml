@@ -1,0 +1,29 @@
+# Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
+[claim]
+id = "2016-09-harari-homo-deus-chapter-1"
+speaker = "Yuval Noah Harari"
+when = "2016-09"
+when_note = "UK edition, Harvill Secker, September 2016; the often-cited day 2016-09-08 comes only from Wikipedia and is not verified. Hebrew original 2015."
+occasion = "\"Homo Deus: A Brief History of Tomorrow\", chapter 1, \"The New Human Agenda\" (English edition; Hebrew original 2015)"
+status = "sourced"
+source = """
+The book. First published in Hebrew in 2015 by Kinneret Zmora-Bitan Dvir (per the Harper
+edition's copyright page); UK edition Harvill Secker 2016, ISBN 9781910701874 (the often-cited day
+2016-09-08 comes only from Wikipedia and is not verified); US edition Harper, 2017-02-21, ISBN
+9780062464316 (date verified from the publisher's and Google Books' records). The passage is on
+page 49 in both the Harvill Secker 2016 and the Harper editions, checked by search-inside on two
+archive.org lending scans (a Harper Perennial 2018 printing with the hardcover's pagination, and
+the Harvill Secker 2016 printing), read through a browser on 2026-10-16."""
+source_url = "https://archive.org/search?query=Homo+Deus+Harari"
+source_locator = "page 49"
+checked_how = "The published text, by search-inside snippet."
+words = "Homo sapiens is likely to upgrade itself step by step"
+words_locator = "page 49"
+claimed = """
+Our species is not going to be wiped out by a robot revolt, he writes; rather it is likely to
+improve itself gradually, blending with robots and computers along the way. Hedged as likely, and
+with no deadline. The snippet ends there; the common continuation about descendants looking back
+at us as a different kind of animal was not seen in the primary and is not quoted here."""
+bears_on = ["link"]
+bears_on_note = "The link to machines, and the tree as a whole (the claim is about the species upgrading across every branch)."
+paraphrase = { repeated = "Harari predicts humans becoming gods or cyborgs within a century.", seen = "Coverage of the book.", differs = "The passage says likely and step by step, and gives no date.", primary_found = true }
