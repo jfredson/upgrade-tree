@@ -7,17 +7,20 @@
 // page and the disagree page sit in the lighter tier. "This week's reading" joined the spine on
 // 2026-10-16 with the first weekly reading (docs/weekly-reading.md), and "The claims" the same
 // day (tracker pattern rule 4.6: the page a site is built around sits in the heavier tier).
+// Rule 4.7 of the tracker pattern (ruled by John 2026-10-16): the bar carries short handles,
+// one or two words per page, and Home drops (the site's name is the home link); the full
+// plain names stay as the page titles and in the footer.
 const path = Astro.url.pathname;
 const primary = [
-  { href: '/', label: 'Home' },
   { href: '/branches/', label: 'Branches' },
-  { href: '/claims/', label: 'The claims' },
-  { href: '/reading/', label: "This week's reading" },
-  { href: '/story/', label: 'The story so far' },
+  { href: '/reading/', label: 'Reading' },
+  { href: '/claims/', label: 'Claims' },
+  { href: '/story/', label: 'Story' },
 ];
 const secondary = [
-  { href: '/method/', label: 'How the numbers are worked out' },
-  { href: '/disagree/', label: 'Disagree with something' },
+  { href: '/method/', label: 'Method' },
+  { href: '/disagree/', label: 'Disagree' },
+  { href: 'https://github.com/jfredson/upgrade-tree', label: 'Source' },
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---
@@ -67,7 +70,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       if (e.target.closest('a')) setOpen(false);
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 1320) setOpen(false); // the bar collapses up to 1320 on this site (global.css, the top bar with seven page names)
+      if (window.innerWidth > 820) setOpen(false);
     });
   })();
 </script>

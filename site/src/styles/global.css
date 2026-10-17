@@ -417,30 +417,12 @@ a.dim:hover { color: var(--accent); }
   .chart-note { text-align: left; }
   .claim-words p { font-size: 19px; }
 }
-/* ---- the top bar with seven page names (2026-10-16) ----
-   The tracker pattern's public names are long, and with "This week's reading" and "The claims"
-   in the spine the seven links no longer sit on one line beside the brand at 1280 pixels. Below
-   1320 the links are set tighter and the brand stops wrapping, and the bar collapses behind the
-   menu button, as The Quiet Galaxy's does, by repeating the standard's collapse rules for that
-   band (the threshold was 1080 with six names; with "The claims" added the same evening it is
-   1320, so a 1280-pixel laptop gets the menu button rather than a wrapped bar). Nothing above
-   the marked line is changed. */
-@media (max-width: 1320px) {
-  .brand { white-space: nowrap; }
-  .navlinks { gap: 2px; }
-  .navlinks a { padding: 6px 8px; letter-spacing: 0.02em; }
-  .nav-divider { margin: 0 4px; }
-  .theme-toggle { margin-left: 4px; }
-}
-@media (max-width: 1320px) and (min-width: 821px) {
-  .nav-toggle { display: inline-flex; }
-  .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; padding: 8px 26px 16px; background: var(--header-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .site-header.nav-open .navlinks { display: flex; }
-  .navlinks a { padding: 11px 6px; border-radius: 6px; font-size: 15px; text-align: right; }
-  .navlinks a.nav-secondary { font-size: 15px; }
-  .nav-divider { display: none; }
-  .theme-toggle { margin: 10px 0 0; }
-}
+/* ---- the top bar (rule 4.7, ruled by John 2026-10-16) ----
+   The bar carries short handles (Branches · Reading · Claims · Story | Method · Disagree ·
+   Source), so the seven links sit on one line beside the brand at 1280 pixels and the standard's
+   own collapse at 820 is enough; the wider collapse band added earlier the same evening for the
+   long names is gone. The site's name never wraps. */
+.brand { white-space: nowrap; }
 
 /* ---- the weekly reading: verdict badges, cards, the key, an upgrade page's last readings ----
    Copied from The Belt Equation's site/src/styles/global.css (its Radar page) on 2026-10-16, the
