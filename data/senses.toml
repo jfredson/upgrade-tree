@@ -124,15 +124,27 @@ source = "The peer-reviewed trial report, and a regulator's approval record when
 horizon = "leaf"
 status = "tracked"
 depends_on = []
-stage = "first-human"
-stage_reached_on = 2024-01-08
-stage_record = "https://doi.org/10.1002/advs.202306788"
+stage = "in-clinical-use"
+stage_reached_on = 2026-04-23
+stage_record = "https://www.fda.gov/news-events/press-announcements/fda-approves-first-ever-gene-therapy-treatment-genetic-hearing-loss-under-national-priority-voucher"
+earlier_stages = [
+  { stage = "first-human", reached_on = 2024-01-08, record = "https://doi.org/10.1002/advs.202306788" },
+]
+watch = ["Otarmeni", "OTOF", "lunsotogene parvec"]
 notes = """
-The record is a peer-reviewed report of two children in China, published on 8 January 2024;
-the Shanghai trial published in The Lancet sixteen days later, in which five of six children
-recovered hearing, is the first registered trial result and the stronger record. Several companies
-ran trials of the same idea in 2023 and 2024, with the first of those published in 2025. No regulator had approved an OTOF gene therapy when this record
-was written; that approval is what would move the entry to in clinical use."""
+The in-clinical-use record is the United States Food and Drug Administration's own announcement of
+its accelerated approval of Regeneron's Otarmeni (lunsotogene parvec-cwha) on 23 April 2026, the
+first gene therapy approved for a genetic hearing loss; the European regulator accepted the same
+therapy for accelerated review later in 2026, with no decision yet. The first-human record is a
+peer-reviewed report of two children in China, published on 8 January 2024; the Shanghai trial
+published in The Lancet sixteen days later, in which five of six children recovered hearing, is the
+first registered trial result and the stronger record. Several companies ran trials of the same
+idea in 2023 and 2024. When this record was written on 16 October 2026 it said no regulator had
+approved an OTOF gene therapy; the first weekly reading, the same day, found that it had, and John
+ruled the stage change on 16 October 2026."""
+revisions = [
+  { date = 2026-10-16, field = "stage", old = "first-human", new = "in-clinical-use", why = "The first weekly reading found the FDA's accelerated approval of Otarmeni on 2026-04-23, the kind of record the entry names; the entry as written had missed it. Ruled by John on 2026-10-16." },
+]
 
 [[upgrade]]
 id = "senses-implant-in-the-visual-cortex-gives-sight-without-eyes"

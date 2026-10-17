@@ -100,7 +100,10 @@
           "moved_from_label": null,
           "moved_to_label": null,
           "for_john": "The reading would have moved this entry from first human to in clinical use, dated 2026-04-23 on the FDA's own press announcement, which is exactly the kind of record the entry names. It did not, for two reasons: the approval is six months older than the window, and the procedure leaves an older record the entry missed to you because it means the entry as written was wrong, not that the world moved this week; and this session was not editing the upgrade records tonight. Suggested change: stage = in-clinical-use, stage_reached_on = 2026-04-23, stage_record = the FDA announcement; move the 2024-01-08 first human into earlier_stages; correct the note; and add 'Otarmeni' and 'OTOF' as watch terms. If you accept, the headline count does not change (the entry is already above first human) but the five-rung totals do: 18 first human, 7 in clinical use.",
-          "picked_up": null
+          "picked_up": {
+            "on": "2026-10-16",
+            "how": "a ruling recorded on the entry"
+          }
         },
         {
           "upgrade": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
@@ -731,35 +734,7 @@
       ]
     }
   ],
-  "waiting_on_john": [
-    {
-      "reading_date": "2026-10-16",
-      "reading_file": "2026-10-16.toml",
-      "test": false,
-      "upgrade": "senses-gene-therapy-restores-hearing-in-a-child-born-deaf",
-      "upgrade_name": "A gene therapy restores hearing in a child born deaf",
-      "branch": "senses",
-      "branch_name": "Senses",
-      "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/",
-      "verdict": "flagged",
-      "queries": [
-        "OTOF gene therapy deafness approval FDA EMA 2026",
-        "deaf child hearing restored gene therapy trial results October 2026",
-        "FDA approves Otarmeni lunsotogene parvec OTOF hearing loss April 2026"
-      ],
-      "found": "The entry's notes say no regulator had approved an OTOF gene therapy when the record was written on 2026-10-16, and that an approval is what would move it to in clinical use. That is wrong: the United States Food and Drug Administration gave accelerated approval to Regeneron's Otarmeni (lunsotogene parvec-cwha) on 2026-04-23, the first gene therapy for a genetic hearing loss, on its own press announcement. The European regulator accepted the same therapy's application for accelerated review later in 2026, with no decision yet. Nothing new happened in the window itself.",
-      "sources": [
-        "https://www.fda.gov/news-events/press-announcements/fda-approves-first-ever-gene-therapy-treatment-genetic-hearing-loss-under-national-priority-voucher",
-        "https://investor.regeneron.com/news-releases/news-release-details/otarmenitm-lunsotogene-parvec-cwha-approved-fda-first-and-only"
-      ],
-      "moved_from": null,
-      "moved_to": null,
-      "moved_from_label": null,
-      "moved_to_label": null,
-      "for_john": "The reading would have moved this entry from first human to in clinical use, dated 2026-04-23 on the FDA's own press announcement, which is exactly the kind of record the entry names. It did not, for two reasons: the approval is six months older than the window, and the procedure leaves an older record the entry missed to you because it means the entry as written was wrong, not that the world moved this week; and this session was not editing the upgrade records tonight. Suggested change: stage = in-clinical-use, stage_reached_on = 2026-04-23, stage_record = the FDA announcement; move the 2024-01-08 first human into earlier_stages; correct the note; and add 'Otarmeni' and 'OTOF' as watch terms. If you accept, the headline count does not change (the entry is already above first human) but the five-rung totals do: 18 first human, 7 in clinical use.",
-      "picked_up": null
-    }
-  ],
+  "waiting_on_john": [],
   "by_upgrade": {
     "senses-implant-restores-sight-to-a-blind-person": [
       {
@@ -825,7 +800,10 @@
         "moved_from_label": null,
         "moved_to_label": null,
         "for_john": "The reading would have moved this entry from first human to in clinical use, dated 2026-04-23 on the FDA's own press announcement, which is exactly the kind of record the entry names. It did not, for two reasons: the approval is six months older than the window, and the procedure leaves an older record the entry missed to you because it means the entry as written was wrong, not that the world moved this week; and this session was not editing the upgrade records tonight. Suggested change: stage = in-clinical-use, stage_reached_on = 2026-04-23, stage_record = the FDA announcement; move the 2024-01-08 first human into earlier_stages; correct the note; and add 'Otarmeni' and 'OTOF' as watch terms. If you accept, the headline count does not change (the entry is already above first human) but the five-rung totals do: 18 first human, 7 in clinical use.",
-        "picked_up": null
+        "picked_up": {
+          "on": "2026-10-16",
+          "how": "a ruling recorded on the entry"
+        }
       }
     ],
     "senses-implant-in-the-visual-cortex-gives-sight-without-eyes": [
@@ -1335,6 +1313,6 @@
     "real_readings": 1,
     "test_readings": 0,
     "items": 35,
-    "waiting_on_john": 1
+    "waiting_on_john": 0
   }
 }
