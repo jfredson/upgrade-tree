@@ -35,6 +35,8 @@ jobs:
           cache-dependency-path: site/package-lock.json
       - name: Validate the record
         run: python3 scripts/export.py --check
+      - name: Test the headline file
+        run: python3 scripts/test_headline.py
       - name: Install and build
         working-directory: site
         run: |

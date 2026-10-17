@@ -1,0 +1,92 @@
+{
+  "computed_on": "2026-10-17",
+  "commit": "a914528",
+  "last_reading": "2026-10-16",
+  "method": {
+    "document": "docs/upgrade-schema.md",
+    "headline_stage": "first-human",
+    "headline_stage_label": "First human",
+    "status": "ruled by John 2026-10-16: a stage, a date and a public record for every upgrade, no probabilities; the count is taken at the first-human rung",
+    "to_verify": 5
+  },
+  "headline": {
+    "count": 28,
+    "total": 35,
+    "stage": "first-human",
+    "words": "28 of 35 ways of changing a human being on purpose have been tried in at least one living person"
+  },
+  "by_stage": [
+    {
+      "key": "idea-only",
+      "label": "Idea only",
+      "count": 4
+    },
+    {
+      "key": "shown-in-animals",
+      "label": "Shown in animals",
+      "count": 3
+    },
+    {
+      "key": "first-human",
+      "label": "First human",
+      "count": 18
+    },
+    {
+      "key": "in-clinical-use",
+      "label": "In clinical use",
+      "count": 7
+    },
+    {
+      "key": "in-wide-use",
+      "label": "In wide use",
+      "count": 3
+    }
+  ],
+  "second_number": {
+    "name": "Brain-to-machine bandwidth",
+    "latest": {
+      "id": "2024-uc-davis-speech-decoder",
+      "date": "2024-08-15",
+      "measure": "text",
+      "value": 31.6,
+      "unit": "words a minute",
+      "plot_value": 31.6,
+      "peer_reviewed": true,
+      "upgrade": "link-brain-implant-turns-intended-speech-into-text"
+    },
+    "best": {
+      "text": {
+        "id": "2023-ucsf-speech-decoder-and-avatar",
+        "date": "2023-08-23",
+        "value": 78,
+        "unit": "words a minute",
+        "plot_value": 78.0,
+        "peer_reviewed": true,
+        "axis_unit": "words a minute"
+      },
+      "cursor": {
+        "id": "2024-neuralink-cursor-bits-per-second",
+        "date": "2024-05-08",
+        "value": 8.0,
+        "unit": "bits a second",
+        "plot_value": 8.0,
+        "peer_reviewed": false,
+        "axis_unit": "bits a second"
+      }
+    },
+    "points": 8
+  },
+  "counts": {
+    "branches": 7,
+    "upgrades": 35,
+    "long_shots": 2,
+    "claims": 27,
+    "readings": 1,
+    "waiting_on_john": 0,
+    "siblings": 5
+  },
+  "site": {
+    "url": "https://theupgradetree.com",
+    "file": "/data/headline.json"
+  }
+}

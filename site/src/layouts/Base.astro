@@ -1,9 +1,11 @@
 ---
 // The page shell, as the Sentient Horizons design standard sets it (design/README.md,
 // sections 6 to 8): theme script before first paint, the top bar, the footer with its four
-// lines and the attribution line with real provenance, ending with the parent line.
-// Built from The Belt Equation's Base.astro on 2026-10-16. No backdrop: this site wears the
-// Plate skin (src/styles/skin.css), paper and ink, and the figure is the picture.
+// lines and the attribution line with real provenance, then the subject notice John ruled for
+// this site on 2026-10-17 (one line, in the place and register of Outrunning Ageing's medical
+// notice), ending with the parent line. Built from The Belt Equation's Base.astro on
+// 2026-10-16. No backdrop: this site wears the Plate skin (src/styles/skin.css), paper and
+// ink, and the figure is the picture.
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import { tree, REPO } from '../lib/tree';
@@ -87,6 +89,7 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
           <p class="footer-meta">
             © {currentYear} John Fredrickson. Last built {longDate(tree.exported_on)}{tree.commit ? ` (version ${tree.commit})` : ''} from {builtFrom}. Free to reuse with credit (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>); code under the MIT licence.
           </p>
+          <p class="footer-notice">This site records what has been shown and what has been promised about changing a human being on purpose. It recommends nothing, and nothing on it is medical advice.</p>
           <p class="footer-parent"><a href="https://sentient-horizons.com" rel="noopener">A Sentient Horizons project.</a></p>
         </div>
       </div>

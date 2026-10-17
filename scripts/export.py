@@ -4,17 +4,30 @@
 Plain Python, standard library only. Run from anywhere:
 
     python3 scripts/export.py                  write site/src/data/tree.json, changelog.json,
-                                               claims.json, bandwidth.json and readings.json
-    python3 scripts/export.py --check          validate and print the counts, write nothing
+                                               claims.json, bandwidth.json and readings.json,
+                                               then the headline file, data/headline.json, and
+                                               its public copy, site/public/data/headline.json
+    python3 scripts/export.py --check          validate and print the counts, write nothing;
+                                               refuse a missing or stale headline file
     python3 scripts/export.py --out DIR        write the JSON somewhere else
     python3 scripts/export.py --data DIR       read a different data folder (for tests)
     python3 scripts/export.py --readings DIR   read a different folder of reading records
+    python3 scripts/export.py --headline FILE  write (or check) the headline file somewhere else
+    python3 scripts/export.py --public DIR     write the public copy of the headline file elsewhere
 
 The record is validated against docs/upgrade-schema.md before anything is written: if a rule
 fails, nothing is written and the build stops, so the site can never show a record that breaks
 the schema. The same goes for the weekly reading records in data/readings/ (docs/weekly-reading.md):
 one file per run, never edited, each checked here before the site sees it. The site (site/)
 reads the JSON at build time. Nothing in the browser touches TOML.
+
+The headline file (docs/upgrade-schema.md, "The headline file", added 2026-10-17) is the one
+small file another site or a person with a script reads for the project's number: the count,
+its words, the five-rung totals, the bandwidth series' latest point, the date it was computed,
+the date of the last reading and the method's status. It is written here from the same records
+as everything else and never by hand; `--check` refuses to pass while the committed copy is
+missing or says something the record no longer says, so a reading that moved a stage and forgot
+to run the export is caught before it deploys. scripts/test_headline.py tests that.
 """
 from __future__ import annotations
 
@@ -32,6 +45,16 @@ DEFAULT_DATA = ROOT / "data"
 DEFAULT_READINGS = ROOT / "data" / "readings"
 DEFAULT_OUT = ROOT / "site" / "src" / "data"
 DEFAULT_CHANGELOG = ROOT / "CHANGELOG.md"
+# The headline file (added 2026-10-17): the committed copy other sites read from the repository,
+# and the copy the build serves from the site at /data/headline.json (ruled by John 2026-10-17).
+HEADLINE_NAME = "headline.json"
+DEFAULT_PUBLIC = ROOT / "site" / "public" / "data"
+HEADLINE_SITE_PATH = "/data/headline.json"
+# What the headline file says about how its number was settled. There are no estimates here to
+# grade: the method's status is John's ruling that a stage, a date and a record say what has
+# happened, and the count of claims still to verify is the nearest thing to "how settled".
+METHOD_STATUS = ("ruled by John 2026-10-16: a stage, a date and a public record for every upgrade, "
+                 "no probabilities; the count is taken at the first-human rung")
 
 # The stage ladder, lowest rung first (docs/upgrade-schema.md, "The stage ladder").
 STAGES = [
@@ -986,34 +1009,170 @@ def export_readings(tree: dict, folder: Path) -> tuple[dict, list[str]]:
     }, problems
 
 
+# --------------------------------------------------------- the headline file
+
+
+def headline_words(count: int, total: int) -> str:
+    """The count in the words the home page uses under it."""
+    one = count == 1
+    return (f"{count} of {total} {'way' if one else 'ways'} of changing a human being on purpose "
+            f"{'has' if one else 'have'} been tried in at least one living person")
+
+
+def build_headline(tree: dict, bandwidth: dict, claims: dict, readings: dict) -> dict:
+    """The small file other sites read (docs/upgrade-schema.md, "The headline file").
+
+    Everything in it comes from the records already loaded; nothing is typed in. `computed_on`
+    is the day the export ran and `commit` the version it ran from; the check below ignores
+    both, since they change with every run and every commit, and compares the rest."""
+    c = tree["counts"]
+    count, total = c["first_human_or_beyond"], c["upgrades"]
+    headline_rank = STAGE_RANK[HEADLINE_STAGE]
+    last = tree["last_checked"]
+
+    def point_summary(p: dict) -> dict:
+        return {"id": p["id"], "date": p["date"], "measure": p["measure"], "value": p["value"],
+                "unit": p["unit"], "plot_value": p["plot_value"], "peer_reviewed": p["peer_reviewed"],
+                "upgrade": p["upgrade"]["id"] if p["upgrade"] else None}
+
+    # The series' latest point by date (its measure's figure, or none when the source gave no
+    # rate), and the best figure so far on each measure, as the chart draws them.
+    points = bandwidth["points"]
+    latest = max(points, key=lambda p: (p["date"], p["id"])) if points else None
+    best = {}
+    for m in bandwidth["measures"]:
+        if m["best"]:
+            best[m["key"]] = dict(m["best"], axis_unit=m["unit"])
+    return {
+        "computed_on": tree["exported_on"],
+        "commit": tree["commit"],
+        "last_reading": last["date"] if last else None,
+        "method": {
+            "document": "docs/upgrade-schema.md",
+            "headline_stage": HEADLINE_STAGE,
+            "headline_stage_label": STAGES[headline_rank]["label"],
+            "status": METHOD_STATUS,
+            "to_verify": c["to_verify"] + bandwidth["counts"]["to_verify"] + claims["counts"]["to_verify"],
+        },
+        "headline": {
+            "count": count,
+            "total": total,
+            "stage": HEADLINE_STAGE,
+            "words": headline_words(count, total),
+        },
+        "by_stage": [{"key": s["key"], "label": s["label"], "count": c["by_stage"][s["key"]]} for s in STAGES],
+        "second_number": {
+            "name": "Brain-to-machine bandwidth",
+            "latest": point_summary(latest) if latest else None,
+            "best": best,
+            "points": bandwidth["counts"]["points"],
+        },
+        "counts": {
+            "branches": len(tree["branches"]),
+            "upgrades": total,
+            "long_shots": c["long_shots"],
+            "claims": claims["counts"]["claims"],
+            "readings": readings["counts"]["readings"],
+            "waiting_on_john": readings["counts"]["waiting_on_john"],
+            "siblings": c["siblings"],
+        },
+        "site": {"url": "https://theupgradetree.com", "file": HEADLINE_SITE_PATH},
+    }
+
+
+HEADLINE_VOLATILE = ("computed_on", "commit")
+
+
+def headline_file_problems(path: Path, expected: dict) -> list[str]:
+    """Why the committed headline file cannot stand, in plain words; empty when it can.
+
+    Missing, unreadable, or saying something the record no longer says: a different count, a
+    different rung total, a different last reading, a different latest bandwidth point. The day
+    it was computed and the commit it came from are allowed to differ, because every export and
+    every commit changes them."""
+    if not path.exists():
+        return [f"{path.name}: missing; run `python3 scripts/export.py` to write it"]
+    try:
+        found = json.loads(path.read_text())
+    except (OSError, ValueError) as e:
+        return [f"{path.name}: cannot be read as JSON ({e}); run `python3 scripts/export.py` to rewrite it"]
+    if not isinstance(found, dict):
+        return [f"{path.name}: is not a JSON object; run `python3 scripts/export.py` to rewrite it"]
+    problems = []
+    for key, value in expected.items():
+        if key in HEADLINE_VOLATILE:
+            continue
+        if key not in found:
+            problems.append(f"{path.name}: has no '{key}'")
+        elif found[key] != value:
+            problems.append(f"{path.name}: '{key}' is stale: the file says {json.dumps(found[key], ensure_ascii=False)}, "
+                            f"the record says {json.dumps(value, ensure_ascii=False)}")
+    for key in found:
+        if key not in expected:
+            problems.append(f"{path.name}: carries '{key}', which the export does not write")
+    if problems:
+        problems.append("run `python3 scripts/export.py` to rewrite the headline file from the record, then commit it")
+    return problems
+
+
+def write_headline(path: Path, headline: dict, public_dir: Path | None) -> list[Path]:
+    """Write the headline file, and its public copy for the site to serve at /data/headline.json."""
+    text = json.dumps(headline, indent=2, ensure_ascii=False) + "\n"
+    written = []
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text)
+    written.append(path)
+    if public_dir is not None:
+        public_dir.mkdir(parents=True, exist_ok=True)
+        (public_dir / HEADLINE_NAME).write_text(text)
+        written.append(public_dir / HEADLINE_NAME)
+    return written
+
+
+def load_everything(data: Path, readings_dir: Path, changelog_path: Path) -> dict:
+    """Validate the whole record and build every export from it. Raises SchemaError."""
+    branches = load_branches(data)
+    upgrades = load_upgrades(data, branches)
+    tree = export_tree(branches, upgrades)
+    changelog = export_changelog(changelog_path)
+    claims = load_claims(data, branches, upgrades)
+    bandwidth = load_bandwidth(data, upgrades)
+    readings, reading_problems = export_readings(tree, readings_dir)
+    if reading_problems:
+        raise SchemaError("\n".join(reading_problems))
+    headline = build_headline(tree, bandwidth, claims, readings)
+    return {"tree": tree, "changelog": changelog, "claims": claims, "bandwidth": bandwidth,
+            "readings": readings, "headline": headline}
+
+
 # ------------------------------------------------------------------- main
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--check", action="store_true", help="validate and print the counts, write nothing")
+    parser.add_argument("--check", action="store_true",
+                        help="validate and print the counts, write nothing; refuse a missing or stale headline file")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA)
     parser.add_argument("--changelog", type=Path, default=DEFAULT_CHANGELOG)
     parser.add_argument("--readings", type=Path, default=None,
                         help="the folder of weekly reading records (default: DATA/readings)")
+    parser.add_argument("--headline", type=Path, default=None,
+                        help="the headline file (default: DATA/headline.json)")
+    parser.add_argument("--public", type=Path, default=DEFAULT_PUBLIC,
+                        help="where the public copy of the headline file goes (default: site/public/data)")
     args = parser.parse_args(argv)
     readings_dir = args.readings or (args.data / "readings")
+    headline_path = args.headline or (args.data / HEADLINE_NAME)
 
     try:
-        branches = load_branches(args.data)
-        upgrades = load_upgrades(args.data, branches)
-        tree = export_tree(branches, upgrades)
-        changelog = export_changelog(args.changelog)
-        claims = load_claims(args.data, branches, upgrades)
-        bandwidth = load_bandwidth(args.data, upgrades)
-        readings, reading_problems = export_readings(tree, readings_dir)
-        if reading_problems:
-            raise SchemaError("\n".join(reading_problems))
+        loaded = load_everything(args.data, readings_dir, args.changelog)
     except SchemaError as e:
         print("The record does not follow docs/upgrade-schema.md; nothing written.", file=sys.stderr)
         print(str(e), file=sys.stderr)
         return 1
+    tree, changelog, claims = loaded["tree"], loaded["changelog"], loaded["claims"]
+    bandwidth, readings, headline = loaded["bandwidth"], loaded["readings"], loaded["headline"]
 
     c = tree["counts"]
     print(f"{c['upgrades']} upgrade(s) across {c['branches_with_upgrades']} of 7 branches, "
@@ -1035,7 +1194,16 @@ def main(argv: list[str] | None = None) -> int:
               f"{rc['waiting_on_john']} item(s) waiting on John")
     else:
         print("no weekly reading on record yet")
+    h = headline["headline"]
+    print(f"headline: {h['words']}; last reading {headline['last_reading'] or 'none'}")
     if args.check:
+        problems = headline_file_problems(headline_path, headline)
+        if problems:
+            print(f"The headline file ({headline_path}) does not say what the record says; the check fails.",
+                  file=sys.stderr)
+            print("\n".join(problems), file=sys.stderr)
+            return 1
+        print(f"the headline file {headline_path} is current")
         return 0
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "tree.json").write_text(json.dumps(tree, indent=2, ensure_ascii=False) + "\n")
@@ -1044,6 +1212,8 @@ def main(argv: list[str] | None = None) -> int:
     (args.out / "bandwidth.json").write_text(json.dumps(bandwidth, indent=2, ensure_ascii=False) + "\n")
     (args.out / "readings.json").write_text(json.dumps(readings, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {args.out / 'tree.json'}, changelog.json, claims.json, bandwidth.json and readings.json")
+    written = write_headline(headline_path, headline, args.public)
+    print("wrote the headline file " + " and its public copy ".join(str(p) for p in written))
     return 0
 
 

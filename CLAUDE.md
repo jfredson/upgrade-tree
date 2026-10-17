@@ -19,7 +19,9 @@ holds the data and the site, not the story.
 - A claim written from memory goes in the entry's `verify` list until it is checked against a
   source. Never present an unchecked claim as settled.
 - Ids are never renamed once published; supersede instead.
-- `python3 scripts/export.py --check` must pass before any commit that touches `data/`.
+- `python3 scripts/export.py --check` must pass before any commit that touches `data/`. Run
+  `python3 scripts/export.py` first: the check refuses a headline file (`data/headline.json`)
+  that no longer says what the record says, and only the export rewrites it (2026-10-17).
 
 ## Public pages use no internal vocabulary
 

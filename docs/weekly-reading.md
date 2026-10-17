@@ -208,8 +208,10 @@ can change without touching the task. The steps, in brief:
 2. **Edit the record** (stage changes only): set `stage`, `stage_reached_on` (the date the
    record itself gives, under the dating rule in the schema) and `stage_record`; move the old
    current stage into `earlier_stages` with its date and record; append the revision marked
-   `[reading YYYY-MM-DD]`. Run `python3 scripts/export.py --check` after every edit; if it fails,
-   revert that file and flag the item with the error.
+   `[reading YYYY-MM-DD]`. Run `python3 scripts/export.py` after every edit (the export, which
+   validates the same rules and rewrites the headline file; `--check` would refuse the headline
+   file as stale after a stage change, 2026-10-17); if it fails, revert that file and flag the
+   item with the error.
 2a. **Compare the five shared entries with Outrunning Ageing** (added 2026-10-17): run
    `python3 scripts/sibling_check.py` and apply "The stage-agreement check" above: a pair that
    differs, or a leaf that could not be read, makes that upgrade's item `flagged`; nothing moves.
@@ -217,8 +219,11 @@ can change without touching the task. The steps, in brief:
 4. **Changelog**: one line under today's heading, in the form "Weekly reading (scheduled task,
    YYYY-MM-DD): N upgrades read, M moved, F flagged for John; record at
    data/readings/YYYY-MM-DD.toml", naming each moved upgrade with its before and after.
-5. **Publish**: `python3 scripts/export.py --check`, then one commit on `main` and one push. A
-   refused push falls back to a branch named `claude/reading-YYYY-MM-DD` and the report says so.
+5. **Publish**: `python3 scripts/export.py` (which rewrites the site's data and the headline
+   file, `data/headline.json`, from the record; added 2026-10-17, since the check refuses a
+   headline file that no longer says what the record says), then `python3 scripts/export.py
+   --check`, then one commit on `main` and one push. A refused push falls back to a branch
+   named `claude/reading-YYYY-MM-DD` and the report says so.
 6. **Report** to John: a numbered list and nothing else. Each flagged item with its `for_john`
    line; one line per stage change with before and after; one line with the counts; the push
    refusal if there was one.
