@@ -59,7 +59,21 @@ REGIONS = {"senses", "movement", "mind", "mood", "lifespan", "inheritance", "lin
 REQUIRED_BRANCH = ["key", "order", "name", "tagline", "meaning", "figure_region"]
 REQUIRED_UPGRADE = ["id", "name", "branch", "description", "resolution", "source",
                     "horizon", "status", "stage"]
+# Every field an upgrade may carry (docs/upgrade-schema.md, "The upgrade record"). Anything else
+# is refused, so a misspelt field name is caught instead of silently dropped (added 2026-10-17
+# with the sibling field).
+UPGRADE_FIELDS = set(REQUIRED_UPGRADE) | {
+    "superseded_by", "depends_on", "stage_reached_on", "stage_record", "earlier_stages",
+    "long_shot", "mechanism", "breaking_point", "revisions", "verify", "watch", "notes", "sibling",
+}
 ID_RE = re.compile(r"^[a-z][a-z0-9]*(-[a-z0-9]+)+$")
+# The sibling site, Outrunning Ageing (added 2026-10-17): the five lifespan-and-repair entries
+# each name the matching leaf there in `sibling`, as its leaves name these entries. Its leaf ids
+# are plain lowercase slugs with no branch prefix (outrunning-ageing/docs/record-schema.md,
+# decision 3), and its leaf pages live at /leaves/<id>/.
+SIBLING_SITE = "https://outrunningageing.com"
+SIBLING_SITE_NAME = "Outrunning Ageing"
+SIBLING_ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 URL_RE = re.compile(r"^https?://\S+$")
 DATE_HEADER = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
@@ -201,6 +215,10 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
             if missing:
                 problems.append(f"{where}: missing {', '.join(missing)}")
                 continue
+            unknown = sorted(f for f in u if f not in UPGRADE_FIELDS)
+            if unknown:
+                problems.append(f"{where}: unknown field(s) {', '.join(unknown)}; the upgrade record's "
+                                "fields are listed in docs/upgrade-schema.md")
             if not ID_RE.match(u["id"]) or not u["id"].startswith(b["key"] + "-"):
                 problems.append(f"{where}: id must be the branch key, a dash, then a lowercase slug")
             if u["branch"] != b["key"]:
@@ -237,6 +255,9 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                     problems.append(f"{where}: 'watch' must be a list holding at least one search term")
                 elif any(not isinstance(t, str) or not t.strip() for t in terms):
                     problems.append(f"{where}: every term in 'watch' must be a line of text with something in it")
+            if "sibling" in u and (not isinstance(u["sibling"], str) or not SIBLING_ID_RE.match(u["sibling"])):
+                problems.append(f"{where}: 'sibling' must be the matching {SIBLING_SITE_NAME} leaf's id, "
+                                "a lowercase slug with single dashes")
             try:
                 reached = iso(u.get("stage_reached_on"))
                 earlier = [{"stage": e["stage"], "reached_on": iso(e["reached_on"]), "record": e["record"]}
@@ -264,6 +285,10 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                 "revisions": revisions,
                 "verify": list(u.get("verify", [])),
                 "watch": [str(t).strip() for t in u.get("watch", []) if isinstance(t, str)],
+                # The matching leaf on Outrunning Ageing, where one exists, and its page there.
+                "sibling": u.get("sibling") if isinstance(u.get("sibling"), str) else None,
+                "sibling_url": (f"{SIBLING_SITE}/leaves/{u['sibling']}/"
+                                if isinstance(u.get("sibling"), str) and SIBLING_ID_RE.match(u["sibling"]) else None),
                 "notes": one_paragraph(u.get("notes")) or None,
                 "example": "EXAMPLE ENTRY" in str(u.get("notes", "")),
             })
@@ -615,10 +640,12 @@ def export_tree(branches: list[dict], upgrades: list[dict]) -> dict:
         "examples": sum(1 for u in live if u["example"]),
         "branches_with_upgrades": sum(1 for b in branches if b["count"]),
         "to_verify": sum(len(u["verify"]) for u in upgrades),
+        "siblings": sum(1 for u in live if u["sibling"]),
     }
     return {
         "exported_on": dt.date.today().isoformat(),
         "commit": git_commit(),
+        "sibling_site": {"name": SIBLING_SITE_NAME, "url": SIBLING_SITE},
         "headline_stage": HEADLINE_STAGE,
         "stages": [dict(s, rank=STAGE_RANK[s["key"]]) for s in STAGES],
         "horizons": HORIZONS,
@@ -933,8 +960,8 @@ def main(argv: list[str] | None = None) -> int:
     c = tree["counts"]
     print(f"{c['upgrades']} upgrade(s) across {c['branches_with_upgrades']} of 7 branches, "
           f"{c['first_human_or_beyond']} at a first human or beyond, {c['examples']} example(s), "
-          f"{c['to_verify']} claim(s) to verify, {len(changelog['days'])} changelog day(s), "
-          f"version {tree['commit'] or 'unknown'}")
+          f"{c['to_verify']} claim(s) to verify, {c['siblings']} linked to {SIBLING_SITE_NAME}, "
+          f"{len(changelog['days'])} changelog day(s), version {tree['commit'] or 'unknown'}")
     k = claims["counts"]
     print(f"{k['claims']} claim(s) by {k['speakers']} speaker(s), {k['sourced']} sourced and {k['unsourced']} unsourced, "
           f"{k['paraphrases']} with a circulating paraphrase ({k['no_primary_found']} with no primary source found), "
