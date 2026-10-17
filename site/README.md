@@ -15,9 +15,12 @@ https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2
   first, so the site always reflects the record in `data/`.
 - **Astro owns the pages.** Astro 5, fully static. `src/lib/tree.ts` is the typed view of the
   JSON; every page reads from it.
-- **The styles are the Sentient Horizons design standard.** `src/styles/global.css` is
-  `deep-field.css` copied unchanged (version noted at the marked line), with this site's own
-  rules below it.
+- **The styles are the family's skeleton with this site's own skin.** `src/styles/skin.css` is
+  the "Plate" skin (paper, ink, one green; light by default; ruled by John 2026-10-16), every
+  token for both themes and nothing else. `src/styles/global.css` imports it, then carries
+  `sentient-horizons/design/shell.css` copied unchanged (version noted at the marked line), then
+  this site's own rules. There is no backdrop component: the figure on the home page is the
+  picture.
 
 ## Pages
 
