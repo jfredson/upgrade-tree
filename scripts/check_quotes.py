@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The Upgrade Tree: check the quoted words of every claim held on a YouTube recording.
 
-The rule is in docs/upgrade-schema.md, "Checking quoted recordings" (proposed 2026-10-17): a
+The rule is in docs/upgrade-schema.md, "Checking quoted recordings" (ruled 2026-10-17): a
 quoted passage counts as checked when two independent automatic transcripts agree on the quoted
 words, YouTube's own automatic captions and a local Whisper transcription of the audio. This
 script applies that rule and prints what it finds. It never writes to the records: whoever runs
