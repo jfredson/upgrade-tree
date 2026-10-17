@@ -16,7 +16,7 @@ newspaper's site refuses automated readers and two archive captures show only th
 date is inferred from the first archive capture and from Futurism's coverage of 2019-08-15 saying
 this week; not verified."""
 source_url = "https://www.ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848"
-checked_how = "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read."
+checked_how = "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read; tried again on 2026-10-17, and the Financial Times page and the one archive copy that loads still show only the subscription wall."
 claimed = """
 Only the headline is on the record here: that merging with AI would be suicide for the human
 mind. What the piece argues beyond its headline was not read."""

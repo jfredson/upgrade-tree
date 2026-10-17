@@ -11,7 +11,7 @@ Governments Summit", Reuters channel, 2025-02-13, 35 min). The relevant passage 
 to 24:57."""
 source_url = "https://www.youtube.com/watch?v=eV396ioBs3g"
 source_locator = "about 22:26 to 24:57"
-checked_how = "Machine captions, the whole file searched, not just the passage."
+checked_how = "Machine captions, the whole file searched, not just the passage (2026-10-16). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words (it places them at 23:06 to 23:09, inside the range given), on the 99 percent remark and on the account, and none of the words listed as absent from the talk occurs anywhere in it. No person has listened to the recording."
 words = "human intelligence I think will be dwarfed by machine intelligence"
 words_locator = "at 23:03 to 23:09"
 claimed = """
@@ -28,3 +28,6 @@ bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
 paraphrase = { repeated = "A sentence circulating online as a quote from this talk says, roughly, that the only way humans escape being eliminated by AI is to voluntarily merge with machines and become a new species.", seen = "Online, as a quote from this talk. It arrived in this project on 2026-10-16 as a sentence John had been given; where it was first published has not been traced.", differs = "It is not in the recording. It reads as a stitch of the 2017 Dubai merger remark, the 2018 film's merge-or-be-left-behind line, and the 2019 launch event's left-behind-even-in-a-benign-scenario remark, with \"eliminated\" and \"new species\" added from no source found.", primary_found = false }
 why_here = "This talk is the occasion the project was started over: the gap between the sentence that circulates and the recording."
+verify = [
+  "No person has listened to the passage (about 22:26 to 24:57) or to the rest of the talk; the words and the list of words absent from the talk rest on automatic captions and one separate machine transcription of the whole recording, which agree.",
+]

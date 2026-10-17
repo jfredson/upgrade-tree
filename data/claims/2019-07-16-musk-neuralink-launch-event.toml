@@ -13,9 +13,9 @@ The merger passage runs about 05:30 to 08:21; a second remark is in the audience
 about 01:22:13 to 01:22:27."""
 source_url = "https://www.youtube.com/watch?v=r-vbh3t7WVI"
 source_locator = "about 05:30 to 08:21, and 01:22:13 to 01:22:27"
-checked_how = "Machine captions."
+checked_how = "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 both passages were transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account, with one word in the audience answer left uncertain (see the list of things still to check). No person has listened to the recording."
 words = "a sort of symbiosis with artificial intelligence"
-words_locator = "at 05:53 to 05:58"
+words_locator = "at 05:53 to 05:59"
 claimed = """
 After describing the medical uses the company will pursue first, he says the long-run aim is a
 full brain-machine interface and, by his own warning sounding weird, a kind of symbiosis with AI.
@@ -30,3 +30,6 @@ superhuman intelligence, and that the first order of business is making it work 
 bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
 coverage = ["Vice, Axios, Euronews and 1News on 2019-07-17, most leading with the symbiosis phrase and carrying the not-mandatory hedge."]
+verify = [
+  "No person has listened to the passages (about 05:30 to 08:21 and 01:22:13 to 01:22:27); the words rest on automatic captions and one separate machine transcription, which agree. One word to settle by ear: in the audience answer the captions render it 'sympotic' and the second transcription 'sympathetic', and the entry reads it as 'symbiosis' (Musk's usual word for it) in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence'.",
+]

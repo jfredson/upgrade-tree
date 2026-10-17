@@ -316,7 +316,7 @@ point has `value` and `unit` unless `no_figure`; units are from the list above a
 converts to its measure's axis; `source` is a web address; `upgrade` exists; ids unique. The
 script also works out `best` per measure: the highest `plot_value` and its point.
 
-## Decisions (2026-10-16)
+## Decisions (2026-10-16 and 2026-10-17)
 
 | choice | confidence | standard or judgment | alternative |
 |---|---|---|---|
@@ -334,3 +334,6 @@ script also works out `best` per measure: the highest `plot_value` and its point
 | An optional `watch` list of search terms on the upgrade, which the weekly reading may add to (2026-10-16) | moderate | judgment call (Claude, while building the reading); The Belt Equation has the field but its scanner may not add to it | watch terms are John's alone; costs a flagged item for every missing product or trial name |
 | The reading record as its own folder of dated TOML files, one per run, never edited (2026-10-16) | high | standard in this family (The Belt Equation's `data/scans/`) | a single growing file; worse diffs, and an edit to an old run would be invisible |
 | Four verdicts, with `stage-change` in place of The Belt Equation's `moved` and `resolved` (2026-10-16) | high | judgment call; this tree has a rung, not a number and a yes | keep `resolved` for the top rung; the badge would say nothing the rung does not |
+| The claims page keeps the name "The claims" (/claims/), with "Claims" as its short handle in the top bar (question raised 2026-10-16; John ruled it 2026-10-17: "yes to all") | high: John ruled it | John's ruling | a name that describes the page more (for example "What people have said"); clearer to a new reader, but longer in the bar and unlike the sibling sites' pages, which the tracker pattern names by the same plain noun |
+| The 2006 BrainGate paper stays on the bandwidth series as its starting mark with `no_figure = true`: it shows in the table and not on the chart (question raised 2026-10-16; John ruled it 2026-10-17) | high: John ruled it | John's ruling | drop the point until a later paper gives a rate; keeps every dot on the chart a measured figure, but loses the series' first mark and the 2006 date it descends from |
+| Neuralink's maker-reported 8.0 bits a second (2024-05-08) belongs on the pointing chart, drawn as a hollow dot, labelled "the maker's own release" in the legend and in the table, and counted in the best-so-far line, with the best peer-reviewed figure (4.16, Stanford, 2017) named beside it (question raised 2026-10-16; John ruled it 2026-10-17) | high: John ruled it | John's ruling | leave it in the table only and let the chart show peer-reviewed figures; keeps the chart to checked papers, but hides the highest figure anyone has claimed |

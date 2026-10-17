@@ -16,9 +16,9 @@ from South Korea at 13, which fits Seo. Attribution rests on that, not on a spea
 transcript. The passage runs 37:19 to 40:10."""
 source_url = "https://www.youtube.com/watch?v=YreDYmXTYi4"
 source_locator = "37:19 to 40:10"
-checked_how = "Auto-captions."
+checked_how = "Automatic captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account, except that in one run of the program the word bandwidth in the quoted question came out as 'bandless' (in a second run it came out as bandwidth, as in the captions). No person has listened to the recording."
 words = "how do you create a high bandwidth generalized interface to the brain"
-words_locator = "at 39:15 to 39:17"
+words_locator = "at 39:14 to 39:22"
 claimed = """
 He recalls watching the hero of The Matrix learn kung fu by download and wanting to work on making
 that possible. Since intentions, thoughts and experiences all sit in the brain as patterns of
@@ -29,4 +29,6 @@ expanded. He does not say merge or symbiosis; the Matrix line is framed as a chi
 not a timeline."""
 bears_on = ["link", "mind"]
 bears_on_note = "The link to machines; memory and thinking (download-style learning is the long-shot version)."
-verify = ["The quote rests on auto-captions; check against the audio before publishing it anywhere else."]
+verify = [
+  "No person has listened to the passage (37:19 to 40:10); the words rest on automatic captions and a separate machine transcription, which agree apart from the one word noted above. Listen once to settle that word.",
+]

@@ -61,7 +61,7 @@ earlier_stages = [
   { stage = "first-human", reached_on = 2016-04-06, record = "https://doi.org/10.1016/j.rbmo.2017.01.013" },
 ]
 verify = [
-  "The first child's birth date (2016-04-06) rests on press coverage of the case. The linked paper was read in full on 2026-10-16 and gives no birth date at all (only that the boy was seven months old when it was written), so the day still needs a source from the clinic or the authors.",
+  "The first child's birth date (2016-04-06) rests on press coverage of the case (CNN, The Guardian and New York magazine, all on 2016-09-27 or 28, say he was born that day). The linked paper was read in full on 2026-10-16 and gives no birth date at all (only that the boy was seven months old when it was written); the authors' later commentary (Journal of Molecular Genetics and Medicine, 2017, free text read on 2026-10-17) gives only his age, 11 months, and the clinic's own pages carry press clippings and no statement of the date. The 2016 conference abstract and the New Scientist report that broke the story could not be read, so the day still needs a source from the clinic or the authors.",
 ]
 notes = """
 The in-clinical-use record is the British regulator's approval of the first clinic licence, to
