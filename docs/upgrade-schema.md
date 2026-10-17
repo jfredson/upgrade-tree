@@ -91,7 +91,11 @@ Required fields are marked. Everything else may be left out until it is known.
 | `revisions` | no | List of `{ date, field, old, new, why }` tables, newest last, one per change to any field after the record's first commit. A stage change always gets one. |
 | `verify` | no | List of plain-language claims in this record that were written from memory and not yet checked against a source. Cleared by checking each one and either deleting the line or correcting the record. |
 | `watch` | no | List of extra search terms for the weekly reading (`docs/weekly-reading.md`): a product name, a trial name or a term of art that the plain words of the test would miss. A search aid only; nothing on the site rests on it. The reading may add a term (with a revision marked as its own); John may add or remove any. Added 2026-10-16. |
+| `sibling` | no | The id of the matching leaf on Outrunning Ageing (outrunningageing.com; its `data/leaves/<id>.toml`), for the five lifespan-and-repair entries that site shares with this one. A lowercase slug with single dashes and no branch prefix, checked for shape only. The upgrade page links to the leaf's page there, and the weekly reading compares the two stages (`docs/weekly-reading.md`, "The stage-agreement check"). The same field, by the same name, sits on the leaf there and names this entry's id. Proposed 2026-10-17, not yet ruled. |
 | `notes` | no | Anything else worth keeping with the record. (The example entries seeded on 2026-10-16 said "EXAMPLE ENTRY" here; the real list replaced them the same day.) |
+
+**No field not listed here.** An upgrade carrying any other field is refused by the export (added
+2026-10-17 with `sibling`), so a misspelt field name is caught instead of silently ignored.
 
 **No probabilities.** Ruled by John 2026-10-16: a stage, a date and a record say what has
 happened; a probability would say what someone guesses, and this project does not guess.
@@ -118,6 +122,13 @@ happened; a probability would say what someone guesses, and this project does no
    names one of the item's own searches and gives a reason; every verdict but `quiet` cites at
    least one source; a `stage-change` item names the rung it moved to, one above the rung it
    moved from, and both are ladder keys; and a `flagged` item carries `for_john`.
+10. Every field on an upgrade is one of those listed in the upgrade record's table; an unknown
+    field is refused (added 2026-10-17).
+11. A `sibling`, when present, is a lowercase slug with single dashes (added 2026-10-17). The
+    export does not check that the leaf exists on Outrunning Ageing, for the reason that site's
+    own layout gives for not checking ours: a build on GitHub has no copy of the sibling
+    repository, and a check that passes on one machine and skips on another is confusing. The
+    weekly reading does the check that needs the other repository.
 
 If any rule fails, nothing is written and the build stops.
 
@@ -372,6 +383,9 @@ script also works out `best` per measure: the highest `plot_value` and its point
 
 ## Decisions (2026-10-16 and 2026-10-17)
 
+The last two rows are proposed on 2026-10-17 and wait on John; every other row is ruled or
+was accepted with the first list.
+
 | choice | confidence | standard or judgment | alternative |
 |---|---|---|---|
 | A stage ladder of five rungs instead of a probability | high: John ruled it | John's ruling | a probability per upgrade, as The Belt Equation does; rejected because this project reports what has happened |
@@ -394,3 +408,5 @@ script also works out `best` per measure: the highest `plot_value` and its point
 | A quoted recording counts as checked when the platform's automatic captions and a local Whisper transcription agree on the quoted words; a difference is settled by a larger local model, then an official transcript, then the speaker's own text, else stays open (proposed 2026-10-17, John approved the idea that day) | moderate: the idea is John's, the wording is Claude's proposal | judgment call (Claude); the two-independent-sources shape is standard in transcription checking, the order of the third sources is not | listening by ear (John ruled against it on 2026-10-17); or captions alone, which cannot catch a word that the captions get wrong |
 | Filler sounds (uh, um, er) are not compared, and a hyphen counts as a space (2026-10-17) | high | judgment call (Claude, while building the check) | compare them as written; the two transcripts write fillers differently and the check would flag differences nobody cares about |
 | `transcript_check` as a small table in the claim record, with `checked_how` opening with a set sentence (2026-10-17) | moderate | judgment call (Claude) | prose in `checked_how` alone; simpler, but then nothing can check that a record that says "agree" has a date and a model named |
+| An optional `sibling` field on the upgrade, holding the id of the matching Outrunning Ageing leaf, by the same name that site uses for the field pointing back here; set on the five lifespan-and-repair entries; checked for shape only; the upgrade page links across and the weekly reading compares the stages (proposed 2026-10-17, not yet ruled) | high that the field belongs here: the Outrunning Ageing kickoff's item 7 (ruled by John 2026-10-16) says each entry carries the other's id, and that site's five leaves already carry ours. Moderate on the name: `sibling` is what the other site chose, and one name on both sides is simpler than two | following the kickoff's ruling; the name and the shape check are judgment calls (Claude) | a web address instead of an id (`sibling_url`), which needs no knowledge of the other site's page layout but breaks silently if that site moves its pages, and cannot be compared with its records; or checking that the leaf exists by reading the sibling repository, rejected for the reason in rule 11 |
+| Unknown fields on an upgrade are refused (proposed 2026-10-17, not yet ruled) | high | standard practice for a strict validator; both sibling sites do it, and this one did not until now | leave unknown fields ignored, as before; costs nothing today and lets a misspelt `sibling` or `watch` vanish without a word |

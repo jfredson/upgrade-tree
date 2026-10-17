@@ -23,6 +23,7 @@ source = "The peer-reviewed trial report, and the regulator's approval record if
 horizon = "mid"
 status = "tracked"
 depends_on = []
+sibling = "a-drug-adds-healthy-years-to-a-life"
 stage = "shown-in-animals"
 stage_reached_on = 2009-07-08
 stage_record = "https://doi.org/10.1038/nature08221"
@@ -36,7 +37,11 @@ when this was written. An earlier 2008 report from the same mouse programme foun
 lifespan gain from two other compounds in male mice; the rapamycin result is linked because it is
 the one that settled the rung for both sexes. Either kind of result, if positive and controlled, would move
 this entry to first human. When more such drugs reach people this entry may split into one per
-drug."""
+drug. Outrunning Ageing keeps its own record of this upgrade under the same name, linked from here
+on 2026-10-17; the weekly reading checks that the two stages agree."""
+revisions = [
+  { date = 2026-10-17, field = "sibling", old = "none", new = "a-drug-adds-healthy-years-to-a-life", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug makes people live longer in good health', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+]
 
 [[upgrade]]
 id = "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal"
@@ -58,6 +63,7 @@ source = "Peer-reviewed reports; the trial registry entry and report when the fi
 horizon = "leaf"
 status = "tracked"
 depends_on = []
+sibling = "partially-resetting-cells-reverses-ageing-in-an-animal"
 stage = "shown-in-animals"
 stage_reached_on = 2016-12-15
 stage_record = "https://doi.org/10.1016/j.cell.2016.11.052"
@@ -68,7 +74,12 @@ reversal of a lost function. A company founded on that work announced on 9 June 
 first participant in its trial for two optic nerve diseases had been dosed. Under this entry's test
 the first-human rung needs a measured reversal in a person, not a dose, so the entry stays at shown
 in animals until the trial reports; if John would rather count the dose, the stage moves to first
-human on the company's own release."""
+human on the company's own release. Outrunning Ageing keeps its own record of this upgrade under
+the same name, linked from here on 2026-10-17, and holds the June 2026 dose as a separate entry of
+its own; the weekly reading checks that the two stages agree."""
+revisions = [
+  { date = 2026-10-17, field = "sibling", old = "none", new = "partially-resetting-cells-reverses-ageing-in-an-animal", why = "Cross-link to the matching entry on Outrunning Ageing, 'Partially resetting cells reverses ageing in a living animal', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+]
 
 [[upgrade]]
 id = "lifespan-a-drug-clears-aged-cells-from-a-persons-body"
@@ -88,6 +99,7 @@ source = "Peer-reviewed trial reports; a regulator's approval record if it comes
 horizon = "leaf"
 status = "tracked"
 depends_on = []
+sibling = "drug-clears-aged-cells-from-a-person"
 stage = "first-human"
 stage_reached_on = 2019-09-18
 stage_record = "https://doi.org/10.1016/j.ebiom.2019.08.069"
@@ -100,7 +112,12 @@ disease, with fewer senescent cells in fat and skin samples afterwards. An earli
 people with lung scarring reported better walking and standing but did not measure the cells, so it
 is not the record here. The animal record is the 2011 Mayo Clinic report in which clearing such
 cells from mice delayed several age-related conditions. Several company drugs of this kind have
-failed in trials since; none is approved."""
+failed in trials since; none is approved. Outrunning Ageing keeps its own record of this upgrade
+under the same name, linked from here on 2026-10-17; the weekly reading checks that the two stages
+agree."""
+revisions = [
+  { date = 2026-10-17, field = "sibling", old = "none", new = "drug-clears-aged-cells-from-a-person", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug clears aged cells from a person', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+]
 
 [[upgrade]]
 id = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
@@ -120,6 +137,7 @@ source = "The transplant centre's own release naming the patient, the peer-revie
 horizon = "leaf"
 status = "tracked"
 depends_on = []
+sibling = "organ-from-a-gene-edited-pig-keeps-a-person-alive"
 stage = "first-human"
 stage_reached_on = 2022-01-07
 stage_record = "https://www.medschool.umaryland.edu/news/2022/university-of-maryland-school-of-medicine-faculty-scientists-and-clinicians-perform-historic-first-successful-transplant-of-porcine-heart-into-adult-human-with-end-stage-heart-disease.html"
@@ -134,7 +152,12 @@ followed in 2024 (Boston, then New York). The longest published case is a Boston
 days on a pig kidney in 2025 before receiving a human one, reported in The Lancet in September
 2026; the maker of that kidney said the same month that another patient had passed nine months and
 was still going. The next rung, in clinical use, needs a regulator's approval for use outside a
-trial; the trials cleared in 2025 are the step before."""
+trial; the trials cleared in 2025 are the step before. Outrunning Ageing keeps its own record of
+this upgrade under the same name, linked from here on 2026-10-17; the weekly reading checks that
+the two stages agree."""
+revisions = [
+  { date = 2026-10-17, field = "sibling", old = "none", new = "organ-from-a-gene-edited-pig-keeps-a-person-alive", why = "Cross-link to the matching entry on Outrunning Ageing, 'An organ from a gene-edited pig keeps a person alive', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+]
 
 [[upgrade]]
 id = "lifespan-lab-grown-organ-works-in-a-person-for-a-year"
@@ -156,6 +179,7 @@ source = "Peer-reviewed reports with follow-up of a year or more; a regulator's 
 horizon = "mid"
 status = "tracked"
 depends_on = []
+sibling = "lab-grown-organ-works-in-a-person-for-a-year"
 stage = "first-human"
 stage_reached_on = 2006-04-15
 stage_record = "https://doi.org/10.1016/S0140-6736(06)68438-9"
@@ -167,4 +191,8 @@ report) is cartilage, not an organ, and would not count under the test even if p
 lab-grown blood vessel was approved by the United States regulator in December 2024, which is the
 closest an engineered part has come to in clinical use, and is left out by the test for the reason
 given in the description. The later synthetic windpipe cases of the 2010s were found to be
-fraudulent and do not count."""
+fraudulent and do not count. Outrunning Ageing keeps its own record of this upgrade under the same
+name, linked from here on 2026-10-17; the weekly reading checks that the two stages agree."""
+revisions = [
+  { date = 2026-10-17, field = "sibling", old = "none", new = "lab-grown-organ-works-in-a-person-for-a-year", why = "Cross-link to the matching entry on Outrunning Ageing, 'A printed or lab-grown organ works in a person for a year', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+]

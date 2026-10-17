@@ -70,6 +70,13 @@ const description = u.description.length > 200 ? u.description.slice(0, 197) + '
       {u.status === 'superseded' && replacement && (
         <p>This entry has been replaced by <a href={replacement.path}>{replacement.name}</a>.</p>
       )}
+      {u.sibling_url && (
+        <p class="dim">
+          {tree.sibling_site.name} tracks when this reaches the clinic:{' '}
+          <a href={u.sibling_url} rel="noopener">the same upgrade on that site</a>, which keeps its own
+          record of the same test and is checked against this one every week.
+        </p>
+      )}
 
       {u.long_shot && (
         <>

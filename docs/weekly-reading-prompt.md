@@ -18,8 +18,9 @@ John. Modelled on The Belt Equation's `docs/scan-procedure.md`.
   checkout -B main origin/main`. If the working tree has uncommitted changes that are not
   yours, stop: put the situation in the report and do not touch them.
 - Record `git rev-parse --short HEAD` as `commit_before`.
-- Read `docs/weekly-reading.md` (what you may and may not do), `docs/upgrade-schema.md` (the
-  record you read, and the reading record's layout under "The reading record"), and this file.
+- Read `docs/weekly-reading.md` (what you may and may not do, and "The stage-agreement check"
+  for step 2a), `docs/upgrade-schema.md` (the record you read, and the reading record's layout
+  under "The reading record"), and this file.
 - Scope: if no file in `data/readings/` is dated this calendar month, scope is `monthly` and you
   read every upgrade whose `status` is `tracked`; otherwise scope is `weekly` and you read every
   tracked upgrade whose `horizon` is not `top`.
@@ -86,6 +87,29 @@ order). For a `stage-change`:
 After every file edit run `python3 scripts/export.py --check`. If it fails, revert that file
 (`git checkout -- data/X.toml`), mark the item `flagged` with the error in `for_john`, and
 continue. Never edit any other field. Never edit an upgrade you did not mark `stage-change`.
+
+## 2a. Compare the five shared entries with Outrunning Ageing
+
+Added 2026-10-17. Five lifespan-and-repair upgrades carry a `sibling` field naming the matching
+leaf on the sibling site Outrunning Ageing, which keeps its own record of the same test on the
+same ladder. Run, once, after step 2:
+
+    python3 scripts/sibling_check.py
+
+It fetches each named leaf from `https://github.com/jfredson/outrunning-ageing` and prints,
+per pair, both stages with their dates and records, and AGREE, DIFFER or COULD NOT READ. Then:
+
+- every pair AGREE: nothing more to do;
+- a pair DIFFER: that upgrade's item is `flagged`, whatever else the week held. `for_john`
+  states both stages, both dates and both records as the script printed them, which site moved
+  and on what, and that you changed nothing. Add the leaf's page,
+  `https://outrunningageing.com/leaves/<its id>/`, to `sources`. Do not copy the sibling's stage:
+  a rung here moves only on a record of the kind the entry's `source` names, and the other
+  site's record is not that. The one exception: if your own step 1 gave the upgrade a
+  `stage-change` this week, the move stands, the item keeps that verdict, and `found` says the
+  sibling is now a rung behind;
+- a leaf COULD NOT READ: that upgrade's item is `flagged` with the script's message in
+  `for_john`. If the script itself fails to run, say so in the report and go on.
 
 ## 3. Write the reading record
 
