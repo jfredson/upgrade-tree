@@ -231,7 +231,10 @@ Each file holds one `[claim]` table.
 | `source` | yes | The primary source in prose: the recording or text, its identifiers (video id, DOI, ISBN, archive capture), how it was reached, and what could not be. For an unsourced entry, the coverage the entry rests on and who wrote it. |
 | `source_url` | yes | The one address a reader should open: the recording, the text, or (unsourced) the coverage. |
 | `source_locator` | no | Where in the source: a timestamp range, a page, a section. |
-| `checked_how` | yes | How the words were checked: listened to, an official transcript, machine-made captions, the published text; and when. |
+| `checked_how` | yes | How the words were checked: listened to, an official transcript, two automatic transcripts that agree, machine-made captions alone, the published text; and when. For a recording checked under the rule below it opens with one of the three set sentences. |
+| `transcript_check` | no | The result of the check of a quoted recording (see "Checking quoted recordings"): a table `{ result, checked_on, whisper_model }` plus `settled_by` and `readings` where the two transcripts differed. Present exactly when `checked_how` opens with one of the set sentences. |
+| `also_checked` | no | A list of `{ words, at }` items: wording other than the one quoted phrase that the account in `claimed` rests on (for example a word in an answer to a question), with its time in the recording. The check reads these as well; they are never shown on the page as quotations. |
+| `captions_url` | no | Another upload of the same recording, to take the automatic captions from when `source_url` is a copy that has none (the check reads the captions of this one and the audio of `source_url`). Say in `source` why. |
 | `words` | if sourced | The exact short phrase, at most one, without the quotation marks (the site adds them). At most twenty-five words. Forbidden on an unsourced entry. |
 | `words_locator` | no | The timestamp or page of the phrase. |
 | `claimed` | yes | What was claimed, in our own words, hedges and conditions kept. On an unsourced entry, what was reported, with the reporter named as the source of the paraphrase. |
@@ -255,7 +258,58 @@ Two more files sit beside the claims and are exported with them:
 values; `when` in one of the three date forms and matching the start of the file name; `id`
 matching the file name; `source_url` a web address; `words` present on a sourced entry and absent
 on an unsourced one, and at most twenty-five words; every `bears_on` entry an existing branch key
-or upgrade id; a `paraphrase` table with all four of its fields.
+or upgrade id; a `paraphrase` table with all four of its fields; a `transcript_check` table that
+is complete for its result (below), with `checked_how` opening with the sentence for that result;
+`also_checked` items that each carry `words` and `at`.
+
+### Checking quoted recordings (proposed 2026-10-17)
+
+John ruled on 2026-10-17 that he will not check quoted passages by ear: automatic captions are
+acceptable, and the project adopts an automated check that settles quoted words without him. The idea
+is his and was approved that day; the wording below is Claude's proposal, for John to ratify.
+
+**The rule.** A quoted passage from a recording counts as checked when two independent automatic
+transcripts agree on the quoted words: the platform's own automatic captions, and a local Whisper
+transcription of the audio (a speech-recognition program from OpenAI, run on this Mac). Agreement is
+tested word for word, ignoring case, punctuation and filler sounds (uh, um); a hyphen counts as a
+space; every other difference in a word counts.
+
+**When they differ.** A difference on any quoted word is a flag, and the record shows both readings.
+It is settled by a third source, tried in this order:
+
+1. a larger local Whisper model (the same audio, a bigger model);
+2. an official transcript of the occasion;
+3. the speaker's own published text.
+
+A difference that no third source settles stays open: the record says so and shows every reading, and
+the passage is not counted as checked.
+
+**What the rule does not do.** It checks the words, not what the claim means. It never changes a
+claim's date, its status (sourced or unsourced) or its account in `claimed`; a transcript that shows a
+quoted passage saying something materially different is reported and the record is left as it is for a
+person to rule on. Two machines can be wrong in the same way, and the rule does not claim they cannot:
+it claims only that the quoted words are what two independent programs heard. It does not apply to a
+recording that cannot be fetched, or to one with no automatic captions; those keep the wording they had.
+
+**How a record carries it.** `checked_how` opens with one of three set sentences, and the rest of it
+says what was compared, when, and which Whisper model:
+
+| `transcript_check.result` | `checked_how` opens with |
+|---|---|
+| `"agree"` | `Two automatic transcripts agree.` |
+| `"settled"` | `Two automatic transcripts differ on a word; settled by a third source.` |
+| `"open"` | `Two automatic transcripts differ on a word; not settled.` |
+
+`transcript_check` fields: `result`; `checked_on` (date); `whisper_model` (the model that made the
+second transcript, for example `"mlx-community/whisper-large-v3-turbo"`); for `"settled"`,
+`settled_by` (`"larger-model"`, `"official-transcript"` or `"speaker-text"`) and `settled_with` (the
+model, document or text, in plain words); for `"settled"` and `"open"`, `readings`, a list of
+`{ passage, captions, whisper, third }` items, each a plain string (`third` is empty when open).
+The first transcript is always the platform's captions of the same recording. When a passage is settled
+or open, `checked_how` also writes the readings out, so a reader of the page sees them.
+
+The check is made by `scripts/check_quotes.py` (how to run it: `docs/check-quotes.md`), which prints
+a table and never writes to the record; a person applies the result by hand.
 
 ## The bandwidth series (`data/bandwidth.toml`, added 2026-10-16)
 
@@ -337,3 +391,6 @@ script also works out `best` per measure: the highest `plot_value` and its point
 | The claims page keeps the name "The claims" (/claims/), with "Claims" as its short handle in the top bar (question raised 2026-10-16; John ruled it 2026-10-17: "yes to all") | high: John ruled it | John's ruling | a name that describes the page more (for example "What people have said"); clearer to a new reader, but longer in the bar and unlike the sibling sites' pages, which the tracker pattern names by the same plain noun |
 | The 2006 BrainGate paper stays on the bandwidth series as its starting mark with `no_figure = true`: it shows in the table and not on the chart (question raised 2026-10-16; John ruled it 2026-10-17) | high: John ruled it | John's ruling | drop the point until a later paper gives a rate; keeps every dot on the chart a measured figure, but loses the series' first mark and the 2006 date it descends from |
 | Neuralink's maker-reported 8.0 bits a second (2024-05-08) belongs on the pointing chart, drawn as a hollow dot, labelled "the maker's own release" in the legend and in the table, and counted in the best-so-far line, with the best peer-reviewed figure (4.16, Stanford, 2017) named beside it (question raised 2026-10-16; John ruled it 2026-10-17) | high: John ruled it | John's ruling | leave it in the table only and let the chart show peer-reviewed figures; keeps the chart to checked papers, but hides the highest figure anyone has claimed |
+| A quoted recording counts as checked when the platform's automatic captions and a local Whisper transcription agree on the quoted words; a difference is settled by a larger local model, then an official transcript, then the speaker's own text, else stays open (proposed 2026-10-17, John approved the idea that day) | moderate: the idea is John's, the wording is Claude's proposal | judgment call (Claude); the two-independent-sources shape is standard in transcription checking, the order of the third sources is not | listening by ear (John ruled against it on 2026-10-17); or captions alone, which cannot catch a word that the captions get wrong |
+| Filler sounds (uh, um, er) are not compared, and a hyphen counts as a space (2026-10-17) | high | judgment call (Claude, while building the check) | compare them as written; the two transcripts write fillers differently and the check would flag differences nobody cares about |
+| `transcript_check` as a small table in the claim record, with `checked_how` opening with a set sentence (2026-10-17) | moderate | judgment call (Claude) | prose in `checked_how` alone; simpler, but then nothing can check that a record that says "agree" has a date and a model named |
