@@ -88,6 +88,7 @@ Required fields are marked. Everything else may be left out until it is known.
 | `breaking_point` | long shots | The point where current biology, engineering or physics would have to give way, stated plainly. |
 | `revisions` | no | List of `{ date, field, old, new, why }` tables, newest last, one per change to any field after the record's first commit. A stage change always gets one. |
 | `verify` | no | List of plain-language claims in this record that were written from memory and not yet checked against a source. Cleared by checking each one and either deleting the line or correcting the record. |
+| `watch` | no | List of extra search terms for the weekly reading (`docs/weekly-reading.md`): a product name, a trial name or a term of art that the plain words of the test would miss. A search aid only; nothing on the site rests on it. The reading may add a term (with a revision marked as its own); John may add or remove any. Added 2026-10-16. |
 | `notes` | no | Anything else worth keeping with the record. (The example entries seeded on 2026-10-16 said "EXAMPLE ENTRY" here; the real list replaced them the same day.) |
 
 **No probabilities.** Ruled by John 2026-10-16: a stage, a date and a record say what has
@@ -105,6 +106,16 @@ happened; a probability would say what someone guesses, and this project does no
 5. A long shot has both `mechanism` and `breaking_point`.
 6. Every id in `depends_on` exists, and there are no cycles.
 7. A superseded record names its replacement, and the replacement exists.
+8. A `watch` list, when present, holds at least one term, each a line of text with something
+   in it.
+9. Every reading record in `data/readings/` follows the layout below: the file name is the
+   reading's own date; the `[reading]` table has its six fields and a scope of `weekly` or
+   `monthly`; `upgrades_read` equals the number of items; every item names an upgrade that
+   exists, once per reading; every verdict is one of the four; every item lists at least two
+   searches unless its verdict is `quiet` and `found` says why none was run; a `reused` line
+   names one of the item's own searches and gives a reason; every verdict but `quiet` cites at
+   least one source; a `stage-change` item names the rung it moved to, one above the rung it
+   moved from, and both are ladder keys; and a `flagged` item carries `for_john`.
 
 If any rule fails, nothing is written and the build stops.
 
@@ -129,6 +140,49 @@ If any rule fails, nothing is written and the build stops.
     verify = ["The dates were written from memory; check both against the linked records."]
     notes = "EXAMPLE ENTRY, seeded 2026-10-16."
 
+## The reading record (`data/readings/YYYY-MM-DD.toml`)
+
+Added 2026-10-16 with the weekly reading (`docs/weekly-reading.md`). One file per run, appended
+to the folder and never edited; a second run on the same day is `YYYY-MM-DD-2.toml`. The export
+script validates every file and refuses to build if one fails. Dates are Pacific dates.
+
+    [reading]
+    date = 2026-10-16              # the Pacific date of the run; also the file name
+    ran_at = "2026-10-17T05:40:00Z" # when it finished, universal time
+    scope = "weekly"               # "weekly" (every tracked upgrade not at the top) or
+                                   # "monthly" (every tracked upgrade, the first run of the month)
+    upgrades_read = 32
+    searches = 71
+    commit_before = "5a7a6d3"      # the record the reading read
+    by = "hand"                    # optional: "hand" for a run done by a person in a session,
+                                   # "scheduled" for the scheduled task; absent means scheduled
+    test = false                   # optional: true marks a made-up fixture; the site says so
+
+    [[item]]
+    upgrade = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
+    verdict = "noted"              # quiet, noted, stage-change or flagged
+    queries = ["...", "..."]       # at least two, except a quiet item whose found says why
+    found = "One to three sentences on what the week held, read against the test."
+    sources = ["https://..."]      # required for every verdict but quiet
+    moved_from = "first-human"     # stage-change only: the rung before
+    moved_to = "in-clinical-use"   # stage-change only: the rung after, one above moved_from
+    for_john = "..."               # flagged only: the change it would have made, the record,
+                                   # and why it was not the scanner's to make
+    reused = ["..."]               # a search first run for another upgrade and listed again:
+                                   # the search as written in queries, that upgrade, and why it
+                                   # bears on this one
+
+The four verdicts: `quiet` (nothing in the week bore on the test), `noted` (something relevant
+happened and no stage moves), `stage-change` (the next rung's test was met on a record of the
+kind the entry names, and the reading moved the stage one rung), `flagged` (something the
+reading may not do on its own, written up for John).
+
+A stage change made by the reading also appears on the upgrade itself: the new `stage`,
+`stage_reached_on` and `stage_record`, the old rung moved into `earlier_stages`, and a
+`revisions` entry whose `why` begins `[reading YYYY-MM-DD]`. The export does not check that the
+two agree, since the record is the truth and the reading is the account of how it got there;
+a later reading that finds them apart flags it.
+
 ## What is not in the record
 
 - **A probability.** See above.
@@ -148,3 +202,6 @@ If any rule fails, nothing is written and the build stops.
 | `earlier_stages` as an optional list rather than one field per rung | moderate | judgment call | five fixed date fields; simpler to validate, but most records will only ever know one or two dates |
 | A fourth horizon value, `top`, for entries already in wide use (added 2026-10-16) | moderate | judgment call (Claude, while writing the first list) | force `root` on them and let the page say "longer than 20 years, if ever" about a thing that is finished; misleading |
 | The stage date for an event the record itself dates (a birth, an operation) is the event's date; for a trial or study it is the publication date (2026-10-16) | moderate | judgment call, following the charter's "dated by the event, not by the coverage" | always the publication date; simpler, but puts the first pig heart in June instead of January |
+| An optional `watch` list of search terms on the upgrade, which the weekly reading may add to (2026-10-16) | moderate | judgment call (Claude, while building the reading); The Belt Equation has the field but its scanner may not add to it | watch terms are John's alone; costs a flagged item for every missing product or trial name |
+| The reading record as its own folder of dated TOML files, one per run, never edited (2026-10-16) | high | standard in this family (The Belt Equation's `data/scans/`) | a single growing file; worse diffs, and an edit to an old run would be invisible |
+| Four verdicts, with `stage-change` in place of The Belt Equation's `moved` and `resolved` (2026-10-16) | high | judgment call; this tree has a rung, not a number and a yes | keep `resolved` for the top rung; the badge would say nothing the rung does not |

@@ -243,6 +243,29 @@ a.dim:hover { color: var(--accent); }
    data colour is --accent-3, never amber (design standard, sections 4 and 9).
    =============================================================== */
 
+/* ---- the top bar with six page names (2026-10-16) ----
+   The tracker pattern's public names are long, and with "This week's reading" in the spine the
+   six links no longer sit on one line beside the brand at 1280 pixels. Below 1320 the links
+   are set tighter and the brand stops wrapping; below 1080 the bar collapses behind the menu
+   button, as The Quiet Galaxy's does, by repeating the standard's collapse rules for that band.
+   Nothing above the marked line is changed. */
+@media (max-width: 1320px) {
+  .brand { white-space: nowrap; }
+  .navlinks { gap: 2px; }
+  .navlinks a { padding: 6px 8px; letter-spacing: 0.02em; }
+  .nav-divider { margin: 0 4px; }
+  .theme-toggle { margin-left: 4px; }
+}
+@media (max-width: 1080px) and (min-width: 821px) {
+  .nav-toggle { display: inline-flex; }
+  .navlinks { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; padding: 8px 26px 16px; background: var(--header-bg); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .site-header.nav-open .navlinks { display: flex; }
+  .navlinks a { padding: 11px 6px; border-radius: 6px; font-size: 15px; text-align: right; }
+  .navlinks a.nav-secondary { font-size: 15px; }
+  .nav-divider { display: none; }
+  .theme-toggle { margin: 10px 0 0; }
+}
+
 /* ---- home: the question, the figure, the count (2026-10-16) ---- */
 .figure-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 20px 18px 14px; }
 .figure-card svg { display: block; width: 100%; height: auto; max-width: 360px; margin: 0 auto; }
@@ -339,6 +362,89 @@ a.dim:hover { color: var(--accent); }
 .rev { font-size: 14.5px; }
 .rev li { margin: 0.5em 0; }
 .verify-list { font-size: 14.5px; color: var(--muted); }
+
+/* ---- the weekly reading: verdict badges, cards, the key, an upgrade page's last readings ----
+   Copied from The Belt Equation's site/src/styles/global.css (its Radar page) on 2026-10-16, the
+   tracker pattern's section 7.1, with the five verdicts cut to this site's four. Every colour is a
+   token; "noted" is shaded with --accent-3 like the rest of this site's data, never amber. */
+.badge { display: inline-block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.02em; border: 1px solid var(--line-strong); border-radius: 20px; padding: 2px 10px; color: var(--muted); background: var(--chip-bg); white-space: nowrap; }
+.badge.v-quiet { color: var(--muted); }
+.badge.v-noted { color: var(--accent-3); border-color: color-mix(in srgb, var(--accent-3) 55%, transparent); }
+.badge.v-stage-change { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 60%, transparent); }
+.badge.v-flagged { color: var(--accent-2); border-color: color-mix(in srgb, var(--accent-2) 60%, transparent); }
+.badge.v-test { color: var(--muted); border-style: dashed; }
+.scan-strip .strip-test { display: block; margin-top: 2px; font-size: 12.5px; font-style: italic; }
+
+.test-callout { border-left-color: var(--muted); margin-bottom: 20px; }
+.scan-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
+.scan-facts { flex: 1 1 380px; }
+.scan-line { margin: 0 0 6px; font-family: var(--sans); font-size: 20px; font-weight: 500; line-height: 1.3; color: var(--text); }
+.scan-meta { margin: 0; font-size: 13px; font-family: var(--sans); line-height: 1.6; }
+.verdict-counts { display: flex; gap: 6px; flex-wrap: wrap; align-items: flex-start; }
+.waiting { border: 1px solid color-mix(in srgb, var(--accent-2) 45%, transparent); border-left-width: 3px; border-radius: var(--radius); background: var(--panel); padding: 16px 20px; margin-bottom: 26px; }
+.waiting h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2); margin: 0 0 6px; }
+.waiting > p { margin: 0 0 10px; font-size: 14px; }
+.waiting-list { list-style: none; margin: 0; padding: 0; }
+.waiting-list li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.waiting-list li p { margin: 4px 0 0; color: var(--text-soft); font-size: 14.5px; }
+.link-group { margin-bottom: 26px; }
+.link-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.link-head h3 { font-family: var(--sans); font-size: 16px; font-weight: 600; margin: 0; }
+.link-head h3 a { color: var(--text); text-decoration: none; }
+.link-head h3 a:hover { color: var(--accent); }
+.link-head span { font-family: var(--sans); font-size: 13px; }
+.scan-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+.scan-card { border: 1px solid var(--line); border-left: 3px solid var(--line-strong); border-radius: var(--radius); background: var(--panel); padding: 15px 17px; display: flex; flex-direction: column; gap: 9px; }
+.scan-card.v-noted { border-left-color: var(--accent-3); }
+.scan-card.v-stage-change { border-left-color: var(--ok); }
+.scan-card.v-flagged { border-left-color: var(--accent-2); }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.card-name { font-size: 15.5px; line-height: 1.3; color: var(--text); text-decoration: none; }
+.card-name:hover { color: var(--accent); }
+.card-move { margin: 0; font-family: var(--sans); font-size: 13.5px; color: var(--ok); }
+.card-found { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); }
+.card-john { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-soft); border-left: 2px solid var(--accent-2); padding-left: 10px; }
+.card-foot { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: baseline; font-family: var(--sans); font-size: 12.5px; margin-top: auto; padding-top: 4px; }
+.card-sources a { margin-right: 10px; }
+.card-queries { font-size: 12.5px; color: var(--muted); }
+.card-queries summary { cursor: pointer; }
+.card-queries ul { margin: 6px 0 0; padding-left: 1.2em; }
+.card-queries li { margin: 2px 0; }
+.verdict-key { border-top: 1px solid var(--line); padding-top: 16px; }
+.verdict-key h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.verdict-key dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 0; font-size: 14.5px; }
+.verdict-key dt { white-space: nowrap; }
+.verdict-key dd { margin: 0; color: var(--text-soft); }
+
+.old-scan { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 12px 16px; margin-bottom: 8px; }
+.old-scan summary { cursor: pointer; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; color: var(--text-soft); list-style: none; }
+.old-scan summary::-webkit-details-marker { display: none; }
+.old-scan summary::after { content: '\25B8'; margin-left: auto; color: var(--muted); }
+.old-scan[open] summary::after { content: '\25BE'; }
+.old-date { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.old-items { list-style: none; margin: 12px 0 0; padding: 0; }
+.old-items li { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.old-items li p { grid-column: 2; margin: 0; color: var(--text-soft); font-size: 14px; }
+
+.checks { list-style: none; margin: 0 0 1.1em; padding: 0; }
+.checks li { border-bottom: 1px solid var(--line); }
+.checks summary { cursor: pointer; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 10px 0; font-family: var(--sans); font-size: 14px; color: var(--text-soft); list-style: none; }
+.checks summary::-webkit-details-marker { display: none; }
+.checks summary::after { content: '\25B8'; margin-left: auto; color: var(--muted); }
+.checks details[open] summary::after { content: '\25BE'; }
+.checks summary:hover { color: var(--text); }
+.check-date { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.check-body { padding: 0 0 12px 2px; font-size: 15px; line-height: 1.6; }
+.check-body p { margin: 0 0 6px; }
+.check-body a { margin-right: 10px; font-family: var(--sans); font-size: 13px; }
+.home-meta { font-family: var(--sans); font-size: 13px; margin-top: 30px; }
+.home-meta .sep { margin: 0 8px; color: var(--line-strong); }
+
+@media (max-width: 720px) {
+  .scan-cards { grid-template-columns: 1fr; }
+  .verdict-key dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .verdict-key dd { margin-bottom: 10px; }
+}
 
 /* ---- the story page ---- */
 .days { list-style: none; margin: 0; padding: 0; }

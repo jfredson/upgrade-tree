@@ -3,12 +3,14 @@
 // section 6): the spine of the site in heavier ink, the reference pages lighter after a rule,
 // the theme toggle last. Collapses to a menu on small screens. Copied from The Belt Equation's
 // Nav.astro on 2026-10-16. The page names follow the tracker pattern John ruled the same day:
-// the spine is Home, Branches and the story so far; the method page and the disagree page sit
-// in the lighter tier. "This week's reading" joins the spine once a weekly scan exists.
+// the spine is Home, Branches, this week's reading and the story so far; the method page and
+// the disagree page sit in the lighter tier. "This week's reading" joined the spine on
+// 2026-10-16 with the first weekly reading (docs/weekly-reading.md).
 const path = Astro.url.pathname;
 const primary = [
   { href: '/', label: 'Home' },
   { href: '/branches/', label: 'Branches' },
+  { href: '/reading/', label: "This week's reading" },
   { href: '/story/', label: 'The story so far' },
 ];
 const secondary = [
@@ -63,7 +65,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       if (e.target.closest('a')) setOpen(false);
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 820) setOpen(false);
+      if (window.innerWidth > 1080) setOpen(false); // the bar collapses up to 1080 on this site (global.css, the top bar with six page names)
     });
   })();
 </script>

@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import StageBadge from '../../../components/StageBadge.astro';
 import { tree, branchByKey, statusLabel, longDate, hostOf, issueUrl, REPO, type Upgrade } from '../../../lib/tree';
+import { readingsFor, verdictLabel } from '../../../lib/readings';
 
 export function getStaticPaths() {
   return tree.upgrades.map((u) => ({ params: { branch: u.branch, id: u.id }, props: { upgrade: u } }));
@@ -15,6 +16,10 @@ const disagree = issueUrl(
   `Upgrade: ${u.id} (${Astro.site}${u.path.slice(1)})\n\nWhat I would change (the stage, the test, the source, or something missing), and why:\n\n`,
 );
 const recordFile = `${REPO}/blob/main/data/${u.branch}.toml`;
+// The last three weekly readings of this upgrade (tracker pattern section 5.3; copied from The
+// Belt Equation's node page, "The last checks", on 2026-10-16): the date and the verdict in a
+// line, the sentence the reading wrote when opened.
+const lastReadings = readingsFor(u.id).slice(0, 3);
 const description = u.description.length > 200 ? u.description.slice(0, 197) + '…' : u.description;
 ---
 
@@ -89,6 +94,48 @@ const description = u.description.length > 200 ? u.description.slice(0, 197) + '
             ))}</p>
           )}
         </>
+      )}
+
+      {lastReadings.length > 0 && (
+        <>
+          <h2>The last {lastReadings.length === 1 ? 'reading' : `${lastReadings.length} readings`}</h2>
+          <p style="font-size: 15px;">
+            Once a week every upgrade is read against the news, against what would count above. Open a line to
+            see what that week held. Every reading of this upgrade is on <a href="/reading/">this week's reading</a>.
+          </p>
+          <ul class="checks">
+            {lastReadings.map((r) => (
+              <li>
+                <details>
+                  <summary>
+                    <span class="check-date">{longDate(r.date)}</span>
+                    <span class={`badge v-${r.verdict}`}>{r.picked_up ? 'Ruled' : verdictLabel[r.verdict]}</span>
+                    {r.verdict === 'stage-change' && <span class="dim">{r.moved_from_label} to {r.moved_to_label}</span>}
+                    {r.test && <span class="badge v-test">Test record</span>}
+                  </summary>
+                  <div class="check-body">
+                    <p>{r.found}</p>
+                    {r.for_john && <p><strong>For me:</strong> {r.for_john}</p>}
+                    {r.picked_up && <p class="dim">Taken off my list on {longDate(r.picked_up.on)}, by {r.picked_up.how}.</p>}
+                    {r.sources.length > 0 && (
+                      <p class="dim">
+                        {r.sources.map((s, i) => (
+                          <a href={s} rel="noopener nofollow">source {r.sources.length > 1 ? i + 1 : ''}</a>
+                        ))}
+                      </p>
+                    )}
+                  </div>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {u.watch.length > 0 && (
+        <p class="dim" style="font-size: 14.5px;">
+          <strong>Extra search terms the weekly reading uses for this entry:</strong> {u.watch.join(', ')}.
+        </p>
       )}
 
       {u.revisions.length > 0 && (

@@ -3,14 +3,18 @@
 
 Plain Python, standard library only. Run from anywhere:
 
-    python3 scripts/export.py                  write site/src/data/tree.json and changelog.json
+    python3 scripts/export.py                  write site/src/data/tree.json, changelog.json
+                                               and readings.json
     python3 scripts/export.py --check          validate and print the counts, write nothing
     python3 scripts/export.py --out DIR        write the JSON somewhere else
     python3 scripts/export.py --data DIR       read a different data folder (for tests)
+    python3 scripts/export.py --readings DIR   read a different folder of reading records
 
 The record is validated against docs/upgrade-schema.md before anything is written: if a rule
 fails, nothing is written and the build stops, so the site can never show a record that breaks
-the schema. The site (site/) reads the JSON at build time. Nothing in the browser touches TOML.
+the schema. The same goes for the weekly reading records in data/readings/ (docs/weekly-reading.md):
+one file per run, never edited, each checked here before the site sees it. The site (site/)
+reads the JSON at build time. Nothing in the browser touches TOML.
 """
 from __future__ import annotations
 
@@ -20,10 +24,12 @@ import json
 import re
 import sys
 import tomllib
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = ROOT / "data"
+DEFAULT_READINGS = ROOT / "data" / "readings"
 DEFAULT_OUT = ROOT / "site" / "src" / "data"
 DEFAULT_CHANGELOG = ROOT / "CHANGELOG.md"
 
@@ -56,6 +62,24 @@ REQUIRED_UPGRADE = ["id", "name", "branch", "description", "resolution", "source
 ID_RE = re.compile(r"^[a-z][a-z0-9]*(-[a-z0-9]+)+$")
 URL_RE = re.compile(r"^https?://\S+$")
 DATE_HEADER = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
+
+# The weekly reading (docs/weekly-reading.md; the record layout is in docs/upgrade-schema.md
+# under "The reading record"). Copied in shape from The Belt Equation's scan records
+# (scripts/export.py there, "the scans"), with four verdicts instead of five: this tree has a
+# rung to move, not a number and a yes.
+VERDICTS = ["quiet", "noted", "stage-change", "flagged"]
+READING_SCOPES = {"weekly", "monthly"}
+READING_FIELDS = ["date", "ran_at", "scope", "upgrades_read", "searches", "commit_before"]
+READING_BY = {"hand", "scheduled"}
+READING_NAME = re.compile(r"^(\d{4}-\d{2}-\d{2})(-\d+)?$")
+# A search listed again under a second upgrade carries a `reused` line: the search as written,
+# the upgrade it was first run for, and why it bears on this one. The script cannot judge the
+# reason, only that there is one: with the search, any id and these linking words taken out,
+# at least REUSED_REASON_WORDS words must be left (The Belt Equation's rule, John 2026-10-06).
+REUSED_FILLER = {"a", "an", "and", "as", "at", "by", "first", "for", "from", "in", "is", "it",
+                 "upgrade", "of", "on", "ran", "reused", "run", "same", "search", "see", "the",
+                 "this", "to", "was", "with"}
+REUSED_REASON_WORDS = 2
 
 
 class SchemaError(Exception):
@@ -186,6 +210,12 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                 problems.append(f"{where}: a long shot needs mechanism and breaking_point")
             if u["status"] == "superseded" and not u.get("superseded_by"):
                 problems.append(f"{where}: a superseded record names superseded_by")
+            if "watch" in u:
+                terms = u["watch"]
+                if not isinstance(terms, list) or not terms:
+                    problems.append(f"{where}: 'watch' must be a list holding at least one search term")
+                elif any(not isinstance(t, str) or not t.strip() for t in terms):
+                    problems.append(f"{where}: every term in 'watch' must be a line of text with something in it")
             try:
                 reached = iso(u.get("stage_reached_on"))
                 earlier = [{"stage": e["stage"], "reached_on": iso(e["reached_on"]), "record": e["record"]}
@@ -212,6 +242,7 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                 "breaking_point": one_paragraph(u.get("breaking_point")) or None,
                 "revisions": revisions,
                 "verify": list(u.get("verify", [])),
+                "watch": [str(t).strip() for t in u.get("watch", []) if isinstance(t, str)],
                 "notes": one_paragraph(u.get("notes")) or None,
                 "example": "EXAMPLE ENTRY" in str(u.get("notes", "")),
             })
@@ -305,7 +336,7 @@ def export_tree(branches: list[dict], upgrades: list[dict]) -> dict:
         "branches": branches,
         "upgrades": sorted(upgrades, key=lambda u: (u["branch"], -u["stage_rank"], u["name"])),
         "counts": counts,
-        "last_checked": None,  # the site reads "not yet checked" until a scan exists
+        "last_checked": None,  # filled in from the latest reading record, if any (see export_readings)
     }
 
 
@@ -332,6 +363,255 @@ def export_changelog(path: Path) -> dict:
     return {"source": path.name, "intro": " ".join(intro), "days": days}
 
 
+# ------------------------------------------------------- the weekly reading
+
+
+def load_readings(folder: Path) -> tuple[list[dict], list[str]]:
+    """Read every reading record in the folder. Returns the raw records and what could not be read."""
+    readings: list[dict] = []
+    problems: list[str] = []
+    if not folder.exists():
+        return readings, problems
+    for path in sorted(folder.glob("*.toml")):
+        where = f"{folder.name}/{path.name}"
+        m = READING_NAME.match(path.stem)
+        if not m:
+            problems.append(f"{where}: the file name must be the reading's date, YYYY-MM-DD.toml, "
+                            "with -2 on a second reading the same day")
+            continue
+        try:
+            raw = dict(tomllib.loads(path.read_text()))
+        except tomllib.TOMLDecodeError as e:
+            problems.append(f"{where}: cannot be read as TOML: {e}")
+            continue
+        raw["_file"] = path.name
+        raw["_where"] = where
+        raw["_name_date"] = m.group(1)
+        readings.append(raw)
+    return readings, problems
+
+
+def reused_problems(iwhere: str, reused, queries, ids: set[str]) -> list[str]:
+    """Check an item's `reused` lines: each names one of the item's own searches and gives a reason."""
+    if reused is None:
+        return []
+    if not isinstance(reused, list) or any(not isinstance(r, str) or not r.strip() for r in reused):
+        return [f"{iwhere}: 'reused' lists the searches first run for another upgrade, each one a line "
+                "of text naming the search, that upgrade, and why it bears on this one"]
+    searches = [str(q).strip() for q in queries] if isinstance(queries, list) else []
+    lower_ids = {i.lower() for i in ids}
+    problems = []
+    for line in reused:
+        named = [q for q in searches if q and q.lower() in line.lower()]
+        if not named:
+            problems.append(f"{iwhere}: the 'reused' line {line.strip()!r} does not name any search in "
+                            "this item's 'queries'; quote the search as it is written there")
+            continue
+        rest = line.lower().replace(max(named, key=len).lower(), " ")
+        words = [w for w in re.findall(r"[a-z0-9][a-z0-9'-]*", rest)
+                 if w not in REUSED_FILLER and w not in lower_ids]
+        if len(words) < REUSED_REASON_WORDS:
+            problems.append(f"{iwhere}: the search {max(named, key=len)!r} is marked reused without a "
+                            "reason. Say in one line why it bears on this upgrade's test, or run a "
+                            "search aimed at this upgrade instead")
+    return problems
+
+
+def validate_readings(readings: list[dict], ids: set[str]) -> list[str]:
+    """Check every reading record against rule 9 of docs/upgrade-schema.md."""
+    problems: list[str] = []
+    for raw in readings:
+        where = raw["_where"]
+        head = raw.get("reading")
+        if not isinstance(head, dict):
+            problems.append(f"{where}: no [reading] table, so the record says nothing about when it ran")
+            continue
+        for field in READING_FIELDS:
+            if head.get(field) in (None, ""):
+                problems.append(f"{where}: the [reading] table is missing '{field}'")
+        if "date" in head:
+            try:
+                if iso(head["date"]) != raw["_name_date"]:
+                    problems.append(f"{where}: the date in the record ({iso(head['date'])}) is not the "
+                                    f"date in the file name ({raw['_name_date']})")
+            except SchemaError as e:
+                problems.append(f"{where}: {e}")
+        if "scope" in head and head["scope"] not in READING_SCOPES:
+            problems.append(f"{where}: scope must be 'weekly' or 'monthly', not {head['scope']!r}")
+        if "by" in head and head["by"] not in READING_BY:
+            problems.append(f"{where}: 'by' must be 'hand' or 'scheduled', not {head['by']!r}")
+        if "test" in head and not isinstance(head["test"], bool):
+            problems.append(f"{where}: 'test' marks a made-up record and must be true or false")
+
+        items = raw.get("item") or []
+        if not items:
+            problems.append(f"{where}: a reading record needs at least one [[item]]")
+        if isinstance(head.get("upgrades_read"), int) and items and head["upgrades_read"] != len(items):
+            problems.append(f"{where}: the [reading] table says {head['upgrades_read']} upgrades were read "
+                            f"and the record holds {len(items)} item(s)")
+
+        seen: set[str] = set()
+        for i, item in enumerate(items, 1):
+            uid = item.get("upgrade")
+            iwhere = f"{where} item {i} ({uid or 'no upgrade named'})"
+            if not uid:
+                problems.append(f"{iwhere}: every item names the upgrade it read")
+            elif uid not in ids:
+                problems.append(f"{iwhere}: no upgrade in the record has this id")
+            elif uid in seen:
+                problems.append(f"{iwhere}: this upgrade is read twice in the same reading")
+            if uid:
+                seen.add(uid)
+            verdict = item.get("verdict")
+            if verdict not in VERDICTS:
+                problems.append(f"{iwhere}: the verdict must be one of {', '.join(VERDICTS)}, not {verdict!r}")
+            found = one_paragraph(item.get("found"))
+            if not found:
+                problems.append(f"{iwhere}: 'found' says in plain words what the week held, and is required on every verdict")
+            queries = item.get("queries")
+            no_search_allowed = verdict == "quiet" and bool(found)
+            if not isinstance(queries, list) or any(not str(q).strip() for q in queries):
+                problems.append(f"{iwhere}: 'queries' lists the searches that were run, each one a line of text")
+            elif len(queries) < 2 and not no_search_allowed:
+                problems.append(f"{iwhere}: fewer than two searches is not enough to call a week. Run at least "
+                                "two different searches for every upgrade that is searched at all (one aimed "
+                                "at the kind of record the entry names, one at wider reporting), and list both. "
+                                "Only a 'quiet' item may list fewer, and then 'found' has to say why")
+            problems += reused_problems(iwhere, item.get("reused"), queries, ids)
+            sources = item.get("sources") or []
+            if not isinstance(sources, list) or any(not str(s).strip() for s in sources):
+                problems.append(f"{iwhere}: 'sources' must be a list of web addresses")
+            elif verdict in ("noted", "stage-change", "flagged") and not sources:
+                problems.append(f"{iwhere}: a verdict of '{verdict}' has to cite the record it read; "
+                                "only 'quiet' may go without a source")
+            elif any(not URL_RE.match(str(s).strip()) for s in sources):
+                problems.append(f"{iwhere}: every source must be a web address")
+            if verdict == "stage-change":
+                mf, mt = item.get("moved_from"), item.get("moved_to")
+                if mf not in STAGE_RANK or mt not in STAGE_RANK:
+                    problems.append(f"{iwhere}: a stage change names moved_from and moved_to, both ladder keys")
+                elif STAGE_RANK[mt] != STAGE_RANK[mf] + 1:
+                    problems.append(f"{iwhere}: a reading moves a stage exactly one rung up; "
+                                    f"{mf} to {mt} is not one rung")
+            if verdict == "flagged" and not one_paragraph(item.get("for_john")):
+                problems.append(f"{iwhere}: a flagged item needs 'for_john': the change it would have made, "
+                                "the record, and why it was not the scanner's to make")
+    return problems
+
+
+def ruled_on_the_upgrade(upgrade: dict, reading_date: str) -> str | None:
+    """The date of John's ruling on a flagged item, when it was recorded as a revision on the
+    upgrade whose reason names the reading's date (The Belt Equation's rule of 2026-10-12)."""
+    for rev in upgrade.get("revisions") or []:
+        rev_date = rev.get("date") or ""
+        if rev_date < reading_date:
+            continue
+        text = " ".join(str(rev.get(k) or "") for k in ("why", "new"))
+        if reading_date in text:
+            return rev_date
+    return None
+
+
+def export_readings(tree: dict, folder: Path) -> tuple[dict, list[str]]:
+    """Validate data/readings/ and turn it into what the site reads (site/src/data/readings.json).
+
+    Newest reading first. Each item carries the upgrade it read with its name, branch and page,
+    so the reading page can group the week by branch. Alongside: `by_upgrade`, every upgrade's
+    own readings newest first (the upgrade page shows its last three); and `waiting_on_john`,
+    the flagged items nothing has picked up yet. A flagged item counts as picked up when a later
+    reading reads that upgrade again, or the upgrade carries a revision dated on or after the
+    reading whose reason names the reading's date."""
+    by_id = {u["id"]: u for u in tree["upgrades"]}
+    raw, problems = load_readings(folder)
+    problems += validate_readings(raw, set(by_id))
+    if problems:
+        return {}, problems
+
+    out = []
+    for r in raw:
+        head = r["reading"]
+        items = []
+        for item in r.get("item", []):
+            u = by_id[item["upgrade"]]
+            items.append({
+                "upgrade": u["id"], "upgrade_name": u["name"], "branch": u["branch"],
+                "branch_name": u["branch_name"], "path": u["path"],
+                "verdict": item["verdict"],
+                "queries": [one_paragraph(q) for q in item.get("queries", []) or []],
+                "found": one_paragraph(item.get("found")),
+                "sources": [str(s).strip() for s in (item.get("sources") or [])],
+                "moved_from": item.get("moved_from"), "moved_to": item.get("moved_to"),
+                "moved_from_label": STAGES[STAGE_RANK[item["moved_from"]]]["label"] if item.get("moved_from") in STAGE_RANK else None,
+                "moved_to_label": STAGES[STAGE_RANK[item["moved_to"]]]["label"] if item.get("moved_to") in STAGE_RANK else None,
+                "for_john": one_paragraph(item.get("for_john")) or None,
+            })
+        out.append({
+            "date": iso(head["date"]), "ran_at": str(head["ran_at"]), "scope": head["scope"],
+            "upgrades_read": head["upgrades_read"], "searches": head["searches"],
+            "commit_before": str(head["commit_before"]), "by": head.get("by", "scheduled"),
+            "test": bool(head.get("test")), "file": r["_file"],
+            "counts": {v: sum(1 for it in items if it["verdict"] == v) for v in VERDICTS},
+            "items": items,
+        })
+    out.sort(key=lambda s: (s["date"], s["file"]), reverse=True)
+
+    waiting = []
+    for rd in out:
+        for it in rd["items"]:
+            it["picked_up"] = None
+            if it["verdict"] != "flagged":
+                continue
+            later = sorted(o["date"] for o in out if o["date"] > rd["date"]
+                           and any(x["upgrade"] == it["upgrade"] for x in o["items"]))
+            ruled = ruled_on_the_upgrade(by_id[it["upgrade"]], rd["date"])
+            candidates = []
+            if ruled:
+                candidates.append((ruled, "a ruling recorded on the entry"))
+            if later:
+                candidates.append((later[0], "a later reading"))
+            if candidates:
+                on, how = min(candidates)
+                it["picked_up"] = {"on": on, "how": how}
+            else:
+                waiting.append({"reading_date": rd["date"], "reading_file": rd["file"], "test": rd["test"], **it})
+
+    by_upgrade: dict[str, list[dict]] = defaultdict(list)
+    for rd in out:
+        for it in rd["items"]:
+            by_upgrade[it["upgrade"]].append({
+                "date": rd["date"], "scope": rd["scope"], "by": rd["by"], "test": rd["test"], "file": rd["file"],
+                "verdict": it["verdict"], "found": it["found"], "sources": it["sources"],
+                "moved_from_label": it["moved_from_label"], "moved_to_label": it["moved_to_label"],
+                "for_john": it["for_john"], "picked_up": it["picked_up"],
+            })
+
+    latest = out[0] if out else None
+    if latest:
+        movers = [{"id": it["upgrade"], "name": it["upgrade_name"], "path": it["path"],
+                   "moved_to_label": it["moved_to_label"]} for it in latest["items"] if it["verdict"] == "stage-change"]
+        tree["last_checked"] = {
+            "date": latest["date"], "scope": latest["scope"], "by": latest["by"], "test": latest["test"],
+            "upgrades_read": latest["upgrades_read"], "moved": latest["counts"]["stage-change"],
+            "flagged": latest["counts"]["flagged"], "noted": latest["counts"]["noted"],
+            "flagged_waiting": sum(1 for w in waiting if w["reading_date"] == latest["date"]),
+            "movers": movers,
+        }
+
+    return {
+        "exported_on": dt.date.today().isoformat(),
+        "readings": out,
+        "waiting_on_john": waiting,
+        "by_upgrade": dict(by_upgrade),
+        "counts": {
+            "readings": len(out),
+            "real_readings": sum(1 for s in out if not s["test"]),
+            "test_readings": sum(1 for s in out if s["test"]),
+            "items": sum(len(s["items"]) for s in out),
+            "waiting_on_john": len(waiting),
+        },
+    }, problems
+
+
 # ------------------------------------------------------------------- main
 
 
@@ -341,13 +621,19 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA)
     parser.add_argument("--changelog", type=Path, default=DEFAULT_CHANGELOG)
+    parser.add_argument("--readings", type=Path, default=None,
+                        help="the folder of weekly reading records (default: DATA/readings)")
     args = parser.parse_args(argv)
+    readings_dir = args.readings or (args.data / "readings")
 
     try:
         branches = load_branches(args.data)
         upgrades = load_upgrades(args.data, branches)
         tree = export_tree(branches, upgrades)
         changelog = export_changelog(args.changelog)
+        readings, reading_problems = export_readings(tree, readings_dir)
+        if reading_problems:
+            raise SchemaError("\n".join(reading_problems))
     except SchemaError as e:
         print("The record does not follow docs/upgrade-schema.md; nothing written.", file=sys.stderr)
         print(str(e), file=sys.stderr)
@@ -358,12 +644,21 @@ def main(argv: list[str] | None = None) -> int:
           f"{c['first_human_or_beyond']} at a first human or beyond, {c['examples']} example(s), "
           f"{c['to_verify']} claim(s) to verify, {len(changelog['days'])} changelog day(s), "
           f"version {tree['commit'] or 'unknown'}")
+    rc = readings["counts"]
+    if rc["readings"]:
+        lc = tree["last_checked"]
+        print(f"{rc['readings']} weekly reading(s) on record, {rc['items']} item(s); the latest on {lc['date']} "
+              f"read {lc['upgrades_read']} upgrade(s), {lc['moved']} moved, {lc['flagged']} flagged, "
+              f"{rc['waiting_on_john']} item(s) waiting on John")
+    else:
+        print("no weekly reading on record yet")
     if args.check:
         return 0
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "tree.json").write_text(json.dumps(tree, indent=2, ensure_ascii=False) + "\n")
     (args.out / "changelog.json").write_text(json.dumps(changelog, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {args.out / 'tree.json'} and changelog.json")
+    (args.out / "readings.json").write_text(json.dumps(readings, indent=2, ensure_ascii=False) + "\n")
+    print(f"wrote {args.out / 'tree.json'}, changelog.json and readings.json")
     return 0
 
 
