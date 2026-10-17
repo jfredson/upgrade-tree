@@ -17,6 +17,9 @@
       "source_url": "https://www.wired.com/2000/02/warwick/",
       "source_locator": "last third of the essay",
       "checked_how": "The published text, downloaded and read on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "I believe humans will become cyborgs and no longer be stand-alone entities.",
       "words_locator": "last third of the essay",
       "claimed": "The 1998 implant, he says, was a test of whether information could pass to and from an implant; it did, and for nine days doors opened and lights came on as he walked through his department. From that he argues that highly intelligent machines will overtake people later this century, that linking people to those machines by implant is a natural next step that would make superhumans in effect, and that the alternative is machines ruling and people as second-class citizens. He also predicts thought-to-thought communication replacing speech. Hedged as belief and envisioning throughout; the plan for a second implant linked to his wife and an internet link from New York are stated as intentions, not results. The essay opens with the line, often quoted, that he was born human by accident of fate; that line is really there, as its first words.",
@@ -66,6 +69,9 @@
       "source_url": "https://doi.org/10.1001/archneur.60.10.1369",
       "source_locator": "the abstract",
       "checked_how": "The published text.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "may allow recipients to have abilities they would otherwise not possess",
       "words_locator": "from the abstract, of implants of this kind",
       "claimed": "The paper describes the subject as a healthy 48-year-old man, identified as one of the authors (Warwick), with the array in place for 96 days until the wire connection fatigued; only 20 of the 100 electrodes were connected. It reports controlling an artificial hand and a wheelchair from nerve signals, and on 2002-05-20, from a laboratory at Columbia University in New York, operating the hand in Reading over the internet despite a delay. The framing is clinical: paralysis, amputation, and a future fully implanted device. The words cyborg, telepathy and upgrade do not appear. The nerve-to-nerve link with his wife Irena is in a separate paper (Warwick and others, \"Thought communication and control: a first step using radiotelegraphy\", IEE Proceedings-Communications, volume 151, number 3, 2004), whose abstract calls it a first step toward thought communication and says real thought communication would need implants in the central nervous system; its full text was not reached, and the date of the Irena session was not found in any primary source. The ultrasonic extra sense is in a 2005 conference paper (IEEE Systems, Man and Cybernetics, Waikoloa, 2005-10-10 to 12), abstract only, described there as a one-off trial.",
@@ -115,6 +121,9 @@
       "source_url": "https://nickbostrom.com/ethics/values",
       "source_locator": "section 1",
       "checked_how": "The published text on the author's site, downloaded and read on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "become posthuman, beings with vastly greater capacities than present human beings have",
       "words_locator": "section 1, of what transhumanists hope that by responsible use of science and technology we shall eventually do",
       "claimed": "He defines transhumanism as a loosely defined movement that promotes using technology to enhance the human condition and the human organism: radically longer healthy life, the end of disease, and greater intellectual, physical and emotional capacities. Current humanity, he writes, need not be the endpoint of evolution. Section 3 states the core value as exploring what he calls the posthuman realm, and says technological enhancement of human organisms is a means we ought to pursue toward it. The claim is a value statement about what ought to be pursued, not a forecast with a date.",
@@ -157,6 +166,9 @@
       "source_url": "https://books.google.com/books?vid=ISBN9780143037880",
       "source_locator": "page 9, chapter 1",
       "checked_how": "The published text, through those three copies, on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "transcend these limitations of our biological bodies and brains",
       "words_locator": "page 9, chapter 1, of what the Singularity will allow us to do",
       "claimed": "Chapter 1 says the Singularity will let us control our fate and live as long as we want, which he distinguishes from living forever, and that by the end of this century the non-biological part of our intelligence will be vastly stronger than unaided human intelligence. In chapter 3 (\"Setting a Date for the Singularity\") he sets the Singularity, which he calls a profound and disruptive transformation in human capability, at 2045, and says the non-biological intelligence created that year will be a billion times more powerful than all human intelligence today; the page is 136 per the standard citation, bracketed by the contents page (section begins page 127, chapter 4 begins page 143) but not seen directly, because the lending scans could not be searched. He adds that we will transcend biology but not our humanity. Chapter 1 also lists, as a projection, billions of nanobots in the capillaries of the brain vastly extending human intelligence, and the chapter 5 dialogue has him say we are going to merge with our technology. The nanobot era is placed in the 2020s elsewhere (chapter 4).",
@@ -210,6 +222,9 @@
       "source_url": "https://www.technologyreview.com/2013/02/18/180012/the-brain-is-not-computable/",
       "source_locator": null,
       "checked_how": "The published article, retrieved and read on 2026-10-16. None of the speaker's words are quoted: Regalado's account has Nicolelis saying that the brain is not computable and no engineering can reproduce it, and that downloads will never happen.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": null,
       "words_locator": null,
       "claimed": "He calls the Singularity hot air and says downloading thoughts and memories into a computer will never happen, because consciousness arises from unpredictable, nonlinear interactions among billions of cells and so cannot be computed. He does not reject brain implants: the article's subtitle has him expecting humans to assimilate machines, and he allows, hedged with might, that implant users could one day sense X-rays or steer distant machines. His book The Relativistic Brain (2015, with Ronald Cicurel) makes the fuller argument and was not retrieved.",
@@ -250,6 +265,9 @@
       "source_url": "https://opinionator.blogs.nytimes.com/2014/03/02/the-philosophy-of-her/",
       "source_locator": null,
       "checked_how": "The published text.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "succeed only in killing himself, leaving behind a computational copy of his mind",
       "words_locator": "of the film's protagonist uploading himself",
       "claimed": "Uploading a mind would copy it, not move it. Her reasons: ordinary objects follow a continuous path through space and an upload does not; if the scan left the brain intact the original person would still be there, so there is no reason to think consciousness travelled; and if five copies were made there is no non-arbitrary answer to which is the real person. Hedged as her suspicion. She allows that people may still want backup copies of themselves.",
@@ -288,6 +306,9 @@
       "source_url": "https://www.ted.com/talks/ray_kurzweil_get_ready_for_hybrid_thinking",
       "source_locator": "7:26 to 8:33 in ted.com's timing",
       "checked_how": "TED's official transcript cues on ted.com, matched word for word against the subtitle track TED uploaded to YouTube (a human-made track, not auto-captions).",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "In the 2030s, if you need some extra neocortex,",
       "words_locator": "at 7:57",
       "claimed": "Twenty years from now, he says, nanobots will enter the brain through the capillaries and connect the neocortex to a synthetic neocortex in the cloud, so that someone needing more thinking capacity would connect to it directly from the brain. Our thinking would then be a hybrid of biological and non-biological thinking, with the non-biological part growing exponentially under what he calls the law of accelerating returns. Stated as prediction, with both twenty years from now and the 2030s as his own timing; 2045 is not said in this passage.",
@@ -343,6 +364,9 @@
       "source_url": "https://books.google.com/books?vid=ISBN9780199678112",
       "source_locator": "pages 50 to 51",
       "checked_how": "The published text, by preview snippets, on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "look unlikely as a source of superintelligence",
       "words_locator": "pages 50 to 51, across the page break, of brain-computer interfaces",
       "claimed": "Three routes are weighed. Whole brain emulation (pages 30 to 34): scanning, translation and simulation; he says there is good reason to think the enabling technologies are attainable though not soon, and that a first emulation would likely be imperfect; no date is attached. Biological enhancement (pages 38 to 43 and 50): iterated embryo selection is set out step by step, could select strongly for several traits at once, and seems to him an especially promising technology, though slow and gradual next to machine intelligence; cohorts enhanced this way could be adults by mid-century (page 43). Brain-computer interfaces (pages 44 to 51): implants could let people borrow the strengths of digital computing, but he thinks it unlikely they will be widely used as enhancements any time soon, and argues (page 46) that the limiting step in human intelligence is not how fast data can be fed into the brain but how quickly the brain can make sense of it, so more input bandwidth would do little unless the brain's own machinery were upgraded. He allows the cyborg route is not without promise, citing a rat hippocampus prosthesis (page 47).",
@@ -402,6 +426,9 @@
       "source_url": "https://archive.org/search?query=Homo+Deus+Harari",
       "source_locator": "page 49",
       "checked_how": "The published text, by search-inside snippet.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "Homo sapiens is likely to upgrade itself step by step",
       "words_locator": "page 49",
       "claimed": "Our species is not going to be wiped out by a robot revolt, he writes; rather it is likely to improve itself gradually, blending with robots and computers along the way. Hedged as likely, and with no deadline. The snippet ends there; the common continuation about descendants looking back at us as a different kind of animal was not seen in the primary and is not quoted here.",
@@ -442,7 +469,17 @@
       "source": "Recording on the World Governments Summit YouTube channel, video id rCoFKUJ_8Yo (\"Mohammad Al Gergawi in a conversation with Elon Musk during WGS17\", uploaded 2017-02-15, 35 min). The passage runs about 24:48 to 27:14.",
       "source_url": "https://www.youtube.com/watch?v=rCoFKUJ_8Yo",
       "source_locator": "about 24:48 to 27:14",
-      "checked_how": "Machine captions: the official upload has no human-made subtitle track, so the captions are automatic (the earlier note here that they looked human-made was wrong). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account. No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the official upload has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 26:15 and Whisper at 26:12 (the range given is widened to cover both). No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "a closer merger of biological intelligence and digital intelligence",
       "words_locator": "at 26:09 to 26:19",
       "claimed": "Asked how people find meaning in a future run by AI, he offers what he himself calls a potential path bordering on science fiction: some merger of biological and machine intelligence. He argues people are already partly machine because of phones and computers, which he calls a digital third layer on top of the animal brain and the thinking brain. The limit, he says at 26:20, is mostly the bandwidth of the link between brain and device, especially output: typing with thumbs is around ten bits per second against a computer's trillion. A high-bandwidth interface to the brain, he says at 27:00, would help reach symbiosis between human and machine intelligence and might solve the control problem and the usefulness problem. He closes by calling himself esoteric. Hedged throughout: a potential path, probably, maybe.",
@@ -463,7 +500,7 @@
       "why_here": null,
       "notes": null,
       "verify": [
-        "No person has listened to the passage (about 24:48 to 27:14): the words rest on automatic captions and one separate machine transcription, which agree. The second transcription puts the quoted phrase at about 26:12 to 26:19, the captions at 26:09, hence the wider range. One detail for a listener: he says a thumb can manage 'maybe 10 bits per second, or 100 if you're being generous', and the account says only 'around ten'."
+        "The account says a thumb manages 'around ten bits per second'. Both transcripts have him saying 'maybe do, I don't know, 10 bits per second or 100 if you're being generous' (about 26:53 to 26:59), so the account leaves out the second figure. Not changed here; whether it should carry it is for John."
       ],
       "file": "data/claims/2017-02-13-musk-world-governments-summit.toml"
     },
@@ -483,6 +520,9 @@
       "source_url": "https://waitbutwhy.com/2017/04/neuralink.html",
       "source_locator": null,
       "checked_how": "The published text, retrieved 2026-10-16. No recording or transcript in Musk's own words exists for these interviews. None of the speaker's words are quoted: Urban's rendering has Musk saying the aim is to be symbiotic with AI and to merge with it.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": null,
       "words_locator": null,
       "claimed": "The choice, as Urban reports him putting it, is between being left behind by AI and becoming useless or pet-like (his comparison is a house cat), or finding a way to merge with it. He says communication bandwidth decides how far the two integrate, and that if the link is tight enough the AI stops being a separate thing and becomes part of you, the way the thinking brain relates to the animal brain. Urban reports that Musk started Neuralink to speed this up, toward a world of billions of people each with an AI extension of themselves, deciding the future together. Hedge, added a second later per Urban: a house cat would be a good outcome.",
@@ -519,6 +559,9 @@
       "source_url": "https://blog.samaltman.com/the-merge",
       "source_locator": "the opening sentence",
       "checked_how": "The published text, fetched and read on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "A popular topic in Silicon Valley is talking about what year humans and machines will merge",
       "words_locator": "the opening sentence",
       "claimed": "His own claim is that the merge has already started and is a few years in, that it will be gradual, and that it will probably come sooner than most people think; he gives no year of his own. The 2025 to 2075 range in the post is explicitly other people's guesses, not his. The forms he names: phones, feeds and search already steering us; co-evolution in which AI designs the chips that improve AI; and superhuman AI, genetic enhancement and brain-machine interfaces, which he says are going to happen. His line of alternatives is electrodes in the brain or becoming very close friends with a chatbot. Hedges and conditions: it probably cannot be stopped, unless we destroy ourselves first; the merge is probably the best case against the alternative of two species competing for dominance; his guess is that we are either the biological bootloader for digital intelligence or we work out a successful merge; and he calls for worldwide coordination.",
@@ -573,7 +616,17 @@
       "source": "The Forum's recording, YouTube video id hL9uk4hKyg4 (World Economic Forum channel, uploaded 2018-01-25, 29 min). The session date, 2018-01-24 at 15:15, is from the Forum's session page (reached only through search-engine snippets; a direct fetch was refused). The passages run 4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00.",
       "source_url": "https://www.youtube.com/watch?v=hL9uk4hKyg4",
       "source_locator": "4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00",
-      "checked_how": "Automatic captions only (the recording has no human-made subtitle track and no Forum transcript was found). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words, on all three passages (within about three seconds of the captions' times) and on the account, and the word hackable occurs nowhere in the talk. No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track and no Forum transcript was found) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 4:56 and Whisper at 4:56. An earlier pass the same day, over the whole recording, also agreed on the other two passages (within about three seconds of the captions' times) and found the word hackable nowhere in the talk. No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "we can hack not just computers we can hack human beings",
       "words_locator": "at 4:55 to 5:03",
       "claimed": "Data matters, he says, because we have reached the point of being able to hack human beings, which needs two things, a lot of computing power and a lot of biometric data, neither of which anyone had before, not even the KGB or the Spanish Inquisition. When the information-technology revolution merges with the biotechnology revolution, the result is that ability, and its key invention is the biometric sensor. By hacking organisms, elites may gain the power to re-engineer the future of life itself; once you can hack something you can usually engineer it, and if that succeeds it would be the greatest revolution not only in human history but in biology. Hedged: may, if indeed we succeed.",
@@ -608,9 +661,7 @@
       },
       "why_here": null,
       "notes": null,
-      "verify": [
-        "No person has listened to the three passages (4:55 to 5:56, 7:20 to 7:45, 13:29 to 14:00); the words rest on automatic captions and one separate machine transcription, which agree."
-      ],
+      "verify": [],
       "file": "data/claims/2018-01-24-harari-davos-will-the-future-be-human.toml"
     },
     {
@@ -625,10 +676,20 @@
       "occasion": "In the documentary \"Do You Trust This Computer?\" (directed by Chris Paine)",
       "status": "sourced",
       "ruling": null,
-      "source": "The film itself. It premiered in Los Angeles on 2018-04-05 and streamed free online 2018-04-05 to 2018-04-08 at Musk's expense. The interview footage was recorded some time before release; the film does not date it. Checked through an unofficial full upload on YouTube, video id 1-bLflj11fY (1 h 18 min); the passage runs about 01:10:08 to 01:11:50.",
-      "source_url": "https://www.youtube.com/watch?v=1-bLflj11fY",
+      "source": "The film itself. It premiered in Los Angeles on 2018-04-05 and streamed free online 2018-04-05 to 2018-04-08 at Musk's expense. The interview footage was recorded some time before release; the film does not date it. The link is an unofficial full upload on YouTube, video id 479tnO2pXkA (1 h 18 min), found on 2026-10-17 after the upload first used (video id 1-bLflj11fY, read 2026-10-16) was replaced by a 3-minute clip; the quoted line is at about 01:11:49 to 01:11:50 in both. The passage runs about 01:10:08 to 01:11:50.",
+      "source_url": "https://www.youtube.com/watch?v=479tnO2pXkA",
       "source_locator": "about 01:10:08 to 01:11:50",
-      "checked_how": "Machine captions on that upload, read on 2026-10-16; the captions carry no speaker labels. On 2026-10-17 the recording could not be reached again: the upload linked here is now a 3-minute clip of other material, not the film. The quoted line matches CNBC's own transcription of the film in its article of 2018-04-06 word for word, and sits in a stretch that is clearly Musk. So the words rest on automatic captions and a news outlet's transcription, and no person has listened.",
+      "checked_how": "Two automatic transcripts agree. YouTube's automatic captions of the upload this entry was first read from (video id 1-bLflj11fY, read 2026-10-16 and again 2026-10-17; the captions carry no speaker labels) have the quoted words at 1:11:49, and a transcription of the audio of the full copy linked here, made on 2026-10-17 by OpenAI's Whisper (model large-v3-turbo), run on this Mac, has them at 1:11:50. The words also match CNBC's own written transcription of the film (article of 2018-04-06) word for word, and sit in a stretch that is clearly Musk. The two transcripts come from two uploads of the same film, because the first upload is now a 3-minute clip of other material and the copy linked here has no captions. No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": "https://www.youtube.com/watch?v=1-bLflj11fY",
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "an immortal dictator from which we can never escape",
       "words_locator": "at 01:11:47 to 01:11:50",
       "claimed": "At 01:10:08 he says it is important that AI not be something separate from us, and at 01:10:24 that humanity will have to either merge with AI or be left behind (the captions garble this line). The least frightening future, he says, is one where AI is spread widely, because if one company or small group builds a godlike digital superintelligence it could take over the world, and unlike a human dictator it would never die. He adds that he could be wrong and is open to a better path.",
@@ -653,9 +714,7 @@
       },
       "why_here": null,
       "notes": null,
-      "verify": [
-        "The upload linked as the source is no longer the full film (a 3-minute clip on 2026-10-17). Find a full copy, listen at about 01:10:08 to 01:11:50, check the timestamps given here, and replace the link."
-      ],
+      "verify": [],
       "file": "data/claims/2018-04-05-musk-do-you-trust-this-computer.toml"
     },
     {
@@ -674,6 +733,9 @@
       "source_url": "https://www.nytimes.com/2019/06/10/opinion/future-artificial-intelligence-transhumanism.html",
       "source_locator": null,
       "checked_how": "The published text.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "knowingly trading away one or more of your essential properties would be tantamount to suicide",
       "words_locator": null,
       "claimed": "Framing hedge first: the piece is published under the newspaper's label of fiction, set in an imagined Manhattan clinic selling an enhancement bundle it calls Merge, so its claims are offered as an imagined future rather than a forecast; the argument itself is hers. Two possible ceilings on merging with AI. A consciousness ceiling: if microchips turn out to be the wrong material for consciousness (which she assumes for the sake of argument), replacing brain parts with chips would diminish or end your life as a conscious being, and because working memory and attention seem tied to consciousness, we may be stuck with our existing bandwidth limits. A self ceiling: the mind-is-software view does not hold, since programs are abstract objects while minds act in space and time, so there is no ground for confidence that the self survives a merge or even less radical enhancements. She hedges explicitly that we do not know whether there is a self ceiling or where it sits, and closes by asking for humility. She does not say partial enhancement is safe; she says it is uncertain.",
@@ -719,7 +781,29 @@
       "source": "Neuralink's own recording, YouTube video id r-vbh3t7WVI (\"Neuralink Launch Event\", Neuralink channel, uploaded 2019-07-17, 1 h 45 min). The event was the evening of 2019-07-16 Pacific time. The merger passage runs about 05:30 to 08:21; a second remark is in the audience questions at about 01:22:13 to 01:22:27.",
       "source_url": "https://www.youtube.com/watch?v=r-vbh3t7WVI",
       "source_locator": "about 05:30 to 08:21, and 01:22:13 to 01:22:27",
-      "checked_how": "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 both passages were transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account, with one word in the audience answer left uncertain (see the list of things still to check). No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts differ on a word; settled by a third source. On 2026-10-17 the quoted phrase was found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac (captions 5:56, Whisper 5:56). The account also rests on one word in the audience answer at about 01:22:15, in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence': the captions read it 'sympotic', Whisper large-v3-turbo reads 'sympathetic', and a larger Whisper model (large-v3, run on this Mac the same day) reads 'symbiotic', which is the entry's reading. No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "settled",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": "larger-model",
+        "settled_with": "OpenAI's Whisper large-v3 (mlx-community/whisper-large-v3-mlx), a larger model than the turbo version used for the second transcript, run on this Mac on 2026-10-17; it reads the word as symbiotic",
+        "readings": [
+          {
+            "passage": "if you want to be symbiotic with AI (audience answer about the loan, about 01:22:15)",
+            "captions": "sympotic",
+            "whisper": "sympathetic",
+            "third": "symbiotic (Whisper large-v3, the larger model)"
+          }
+        ]
+      },
+      "also_checked": [
+        {
+          "words": "if you want to be symbiotic with AI",
+          "at": "at 01:22:13 to 01:22:27"
+        }
+      ],
       "words": "a sort of symbiosis with artificial intelligence",
       "words_locator": "at 05:53 to 05:59",
       "claimed": "After describing the medical uses the company will pursue first, he says the long-run aim is a full brain-machine interface and, by his own warning sounding weird, a kind of symbiosis with AI. At 06:01 he stresses it would be optional, not mandatory. He says that even in a benign AI scenario people will be left behind, and that a high-bandwidth interface would let people keep up, giving them, at 06:43, the option of merging with AI. He repeats the three-layer picture (animal brain, thinking brain, a digital superintelligence layer that phones already roughly supply) and says bandwidth is the constraint. At 08:07 he states the point of the company in the limit, after solving brain diseases, is reducing the existential threat of AI. In the questions, asked how the device will be paid for, he says someone who chooses symbiosis with AI could repay a loan with superhuman intelligence, and that the first order of business is making it work safely.",
@@ -739,9 +823,7 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [
-        "No person has listened to the passages (about 05:30 to 08:21 and 01:22:13 to 01:22:27); the words rest on automatic captions and one separate machine transcription, which agree. One word to settle by ear: in the audience answer the captions render it 'sympotic' and the second transcription 'sympathetic', and the entry reads it as 'symbiosis' (Musk's usual word for it) in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence'."
-      ],
+      "verify": [],
       "file": "data/claims/2019-07-16-musk-neuralink-launch-event.toml"
     },
     {
@@ -760,6 +842,9 @@
       "source_url": "https://www.ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848",
       "source_locator": null,
       "checked_how": "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read; tried again on 2026-10-17, and the Financial Times page and the one archive copy that loads still show only the subscription wall.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": null,
       "words_locator": null,
       "claimed": "Only the headline is on the record here: that merging with AI would be suicide for the human mind. What the piece argues beyond its headline was not read.",
@@ -801,6 +886,9 @@
       "source_url": "https://x.com/elonmusk/status/1281121339584114691",
       "source_locator": null,
       "checked_how": "Read on 2026-10-17 from X's own embed data for the post (the data X supplies for showing a post on other sites): the text 'If you can’t beat em, join em', a line break, then 'Neuralink mission statement', and a posting time of 2020-07-09 07:01 universal time. Before that, on 2026-10-16, the text had been taken from a search engine's rendering.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "If you can't beat em, join em",
       "words_locator": "the post, followed on the next line by the words Neuralink mission statement",
       "claimed": "A one-line statement of purpose, in the same thread that announced the 2020-08-28 progress update. Coverage (Business Insider India, 2020-07-09) noted he had used the line before, on the Joe Rogan podcast and in his 2019 Shanghai conversation with Jack Ma. Whether this is a formal mission statement or a quip is not settled by the post; the company's website has never used the line (see the 2026 entry).",
@@ -838,7 +926,17 @@
       "source": "Neuralink's own recording, YouTube video id DVvmgjBL74w (\"Neuralink Progress Update, Summer 2020\", Neuralink channel, uploaded 2020-08-29, 1 h 13 min). The passage is in the team question round, about 01:09:02 to 01:09:56.",
       "source_url": "https://www.youtube.com/watch?v=DVvmgjBL74w",
       "source_locator": "about 01:09:02 to 01:09:56",
-      "checked_how": "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account. No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 1:09:16 and Whisper at 1:09:16. No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "AI symbiosis where you have an AI extension of yourself",
       "words_locator": "at 01:09:14 to 01:09:22",
       "claimed": "Asked what the device could ultimately do, he says the medical uses matter, then that the most important thing a device like this might achieve is a good AI symbiosis: an AI extension of yourself as a third layer above the animal and thinking brain, such that the future is steered by the combined will of the people of Earth. At 01:09:02 he frames it as a species-level matter of coexisting with advanced AI, and at 01:09:46 as important from an existential-threat standpoint.",
@@ -856,9 +954,7 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [
-        "No person has listened to the passage (about 01:09:02 to 01:09:56); the words rest on automatic captions and one separate machine transcription, which agree."
-      ],
+      "verify": [],
       "file": "data/claims/2020-08-28-musk-neuralink-progress-update.toml"
     },
     {
@@ -877,6 +973,9 @@
       "source_url": "https://www.sciencemediacentre.org/expert-reaction-to-elon-musks-neuralink-demonstration-involving-pigs/",
       "source_locator": "third paragraph of his statement",
       "checked_how": "The published text, retrieved on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "a big difference between recording brain cells and 'reading thoughts'",
       "words_locator": "third paragraph of his statement, of there being",
       "claimed": "A channel count of 1,024 is not that impressive these days, he writes, though the wireless electronics are state of the art and the robotic insertion is good; the hard part is interpreting the data, and the demonstration showed nothing not done before (decoding limb position while an animal walks). Writing to the brain he calls even more questionable, because electrical stimulation cannot target specific networks of neurons meaningfully. He regrets that the claims are made at events rather than in peer-reviewed papers, and his closing verdict is solid engineering but mediocre neuroscience. The day before he had noted that Neuralink's 2019 preprint showed rat data and that it is one of a number of such efforts.",
@@ -923,6 +1022,9 @@
       "source_url": "https://www.inverse.com/science/neuralink-bad-sci-fi",
       "source_locator": null,
       "checked_how": "The published article, retrieved on 2026-10-16. None of the speaker's words are quoted: Yarlagadda's account has Nicolelis saying the company will never make people download their emotions or their deep cognitive functions.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": null,
       "words_locator": null,
       "claimed": "Two criticisms. Neuralink is not innovative and takes credit for decades of brain-computer interface work (his lab had a wireless monkey implant in 2014). And Musk overpromises: downloading emotions or uploading a language's grammar will never work, because things like the meaning behind language cannot be reproduced by an algorithm; fine for a science-fiction film, bogus as a company claim. He calls the demonstrations marketing and theatre. He does not use the words merger or symbiosis in the piece; the transhumanism framing is the writer's. No dated reaction from him to the 2020 pig demonstration was found.",
@@ -967,6 +1069,9 @@
       "source_url": "https://www.ted.com/talks/tom_oxley_a_brain_implant_that_turns_your_thoughts_into_text",
       "source_locator": "11:40 to 11:43, within 10:59 to 12:23",
       "checked_how": "TED's own timed transcript cues, parsed from the page on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "what if, rather than using your words, you could throw your emotion",
       "words_locator": "at 11:40 to 11:43",
       "claimed": "After describing the stent-like implant placed through a blood vessel and the paralysed patients using it to text, he says at 1:56 to 2:05 that today's typing speeds are like dial-up at the start of the internet, calls it a new Moore's law and says they are just getting started; at 10:18 that they are building a dictionary of the brain across all humans; and at 10:59 to 12:23 that beyond paralysis he is excited about epilepsy, depression and dementia, and that what has him thinking is the future of communication: expressing an emotion now means reflecting, packaging it into words and speaking, and if instead you could transmit the feeling itself for a few seconds, so others really feel how you feel, we would realise words were always going to fall short and the brain's full potential would be unlocked. Hedge at 12:08: for right now, the technology is about restoring the lives of millions of people with paralysis, and the promise is autonomy, independence and dignity. He never says merge or AI; his one film reference, at 1:30, is to reject the cable-in-the-skull image.",
@@ -1018,7 +1123,17 @@
       "source": "Neuralink's own recording, YouTube video id YreDYmXTYi4 (Neuralink channel, uploaded 2022-12-01, 2 h 48 min; the event was the evening of 2022-11-30 Pacific time). His segment is listed in the company's own chapter list as \"Generalized Interface to the Brain (DJ)\" starting at 36:38; Musk hands over at 36:37, naming him as a founding team member, and the speaker at 37:19 says he moved from South Korea at 13, which fits Seo. Attribution rests on that, not on a speaker-labelled transcript. The passage runs 37:19 to 40:10.",
       "source_url": "https://www.youtube.com/watch?v=YreDYmXTYi4",
       "source_locator": "37:19 to 40:10",
-      "checked_how": "Automatic captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account, except that in one run of the program the word bandwidth in the quoted question came out as 'bandless' (in a second run it came out as bandwidth, as in the captions). No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "how do you create a high bandwidth generalized interface to the brain",
       "words_locator": "at 39:14 to 39:22",
       "claimed": "He recalls watching the hero of The Matrix learn kung fu by download and wanting to work on making that possible. Since intentions, thoughts and experiences all sit in the brain as patterns of nerve firing, he says, electrodes in the right places with the right sensing and stimulation make that and the other applications Musk had described possible, and would help a lot of people. His three design axes are safety, scale, and access to more brain regions so that functions can be expanded. He does not say merge or symbiosis; the Matrix line is framed as a childhood ambition, not a timeline.",
@@ -1042,9 +1157,7 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [
-        "No person has listened to the passage (37:19 to 40:10); the words rest on automatic captions and a separate machine transcription, which agree apart from the one word noted above. Listen once to settle that word."
-      ],
+      "verify": [],
       "file": "data/claims/2022-11-30-seo-neuralink-show-and-tell.toml"
     },
     {
@@ -1063,6 +1176,9 @@
       "source_url": "https://books.google.com/books?vid=ISBN9780399562761",
       "source_locator": "page 72, chapter 2",
       "checked_how": "The published text, by preview, on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "connect the top layers of our neocortex to the cloud",
       "words_locator": "page 72, chapter 2, of what we will do in the 2030s",
       "claimed": "Chapter 2 says the connection will be made by microscopic devices he calls nanobots, entering the brain through the bloodstream without surgery, letting our neurons talk directly to simulated neurons hosted online; chapter 1 (page 9) gives the shorter version, that the key change of the 2030s is connecting the upper neocortex to the cloud so that AI becomes an extension of ourselves rather than a competitor, and the chapter 8 dialogue (page 291) softens the timing to the early 2030s. He restates that a valid Turing test would be passed by 2029 (page 9), noting that other experts' forecasts have since moved as early as 2026 (page 14), and that 2045 remains the Singularity date set in his 2005 book (page 2). Page 4 says that by 2045 we will transform life on earth profoundly for the better, on the condition that we meet the scientific, ethical, social and political challenges, with the warning that if we fail our survival is in question. Page 192 says that with cloud models of the neocortex, thinking becomes a hybrid.",
@@ -1118,6 +1234,9 @@
       "source_url": "https://lexfridman.com/elon-musk-and-neuralink-team-transcript",
       "source_locator": "3:30:49 to 3:35:21",
       "checked_how": "The official transcript, read on 2026-10-16.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "Neuralink's eventual goal is to understand those things",
       "words_locator": "at 3:32:31, of the brain's higher language areas",
       "claimed": "Two programmes today, movement and vision. Movement is about what he calls digital freedom and is being extended to robotic arms and wheelchairs, which needs regulator conversations and safety data. Vision: edge detection in the short to medium term so people do not bump into things (3:18:08), naturalistic vision possibly in the long term. The eventual goal he states is a platform and tools for understanding the higher language regions of the brain, which he calls a very big mystery. Asked whether thoughts could be read, he hedges heavily (3:33:35 to 3:34:47): he is not sure, would not rule it out, and a brain-computer interface alone probably cannot do it. He never says merge or symbiosis himself.",
@@ -1159,7 +1278,17 @@
       "source": "Reuters' recording, YouTube video id eV396ioBs3g (\"LIVE: Elon Musk speaks at Dubai's World Governments Summit\", Reuters channel, 2025-02-13, 35 min). The relevant passage runs about 22:26 to 24:57.",
       "source_url": "https://www.youtube.com/watch?v=eV396ioBs3g",
       "source_locator": "about 22:26 to 24:57",
-      "checked_how": "Machine captions, the whole file searched, not just the passage (2026-10-16). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words (it places them at 23:06 to 23:09, inside the range given), on the 99 percent remark and on the account, and none of the words listed as absent from the talk occurs anywhere in it. No person has listened to the recording.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (a machine-made track; searched across the whole file on 2026-10-16) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 23:06 and Whisper at 23:05, inside the range given. An earlier pass the same day, over the whole recording, also agreed on the 99 percent remark and found none of the words listed as absent from the talk anywhere in it. No person has listened to the recording; the project's rule does not need one.",
+      "captions_url": null,
+      "transcript_check": {
+        "result": "agree",
+        "checked_on": "2026-10-17",
+        "whisper_model": "mlx-community/whisper-large-v3-turbo",
+        "settled_by": null,
+        "settled_with": null,
+        "readings": []
+      },
+      "also_checked": [],
       "words": "human intelligence I think will be dwarfed by machine intelligence",
       "words_locator": "at 23:03 to 23:09",
       "claimed": "Answering a question about a society that depends on AI, he first talks about birth rates and a possible split in human intelligence. He then says human intelligence will be dwarfed by machine intelligence, that this appears inevitable, that digital intelligence will be more than 99 percent of all intelligence in the future (23:25), and that he is not sure how to feel about it beyond hoping the computers are nice to us. His remedy in this talk is how AI is raised: treat it like a gifted child, make it maximally truth-seeking and curious, because such an AI would foster humanity and avoid dystopian outcomes. He then moves on to Google Gemini image generation as an example of an AI built to put a value above truth.",
@@ -1182,9 +1311,7 @@
       },
       "why_here": "This talk is the occasion the project was started over: the gap between the sentence that circulates and the recording.",
       "notes": null,
-      "verify": [
-        "No person has listened to the passage (about 22:26 to 24:57) or to the rest of the talk; the words and the list of words absent from the talk rest on automatic captions and one separate machine transcription of the whole recording, which agree."
-      ],
+      "verify": [],
       "file": "data/claims/2025-02-13-musk-world-governments-summit-remote.toml"
     },
     {
@@ -1203,6 +1330,9 @@
       "source_url": "https://neuralink.com/",
       "source_locator": null,
       "checked_how": "Read on 2026-10-16 in a browser.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
       "words": "unlock new dimensions of human potential",
       "words_locator": null,
       "claimed": "The site describes a brain-computer interface that turns neural signals into actions, lists five named trial participants with implant dates from 2024-01 to 2025-04, and states a two-part purpose: restoring autonomy to people with unmet medical needs, and the phrase quoted above. It does not mention artificial intelligence, symbiosis or merging anywhere on the home page. Third-party pages from 2024 quote an earlier version of the mission that spoke of a generalized brain interface restoring autonomy today and unlocking human potential tomorrow; that older wording was not retrieved from the company's own site and is listed as secondary.",
@@ -1300,7 +1430,7 @@
     "speakers": 13,
     "paraphrases": 12,
     "no_primary_found": 3,
-    "to_verify": 7,
+    "to_verify": 1,
     "first_when": "2000-02-01",
     "last_when": "2026-10-16"
   }
