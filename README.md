@@ -15,6 +15,7 @@ A Sentient Horizons project, sibling of The Belt Equation and The Quiet Galaxy. 
 - `data/` holds the record: `branches.toml` (the seven branches) and one TOML file per branch for its upgrades. The first list of thirty-five upgrades was written on 2026-10-16 from the project charter, replacing four example entries seeded earlier that day.
 - `docs/upgrade-schema.md` is the record layout, and the rules the export script enforces.
 - `scripts/export.py` validates the record and writes the JSON the site reads. `python3 scripts/export.py --check` validates without writing.
+- `scripts/check_quotes.py` checks the quoted words of claims held on YouTube recordings against two automatic transcripts and prints a table; it never writes to the record (`docs/check-quotes.md`).
 - `site/` is the website: an Astro 5 static site, deployed to Cloudflare Workers static assets. See `site/README.md`.
 - `CHANGELOG.md` records every change to the record, the rules or the site, with absolute dates. The site's Story page renders it.
 

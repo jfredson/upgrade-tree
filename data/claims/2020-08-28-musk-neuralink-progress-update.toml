@@ -11,7 +11,7 @@ Neuralink's own recording, YouTube video id DVvmgjBL74w ("Neuralink Progress Upd
 round, about 01:09:02 to 01:09:56."""
 source_url = "https://www.youtube.com/watch?v=DVvmgjBL74w"
 source_locator = "about 01:09:02 to 01:09:56"
-checked_how = "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account. No person has listened to the recording."
+checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 1:09:16 and Whisper at 1:09:16. No person has listened to the recording; the project's rule does not need one."
 words = "AI symbiosis where you have an AI extension of yourself"
 words_locator = "at 01:09:14 to 01:09:22"
 claimed = """
@@ -22,6 +22,8 @@ the combined will of the people of Earth. At 01:09:02 he frames it as a species-
 coexisting with advanced AI, and at 01:09:46 as important from an existential-threat standpoint."""
 bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
-verify = [
-  "No person has listened to the passage (about 01:09:02 to 01:09:56); the words rest on automatic captions and one separate machine transcription, which agree.",
-]
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-10-17
+whisper_model = "mlx-community/whisper-large-v3-turbo"

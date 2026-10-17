@@ -71,6 +71,14 @@ REQUIRED_CLAIM = ["id", "speaker", "when", "occasion", "status", "source", "sour
 CLAIM_STATUSES = {"sourced", "unsourced"}
 MAX_PHRASE_WORDS = 25
 PARAPHRASE_FIELDS = ["repeated", "seen", "differs", "primary_found"]
+# The check of quoted recordings (docs/upgrade-schema.md, "Checking quoted recordings", 2026-10-17).
+TRANSCRIPT_OPENERS = {
+    "agree": "Two automatic transcripts agree.",
+    "settled": "Two automatic transcripts differ on a word; settled by a third source.",
+    "open": "Two automatic transcripts differ on a word; not settled.",
+}
+SETTLED_BY = {"larger-model", "official-transcript", "speaker-text"}
+TRANSCRIPT_READING_FIELDS = ["passage", "captions", "whisper", "third"]
 
 # The bandwidth series (docs/upgrade-schema.md, "The bandwidth series", added 2026-10-16).
 REQUIRED_MEASURE = ["key", "name", "unit", "meaning"]
@@ -313,6 +321,45 @@ def when_label(when: str) -> str:
     return parts[0]
 
 
+def check_transcript_check(where: str, c: dict, t, problems: list[str]):
+    """Validate a claim's transcript_check table; return it cleaned, or None when it is broken."""
+    if not isinstance(t, dict):
+        problems.append(f"{where}: transcript_check must be a table")
+        return None
+    start = len(problems)
+    result = t.get("result")
+    if result not in TRANSCRIPT_OPENERS:
+        problems.append(f"{where}: transcript_check.result must be one of {sorted(TRANSCRIPT_OPENERS)}")
+        return None
+    try:
+        checked_on = iso(t.get("checked_on"))
+    except SchemaError as e:
+        problems.append(f"{where}: transcript_check.checked_on: {e}")
+        checked_on = None
+    if not checked_on:
+        problems.append(f"{where}: transcript_check needs checked_on")
+    if not str(t.get("whisper_model", "")).strip():
+        problems.append(f"{where}: transcript_check needs whisper_model")
+    if not str(c["checked_how"]).startswith(TRANSCRIPT_OPENERS[result]):
+        problems.append(f"{where}: checked_how must open with \"{TRANSCRIPT_OPENERS[result]}\"")
+    if str(c["checked_how"]).startswith("Two automatic transcripts") and not c.get("words"):
+        problems.append(f"{where}: only a claim with quoted words can be checked under the transcript rule")
+    readings = t.get("readings", [])
+    if result != "agree":
+        if not readings or any(not isinstance(r, dict) or any(f not in r for f in TRANSCRIPT_READING_FIELDS) for r in readings):
+            problems.append(f"{where}: a {result} transcript_check needs readings, each with {', '.join(TRANSCRIPT_READING_FIELDS)}")
+    if result == "settled":
+        if t.get("settled_by") not in SETTLED_BY:
+            problems.append(f"{where}: transcript_check.settled_by must be one of {sorted(SETTLED_BY)}")
+        if not str(t.get("settled_with", "")).strip():
+            problems.append(f"{where}: a settled transcript_check needs settled_with")
+    if len(problems) > start:
+        return None
+    return {"result": result, "checked_on": checked_on, "whisper_model": t["whisper_model"],
+            "settled_by": t.get("settled_by"), "settled_with": t.get("settled_with"),
+            "readings": [dict(r) for r in readings]}
+
+
 def load_claims(folder: Path, branches: list[dict], upgrades: list[dict]) -> dict:
     """Read data/claims/: one file per claim, plus not-entered.toml. Validates against the schema."""
     claims_dir = folder / "claims"
@@ -370,6 +417,16 @@ def load_claims(folder: Path, branches: list[dict], upgrades: list[dict]) -> dic
             else:
                 para = {"repeated": one_paragraph(para["repeated"]), "seen": one_paragraph(para["seen"]),
                         "differs": one_paragraph(para["differs"]), "primary_found": bool(para["primary_found"])}
+        if c.get("captions_url") and not URL_RE.match(str(c["captions_url"])):
+            problems.append(f"{where}: captions_url must be a web address")
+        tcheck = c.get("transcript_check")
+        if tcheck is not None:
+            tcheck = check_transcript_check(where, c, tcheck, problems)
+        also = c.get("also_checked", [])
+        if not isinstance(also, list) or any(not isinstance(a, dict) or not a.get("words") or not a.get("at")
+                                            for a in also):
+            problems.append(f"{where}: also_checked is a list of items that each carry words and at")
+            also = []
         try:
             released = iso(c.get("released_on"))
         except SchemaError as e:
@@ -384,6 +441,7 @@ def load_claims(folder: Path, branches: list[dict], upgrades: list[dict]) -> dic
             "source": one_paragraph(c["source"]), "source_url": c["source_url"],
             "source_locator": c.get("source_locator"),
             "checked_how": one_paragraph(c["checked_how"]),
+            "captions_url": c.get("captions_url"), "transcript_check": tcheck, "also_checked": [dict(a) for a in also],
             "words": words, "words_locator": c.get("words_locator"),
             "claimed": one_paragraph(c["claimed"]),
             "not_in_source": one_paragraph(c.get("not_in_source")) or None,
