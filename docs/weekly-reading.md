@@ -226,7 +226,7 @@ can change without touching the task. The steps, in brief:
 ## Decisions, with confidence and alternatives
 
 Per the ground rule of 2026-09-08. All proposed by Claude on 2026-10-16 while building; none
-ruled yet unless the line says so.
+ruled yet unless the line says so (item 12, proposed 2026-10-17, was ruled as proposed the same day).
 
 1. **Weekly, Sundays at 18:00 Pacific, as a scheduled task on John's Mac.** *Proposed; the
    schedule waits on John.* Moderate confidence on the day and hour: it is The Belt Equation's
@@ -285,8 +285,8 @@ ruled yet unless the line says so.
     clean one-rung move, drop the rule.
 
 12. **The stage-agreement check with Outrunning Ageing is a step of the reading, done by a
-    script, and a disagreement is a flagged item, never a move.** *Proposed 2026-10-17; waits on
-    John.* High confidence that the check belongs in the reading and not in the validator: both
+    script, and a disagreement is a flagged item, never a move.** *Proposed 2026-10-17; John ruled
+    it as proposed the same day ("yes to all").* High confidence that the check belongs in the reading and not in the validator: both
     sites' layouts say so (a build on GitHub has no copy of the other repository), and the
     sibling's kickoff item 7 names the weekly reading as the place. Moderate on the two
     judgment calls inside it. First, a small script (`scripts/sibling_check.py`) rather than a
