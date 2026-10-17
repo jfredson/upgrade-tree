@@ -1,22 +1,26 @@
 {
   // Cloudflare Workers config: a static-assets deployment, the same pattern as
-  // beltequation.com and sentient-horizons.com. Until the domains are attached the site
-  // lives at https://theupgradetree.jfredson.workers.dev.
-  //
-  // theupgradetree.com and upgradetree.com are John's to buy on Cloudflare (decided
-  // 2026-10-16, not yet done). Once they are in the account, uncomment the routes below,
-  // and the next deploy attaches them. Deploying with these routes before the zones exist
-  // fails, which is why they are commented out.
+  // beltequation.com, thequietgalaxy.com and sentient-horizons.com. theupgradetree.com and
+  // upgradetree.com were registered by John on Cloudflare on 2026-10-16 and attached as custom
+  // domains the same evening; the routes below keep the config in step with what is deployed
+  // so a deploy from a fresh machine does not drop them. worker/redirect.js forwards every
+  // address but theupgradetree.com (www, and upgradetree.com with its www) to the same page
+  // at theupgradetree.com, so there is one address for citations.
   "name": "theupgradetree",
+  "main": "worker/redirect.js",
   "compatibility_date": "2026-10-01",
-  // "routes": [
-  //   { "pattern": "theupgradetree.com", "custom_domain": true },
-  //   { "pattern": "www.theupgradetree.com", "custom_domain": true },
-  //   { "pattern": "upgradetree.com", "custom_domain": true },
-  //   { "pattern": "www.upgradetree.com", "custom_domain": true }
-  // ],
+  // Keep the workers.dev preview address alongside the custom domains, as the sister sites do.
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "theupgradetree.com", "custom_domain": true },
+    { "pattern": "www.theupgradetree.com", "custom_domain": true },
+    { "pattern": "upgradetree.com", "custom_domain": true },
+    { "pattern": "www.upgradetree.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
   }
 }

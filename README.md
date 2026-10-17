@@ -8,7 +8,7 @@ There are no probabilities. A stage, a date and a record say what has happened; 
 
 Behind the count is the idea that humans keep up with advanced AI by merging with machines, in a soft form (always-on AI tools) and a hard one (a direct link). Whether that is happening is a question with an answer, and the answer is a list.
 
-A Sentient Horizons project, sibling of The Belt Equation and The Quiet Galaxy. Site: theupgradetree.com (once the domain is attached; until then https://theupgradetree.jfredson.workers.dev). Kicked off 2026-10-16; the project charter and the claims log live in TimeAssembler.
+A Sentient Horizons project, sibling of The Belt Equation and The Quiet Galaxy. Site: https://theupgradetree.com (upgradetree.com forwards to it; the preview address https://theupgradetree.jfredson.workers.dev serves the same build). Kicked off 2026-10-16; the project charter and the claims log live in TimeAssembler.
 
 ## Layout
 
@@ -22,7 +22,7 @@ A Sentient Horizons project, sibling of The Belt Equation and The Quiet Galaxy. 
 
 Every push to `main` that touches the record, the scripts, the site or the changelog runs `.github/workflows/deploy.yml`, which validates, builds and deploys. **The workflow needs two repository secrets that are John's to add:** `CLOUDFLARE_API_TOKEN` (Workers Scripts: Edit, plus Workers Routes: Edit once the domains are attached) and `CLOUDFLARE_ACCOUNT_ID`. Until they exist the workflow fails at the deploy step and the site stays as it was. A deploy by hand from this Mac is `npm run deploy` in `site/`.
 
-The domains theupgradetree.com and upgradetree.com are not yet in the Cloudflare account. The custom-domain routes in `site/wrangler.jsonc` are commented out until they are; the site lives at the workers.dev address meanwhile.
+The domains theupgradetree.com and upgradetree.com were attached as custom domains on 2026-10-16 (`site/wrangler.jsonc`); `site/worker/redirect.js` forwards every address but theupgradetree.com to it, so citations have one address.
 
 ## Licence
 

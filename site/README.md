@@ -1,7 +1,8 @@
 # The website
 
-The public face of the record: theupgradetree.com once the domain is attached; until then
-https://theupgradetree.jfredson.workers.dev. Scaffolded 2026-10-16 from The Belt Equation's site.
+The public face of the record: https://theupgradetree.com (attached 2026-10-16; upgradetree.com and
+both www addresses forward to it through `worker/redirect.js`; the preview address
+https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2026-10-16 from The Belt Equation's site.
 
 ## How it fits together
 
