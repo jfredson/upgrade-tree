@@ -11,9 +11,9 @@ Gergawi in a conversation with Elon Musk during WGS17", uploaded 2017-02-15, 35 
 runs about 24:48 to 27:14."""
 source_url = "https://www.youtube.com/watch?v=rCoFKUJ_8Yo"
 source_locator = "about 24:48 to 27:14"
-checked_how = "English captions on the official upload. These are punctuated and look human-made rather than machine-made, but they were not checked against the audio."
+checked_how = "Machine captions: the official upload has no human-made subtitle track, so the captions are automatic (the earlier note here that they looked human-made was wrong). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account. No person has listened to the recording."
 words = "a closer merger of biological intelligence and digital intelligence"
-words_locator = "at 26:09 to 26:15"
+words_locator = "at 26:09 to 26:19"
 claimed = """
 Asked how people find meaning in a future run by AI, he offers what he himself calls a potential
 path bordering on science fiction: some merger of biological and machine intelligence. He argues
@@ -28,3 +28,6 @@ not_in_source = "Elimination, extinction, a new species, or any instruction that
 bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
 coverage = ["Fortune, 2017-02-13, and many others that week; CNBC's 2018-02-13 anniversary recap. Most coverage led with \"must become cyborgs\", which is a tighter claim than the recording."]
+verify = [
+  "No person has listened to the passage (about 24:48 to 27:14): the words rest on automatic captions and one separate machine transcription, which agree. The second transcription puts the quoted phrase at about 26:12 to 26:19, the captions at 26:09, hence the wider range. One detail for a listener: he says a thumb can manage 'maybe 10 bits per second, or 100 if you're being generous', and the account says only 'around ten'.",
+]

@@ -3,15 +3,15 @@
 id = "2020-07-09-musk-twitter-join-em"
 speaker = "Elon Musk"
 when = "2020-07-09"
-when_note = "02:01 in the timezone shown by the search result."
+when_note = "The post's own time is 07:01 universal time on 2020-07-09, which is 00:01 Pacific; the 02:01 first noted from a search result is the same moment in United States Central time."
 occasion = "Post on Twitter"
 status = "sourced"
 source = """
-The post at x.com/elonmusk/status/1281121339584114691, dated 2020-07-09 (02:01 in the timezone
-shown by the search result; not opened directly, text and date taken from the search engine's
-rendering of the page on 2026-10-16)."""
+The post at x.com/elonmusk/status/1281121339584114691, dated 2020-07-09 (07:01 universal time on
+2020-07-09 by the post's own data, read on 2026-10-17 from X's embed data for the post; the page
+itself was not opened, and on 2026-10-16 the text had been taken from a search engine's rendering)."""
 source_url = "https://x.com/elonmusk/status/1281121339584114691"
-checked_how = "Not opened directly; text and date taken from the search engine's rendering of the page on 2026-10-16."
+checked_how = "Read on 2026-10-17 from X's own embed data for the post (the data X supplies for showing a post on other sites): the text 'If you can’t beat em, join em', a line break, then 'Neuralink mission statement', and a posting time of 2020-07-09 07:01 universal time. Before that, on 2026-10-16, the text had been taken from a search engine's rendering."
 words = "If you can't beat em, join em"
 words_locator = "the post, followed on the next line by the words Neuralink mission statement"
 claimed = """

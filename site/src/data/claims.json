@@ -1,5 +1,5 @@
 {
-  "exported_on": "2026-10-16",
+  "exported_on": "2026-10-17",
   "claims": [
     {
       "id": "2000-02-01-warwick-wired-cyborg-essay",
@@ -442,9 +442,9 @@
       "source": "Recording on the World Governments Summit YouTube channel, video id rCoFKUJ_8Yo (\"Mohammad Al Gergawi in a conversation with Elon Musk during WGS17\", uploaded 2017-02-15, 35 min). The passage runs about 24:48 to 27:14.",
       "source_url": "https://www.youtube.com/watch?v=rCoFKUJ_8Yo",
       "source_locator": "about 24:48 to 27:14",
-      "checked_how": "English captions on the official upload. These are punctuated and look human-made rather than machine-made, but they were not checked against the audio.",
+      "checked_how": "Machine captions: the official upload has no human-made subtitle track, so the captions are automatic (the earlier note here that they looked human-made was wrong). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account. No person has listened to the recording.",
       "words": "a closer merger of biological intelligence and digital intelligence",
-      "words_locator": "at 26:09 to 26:15",
+      "words_locator": "at 26:09 to 26:19",
       "claimed": "Asked how people find meaning in a future run by AI, he offers what he himself calls a potential path bordering on science fiction: some merger of biological and machine intelligence. He argues people are already partly machine because of phones and computers, which he calls a digital third layer on top of the animal brain and the thinking brain. The limit, he says at 26:20, is mostly the bandwidth of the link between brain and device, especially output: typing with thumbs is around ten bits per second against a computer's trillion. A high-bandwidth interface to the brain, he says at 27:00, would help reach symbiosis between human and machine intelligence and might solve the control problem and the usefulness problem. He closes by calling himself esoteric. Hedged throughout: a potential path, probably, maybe.",
       "not_in_source": "Elimination, extinction, a new species, or any instruction that people must merge. Neuralink is not named (it was reported publicly on 2017-03-27).",
       "bears_on": [
@@ -462,7 +462,9 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [],
+      "verify": [
+        "No person has listened to the passage (about 24:48 to 27:14): the words rest on automatic captions and one separate machine transcription, which agree. The second transcription puts the quoted phrase at about 26:12 to 26:19, the captions at 26:09, hence the wider range. One detail for a listener: he says a thumb can manage 'maybe 10 bits per second, or 100 if you're being generous', and the account says only 'around ten'."
+      ],
       "file": "data/claims/2017-02-13-musk-world-governments-summit.toml"
     },
     {
@@ -571,7 +573,7 @@
       "source": "The Forum's recording, YouTube video id hL9uk4hKyg4 (World Economic Forum channel, uploaded 2018-01-25, 29 min). The session date, 2018-01-24 at 15:15, is from the Forum's session page (reached only through search-engine snippets; a direct fetch was refused). The passages run 4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00.",
       "source_url": "https://www.youtube.com/watch?v=hL9uk4hKyg4",
       "source_locator": "4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00",
-      "checked_how": "Auto-captions only; the recording has no human-made subtitle track and no Forum transcript was found. Recommend a listen at the three timestamp ranges before the quote is published anywhere.",
+      "checked_how": "Automatic captions only (the recording has no human-made subtitle track and no Forum transcript was found). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words, on all three passages (within about three seconds of the captions' times) and on the account, and the word hackable occurs nowhere in the talk. No person has listened to the recording.",
       "words": "we can hack not just computers we can hack human beings",
       "words_locator": "at 4:55 to 5:03",
       "claimed": "Data matters, he says, because we have reached the point of being able to hack human beings, which needs two things, a lot of computing power and a lot of biometric data, neither of which anyone had before, not even the KGB or the Spanish Inquisition. When the information-technology revolution merges with the biotechnology revolution, the result is that ability, and its key invention is the biometric sensor. By hacking organisms, elites may gain the power to re-engineer the future of life itself; once you can hack something you can usually engineer it, and if that succeeds it would be the greatest revolution not only in human history but in biology. Hedged: may, if indeed we succeed.",
@@ -601,13 +603,13 @@
       "paraphrase": {
         "repeated": "Humans are now hackable animals.",
         "seen": "Widely quoted.",
-        "differs": "Not in this recording's captions (the word hackable does not occur). The 2018 wording is hack human beings. The hackable-animals phrasing belongs to his later talks. His Davos address of 2020-01-23 (\"How to Survive the 21st Century\", video id eOsKFOrW5h8, auto-captions) gives the formula of biological knowledge times computing power times data equals the ability to hack humans, at 10:41 to 11:03, and the word hackable is absent there too.",
+        "differs": "Not in this recording (the word hackable occurs nowhere in it, in the captions or in a second machine transcription of the whole talk). The 2018 wording is hack human beings. The hackable-animals phrasing belongs to his later talks. His Davos address of 2020-01-23 (\"How to Survive the 21st Century\", video id eOsKFOrW5h8) gives the formula of biological knowledge times computing power times data equals the ability to hack humans, at about 10:35 to 11:05, and then, at about 12:13, says \"We are now hackable animals.\" That is very probably where the circulating phrase comes from. The earlier version of this note said the word was absent from that talk; it was not, the automatic captions render it as \"packable\" (corrected 2026-10-17 from a transcription of the audio; no person has listened to that passage either). The 2020 talk is a different occasion and is not entered as a claim.",
         "primary_found": true
       },
       "why_here": null,
       "notes": null,
       "verify": [
-        "The quote rests on auto-captions; listen at the three timestamp ranges before publishing it anywhere else."
+        "No person has listened to the three passages (4:55 to 5:56, 7:20 to 7:45, 13:29 to 14:00); the words rest on automatic captions and one separate machine transcription, which agree."
       ],
       "file": "data/claims/2018-01-24-harari-davos-will-the-future-be-human.toml"
     },
@@ -626,7 +628,7 @@
       "source": "The film itself. It premiered in Los Angeles on 2018-04-05 and streamed free online 2018-04-05 to 2018-04-08 at Musk's expense. The interview footage was recorded some time before release; the film does not date it. Checked through an unofficial full upload on YouTube, video id 1-bLflj11fY (1 h 18 min); the passage runs about 01:10:08 to 01:11:50.",
       "source_url": "https://www.youtube.com/watch?v=1-bLflj11fY",
       "source_locator": "about 01:10:08 to 01:11:50",
-      "checked_how": "Machine captions on that upload. The captions carry no speaker labels. The quoted line sits inside a stretch that is clearly Musk (the dictator passage matches CNBC's transcription word for word).",
+      "checked_how": "Machine captions on that upload, read on 2026-10-16; the captions carry no speaker labels. On 2026-10-17 the recording could not be reached again: the upload linked here is now a 3-minute clip of other material, not the film. The quoted line matches CNBC's own transcription of the film in its article of 2018-04-06 word for word, and sits in a stretch that is clearly Musk. So the words rest on automatic captions and a news outlet's transcription, and no person has listened.",
       "words": "an immortal dictator from which we can never escape",
       "words_locator": "at 01:11:47 to 01:11:50",
       "claimed": "At 01:10:08 he says it is important that AI not be something separate from us, and at 01:10:24 that humanity will have to either merge with AI or be left behind (the captions garble this line). The least frightening future, he says, is one where AI is spread widely, because if one company or small group builds a godlike digital superintelligence it could take over the world, and unlike a human dictator it would never die. He adds that he could be wrong and is open to a better path.",
@@ -651,7 +653,9 @@
       },
       "why_here": null,
       "notes": null,
-      "verify": [],
+      "verify": [
+        "The upload linked as the source is no longer the full film (a 3-minute clip on 2026-10-17). Find a full copy, listen at about 01:10:08 to 01:11:50, check the timestamps given here, and replace the link."
+      ],
       "file": "data/claims/2018-04-05-musk-do-you-trust-this-computer.toml"
     },
     {
@@ -715,9 +719,9 @@
       "source": "Neuralink's own recording, YouTube video id r-vbh3t7WVI (\"Neuralink Launch Event\", Neuralink channel, uploaded 2019-07-17, 1 h 45 min). The event was the evening of 2019-07-16 Pacific time. The merger passage runs about 05:30 to 08:21; a second remark is in the audience questions at about 01:22:13 to 01:22:27.",
       "source_url": "https://www.youtube.com/watch?v=r-vbh3t7WVI",
       "source_locator": "about 05:30 to 08:21, and 01:22:13 to 01:22:27",
-      "checked_how": "Machine captions.",
+      "checked_how": "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 both passages were transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account, with one word in the audience answer left uncertain (see the list of things still to check). No person has listened to the recording.",
       "words": "a sort of symbiosis with artificial intelligence",
-      "words_locator": "at 05:53 to 05:58",
+      "words_locator": "at 05:53 to 05:59",
       "claimed": "After describing the medical uses the company will pursue first, he says the long-run aim is a full brain-machine interface and, by his own warning sounding weird, a kind of symbiosis with AI. At 06:01 he stresses it would be optional, not mandatory. He says that even in a benign AI scenario people will be left behind, and that a high-bandwidth interface would let people keep up, giving them, at 06:43, the option of merging with AI. He repeats the three-layer picture (animal brain, thinking brain, a digital superintelligence layer that phones already roughly supply) and says bandwidth is the constraint. At 08:07 he states the point of the company in the limit, after solving brain diseases, is reducing the existential threat of AI. In the questions, asked how the device will be paid for, he says someone who chooses symbiosis with AI could repay a loan with superhuman intelligence, and that the first order of business is making it work safely.",
       "not_in_source": null,
       "bears_on": [
@@ -735,7 +739,9 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [],
+      "verify": [
+        "No person has listened to the passages (about 05:30 to 08:21 and 01:22:13 to 01:22:27); the words rest on automatic captions and one separate machine transcription, which agree. One word to settle by ear: in the audience answer the captions render it 'sympotic' and the second transcription 'sympathetic', and the entry reads it as 'symbiosis' (Musk's usual word for it) in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence'."
+      ],
       "file": "data/claims/2019-07-16-musk-neuralink-launch-event.toml"
     },
     {
@@ -753,7 +759,7 @@
       "source": "Unsourced. Only the headline was confirmed, from the paywalled page at ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848 as captured by the Internet Archive on 2019-08-14, and from the link on her own research page. The body text was not read: the newspaper's site refuses automated readers and two archive captures show only the paywall. The date is inferred from the first archive capture and from Futurism's coverage of 2019-08-15 saying this week; not verified.",
       "source_url": "https://www.ft.com/content/0c4fac58-bd15-11e9-9381-78bab8a70848",
       "source_locator": null,
-      "checked_how": "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read.",
+      "checked_how": "Only the headline, from an Internet Archive capture of the paywalled page and from the link on her own research page. The body text was not read; tried again on 2026-10-17, and the Financial Times page and the one archive copy that loads still show only the subscription wall.",
       "words": null,
       "words_locator": null,
       "claimed": "Only the headline is on the record here: that merging with AI would be suicide for the human mind. What the piece argues beyond its headline was not read.",
@@ -786,15 +792,15 @@
       "critic": false,
       "when": "2020-07-09",
       "when_label": "9 July 2020",
-      "when_note": "02:01 in the timezone shown by the search result.",
+      "when_note": "The post's own time is 07:01 universal time on 2020-07-09, which is 00:01 Pacific; the 02:01 first noted from a search result is the same moment in United States Central time.",
       "released_on": null,
       "occasion": "Post on Twitter",
       "status": "sourced",
       "ruling": null,
-      "source": "The post at x.com/elonmusk/status/1281121339584114691, dated 2020-07-09 (02:01 in the timezone shown by the search result; not opened directly, text and date taken from the search engine's rendering of the page on 2026-10-16).",
+      "source": "The post at x.com/elonmusk/status/1281121339584114691, dated 2020-07-09 (07:01 universal time on 2020-07-09 by the post's own data, read on 2026-10-17 from X's embed data for the post; the page itself was not opened, and on 2026-10-16 the text had been taken from a search engine's rendering).",
       "source_url": "https://x.com/elonmusk/status/1281121339584114691",
       "source_locator": null,
-      "checked_how": "Not opened directly; text and date taken from the search engine's rendering of the page on 2026-10-16.",
+      "checked_how": "Read on 2026-10-17 from X's own embed data for the post (the data X supplies for showing a post on other sites): the text 'If you can’t beat em, join em', a line break, then 'Neuralink mission statement', and a posting time of 2020-07-09 07:01 universal time. Before that, on 2026-10-16, the text had been taken from a search engine's rendering.",
       "words": "If you can't beat em, join em",
       "words_locator": "the post, followed on the next line by the words Neuralink mission statement",
       "claimed": "A one-line statement of purpose, in the same thread that announced the 2020-08-28 progress update. Coverage (Business Insider India, 2020-07-09) noted he had used the line before, on the Joe Rogan podcast and in his 2019 Shanghai conversation with Jack Ma. Whether this is a formal mission statement or a quip is not settled by the post; the company's website has never used the line (see the 2026 entry).",
@@ -832,9 +838,9 @@
       "source": "Neuralink's own recording, YouTube video id DVvmgjBL74w (\"Neuralink Progress Update, Summer 2020\", Neuralink channel, uploaded 2020-08-29, 1 h 13 min). The passage is in the team question round, about 01:09:02 to 01:09:56.",
       "source_url": "https://www.youtube.com/watch?v=DVvmgjBL74w",
       "source_locator": "about 01:09:02 to 01:09:56",
-      "checked_how": "Machine captions.",
+      "checked_how": "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account. No person has listened to the recording.",
       "words": "AI symbiosis where you have an AI extension of yourself",
-      "words_locator": "at 01:09:14 to 01:09:21",
+      "words_locator": "at 01:09:14 to 01:09:22",
       "claimed": "Asked what the device could ultimately do, he says the medical uses matter, then that the most important thing a device like this might achieve is a good AI symbiosis: an AI extension of yourself as a third layer above the animal and thinking brain, such that the future is steered by the combined will of the people of Earth. At 01:09:02 he frames it as a species-level matter of coexisting with advanced AI, and at 01:09:46 as important from an existential-threat standpoint.",
       "not_in_source": null,
       "bears_on": [
@@ -850,7 +856,9 @@
       "paraphrase": null,
       "why_here": null,
       "notes": null,
-      "verify": [],
+      "verify": [
+        "No person has listened to the passage (about 01:09:02 to 01:09:56); the words rest on automatic captions and one separate machine transcription, which agree."
+      ],
       "file": "data/claims/2020-08-28-musk-neuralink-progress-update.toml"
     },
     {
@@ -1010,9 +1018,9 @@
       "source": "Neuralink's own recording, YouTube video id YreDYmXTYi4 (Neuralink channel, uploaded 2022-12-01, 2 h 48 min; the event was the evening of 2022-11-30 Pacific time). His segment is listed in the company's own chapter list as \"Generalized Interface to the Brain (DJ)\" starting at 36:38; Musk hands over at 36:37, naming him as a founding team member, and the speaker at 37:19 says he moved from South Korea at 13, which fits Seo. Attribution rests on that, not on a speaker-labelled transcript. The passage runs 37:19 to 40:10.",
       "source_url": "https://www.youtube.com/watch?v=YreDYmXTYi4",
       "source_locator": "37:19 to 40:10",
-      "checked_how": "Auto-captions.",
+      "checked_how": "Automatic captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on every point in the account, except that in one run of the program the word bandwidth in the quoted question came out as 'bandless' (in a second run it came out as bandwidth, as in the captions). No person has listened to the recording.",
       "words": "how do you create a high bandwidth generalized interface to the brain",
-      "words_locator": "at 39:15 to 39:17",
+      "words_locator": "at 39:14 to 39:22",
       "claimed": "He recalls watching the hero of The Matrix learn kung fu by download and wanting to work on making that possible. Since intentions, thoughts and experiences all sit in the brain as patterns of nerve firing, he says, electrodes in the right places with the right sensing and stimulation make that and the other applications Musk had described possible, and would help a lot of people. His three design axes are safety, scale, and access to more brain regions so that functions can be expanded. He does not say merge or symbiosis; the Matrix line is framed as a childhood ambition, not a timeline.",
       "not_in_source": null,
       "bears_on": [
@@ -1035,7 +1043,7 @@
       "why_here": null,
       "notes": null,
       "verify": [
-        "The quote rests on auto-captions; check against the audio before publishing it anywhere else."
+        "No person has listened to the passage (37:19 to 40:10); the words rest on automatic captions and a separate machine transcription, which agree apart from the one word noted above. Listen once to settle that word."
       ],
       "file": "data/claims/2022-11-30-seo-neuralink-show-and-tell.toml"
     },
@@ -1151,7 +1159,7 @@
       "source": "Reuters' recording, YouTube video id eV396ioBs3g (\"LIVE: Elon Musk speaks at Dubai's World Governments Summit\", Reuters channel, 2025-02-13, 35 min). The relevant passage runs about 22:26 to 24:57.",
       "source_url": "https://www.youtube.com/watch?v=eV396ioBs3g",
       "source_locator": "about 22:26 to 24:57",
-      "checked_how": "Machine captions, the whole file searched, not just the passage.",
+      "checked_how": "Machine captions, the whole file searched, not just the passage (2026-10-16). On 2026-10-17 the whole recording was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees on the quoted words (it places them at 23:06 to 23:09, inside the range given), on the 99 percent remark and on the account, and none of the words listed as absent from the talk occurs anywhere in it. No person has listened to the recording.",
       "words": "human intelligence I think will be dwarfed by machine intelligence",
       "words_locator": "at 23:03 to 23:09",
       "claimed": "Answering a question about a society that depends on AI, he first talks about birth rates and a possible split in human intelligence. He then says human intelligence will be dwarfed by machine intelligence, that this appears inevitable, that digital intelligence will be more than 99 percent of all intelligence in the future (23:25), and that he is not sure how to feel about it beyond hoping the computers are nice to us. His remedy in this talk is how AI is raised: treat it like a gifted child, make it maximally truth-seeking and curious, because such an AI would foster humanity and avoid dystopian outcomes. He then moves on to Google Gemini image generation as an example of an AI built to put a value above truth.",
@@ -1174,7 +1182,9 @@
       },
       "why_here": "This talk is the occasion the project was started over: the gap between the sentence that circulates and the recording.",
       "notes": null,
-      "verify": [],
+      "verify": [
+        "No person has listened to the passage (about 22:26 to 24:57) or to the rest of the talk; the words and the list of words absent from the talk rest on automatic captions and one separate machine transcription of the whole recording, which agree."
+      ],
       "file": "data/claims/2025-02-13-musk-world-governments-summit-remote.toml"
     },
     {
@@ -1290,7 +1300,7 @@
     "speakers": 13,
     "paraphrases": 12,
     "no_primary_found": 3,
-    "to_verify": 2,
+    "to_verify": 7,
     "first_when": "2000-02-01",
     "last_when": "2026-10-16"
   }

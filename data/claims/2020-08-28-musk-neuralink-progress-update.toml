@@ -11,9 +11,9 @@ Neuralink's own recording, YouTube video id DVvmgjBL74w ("Neuralink Progress Upd
 round, about 01:09:02 to 01:09:56."""
 source_url = "https://www.youtube.com/watch?v=DVvmgjBL74w"
 source_locator = "about 01:09:02 to 01:09:56"
-checked_how = "Machine captions."
+checked_how = "Machine captions (the recording has no human-made subtitle track). On 2026-10-17 the passage was transcribed again from the audio by a separate speech-recognition program (OpenAI's Whisper, large-v3-turbo); it agrees with the captions on the quoted words and on each point in the account. No person has listened to the recording."
 words = "AI symbiosis where you have an AI extension of yourself"
-words_locator = "at 01:09:14 to 01:09:21"
+words_locator = "at 01:09:14 to 01:09:22"
 claimed = """
 Asked what the device could ultimately do, he says the medical uses matter, then that the most
 important thing a device like this might achieve is a good AI symbiosis: an AI extension of
@@ -22,3 +22,6 @@ the combined will of the people of Earth. At 01:09:02 he frames it as a species-
 coexisting with advanced AI, and at 01:09:46 as important from an existential-threat standpoint."""
 bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+verify = [
+  "No person has listened to the passage (about 01:09:02 to 01:09:56); the words rest on automatic captions and one separate machine transcription, which agree.",
+]
