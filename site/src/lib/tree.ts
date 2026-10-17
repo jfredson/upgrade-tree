@@ -71,6 +71,9 @@ export type Upgrade = {
   verify: string[];
   /** Extra search terms for the weekly reading; a search aid only. */
   watch: string[];
+  /** The id of the matching leaf on Outrunning Ageing, and its page there, for the five shared lifespan entries (added 2026-10-17). */
+  sibling: string | null;
+  sibling_url: string | null;
   notes: string | null;
   example: boolean;
 };
@@ -78,6 +81,8 @@ export type Upgrade = {
 export type Tree = {
   exported_on: string;
   commit: string | null;
+  /** The sibling site the five shared lifespan entries link across to (scripts/export.py, SIBLING_SITE). */
+  sibling_site: { name: string; url: string };
   headline_stage: StageKey;
   stages: Stage[];
   horizons: Record<string, string>;
@@ -91,6 +96,7 @@ export type Tree = {
     examples: number;
     branches_with_upgrades: number;
     to_verify: number;
+    siblings: number;
   };
   /** The latest weekly reading, or null before the first one (scripts/export.py, export_readings). */
   last_checked: {

@@ -29,7 +29,7 @@ https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2
 | `/` | The question in large type, the human figure with seven clickable regions shaded by the furthest stage reached under each branch, the headline count, a one-paragraph explanation, the "last checked" strip, the seven branches. |
 | `/branches/` | The seven branches with counts, and the stage ladder explained. |
 | `/branches/<branch>/` | One branch: its meaning and its upgrades with stage badges. The link-to-machines branch carries the placeholder for the second number. |
-| `/branches/<branch>/<id>/` | One upgrade: description, what would count, who settles it, where it stands, the stage ladder with dates, notes, claims still to check, and a link to open an issue. |
+| `/branches/<branch>/<id>/` | One upgrade: description, what would count, who settles it, where it stands, the stage ladder with dates, notes, claims still to check, and a link to open an issue. The five lifespan-and-repair entries shared with Outrunning Ageing carry one line linking to the matching page there (added 2026-10-17). |
 | `/method/` | How a stage is decided, in plain words. |
 | `/story/` | The changelog, day by day. |
 | `/disagree/` | How to name a missing upgrade, question a stage or question a test. |
