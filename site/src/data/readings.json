@@ -13,9 +13,9 @@
       "file": "2026-10-16.toml",
       "counts": {
         "quiet": 32,
-        "noted": 1,
+        "noted": 2,
         "stage-change": 0,
-        "flagged": 2
+        "flagged": 1
       },
       "items": [
         {
@@ -370,7 +370,7 @@
           "branch": "mood",
           "branch_name": "Mood and drive",
           "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
-          "verdict": "flagged",
+          "verdict": "noted",
           "queries": [
             "FDA approval psilocybin OR MDMA therapy 2026 Compass COMP360",
             "psychedelic therapy regulator approval prescription news October 2026"
@@ -384,7 +384,7 @@
           "moved_to": null,
           "moved_from_label": null,
           "moved_to_label": null,
-          "for_john": "The claim on this entry's verify list is settled: the regulator's page loads and its wording matches the entry (published 2023-02-03; in force 2023-07-01; psilocybin for treatment-resistant depression and MDMA for post-traumatic stress disorder; authorised psychiatrists only). The reading may not clear a verify list, so the suggested change is to delete that line. No stage change. 'COMP360' is a watch term worth adding for the expected United States decision.",
+          "for_john": null,
           "picked_up": null
         },
         {
@@ -758,32 +758,6 @@
       "moved_to_label": null,
       "for_john": "The reading would have moved this entry from first human to in clinical use, dated 2026-04-23 on the FDA's own press announcement, which is exactly the kind of record the entry names. It did not, for two reasons: the approval is six months older than the window, and the procedure leaves an older record the entry missed to you because it means the entry as written was wrong, not that the world moved this week; and this session was not editing the upgrade records tonight. Suggested change: stage = in-clinical-use, stage_reached_on = 2026-04-23, stage_record = the FDA announcement; move the 2024-01-08 first human into earlier_stages; correct the note; and add 'Otarmeni' and 'OTOF' as watch terms. If you accept, the headline count does not change (the entry is already above first human) but the five-rung totals do: 18 first human, 7 in clinical use.",
       "picked_up": null
-    },
-    {
-      "reading_date": "2026-10-16",
-      "reading_file": "2026-10-16.toml",
-      "test": false,
-      "upgrade": "mood-psychedelic-therapy-approved-for-prescription",
-      "upgrade_name": "A psychedelic therapy is approved for prescription",
-      "branch": "mood",
-      "branch_name": "Mood and drive",
-      "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
-      "verdict": "flagged",
-      "queries": [
-        "FDA approval psilocybin OR MDMA therapy 2026 Compass COMP360",
-        "psychedelic therapy regulator approval prescription news October 2026"
-      ],
-      "found": "Nothing in the window moves the stage. In the United States, Compass Pathways' psilocybin (COMP360) is on an expedited review path (a priority voucher granted 2026-04-24, the application's last parts expected in the last quarter of 2026) with a decision expected late 2026 or early 2027, which would be a second regulator on the rung this entry already holds, not a new rung. On the claim still to check: the Australian regulator's page, which would not load on 2026-10-16 when the record was written, loaded tonight in a browser. It is titled 'Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists', published 3 February 2023, and says that from 1 July 2023 authorised psychiatrists may prescribe MDMA for post-traumatic stress disorder and psilocybin for treatment-resistant depression, under the Authorised Prescriber Scheme, with no approved product evaluated by the regulator. That is the wording the entry describes.",
-      "sources": [
-        "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists",
-        "https://www.pharmavoice.com/news/fda-rfk-makary-compass-psilocybin-drug-approval/812697/"
-      ],
-      "moved_from": null,
-      "moved_to": null,
-      "moved_from_label": null,
-      "moved_to_label": null,
-      "for_john": "The claim on this entry's verify list is settled: the regulator's page loads and its wording matches the entry (published 2023-02-03; in force 2023-07-01; psilocybin for treatment-resistant depression and MDMA for post-traumatic stress disorder; authorised psychiatrists only). The reading may not clear a verify list, so the suggested change is to delete that line. No stage change. 'COMP360' is a watch term worth adding for the expected United States decision.",
-      "picked_up": null
     }
   ],
   "by_upgrade": {
@@ -1071,7 +1045,7 @@
         "by": "hand",
         "test": false,
         "file": "2026-10-16.toml",
-        "verdict": "flagged",
+        "verdict": "noted",
         "found": "Nothing in the window moves the stage. In the United States, Compass Pathways' psilocybin (COMP360) is on an expedited review path (a priority voucher granted 2026-04-24, the application's last parts expected in the last quarter of 2026) with a decision expected late 2026 or early 2027, which would be a second regulator on the rung this entry already holds, not a new rung. On the claim still to check: the Australian regulator's page, which would not load on 2026-10-16 when the record was written, loaded tonight in a browser. It is titled 'Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists', published 3 February 2023, and says that from 1 July 2023 authorised psychiatrists may prescribe MDMA for post-traumatic stress disorder and psilocybin for treatment-resistant depression, under the Authorised Prescriber Scheme, with no approved product evaluated by the regulator. That is the wording the entry describes.",
         "sources": [
           "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists",
@@ -1079,7 +1053,7 @@
         ],
         "moved_from_label": null,
         "moved_to_label": null,
-        "for_john": "The claim on this entry's verify list is settled: the regulator's page loads and its wording matches the entry (published 2023-02-03; in force 2023-07-01; psilocybin for treatment-resistant depression and MDMA for post-traumatic stress disorder; authorised psychiatrists only). The reading may not clear a verify list, so the suggested change is to delete that line. No stage change. 'COMP360' is a watch term worth adding for the expected United States decision.",
+        "for_john": null,
         "picked_up": null
       }
     ],
@@ -1361,6 +1335,6 @@
     "real_readings": 1,
     "test_readings": 0,
     "items": 35,
-    "waiting_on_john": 2
+    "waiting_on_john": 1
   }
 }

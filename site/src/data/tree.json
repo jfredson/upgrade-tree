@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-10-16",
-  "commit": "7afd778",
+  "commit": "40ead78",
   "headline_stage": "first-human",
   "stages": [
     {
@@ -3185,9 +3185,9 @@
     "test": false,
     "upgrades_read": 35,
     "moved": 0,
-    "flagged": 2,
-    "noted": 1,
-    "flagged_waiting": 2,
+    "flagged": 1,
+    "noted": 2,
+    "flagged_waiting": 1,
     "movers": []
   }
 }

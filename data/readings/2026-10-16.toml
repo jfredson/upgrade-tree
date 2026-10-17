@@ -131,11 +131,14 @@ found = "Nothing in the window. The registered closed-loop depression trials (th
 
 [[item]]
 upgrade = "mood-psychedelic-therapy-approved-for-prescription"
-verdict = "flagged"
+verdict = "noted"
 queries = ["FDA approval psilocybin OR MDMA therapy 2026 Compass COMP360", "psychedelic therapy regulator approval prescription news October 2026"]
 found = "Nothing in the window moves the stage. In the United States, Compass Pathways' psilocybin (COMP360) is on an expedited review path (a priority voucher granted 2026-04-24, the application's last parts expected in the last quarter of 2026) with a decision expected late 2026 or early 2027, which would be a second regulator on the rung this entry already holds, not a new rung. On the claim still to check: the Australian regulator's page, which would not load on 2026-10-16 when the record was written, loaded tonight in a browser. It is titled 'Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists', published 3 February 2023, and says that from 1 July 2023 authorised psychiatrists may prescribe MDMA for post-traumatic stress disorder and psilocybin for treatment-resistant depression, under the Authorised Prescriber Scheme, with no approved product evaluated by the regulator. That is the wording the entry describes."
 sources = ["https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists", "https://www.pharmavoice.com/news/fda-rfk-makary-compass-psilocybin-drug-approval/812697/"]
-for_john = "The claim on this entry's verify list is settled: the regulator's page loads and its wording matches the entry (published 2023-02-03; in force 2023-07-01; psilocybin for treatment-resistant depression and MDMA for post-traumatic stress disorder; authorised psychiatrists only). The reading may not clear a verify list, so the suggested change is to delete that line. No stage change. 'COMP360' is a watch term worth adding for the expected United States decision."
+# This item was first written as flagged, for John to clear the verify claim. Before the record
+# was published, the verify session working the same evening (merged into main as f51c2ed)
+# read the same page and cleared the line itself, so nothing waits on John and the verdict is
+# noted: the page was read and matches the entry. Changed before publication, 2026-10-16.
 
 [[item]]
 upgrade = "mood-treatment-removes-a-specific-fear-memory"
