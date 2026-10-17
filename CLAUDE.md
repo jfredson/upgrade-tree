@@ -30,10 +30,14 @@ test is "what would count". Explain an idea in ordinary words before naming it.
 
 ## Design
 
-`site/src/styles/global.css` is `sentient-horizons/design/deep-field.css` copied unchanged,
-with the version noted and this site's additions below the marked line. Never edit above the
-line; update the copy when the standard changes. Every colour is a token; data is shaded with
-`--accent-3`, never amber.
+The site wears its own skin, "Plate" (paper, ink and one green; ruled by John 2026-10-16 from the
+proposal in `sentient-horizons/design/proposals/upgrade-tree-skin-2026-10-16.md`), on the family's
+shared skeleton (design standard, section 3a). `site/src/styles/skin.css` holds this site's tokens
+for both themes and nothing else; `site/src/styles/global.css` imports it, then carries
+`sentient-horizons/design/shell.css` copied unchanged with the version noted, then this site's own
+rules below the marked line. Never edit the skeleton here; update the copy when the standard
+changes. Light is the default theme; there is no backdrop; the figure is the picture. Every colour
+is a token; data is shaded with `--accent-3`, the skin's data green. No web fonts.
 
 ## Commit on main and push
 

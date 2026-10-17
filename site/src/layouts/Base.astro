@@ -2,10 +2,10 @@
 // The page shell, as the Sentient Horizons design standard sets it (design/README.md,
 // sections 6 to 8): theme script before first paint, the top bar, the footer with its four
 // lines and the attribution line with real provenance, ending with the parent line.
-// Built from The Belt Equation's Base.astro on 2026-10-16.
+// Built from The Belt Equation's Base.astro on 2026-10-16. No backdrop: this site wears the
+// Plate skin (src/styles/skin.css), paper and ink, and the figure is the picture.
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
-import Starfield from '../components/Starfield.astro';
 import { tree, REPO } from '../lib/tree';
 
 interface Props {
@@ -36,7 +36,7 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {/* Set the theme before first paint so there is no flash on load. */}
+    {/* Set the theme before first paint so there is no flash on load. Light is the default on this site (the Plate skin, ruled 2026-10-16); dark only when the visitor asks for it. */}
     <script is:inline>
       (function () {
         try {
@@ -44,14 +44,14 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
           var theme =
             stored === 'light' || stored === 'dark'
               ? stored
-              : window.matchMedia('(prefers-color-scheme: light)').matches
-                ? 'light'
-                : 'dark';
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
           document.documentElement.dataset.theme = theme;
         } catch (e) {}
       })();
     </script>
-    <meta id="theme-color-meta" name="theme-color" content="#08070f" />
+    <meta id="theme-color-meta" name="theme-color" content="#f3eee3" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="John Fredrickson" />
@@ -66,11 +66,6 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <div class="space-bg" aria-hidden="true">
-      <div class="galaxy"></div>
-      <div class="core"></div>
-      <Starfield count={150} />
-    </div>
     <Nav />
     <main class="container">
       <slot />
