@@ -75,7 +75,7 @@ Required fields are marked. Everything else may be left out until it is known.
 | `description` | yes | Two to four sentences: what the upgrade is and why it is on the tree. |
 | `resolution` | yes | What would count as a person having this upgrade, stated so that two people reading it would agree. The site calls this "what would count". |
 | `source` | yes | Who or what settles it: a named public record, regulator, journal or report type. "Common knowledge" is not a source. |
-| `horizon` | yes | `"leaf"` (could move a stage within 1 to 5 years), `"mid"` (5 to 20 years) or `"root"` (longer). The site shows this in plain words. |
+| `horizon` | yes | `"leaf"` (could move a stage within 1 to 5 years), `"mid"` (5 to 20 years), `"root"` (longer) or `"top"` (already in wide use, so there is no next rung; added 2026-10-16 when the first list was written). The site shows this in plain words. |
 | `status` | yes | `"tracked"` (live), `"withdrawn"` (the technology left the market or the clinic; the stage stays), or `"superseded"` (replaced by another entry). |
 | `superseded_by` | if superseded | Id of the replacement. |
 | `depends_on` | no | List of ids that must reach `first-human` before this one can. Empty or absent means none. |
@@ -88,7 +88,7 @@ Required fields are marked. Everything else may be left out until it is known.
 | `breaking_point` | long shots | The point where current biology, engineering or physics would have to give way, stated plainly. |
 | `revisions` | no | List of `{ date, field, old, new, why }` tables, newest last, one per change to any field after the record's first commit. A stage change always gets one. |
 | `verify` | no | List of plain-language claims in this record that were written from memory and not yet checked against a source. Cleared by checking each one and either deleting the line or correcting the record. |
-| `notes` | no | Anything else worth keeping with the record. The example entries seeded on 2026-10-16 say "EXAMPLE ENTRY" here. |
+| `notes` | no | Anything else worth keeping with the record. (The example entries seeded on 2026-10-16 said "EXAMPLE ENTRY" here; the real list replaced them the same day.) |
 
 **No probabilities.** Ruled by John 2026-10-16: a stage, a date and a record say what has
 happened; a probability would say what someone guesses, and this project does not guess.
@@ -146,3 +146,5 @@ If any rule fails, nothing is written and the build stops.
 | `first-human` counts whether or not it was allowed | moderate | judgment call (Claude, while building), consistent with the charter's "what has happened" framing | require approval for the rung; would push the 2018 gene-edited births off the ladder, which would misstate the record |
 | One file per branch, TOML | high | standard in this family of sites | one file for everything; diffs worse |
 | `earlier_stages` as an optional list rather than one field per rung | moderate | judgment call | five fixed date fields; simpler to validate, but most records will only ever know one or two dates |
+| A fourth horizon value, `top`, for entries already in wide use (added 2026-10-16) | moderate | judgment call (Claude, while writing the first list) | force `root` on them and let the page say "longer than 20 years, if ever" about a thing that is finished; misleading |
+| The stage date for an event the record itself dates (a birth, an operation) is the event's date; for a trial or study it is the publication date (2026-10-16) | moderate | judgment call, following the charter's "dated by the event, not by the coverage" | always the publication date; simpler, but puts the first pig heart in June instead of January |

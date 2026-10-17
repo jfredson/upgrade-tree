@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-10-16",
-  "commit": "e36680f",
+  "commit": "afc0c40",
   "headline_stage": "first-human",
   "stages": [
     {
@@ -37,7 +37,8 @@
   "horizons": {
     "leaf": "Could move a stage within 1 to 5 years",
     "mid": "Could move a stage within 5 to 20 years",
-    "root": "Longer than 20 years, if ever"
+    "root": "Longer than 20 years, if ever",
+    "top": "At the top of the ladder; nothing left to reach"
   },
   "branches": [
     {
@@ -48,25 +49,60 @@
       "meaning": "Everything that brings the world in: sight, hearing, touch, balance, smell and taste, and any new sense a device could add, such as feeling a magnetic field or seeing in the dark. An upgrade here either gives a sense back to someone who lost it or gives a person a sense no one has had.",
       "figure_region": "senses",
       "path": "/branches/senses/",
-      "count": 1,
+      "count": 6,
       "counts_by_stage": {
         "idea-only": 0,
         "shown-in-animals": 0,
-        "first-human": 0,
-        "in-clinical-use": 1,
-        "in-wide-use": 0
+        "first-human": 3,
+        "in-clinical-use": 2,
+        "in-wide-use": 1
       },
-      "furthest_rank": 3,
-      "furthest_stage": "in-clinical-use",
-      "furthest_label": "In clinical use",
-      "first_human_or_beyond": 1,
+      "furthest_rank": 4,
+      "furthest_stage": "in-wide-use",
+      "furthest_label": "In wide use",
+      "first_human_or_beyond": 6,
       "upgrades": [
+        {
+          "id": "senses-cochlear-implant-gives-a-deaf-person-hearing",
+          "name": "A cochlear implant gives a deaf person hearing",
+          "path": "/branches/senses/senses-cochlear-implant-gives-a-deaf-person-hearing/",
+          "stage": "in-wide-use",
+          "stage_label": "In wide use"
+        },
+        {
+          "id": "senses-gene-therapy-restores-sight-in-an-inherited-blindness",
+          "name": "A gene therapy restores sight in an inherited blindness",
+          "path": "/branches/senses/senses-gene-therapy-restores-sight-in-an-inherited-blindness/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        },
         {
           "id": "senses-implant-restores-sight-to-a-blind-person",
           "name": "An implant gives a blind person back some sight",
           "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
           "stage": "in-clinical-use",
           "stage_label": "In clinical use"
+        },
+        {
+          "id": "senses-device-gives-a-person-a-new-sense",
+          "name": "A device gives a person a sense no human is born with",
+          "path": "/branches/senses/senses-device-gives-a-person-a-new-sense/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "senses-gene-therapy-restores-hearing-in-a-child-born-deaf",
+          "name": "A gene therapy restores hearing in a child born deaf",
+          "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
+          "name": "An implant in the visual cortex gives sight with no working eyes",
+          "path": "/branches/senses/senses-implant-in-the-visual-cortex-gives-sight-without-eyes/",
+          "stage": "first-human",
+          "stage_label": "First human"
         }
       ]
     },
@@ -78,19 +114,55 @@
       "meaning": "The body as a thing that moves and holds up: replacement limbs, powered suits, stronger muscle and bone, joints that last. An upgrade here either restores movement someone lost or makes a body able to do what no unaided body can.",
       "figure_region": "movement",
       "path": "/branches/movement/",
-      "count": 0,
+      "count": 5,
       "counts_by_stage": {
         "idea-only": 0,
-        "shown-in-animals": 0,
-        "first-human": 0,
-        "in-clinical-use": 0,
+        "shown-in-animals": 1,
+        "first-human": 3,
+        "in-clinical-use": 1,
         "in-wide-use": 0
       },
-      "furthest_rank": null,
-      "furthest_stage": null,
-      "furthest_label": null,
-      "first_human_or_beyond": 0,
-      "upgrades": []
+      "furthest_rank": 3,
+      "furthest_stage": "in-clinical-use",
+      "furthest_label": "In clinical use",
+      "first_human_or_beyond": 4,
+      "upgrades": [
+        {
+          "id": "movement-powered-exoskeleton-lets-a-paralysed-person-walk",
+          "name": "A powered exoskeleton lets a paralysed person walk",
+          "path": "/branches/movement/movement-powered-exoskeleton-lets-a-paralysed-person-walk/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        },
+        {
+          "id": "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch",
+          "name": "A prosthetic arm moves by thought and feeds back touch",
+          "path": "/branches/movement/movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "movement-bone-anchored-prosthetic-limb-with-nerve-control",
+          "name": "A prosthetic limb fixed to the bone with nerve control",
+          "path": "/branches/movement/movement-bone-anchored-prosthetic-limb-with-nerve-control/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "movement-spinal-implant-lets-a-paralysed-person-walk-again",
+          "name": "A spinal implant lets a paralysed person walk again on their own legs",
+          "path": "/branches/movement/movement-spinal-implant-lets-a-paralysed-person-walk-again/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body",
+          "name": "A gene therapy builds stronger muscle in a healthy body",
+          "path": "/branches/movement/movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body/",
+          "stage": "shown-in-animals",
+          "stage_label": "Shown in animals"
+        }
+      ]
     },
     {
       "key": "mind",
@@ -100,19 +172,48 @@
       "meaning": "How we remember, learn, focus and reason, whether changed from inside (a drug, an implant) or from outside (an AI assistant that is always on and always consulted). The outside route is the soft version of merging with machines: no surgery, but a mind that increasingly works in partnership with one. This branch tracks both.",
       "figure_region": "mind",
       "path": "/branches/mind/",
-      "count": 0,
+      "count": 4,
       "counts_by_stage": {
-        "idea-only": 0,
+        "idea-only": 1,
         "shown-in-animals": 0,
-        "first-human": 0,
+        "first-human": 2,
         "in-clinical-use": 0,
-        "in-wide-use": 0
+        "in-wide-use": 1
       },
-      "furthest_rank": null,
-      "furthest_stage": null,
-      "furthest_label": null,
-      "first_human_or_beyond": 0,
-      "upgrades": []
+      "furthest_rank": 4,
+      "furthest_stage": "in-wide-use",
+      "furthest_label": "In wide use",
+      "first_human_or_beyond": 3,
+      "upgrades": [
+        {
+          "id": "mind-ai-assistant-used-daily-by-most-adults-in-a-country",
+          "name": "An always-on AI assistant is used daily by most adults in a country",
+          "path": "/branches/mind/mind-ai-assistant-used-daily-by-most-adults-in-a-country/",
+          "stage": "in-wide-use",
+          "stage_label": "In wide use"
+        },
+        {
+          "id": "mind-brain-implant-improves-memory-recall-in-a-person",
+          "name": "A brain implant improves memory recall in a person",
+          "path": "/branches/mind/mind-brain-implant-improves-memory-recall-in-a-person/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "mind-electrical-stimulation-improves-learning-in-healthy-adults",
+          "name": "Electrical stimulation improves learning in healthy adults",
+          "path": "/branches/mind/mind-electrical-stimulation-improves-learning-in-healthy-adults/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults",
+          "name": "A drug raises a measured thinking ability in healthy adults",
+          "path": "/branches/mind/mind-drug-raises-a-measured-thinking-ability-in-healthy-adults/",
+          "stage": "idea-only",
+          "stage_label": "Idea only"
+        }
+      ]
     },
     {
       "key": "mood",
@@ -122,19 +223,48 @@
       "meaning": "Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels or what they are driven to do, by a drug, a device or a procedure, on purpose and for a reason the person chose.",
       "figure_region": "mood",
       "path": "/branches/mood/",
-      "count": 0,
+      "count": 4,
       "counts_by_stage": {
         "idea-only": 0,
         "shown-in-animals": 0,
-        "first-human": 0,
-        "in-clinical-use": 0,
+        "first-human": 3,
+        "in-clinical-use": 1,
         "in-wide-use": 0
       },
-      "furthest_rank": null,
-      "furthest_stage": null,
-      "furthest_label": null,
-      "first_human_or_beyond": 0,
-      "upgrades": []
+      "furthest_rank": 3,
+      "furthest_stage": "in-clinical-use",
+      "furthest_label": "In clinical use",
+      "first_human_or_beyond": 4,
+      "upgrades": [
+        {
+          "id": "mood-psychedelic-therapy-approved-for-prescription",
+          "name": "A psychedelic therapy is approved for prescription",
+          "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        },
+        {
+          "id": "mood-brain-implant-lifts-severe-depression",
+          "name": "A brain implant lifts severe depression",
+          "path": "/branches/mood/mood-brain-implant-lifts-severe-depression/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "mood-closed-loop-implant-detects-and-corrects-a-mood-state",
+          "name": "A closed-loop implant detects a mood state and corrects it automatically",
+          "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "mood-treatment-removes-a-specific-fear-memory",
+          "name": "A treatment removes a specific fear memory on purpose",
+          "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ]
     },
     {
       "key": "lifespan",
@@ -144,23 +274,51 @@
       "meaning": "How long a body lasts and how well it repairs itself: slowing ageing, regrowing tissue, replacing organs, clearing the damage that builds up over a life. An upgrade here adds healthy years or fixes something the body cannot fix on its own.",
       "figure_region": "lifespan",
       "path": "/branches/lifespan/",
-      "count": 1,
+      "count": 5,
       "counts_by_stage": {
         "idea-only": 0,
-        "shown-in-animals": 1,
-        "first-human": 0,
+        "shown-in-animals": 2,
+        "first-human": 3,
         "in-clinical-use": 0,
         "in-wide-use": 0
       },
-      "furthest_rank": 1,
-      "furthest_stage": "shown-in-animals",
-      "furthest_label": "Shown in animals",
-      "first_human_or_beyond": 0,
+      "furthest_rank": 2,
+      "furthest_stage": "first-human",
+      "furthest_label": "First human",
+      "first_human_or_beyond": 3,
       "upgrades": [
+        {
+          "id": "lifespan-a-drug-clears-aged-cells-from-a-persons-body",
+          "name": "A drug clears aged cells from a person's body",
+          "path": "/branches/lifespan/lifespan-a-drug-clears-aged-cells-from-a-persons-body/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "lifespan-lab-grown-organ-works-in-a-person-for-a-year",
+          "name": "A printed or lab-grown organ works in a person for a year",
+          "path": "/branches/lifespan/lifespan-lab-grown-organ-works-in-a-person-for-a-year/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive",
+          "name": "An organ from a gene-edited pig keeps a person alive",
+          "path": "/branches/lifespan/lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
         {
           "id": "lifespan-a-drug-adds-healthy-years-to-a-life",
           "name": "A drug makes people live longer in good health",
           "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/",
+          "stage": "shown-in-animals",
+          "stage_label": "Shown in animals"
+        },
+        {
+          "id": "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal",
+          "name": "Partially resetting cells reverses ageing in a living animal",
+          "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/",
           "stage": "shown-in-animals",
           "stage_label": "Shown in animals"
         }
@@ -174,25 +332,46 @@
       "meaning": "Changes made before birth that a child carries for life and may pass on: editing the genes of an embryo, choosing among embryos, and whatever comes after. This is the one branch where the person changed could not consent, which is why the record here is watched most closely.",
       "figure_region": "inheritance",
       "path": "/branches/inheritance/",
-      "count": 1,
+      "count": 4,
       "counts_by_stage": {
-        "idea-only": 0,
+        "idea-only": 1,
         "shown-in-animals": 0,
         "first-human": 1,
-        "in-clinical-use": 0,
+        "in-clinical-use": 2,
         "in-wide-use": 0
       },
-      "furthest_rank": 2,
-      "furthest_stage": "first-human",
-      "furthest_label": "First human",
-      "first_human_or_beyond": 1,
+      "furthest_rank": 3,
+      "furthest_stage": "in-clinical-use",
+      "furthest_label": "In clinical use",
+      "first_human_or_beyond": 3,
       "upgrades": [
+        {
+          "id": "inheritance-baby-born-with-donor-mitochondria",
+          "name": "A baby is born with donor mitochondria to avoid an inherited disease",
+          "path": "/branches/inheritance/inheritance-baby-born-with-donor-mitochondria/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        },
+        {
+          "id": "inheritance-embryos-chosen-by-a-genetic-score-for-traits",
+          "name": "Embryos are chosen by a genetic score for traits, not disease",
+          "path": "/branches/inheritance/inheritance-embryos-chosen-by-a-genetic-score-for-traits/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        },
         {
           "id": "inheritance-child-born-from-a-gene-edited-embryo",
           "name": "A child is born from an embryo whose genes were edited on purpose",
           "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
           "stage": "first-human",
           "stage_label": "First human"
+        },
+        {
+          "id": "inheritance-mammal-carried-to-birth-in-an-artificial-womb",
+          "name": "A mammal is carried to birth in an artificial womb",
+          "path": "/branches/inheritance/inheritance-mammal-carried-to-birth-in-an-artificial-womb/",
+          "stage": "idea-only",
+          "stage_label": "Idea only"
         }
       ]
     },
@@ -204,59 +383,253 @@
       "meaning": "The hard version of merging with machines: a wire, a chip or a sensor that carries signals between a brain and a computer directly, with no hands, eyes or voice in between. The project's second number, how much information can pass through such a link each second, is plotted here.",
       "figure_region": "link",
       "path": "/branches/link/",
-      "count": 1,
+      "count": 7,
       "counts_by_stage": {
-        "idea-only": 0,
+        "idea-only": 2,
         "shown-in-animals": 0,
-        "first-human": 1,
+        "first-human": 4,
         "in-clinical-use": 0,
-        "in-wide-use": 0
+        "in-wide-use": 1
       },
-      "furthest_rank": 2,
-      "furthest_stage": "first-human",
-      "furthest_label": "First human",
-      "first_human_or_beyond": 1,
+      "furthest_rank": 4,
+      "furthest_stage": "in-wide-use",
+      "furthest_label": "In wide use",
+      "first_human_or_beyond": 5,
       "upgrades": [
+        {
+          "id": "link-scalp-headset-controls-a-device-without-surgery",
+          "name": "A headset worn on the scalp controls a device without surgery",
+          "path": "/branches/link/link-scalp-headset-controls-a-device-without-surgery/",
+          "stage": "in-wide-use",
+          "stage_label": "In wide use"
+        },
+        {
+          "id": "link-brain-implant-gives-a-person-touch-from-a-robotic-hand",
+          "name": "A brain implant gives a person touch from a robotic hand",
+          "path": "/branches/link/link-brain-implant-gives-a-person-touch-from-a-robotic-hand/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "link-brain-implant-turns-intended-speech-into-text",
+          "name": "A brain implant turns intended speech into text at conversational speed",
+          "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
         {
           "id": "link-wireless-brain-implant-controls-a-computer",
           "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
           "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
           "stage": "first-human",
           "stage_label": "First human"
+        },
+        {
+          "id": "link-wired-brain-implant-controls-a-cursor",
+          "name": "A wired brain implant lets a paralysed person control a cursor",
+          "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "link-brain-link-carries-more-information-than-speech",
+          "name": "A brain link carries more information per second than speech",
+          "path": "/branches/link/link-brain-link-carries-more-information-than-speech/",
+          "stage": "idea-only",
+          "stage_label": "Idea only"
+        },
+        {
+          "id": "link-uploaded-animal-brain-reproduces-what-it-learned",
+          "name": "An uploaded animal brain reproduces something it learned",
+          "path": "/branches/link/link-uploaded-animal-brain-reproduces-what-it-learned/",
+          "stage": "idea-only",
+          "stage_label": "Idea only"
         }
       ]
     }
   ],
   "upgrades": [
     {
-      "id": "inheritance-child-born-from-a-gene-edited-embryo",
-      "name": "A child is born from an embryo whose genes were edited on purpose",
+      "id": "inheritance-baby-born-with-donor-mitochondria",
+      "name": "A baby is born with donor mitochondria to avoid an inherited disease",
       "branch": "inheritance",
       "branch_name": "Inheritance",
-      "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
-      "description": "The genes of a human embryo are changed before it is implanted, and a child is born carrying the change, able to pass it on. This happened in 2018, in China, against the rules of the field and the law, and the scientist responsible went to prison. The record keeps it at the stage it reached, because the ladder records what has happened, not whether it was allowed.",
-      "resolution": "A live birth is publicly confirmed, by the people who did it or by an official inquiry, of a child whose genome was deliberately altered at the embryo stage with the intent that the change be carried in every cell.",
-      "source": "The scientific or official record confirming the birth and the edit (a published report, a court or inquiry finding, or a government statement)",
+      "path": "/branches/inheritance/inheritance-baby-born-with-donor-mitochondria/",
+      "description": "Mitochondria, the parts of a cell that make its energy, carry a little DNA of their own, passed only from mother to child; faults in it cause diseases that are often fatal in childhood. Moving the nucleus of the mother's egg into a donor's egg with healthy mitochondria gives a child that is genetically the parents' with a small part from a third person. The first such child was born in 2016, in Mexico, to avoid a rule elsewhere; Britain had already made it lawful under licence, and eight children born there were reported in 2025. It is the only change to inheritance a regulator has approved.",
+      "resolution": "A child is born after a procedure that replaced the mother's faulty mitochondria with a donor's, done to prevent a named inherited disease, with the birth confirmed by the clinic or regulator; the rung in clinical use needs a regulator's licence under which such births take place outside a trial.",
+      "source": "The regulator's licence record (the United Kingdom's Human Fertilisation and Embryology Authority) and the peer-reviewed birth reports",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2017-03-15",
+      "stage_record": "https://www.hfea.gov.uk/about-us/news-and-press-releases/2017/hfea-statement-on-mitochondrial-donation/",
+      "earlier_stages": [
+        {
+          "stage": "first-human",
+          "reached_on": "2016-04-06",
+          "record": "https://doi.org/10.1016/j.rbmo.2017.01.013"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The first child's birth date (2016-04-06) is taken from coverage of the case; check it against the full text of the linked paper, which may give only the month."
+      ],
+      "notes": "The in-clinical-use record is the British regulator's approval of the first clinic licence, to Newcastle Fertility at Life, in March 2017; the first births under it were confirmed by the regulator in 2023 (fewer than five, in answer to a freedom-of-information request) and eight were reported in the New England Journal of Medicine in July 2025. The first-human record is the 2017 paper on the boy born in Mexico in 2016 to a mother carrying Leigh syndrome. Children born in the 1990s after a cruder transfer of egg cytoplasm also carried a donor's mitochondria, but for infertility rather than to avoid a disease, so they fall outside this entry's test. The rung in wide use needs a counted population in the hundreds or more, and the total so far is in the tens.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "2016-04-06",
+          "record": "https://doi.org/10.1016/j.rbmo.2017.01.013"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2017-03-15",
+          "record": "https://www.hfea.gov.uk/about-us/news-and-press-releases/2017/hfea-statement-on-mitochondrial-donation/"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "inheritance-embryos-chosen-by-a-genetic-score-for-traits",
+      "name": "Embryos are chosen by a genetic score for traits, not disease",
+      "branch": "inheritance",
+      "branch_name": "Inheritance",
+      "path": "/branches/inheritance/inheritance-embryos-chosen-by-a-genetic-score-for-traits/",
+      "description": "Fertility clinics have long tested embryos for single-gene diseases. Since 2019 companies have sold scores that add up thousands of small genetic differences to rank embryos by their risk of common diseases, and since 2025 two have sold rankings for traits that are not diseases at all: predicted height, predicted intelligence, eye colour. No regulator reviews these scores, the predictions are weak at the level of one embryo, and the practice is condemned by most of the field. It is on the tree because it is being done, to paying customers, through named clinics.",
+      "resolution": "A company offers, and a named fertility clinic performs, selection among a couple's embryos using a score for a trait that is not a disease (height, intelligence, appearance), with the offer public on the company's own site; the rung in clinical use rests on that routine commercial availability, since no regulator has approved or forbidden it.",
+      "source": "The companies' own announcements and product pages, the named clinics' statements, and any regulator's notice if one acts",
       "horizon": "leaf",
       "horizon_label": "Could move a stage within 1 to 5 years",
       "status": "tracked",
       "superseded_by": null,
       "depends_on": [],
-      "stage": "first-human",
-      "stage_rank": 2,
-      "stage_label": "First human",
-      "stage_reached_on": "2018-11-26",
-      "stage_record": "https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/",
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2025-06-04",
+      "stage_record": "https://mynucleus.com/deep-dives/embryo",
       "earlier_stages": [],
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
       "revisions": [],
       "verify": [
-        "The first-human date is the day the births were announced (2018-11-26, at the Hong Kong summit); the births themselves were earlier in November 2018. Written from memory; check against the linked report."
+        "The launch date (2025-06-04) is the date on the company's press release as republished by third parties; the original wire copy was not found. Check it against the company's own newsroom."
       ],
-      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The next stage, in clinical use, would need a regulator somewhere to approve editing embryos for birth, which none has.",
-      "example": true,
+      "notes": "The record is Nucleus Genomics' own page for its embryo product, launched in June 2025 with scores for appearance and cognitive ability and later listing predicted IQ and height; a second company, Herasight, came out of hiding in July 2025 and announced an intelligence predictor for embryos in October 2025. The first baby chosen by a polygenic score (2020) was screened for disease risk only, so it does not count here. This is the one entry on the tree whose rung rests on a commercial offering rather than a regulator or a paper: the ladder's in-clinical-use rung allows \"routine use in a named clinical setting\", and the named clinic is in the companies' own announcements. If John would rather hold this rung for a regulator's say, the stage falls to first human on the same record, since customers have used the scores.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2025-06-04",
+          "record": "https://mynucleus.com/deep-dives/embryo"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "inheritance-child-born-from-a-gene-edited-embryo",
+      "name": "A child is born from an embryo whose genes were edited on purpose",
+      "branch": "inheritance",
+      "branch_name": "Inheritance",
+      "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
+      "description": "The genes of a human embryo are changed before it is implanted, and a child is born carrying the change in every cell, able to pass it on. This happened in China in 2018, against the rules of the field and the law: twin girls, then a third child, with a gene disabled in the hope of making them resistant to HIV. The scientist responsible announced it himself and went to prison for it. The record keeps the entry at the stage it reached, because the ladder records what has happened, not whether it was allowed.",
+      "resolution": "A live birth is publicly confirmed, by the people who did it or by an official inquiry, of a child whose genome was deliberately altered at the embryo stage with the intent that the change be carried in every cell.",
+      "source": "The scientific or official record confirming the birth and the edit (a published report, a court or inquiry finding, or a government statement)",
+      "horizon": "root",
+      "horizon_label": "Longer than 20 years, if ever",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2018-11-25",
+      "stage_record": "http://www.xinhuanet.com/english/2019-12/30/c_138666892.htm",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The date is the day He Jiankui posted his own announcement of the twins' birth; the record linked is the state news agency's report of the Shenzhen court's verdict of 30 December 2019, the official finding that three gene-edited babies were born, since no scientific paper was ever published. The provincial investigation of January 2019 had confirmed the twins and a second pregnancy. Editing embryos for birth is prohibited in every country that has ruled on it, so the next rung needs a regulator to change its mind; the horizon is set long for that reason.",
+      "example": false,
       "depends_on_refs": [],
       "needed_by": [],
       "ladder": [
@@ -281,8 +654,308 @@
           "label": "First human",
           "reached": true,
           "current": true,
-          "reached_on": "2018-11-26",
-          "record": "https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/"
+          "reached_on": "2018-11-25",
+          "record": "http://www.xinhuanet.com/english/2019-12/30/c_138666892.htm"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "inheritance-mammal-carried-to-birth-in-an-artificial-womb",
+      "name": "A mammal is carried to birth in an artificial womb",
+      "branch": "inheritance",
+      "branch_name": "Inheritance",
+      "path": "/branches/inheritance/inheritance-mammal-carried-to-birth-in-an-artificial-womb/",
+      "description": "The end point of taking birth out of the body: an animal that goes from a fertilised egg to a live birth with no mother at any stage. Nothing has done this. The two famous results are halves: in 2017 lambs taken from their mothers two thirds of the way through pregnancy lived for four weeks in a fluid-filled bag and were born from it; in 2021 mouse embryos grew in bottles from a few days old to about the midpoint of pregnancy. The gap between the two halves has not been bridged in any mammal, which is why this entry sits at the bottom of the ladder with a precise test.",
+      "resolution": "A mammal develops from fertilisation, or at the latest from before the midpoint of its normal gestation, to a live birth entirely outside any body, and survives, in a peer-reviewed report. Support of a fetus taken from its mother late in pregnancy, however long, does not count.",
+      "source": "Peer-reviewed reports; a company's claim counts only when the paper exists",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "idea-only",
+      "stage_rank": 0,
+      "stage_label": "Idea only",
+      "stage_reached_on": null,
+      "stage_record": null,
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The charter expected this leaf at shown in animals. The test above is stricter on purpose, because the words \"carried to birth\" promise the whole pregnancy and no animal result delivers it: the 2017 Philadelphia lambs entered the bag at 104 to 135 days of a 145-day gestation, and the 2021 Israeli mouse embryos stopped at day 11 of about 20. A company working on extinct-species revival has said it aims to have a mammal born fully outside a body, with no peer-reviewed result yet. Either half would be an entry of its own if John wants the partial results on the tree; the artificial womb for very premature babies, the human use of the 2017 work, is heading for trials and would belong on the Lifespan and repair branch.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": true,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "lifespan-a-drug-clears-aged-cells-from-a-persons-body",
+      "name": "A drug clears aged cells from a person's body",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-a-drug-clears-aged-cells-from-a-persons-body/",
+      "description": "Some cells stop dividing but do not die, and sit in tissue giving off signals that inflame their neighbours; they build up with age. Clearing them makes old mice healthier and longer-lived. In 2019 a Mayo Clinic group gave a short course of two drugs that kill such cells to people with kidney disease, took tissue samples before and after, and found fewer of the cells. It is a first human, on a measurement, and no such drug is approved.",
+      "resolution": "A person given a drug meant to kill senescent (aged, non-dividing) cells afterwards has measurably fewer of them in a tissue sample or a validated blood marker, compared with before treatment, in a peer-reviewed report.",
+      "source": "Peer-reviewed trial reports; a regulator's approval record if it comes",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2019-09-18",
+      "stage_record": "https://doi.org/10.1016/j.ebiom.2019.08.069",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2011-11-02",
+          "record": "https://doi.org/10.1038/nature10600"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2019 report of dasatinib and quercetin in nine people with diabetic kidney disease, with fewer senescent cells in fat and skin samples afterwards. An earlier 2019 pilot in people with lung scarring reported better walking and standing but did not measure the cells, so it is not the record here. The animal record is the 2011 Mayo Clinic report in which clearing such cells from mice delayed several age-related conditions. Several company drugs of this kind have failed in trials since; none is approved.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2011-11-02",
+          "record": "https://doi.org/10.1038/nature10600"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2019-09-18",
+          "record": "https://doi.org/10.1016/j.ebiom.2019.08.069"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "lifespan-lab-grown-organ-works-in-a-person-for-a-year",
+      "name": "A printed or lab-grown organ works in a person for a year",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-lab-grown-organ-works-in-a-person-for-a-year/",
+      "description": "Take a few of a person's own cells, grow them on a scaffold shaped like the organ, and put the result in. In 2006 a North Carolina group reported seven young people with bladders made this way, working for years. Nothing more complicated than a hollow organ has been done, and printed organs with their own blood supply remain in the laboratory. The entry is written to count working organs, not patches: skin, cartilage and blood vessels grown from cells are already approved, but they replace a surface or a tube, not an organ's job.",
+      "resolution": "An organ built outside the body from living cells, with or without a printed scaffold, is placed in a person and does that organ's job for at least a year, in a peer-reviewed report. Organ here means a bladder, kidney, liver, heart, lung, pancreas, windpipe, oesophagus or length of intestine; skin, cartilage, cornea and blood vessels are counted as tissues and left out.",
+      "source": "Peer-reviewed reports with follow-up of a year or more; a regulator's approval record if an engineered organ is approved",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2006-04-15",
+      "stage_record": "https://doi.org/10.1016/S0140-6736(06)68438-9",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2006 Lancet report of engineered bladders in seven patients followed for up to five years. The charter asked whether the 2006 bladders or the 2022 printed ear settle a different rung: the bladders settle first human; the printed ear (a company announcement with no peer-reviewed report) is cartilage, not an organ, and would not count under the test even if published. A lab-grown blood vessel was approved by the United States regulator in December 2024, which is the closest an engineered part has come to in clinical use, and is left out by the test for the reason given in the description. The later synthetic windpipe cases of the 2010s were found to be fraudulent and do not count.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2006-04-15",
+          "record": "https://doi.org/10.1016/S0140-6736(06)68438-9"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive",
+      "name": "An organ from a gene-edited pig keeps a person alive",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive/",
+      "description": "Pigs' organs are the right size for people, and gene editing can take out the pig genes that make a human body reject them at once and add human ones that calm the rest. In January 2022 a man too ill for a human heart lived two months on a pig's; since 2024 several people have lived on pig kidneys, the longest for most of a year. Formal trials cleared by the United States regulator began in 2025. It is a first human, several times over, and the first step towards organs made to order.",
+      "resolution": "A person receives a heart, kidney, liver or lung from a pig whose genes were edited for the purpose and lives for at least thirty days with that organ doing its job, in a report by the transplant centre or a peer-reviewed paper.",
+      "source": "The transplant centre's own release naming the patient, the peer-reviewed case report, and the regulator's trial clearance or approval record",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2022-01-07",
+      "stage_record": "https://www.medschool.umaryland.edu/news/2022/university-of-maryland-school-of-medicine-faculty-scientists-and-clinicians-perform-historic-first-successful-transplant-of-porcine-heart-into-adult-human-with-end-stage-heart-disease.html",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2018-12-05",
+          "record": "https://doi.org/10.1038/s41586-018-0765-z"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the University of Maryland's own announcement of David Bennett's pig heart transplant, performed on 7 January 2022; the peer-reviewed case report followed in June 2022. The animal record is the 2018 Munich report of baboons living for months on pig hearts. Pig kidneys followed in 2024 (Boston, then New York). The longest published case is a Boston man who lived 271 days on a pig kidney in 2025 before receiving a human one, reported in The Lancet in September 2026; the maker of that kidney said the same month that another patient had passed nine months and was still going. The next rung, in clinical use, needs a regulator's approval for use outside a trial; the trials cleared in 2025 are the step before.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2018-12-05",
+          "record": "https://doi.org/10.1038/s41586-018-0765-z"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2022-01-07",
+          "record": "https://www.medschool.umaryland.edu/news/2022/university-of-maryland-school-of-medicine-faculty-scientists-and-clinicians-perform-historic-first-successful-transplant-of-porcine-heart-into-adult-human-with-end-stage-heart-disease.html"
         },
         {
           "key": "in-clinical-use",
@@ -308,8 +981,8 @@
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
       "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/",
-      "description": "A pill that slows ageing itself, rather than treating one disease, so that the people who take it live longer and stay well longer. Several drugs do this in mice. None has yet been shown to do it in people, because a trial that could show it takes decades, and that gap between the animal result and the human one is exactly what the stage ladder is for.",
-      "resolution": "A peer-reviewed, controlled trial in people reports that those taking the drug lived longer, or stayed free of age-related disease longer, than those taking a placebo, by a margin the trial was designed to detect.",
+      "description": "A pill that slows ageing itself, rather than treating one disease, so that the people who take it live longer and stay well longer. Rapamycin does this in mice, even when started late in life, and several other drugs have followed it. None has been shown to do it in people, because a trial that could show it takes many years, and that gap between the animal result and the human one is exactly what the stage ladder is for. People already take rapamycin and metformin in the hope of it; hope is not a record.",
+      "resolution": "A peer-reviewed, controlled trial in people reports that those taking the drug lived longer, or stayed free of age-related disease longer, than those taking a placebo, by a margin the trial was designed to detect. Swallowing the pill is not the upgrade; the extra healthy years are, so the first-human rung needs a human result, not a human volunteer.",
       "source": "The peer-reviewed trial report, and the regulator's approval record if it comes to that",
       "horizon": "mid",
       "horizon_label": "Could move a stage within 5 to 20 years",
@@ -319,18 +992,16 @@
       "stage": "shown-in-animals",
       "stage_rank": 1,
       "stage_label": "Shown in animals",
-      "stage_reached_on": "2009-07-16",
-      "stage_record": "https://www.nature.com/articles/nature08221",
+      "stage_reached_on": "2009-07-08",
+      "stage_record": "https://doi.org/10.1038/nature08221",
       "earlier_stages": [],
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
       "revisions": [],
-      "verify": [
-        "The animal-stage date is the publication date of the 2009 Nature paper on rapamycin extending mouse lifespan; the day was written from memory and should be checked against the paper."
-      ],
-      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. Rapamycin is the clearest animal result; metformin and others have human trials under way or planned. When the real list is written this may split into one entry per drug.",
-      "example": true,
+      "verify": [],
+      "notes": "The record is the 2009 report from the National Institute on Aging's testing programme, in which rapamycin fed to mice from twenty months of age (old, for a mouse) extended their lives. Human trials exist: a year-long rapamycin trial in healthy adults published in April 2025 measured body composition and blood markers, not lifespan, and found little; the long-planned metformin trial (TAME), designed to measure time to age-related disease, had not enrolled anyone for lack of money when this was written. An earlier 2008 report from the same mouse programme found a smaller lifespan gain from two other compounds in male mice; the rapamycin result is linked because it is the one that settled the rung for both sexes. Either kind of result, if positive and controlled, would move this entry to first human. When more such drugs reach people this entry may split into one per drug.",
+      "example": false,
       "depends_on_refs": [],
       "needed_by": [],
       "ladder": [
@@ -347,8 +1018,8 @@
           "label": "Shown in animals",
           "reached": true,
           "current": true,
-          "reached_on": "2009-07-16",
-          "record": "https://www.nature.com/articles/nature08221"
+          "reached_on": "2009-07-08",
+          "record": "https://doi.org/10.1038/nature08221"
         },
         {
           "key": "first-human",
@@ -357,6 +1028,339 @@
           "current": false,
           "reached_on": null,
           "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal",
+      "name": "Partially resetting cells reverses ageing in a living animal",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/",
+      "description": "Four genes can turn an adult cell back into something like an embryonic one. Switched on briefly and then off, in a live animal, they turn back some of the marks of age without erasing what the cell is. In 2016 mice with a premature-ageing disease lived longer when this was done to them, and in 2020 old mice regained sight after the nerve from the eye was reset. It is the most direct attempt yet to reverse ageing rather than slow it. The first person was given it, in one eye, in June 2026, with no result yet reported.",
+      "resolution": "A living animal given a brief, controlled dose of reprogramming genes afterwards has a measured marker of biological age (an epigenetic clock, a restored tissue function) moved towards youth, compared with untreated controls, in a peer-reviewed report. The first-human rung needs the same in a person.",
+      "source": "Peer-reviewed reports; the trial registry entry and report when the first person is treated",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "shown-in-animals",
+      "stage_rank": 1,
+      "stage_label": "Shown in animals",
+      "stage_reached_on": "2016-12-15",
+      "stage_record": "https://doi.org/10.1016/j.cell.2016.11.052",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2016 Salk Institute report of partial reprogramming in live mice. The 2020 Harvard report that restored vision in old mice by resetting cells in the eye is the clearest reversal of a lost function. A company founded on that work announced on 9 June 2026 that the first participant in its trial for two optic nerve diseases had been dosed. Under this entry's test the first-human rung needs a measured reversal in a person, not a dose, so the entry stays at shown in animals until the trial reports; if John would rather count the dose, the stage moves to first human on the company's own release.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": true,
+          "reached_on": "2016-12-15",
+          "record": "https://doi.org/10.1016/j.cell.2016.11.052"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "link-scalp-headset-controls-a-device-without-surgery",
+      "name": "A headset worn on the scalp controls a device without surgery",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-scalp-headset-controls-a-device-without-surgery/",
+      "description": "Electrodes pressed against the scalp pick up the faint electrical hum of the brain through the skull. The signal is coarse, but it is enough to pick a letter, steer a toy or tell when a person is calm, and it needs no surgeon. Headsets that do this have been sold to the public since 2007, as toys, meditation aids and gaming controllers, in the hundreds of thousands. It is the only link to a machine on this branch that is in wide use, and by far the weakest.",
+      "resolution": "A device worn on the scalp, with no surgery, reads the wearer's brain signals and lets them deliberately control something (a cursor, a toy, a game, a sound), at a rate better than chance; the rung in wide use needs such a device on general sale with a public count of units in the hundreds of thousands or more, from the maker or an independent audit.",
+      "source": "Peer-reviewed reports for the first human; the makers' own sales statements or audited figures for the count",
+      "horizon": "top",
+      "horizon_label": "At the top of the ladder; nothing left to reach",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-wide-use",
+      "stage_rank": 4,
+      "stage_label": "In wide use",
+      "stage_reached_on": "2015-12-31",
+      "stage_record": "https://store.neurosky.com/products/eeg-tgam",
+      "earlier_stages": [
+        {
+          "stage": "first-human",
+          "reached_on": "1988-12-01",
+          "record": "https://doi.org/10.1016/0013-4694(88)90149-6"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The in-wide-use record is the maker's own product page saying over a million of its sensor chips are in circulation; the page is undated (its footer says 2015), so the date here is the end of that year and should be replaced when a dated statement is found.",
+        "A 1977 paper by Vidal may be an earlier first human (volunteers steering a cursor through a maze by brain signals); check its full text before moving the first-human date."
+      ],
+      "notes": "The first-human record is the 1988 Illinois report of volunteers spelling words by attending to flashing letters, the first brain-controlled speller. Consumer headsets based on the same kind of signal reached shops in 2007 (NeuroSky), 2009 (a Mattel toy, Emotiv) and 2014 (Muse). The wide-use count is NeuroSky's own statement that over a million of its sensor chips are in circulation; the maker of the Muse headset says it has over half a million users. The hardware is cheap and the control is coarse, which is why this is the one upgrade on the branch anyone can buy.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "1988-12-01",
+          "record": "https://doi.org/10.1016/0013-4694(88)90149-6"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2015-12-31",
+          "record": "https://store.neurosky.com/products/eeg-tgam"
+        }
+      ]
+    },
+    {
+      "id": "link-brain-implant-gives-a-person-touch-from-a-robotic-hand",
+      "name": "A brain implant gives a person touch from a robotic hand",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-brain-implant-gives-a-person-touch-from-a-robotic-hand/",
+      "description": "Signals going the other way: pressure sensors on a robotic hand's fingers drive tiny currents into the part of the brain that feels the hand, and a paralysed man feels his own fingers being touched when the robot's are. Reported in 2016, it closed the loop between brain and machine for the first time in a person, and made the robotic arm he already controlled by thought much faster to use.",
+      "resolution": "A person with paralysis, through electrodes implanted in the touch area of the brain, reports pressure on a specific finger when the matching finger of a robotic hand is touched, at a rate reliably better than chance, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the implanted volunteers",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [
+        "link-wired-brain-implant-controls-a-cursor"
+      ],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2016-10-13",
+      "stage_record": "https://doi.org/10.1126/scitranslmed.aaf8083",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2011-10-05",
+          "record": "https://doi.org/10.1038/nature10489"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "Whether the 2016 report itself includes touch triggered by sensors on the robotic hand, or only sensations evoked directly, needs checking against its full text; if only the latter, the record for this test is the same group's 2021 Science paper (DOI 10.1126/science.abd0380, 21 May 2021, written from memory)."
+      ],
+      "notes": "The record is the 2016 Pittsburgh report of a man with a spinal cord injury feeling touch on his fingers through stimulation of his brain. The animal record is the 2011 Duke report of monkeys feeling the texture of virtual objects through the same kind of stimulation. The prosthetic-arm version of this idea, with the touch fed into the nerves of the arm rather than the brain, is a separate entry on the Movement and body branch.",
+      "example": false,
+      "depends_on_refs": [
+        {
+          "id": "link-wired-brain-implant-controls-a-cursor",
+          "name": "A wired brain implant lets a paralysed person control a cursor",
+          "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2011-10-05",
+          "record": "https://doi.org/10.1038/nature10489"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2016-10-13",
+          "record": "https://doi.org/10.1126/scitranslmed.aaf8083"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "link-brain-implant-turns-intended-speech-into-text",
+      "name": "A brain implant turns intended speech into text at conversational speed",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
+      "description": "A person who can no longer speak tries to, and the implant reads the brain's instructions to the mouth and throat and turns them into words on a screen. In August 2023 two groups reported people with paralysis producing sixty to eighty words a minute this way, from large vocabularies, which is within sight of the hundred and fifty of ordinary conversation. It is the fastest a brain has yet talked to a machine, and the first point on this branch's bandwidth series.",
+      "resolution": "A person who cannot speak intelligibly, through an implanted brain interface, produces text from attempted speech at forty words a minute or more from a vocabulary of a thousand words or more, with the error rate stated, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports giving the words per minute, the vocabulary size and the error rate",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [
+        "link-wired-brain-implant-controls-a-cursor"
+      ],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2023-08-23",
+      "stage_record": "https://doi.org/10.1038/s41586-023-06377-x",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the Stanford report of 62 words a minute from a 125,000-word vocabulary; a San Francisco report published the same day reached 78 words a minute and drove a talking avatar. The first decoding of attempted speech in a paralysed person, in 2021, managed about fifteen words a minute from fifty words; a 2024 report cut the error rate to a few per cent. These figures, with their units as the papers give them, are the seed of the bandwidth series.",
+      "example": false,
+      "depends_on_refs": [
+        {
+          "id": "link-wired-brain-implant-controls-a-cursor",
+          "name": "A wired brain implant lets a paralysed person control a cursor",
+          "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ],
+      "needed_by": [
+        {
+          "id": "link-brain-link-carries-more-information-than-speech",
+          "name": "A brain link carries more information per second than speech",
+          "path": "/branches/link/link-brain-link-carries-more-information-than-speech/",
+          "stage": "idea-only",
+          "stage_label": "Idea only"
+        }
+      ],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2023-08-23",
+          "record": "https://doi.org/10.1038/s41586-023-06377-x"
         },
         {
           "key": "in-clinical-use",
@@ -382,36 +1386,38 @@
       "branch": "link",
       "branch_name": "The link to machines",
       "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
-      "description": "A chip placed in the brain reads the signals that would have moved a hand and turns them into a moving cursor or typed text, with nothing passing through the skin: no wires, no plug. Wired versions have existed in trials since 2004. The fully wireless, fully implanted kind is the one that could leave the laboratory, and the first person received one in January 2024.",
-      "resolution": "A person with paralysis, fitted with a brain implant that has no wired connection through the skin, controls a computer cursor or types text by thought alone, as reported by the trial's sponsor and confirmed by an independent report.",
-      "source": "The trial sponsor's own report, confirmed by a named news organisation or a peer-reviewed publication",
+      "description": "A device under the skin and skull reads the brain's signals and sends them out by radio, with no wire through the skin: nothing to plug in, nothing to infect, usable at home. Wired implants have done this in laboratories since the 1990s. The first fully implanted wireless one was used at home by a woman with motor neurone disease in the Netherlands, reported in 2016, to select letters on a screen. The first high-channel version, with a thousand electrodes, went into a person in January 2024 and let him play chess and games by thought.",
+      "resolution": "A person with paralysis, fitted with a brain implant that has no wired connection through the skin, controls a computer cursor or selects letters or commands by thought alone, in a peer-reviewed report or the maker's own report of a named patient confirmed independently.",
+      "source": "Peer-reviewed reports; the trial sponsor's own report of a named patient, confirmed by a peer-reviewed publication or a regulator's record",
       "horizon": "leaf",
       "horizon_label": "Could move a stage within 1 to 5 years",
       "status": "tracked",
       "superseded_by": null,
-      "depends_on": [],
+      "depends_on": [
+        "link-wired-brain-implant-controls-a-cursor"
+      ],
       "stage": "first-human",
       "stage_rank": 2,
       "stage_label": "First human",
-      "stage_reached_on": "2024-01-28",
-      "stage_record": "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/",
-      "earlier_stages": [
-        {
-          "stage": "shown-in-animals",
-          "reached_on": "2021-04-09",
-          "record": "https://neuralink.com/blog/monkey-mindpong/"
-        }
-      ],
+      "stage_reached_on": "2016-11-12",
+      "stage_record": "https://doi.org/10.1056/NEJMoa1608085",
+      "earlier_stages": [],
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
       "revisions": [],
-      "verify": [
-        "The first-human date (2024-01-28, the day before Musk's announcement) and the animal date (the 2021 monkey demonstration) were written from memory; check both against the linked records."
+      "verify": [],
+      "notes": "The record is the 2016 Utrecht report of a locked-in woman using a fully implanted system (two electrode strips over the brain, a transmitter in the chest) to type at home. The earlier example entry on this leaf rested on Neuralink's first implant of 28 January 2024; that remains the first fully implanted wireless chip with electrodes in the brain tissue itself and a thousand channels, and is noted here as a later point on the same ladder rather than the first. The next rung, in clinical use, needs a regulator's approval; several makers were in trials in 2025 and none had one.",
+      "example": false,
+      "depends_on_refs": [
+        {
+          "id": "link-wired-brain-implant-controls-a-cursor",
+          "name": "A wired brain implant lets a paralysed person control a cursor",
+          "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
       ],
-      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The wired first human (BrainGate, 2004) belongs to a separate entry when the real list is written.",
-      "example": true,
-      "depends_on_refs": [],
       "needed_by": [],
       "ladder": [
         {
@@ -427,16 +1433,16 @@
           "label": "Shown in animals",
           "reached": true,
           "current": false,
-          "reached_on": "2021-04-09",
-          "record": "https://neuralink.com/blog/monkey-mindpong/"
+          "reached_on": null,
+          "record": null
         },
         {
           "key": "first-human",
           "label": "First human",
           "reached": true,
           "current": true,
-          "reached_on": "2024-01-28",
-          "record": "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/"
+          "reached_on": "2016-11-12",
+          "record": "https://doi.org/10.1056/NEJMoa1608085"
         },
         {
           "key": "in-clinical-use",
@@ -457,41 +1463,286 @@
       ]
     },
     {
-      "id": "senses-implant-restores-sight-to-a-blind-person",
-      "name": "An implant gives a blind person back some sight",
-      "branch": "senses",
-      "branch_name": "Senses",
-      "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
-      "description": "A camera or a light sensor feeds signals to an implant on the retina or in the brain, and a person who was blind sees shapes, edges or light again. It is the first upgrade of a sense that has gone all the way from a laboratory to a product a doctor can prescribe, which is why it is the example seeded here.",
-      "resolution": "A person with no useful vision, fitted with a device that sends signals to the retina, the optic nerve or the visual part of the brain, can reliably tell the position of a light source or the outline of an object they could not see before, as reported in a peer-reviewed trial.",
-      "source": "Peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, or its equivalent elsewhere)",
+      "id": "link-wired-brain-implant-controls-a-cursor",
+      "name": "A wired brain implant lets a paralysed person control a cursor",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+      "description": "The original brain-computer link: an electrode in the part of the brain that plans movement, a wire out through the skull to a computer, and a cursor that moves where the person means it to. The first paralysed person to do this was reported in 1998, with a single electrode; the hundred- electrode version that most later work builds on went into a man in 2004. Every speech, touch and robotic-arm result on this branch grew from it. It has never left the laboratory, because the wire does.",
+      "resolution": "A person with paralysis, through electrodes implanted in the brain and connected by wire to a computer, moves a cursor or selects targets on a screen on purpose, at a rate better than chance, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the implanted volunteers",
       "horizon": "leaf",
       "horizon_label": "Could move a stage within 1 to 5 years",
       "status": "tracked",
       "superseded_by": null,
       "depends_on": [],
-      "stage": "in-clinical-use",
-      "stage_rank": 3,
-      "stage_label": "In clinical use",
-      "stage_reached_on": "2013-02-14",
-      "stage_record": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease",
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "1998-06-01",
+      "stage_record": "https://doi.org/10.1097/00001756-199806010-00007",
       "earlier_stages": [
         {
-          "stage": "first-human",
-          "reached_on": "2002-01-01",
-          "record": "https://pubmed.ncbi.nlm.nih.gov/12928208/"
+          "stage": "shown-in-animals",
+          "reached_on": "1969-02-28",
+          "record": "https://doi.org/10.1126/science.163.3870.955"
         }
       ],
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
       "revisions": [],
-      "verify": [
-        "The first-human date is given as the year 2002 (the first Argus implant, at the Doheny Eye Institute); the exact day was not checked.",
-        "The FDA approval date of the Argus II, 2013-02-14, was written from memory and should be checked against the press release linked."
+      "verify": [],
+      "notes": "The record is the 1998 Atlanta report of a locked-in man moving a cursor through a single implanted electrode; the charter had the 2004 BrainGate implant (reported in Nature in 2006) in mind, which is the first with a hundred-electrode array and the root of most work since. The animal record is the 1969 demonstration that a monkey could learn to drive the firing of a single brain cell for a reward. The first point on this branch's bandwidth series, when that series is built, is the typing rate of the 2006 BrainGate report.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [
+        {
+          "id": "link-wireless-brain-implant-controls-a-computer",
+          "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
+          "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "link-brain-implant-turns-intended-speech-into-text",
+          "name": "A brain implant turns intended speech into text at conversational speed",
+          "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        },
+        {
+          "id": "link-brain-implant-gives-a-person-touch-from-a-robotic-hand",
+          "name": "A brain implant gives a person touch from a robotic hand",
+          "path": "/branches/link/link-brain-implant-gives-a-person-touch-from-a-robotic-hand/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
       ],
-      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The device this entry rests on (the Argus II) was taken off the market by its maker in 2019, which does not lower its stage: the ladder records the furthest a technology has reached, and a withdrawal is noted here and in the status when it is ruled on.",
-      "example": true,
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "1969-02-28",
+          "record": "https://doi.org/10.1126/science.163.3870.955"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "1998-06-01",
+          "record": "https://doi.org/10.1097/00001756-199806010-00007"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "link-brain-link-carries-more-information-than-speech",
+      "name": "A brain link carries more information per second than speech",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-brain-link-carries-more-information-than-speech/",
+      "description": "The number the merger argument rests on. Speech moves about forty bits of information a second, in every language measured; typing, less. A brain link that beat speech would be the first time a person had a faster way out of their own head than the mouth, and the stated goal of the best-funded implant companies. No link has come close: the fastest, the 2023 speech decoders, move the equivalent of speech at half speed with errors, and they do it by reading the instructions for speech itself. Whether the brain can originate more than it already says is the open question.",
+      "resolution": "A person, through a brain-to-computer link of any kind, produces information at a measured, sustained rate above forty bits a second over a session of at least ten minutes, with the rate and its method of calculation given in a peer-reviewed report, and the content not reconstructed from attempted speech alone.",
+      "source": "Peer-reviewed reports stating the information rate in bits per second and how it was measured",
+      "horizon": "root",
+      "horizon_label": "Longer than 20 years, if ever",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [
+        "link-brain-implant-turns-intended-speech-into-text"
+      ],
+      "stage": "idea-only",
+      "stage_rank": 0,
+      "stage_label": "Idea only",
+      "stage_reached_on": null,
+      "stage_record": null,
+      "earlier_stages": [],
+      "long_shot": true,
+      "mechanism": "First, more electrodes in more places: today's best implants read a few hundred to a thousand channels in one patch of cortex, and the companies now in trials plan thousands. Second, decoders that read several intentions at once, speech and hand and gaze together, so the channels add up rather than replace each other. Third, a way for the brain to learn a new output it never had, as monkeys learn to drive a cursor from arbitrary cells; a person would have to learn to \"say\" more than one thing at a time. Fourth, a measurement standard, since bits per second is only meaningful with the vocabulary, error rate and timing stated.",
+      "breaking_point": "The brain's own output rate. A 2024 analysis of every measured human behaviour, from typing to memory sports, finds that deliberate output runs at about ten bits a second however it is measured, with speech near the top of that range, and argues the limit is in how the brain forms intentions, not in the mouth or hands. If that is right, no number of electrodes helps until the brain itself can be made to intend faster, and nothing known does that. If it is wrong, the limit is engineering: tens of thousands of stable channels and decoders for intentions that do not yet have names.",
+      "revisions": [],
+      "verify": [],
+      "notes": "Kept on the tree as the charter requires, with its mechanism and breaking point stated. The forty-bits figure for speech is from a 2019 study of seventeen languages; the ten-bits figure for behaviour in general is from the 2024 analysis cited in the breaking point. The 2023 speech decoders on this branch are the current best demonstrated figures and the first points of the bandwidth series, in words per minute as their papers give them; converting them to bits a second needs assumptions this record will state when the series is built.",
+      "example": false,
+      "depends_on_refs": [
+        {
+          "id": "link-brain-implant-turns-intended-speech-into-text",
+          "name": "A brain implant turns intended speech into text at conversational speed",
+          "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": true,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "link-uploaded-animal-brain-reproduces-what-it-learned",
+      "name": "An uploaded animal brain reproduces something it learned",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-uploaded-animal-brain-reproduces-what-it-learned/",
+      "description": "The long shot behind every story about uploading a mind: read a brain out completely, run the reading as a program, and get the same creature back. The honest test is small. Teach an animal something, map its brain, and see whether a simulation built from the map does what the animal learned, without being taught again. The complete wiring diagram of a fruit fly's brain was published in 2024 and a simulation built from it produces some of the fly's reflexes, but no simulation has yet reproduced a memory that one particular animal formed. That is the gap.",
+      "resolution": "A specific animal is trained on a task it did not know before; its brain is then read out (by imaging, slicing or any other method) and a simulation built from that readout performs the learned task at above-chance accuracy without further training, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports naming the animal, the task, the readout method and the simulation's score",
+      "horizon": "root",
+      "horizon_label": "Longer than 20 years, if ever",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "idea-only",
+      "stage_rank": 0,
+      "stage_label": "Idea only",
+      "stage_reached_on": null,
+      "stage_record": null,
+      "earlier_stages": [],
+      "long_shot": true,
+      "mechanism": "First, a complete wiring diagram of a small brain, which exists for a fruit fly and a larval zebrafish and is being built for a mouse. Second, a way to read not only the wiring but the strength of each connection and the chemical state of each cell, since learning lives there; this is the missing step. Third, a model of each cell good enough that the simulated brain, given the simulated body's senses, behaves like the real one; the 2024 fly simulations are a start. Fourth, the experiment itself: train, read out, simulate, test. A fly or a worm would do.",
+      "breaking_point": "Reading connection strengths and cell states from a fixed brain at the scale of a whole animal. Today's methods see the wiring, not the weights, and the weights are what the memory is; the chemistry that sets them is destroyed by the fixing and slicing that lets the wiring be seen. Either a readout that preserves it or a proof that the wiring alone is enough would have to come first, and neither exists for any animal.",
+      "revisions": [],
+      "verify": [],
+      "notes": "Kept on the tree as the charter requires, with its mechanism and breaking point stated. The fly connectome (2024) and the simulations built on it reproduce reflexes such as grooming and feeding that every fly has, which is behaviour from the wiring, not from learning. The worm has had a wiring diagram since 1986 and no simulation of it has reproduced a learned behaviour either. A company claimed in March 2026 to have \"uploaded\" a fly, meaning a wiring-based model driving a simulated body through innate behaviours; no peer-reviewed report and no learned behaviour.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": true,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mind-ai-assistant-used-daily-by-most-adults-in-a-country",
+      "name": "An always-on AI assistant is used daily by most adults in a country",
+      "branch": "mind",
+      "branch_name": "Memory and thinking",
+      "path": "/branches/mind/mind-ai-assistant-used-daily-by-most-adults-in-a-country/",
+      "description": "The soft version of merging with machines: no surgery, no implant, only a habit. A person who asks an AI assistant questions through the day, drafts with it, remembers through it and checks their thinking against it is working in partnership with a machine, whatever they call it. Hundreds of millions of people now use such assistants every week. Whether most adults in any country use one every day is a question a survey can answer, and that is the bar this entry watches.",
+      "resolution": "For one person: they use a general-purpose AI assistant (a chatbot or voice assistant that answers questions in ordinary language) on most days. For the leaf as named: a nationally representative survey of adults by a named polling organisation, research institute or national statistics office finds that more than half of a country's adults use such an assistant on a typical day. Figures from the makers count for the rung's \"many people\", not for this bar.",
+      "source": "Nationally representative surveys: Pew Research Center, the Reuters Institute Digital News Report, national statistics offices; the makers' own user counts only as a floor",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-wide-use",
+      "stage_rank": 4,
+      "stage_label": "In wide use",
+      "stage_reached_on": "2026-06-17",
+      "stage_record": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026/",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "Why it is a leaf: the charter's question is how much of a person we can change on purpose, and a mind that routinely thinks with a machine is changed, even if nothing was implanted. The stage is in wide use because the technology is sold to the public everywhere and used by a counted population in the hundreds of millions, which is what the rung asks. The bar in the name, most adults daily, has not been shown by any survey this record could find. The Pew survey linked here, fielded in February 2026, puts the share of American adults who use an AI chatbot at about half, and the share who use one daily at 24 per cent; the Reuters Institute's six-country survey of mid-2025 put weekly use of any such tool at 34 per cent; the maker of the most used assistant said in October 2025 that more than 800 million people used it each week. The entry stays on the tree with the gap stated plainly, and the first representative survey to show a daily majority in any country will be added to the record when it appears.",
+      "example": false,
       "depends_on_refs": [],
       "needed_by": [],
       "ladder": [
@@ -516,16 +1767,1354 @@
           "label": "First human",
           "reached": true,
           "current": false,
-          "reached_on": "2002-01-01",
-          "record": "https://pubmed.ncbi.nlm.nih.gov/12928208/"
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2026-06-17",
+          "record": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026/"
+        }
+      ]
+    },
+    {
+      "id": "mind-brain-implant-improves-memory-recall-in-a-person",
+      "name": "A brain implant improves memory recall in a person",
+      "branch": "mind",
+      "branch_name": "Memory and thinking",
+      "path": "/branches/mind/mind-brain-implant-improves-memory-recall-in-a-person/",
+      "description": "People with severe epilepsy sometimes have electrodes placed deep in the brain for a week or two while surgeons find the source of their seizures. Researchers have used that window to stimulate the memory parts of the brain while the person learns a list or a route, and found that the right stimulation at the right moment helps them remember more. It is a first human, done in patients who already had the electrodes, and no device exists that a person could have fitted for this.",
+      "resolution": "A person with electrodes implanted in the brain scores measurably better on a standard memory test when the electrodes are stimulated during learning than when they are not, in a peer-reviewed report with a control condition.",
+      "source": "Peer-reviewed reports of the implanted patients; a regulator's approval record if a memory device is approved",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2012-02-09",
+      "stage_record": "https://doi.org/10.1056/NEJMoa1107212",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2011-06-15",
+          "record": "https://doi.org/10.1088/1741-2560/8/4/046017"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2012 Los Angeles report of epilepsy patients who learned routes through a virtual town better when the entorhinal area was stimulated. Two 2018 reports went further: a Pennsylvania group's implant that stimulated only when the brain was in a poor state for learning, and a Wake Forest group's implant that played back the person's own successful memory patterns, both improving recall by about a third in the tests used. The animal record is the 2011 rat hippocampal prosthesis from the Wake Forest and Southern California groups. Every human result is in epilepsy patients who had the electrodes for other reasons, and at least one well-run study (2016) found stimulation of the same region made memory worse, so \"improves\" depends on the exact target and timing.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2011-06-15",
+          "record": "https://doi.org/10.1088/1741-2560/8/4/046017"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2012-02-09",
+          "record": "https://doi.org/10.1056/NEJMoa1107212"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mind-electrical-stimulation-improves-learning-in-healthy-adults",
+      "name": "Electrical stimulation improves learning in healthy adults",
+      "branch": "mind",
+      "branch_name": "Memory and thinking",
+      "path": "/branches/mind/mind-electrical-stimulation-improves-learning-in-healthy-adults/",
+      "description": "A weak current passed through the scalp over the part of the brain that controls movement makes healthy volunteers learn a finger-tapping or tracking task faster and hold the gain longer. The effect was first reported in 2003 and has been repeated by some groups and not by others; a 2015 review of single-session studies found no reliable effect on thinking tasks. Headsets that do this were sold to athletes and gamers for several years. It is a first human with a real but contested effect and no regulator behind it.",
+      "resolution": "Healthy adults given weak electrical stimulation through the scalp learn a measured skill or retain learned material better than a matched group given sham stimulation, in a peer-reviewed, sham-controlled report.",
+      "source": "Peer-reviewed, sham-controlled reports; a regulator's clearance record if one is given for learning",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2003-05-15",
+      "stage_record": "https://doi.org/10.1162/089892903321662994",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2003 Göttingen report of faster implicit motor learning under direct current stimulation; the 2009 report from the National Institutes of Health, in which five days of stimulation improved a motor skill for three months, is the strongest since. Consumer headsets (Halo Sport and others) were sold for this from 2016 to 2021 without a regulator's review; the rung in wide use would need a public count of users, which none published. The 2015 review by Horvath and colleagues that found no reliable cognitive effect of a single session is the strongest case against; the entry's test asks for a sham-controlled learning gain, which the 2003 and 2009 reports meet.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2003-05-15",
+          "record": "https://doi.org/10.1162/089892903321662994"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults",
+      "name": "A drug raises a measured thinking ability in healthy adults",
+      "branch": "mind",
+      "branch_name": "Memory and thinking",
+      "path": "/branches/mind/mind-drug-raises-a-measured-thinking-ability-in-healthy-adults/",
+      "description": "The pill that makes a healthy person smarter is one of the oldest promises on this tree, and the one with the least behind it. Stimulants make tired people more alert and quicker to react, and students take them for that. But alertness is not reasoning, and when healthy, rested adults are tested on memory or problem solving in properly controlled trials, the gains are small, inconsistent and rarely repeated. The entry is kept strict on purpose: it waits for a lasting gain in a thinking ability, not a shorter reaction time.",
+      "resolution": "A placebo-controlled trial in healthy, rested adults, registered before it ran, finds that a drug raises a standard measure of reasoning, learning or memory (not alertness, wakefulness or reaction time) by a margin the trial was built to detect, and a second, independent group repeats the result.",
+      "source": "Peer-reviewed trial reports with a registry entry; a regulator's approval for use in healthy people if it ever comes",
+      "horizon": "root",
+      "horizon_label": "Longer than 20 years, if ever",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "idea-only",
+      "stage_rank": 0,
+      "stage_label": "Idea only",
+      "stage_reached_on": null,
+      "stage_record": null,
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "Kept at idea only by the test above, not by ignorance of the literature. Reviews of modafinil and methylphenidate in healthy people find reliable effects on alertness and some on attention, with mixed results on memory and little on reasoning, and no pre-registered replication of a lasting gain. Animal studies of memory-enhancing drugs are plentiful, but none tests what the human test asks for, so the ladder's animal rung is not claimed either. Caffeine and the stimulants are in wide use for alertness; that is a different upgrade, which this tree does not list.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": true,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mood-psychedelic-therapy-approved-for-prescription",
+      "name": "A psychedelic therapy is approved for prescription",
+      "branch": "mood",
+      "branch_name": "Mood and drive",
+      "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
+      "description": "Psilocybin, the active part of certain mushrooms, and MDMA, given a few times under supervision with talking therapy, have in trials lifted depression and post-traumatic stress that nothing else had shifted. On 1 July 2023 Australia became the first country to let specially approved psychiatrists prescribe them, outside any trial. Other regulators have so far declined. It is on this branch because the change it makes is to how a person feels, on purpose and at their request.",
+      "resolution": "A regulator somewhere allows a doctor to prescribe a classic psychedelic (psilocybin, LSD, DMT, mescaline) or MDMA as a treatment for a named condition outside a trial, in the regulator's own published notice.",
+      "source": "The regulator's own notice (Australia's Therapeutic Goods Administration, the United States Food and Drug Administration, the European Medicines Agency or an equivalent)",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2023-07-01",
+      "stage_record": "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The regulator's page would not load when this record was checked on 2026-10-16; its title and date were confirmed from the regulator's own site listing. Open the page and confirm the wording."
+      ],
+      "notes": "The record is the Therapeutic Goods Administration's decision of February 2023, in force from 1 July 2023, allowing authorised psychiatrists to prescribe psilocybin for treatment-resistant depression and MDMA for post-traumatic stress disorder. It is a change of drug schedule plus a permission scheme for named psychiatrists, not the approval of a registered medicine, which is enough for the ladder's rung (a doctor can give it outside a trial) and is said plainly here. New Zealand allowed one named psychiatrist to prescribe psilocybin in June 2025; the United States regulator declined an MDMA application in 2024. Esketamine, a nasal spray approved in the United States in 2019, is a dissociative anaesthetic rather than a classic psychedelic and is left out of the test. The rung in wide use needs a counted population, and prescriptions under the Australian scheme are in the low hundreds.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
         },
         {
           "key": "in-clinical-use",
           "label": "In clinical use",
           "reached": true,
           "current": true,
-          "reached_on": "2013-02-14",
-          "record": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease"
+          "reached_on": "2023-07-01",
+          "record": "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mood-brain-implant-lifts-severe-depression",
+      "name": "A brain implant lifts severe depression",
+      "branch": "mood",
+      "branch_name": "Mood and drive",
+      "path": "/branches/mood/mood-brain-implant-lifts-severe-depression/",
+      "description": "Electrodes placed deep in the brain and driven by a pacemaker-like unit in the chest, the same hardware used for Parkinson's disease, aimed instead at a region that is overactive in depression. In the first six patients, four whose depression had resisted everything else got markedly better, and some described the change in the operating room. Later, larger trials were mixed, and twenty years on no regulator has approved it. It is a first human that has stayed one.",
+      "resolution": "A person with severe depression that has not responded to standard treatment improves by a clinically meaningful amount on a standard depression scale with an implanted brain stimulator switched on, in a peer-reviewed report; the rung above needs a regulator's approval for this use.",
+      "source": "Peer-reviewed reports of the implanted patients; the regulator's approval record if it comes",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2005-03-03",
+      "stage_record": "https://doi.org/10.1016/j.neuron.2005.02.014",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2005 Toronto report of deep brain stimulation of the subgenual cingulate in six people. Stimulation of a nerve in the neck (vagus nerve stimulation) was approved for depression in the United States in 2005, but it is not an implant in the brain and sits outside this entry's test. A device maker holds a breakthrough designation from the FDA for depression, which is not an approval.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2005-03-03",
+          "record": "https://doi.org/10.1016/j.neuron.2005.02.014"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mood-closed-loop-implant-detects-and-corrects-a-mood-state",
+      "name": "A closed-loop implant detects a mood state and corrects it automatically",
+      "branch": "mood",
+      "branch_name": "Mood and drive",
+      "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/",
+      "description": "The step beyond stimulating a region all day: an implant that listens to the brain, recognises the pattern that comes with a bad state, and stimulates only then. In 2021 a San Francisco group reported one woman with severe depression whose implant detected her own signature of low mood and responded to it, and whose depression lifted within weeks and stayed better. It is one person, which is what a first human is.",
+      "resolution": "A person with a mood disorder carries an implant that detects a brain signal tied to their mood state and delivers stimulation in response without a human in the loop, and their symptoms improve by a clinically meaningful amount on a standard scale, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the implanted patients; the regulator's approval record if it comes",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2021-10-04",
+      "stage_record": "https://doi.org/10.1038/s41591-021-01480-w",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2021 Nature Medicine report of a single patient. Closed-loop implants that respond to brain signals were already approved for epilepsy (the NeuroPace system, 2013), which is where the hardware came from; for mood the only record is this one and a few patients since.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2021-10-04",
+          "record": "https://doi.org/10.1038/s41591-021-01480-w"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "mood-treatment-removes-a-specific-fear-memory",
+      "name": "A treatment removes a specific fear memory on purpose",
+      "branch": "mood",
+      "branch_name": "Mood and drive",
+      "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
+      "description": "A memory, when recalled, becomes briefly unstable and has to be stored again; a drug given in that window can stop the storing. In rats this erased a learned fear in 2000. In 2009 a Dutch group did it in people: volunteers taught to fear a picture of a spider, given a common blood-pressure drug after recalling it, stopped flinching at the picture the next day and did not start again, while still remembering that the picture had once come with a shock. Later work extended it to people with a real spider phobia. The effect is real in the laboratory and has not become a treatment.",
+      "resolution": "A specific learned fear, identified in advance, is removed on purpose by a drug or procedure given around its recall, shown by the loss of the fear response to that cue (not merely its weakening through repeated safe exposure) while other memories are intact, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports with a control group; a regulator's approval record if a treatment is approved for this use",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2009-02-15",
+      "stage_record": "https://doi.org/10.1038/nn.2271",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2000-08-17",
+          "record": "https://doi.org/10.1038/35021052"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The charter expected this leaf at shown in animals. The record supports first human: the 2009 Amsterdam report erased a conditioned fear response in healthy volunteers with propranolol given after recall, and a 2015 report from the same group did it in people with a spider phobia, with the change still present three months later. The result has been repeated by the same group and has failed in several published attempts, including one of its own, so the conditions under which it works are unsettled; the record notes that without lowering the rung: the ladder asks whether it has happened, and it has, in a peer-reviewed report with controls. The animal record is the 2000 rat study that first showed a recalled fear memory could be erased by blocking its re-storage.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2000-08-17",
+          "record": "https://doi.org/10.1038/35021052"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2009-02-15",
+          "record": "https://doi.org/10.1038/nn.2271"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "movement-powered-exoskeleton-lets-a-paralysed-person-walk",
+      "name": "A powered exoskeleton lets a paralysed person walk",
+      "branch": "movement",
+      "branch_name": "Movement and body",
+      "path": "/branches/movement/movement-powered-exoskeleton-lets-a-paralysed-person-walk/",
+      "description": "A motorised frame strapped to the legs and trunk that swings the wearer's legs for them, so that a person paralysed from the waist down can stand and walk with crutches. The first one was cleared for sale in the United States in 2014, and several makers now sell them to clinics and, in some countries, to individuals. It is a machine worn over the body rather than a change to the body, and it is on the tree because it restores something the body lost.",
+      "resolution": "A person with a complete spinal cord injury who cannot move their legs stands up and walks a measured distance wearing a powered frame, outside a trial, under a regulator's clearance for home or clinic use.",
+      "source": "The regulator's clearance record (the United States Food and Drug Administration or its equivalent) and the maker's own reports",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2014-06-26",
+      "stage_record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN130034",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the FDA's database entry for its clearance of the ReWalk for home and community use, decided on 26 June 2014. Powered exoskeletons for paralysed users had been used in rehabilitation clinics for several years before that. The next rung, in wide use, needs a counted population; the maker's annual report for 2024 gives 689 ReWalk units in home use and 131 in clinics at the end of that year, about 820 in all, which is a count but not yet many, and other makers publish none.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2014-06-26",
+          "record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN130034"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch",
+      "name": "A prosthetic arm moves by thought and feeds back touch",
+      "branch": "movement",
+      "branch_name": "Movement and body",
+      "path": "/branches/movement/movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch/",
+      "description": "An artificial hand that the wearer moves by intending to, through signals picked up from the nerves or muscles of the stump, and that sends touch back the other way: pressure on the fingertips becomes pulses on the nerves, and the person feels the object they are holding. The first people to use an arm both ways were reported in 2005, and the first with a dexterous hand working in real time in 2014. Hands that move by muscle signals are sold widely; the two-way kind, with touch fed into the nerves, has not left the trials.",
+      "resolution": "A person with an amputated arm wears a prosthetic hand that they open and close by signals from their own nerves or muscles, and that delivers touch or pressure information back into their nerves (not a buzzer on the skin), so that they can tell the size or stiffness of an object without looking, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the fitted volunteers, and a regulator's approval record when a two-way hand is approved",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2005-12-01",
+      "stage_record": "https://doi.org/10.1109/TNSRE.2005.856072",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2005 Utah report of amputees with fine electrodes in the nerves of the stump who both moved a prosthetic arm and judged grip force and position through it without looking. The 2014 report of a Danish volunteer using a hand with nerve electrodes that fed back touch in real time is the first with a dexterous hand. Later in 2014 a Swedish group reported a bone-anchored arm with nerve and muscle electrodes used at home for over a year, and in 2020 the same group reported several people using such arms in daily life for years. Prosthetic hands with vibrating motors on the skin are sold commercially; the test here leaves them out on purpose, because the upgrade is touch restored to the nervous system, not a signal the person learns to read.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2005-12-01",
+          "record": "https://doi.org/10.1109/TNSRE.2005.856072"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "movement-bone-anchored-prosthetic-limb-with-nerve-control",
+      "name": "A prosthetic limb fixed to the bone with nerve control",
+      "branch": "movement",
+      "branch_name": "Movement and body",
+      "path": "/branches/movement/movement-bone-anchored-prosthetic-limb-with-nerve-control/",
+      "description": "Instead of a socket over the stump, a titanium rod is fixed into the bone and comes out through the skin, and the artificial limb clips onto it. Electrodes on the person's own nerves and muscles, run through the same rod, control the limb. It is the closest thing to an artificial limb that is part of the body. The bone anchor alone is approved and in routine use; the version with implanted nerve and muscle electrodes, which is what this entry is about, has been used by a small number of people for years but remains in trials.",
+      "resolution": "A person with an amputation wears a prosthetic limb attached directly to the bone through the skin, controlled by signals from electrodes implanted on their own nerves or muscles, and uses it outside the laboratory in daily life, in a peer-reviewed report; the rung above needs a regulator's approval of that combination.",
+      "source": "Peer-reviewed reports of the fitted volunteers; the regulator's approval record (the United States Food and Drug Administration or its equivalent) for the combination of anchor and implanted electrodes",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2014-10-08",
+      "stage_record": "https://doi.org/10.1126/scitranslmed.3008933",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The charter expected this leaf at in clinical use. The record supports a split: the bone anchor alone (the OPRA system) was approved by the FDA under a humanitarian exemption on 16 July 2015 and is used routinely in Sweden, Australia and elsewhere, but the version with implanted nerve and muscle electrodes, which is what \"nerve control\" means here, has no regulator's approval and is still a trial device. The entry therefore sits at first human, on the 2014 Swedish report of the first person to use one at home. If John would rather the leaf cover the bone anchor alone, the stage becomes in clinical use on the FDA's 2015 record and the name changes.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2014-10-08",
+          "record": "https://doi.org/10.1126/scitranslmed.3008933"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "movement-spinal-implant-lets-a-paralysed-person-walk-again",
+      "name": "A spinal implant lets a paralysed person walk again on their own legs",
+      "branch": "movement",
+      "branch_name": "Movement and body",
+      "path": "/branches/movement/movement-spinal-implant-lets-a-paralysed-person-walk-again/",
+      "description": "After a spinal cord injury the nerves below the break are usually intact; what is missing is the signal from above. An electrode strip laid over the lower spinal cord, driven by a small stimulator, can wake those circuits up, and with it people who had not moved their legs in years have stood and taken steps on their own legs. Three American groups reported it in 2018; a Swiss group reported walking within a day of surgery in 2022, and in 2023 linked the spinal stimulator to a brain implant so that the person's intention drove the steps.",
+      "resolution": "A person with a spinal cord injury who could not step before the surgery takes repeated steps over ground on their own legs, bearing their own weight, with an implanted spinal stimulator switched on, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the implanted volunteers; a regulator's approval record if an implant is approved for this use",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2018-09-24",
+      "stage_record": "https://doi.org/10.1056/NEJMoa1803588",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the Louisville report of September 2018, in which two of four people with complete paralysis walked over ground with a stimulator; a Mayo Clinic report appeared the same day, and the Lausanne report of targeted stimulation followed in October 2018. The Lausanne group's 2022 and 2023 papers (walking within a day; a brain-to-spine link) are later rungs of the same ladder, not new firsts. The stimulators used were approved devices used off their label, which is why the rung is first human and not in clinical use.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2018-09-24",
+          "record": "https://doi.org/10.1056/NEJMoa1803588"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body",
+      "name": "A gene therapy builds stronger muscle in a healthy body",
+      "branch": "movement",
+      "branch_name": "Movement and body",
+      "path": "/branches/movement/movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body/",
+      "description": "Muscle growth is held back by a protein called myostatin; animals and the rare people born without it have roughly twice the muscle. A gene therapy that blocks myostatin, given once, made mice and later monkeys markedly stronger with no training. In people it has only been tried in those with a muscle disease, in trials that changed little. A healthy person made stronger by a gene is the upgrade this entry waits for; a company founder's claim to have done it to herself in 2015 has no checkable record behind it.",
+      "resolution": "A healthy adult, given a gene therapy that blocks myostatin or raises a muscle-growth signal, gains measurable muscle mass and strength on standard tests without a change in training, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports; a trial registry entry naming healthy volunteers; a regulator's record if it reaches one",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "shown-in-animals",
+      "stage_rank": 1,
+      "stage_label": "Shown in animals",
+      "stage_reached_on": "2008-03-18",
+      "stage_record": "https://doi.org/10.1073/pnas.0709144105",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2008 report of mice given a single injection of a gene for a myostatin blocker, which stayed larger and stronger for life; the same group reported it in monkeys in November 2009. Trials in people with Becker muscular dystrophy and inclusion body myositis followed, which do not count here because the body was not healthy. BioViva's 2015 claim that its chief executive took a myostatin blocking gene therapy rests on the company's own word and has no published measurement, so it does not move the stage.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": true,
+          "reached_on": "2008-03-18",
+          "record": "https://doi.org/10.1073/pnas.0709144105"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-cochlear-implant-gives-a-deaf-person-hearing",
+      "name": "A cochlear implant gives a deaf person hearing",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-cochlear-implant-gives-a-deaf-person-hearing/",
+      "description": "A microphone behind the ear turns sound into electrical pulses, and a thin wire threaded into the inner ear delivers them straight to the hearing nerve, skipping the damaged parts of the ear. People who were profoundly deaf hear speech again, and children born deaf learn to talk. It is the most widely used sensory implant there is, and the only upgrade on this branch at the top of the ladder.",
+      "resolution": "A person who was profoundly deaf, fitted with an implant that stimulates the hearing nerve electrically, can understand spoken words without lip-reading, as measured by a standard speech test in a peer-reviewed report; the device is approved by a regulator and used by a counted population in the hundreds of thousands.",
+      "source": "Regulator approval records (the United States Food and Drug Administration and others) and a public count of users from a national health institute or the makers' own reports",
+      "horizon": "top",
+      "horizon_label": "At the top of the ladder; nothing left to reach",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-wide-use",
+      "stage_rank": 4,
+      "stage_label": "In wide use",
+      "stage_reached_on": "2019-12-31",
+      "stage_record": "https://www.nidcd.nih.gov/health/cochlear-implants",
+      "earlier_stages": [
+        {
+          "stage": "in-clinical-use",
+          "reached_on": "1985-10-31",
+          "record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P840024"
+        },
+        {
+          "stage": "first-human",
+          "reached_on": "1957-08-31",
+          "record": "https://pubmed.ncbi.nlm.nih.gov/13484817/"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The in-wide-use record is the fact sheet of the United States National Institute on Deafness and Other Communication Disorders, which gives a count of registered devices worldwide (about 736,900 as of December 2019, on a page last updated in June 2024); the makers' own figures are higher and newer, and the date here is the end of the month the count refers to. The in-clinical-use record is the FDA's approval of the first multichannel implant for adults on 31 October 1985; approval for children followed in June 1990. The first-human record is the 1957 report in a French medical journal by Djourno and Eyriès of a deaf man hearing through an electrode placed on the hearing nerve that February; the original has no web page of its own, so the library index entry is linked.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "1957-08-31",
+          "record": "https://pubmed.ncbi.nlm.nih.gov/13484817/"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": false,
+          "reached_on": "1985-10-31",
+          "record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P840024"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2019-12-31",
+          "record": "https://www.nidcd.nih.gov/health/cochlear-implants"
+        }
+      ]
+    },
+    {
+      "id": "senses-gene-therapy-restores-sight-in-an-inherited-blindness",
+      "name": "A gene therapy restores sight in an inherited blindness",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-gene-therapy-restores-sight-in-an-inherited-blindness/",
+      "description": "Some children are born with a broken copy of a single gene the retina needs, and go blind in childhood. A working copy of the gene, carried by a harmless virus, is injected under the retina once, and the cells start making the missing protein. People who could not walk an obstacle course in dim light can do it afterwards. It was the first gene therapy for an inherited disease approved in the United States, and the first upgrade of a sense done by changing a person's genes.",
+      "resolution": "A person with an inherited retinal disease caused by a named gene, given a working copy of that gene, can see in dimmer light or find their way through a standard obstacle course better than before and better than untreated controls, in a peer-reviewed trial; and a regulator has approved the therapy for use outside a trial.",
+      "source": "The peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, the European Medicines Agency)",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2017-12-19",
+      "stage_record": "https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/luxturna",
+      "earlier_stages": [
+        {
+          "stage": "first-human",
+          "reached_on": "2008-04-27",
+          "record": "https://doi.org/10.1056/NEJMoa0802268"
+        },
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2001-05-01",
+          "record": "https://doi.org/10.1038/ng0501-92"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The therapy is voretigene neparvovec (Luxturna), for disease caused by the RPE65 gene. The animal record is the Briard dog work of 2001; the first-human record is the London trial report of 2008, published the same week as the Philadelphia one. The next rung, in wide use, would need a count in the thousands; the treated population is in the hundreds because the disease is rare.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2001-05-01",
+          "record": "https://doi.org/10.1038/ng0501-92"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "2008-04-27",
+          "record": "https://doi.org/10.1056/NEJMoa0802268"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2017-12-19",
+          "record": "https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/luxturna"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-implant-restores-sight-to-a-blind-person",
+      "name": "An implant gives a blind person back some sight",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
+      "description": "A camera on a pair of glasses sends pictures to a grid of electrodes on the retina, and a person who had lost all useful sight sees spots of light again: enough to find a doorway, follow a line on the floor or tell where a window is. It is the first upgrade of a sense to go all the way from a laboratory to a device a doctor could prescribe. The device that got it there, the Argus II, was later taken off the market by its maker, which does not lower the stage: the ladder records the furthest a technology has reached.",
+      "resolution": "A person with no useful vision, fitted with a device that sends signals to the retina or the optic nerve, can reliably tell the position of a light source or the outline of an object they could not see before, in a peer-reviewed trial; and a regulator has approved such a device for use outside a trial.",
+      "source": "Peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, or its equivalent elsewhere)",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2013-02-13",
+      "stage_record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfhde/hde.cfm?id=H110002",
+      "earlier_stages": [
+        {
+          "stage": "first-human",
+          "reached_on": "2003-11-01",
+          "record": "https://doi.org/10.1016/S0042-6989(03)00457-7"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The in-clinical-use record is the FDA's device database entry for its approval of the Argus II (Second Sight) for people with advanced retinitis pigmentosa under a humanitarian device exemption, decided on 13 February 2013 and announced the next day. The first-human record is the peer-reviewed report of the earlier Argus I, implanted in a volunteer in 2002 and published in 2003. Second Sight stopped making the Argus II around 2019 and later merged into another company; the entry stays tracked rather than withdrawn because the upgrade is the category, not one product, and newer retinal implants (for example PRIMA, a photovoltaic chip under the retina, with a trial report in 2025) are in human trials. The next rung, in wide use, would need a count of users in the thousands, which no retinal implant has reached.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "2003-11-01",
+          "record": "https://doi.org/10.1016/S0042-6989(03)00457-7"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2013-02-13",
+          "record": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfhde/hde.cfm?id=H110002"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-device-gives-a-person-a-new-sense",
+      "name": "A device gives a person a sense no human is born with",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-device-gives-a-person-a-new-sense/",
+      "description": "The other upgrades on this branch give back something lost. This one adds something no one has had: a feeling for which way north is, for a magnetic field, for infrared light. The first study to do it properly put a belt on volunteers that buzzed on whichever side faced north, for weeks at a time, and found that some of them came to feel direction rather than think about it. Others have had small magnets put under the skin of a fingertip to feel electrical fields. It is a first human, done outside medicine and mostly outside the clinic.",
+      "resolution": "A person fitted with a worn or implanted device detects a kind of stimulus that no unaided human sense can detect (a magnetic field, infrared light, ultrasound, or direction without landmarks), at a rate reliably better than chance, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the people fitted with the device",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2005-11-29",
+      "stage_record": "https://doi.org/10.1088/1741-2560/2/4/R02",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is the 2005 report of the north-sensing belt worn by volunteers for six weeks. A 2010 engineering paper from the University of Reading reported volunteers sensing fields through magnets implanted under the skin. Both are first humans with no clinical product behind them; the next rung would need a regulator or a counted population, and neither is in sight.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2005-11-29",
+          "record": "https://doi.org/10.1088/1741-2560/2/4/R02"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-gene-therapy-restores-hearing-in-a-child-born-deaf",
+      "name": "A gene therapy restores hearing in a child born deaf",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/",
+      "description": "Children born without a working copy of one gene (OTOF, which makes a protein the inner ear's hair cells need to pass sound on to the nerve) are profoundly deaf from birth. A working copy, injected into the inner ear once, let most of the children in the first trial hear speech within weeks. It is the first time a sense missing from birth has been restored by changing a child's genes.",
+      "resolution": "A child born deaf because of a named gene, given a working copy of that gene in the inner ear, afterwards hears sounds at ordinary conversational loudness without a hearing aid or implant, as measured by a standard hearing test in a peer-reviewed report.",
+      "source": "The peer-reviewed trial report, and a regulator's approval record when there is one",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2024-01-08",
+      "stage_record": "https://doi.org/10.1002/advs.202306788",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is a peer-reviewed report of two children in China, published on 8 January 2024; the Shanghai trial published in The Lancet sixteen days later, in which five of six children recovered hearing, is the first registered trial result and the stronger record. Several companies ran trials of the same idea in 2023 and 2024, with the first of those published in 2025. No regulator had approved an OTOF gene therapy when this record was written; that approval is what would move the entry to in clinical use.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2024-01-08",
+          "record": "https://doi.org/10.1002/advs.202306788"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
+      "name": "An implant in the visual cortex gives sight with no working eyes",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-implant-in-the-visual-cortex-gives-sight-without-eyes/",
+      "description": "When the eyes and the optic nerves are gone, the only way to put a picture into a person is to stimulate the part of the brain that sees, at the back of the head. Electrodes there make a blind person see spots of light, and enough spots in the right places make a shape. The first person had this done in 1968; the first with a modern camera-driven grid, in 2018. None of it has left the laboratory, and the pictures are still a few dozen spots, not sight as a sighted person has it.",
+      "resolution": "A person with no working eyes or optic nerves, fitted with electrodes on or in the visual part of the brain, reliably reports spots of light where the electrodes are driven and can use them to tell the position or shape of something in front of a camera, in a peer-reviewed report.",
+      "source": "Peer-reviewed reports of the implanted volunteers; a regulator's approval record if one comes",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "1968-05-01",
+      "stage_record": "https://doi.org/10.1113/jphysiol.1968.sp008519",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [],
+      "notes": "The record is Brindley and Lewin's 1968 report of a blind woman with eighty radio-driven electrodes over her visual cortex, who saw spots of light where they were stimulated. Dobelle reported a camera-driven version in 2000, Second Sight implanted the first Orion device in 2018, and a Spanish group reported a blind woman recognising shapes and letters through a hundred-electrode array in 2021. All remain experimental; nothing is approved. The expected rung in the charter was first human and the record confirms it, only much earlier than the 2018 device the charter had in mind.",
+      "example": false,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "1968-05-01",
+          "record": "https://doi.org/10.1113/jphysiol.1968.sp008519"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
         },
         {
           "key": "in-wide-use",
@@ -539,19 +3128,19 @@
     }
   ],
   "counts": {
-    "upgrades": 4,
-    "first_human_or_beyond": 3,
+    "upgrades": 35,
+    "first_human_or_beyond": 28,
     "by_stage": {
-      "idea-only": 0,
-      "shown-in-animals": 1,
-      "first-human": 2,
-      "in-clinical-use": 1,
-      "in-wide-use": 0
+      "idea-only": 4,
+      "shown-in-animals": 3,
+      "first-human": 19,
+      "in-clinical-use": 6,
+      "in-wide-use": 3
     },
-    "long_shots": 0,
-    "examples": 4,
-    "branches_with_upgrades": 4,
-    "to_verify": 5
+    "long_shots": 2,
+    "examples": 0,
+    "branches_with_upgrades": 7,
+    "to_verify": 6
   },
   "last_checked": null
 }

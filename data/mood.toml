@@ -1,3 +1,129 @@
 # Upgrades under the Mood and drive branch. Record layout: docs/upgrade-schema.md.
-# Empty on 2026-10-16: the real list is being written from the project charter in TimeAssembler.
-# An empty branch shows grey on the home page figure until something is recorded here.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day). Every stage above idea-only has a date and a primary record; anything still written from
+# memory is in the entry's verify list.
+
+[[upgrade]]
+id = "mood-brain-implant-lifts-severe-depression"
+name = "A brain implant lifts severe depression"
+branch = "mood"
+description = """
+Electrodes placed deep in the brain and driven by a pacemaker-like unit in the chest, the same
+hardware used for Parkinson's disease, aimed instead at a region that is overactive in depression.
+In the first six patients, four whose depression had resisted everything else got markedly better,
+and some described the change in the operating room. Later, larger trials were mixed, and twenty
+years on no regulator has approved it. It is a first human that has stayed one."""
+resolution = """
+A person with severe depression that has not responded to standard treatment improves by a
+clinically meaningful amount on a standard depression scale with an implanted brain stimulator
+switched on, in a peer-reviewed report; the rung above needs a regulator's approval for this use."""
+source = "Peer-reviewed reports of the implanted patients; the regulator's approval record if it comes"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2005-03-03
+stage_record = "https://doi.org/10.1016/j.neuron.2005.02.014"
+notes = """
+The record is the 2005 Toronto report of deep brain stimulation of the subgenual cingulate in six
+people. Stimulation of a nerve in the neck (vagus nerve stimulation) was approved for depression in
+the United States in 2005, but it is not an implant in the brain and sits outside this entry's
+test. A device maker holds a breakthrough designation from the FDA for depression, which is not an
+approval."""
+
+[[upgrade]]
+id = "mood-closed-loop-implant-detects-and-corrects-a-mood-state"
+name = "A closed-loop implant detects a mood state and corrects it automatically"
+branch = "mood"
+description = """
+The step beyond stimulating a region all day: an implant that listens to the brain, recognises the
+pattern that comes with a bad state, and stimulates only then. In 2021 a San Francisco group
+reported one woman with severe depression whose implant detected her own signature of low mood
+and responded to it, and whose depression lifted within weeks and stayed better. It is one person,
+which is what a first human is."""
+resolution = """
+A person with a mood disorder carries an implant that detects a brain signal tied to their mood
+state and delivers stimulation in response without a human in the loop, and their symptoms improve
+by a clinically meaningful amount on a standard scale, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the implanted patients; the regulator's approval record if it comes"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2021-10-04
+stage_record = "https://doi.org/10.1038/s41591-021-01480-w"
+notes = """
+The record is the 2021 Nature Medicine report of a single patient. Closed-loop implants that
+respond to brain signals were already approved for epilepsy (the NeuroPace system, 2013), which is
+where the hardware came from; for mood the only record is this one and a few patients since."""
+
+[[upgrade]]
+id = "mood-psychedelic-therapy-approved-for-prescription"
+name = "A psychedelic therapy is approved for prescription"
+branch = "mood"
+description = """
+Psilocybin, the active part of certain mushrooms, and MDMA, given a few times under supervision
+with talking therapy, have in trials lifted depression and post-traumatic stress that nothing else
+had shifted. On 1 July 2023 Australia became the first country to let specially approved
+psychiatrists prescribe them, outside any trial. Other regulators have so far declined. It is on
+this branch because the change it makes is to how a person feels, on purpose and at their request."""
+resolution = """
+A regulator somewhere allows a doctor to prescribe a classic psychedelic (psilocybin, LSD, DMT,
+mescaline) or MDMA as a treatment for a named condition outside a trial, in the regulator's own
+published notice."""
+source = "The regulator's own notice (Australia's Therapeutic Goods Administration, the United States Food and Drug Administration, the European Medicines Agency or an equivalent)"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "in-clinical-use"
+stage_reached_on = 2023-07-01
+stage_record = "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists"
+verify = [
+  "The regulator's page would not load when this record was checked on 2026-10-16; its title and date were confirmed from the regulator's own site listing. Open the page and confirm the wording.",
+]
+notes = """
+The record is the Therapeutic Goods Administration's decision of February 2023, in force from
+1 July 2023, allowing authorised psychiatrists to prescribe psilocybin for treatment-resistant
+depression and MDMA for post-traumatic stress disorder. It is a change of drug schedule plus a
+permission scheme for named psychiatrists, not the approval of a registered medicine, which is
+enough for the ladder's rung (a doctor can give it outside a trial) and is said plainly here. New
+Zealand allowed one named psychiatrist to prescribe psilocybin in June 2025; the United States
+regulator declined an MDMA application in 2024. Esketamine, a nasal spray approved in the
+United States in 2019, is a dissociative anaesthetic rather than a classic psychedelic and is left
+out of the test. The rung in wide use needs a counted population, and prescriptions under the
+Australian scheme are in the low hundreds."""
+
+[[upgrade]]
+id = "mood-treatment-removes-a-specific-fear-memory"
+name = "A treatment removes a specific fear memory on purpose"
+branch = "mood"
+description = """
+A memory, when recalled, becomes briefly unstable and has to be stored again; a drug given in that
+window can stop the storing. In rats this erased a learned fear in 2000. In 2009 a Dutch group did
+it in people: volunteers taught to fear a picture of a spider, given a common blood-pressure drug
+after recalling it, stopped flinching at the picture the next day and did not start again, while
+still remembering that the picture had once come with a shock. Later work extended it to people
+with a real spider phobia. The effect is real in the laboratory and has not become a treatment."""
+resolution = """
+A specific learned fear, identified in advance, is removed on purpose by a drug or procedure given
+around its recall, shown by the loss of the fear response to that cue (not merely its weakening
+through repeated safe exposure) while other memories are intact, in a peer-reviewed report."""
+source = "Peer-reviewed reports with a control group; a regulator's approval record if a treatment is approved for this use"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2009-02-15
+stage_record = "https://doi.org/10.1038/nn.2271"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2000-08-17, record = "https://doi.org/10.1038/35021052" },
+]
+notes = """
+The charter expected this leaf at shown in animals. The record supports first human: the 2009
+Amsterdam report erased a conditioned fear response in healthy volunteers with propranolol given
+after recall, and a 2015 report from the same group did it in people with a spider phobia, with the
+change still present three months later. The result has been repeated by the same group and has
+failed in several published attempts, including one of its own, so the conditions under which it
+works are unsettled; the record notes that without lowering the rung: the ladder asks whether it has happened, and it has, in a
+peer-reviewed report with controls. The animal record is the 2000 rat study that first showed a
+recalled fear memory could be erased by blocking its re-storage."""

@@ -1,35 +1,255 @@
 # Upgrades under The link to machines branch. Record layout: docs/upgrade-schema.md.
-# Seeded 2026-10-16 with one example so the site has something to show; the real list is
-# being written from the project charter in TimeAssembler and replaces these.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day), replacing the example entry seeded earlier that day. Every stage above idea-only has a
+# date and a primary record; anything still written from memory is in the entry's verify list.
 # The project's second number, how much information can pass between a brain and a computer
-# each second, is plotted on this branch's page once there is a series to plot.
+# each second, gets its own data file when there is a series to plot (docs/upgrade-schema.md,
+# "What is not in the record"); the speech and cursor entries below are its first two points.
 
 [[upgrade]]
 id = "link-wireless-brain-implant-controls-a-computer"
 name = "A fully implanted wireless brain chip lets a paralysed person control a computer"
 branch = "link"
 description = """
-A chip placed in the brain reads the signals that would have moved a hand and turns them into a
-moving cursor or typed text, with nothing passing through the skin: no wires, no plug. Wired
-versions have existed in trials since 2004. The fully wireless, fully implanted kind is the one
-that could leave the laboratory, and the first person received one in January 2024."""
+A device under the skin and skull reads the brain's signals and sends them out by radio, with no
+wire through the skin: nothing to plug in, nothing to infect, usable at home. Wired implants have
+done this in laboratories since the 1990s. The first fully implanted wireless one was used at home
+by a woman with motor neurone disease in the Netherlands, reported in 2016, to select letters on a
+screen. The first high-channel version, with a thousand electrodes, went into a person in January
+2024 and let him play chess and games by thought."""
 resolution = """
 A person with paralysis, fitted with a brain implant that has no wired connection through the
-skin, controls a computer cursor or types text by thought alone, as reported by the trial's
-sponsor and confirmed by an independent report."""
-source = "The trial sponsor's own report, confirmed by a named news organisation or a peer-reviewed publication"
+skin, controls a computer cursor or selects letters or commands by thought alone, in a
+peer-reviewed report or the maker's own report of a named patient confirmed independently."""
+source = "Peer-reviewed reports; the trial sponsor's own report of a named patient, confirmed by a peer-reviewed publication or a regulator's record"
+horizon = "leaf"
+status = "tracked"
+depends_on = ["link-wired-brain-implant-controls-a-cursor"]
+stage = "first-human"
+stage_reached_on = 2016-11-12
+stage_record = "https://doi.org/10.1056/NEJMoa1608085"
+notes = """
+The record is the 2016 Utrecht report of a locked-in woman using a fully implanted system (two
+electrode strips over the brain, a transmitter in the chest) to type at home. The earlier example
+entry on this leaf rested on Neuralink's first implant of 28 January 2024; that remains the first
+fully implanted wireless chip with electrodes in the brain tissue itself and a thousand channels,
+and is noted here as a later point on the same ladder rather than the first. The next rung, in
+clinical use, needs a regulator's approval; several makers were in trials in 2025 and none had one."""
+
+[[upgrade]]
+id = "link-wired-brain-implant-controls-a-cursor"
+name = "A wired brain implant lets a paralysed person control a cursor"
+branch = "link"
+description = """
+The original brain-computer link: an electrode in the part of the brain that plans movement,
+a wire out through the skull to a computer, and a cursor that moves where the person means it to.
+The first paralysed person to do this was reported in 1998, with a single electrode; the hundred-
+electrode version that most later work builds on went into a man in 2004. Every speech, touch and
+robotic-arm result on this branch grew from it. It has never left the laboratory, because the
+wire does."""
+resolution = """
+A person with paralysis, through electrodes implanted in the brain and connected by wire to a
+computer, moves a cursor or selects targets on a screen on purpose, at a rate better than chance,
+in a peer-reviewed report."""
+source = "Peer-reviewed reports of the implanted volunteers"
 horizon = "leaf"
 status = "tracked"
 depends_on = []
 stage = "first-human"
-stage_reached_on = 2024-01-28
-stage_record = "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/"
+stage_reached_on = 1998-06-01
+stage_record = "https://doi.org/10.1097/00001756-199806010-00007"
 earlier_stages = [
-  { stage = "shown-in-animals", reached_on = 2021-04-09, record = "https://neuralink.com/blog/monkey-mindpong/" },
-]
-verify = [
-  "The first-human date (2024-01-28, the day before Musk's announcement) and the animal date (the 2021 monkey demonstration) were written from memory; check both against the linked records.",
+  { stage = "shown-in-animals", reached_on = 1969-02-28, record = "https://doi.org/10.1126/science.163.3870.955" },
 ]
 notes = """
-EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The wired
-first human (BrainGate, 2004) belongs to a separate entry when the real list is written."""
+The record is the 1998 Atlanta report of a locked-in man moving a cursor through a single implanted
+electrode; the charter had the 2004 BrainGate implant (reported in Nature in 2006) in mind, which is
+the first with a hundred-electrode array and the root of most work since. The animal record is the
+1969 demonstration that a monkey could learn to drive the firing of a single brain cell for a reward.
+The first point on this branch's bandwidth series, when that series is built, is the typing rate of
+the 2006 BrainGate report."""
+
+[[upgrade]]
+id = "link-brain-implant-turns-intended-speech-into-text"
+name = "A brain implant turns intended speech into text at conversational speed"
+branch = "link"
+description = """
+A person who can no longer speak tries to, and the implant reads the brain's instructions to the
+mouth and throat and turns them into words on a screen. In August 2023 two groups reported people
+with paralysis producing sixty to eighty words a minute this way, from large vocabularies, which is
+within sight of the hundred and fifty of ordinary conversation. It is the fastest a brain has yet
+talked to a machine, and the first point on this branch's bandwidth series."""
+resolution = """
+A person who cannot speak intelligibly, through an implanted brain interface, produces text from
+attempted speech at forty words a minute or more from a vocabulary of a thousand words or more, with
+the error rate stated, in a peer-reviewed report."""
+source = "Peer-reviewed reports giving the words per minute, the vocabulary size and the error rate"
+horizon = "leaf"
+status = "tracked"
+depends_on = ["link-wired-brain-implant-controls-a-cursor"]
+stage = "first-human"
+stage_reached_on = 2023-08-23
+stage_record = "https://doi.org/10.1038/s41586-023-06377-x"
+notes = """
+The record is the Stanford report of 62 words a minute from a 125,000-word vocabulary; a San
+Francisco report published the same day reached 78 words a minute and drove a talking avatar. The
+first decoding of attempted speech in a paralysed person, in 2021, managed about fifteen words a
+minute from fifty words; a 2024 report cut the error rate to a few per cent. These figures, with
+their units as the papers give them, are the seed of the bandwidth series."""
+
+[[upgrade]]
+id = "link-brain-implant-gives-a-person-touch-from-a-robotic-hand"
+name = "A brain implant gives a person touch from a robotic hand"
+branch = "link"
+description = """
+Signals going the other way: pressure sensors on a robotic hand's fingers drive tiny currents into
+the part of the brain that feels the hand, and a paralysed man feels his own fingers being touched
+when the robot's are. Reported in 2016, it closed the loop between brain and machine for the first
+time in a person, and made the robotic arm he already controlled by thought much faster to use."""
+resolution = """
+A person with paralysis, through electrodes implanted in the touch area of the brain, reports
+pressure on a specific finger when the matching finger of a robotic hand is touched, at a rate
+reliably better than chance, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the implanted volunteers"
+horizon = "leaf"
+status = "tracked"
+depends_on = ["link-wired-brain-implant-controls-a-cursor"]
+stage = "first-human"
+stage_reached_on = 2016-10-13
+stage_record = "https://doi.org/10.1126/scitranslmed.aaf8083"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2011-10-05, record = "https://doi.org/10.1038/nature10489" },
+]
+verify = [
+  "Whether the 2016 report itself includes touch triggered by sensors on the robotic hand, or only sensations evoked directly, needs checking against its full text; if only the latter, the record for this test is the same group's 2021 Science paper (DOI 10.1126/science.abd0380, 21 May 2021, written from memory).",
+]
+notes = """
+The record is the 2016 Pittsburgh report of a man with a spinal cord injury feeling touch on his
+fingers through stimulation of his brain. The animal record is the 2011 Duke report of monkeys
+feeling the texture of virtual objects through the same kind of stimulation. The prosthetic-arm
+version of this idea, with the touch fed into the nerves of the arm rather than the brain, is a
+separate entry on the Movement and body branch."""
+
+[[upgrade]]
+id = "link-scalp-headset-controls-a-device-without-surgery"
+name = "A headset worn on the scalp controls a device without surgery"
+branch = "link"
+description = """
+Electrodes pressed against the scalp pick up the faint electrical hum of the brain through the
+skull. The signal is coarse, but it is enough to pick a letter, steer a toy or tell when a person
+is calm, and it needs no surgeon. Headsets that do this have been sold to the public since 2007, as
+toys, meditation aids and gaming controllers, in the hundreds of thousands. It is the only link to
+a machine on this branch that is in wide use, and by far the weakest."""
+resolution = """
+A device worn on the scalp, with no surgery, reads the wearer's brain signals and lets them
+deliberately control something (a cursor, a toy, a game, a sound), at a rate better than chance;
+the rung in wide use needs such a device on general sale with a public count of units in the
+hundreds of thousands or more, from the maker or an independent audit."""
+source = "Peer-reviewed reports for the first human; the makers' own sales statements or audited figures for the count"
+horizon = "top"
+status = "tracked"
+depends_on = []
+stage = "in-wide-use"
+stage_reached_on = 2015-12-31
+stage_record = "https://store.neurosky.com/products/eeg-tgam"
+earlier_stages = [
+  { stage = "first-human", reached_on = 1988-12-01, record = "https://doi.org/10.1016/0013-4694(88)90149-6" },
+]
+verify = [
+  "The in-wide-use record is the maker's own product page saying over a million of its sensor chips are in circulation; the page is undated (its footer says 2015), so the date here is the end of that year and should be replaced when a dated statement is found.",
+  "A 1977 paper by Vidal may be an earlier first human (volunteers steering a cursor through a maze by brain signals); check its full text before moving the first-human date.",
+]
+notes = """
+The first-human record is the 1988 Illinois report of volunteers spelling words by attending to
+flashing letters, the first brain-controlled speller. Consumer headsets based on the same kind of
+signal reached shops in 2007 (NeuroSky), 2009 (a Mattel toy, Emotiv) and 2014 (Muse). The wide-use
+count is NeuroSky's own statement that over a million of its sensor chips are in circulation; the
+maker of the Muse headset says it has over half a million users. The hardware is cheap and the
+control is coarse, which is why this is the one upgrade on the branch anyone can buy."""
+
+[[upgrade]]
+id = "link-uploaded-animal-brain-reproduces-what-it-learned"
+name = "An uploaded animal brain reproduces something it learned"
+branch = "link"
+description = """
+The long shot behind every story about uploading a mind: read a brain out completely, run the
+reading as a program, and get the same creature back. The honest test is small. Teach an animal
+something, map its brain, and see whether a simulation built from the map does what the animal
+learned, without being taught again. The complete wiring diagram of a fruit fly's brain was
+published in 2024 and a simulation built from it produces some of the fly's reflexes, but no
+simulation has yet reproduced a memory that one particular animal formed. That is the gap."""
+resolution = """
+A specific animal is trained on a task it did not know before; its brain is then read out (by
+imaging, slicing or any other method) and a simulation built from that readout performs the learned
+task at above-chance accuracy without further training, in a peer-reviewed report."""
+source = "Peer-reviewed reports naming the animal, the task, the readout method and the simulation's score"
+horizon = "root"
+status = "tracked"
+depends_on = []
+stage = "idea-only"
+long_shot = true
+mechanism = """
+First, a complete wiring diagram of a small brain, which exists for a fruit fly and a larval
+zebrafish and is being built for a mouse. Second, a way to read not only the wiring but the strength
+of each connection and the chemical state of each cell, since learning lives there; this is the
+missing step. Third, a model of each cell good enough that the simulated brain, given the simulated
+body's senses, behaves like the real one; the 2024 fly simulations are a start. Fourth, the
+experiment itself: train, read out, simulate, test. A fly or a worm would do."""
+breaking_point = """
+Reading connection strengths and cell states from a fixed brain at the scale of a whole animal.
+Today's methods see the wiring, not the weights, and the weights are what the memory is; the
+chemistry that sets them is destroyed by the fixing and slicing that lets the wiring be seen. Either
+a readout that preserves it or a proof that the wiring alone is enough would have to come first, and
+neither exists for any animal."""
+notes = """
+Kept on the tree as the charter requires, with its mechanism and breaking point stated. The fly
+connectome (2024) and the simulations built on it reproduce reflexes such as grooming and feeding
+that every fly has, which is behaviour from the wiring, not from learning. The worm has had a
+wiring diagram since 1986 and no simulation of it has reproduced a learned behaviour either. A
+company claimed in March 2026 to have "uploaded" a fly, meaning a wiring-based model driving a
+simulated body through innate behaviours; no peer-reviewed report and no learned behaviour."""
+
+[[upgrade]]
+id = "link-brain-link-carries-more-information-than-speech"
+name = "A brain link carries more information per second than speech"
+branch = "link"
+description = """
+The number the merger argument rests on. Speech moves about forty bits of information a second,
+in every language measured; typing, less. A brain link that beat speech would be the first time a
+person had a faster way out of their own head than the mouth, and the stated goal of the best-funded
+implant companies. No link has come close: the fastest, the 2023 speech decoders, move the
+equivalent of speech at half speed with errors, and they do it by reading the instructions for
+speech itself. Whether the brain can originate more than it already says is the open question."""
+resolution = """
+A person, through a brain-to-computer link of any kind, produces information at a measured,
+sustained rate above forty bits a second over a session of at least ten minutes, with the rate and
+its method of calculation given in a peer-reviewed report, and the content not reconstructed from
+attempted speech alone."""
+source = "Peer-reviewed reports stating the information rate in bits per second and how it was measured"
+horizon = "root"
+status = "tracked"
+depends_on = ["link-brain-implant-turns-intended-speech-into-text"]
+stage = "idea-only"
+long_shot = true
+mechanism = """
+First, more electrodes in more places: today's best implants read a few hundred to a thousand
+channels in one patch of cortex, and the companies now in trials plan thousands. Second, decoders
+that read several intentions at once, speech and hand and gaze together, so the channels add up
+rather than replace each other. Third, a way for the brain to learn a new output it never had, as
+monkeys learn to drive a cursor from arbitrary cells; a person would have to learn to "say" more
+than one thing at a time. Fourth, a measurement standard, since bits per second is only meaningful
+with the vocabulary, error rate and timing stated."""
+breaking_point = """
+The brain's own output rate. A 2024 analysis of every measured human behaviour, from typing to
+memory sports, finds that deliberate output runs at about ten bits a second however it is measured,
+with speech near the top of that range, and argues the limit is in how the brain forms intentions,
+not in the mouth or hands. If that is right, no number of electrodes helps until the brain itself
+can be made to intend faster, and nothing known does that. If it is wrong, the limit is engineering:
+tens of thousands of stable channels and decoders for intentions that do not yet have names."""
+notes = """
+Kept on the tree as the charter requires, with its mechanism and breaking point stated. The
+forty-bits figure for speech is from a 2019 study of seventeen languages; the ten-bits figure for
+behaviour in general is from the 2024 analysis cited in the breaking point. The 2023 speech decoders
+on this branch are the current best demonstrated figures and the first points of the bandwidth
+series, in words per minute as their papers give them; converting them to bits a second needs
+assumptions this record will state when the series is built."""

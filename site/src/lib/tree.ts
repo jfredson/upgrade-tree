@@ -49,7 +49,7 @@ export type Upgrade = {
   description: string;
   resolution: string;
   source: string;
-  horizon: 'leaf' | 'mid' | 'root';
+  horizon: 'leaf' | 'mid' | 'root' | 'top';
   horizon_label: string;
   status: 'tracked' | 'withdrawn' | 'superseded';
   superseded_by: string | null;

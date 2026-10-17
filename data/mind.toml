@@ -1,3 +1,136 @@
 # Upgrades under the Memory and thinking branch. Record layout: docs/upgrade-schema.md.
-# Empty on 2026-10-16: the real list is being written from the project charter in TimeAssembler.
-# An empty branch shows grey on the home page figure until something is recorded here.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day). Every stage above idea-only has a date and a primary record; anything still written from
+# memory is in the entry's verify list.
+
+[[upgrade]]
+id = "mind-brain-implant-improves-memory-recall-in-a-person"
+name = "A brain implant improves memory recall in a person"
+branch = "mind"
+description = """
+People with severe epilepsy sometimes have electrodes placed deep in the brain for a week or two
+while surgeons find the source of their seizures. Researchers have used that window to stimulate
+the memory parts of the brain while the person learns a list or a route, and found that the right
+stimulation at the right moment helps them remember more. It is a first human, done in patients
+who already had the electrodes, and no device exists that a person could have fitted for this."""
+resolution = """
+A person with electrodes implanted in the brain scores measurably better on a standard memory
+test when the electrodes are stimulated during learning than when they are not, in a peer-reviewed
+report with a control condition."""
+source = "Peer-reviewed reports of the implanted patients; a regulator's approval record if a memory device is approved"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2012-02-09
+stage_record = "https://doi.org/10.1056/NEJMoa1107212"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2011-06-15, record = "https://doi.org/10.1088/1741-2560/8/4/046017" },
+]
+notes = """
+The record is the 2012 Los Angeles report of epilepsy patients who learned routes through a
+virtual town better when the entorhinal area was stimulated. Two 2018 reports went further: a
+Pennsylvania group's implant that stimulated only when the brain was in a poor state for learning,
+and a Wake Forest group's implant that played back the person's own successful memory patterns,
+both improving recall by about a third in the tests used. The animal record is the 2011 rat
+hippocampal prosthesis from the Wake Forest and Southern California groups. Every human result is
+in epilepsy patients who had the electrodes for other reasons, and at least one well-run study (2016)
+found stimulation of the same region made memory worse, so "improves" depends on the exact target
+and timing."""
+
+[[upgrade]]
+id = "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults"
+name = "A drug raises a measured thinking ability in healthy adults"
+branch = "mind"
+description = """
+The pill that makes a healthy person smarter is one of the oldest promises on this tree, and the
+one with the least behind it. Stimulants make tired people more alert and quicker to react, and
+students take them for that. But alertness is not reasoning, and when healthy, rested adults are
+tested on memory or problem solving in properly controlled trials, the gains are small, inconsistent
+and rarely repeated. The entry is kept strict on purpose: it waits for a lasting gain in a thinking
+ability, not a shorter reaction time."""
+resolution = """
+A placebo-controlled trial in healthy, rested adults, registered before it ran, finds that a drug
+raises a standard measure of reasoning, learning or memory (not alertness, wakefulness or reaction
+time) by a margin the trial was built to detect, and a second, independent group repeats the
+result."""
+source = "Peer-reviewed trial reports with a registry entry; a regulator's approval for use in healthy people if it ever comes"
+horizon = "root"
+status = "tracked"
+depends_on = []
+stage = "idea-only"
+notes = """
+Kept at idea only by the test above, not by ignorance of the literature. Reviews of modafinil and
+methylphenidate in healthy people find reliable effects on alertness and some on attention, with
+mixed results on memory and little on reasoning, and no pre-registered replication of a lasting
+gain. Animal studies of memory-enhancing drugs are plentiful, but none tests what the human test
+asks for, so the ladder's animal rung is not claimed either. Caffeine and the stimulants are in wide
+use for alertness; that is a different upgrade, which this tree does not list."""
+
+[[upgrade]]
+id = "mind-ai-assistant-used-daily-by-most-adults-in-a-country"
+name = "An always-on AI assistant is used daily by most adults in a country"
+branch = "mind"
+description = """
+The soft version of merging with machines: no surgery, no implant, only a habit. A person who asks
+an AI assistant questions through the day, drafts with it, remembers through it and checks their
+thinking against it is working in partnership with a machine, whatever they call it. Hundreds of
+millions of people now use such assistants every week. Whether most adults in any country use one
+every day is a question a survey can answer, and that is the bar this entry watches."""
+resolution = """
+For one person: they use a general-purpose AI assistant (a chatbot or voice assistant that answers
+questions in ordinary language) on most days. For the leaf as named: a nationally representative
+survey of adults by a named polling organisation, research institute or national statistics office
+finds that more than half of a country's adults use such an assistant on a typical day. Figures from
+the makers count for the rung's "many people", not for this bar."""
+source = "Nationally representative surveys: Pew Research Center, the Reuters Institute Digital News Report, national statistics offices; the makers' own user counts only as a floor"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "in-wide-use"
+stage_reached_on = 2026-06-17
+stage_record = "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026/"
+notes = """
+Why it is a leaf: the charter's question is how much of a person we can change on purpose, and a
+mind that routinely thinks with a machine is changed, even if nothing was implanted. The stage is
+in wide use because the technology is sold to the public everywhere and used by a counted
+population in the hundreds of millions, which is what the rung asks. The bar in the name, most
+adults daily, has not been shown by any survey this record could find. The Pew survey linked
+here, fielded in February 2026, puts the share of American adults who use an AI chatbot at about
+half, and the share who use one daily at 24 per cent; the Reuters Institute's six-country survey of
+mid-2025 put weekly use of any such tool at 34 per cent; the maker of the most used assistant said
+in October 2025 that more than 800 million people used it each week. The entry stays on the tree
+with the gap stated plainly, and the first representative survey to show a daily majority in any
+country will be added to the record when it appears."""
+
+[[upgrade]]
+id = "mind-electrical-stimulation-improves-learning-in-healthy-adults"
+name = "Electrical stimulation improves learning in healthy adults"
+branch = "mind"
+description = """
+A weak current passed through the scalp over the part of the brain that controls movement makes
+healthy volunteers learn a finger-tapping or tracking task faster and hold the gain longer. The
+effect was first reported in 2003 and has been repeated by some groups and not by others; a 2015
+review of single-session studies found no reliable effect on thinking tasks. Headsets that do this
+were sold to athletes and gamers for several years. It is a first human with a real but contested
+effect and no regulator behind it."""
+resolution = """
+Healthy adults given weak electrical stimulation through the scalp learn a measured skill or
+retain learned material better than a matched group given sham stimulation, in a peer-reviewed,
+sham-controlled report."""
+source = "Peer-reviewed, sham-controlled reports; a regulator's clearance record if one is given for learning"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2003-05-15
+stage_record = "https://doi.org/10.1162/089892903321662994"
+notes = """
+The record is the 2003 Göttingen report of faster implicit motor learning under direct current
+stimulation; the 2009 report from the National Institutes of Health, in which five days of
+stimulation improved a motor skill for three months, is the strongest since. Consumer headsets
+(Halo Sport and others) were sold for this from 2016 to 2021 without a regulator's review; the rung
+in wide use would need a public count of users, which none published. The 2015 review by Horvath
+and colleagues that found no reliable cognitive effect of a single session is the strongest case
+against; the entry's test asks for a sham-controlled learning gain, which the 2003 and 2009 reports
+meet."""

@@ -1,3 +1,157 @@
 # Upgrades under the Movement and body branch. Record layout: docs/upgrade-schema.md.
-# Empty on 2026-10-16: the real list is being written from the project charter in TimeAssembler.
-# An empty branch shows grey on the home page figure until something is recorded here.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day). Every stage above idea-only has a date and a primary record; anything still written from
+# memory is in the entry's verify list.
+
+[[upgrade]]
+id = "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch"
+name = "A prosthetic arm moves by thought and feeds back touch"
+branch = "movement"
+description = """
+An artificial hand that the wearer moves by intending to, through signals picked up from the
+nerves or muscles of the stump, and that sends touch back the other way: pressure on the fingertips
+becomes pulses on the nerves, and the person feels the object they are holding. The first people to
+use an arm both ways were reported in 2005, and the first with a dexterous hand working in real time
+in 2014. Hands that move by muscle signals are sold widely; the two-way kind, with touch fed into
+the nerves, has not left the trials."""
+resolution = """
+A person with an amputated arm wears a prosthetic hand that they open and close by signals from
+their own nerves or muscles, and that delivers touch or pressure information back into their nerves
+(not a buzzer on the skin), so that they can tell the size or stiffness of an object without
+looking, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the fitted volunteers, and a regulator's approval record when a two-way hand is approved"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2005-12-01
+stage_record = "https://doi.org/10.1109/TNSRE.2005.856072"
+notes = """
+The record is the 2005 Utah report of amputees with fine electrodes in the nerves of the stump
+who both moved a prosthetic arm and judged grip force and position through it without looking. The
+2014 report of a Danish volunteer using a hand with nerve electrodes that fed back touch in real
+time is the first with a dexterous hand. Later in 2014 a Swedish group reported a bone-anchored arm with
+nerve and muscle electrodes used at home for over a year, and in 2020 the same group reported
+several people using such arms in daily life for years. Prosthetic hands with vibrating motors on
+the skin are sold commercially; the test here leaves them out on purpose, because the upgrade is
+touch restored to the nervous system, not a signal the person learns to read."""
+
+[[upgrade]]
+id = "movement-powered-exoskeleton-lets-a-paralysed-person-walk"
+name = "A powered exoskeleton lets a paralysed person walk"
+branch = "movement"
+description = """
+A motorised frame strapped to the legs and trunk that swings the wearer's legs for them, so that a
+person paralysed from the waist down can stand and walk with crutches. The first one was cleared for
+sale in the United States in 2014, and several makers now sell them to clinics and, in some
+countries, to individuals. It is a machine worn over the body rather than a change to the body,
+and it is on the tree because it restores something the body lost."""
+resolution = """
+A person with a complete spinal cord injury who cannot move their legs stands up and walks a
+measured distance wearing a powered frame, outside a trial, under a regulator's clearance for home
+or clinic use."""
+source = "The regulator's clearance record (the United States Food and Drug Administration or its equivalent) and the maker's own reports"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "in-clinical-use"
+stage_reached_on = 2014-06-26
+stage_record = "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN130034"
+notes = """
+The record is the FDA's database entry for its clearance of the ReWalk for home and community use,
+decided on 26 June 2014. Powered exoskeletons for paralysed users had been used in rehabilitation
+clinics for several years before that. The next rung, in wide use, needs a counted population; the
+maker's annual report for 2024 gives 689 ReWalk units in home use and 131 in clinics at the end of
+that year, about 820 in all, which is a count but not yet many, and other makers publish none."""
+
+[[upgrade]]
+id = "movement-spinal-implant-lets-a-paralysed-person-walk-again"
+name = "A spinal implant lets a paralysed person walk again on their own legs"
+branch = "movement"
+description = """
+After a spinal cord injury the nerves below the break are usually intact; what is missing is the
+signal from above. An electrode strip laid over the lower spinal cord, driven by a small stimulator,
+can wake those circuits up, and with it people who had not moved their legs in years have stood and
+taken steps on their own legs. Three American groups reported it in 2018; a Swiss group reported
+walking within a day of surgery in 2022, and in 2023 linked the spinal stimulator to a brain implant
+so that the person's intention drove the steps."""
+resolution = """
+A person with a spinal cord injury who could not step before the surgery takes repeated steps
+over ground on their own legs, bearing their own weight, with an implanted spinal stimulator
+switched on, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the implanted volunteers; a regulator's approval record if an implant is approved for this use"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2018-09-24
+stage_record = "https://doi.org/10.1056/NEJMoa1803588"
+notes = """
+The record is the Louisville report of September 2018, in which two of four people with complete
+paralysis walked over ground with a stimulator; a Mayo Clinic report appeared the same day, and the
+Lausanne report of targeted stimulation followed in October 2018. The Lausanne group's 2022 and 2023
+papers (walking within a day; a brain-to-spine link) are later rungs of the same ladder, not new
+firsts. The stimulators used were approved devices used off their label, which is why the rung is
+first human and not in clinical use."""
+
+[[upgrade]]
+id = "movement-bone-anchored-prosthetic-limb-with-nerve-control"
+name = "A prosthetic limb fixed to the bone with nerve control"
+branch = "movement"
+description = """
+Instead of a socket over the stump, a titanium rod is fixed into the bone and comes out through
+the skin, and the artificial limb clips onto it. Electrodes on the person's own nerves and muscles,
+run through the same rod, control the limb. It is the closest thing to an artificial limb that is
+part of the body. The bone anchor alone is approved and in routine use; the version with implanted
+nerve and muscle electrodes, which is what this entry is about, has been used by a small number of
+people for years but remains in trials."""
+resolution = """
+A person with an amputation wears a prosthetic limb attached directly to the bone through the
+skin, controlled by signals from electrodes implanted on their own nerves or muscles, and uses it
+outside the laboratory in daily life, in a peer-reviewed report; the rung above needs a regulator's
+approval of that combination."""
+source = "Peer-reviewed reports of the fitted volunteers; the regulator's approval record (the United States Food and Drug Administration or its equivalent) for the combination of anchor and implanted electrodes"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2014-10-08
+stage_record = "https://doi.org/10.1126/scitranslmed.3008933"
+notes = """
+The charter expected this leaf at in clinical use. The record supports a split: the bone anchor
+alone (the OPRA system) was approved by the FDA under a humanitarian exemption on 16 July 2015 and is used
+routinely in Sweden, Australia and elsewhere, but the version with implanted nerve and muscle
+electrodes, which is what "nerve control" means here, has no regulator's approval and is still a
+trial device. The entry therefore sits at first human, on the 2014 Swedish report of the first
+person to use one at home. If John would rather the leaf cover the bone anchor alone, the stage
+becomes in clinical use on the FDA's 2015 record and the name changes."""
+
+[[upgrade]]
+id = "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body"
+name = "A gene therapy builds stronger muscle in a healthy body"
+branch = "movement"
+description = """
+Muscle growth is held back by a protein called myostatin; animals and the rare people born without
+it have roughly twice the muscle. A gene therapy that blocks myostatin, given once, made mice and
+later monkeys markedly stronger with no training. In people it has only been tried in those with a
+muscle disease, in trials that changed little. A healthy person made stronger by a gene is the
+upgrade this entry waits for; a company founder's claim to have done it to herself in 2015 has no
+checkable record behind it."""
+resolution = """
+A healthy adult, given a gene therapy that blocks myostatin or raises a muscle-growth signal,
+gains measurable muscle mass and strength on standard tests without a change in training, in a
+peer-reviewed report."""
+source = "Peer-reviewed reports; a trial registry entry naming healthy volunteers; a regulator's record if it reaches one"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "shown-in-animals"
+stage_reached_on = 2008-03-18
+stage_record = "https://doi.org/10.1073/pnas.0709144105"
+notes = """
+The record is the 2008 report of mice given a single injection of a gene for a myostatin blocker,
+which stayed larger and stronger for life; the same group reported it in monkeys in November 2009. Trials in
+people with Becker muscular dystrophy and inclusion body myositis followed, which do not count here
+because the body was not healthy. BioViva's 2015 claim that its chief executive took a myostatin
+blocking gene therapy rests on the company's own word and has no published measurement, so it does
+not move the stage."""

@@ -1,36 +1,193 @@
 # Upgrades under the Senses branch. Record layout: docs/upgrade-schema.md.
-# Seeded 2026-10-16 with one example so the site has something to show; the real list is
-# being written from the project charter in TimeAssembler and replaces these.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day), replacing the example entry seeded earlier that day. Every stage above idea-only has a
+# date and a primary record; anything still written from memory is in the entry's verify list.
 
 [[upgrade]]
 id = "senses-implant-restores-sight-to-a-blind-person"
 name = "An implant gives a blind person back some sight"
 branch = "senses"
 description = """
-A camera or a light sensor feeds signals to an implant on the retina or in the brain, and a
-person who was blind sees shapes, edges or light again. It is the first upgrade of a sense that
-has gone all the way from a laboratory to a product a doctor can prescribe, which is why it is
-the example seeded here."""
+A camera on a pair of glasses sends pictures to a grid of electrodes on the retina, and a person
+who had lost all useful sight sees spots of light again: enough to find a doorway, follow a line
+on the floor or tell where a window is. It is the first upgrade of a sense to go all the way from
+a laboratory to a device a doctor could prescribe. The device that got it there, the Argus II, was
+later taken off the market by its maker, which does not lower the stage: the ladder records the
+furthest a technology has reached."""
 resolution = """
-A person with no useful vision, fitted with a device that sends signals to the retina, the optic
-nerve or the visual part of the brain, can reliably tell the position of a light source or the
-outline of an object they could not see before, as reported in a peer-reviewed trial."""
+A person with no useful vision, fitted with a device that sends signals to the retina or the
+optic nerve, can reliably tell the position of a light source or the outline of an object they
+could not see before, in a peer-reviewed trial; and a regulator has approved such a device for
+use outside a trial."""
 source = "Peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, or its equivalent elsewhere)"
 horizon = "leaf"
 status = "tracked"
 depends_on = []
 stage = "in-clinical-use"
-stage_reached_on = 2013-02-14
-stage_record = "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease"
+stage_reached_on = 2013-02-13
+stage_record = "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfhde/hde.cfm?id=H110002"
 earlier_stages = [
-  { stage = "first-human", reached_on = 2002-01-01, record = "https://pubmed.ncbi.nlm.nih.gov/12928208/" },
-]
-verify = [
-  "The first-human date is given as the year 2002 (the first Argus implant, at the Doheny Eye Institute); the exact day was not checked.",
-  "The FDA approval date of the Argus II, 2013-02-14, was written from memory and should be checked against the press release linked.",
+  { stage = "first-human", reached_on = 2003-11-01, record = "https://doi.org/10.1016/S0042-6989(03)00457-7" },
 ]
 notes = """
-EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The device
-this entry rests on (the Argus II) was taken off the market by its maker in 2019, which does not
-lower its stage: the ladder records the furthest a technology has reached, and a withdrawal is
-noted here and in the status when it is ruled on."""
+The in-clinical-use record is the FDA's device database entry for its approval of the Argus II
+(Second Sight) for people with advanced retinitis pigmentosa under a humanitarian device exemption,
+decided on 13 February 2013 and announced the next day. The first-human record is
+the peer-reviewed report of the earlier Argus I, implanted in a volunteer in 2002 and published in
+2003. Second Sight stopped making the Argus II around 2019 and later merged into another company;
+the entry stays tracked rather than withdrawn because the upgrade is the category, not one product,
+and newer retinal implants (for example PRIMA, a photovoltaic chip under the retina, with a trial
+report in 2025) are in human trials. The next rung, in wide use, would need a count of users in the
+thousands, which no retinal implant has reached."""
+
+[[upgrade]]
+id = "senses-cochlear-implant-gives-a-deaf-person-hearing"
+name = "A cochlear implant gives a deaf person hearing"
+branch = "senses"
+description = """
+A microphone behind the ear turns sound into electrical pulses, and a thin wire threaded into the
+inner ear delivers them straight to the hearing nerve, skipping the damaged parts of the ear. People
+who were profoundly deaf hear speech again, and children born deaf learn to talk. It is the most
+widely used sensory implant there is, and the only upgrade on this branch at the top of the ladder."""
+resolution = """
+A person who was profoundly deaf, fitted with an implant that stimulates the hearing nerve
+electrically, can understand spoken words without lip-reading, as measured by a standard speech
+test in a peer-reviewed report; the device is approved by a regulator and used by a counted
+population in the hundreds of thousands."""
+source = "Regulator approval records (the United States Food and Drug Administration and others) and a public count of users from a national health institute or the makers' own reports"
+horizon = "top"
+status = "tracked"
+depends_on = []
+stage = "in-wide-use"
+stage_reached_on = 2019-12-31
+stage_record = "https://www.nidcd.nih.gov/health/cochlear-implants"
+earlier_stages = [
+  { stage = "in-clinical-use", reached_on = 1985-10-31, record = "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P840024" },
+  { stage = "first-human", reached_on = 1957-08-31, record = "https://pubmed.ncbi.nlm.nih.gov/13484817/" },
+]
+notes = """
+The in-wide-use record is the fact sheet of the United States National Institute on Deafness and
+Other Communication Disorders, which gives a count of registered devices worldwide (about 736,900
+as of December 2019, on a page last updated in June 2024); the makers' own figures are higher and
+newer, and the date here is the end of the month the count refers to. The in-clinical-use record is
+the FDA's approval of the first multichannel implant for adults on 31 October 1985; approval for
+children followed in June 1990. The first-human record is the 1957 report in a French medical
+journal by Djourno and Eyriès of a deaf man hearing through an electrode placed on the hearing nerve
+that February; the original has no web page of its own, so the library index entry is linked."""
+
+[[upgrade]]
+id = "senses-gene-therapy-restores-sight-in-an-inherited-blindness"
+name = "A gene therapy restores sight in an inherited blindness"
+branch = "senses"
+description = """
+Some children are born with a broken copy of a single gene the retina needs, and go blind in
+childhood. A working copy of the gene, carried by a harmless virus, is injected under the retina
+once, and the cells start making the missing protein. People who could not walk an obstacle course
+in dim light can do it afterwards. It was the first gene therapy for an inherited disease approved
+in the United States, and the first upgrade of a sense done by changing a person's genes."""
+resolution = """
+A person with an inherited retinal disease caused by a named gene, given a working copy of that
+gene, can see in dimmer light or find their way through a standard obstacle course better than
+before and better than untreated controls, in a peer-reviewed trial; and a regulator has approved
+the therapy for use outside a trial."""
+source = "The peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, the European Medicines Agency)"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "in-clinical-use"
+stage_reached_on = 2017-12-19
+stage_record = "https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/luxturna"
+earlier_stages = [
+  { stage = "first-human", reached_on = 2008-04-27, record = "https://doi.org/10.1056/NEJMoa0802268" },
+  { stage = "shown-in-animals", reached_on = 2001-05-01, record = "https://doi.org/10.1038/ng0501-92" },
+]
+notes = """
+The therapy is voretigene neparvovec (Luxturna), for disease caused by the RPE65 gene. The animal
+record is the Briard dog work of 2001; the first-human record is the London trial report of 2008,
+published the same week as the Philadelphia one. The next rung, in wide use, would need a count in
+the thousands; the treated population is in the hundreds because the disease is rare."""
+
+[[upgrade]]
+id = "senses-gene-therapy-restores-hearing-in-a-child-born-deaf"
+name = "A gene therapy restores hearing in a child born deaf"
+branch = "senses"
+description = """
+Children born without a working copy of one gene (OTOF, which makes a protein the inner ear's hair
+cells need to pass sound on to the nerve) are profoundly deaf from birth. A working copy, injected
+into the inner ear once, let most of the children in the first trial hear speech within weeks. It is
+the first time a sense missing from birth has been restored by changing a child's genes."""
+resolution = """
+A child born deaf because of a named gene, given a working copy of that gene in the inner ear,
+afterwards hears sounds at ordinary conversational loudness without a hearing aid or implant, as
+measured by a standard hearing test in a peer-reviewed report."""
+source = "The peer-reviewed trial report, and a regulator's approval record when there is one"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2024-01-08
+stage_record = "https://doi.org/10.1002/advs.202306788"
+notes = """
+The record is a peer-reviewed report of two children in China, published on 8 January 2024;
+the Shanghai trial published in The Lancet sixteen days later, in which five of six children
+recovered hearing, is the first registered trial result and the stronger record. Several companies
+ran trials of the same idea in 2023 and 2024, with the first of those published in 2025. No regulator had approved an OTOF gene therapy when this record
+was written; that approval is what would move the entry to in clinical use."""
+
+[[upgrade]]
+id = "senses-implant-in-the-visual-cortex-gives-sight-without-eyes"
+name = "An implant in the visual cortex gives sight with no working eyes"
+branch = "senses"
+description = """
+When the eyes and the optic nerves are gone, the only way to put a picture into a person is to
+stimulate the part of the brain that sees, at the back of the head. Electrodes there make a blind
+person see spots of light, and enough spots in the right places make a shape. The first person had
+this done in 1968; the first with a modern camera-driven grid, in 2018. None of it has left the
+laboratory, and the pictures are still a few dozen spots, not sight as a sighted person has it."""
+resolution = """
+A person with no working eyes or optic nerves, fitted with electrodes on or in the visual part of
+the brain, reliably reports spots of light where the electrodes are driven and can use them to tell
+the position or shape of something in front of a camera, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the implanted volunteers; a regulator's approval record if one comes"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 1968-05-01
+stage_record = "https://doi.org/10.1113/jphysiol.1968.sp008519"
+notes = """
+The record is Brindley and Lewin's 1968 report of a blind woman with eighty radio-driven
+electrodes over her visual cortex, who saw spots of light where they were stimulated. Dobelle
+reported a camera-driven version in 2000, Second Sight implanted the first Orion device in 2018,
+and a Spanish group reported a blind woman recognising shapes and letters through a hundred-electrode
+array in 2021. All remain experimental; nothing is approved. The expected rung in the charter was
+first human and the record confirms it, only much earlier than the 2018 device the charter had in
+mind."""
+
+[[upgrade]]
+id = "senses-device-gives-a-person-a-new-sense"
+name = "A device gives a person a sense no human is born with"
+branch = "senses"
+description = """
+The other upgrades on this branch give back something lost. This one adds something no one has had:
+a feeling for which way north is, for a magnetic field, for infrared light. The first study to do it
+properly put a belt on volunteers that buzzed on whichever side faced north, for weeks at a time,
+and found that some of them came to feel direction rather than think about it. Others have had small
+magnets put under the skin of a fingertip to feel electrical fields. It is a first human, done
+outside medicine and mostly outside the clinic."""
+resolution = """
+A person fitted with a worn or implanted device detects a kind of stimulus that no unaided human
+sense can detect (a magnetic field, infrared light, ultrasound, or direction without landmarks),
+at a rate reliably better than chance, in a peer-reviewed report."""
+source = "Peer-reviewed reports of the people fitted with the device"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2005-11-29
+stage_record = "https://doi.org/10.1088/1741-2560/2/4/R02"
+notes = """
+The record is the 2005 report of the north-sensing belt worn by volunteers for six weeks. A 2010
+engineering paper from the University of Reading reported volunteers sensing fields through magnets
+implanted under the skin. Both are first humans with no clinical product behind them; the next rung
+would need a regulator or a counted population, and neither is in sight."""

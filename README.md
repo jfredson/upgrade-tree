@@ -12,7 +12,7 @@ A Sentient Horizons project, sibling of The Belt Equation and The Quiet Galaxy. 
 
 ## Layout
 
-- `data/` holds the record: `branches.toml` (the seven branches) and one TOML file per branch for its upgrades. Four example entries were seeded on 2026-10-16, marked "EXAMPLE ENTRY" in their notes; the real list replaces them.
+- `data/` holds the record: `branches.toml` (the seven branches) and one TOML file per branch for its upgrades. The first list of thirty-five upgrades was written on 2026-10-16 from the project charter, replacing four example entries seeded earlier that day.
 - `docs/upgrade-schema.md` is the record layout, and the rules the export script enforces.
 - `scripts/export.py` validates the record and writes the JSON the site reads. `python3 scripts/export.py --check` validates without writing.
 - `site/` is the website: an Astro 5 static site, deployed to Cloudflare Workers static assets. See `site/README.md`.

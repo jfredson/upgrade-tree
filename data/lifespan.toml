@@ -1,6 +1,7 @@
 # Upgrades under the Lifespan and repair branch. Record layout: docs/upgrade-schema.md.
-# Seeded 2026-10-16 with one example so the site has something to show; the real list is
-# being written from the project charter in TimeAssembler and replaces these.
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# day), replacing the example entry seeded earlier that day. Every stage above idea-only has a
+# date and a primary record; anything still written from memory is in the entry's verify list.
 
 [[upgrade]]
 id = "lifespan-a-drug-adds-healthy-years-to-a-life"
@@ -8,24 +9,162 @@ name = "A drug makes people live longer in good health"
 branch = "lifespan"
 description = """
 A pill that slows ageing itself, rather than treating one disease, so that the people who take it
-live longer and stay well longer. Several drugs do this in mice. None has yet been shown to do it
-in people, because a trial that could show it takes decades, and that gap between the animal
-result and the human one is exactly what the stage ladder is for."""
+live longer and stay well longer. Rapamycin does this in mice, even when started late in life, and
+several other drugs have followed it. None has been shown to do it in people, because a trial that
+could show it takes many years, and that gap between the animal result and the human one is exactly
+what the stage ladder is for. People already take rapamycin and metformin in the hope of it; hope
+is not a record."""
 resolution = """
 A peer-reviewed, controlled trial in people reports that those taking the drug lived longer, or
-stayed free of age-related disease longer, than those taking a placebo, by a margin the trial
-was designed to detect."""
+stayed free of age-related disease longer, than those taking a placebo, by a margin the trial was
+designed to detect. Swallowing the pill is not the upgrade; the extra healthy years are, so the
+first-human rung needs a human result, not a human volunteer."""
 source = "The peer-reviewed trial report, and the regulator's approval record if it comes to that"
 horizon = "mid"
 status = "tracked"
 depends_on = []
 stage = "shown-in-animals"
-stage_reached_on = 2009-07-16
-stage_record = "https://www.nature.com/articles/nature08221"
-verify = [
-  "The animal-stage date is the publication date of the 2009 Nature paper on rapamycin extending mouse lifespan; the day was written from memory and should be checked against the paper.",
+stage_reached_on = 2009-07-08
+stage_record = "https://doi.org/10.1038/nature08221"
+notes = """
+The record is the 2009 report from the National Institute on Aging's testing programme, in which
+rapamycin fed to mice from twenty months of age (old, for a mouse) extended their lives. Human
+trials exist: a year-long rapamycin trial in healthy adults published in April 2025 measured body
+composition and blood markers, not lifespan, and found little; the long-planned metformin trial
+(TAME), designed to measure time to age-related disease, had not enrolled anyone for lack of money
+when this was written. An earlier 2008 report from the same mouse programme found a smaller
+lifespan gain from two other compounds in male mice; the rapamycin result is linked because it is
+the one that settled the rung for both sexes. Either kind of result, if positive and controlled, would move
+this entry to first human. When more such drugs reach people this entry may split into one per
+drug."""
+
+[[upgrade]]
+id = "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal"
+name = "Partially resetting cells reverses ageing in a living animal"
+branch = "lifespan"
+description = """
+Four genes can turn an adult cell back into something like an embryonic one. Switched on briefly
+and then off, in a live animal, they turn back some of the marks of age without erasing what the
+cell is. In 2016 mice with a premature-ageing disease lived longer when this was done to them, and
+in 2020 old mice regained sight after the nerve from the eye was reset. It is the most direct
+attempt yet to reverse ageing rather than slow it. The first person was given it, in one eye, in
+June 2026, with no result yet reported."""
+resolution = """
+A living animal given a brief, controlled dose of reprogramming genes afterwards has a measured
+marker of biological age (an epigenetic clock, a restored tissue function) moved towards youth,
+compared with untreated controls, in a peer-reviewed report. The first-human rung needs the same in
+a person."""
+source = "Peer-reviewed reports; the trial registry entry and report when the first person is treated"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "shown-in-animals"
+stage_reached_on = 2016-12-15
+stage_record = "https://doi.org/10.1016/j.cell.2016.11.052"
+notes = """
+The record is the 2016 Salk Institute report of partial reprogramming in live mice. The 2020
+Harvard report that restored vision in old mice by resetting cells in the eye is the clearest
+reversal of a lost function. A company founded on that work announced on 9 June 2026 that the
+first participant in its trial for two optic nerve diseases had been dosed. Under this entry's test
+the first-human rung needs a measured reversal in a person, not a dose, so the entry stays at shown
+in animals until the trial reports; if John would rather count the dose, the stage moves to first
+human on the company's own release."""
+
+[[upgrade]]
+id = "lifespan-a-drug-clears-aged-cells-from-a-persons-body"
+name = "A drug clears aged cells from a person's body"
+branch = "lifespan"
+description = """
+Some cells stop dividing but do not die, and sit in tissue giving off signals that inflame their
+neighbours; they build up with age. Clearing them makes old mice healthier and longer-lived. In
+2019 a Mayo Clinic group gave a short course of two drugs that kill such cells to people with
+kidney disease, took tissue samples before and after, and found fewer of the cells. It is a first
+human, on a measurement, and no such drug is approved."""
+resolution = """
+A person given a drug meant to kill senescent (aged, non-dividing) cells afterwards has measurably
+fewer of them in a tissue sample or a validated blood marker, compared with before treatment, in a
+peer-reviewed report."""
+source = "Peer-reviewed trial reports; a regulator's approval record if it comes"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2019-09-18
+stage_record = "https://doi.org/10.1016/j.ebiom.2019.08.069"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2011-11-02, record = "https://doi.org/10.1038/nature10600" },
 ]
 notes = """
-EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. Rapamycin
-is the clearest animal result; metformin and others have human trials under way or planned. When
-the real list is written this may split into one entry per drug."""
+The record is the 2019 report of dasatinib and quercetin in nine people with diabetic kidney
+disease, with fewer senescent cells in fat and skin samples afterwards. An earlier 2019 pilot in
+people with lung scarring reported better walking and standing but did not measure the cells, so it
+is not the record here. The animal record is the 2011 Mayo Clinic report in which clearing such
+cells from mice delayed several age-related conditions. Several company drugs of this kind have
+failed in trials since; none is approved."""
+
+[[upgrade]]
+id = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
+name = "An organ from a gene-edited pig keeps a person alive"
+branch = "lifespan"
+description = """
+Pigs' organs are the right size for people, and gene editing can take out the pig genes that make
+a human body reject them at once and add human ones that calm the rest. In January 2022 a man too
+ill for a human heart lived two months on a pig's; since 2024 several people have lived on pig
+kidneys, the longest for most of a year. Formal trials cleared by the United States regulator began
+in 2025. It is a first human, several times over, and the first step towards organs made to order."""
+resolution = """
+A person receives a heart, kidney, liver or lung from a pig whose genes were edited for the purpose
+and lives for at least thirty days with that organ doing its job, in a report by the transplant
+centre or a peer-reviewed paper."""
+source = "The transplant centre's own release naming the patient, the peer-reviewed case report, and the regulator's trial clearance or approval record"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2022-01-07
+stage_record = "https://www.medschool.umaryland.edu/news/2022/university-of-maryland-school-of-medicine-faculty-scientists-and-clinicians-perform-historic-first-successful-transplant-of-porcine-heart-into-adult-human-with-end-stage-heart-disease.html"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2018-12-05, record = "https://doi.org/10.1038/s41586-018-0765-z" },
+]
+notes = """
+The record is the University of Maryland's own announcement of David Bennett's pig heart
+transplant, performed on 7 January 2022; the peer-reviewed case report followed in June 2022. The
+animal record is the 2018 Munich report of baboons living for months on pig hearts. Pig kidneys
+followed in 2024 (Boston, then New York). The longest published case is a Boston man who lived 271
+days on a pig kidney in 2025 before receiving a human one, reported in The Lancet in September
+2026; the maker of that kidney said the same month that another patient had passed nine months and
+was still going. The next rung, in clinical use, needs a regulator's approval for use outside a
+trial; the trials cleared in 2025 are the step before."""
+
+[[upgrade]]
+id = "lifespan-lab-grown-organ-works-in-a-person-for-a-year"
+name = "A printed or lab-grown organ works in a person for a year"
+branch = "lifespan"
+description = """
+Take a few of a person's own cells, grow them on a scaffold shaped like the organ, and put the
+result in. In 2006 a North Carolina group reported seven young people with bladders made this way,
+working for years. Nothing more complicated than a hollow organ has been done, and printed organs
+with their own blood supply remain in the laboratory. The entry is written to count working organs,
+not patches: skin, cartilage and blood vessels grown from cells are already approved, but they
+replace a surface or a tube, not an organ's job."""
+resolution = """
+An organ built outside the body from living cells, with or without a printed scaffold, is placed in
+a person and does that organ's job for at least a year, in a peer-reviewed report. Organ here means
+a bladder, kidney, liver, heart, lung, pancreas, windpipe, oesophagus or length of intestine; skin,
+cartilage, cornea and blood vessels are counted as tissues and left out."""
+source = "Peer-reviewed reports with follow-up of a year or more; a regulator's approval record if an engineered organ is approved"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2006-04-15
+stage_record = "https://doi.org/10.1016/S0140-6736(06)68438-9"
+notes = """
+The record is the 2006 Lancet report of engineered bladders in seven patients followed for up to
+five years. The charter asked whether the 2006 bladders or the 2022 printed ear settle a different
+rung: the bladders settle first human; the printed ear (a company announcement with no peer-reviewed
+report) is cartilage, not an organ, and would not count under the test even if published. A
+lab-grown blood vessel was approved by the United States regulator in December 2024, which is the
+closest an engineered part has come to in clinical use, and is left out by the test for the reason
+given in the description. The later synthetic windpipe cases of the 2010s were found to be
+fraudulent and do not count."""

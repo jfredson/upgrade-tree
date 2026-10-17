@@ -45,7 +45,8 @@ HEADLINE_STAGE = "first-human"
 
 HORIZONS = {"leaf": "Could move a stage within 1 to 5 years",
             "mid": "Could move a stage within 5 to 20 years",
-            "root": "Longer than 20 years, if ever"}
+            "root": "Longer than 20 years, if ever",
+            "top": "At the top of the ladder; nothing left to reach"}
 STATUSES = {"tracked", "withdrawn", "superseded"}
 REGIONS = {"senses", "movement", "mind", "mood", "lifespan", "inheritance", "link"}
 
