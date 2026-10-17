@@ -1,6 +1,11 @@
 ---
-// The home page: the question in large type, the figure, the count, one paragraph of
-// explanation, the seven branches. Every number comes from tree.json (scripts/export.py).
+// The home page. The first screen follows the tracker pattern's section 1.3 (ruled by John
+// 2026-10-16) in the Belt Equation's layout: the thing held comes before the question. Left,
+// in order: the eyebrow, the count in the largest type on the site with its claim and the
+// five-rung totals under it, the question as the page title, one paragraph, the last-checked
+// strip, two buttons. Right: the figure, the trunk's picture. Redesigned 2026-10-16 after John
+// asked for the first screen to land the answer to the reader's question before anything else.
+// Every number comes from tree.json (scripts/export.py).
 import Base from '../layouts/Base.astro';
 import Figure from '../components/Figure.astro';
 import { tree } from '../lib/tree';
@@ -8,21 +13,47 @@ import { tree } from '../lib/tree';
 const c = tree.counts;
 const stages = tree.stages;
 const examplesOnly = c.upgrades > 0 && c.examples === c.upgrades;
+const plural = c.first_human_or_beyond === 1;
 ---
 
 <Base>
-  <section class="home-hero">
-    <p class="eyebrow">A public count, kept in the open</p>
-    <h1 class="question">How much of a human being can we change on purpose today?</h1>
-    <p class="lede">
-      Not in a story, and not someday. Today, with a device, a drug or a procedure that at least one
-      person has actually had. This site keeps count, and watches the one change that would matter
-      most if it came: a direct link between a brain and a machine.
-    </p>
-  </section>
+  <section class="home-first">
+    <div class="first-main">
+      <p class="eyebrow">A public count, kept in the open</p>
+      <p class="big-number">{c.first_human_or_beyond}<small>of {c.upgrades}</small></p>
+      <p class="big-claim">
+        {plural ? 'way' : 'ways'} of changing a human being on purpose {plural ? 'has' : 'have'} been tried in at least one living person.
+      </p>
+      <div class="stage-row" aria-label="How many upgrades sit at each stage">
+        {stages.map((s) => (
+          <div>
+            <span class="stat">{c.by_stage[s.key]}</span>
+            <span class="stat-label">{s.label.toLowerCase()}</span>
+          </div>
+        ))}
+      </div>
+      <h1 class="question">How much of a human being can we change on purpose today?</h1>
+      <p class="lede">
+        Not in a story, and not someday: today, with a device, a drug or a procedure that at least one
+        person has actually had, counted from the public record and never guessed. The one change that
+        would matter most, a direct link between a brain and a machine, has a branch of its own.
+      </p>
+      <p class="scan-strip">
+        <span class="strip-dot" aria-hidden="true"></span>
+        <span>
+          {tree.last_checked
+            ? <>Last checked {tree.last_checked}.</>
+            : <>No reading of the news against the upgrades has run yet; the first one is coming, and this line will say when it ran.</>}
+          {' '}<a href="/story/">See the story so far.</a>
+        </span>
+      </p>
+      <p class="actions">
+        <a class="btn" href="/branches/">What has been tried?</a>
+        <a class="btn ghost" href="/method/">Who is counting</a>
+      </p>
+    </div>
 
-  <div class="home-grid">
-    <div class="figure-card">
+    <div class="first-side figure-card">
       <Figure />
       <ul class="legend">
         <li><i class="stage-none"></i> nothing recorded yet</li>
@@ -30,33 +61,7 @@ const examplesOnly = c.upgrades > 0 && c.examples === c.upgrades;
       </ul>
       <p class="figure-note">Each part of the figure is one of the seven branches, shaded by the furthest stage any upgrade under it has reached. Click a part to see what is there.</p>
     </div>
-
-    <div class="headline">
-      <div class="count-card">
-        <p class="big-number">{c.first_human_or_beyond}<small>of {c.upgrades}</small></p>
-        <p class="big-claim">
-          {c.first_human_or_beyond === 1 ? 'upgrade on the tree has' : 'upgrades on the tree have'} reached a first human.
-        </p>
-        <p class="big-sub">
-          Counted from the record, not chosen by hand. An upgrade counts once a public record shows
-          that at least one person has had it, whether or not anyone approved.
-        </p>
-        <div class="stage-row">
-          {stages.map((s) => (
-            <div>
-              <span class="stat">{c.by_stage[s.key]}</span>
-              <span class="stat-label">{s.label.toLowerCase()}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div class="checked-strip">
-        <span class="k">Last checked</span>
-        <span>{tree.last_checked ? tree.last_checked : 'not yet checked'}</span>
-        <span class="dim">A regular reading of the news against every upgrade is coming; until the first one runs, this says so.</span>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <section class="section explain narrow">
     <p>

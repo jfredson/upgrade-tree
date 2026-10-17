@@ -244,10 +244,6 @@ a.dim:hover { color: var(--accent); }
    =============================================================== */
 
 /* ---- home: the question, the figure, the count (2026-10-16) ---- */
-.home-hero { padding: 56px 0 24px; max-width: 820px; }
-.home-hero .question { margin: 0 0 18px; }
-.home-hero .lede { max-width: 680px; }
-.home-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; align-items: start; padding: 10px 0 30px; }
 .figure-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 20px 18px 14px; }
 .figure-card svg { display: block; width: 100%; height: auto; max-width: 360px; margin: 0 auto; }
 .figure-card .legend { list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--sans); font-size: 11.5px; color: var(--muted); }
@@ -277,12 +273,6 @@ a.dim:hover { color: var(--accent); }
 .legend i.stage-3 { background: color-mix(in srgb, var(--accent-3) 78%, transparent); }
 .legend i.stage-4 { background: var(--accent-3); }
 
-.headline { display: flex; flex-direction: column; gap: 22px; }
-.count-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 24px; }
-.count-card .big-number { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: clamp(64px, 9vw, 112px); font-weight: 500; line-height: 0.95; letter-spacing: -0.04em; color: var(--text); margin: 0 0 10px; }
-.count-card .big-number small { font-size: 0.42em; color: var(--muted); letter-spacing: -0.01em; margin-left: 0.15em; }
-.count-card .big-claim { font-family: var(--sans); font-size: clamp(20px, 2.2vw, 26px); font-weight: 500; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 10px; }
-.count-card .big-sub { font-size: 16px; line-height: 1.5; color: var(--muted); margin: 0; }
 .stage-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
 .stage-row > div { display: flex; flex-direction: column; gap: 3px; }
 .stage-row .stat { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 500; letter-spacing: -0.02em; color: var(--text); line-height: 1.1; }
@@ -372,4 +362,28 @@ a.dim:hover { color: var(--accent); }
 @media (max-width: 520px) {
   .branches { grid-template-columns: 1fr; }
   .bcard { min-height: 0; }
+}
+
+/* ---- the first screen of the home page (tracker pattern 1.3, redesigned 2026-10-16) ----
+   Two columns: the count, its claim, the five-rung totals, the question, one paragraph, the
+   last-checked strip and two buttons on the left; the figure on the right. Stacks on phones. */
+.home-first { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; align-items: start; padding: 34px 0 28px; }
+.first-main .eyebrow { margin-bottom: 10px; }
+.first-main .big-number { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: clamp(80px, 10vw, 136px); font-weight: 500; line-height: 0.92; letter-spacing: -0.045em; color: var(--text); margin: 0 0 10px; }
+.first-main .big-number small { font-size: 0.38em; color: var(--muted); letter-spacing: -0.01em; margin-left: 0.18em; }
+.first-main .big-claim { font-family: var(--sans); font-size: clamp(21px, 2.3vw, 29px); font-weight: 500; line-height: 1.22; letter-spacing: -0.012em; margin: 0 0 12px; max-width: 600px; }
+.first-main .stage-row { margin: 0 0 20px; padding-top: 12px; border-top: 1px solid var(--line); max-width: 600px; }
+.first-main .stage-row .stat { font-size: 20px; }
+.first-main h1.question { font-size: clamp(24px, 2.7vw, 32px); line-height: 1.2; letter-spacing: -0.012em; margin: 0 0 8px; max-width: 600px; }
+.first-main .lede { font-size: 16.5px; line-height: 1.5; max-width: 600px; margin: 0 0 14px; }
+.scan-strip { display: flex; gap: 10px; align-items: baseline; font-family: var(--sans); font-size: 13.5px; line-height: 1.5; color: var(--muted); margin: 0 0 14px; max-width: 600px; }
+.scan-strip .strip-dot { flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); transform: translateY(-1px); }
+.scan-strip a { color: var(--text-soft); }
+.scan-strip a:hover { color: var(--accent); }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
+.first-side { margin-top: 22px; }
+@media (max-width: 860px) {
+  .home-first { grid-template-columns: 1fr; gap: 20px; padding-top: 32px; }
+  .first-side { margin-top: 0; }
+  .first-main .big-number { font-size: clamp(72px, 20vw, 110px); }
 }
