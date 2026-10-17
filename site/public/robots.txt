@@ -1,3 +1,6 @@
-# The site is public. Crawling is allowed; there is no sitemap until the site is on its domain.
+# The site is public. Crawling is allowed. The sitemap is built from the record on every
+# build (site/src/pages/sitemap.xml.ts, added 2026-10-17): every public page, nothing else.
 User-agent: *
 Allow: /
+
+Sitemap: https://theupgradetree.com/sitemap.xml
