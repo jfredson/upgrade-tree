@@ -1,0 +1,3 @@
+# The site is public. Crawling is allowed; there is no sitemap until the site is on its domain.
+User-agent: *
+Allow: /

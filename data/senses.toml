@@ -1,0 +1,36 @@
+# Upgrades under the Senses branch. Record layout: docs/upgrade-schema.md.
+# Seeded 2026-10-16 with one example so the site has something to show; the real list is
+# being written from the project charter in TimeAssembler and replaces these.
+
+[[upgrade]]
+id = "senses-implant-restores-sight-to-a-blind-person"
+name = "An implant gives a blind person back some sight"
+branch = "senses"
+description = """
+A camera or a light sensor feeds signals to an implant on the retina or in the brain, and a
+person who was blind sees shapes, edges or light again. It is the first upgrade of a sense that
+has gone all the way from a laboratory to a product a doctor can prescribe, which is why it is
+the example seeded here."""
+resolution = """
+A person with no useful vision, fitted with a device that sends signals to the retina, the optic
+nerve or the visual part of the brain, can reliably tell the position of a light source or the
+outline of an object they could not see before, as reported in a peer-reviewed trial."""
+source = "Peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, or its equivalent elsewhere)"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "in-clinical-use"
+stage_reached_on = 2013-02-14
+stage_record = "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease"
+earlier_stages = [
+  { stage = "first-human", reached_on = 2002-01-01, record = "https://pubmed.ncbi.nlm.nih.gov/12928208/" },
+]
+verify = [
+  "The first-human date is given as the year 2002 (the first Argus implant, at the Doheny Eye Institute); the exact day was not checked.",
+  "The FDA approval date of the Argus II, 2013-02-14, was written from memory and should be checked against the press release linked.",
+]
+notes = """
+EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The device
+this entry rests on (the Argus II) was taken off the market by its maker in 2019, which does not
+lower its stage: the ladder records the furthest a technology has reached, and a withdrawal is
+noted here and in the status when it is ruled on."""

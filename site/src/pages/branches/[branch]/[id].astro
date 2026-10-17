@@ -1,0 +1,154 @@
+---
+import Base from '../../../layouts/Base.astro';
+import StageBadge from '../../../components/StageBadge.astro';
+import { tree, branchByKey, statusLabel, longDate, hostOf, issueUrl, REPO, type Upgrade } from '../../../lib/tree';
+
+export function getStaticPaths() {
+  return tree.upgrades.map((u) => ({ params: { branch: u.branch, id: u.id }, props: { upgrade: u } }));
+}
+
+const { upgrade: u } = Astro.props as { upgrade: Upgrade };
+const branch = branchByKey(u.branch)!;
+const replacement = u.superseded_by ? tree.upgrades.find((o) => o.id === u.superseded_by) : null;
+const disagree = issueUrl(
+  `Disagree: ${u.name}`,
+  `Upgrade: ${u.id} (${Astro.site}${u.path.slice(1)})\n\nWhat I would change (the stage, the test, the source, or something missing), and why:\n\n`,
+);
+const recordFile = `${REPO}/blob/main/data/${u.branch}.toml`;
+const description = u.description.length > 200 ? u.description.slice(0, 197) + '…' : u.description;
+---
+
+<Base title={`${u.name} — The Upgrade Tree`} description={description}>
+  <section class="hero wide">
+    <p class="eyebrow"><a href="/branches/">The branches</a> · <a href={branch.path}>{branch.name}</a> · {u.horizon_label.toLowerCase()}</p>
+    <h1>{u.name}</h1>
+    <div class="chips">
+      <StageBadge upgrade={u} />
+      {u.example && <span class="stage-badge example">example entry</span>}
+      {u.status !== 'tracked' && <span class="chip no">{statusLabel[u.status]}</span>}
+      {u.long_shot && <span class="chip accent">Long shot, kept on the tree on purpose</span>}
+    </div>
+  </section>
+
+  <div class="record">
+    <div class="prose">
+      {u.example && (
+        <div class="callout">
+          <h3>An example entry</h3>
+          <p>
+            This entry was seeded on 16 October 2026 to show how the record works while the real
+            list is written. Its facts were written from memory, and the ones not yet checked are
+            listed at the bottom of this page.
+          </p>
+        </div>
+      )}
+      <p>{u.description}</p>
+
+      <h2>What would count</h2>
+      <p>{u.resolution}</p>
+      <p class="dim"><strong>Who settles it:</strong> {u.source}</p>
+
+      <h2>Where it stands</h2>
+      <p>
+        <strong>{u.stage_label}.</strong>{' '}
+        {u.stage_reached_on
+          ? <>Reached on {longDate(u.stage_reached_on)}, on the record of <a href={u.stage_record!} rel="noopener">{hostOf(u.stage_record!)}</a>.</>
+          : 'Not yet shown to work in any living animal, so there is no record to point at.'}
+        {' '}{u.horizon_label}.
+      </p>
+      {u.status === 'withdrawn' && (
+        <p>
+          The technology this entry rests on has since been withdrawn from use. The rung it reached
+          stays on the record, because the ladder records what has happened.
+        </p>
+      )}
+      {u.status === 'superseded' && replacement && (
+        <p>This entry has been replaced by <a href={replacement.path}>{replacement.name}</a>.</p>
+      )}
+
+      {u.long_shot && (
+        <>
+          <h2>How it could happen</h2>
+          <p>{u.mechanism}</p>
+          <h2>Where today's science would have to give way</h2>
+          <p>{u.breaking_point}</p>
+        </>
+      )}
+
+      {(u.depends_on_refs.length > 0 || u.needed_by.length > 0) && (
+        <>
+          <h2>What it rests on</h2>
+          {u.depends_on_refs.length > 0 && (
+            <p>Needs a first human of: {u.depends_on_refs.map((r, i) => (
+              <><a href={r.path}>{r.name}</a>{i < u.depends_on_refs.length - 1 ? ', ' : '.'}</>
+            ))}</p>
+          )}
+          {u.needed_by.length > 0 && (
+            <p>Needed before: {u.needed_by.map((r, i) => (
+              <><a href={r.path}>{r.name}</a>{i < u.needed_by.length - 1 ? ', ' : '.'}</>
+            ))}</p>
+          )}
+        </>
+      )}
+
+      {u.revisions.length > 0 && (
+        <>
+          <h2>Changes to this entry</h2>
+          <ul class="rev">
+            {u.revisions.map((r) => (
+              <li><strong>{r.date}</strong>, {r.field}: {String(r.old)} → {String(r.new)}. {r.why}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {u.notes && (
+        <>
+          <h2>Notes</h2>
+          <p>{u.notes}</p>
+        </>
+      )}
+
+      {u.verify.length > 0 && (
+        <>
+          <h2>Still to check</h2>
+          <p class="dim" style="font-size: 15px;">Claims in this entry written from memory and not yet checked against a source. Each is cleared by checking it and either deleting the line or correcting the entry.</p>
+          <ul class="verify-list">
+            {u.verify.map((v) => <li>{v}</li>)}
+          </ul>
+        </>
+      )}
+    </div>
+
+    <aside class="side">
+      <div class="side-card">
+        <h3>The stage ladder</h3>
+        <ol class="ladder">
+          {u.ladder.map((r) => (
+            <li class={`${r.reached ? 'reached' : ''} ${r.current ? 'current' : ''}`}>
+              <span class="rung">{r.label}</span>
+              {r.reached ? (
+                <span class="when">
+                  {r.reached_on
+                    ? <>{longDate(r.reached_on)}{r.record && <>, <a href={r.record} rel="noopener">{hostOf(r.record)}</a></>}</>
+                    : 'reached; no date on record'}
+                </span>
+              ) : (
+                <span class="when">not yet</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div class="side-card">
+        <h3>Disagree with something</h3>
+        <p>The stage, the test, the source, or something this entry leaves out. Say what you would change and why.</p>
+        <a class="btn ghost" href={disagree} rel="noopener">Open an issue about this entry</a>
+      </div>
+      <div class="side-card">
+        <h3>The record itself</h3>
+        <p class="sources">This entry is <code>{u.id}</code> in <a href={recordFile} rel="noopener">data/{u.branch}.toml</a> in the public repository.</p>
+      </div>
+    </aside>
+  </div>
+</Base>

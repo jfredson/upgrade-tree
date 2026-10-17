@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { REPO, issueUrl } from '../lib/tree';
+
+const missing = issueUrl('Missing upgrade: ', 'Which branch it belongs under (senses; movement and body; memory and thinking; mood and drive; lifespan and repair; inheritance; the link to machines):\n\nWhat would count as a person having it (written so two readers would agree):\n\nWho or what would settle that (a named public record):\n\nThe furthest stage it has reached, with a link to the record:\n');
+const stage = issueUrl('Question a stage: ', 'Upgrade (its name or its id from its page):\n\nThe stage I think is wrong, and the stage it should be:\n\nThe record that shows it (a link):\n');
+const test = issueUrl('Question a test: ', 'Upgrade (its name or its id from its page):\n\nWhat is wrong with the test, or the source:\n\nWhat I would write instead:\n');
+---
+
+<Base title="Disagree with something — The Upgrade Tree" description="How to name a missing upgrade, question a stage, or question a test, and what happens to it.">
+  <section class="hero">
+    <p class="eyebrow">Disagree with something</p>
+    <h1>The point of keeping the count in the open is that you can correct a piece of it</h1>
+    <p class="lede">
+      Three kinds of disagreement move the project: an upgrade that is missing, a stage that is wrong,
+      and a test that would not settle the question. Each is welcome, and each leaves a trace.
+    </p>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>How to send it</h2>
+    <p>
+      Disagreements go through issues in the public repository, because an issue is durable and
+      quotable, and folding one into the record is a change that can cite it. Every upgrade's page has
+      a link that opens an issue about it with its name already filled in. Or start from one of these:
+    </p>
+    <div class="ctas">
+      <a class="btn" href={missing} rel="noopener">Name a missing upgrade</a>
+      <a class="btn ghost" href={stage} rel="noopener">Question a stage</a>
+      <a class="btn ghost" href={test} rel="noopener">Question a test</a>
+    </div>
+    <p style="margin-top: 18px;">
+      The most useful thing you can give is a record: a link to the trial report, the approval notice
+      or the confirmed news story that shows the stage you are claiming. A stage without a record
+      cannot be set.
+    </p>
+
+    <h2>What happens to it</h2>
+    <ol>
+      <li>John rules on it. Some disagreements change the record; some are answered and left as they are. Either way the issue records the ruling.</li>
+      <li>A change to the record lands as a commit that cites the issue, with a dated line on the <a href="/story/">Story</a> page.</li>
+      <li>A changed stage gets a revision on the entry, with the old stage, the new one, the date and the reason, so the entry's own page shows how it has moved.</li>
+    </ol>
+    <p class="dim">
+      A plain issue with the upgrade's name and your reasoning is exactly enough. The repository is at
+      <a href={REPO} rel="noopener">github.com/jfredson/upgrade-tree</a>.
+    </p>
+  </section>
+</Base>

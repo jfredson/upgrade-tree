@@ -1,0 +1,31 @@
+# Upgrades under the Inheritance branch. Record layout: docs/upgrade-schema.md.
+# Seeded 2026-10-16 with one example so the site has something to show; the real list is
+# being written from the project charter in TimeAssembler and replaces these.
+
+[[upgrade]]
+id = "inheritance-child-born-from-a-gene-edited-embryo"
+name = "A child is born from an embryo whose genes were edited on purpose"
+branch = "inheritance"
+description = """
+The genes of a human embryo are changed before it is implanted, and a child is born carrying the
+change, able to pass it on. This happened in 2018, in China, against the rules of the field and
+the law, and the scientist responsible went to prison. The record keeps it at the stage it
+reached, because the ladder records what has happened, not whether it was allowed."""
+resolution = """
+A live birth is publicly confirmed, by the people who did it or by an official inquiry, of a
+child whose genome was deliberately altered at the embryo stage with the intent that the change
+be carried in every cell."""
+source = "The scientific or official record confirming the birth and the edit (a published report, a court or inquiry finding, or a government statement)"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2018-11-26
+stage_record = "https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/"
+verify = [
+  "The first-human date is the day the births were announced (2018-11-26, at the Hong Kong summit); the births themselves were earlier in November 2018. Written from memory; check against the linked report.",
+]
+notes = """
+EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The next
+stage, in clinical use, would need a regulator somewhere to approve editing embryos for birth,
+which none has."""

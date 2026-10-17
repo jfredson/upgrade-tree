@@ -1,0 +1,7 @@
+---
+// A small pill naming an upgrade's stage, shaded like the figure.
+import type { Upgrade } from '../lib/tree';
+interface Props { upgrade: Pick<Upgrade, 'stage_rank' | 'stage_label'> }
+const { upgrade } = Astro.props;
+---
+<span class={`stage-badge stage-${upgrade.stage_rank}`}><i aria-hidden="true"></i>{upgrade.stage_label}</span>

@@ -1,0 +1,31 @@
+---
+// The story so far: the changelog, rendered day by day from CHANGELOG.md (scripts/export.py).
+import Base from '../layouts/Base.astro';
+import { changelog, longDate, REPO } from '../lib/tree';
+---
+
+<Base title="The story so far — The Upgrade Tree" description="Every change to the record, the stage ladder and the site, with the date it was made.">
+  <section class="hero">
+    <p class="eyebrow">The story so far</p>
+    <h1>Every change, dated</h1>
+    <p class="lede">
+      {changelog.intro || 'Newest first. Each day lists what changed in the record, the rules, or the site.'}
+    </p>
+  </section>
+
+  <section class="section narrow">
+    <ul class="days">
+      {changelog.days.map((d) => (
+        <li id={d.date}>
+          <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
+          <ul>
+            {d.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </li>
+      ))}
+    </ul>
+    <p class="dim" style="font-size: 14px; margin-top: 24px;">
+      This page is the repository's changelog as written: <a href={`${REPO}/blob/main/CHANGELOG.md`} rel="noopener">CHANGELOG.md</a>.
+    </p>
+  </section>
+</Base>

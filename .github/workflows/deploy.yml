@@ -1,0 +1,49 @@
+# Deploys The Upgrade Tree on every push to main that could change the site.
+# Added 2026-10-16, the same shape as The Belt Equation's. Needs two repository secrets,
+# which are John's to add: CLOUDFLARE_API_TOKEN (Workers Scripts: Edit, plus the zone's
+# Workers Routes: Edit once the domains are attached) and CLOUDFLARE_ACCOUNT_ID.
+# Until they exist the workflow fails at the deploy step and the site simply stays as it was.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "site/**"
+      - "CHANGELOG.md"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Validate the record
+        run: python3 scripts/export.py --check
+      - name: Install and build
+        working-directory: site
+        run: |
+          npm ci
+          npm run build
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: site
+          command: deploy

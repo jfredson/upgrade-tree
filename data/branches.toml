@@ -1,0 +1,82 @@
+# The seven branches of The Upgrade Tree: the seven capacities of a human being that the
+# project tracks changes to. Ruled by John 2026-10-16. Record layout: docs/upgrade-schema.md.
+# `key` is the folder name and the web address (/branches/<key>/); never renamed.
+# `figure_region` names the part of the human figure on the home page that this branch shades.
+
+[[branch]]
+key = "senses"
+order = 1
+name = "Senses"
+tagline = "Seeing, hearing, touch, and senses we were not born with."
+meaning = """
+Everything that brings the world in: sight, hearing, touch, balance, smell and taste, and any
+new sense a device could add, such as feeling a magnetic field or seeing in the dark. An upgrade
+here either gives a sense back to someone who lost it or gives a person a sense no one has had."""
+figure_region = "senses"
+
+[[branch]]
+key = "movement"
+order = 2
+name = "Movement and body"
+tagline = "Limbs, muscle, bone, and the machines that move with us."
+meaning = """
+The body as a thing that moves and holds up: replacement limbs, powered suits, stronger muscle
+and bone, joints that last. An upgrade here either restores movement someone lost or makes a
+body able to do what no unaided body can."""
+figure_region = "movement"
+
+[[branch]]
+key = "mind"
+order = 3
+name = "Memory and thinking"
+tagline = "Remembering, learning, attention, and the quiet merge with always-on tools."
+meaning = """
+How we remember, learn, focus and reason, whether changed from inside (a drug, an implant) or
+from outside (an AI assistant that is always on and always consulted). The outside route is
+the soft version of merging with machines: no surgery, but a mind that increasingly works in
+partnership with one. This branch tracks both."""
+figure_region = "mind"
+
+[[branch]]
+key = "mood"
+order = 4
+name = "Mood and drive"
+tagline = "How we feel, what we want, and whether that can be set on purpose."
+meaning = """
+Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels
+or what they are driven to do, by a drug, a device or a procedure, on purpose and for a reason
+the person chose."""
+figure_region = "mood"
+
+[[branch]]
+key = "lifespan"
+order = 5
+name = "Lifespan and repair"
+tagline = "Living longer, healing faster, and replacing what wears out."
+meaning = """
+How long a body lasts and how well it repairs itself: slowing ageing, regrowing tissue, replacing
+organs, clearing the damage that builds up over a life. An upgrade here adds healthy years or
+fixes something the body cannot fix on its own."""
+figure_region = "lifespan"
+
+[[branch]]
+key = "inheritance"
+order = 6
+name = "Inheritance"
+tagline = "What we pass to our children, chosen rather than left to chance."
+meaning = """
+Changes made before birth that a child carries for life and may pass on: editing the genes of an
+embryo, choosing among embryos, and whatever comes after. This is the one branch where the
+person changed could not consent, which is why the record here is watched most closely."""
+figure_region = "inheritance"
+
+[[branch]]
+key = "link"
+order = 7
+name = "The link to machines"
+tagline = "A direct connection between a brain and a computer, and how much can pass through it."
+meaning = """
+The hard version of merging with machines: a wire, a chip or a sensor that carries signals
+between a brain and a computer directly, with no hands, eyes or voice in between. The project's
+second number, how much information can pass through such a link each second, is plotted here."""
+figure_region = "link"

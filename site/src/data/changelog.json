@@ -1,0 +1,15 @@
+{
+  "source": "CHANGELOG.md",
+  "intro": "Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.",
+  "days": [
+    {
+      "date": "2026-10-16",
+      "items": [
+        "First version of the website built: a home page with the question, the human figure shaded by the furthest stage reached under each of the seven branches, and the headline count; a page per branch; a page per upgrade with its stage ladder; the Method, Story and Disagree pages. Deployed to the workers.dev preview address; the domains (theupgradetree.com and upgradetree.com) are John's to buy and attach.",
+        "The record layout written (docs/upgrade-schema.md): seven branches in data/branches.toml and one TOML file per branch, each upgrade carrying a stage from the five-rung ladder (idea only, shown in animals, first human, in clinical use, in wide use) with the date and public record that put it there. No probabilities, by John's ruling of 2026-10-16.",
+        "Four example upgrades seeded, one each under Senses, Lifespan and repair, Inheritance and The link to machines, marked \"EXAMPLE ENTRY\" in their notes. They show the record shape; the real list is being written from the project charter in TimeAssembler and replaces them. Every date in them written from memory is listed in the entry's `verify` field.",
+        "Repository created on GitHub (jfredson/upgrade-tree, public) with the MIT licence for code and CC BY 4.0 for the record."
+      ]
+    }
+  ]
+}

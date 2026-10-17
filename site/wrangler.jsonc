@@ -1,0 +1,22 @@
+{
+  // Cloudflare Workers config: a static-assets deployment, the same pattern as
+  // beltequation.com and sentient-horizons.com. Until the domains are attached the site
+  // lives at https://theupgradetree.jfredson.workers.dev.
+  //
+  // theupgradetree.com and upgradetree.com are John's to buy on Cloudflare (decided
+  // 2026-10-16, not yet done). Once they are in the account, uncomment the routes below,
+  // and the next deploy attaches them. Deploying with these routes before the zones exist
+  // fails, which is why they are commented out.
+  "name": "theupgradetree",
+  "compatibility_date": "2026-10-01",
+  // "routes": [
+  //   { "pattern": "theupgradetree.com", "custom_domain": true },
+  //   { "pattern": "www.theupgradetree.com", "custom_domain": true },
+  //   { "pattern": "upgradetree.com", "custom_domain": true },
+  //   { "pattern": "www.upgradetree.com", "custom_domain": true }
+  // ],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

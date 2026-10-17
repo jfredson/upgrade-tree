@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+import { tree } from '../lib/tree';
+---
+
+<Base title="How stages are decided — The Upgrade Tree" description="How an upgrade gets onto the tree, how its stage is decided, what counts as a record, and what the site does not do.">
+  <section class="hero">
+    <p class="eyebrow">Method</p>
+    <h1>How a stage is decided</h1>
+    <p class="lede">
+      Short for now. The rules below are the ones in force on 16 October 2026; they grow as the
+      list does, and every change to them is dated on the <a href="/story/">Story</a> page.
+    </p>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>What gets onto the tree</h2>
+    <p>
+      An upgrade is one specific technology that changes a human being on purpose: a device, a drug,
+      a procedure, or a practice such as leaning on an always-on AI assistant. To be written down it
+      needs three things: a plain name, a test that says what would count as a person having it
+      (written so that two readers would agree), and a source that would settle that test, meaning a
+      named public record such as a journal, a regulator or a news organisation. Something that
+      cannot be tested that way does not get in.
+    </p>
+
+    <h2>The five stages</h2>
+    <ol>
+      {tree.stages.map((s) => <li><strong>{s.label}.</strong> {s.meaning}</li>)}
+    </ol>
+    <p>
+      An upgrade sits on the highest rung a public record puts it on. Each rung reached gets a date
+      and a link to the record that put it there, and the upgrade's page shows the ladder with those
+      dates. Where an earlier rung was reached but the date is not known, the ladder says so rather
+      than guessing.
+    </p>
+
+    <h2>Three rules that surprise people</h2>
+    <ul>
+      <li>
+        <strong>A stage never moves down.</strong> If a device is later withdrawn from sale, the entry
+        is marked withdrawn, but the rung it reached stays, because the ladder records what has
+        happened. The count on the home page is a count of things that have happened.
+      </li>
+      <li>
+        <strong>"First human" does not need permission.</strong> A thing done against the rules of
+        the field, or the law, still counts as having been done to a person. The 2018 births of
+        gene-edited children are on the tree at that rung for exactly this reason.
+      </li>
+      <li>
+        <strong>There are no odds.</strong> The sister project, The Belt Equation, gives every event
+        a probability. This one does not, by a ruling of 16 October 2026: a stage, a date and a record
+        say what has happened, and this project does not guess about what will.
+      </li>
+    </ul>
+
+    <h2>The headline count</h2>
+    <p>
+      The number on the home page is the count of upgrades at <em>first human</em> or above, out of all
+      the upgrades on the tree. It is worked out from the record every time the site is built, never
+      typed in. The figure beside it shades each branch by the furthest stage reached under it.
+    </p>
+
+    <h2>Who does what</h2>
+    <p>
+      John Fredrickson rules on what goes on the tree and on every stage. Claude, an AI assistant,
+      drafts entries, proposes stages and checks records, and built this site. An entry written by
+      Claude from memory carries a list of the claims not yet checked against a source, shown on the
+      entry's page under "Still to check", and the entry is not treated as settled until that list is
+      empty.
+    </p>
+
+    <h2>What is not here yet</h2>
+    <p>
+      A regular reading of the news against every upgrade, so that a stage change is caught within
+      days; the second number, how much information can pass between a brain and a computer each
+      second, plotted over time on the <a href="/branches/link/">link to machines</a> page; and the
+      real list of upgrades, of which the four entries on the tree today are examples.
+    </p>
+  </section>
+</Base>

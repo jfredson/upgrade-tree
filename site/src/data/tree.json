@@ -1,0 +1,557 @@
+{
+  "exported_on": "2026-10-16",
+  "commit": "c29ac8a",
+  "headline_stage": "first-human",
+  "stages": [
+    {
+      "key": "idea-only",
+      "label": "Idea only",
+      "meaning": "Proposed or worked on, but not yet shown to work in any living animal.",
+      "rank": 0
+    },
+    {
+      "key": "shown-in-animals",
+      "label": "Shown in animals",
+      "meaning": "Shown to work in a living animal, in a peer-reviewed report.",
+      "rank": 1
+    },
+    {
+      "key": "first-human",
+      "label": "First human",
+      "meaning": "At least one person has had it, with a public record of that. Approval is not required.",
+      "rank": 2
+    },
+    {
+      "key": "in-clinical-use",
+      "label": "In clinical use",
+      "meaning": "A regulator somewhere has approved it, or it is in routine use in a named clinical setting.",
+      "rank": 3
+    },
+    {
+      "key": "in-wide-use",
+      "label": "In wide use",
+      "meaning": "Available to the general public in at least one country and taken up by many people.",
+      "rank": 4
+    }
+  ],
+  "horizons": {
+    "leaf": "Could move a stage within 1 to 5 years",
+    "mid": "Could move a stage within 5 to 20 years",
+    "root": "Longer than 20 years, if ever"
+  },
+  "branches": [
+    {
+      "key": "senses",
+      "order": 1,
+      "name": "Senses",
+      "tagline": "Seeing, hearing, touch, and senses we were not born with.",
+      "meaning": "Everything that brings the world in: sight, hearing, touch, balance, smell and taste, and any new sense a device could add, such as feeling a magnetic field or seeing in the dark. An upgrade here either gives a sense back to someone who lost it or gives a person a sense no one has had.",
+      "figure_region": "senses",
+      "path": "/branches/senses/",
+      "count": 1,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 0,
+        "in-clinical-use": 1,
+        "in-wide-use": 0
+      },
+      "furthest_rank": 3,
+      "furthest_stage": "in-clinical-use",
+      "furthest_label": "In clinical use",
+      "first_human_or_beyond": 1,
+      "upgrades": [
+        {
+          "id": "senses-implant-restores-sight-to-a-blind-person",
+          "name": "An implant gives a blind person back some sight",
+          "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
+          "stage": "in-clinical-use",
+          "stage_label": "In clinical use"
+        }
+      ]
+    },
+    {
+      "key": "movement",
+      "order": 2,
+      "name": "Movement and body",
+      "tagline": "Limbs, muscle, bone, and the machines that move with us.",
+      "meaning": "The body as a thing that moves and holds up: replacement limbs, powered suits, stronger muscle and bone, joints that last. An upgrade here either restores movement someone lost or makes a body able to do what no unaided body can.",
+      "figure_region": "movement",
+      "path": "/branches/movement/",
+      "count": 0,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 0,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": null,
+      "furthest_stage": null,
+      "furthest_label": null,
+      "first_human_or_beyond": 0,
+      "upgrades": []
+    },
+    {
+      "key": "mind",
+      "order": 3,
+      "name": "Memory and thinking",
+      "tagline": "Remembering, learning, attention, and the quiet merge with always-on tools.",
+      "meaning": "How we remember, learn, focus and reason, whether changed from inside (a drug, an implant) or from outside (an AI assistant that is always on and always consulted). The outside route is the soft version of merging with machines: no surgery, but a mind that increasingly works in partnership with one. This branch tracks both.",
+      "figure_region": "mind",
+      "path": "/branches/mind/",
+      "count": 0,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 0,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": null,
+      "furthest_stage": null,
+      "furthest_label": null,
+      "first_human_or_beyond": 0,
+      "upgrades": []
+    },
+    {
+      "key": "mood",
+      "order": 4,
+      "name": "Mood and drive",
+      "tagline": "How we feel, what we want, and whether that can be set on purpose.",
+      "meaning": "Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels or what they are driven to do, by a drug, a device or a procedure, on purpose and for a reason the person chose.",
+      "figure_region": "mood",
+      "path": "/branches/mood/",
+      "count": 0,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 0,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": null,
+      "furthest_stage": null,
+      "furthest_label": null,
+      "first_human_or_beyond": 0,
+      "upgrades": []
+    },
+    {
+      "key": "lifespan",
+      "order": 5,
+      "name": "Lifespan and repair",
+      "tagline": "Living longer, healing faster, and replacing what wears out.",
+      "meaning": "How long a body lasts and how well it repairs itself: slowing ageing, regrowing tissue, replacing organs, clearing the damage that builds up over a life. An upgrade here adds healthy years or fixes something the body cannot fix on its own.",
+      "figure_region": "lifespan",
+      "path": "/branches/lifespan/",
+      "count": 1,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 1,
+        "first-human": 0,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": 1,
+      "furthest_stage": "shown-in-animals",
+      "furthest_label": "Shown in animals",
+      "first_human_or_beyond": 0,
+      "upgrades": [
+        {
+          "id": "lifespan-a-drug-adds-healthy-years-to-a-life",
+          "name": "A drug makes people live longer in good health",
+          "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/",
+          "stage": "shown-in-animals",
+          "stage_label": "Shown in animals"
+        }
+      ]
+    },
+    {
+      "key": "inheritance",
+      "order": 6,
+      "name": "Inheritance",
+      "tagline": "What we pass to our children, chosen rather than left to chance.",
+      "meaning": "Changes made before birth that a child carries for life and may pass on: editing the genes of an embryo, choosing among embryos, and whatever comes after. This is the one branch where the person changed could not consent, which is why the record here is watched most closely.",
+      "figure_region": "inheritance",
+      "path": "/branches/inheritance/",
+      "count": 1,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 1,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": 2,
+      "furthest_stage": "first-human",
+      "furthest_label": "First human",
+      "first_human_or_beyond": 1,
+      "upgrades": [
+        {
+          "id": "inheritance-child-born-from-a-gene-edited-embryo",
+          "name": "A child is born from an embryo whose genes were edited on purpose",
+          "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ]
+    },
+    {
+      "key": "link",
+      "order": 7,
+      "name": "The link to machines",
+      "tagline": "A direct connection between a brain and a computer, and how much can pass through it.",
+      "meaning": "The hard version of merging with machines: a wire, a chip or a sensor that carries signals between a brain and a computer directly, with no hands, eyes or voice in between. The project's second number, how much information can pass through such a link each second, is plotted here.",
+      "figure_region": "link",
+      "path": "/branches/link/",
+      "count": 1,
+      "counts_by_stage": {
+        "idea-only": 0,
+        "shown-in-animals": 0,
+        "first-human": 1,
+        "in-clinical-use": 0,
+        "in-wide-use": 0
+      },
+      "furthest_rank": 2,
+      "furthest_stage": "first-human",
+      "furthest_label": "First human",
+      "first_human_or_beyond": 1,
+      "upgrades": [
+        {
+          "id": "link-wireless-brain-implant-controls-a-computer",
+          "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
+          "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
+          "stage": "first-human",
+          "stage_label": "First human"
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "inheritance-child-born-from-a-gene-edited-embryo",
+      "name": "A child is born from an embryo whose genes were edited on purpose",
+      "branch": "inheritance",
+      "branch_name": "Inheritance",
+      "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
+      "description": "The genes of a human embryo are changed before it is implanted, and a child is born carrying the change, able to pass it on. This happened in 2018, in China, against the rules of the field and the law, and the scientist responsible went to prison. The record keeps it at the stage it reached, because the ladder records what has happened, not whether it was allowed.",
+      "resolution": "A live birth is publicly confirmed, by the people who did it or by an official inquiry, of a child whose genome was deliberately altered at the embryo stage with the intent that the change be carried in every cell.",
+      "source": "The scientific or official record confirming the birth and the edit (a published report, a court or inquiry finding, or a government statement)",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2018-11-26",
+      "stage_record": "https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The first-human date is the day the births were announced (2018-11-26, at the Hong Kong summit); the births themselves were earlier in November 2018. Written from memory; check against the linked report."
+      ],
+      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The next stage, in clinical use, would need a regulator somewhere to approve editing embryos for birth, which none has.",
+      "example": true,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2018-11-26",
+          "record": "https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "lifespan-a-drug-adds-healthy-years-to-a-life",
+      "name": "A drug makes people live longer in good health",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/",
+      "description": "A pill that slows ageing itself, rather than treating one disease, so that the people who take it live longer and stay well longer. Several drugs do this in mice. None has yet been shown to do it in people, because a trial that could show it takes decades, and that gap between the animal result and the human one is exactly what the stage ladder is for.",
+      "resolution": "A peer-reviewed, controlled trial in people reports that those taking the drug lived longer, or stayed free of age-related disease longer, than those taking a placebo, by a margin the trial was designed to detect.",
+      "source": "The peer-reviewed trial report, and the regulator's approval record if it comes to that",
+      "horizon": "mid",
+      "horizon_label": "Could move a stage within 5 to 20 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "shown-in-animals",
+      "stage_rank": 1,
+      "stage_label": "Shown in animals",
+      "stage_reached_on": "2009-07-16",
+      "stage_record": "https://www.nature.com/articles/nature08221",
+      "earlier_stages": [],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The animal-stage date is the publication date of the 2009 Nature paper on rapamycin extending mouse lifespan; the day was written from memory and should be checked against the paper."
+      ],
+      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. Rapamycin is the clearest animal result; metformin and others have human trials under way or planned. When the real list is written this may split into one entry per drug.",
+      "example": true,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": true,
+          "reached_on": "2009-07-16",
+          "record": "https://www.nature.com/articles/nature08221"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "link-wireless-brain-implant-controls-a-computer",
+      "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
+      "branch": "link",
+      "branch_name": "The link to machines",
+      "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
+      "description": "A chip placed in the brain reads the signals that would have moved a hand and turns them into a moving cursor or typed text, with nothing passing through the skin: no wires, no plug. Wired versions have existed in trials since 2004. The fully wireless, fully implanted kind is the one that could leave the laboratory, and the first person received one in January 2024.",
+      "resolution": "A person with paralysis, fitted with a brain implant that has no wired connection through the skin, controls a computer cursor or types text by thought alone, as reported by the trial's sponsor and confirmed by an independent report.",
+      "source": "The trial sponsor's own report, confirmed by a named news organisation or a peer-reviewed publication",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "first-human",
+      "stage_rank": 2,
+      "stage_label": "First human",
+      "stage_reached_on": "2024-01-28",
+      "stage_record": "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/",
+      "earlier_stages": [
+        {
+          "stage": "shown-in-animals",
+          "reached_on": "2021-04-09",
+          "record": "https://neuralink.com/blog/monkey-mindpong/"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The first-human date (2024-01-28, the day before Musk's announcement) and the animal date (the 2021 monkey demonstration) were written from memory; check both against the linked records."
+      ],
+      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The wired first human (BrainGate, 2004) belongs to a separate entry when the real list is written.",
+      "example": true,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": "2021-04-09",
+          "record": "https://neuralink.com/blog/monkey-mindpong/"
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": true,
+          "reached_on": "2024-01-28",
+          "record": "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    },
+    {
+      "id": "senses-implant-restores-sight-to-a-blind-person",
+      "name": "An implant gives a blind person back some sight",
+      "branch": "senses",
+      "branch_name": "Senses",
+      "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
+      "description": "A camera or a light sensor feeds signals to an implant on the retina or in the brain, and a person who was blind sees shapes, edges or light again. It is the first upgrade of a sense that has gone all the way from a laboratory to a product a doctor can prescribe, which is why it is the example seeded here.",
+      "resolution": "A person with no useful vision, fitted with a device that sends signals to the retina, the optic nerve or the visual part of the brain, can reliably tell the position of a light source or the outline of an object they could not see before, as reported in a peer-reviewed trial.",
+      "source": "Peer-reviewed trial reports and the regulator's approval record (the United States Food and Drug Administration, or its equivalent elsewhere)",
+      "horizon": "leaf",
+      "horizon_label": "Could move a stage within 1 to 5 years",
+      "status": "tracked",
+      "superseded_by": null,
+      "depends_on": [],
+      "stage": "in-clinical-use",
+      "stage_rank": 3,
+      "stage_label": "In clinical use",
+      "stage_reached_on": "2013-02-14",
+      "stage_record": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease",
+      "earlier_stages": [
+        {
+          "stage": "first-human",
+          "reached_on": "2002-01-01",
+          "record": "https://pubmed.ncbi.nlm.nih.gov/12928208/"
+        }
+      ],
+      "long_shot": false,
+      "mechanism": null,
+      "breaking_point": null,
+      "revisions": [],
+      "verify": [
+        "The first-human date is given as the year 2002 (the first Argus implant, at the Doheny Eye Institute); the exact day was not checked.",
+        "The FDA approval date of the Argus II, 2013-02-14, was written from memory and should be checked against the press release linked."
+      ],
+      "notes": "EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The device this entry rests on (the Argus II) was taken off the market by its maker in 2019, which does not lower its stage: the ladder records the furthest a technology has reached, and a withdrawal is noted here and in the status when it is ruled on.",
+      "example": true,
+      "depends_on_refs": [],
+      "needed_by": [],
+      "ladder": [
+        {
+          "key": "idea-only",
+          "label": "Idea only",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "shown-in-animals",
+          "label": "Shown in animals",
+          "reached": true,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        },
+        {
+          "key": "first-human",
+          "label": "First human",
+          "reached": true,
+          "current": false,
+          "reached_on": "2002-01-01",
+          "record": "https://pubmed.ncbi.nlm.nih.gov/12928208/"
+        },
+        {
+          "key": "in-clinical-use",
+          "label": "In clinical use",
+          "reached": true,
+          "current": true,
+          "reached_on": "2013-02-14",
+          "record": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-retinal-implant-adults-rare-genetic-eye-disease"
+        },
+        {
+          "key": "in-wide-use",
+          "label": "In wide use",
+          "reached": false,
+          "current": false,
+          "reached_on": null,
+          "record": null
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "upgrades": 4,
+    "first_human_or_beyond": 3,
+    "by_stage": {
+      "idea-only": 0,
+      "shown-in-animals": 1,
+      "first-human": 2,
+      "in-clinical-use": 1,
+      "in-wide-use": 0
+    },
+    "long_shots": 0,
+    "examples": 4,
+    "branches_with_upgrades": 4,
+    "to_verify": 5
+  },
+  "last_checked": null
+}

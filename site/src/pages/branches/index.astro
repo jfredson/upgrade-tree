@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tree } from '../../lib/tree';
+const c = tree.counts;
+---
+
+<Base title="The seven branches — The Upgrade Tree" description="The seven things about a person that can be changed on purpose, and what has been recorded under each.">
+  <section class="hero">
+    <p class="eyebrow">The branches</p>
+    <h1>Seven things about a person that can be changed</h1>
+    <p class="lede">
+      Every upgrade on the tree sits under one of these. The count on the home page adds them all up;
+      this page shows them one branch at a time.
+    </p>
+  </section>
+
+  <section class="section">
+    <ul class="branches">
+      {tree.branches.map((b) => (
+        <li>
+          <a class="bcard" href={b.path}>
+            <div class="bcard-top"><span class="n">{b.order} of 7</span><span>{b.count === 0 ? 'nothing yet' : `${b.count} upgrade${b.count === 1 ? '' : 's'}`}</span></div>
+            <div class="bcard-title">{b.name}</div>
+            <div class="bcard-sub">{b.tagline}</div>
+            <div class="bcard-foot">{b.furthest_label ? `Furthest stage: ${b.furthest_label.toLowerCase()}` : 'No stage reached'}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>The stages</h2>
+    <p>
+      Each upgrade sits on one rung of a five-rung ladder. It moves up when a public record shows the
+      next thing has happened, and it never moves down: if a device is later withdrawn, the record
+      says so, but the rung it reached stays.
+    </p>
+    <ol>
+      {tree.stages.map((s) => <li><strong>{s.label}.</strong> {s.meaning}</li>)}
+    </ol>
+    <p class="dim">
+      {c.upgrades} upgrade{c.upgrades === 1 ? '' : 's'} on the tree, {c.first_human_or_beyond} at a first human or beyond.
+      How a stage is decided: <a href="/method/">Method</a>.
+    </p>
+  </section>
+</Base>

@@ -1,0 +1,31 @@
+# Upgrades under the Lifespan and repair branch. Record layout: docs/upgrade-schema.md.
+# Seeded 2026-10-16 with one example so the site has something to show; the real list is
+# being written from the project charter in TimeAssembler and replaces these.
+
+[[upgrade]]
+id = "lifespan-a-drug-adds-healthy-years-to-a-life"
+name = "A drug makes people live longer in good health"
+branch = "lifespan"
+description = """
+A pill that slows ageing itself, rather than treating one disease, so that the people who take it
+live longer and stay well longer. Several drugs do this in mice. None has yet been shown to do it
+in people, because a trial that could show it takes decades, and that gap between the animal
+result and the human one is exactly what the stage ladder is for."""
+resolution = """
+A peer-reviewed, controlled trial in people reports that those taking the drug lived longer, or
+stayed free of age-related disease longer, than those taking a placebo, by a margin the trial
+was designed to detect."""
+source = "The peer-reviewed trial report, and the regulator's approval record if it comes to that"
+horizon = "mid"
+status = "tracked"
+depends_on = []
+stage = "shown-in-animals"
+stage_reached_on = 2009-07-16
+stage_record = "https://www.nature.com/articles/nature08221"
+verify = [
+  "The animal-stage date is the publication date of the 2009 Nature paper on rapamycin extending mouse lifespan; the day was written from memory and should be checked against the paper.",
+]
+notes = """
+EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. Rapamycin
+is the clearest animal result; metformin and others have human trials under way or planned. When
+the real list is written this may split into one entry per drug."""

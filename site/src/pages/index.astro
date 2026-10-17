@@ -1,0 +1,110 @@
+---
+// The home page: the question in large type, the figure, the count, one paragraph of
+// explanation, the seven branches. Every number comes from tree.json (scripts/export.py).
+import Base from '../layouts/Base.astro';
+import Figure from '../components/Figure.astro';
+import { tree } from '../lib/tree';
+
+const c = tree.counts;
+const stages = tree.stages;
+const examplesOnly = c.upgrades > 0 && c.examples === c.upgrades;
+---
+
+<Base>
+  <section class="home-hero">
+    <p class="eyebrow">A public count, kept in the open</p>
+    <h1 class="question">How much of a human being can we change on purpose today?</h1>
+    <p class="lede">
+      Not in a story, and not someday. Today, with a device, a drug or a procedure that at least one
+      person has actually had. This site keeps count, and watches the one change that would matter
+      most if it came: a direct link between a brain and a machine.
+    </p>
+  </section>
+
+  <div class="home-grid">
+    <div class="figure-card">
+      <Figure />
+      <ul class="legend">
+        <li><i class="stage-none"></i> nothing recorded yet</li>
+        {stages.map((s) => <li><i class={`stage-${s.rank}`}></i> {s.label.toLowerCase()}</li>)}
+      </ul>
+      <p class="figure-note">Each part of the figure is one of the seven branches, shaded by the furthest stage any upgrade under it has reached. Click a part to see what is there.</p>
+    </div>
+
+    <div class="headline">
+      <div class="count-card">
+        <p class="big-number">{c.first_human_or_beyond}<small>of {c.upgrades}</small></p>
+        <p class="big-claim">
+          {c.first_human_or_beyond === 1 ? 'upgrade on the tree has' : 'upgrades on the tree have'} reached a first human.
+        </p>
+        <p class="big-sub">
+          Counted from the record, not chosen by hand. An upgrade counts once a public record shows
+          that at least one person has had it, whether or not anyone approved.
+        </p>
+        <div class="stage-row">
+          {stages.map((s) => (
+            <div>
+              <span class="stat">{c.by_stage[s.key]}</span>
+              <span class="stat-label">{s.label.toLowerCase()}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="checked-strip">
+        <span class="k">Last checked</span>
+        <span>{tree.last_checked ? tree.last_checked : 'not yet checked'}</span>
+        <span class="dim">A regular reading of the news against every upgrade is coming; until the first one runs, this says so.</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section explain narrow">
+    <p>
+      An <em>upgrade</em>, here, is one specific way of changing a human being on purpose: an implant that
+      gives back some sight, a pill meant to slow ageing, a chip that lets a paralysed person type by
+      thought. Each one is written down with a plain test of what would count as a person having it,
+      the public record that settles that, and a <em>stage</em>: idea only, shown in animals, a first
+      human, in use by doctors, or in wide use. The stage is a fact about what has happened, not a
+      guess about what will. There are no odds on this site. The seven <em>branches</em> are the seven
+      things about a person that can be changed: what they sense, how they move, how they think and
+      remember, how they feel, how long they last, what they pass to their children, and how directly
+      they can be joined to a machine.
+    </p>
+    {examplesOnly && (
+      <p class="dim" style="font-size: 15px;">
+        The {c.upgrades} upgrades on the tree today are examples, seeded on 16 October 2026 to show how the
+        record works while the real list is written. Each says so on its page. The counts above will change
+        as the list fills in.
+      </p>
+    )}
+  </section>
+
+  <section class="section">
+    <div class="shead"><h2>The seven branches</h2><span>what is recorded under each</span></div>
+    <ul class="branches">
+      {tree.branches.map((b) => (
+        <li>
+          <a class="bcard" href={b.path}>
+            <div class="bcard-top"><span class="n">{b.order} of 7</span><span>{b.count === 0 ? 'nothing yet' : `${b.count} upgrade${b.count === 1 ? '' : 's'}`}</span></div>
+            <div class="bcard-title">{b.name}</div>
+            <div class="bcard-sub">{b.tagline}</div>
+            <div class="bcard-foot">{b.furthest_label ? `Furthest stage: ${b.furthest_label.toLowerCase()}` : 'No stage reached'}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section narrow prose">
+    <h2>Why keep count</h2>
+    <p>
+      One idea about the future says that as machines get smarter, people keep up by joining with
+      them: better senses, better memory, a direct line from brain to computer. Whether that is
+      happening is a question with an answer, and the answer is a list. This site is that list,
+      kept in the open so that anyone can check an entry, argue with a stage, or add what is missing.
+      The rules for deciding a stage are on the <a href="/method/">Method</a> page, every change is
+      dated on the <a href="/story/">Story</a> page, and the place to push back is
+      <a href="/disagree/">Disagree with something</a>.
+    </p>
+  </section>
+</Base>

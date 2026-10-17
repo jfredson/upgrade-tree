@@ -1,0 +1,72 @@
+---
+import Base from '../../../layouts/Base.astro';
+import StageBadge from '../../../components/StageBadge.astro';
+import { tree, type Branch } from '../../../lib/tree';
+
+export function getStaticPaths() {
+  return tree.branches.map((b) => ({ params: { branch: b.key }, props: { branch: b } }));
+}
+
+const { branch } = Astro.props as { branch: Branch };
+const upgrades = tree.upgrades.filter((u) => u.branch === branch.key && u.status !== 'superseded');
+const prev = tree.branches.find((b) => b.order === branch.order - 1);
+const next = tree.branches.find((b) => b.order === branch.order + 1);
+---
+
+<Base title={`${branch.name} — The Upgrade Tree`} description={`${branch.tagline} What has been recorded under this branch of The Upgrade Tree, with the stage each upgrade has reached.`}>
+  <section class="hero">
+    <p class="eyebrow"><a href="/branches/">The branches</a> · {branch.order} of 7</p>
+    <h1>{branch.name}</h1>
+    <p class="lede">{branch.tagline}</p>
+    <p class="prose" style="margin-top: 8px;">{branch.meaning}</p>
+  </section>
+
+  <section class="section">
+    <div class="shead">
+      <h2>{upgrades.length === 0 ? 'Nothing recorded yet' : `${upgrades.length} upgrade${upgrades.length === 1 ? '' : 's'}`}</h2>
+      <span>{branch.furthest_label ? `furthest stage reached: ${branch.furthest_label.toLowerCase()}` : 'the figure on the home page shows this branch grey'}</span>
+    </div>
+    {upgrades.length === 0 ? (
+      <p class="empty">
+        No upgrade has been written down under this branch yet. The list is being written from the
+        project's charter and lands here as it is checked. If you know what belongs here,
+        <a href="/disagree/">say so</a>.
+      </p>
+    ) : (
+      <ul class="ulist">
+        {upgrades.map((u) => (
+          <li>
+            <span class="uname"><a href={u.path}>{u.name}</a></span>
+            <span class="umeta">
+              <StageBadge upgrade={u} />
+              {u.example && <span class="stage-badge example">example entry</span>}
+              {u.status === 'withdrawn' && <span class="chip no">withdrawn</span>}
+            </span>
+            <p class="udesc">{u.description}</p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  {branch.key === 'link' && (
+    <section class="section">
+      <div class="placeholder-card">
+        <h3>The second number: how much can pass between a brain and a machine</h3>
+        <p>
+          The project's second number is how much information a direct link between a brain and a
+          computer can carry each second, and how that has grown. It will be plotted here, with its
+          sources and the table of plotted numbers, once there is a series to plot. Nothing is
+          plotted yet.
+        </p>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <p class="dim" style="font-family: var(--sans); font-size: 13px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+      <span>{prev && <a href={prev.path}>← {prev.name}</a>}</span>
+      <span>{next && <a href={next.path}>{next.name} →</a>}</span>
+    </p>
+  </section>
+</Base>

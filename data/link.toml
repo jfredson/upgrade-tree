@@ -1,0 +1,35 @@
+# Upgrades under The link to machines branch. Record layout: docs/upgrade-schema.md.
+# Seeded 2026-10-16 with one example so the site has something to show; the real list is
+# being written from the project charter in TimeAssembler and replaces these.
+# The project's second number, how much information can pass between a brain and a computer
+# each second, is plotted on this branch's page once there is a series to plot.
+
+[[upgrade]]
+id = "link-wireless-brain-implant-controls-a-computer"
+name = "A fully implanted wireless brain chip lets a paralysed person control a computer"
+branch = "link"
+description = """
+A chip placed in the brain reads the signals that would have moved a hand and turns them into a
+moving cursor or typed text, with nothing passing through the skin: no wires, no plug. Wired
+versions have existed in trials since 2004. The fully wireless, fully implanted kind is the one
+that could leave the laboratory, and the first person received one in January 2024."""
+resolution = """
+A person with paralysis, fitted with a brain implant that has no wired connection through the
+skin, controls a computer cursor or types text by thought alone, as reported by the trial's
+sponsor and confirmed by an independent report."""
+source = "The trial sponsor's own report, confirmed by a named news organisation or a peer-reviewed publication"
+horizon = "leaf"
+status = "tracked"
+depends_on = []
+stage = "first-human"
+stage_reached_on = 2024-01-28
+stage_record = "https://www.reuters.com/technology/neuralink-implants-brain-chip-first-human-musk-says-2024-01-29/"
+earlier_stages = [
+  { stage = "shown-in-animals", reached_on = 2021-04-09, record = "https://neuralink.com/blog/monkey-mindpong/" },
+]
+verify = [
+  "The first-human date (2024-01-28, the day before Musk's announcement) and the animal date (the 2021 monkey demonstration) were written from memory; check both against the linked records.",
+]
+notes = """
+EXAMPLE ENTRY, seeded 2026-10-16 to show the record shape; the real list replaces it. The wired
+first human (BrainGate, 2004) belongs to a separate entry when the real list is written."""
