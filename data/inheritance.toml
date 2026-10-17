@@ -61,7 +61,7 @@ earlier_stages = [
   { stage = "first-human", reached_on = 2016-04-06, record = "https://doi.org/10.1016/j.rbmo.2017.01.013" },
 ]
 verify = [
-  "The first child's birth date (2016-04-06) is taken from coverage of the case; check it against the full text of the linked paper, which may give only the month.",
+  "The first child's birth date (2016-04-06) rests on press coverage of the case. The linked paper was read in full on 2026-10-16 and gives no birth date at all (only that the boy was seven months old when it was written), so the day still needs a source from the clinic or the authors.",
 ]
 notes = """
 The in-clinical-use record is the British regulator's approval of the first clinic licence, to
@@ -96,9 +96,6 @@ depends_on = []
 stage = "in-clinical-use"
 stage_reached_on = 2025-06-04
 stage_record = "https://mynucleus.com/deep-dives/embryo"
-verify = [
-  "The launch date (2025-06-04) is the date on the company's press release as republished by third parties; the original wire copy was not found. Check it against the company's own newsroom.",
-]
 notes = """
 The record is Nucleus Genomics' own page for its embryo product, launched in June 2025 with scores
 for appearance and cognitive ability and later listing predicted IQ and height; a second company,

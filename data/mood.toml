@@ -78,9 +78,6 @@ depends_on = []
 stage = "in-clinical-use"
 stage_reached_on = 2023-07-01
 stage_record = "https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists"
-verify = [
-  "The regulator's page would not load when this record was checked on 2026-10-16; its title and date were confirmed from the regulator's own site listing. Open the page and confirm the wording.",
-]
 notes = """
 The record is the Therapeutic Goods Administration's decision of February 2023, in force from
 1 July 2023, allowing authorised psychiatrists to prescribe psilocybin for treatment-resistant
