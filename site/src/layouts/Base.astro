@@ -23,6 +23,8 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+// The preview picture link cards show (site/public/social-preview.png, made by scripts/social-image.mjs); an absolute address, as the tags require.
+const socialImage = new URL('/social-preview.png', Astro.site).href;
 const currentYear = new Date().getFullYear();
 // "16 October 2026" for the footer; the design standard writes dates out there.
 const longDate = (iso: string) => {
@@ -65,7 +67,13 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Upgrade Tree: How much of a human being can we change on purpose today?" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
   </head>
   <body>
     <Nav />
