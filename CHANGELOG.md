@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-10-18
+
+- **The weekly reading moves from John's Mac to a cloud routine, as John ruled on 2026-10-18.** The routine "Upgrade Tree weekly reading" (routine id `trig_01Qo6Rh8i92T3qDfp44uaHbr`) keeps the Sunday 18:00 Pacific slot and runs whether or not the Mac is awake. The Mac task stays until the routine's first reading lands; that is on 2026-10-25, a week after the Mac task's run of 2026-10-18, so the two never fire in the same week. Only the schedule changes: the procedure, the limits on what the reading may edit and the record it writes are the same. `docs/weekly-reading.md` (decision 1) and the README say so.
+
 ## 2026-10-17
 
 - **The five statements still marked unchecked were each taken to a source a reader can open: none is left (checked on 2026-10-17).** John ruled the same day that nothing in the record rests on an AI model's recollection: every fact carries a source a reader can open, and a fact that cannot be sourced after a real search leaves the record. The headline file now reports no statements to check (it said five). No stage, no upgrade and no count changed: the headline is still 28 of 35. Every search and every page opened is listed in `docs/verify-pass-2026-10-17.md`; pages that refused an automated reader (the New England Journal of Medicine's, the journal that printed a 2016 conference abstract, and a defence-department report archive that was closed for maintenance) were left alone, not got round.

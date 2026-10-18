@@ -243,6 +243,18 @@ ruled yet unless the line says so (item 12, proposed 2026-10-17, was ruled as pr
    awake but needs the Claude GitHub App on the repository and cannot be made from this session.
    The task created tonight is the Mac one; moving it to the cloud is a one-step change John
    can ask for.
+
+   **Moved to a cloud routine on John's ruling of 2026-10-18.** The reading now runs as the
+   cloud routine "Upgrade Tree weekly reading" (routine id `trig_01Qo6Rh8i92T3qDfp44uaHbr`, at
+   claude.ai/code/routines), Sundays at 18:00 Pacific as before, with this repository attached;
+   it runs whether or not the Mac is awake and its prompt is the same as the Mac task's: open the
+   repository and follow `docs/weekly-reading-prompt.md`. The Mac task
+   `upgrade-tree-weekly-reading` is kept until the cloud routine's first reading has landed. The
+   Mac task ran on 2026-10-18; the cloud routine was created switched off on 2026-10-18 so that it
+   would not also fire that evening, and its first firing is Sunday 2026-10-25 at 18:00 Pacific,
+   so the two never fire in the same week. Once that reading has landed and its record is on
+   `main`, the Mac task is switched off. That first run is also what shows whether the Claude
+   GitHub App can push to this repository; until then it is unconfirmed.
 2. **Four verdicts, not five.** High confidence. The Belt Equation has `moved` and `resolved`
    because it has a number and a yes; this tree has only a rung, so `stage-change` covers both.
    Alternative: keep `resolved` for an upgrade reaching the top rung. Rejected because the top
