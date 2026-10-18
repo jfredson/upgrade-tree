@@ -36,7 +36,7 @@ const pointingRest = cursorBest && cursorBestReviewed
 const years = bandwidth.counts.first_date && bandwidth.counts.last_date ? `${bandwidth.counts.first_date.slice(0, 4)} to ${bandwidth.counts.last_date.slice(0, 4)}` : '';
 ---
 
-<Base title={`${branch.name} — The Upgrade Tree`} description={`${branch.tagline} What has been recorded under this branch of The Upgrade Tree, with the stage each upgrade has reached.`}>
+<Base title={`${branch.name} · The Upgrade Tree`} description={`${branch.tagline} What has been recorded under this branch of The Upgrade Tree, with the stage each upgrade has reached.`}>
   <section class="hero">
     <p class="eyebrow"><a href="/branches/">The branches</a> · {branch.order} of 7</p>
     <h1>{branch.name}</h1>
