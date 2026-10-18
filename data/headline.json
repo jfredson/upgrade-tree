@@ -1,13 +1,13 @@
 {
   "computed_on": "2026-10-17",
-  "commit": "1b3f971",
+  "commit": "5b6aa4f",
   "last_reading": "2026-10-16",
   "method": {
     "document": "docs/upgrade-schema.md",
     "headline_stage": "first-human",
     "headline_stage_label": "First human",
     "status": "ruled by John 2026-10-16: a stage, a date and a public record for every upgrade, no probabilities; the count is taken at the first-human rung",
-    "to_verify": 5
+    "to_verify": 0
   },
   "headline": {
     "count": 28,
@@ -46,7 +46,7 @@
     "name": "Brain-to-machine bandwidth",
     "latest": {
       "id": "2024-uc-davis-speech-decoder",
-      "date": "2024-08-15",
+      "date": "2024-08-14",
       "measure": "text",
       "value": 31.6,
       "unit": "words a minute",

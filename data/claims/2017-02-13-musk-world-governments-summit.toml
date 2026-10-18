@@ -11,7 +11,7 @@ Gergawi in a conversation with Elon Musk during WGS17", uploaded 2017-02-15, 35 
 runs about 24:48 to 27:14."""
 source_url = "https://www.youtube.com/watch?v=rCoFKUJ_8Yo"
 source_locator = "about 24:48 to 27:14"
-checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the official upload has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 26:15 and Whisper at 26:12 (the range given is widened to cover both). No person has listened to the recording; the project's rule does not need one."
+checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the official upload has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 26:15 and Whisper at 26:12 (the range given is widened to cover both). The thumb passage was read again in the captions on 2026-10-17 (26:54 to 26:59, \"10 bits per second or 100 if you being generous\", the captions dropping the \"'re\"), and the earlier Whisper reading of the same stretch has the same words. No person has listened to the recording; the project's rule does not need one."
 words = "a closer merger of biological intelligence and digital intelligence"
 words_locator = "at 26:09 to 26:19"
 claimed = """
@@ -19,8 +19,9 @@ Asked how people find meaning in a future run by AI, he offers what he himself c
 path bordering on science fiction: some merger of biological and machine intelligence. He argues
 people are already partly machine because of phones and computers, which he calls a digital third
 layer on top of the animal brain and the thinking brain. The limit, he says at 26:20, is mostly
-the bandwidth of the link between brain and device, especially output: typing with thumbs is
-around ten bits per second against a computer's trillion. A high-bandwidth interface to the
+the bandwidth of the link between brain and device, especially output: a computer can communicate at
+a trillion bits per second, he says, while a thumb can maybe do "10 bits per second or 100 if
+you're being generous" (about 26:53 to 26:59). A high-bandwidth interface to the
 brain, he says at 27:00, would help reach symbiosis between human and machine intelligence and
 might solve the control problem and the usefulness problem. He closes by calling himself
 esoteric. Hedged throughout: a potential path, probably, maybe."""
@@ -28,9 +29,6 @@ not_in_source = "Elimination, extinction, a new species, or any instruction that
 bears_on = ["link"]
 bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
 coverage = ["Fortune, 2017-02-13, and many others that week; CNBC's 2018-02-13 anniversary recap. Most coverage led with \"must become cyborgs\", which is a tighter claim than the recording."]
-verify = [
-  "The account says a thumb manages 'around ten bits per second'. Both transcripts have him saying 'maybe do, I don't know, 10 bits per second or 100 if you're being generous' (about 26:53 to 26:59), so the account leaves out the second figure. Not changed here; whether it should carry it is for John.",
-]
 
 [claim.transcript_check]
 result = "agree"

@@ -60,15 +60,18 @@ stage_record = "https://www.hfea.gov.uk/about-us/news-and-press-releases/2017/hf
 earlier_stages = [
   { stage = "first-human", reached_on = 2016-04-06, record = "https://doi.org/10.1016/j.rbmo.2017.01.013" },
 ]
-verify = [
-  "The first child's birth date (2016-04-06) rests on press coverage of the case (CNN, The Guardian and New York magazine, all on 2016-09-27 or 28, say he was born that day). The linked paper was read in full on 2026-10-16 and gives no birth date at all (only that the boy was seven months old when it was written); the authors' later commentary (Journal of Molecular Genetics and Medicine, 2017, free text read on 2026-10-17) gives only his age, 11 months, and the clinic's own pages carry press clippings and no statement of the date. The 2016 conference abstract and the New Scientist report that broke the story could not be read, so the day still needs a source from the clinic or the authors.",
-]
 notes = """
 The in-clinical-use record is the British regulator's approval of the first clinic licence, to
 Newcastle Fertility at Life, in March 2017; the first births under it were confirmed by the regulator
 in 2023 (fewer than five, in answer to a freedom-of-information request) and eight were reported in
 the New England Journal of Medicine in July 2025. The first-human record is the 2017 paper on the
-boy born in Mexico in 2016 to a mother carrying Leigh syndrome. Children born in the 1990s after a
+boy born in Mexico in 2016 to a mother carrying Leigh syndrome. The paper gives no birth date (only
+that the boy was seven months old when it was written). The day, 6 April 2016, is from New Scientist's
+report that broke the story, dated 2016-09-27 (Jessica Hamzelou, in the box "Two women, one man and a
+baby": "the boy was born on 6 April 2016"; https://www.newscientist.com/article/2107219-exclusive-worlds-first-baby-born-with-new-3-parent-technique/),
+which CBS News repeated. No document from the clinic or the authors that could be opened gives the day,
+so the news report is the source; it fits the paper and the same report's "five-month-old" on
+2016-09-27. Children born in the 1990s after a
 cruder transfer of egg cytoplasm also carried a donor's mitochondria, but for infertility rather than
 to avoid a disease, so they fall outside this entry's test. The rung in wide use needs a counted
 population in the hundreds or more, and the total so far is in the tens."""

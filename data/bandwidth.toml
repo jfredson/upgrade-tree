@@ -110,15 +110,14 @@ date = 2023-08-23
 measure = "text"
 value = 78
 unit = "words a minute"
-what = "Silently attempted speech decoded into text, speech sounds and a talking avatar: a median of 78 words a minute with a median word error rate of 25 per cent on a large vocabulary (a 1,024-word sentence set, per the paper's extended data), from high-density recordings on the surface of the speech cortex."
+what = "Silently attempted speech decoded into text, speech sounds and a talking avatar: a median of 78 words a minute (78.3 in the main text) with a median word error rate of 25 per cent (25.5), on a vocabulary of 1,024 words, from high-density recordings on the surface of the speech cortex. The paper calls this large-vocabulary decoding; the 1,024 words are those of the sentences used to test it (249 sentences, not used in training), and a larger vocabulary of 39,378 words was tried only offline, at a word error rate of 27.6 per cent."
 who = "Sean Metzger, Kaylo Littlejohn, Alexander Silva, David Moses, Margaret Seaton and colleagues at the University of California, San Francisco (Edward Chang, senior author)."
 in_whom = "One woman, the trial's participant Bravo-3, with severe limb and vocal paralysis."
 repeated = "A single participant; the paper's readable text makes no claim of repetition."
 peer_reviewed = true
 source = "https://doi.org/10.1038/s41586-023-06443-4"
-source_note = "Nature 620, pages 1037 to 1046, published 2023-08-23; the 78 words a minute and 25 per cent figures are in the abstract. The vocabulary of the headline figure is from the extended data captions, not the abstract."
+source_note = "Nature 620, pages 1037 to 1046, published 2023-08-23. The 78 words a minute and 25 per cent figures are in the abstract. The vocabulary is read from the full text (open copy, PubMed Central PMC10826467, and the journal's page, both read on 2026-10-17): the legend of Figure 2 says its panels, including the decoded words a minute, \"were computed using the real-time evaluation trials with the 1024-word-General sentence set\"; the text of the Results gives the median rate as 78.3 words a minute and the median word error rate as 25.5 per cent on those trials, and says the sentences were 249 drawn at random from that set, not used in training. The sentence that gives 78.3 follows one about a freeform test, and the text cites its figure panel as 2f where the legend labels the decoded-rate panel 2e; the legend's statement that panels b to g were computed on the 1024-word real-time trials is what ties the rate to that vocabulary."
 upgrade = "link-brain-implant-turns-intended-speech-into-text"
-verify = ["Which vocabulary the headline 78 words a minute belongs to (the 1,024-word set) was read from the extended-data captions as summarised, not from the main text; confirm in the full paper."]
 
 [[point]]
 id = "2024-neuralink-cursor-bits-per-second"
@@ -137,7 +136,7 @@ upgrade = "link-wireless-brain-implant-controls-a-computer"
 
 [[point]]
 id = "2024-uc-davis-speech-decoder"
-date = 2024-08-15
+date = 2024-08-14
 measure = "text"
 value = 31.6
 unit = "words a minute"
@@ -147,9 +146,8 @@ in_whom = "One man of 45 with motor neurone disease and severe speech impairment
 repeated = "A single participant, over 84 research sessions and eight months; the accuracy held across them."
 peer_reviewed = true
 source = "https://doi.org/10.1056/NEJMoa2314132"
-source_note = "New England Journal of Medicine 391, pages 609 to 618, issue dated 2024-08-15; the 31.6 words a minute and 2.5 per cent figures are in the Results, the 97.5 per cent and 125,000 in the abstract."
+source_note = "New England Journal of Medicine 391, pages 609 to 618; published online 2024-08-14 and dated 2024-08-15 in the print issue (the date given is the first). The 31.6 words a minute and 2.5 per cent figures are in the Results, the 97.5 per cent and 125,000 in the abstract. The online day rests on UC Davis Health's own release of 2024-08-14, which says the study \"was published today\" in the journal (https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08), and agrees with the PubMed record (entered 2024-08-14, print date 2024-08-15) and the DOI registry (record created 2024-08-14). The journal's own page sits behind a bot check that was not bypassed."
 upgrade = "link-brain-implant-turns-intended-speech-into-text"
-verify = ["The date here is the print issue's, 2024-08-15; the journal's online-first date (thought to be 2024-08-14) could not be read because the journal's site refused automated readers."]
 
 # ---- baselines: the rates a reader already has ----
 

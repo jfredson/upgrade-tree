@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-10-17",
-  "commit": "1b3f971",
+  "commit": "5b6aa4f",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -483,13 +483,11 @@
       "mechanism": null,
       "breaking_point": null,
       "revisions": [],
-      "verify": [
-        "The first child's birth date (2016-04-06) rests on press coverage of the case (CNN, The Guardian and New York magazine, all on 2016-09-27 or 28, say he was born that day). The linked paper was read in full on 2026-10-16 and gives no birth date at all (only that the boy was seven months old when it was written); the authors' later commentary (Journal of Molecular Genetics and Medicine, 2017, free text read on 2026-10-17) gives only his age, 11 months, and the clinic's own pages carry press clippings and no statement of the date. The 2016 conference abstract and the New Scientist report that broke the story could not be read, so the day still needs a source from the clinic or the authors."
-      ],
+      "verify": [],
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The in-clinical-use record is the British regulator's approval of the first clinic licence, to Newcastle Fertility at Life, in March 2017; the first births under it were confirmed by the regulator in 2023 (fewer than five, in answer to a freedom-of-information request) and eight were reported in the New England Journal of Medicine in July 2025. The first-human record is the 2017 paper on the boy born in Mexico in 2016 to a mother carrying Leigh syndrome. Children born in the 1990s after a cruder transfer of egg cytoplasm also carried a donor's mitochondria, but for infertility rather than to avoid a disease, so they fall outside this entry's test. The rung in wide use needs a counted population in the hundreds or more, and the total so far is in the tens.",
+      "notes": "The in-clinical-use record is the British regulator's approval of the first clinic licence, to Newcastle Fertility at Life, in March 2017; the first births under it were confirmed by the regulator in 2023 (fewer than five, in answer to a freedom-of-information request) and eight were reported in the New England Journal of Medicine in July 2025. The first-human record is the 2017 paper on the boy born in Mexico in 2016 to a mother carrying Leigh syndrome. The paper gives no birth date (only that the boy was seven months old when it was written). The day, 6 April 2016, is from New Scientist's report that broke the story, dated 2016-09-27 (Jessica Hamzelou, in the box \"Two women, one man and a baby\": \"the boy was born on 6 April 2016\"; https://www.newscientist.com/article/2107219-exclusive-worlds-first-baby-born-with-new-3-parent-technique/), which CBS News repeated. No document from the clinic or the authors that could be opened gives the day, so the news report is the source; it fits the paper and the same report's \"five-month-old\" on 2016-09-27. Children born in the 1990s after a cruder transfer of egg cytoplasm also carried a donor's mitochondria, but for infertility rather than to avoid a disease, so they fall outside this entry's test. The rung in wide use needs a counted population in the hundreds or more, and the total so far is in the tens.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
@@ -1226,13 +1224,11 @@
           "why": "The maker's page is undated and its footer says 2015, so the first date was a guess at the end of that year. The Internet Archive holds a dated copy of the same page, taken on 2014-08-28 (the earliest copy of it), that already carries the sentence 'with over one million in circulation' (https://web.archive.org/web/20140828125802/http://store.neurosky.com/products/eeg-tgam); the date is now that of the earliest dated copy. The statement may be older: a datasheet for the same chip, copyrighted 2011, has the same sentence but carries no date of its own."
         }
       ],
-      "verify": [
-        "A 1977 paper by Vidal may be an earlier first human (volunteers steering a cursor through a maze by brain signals). On 2026-10-16 only its abstract could be read (IEEE Xplore, DOI 10.1109/PROC.1977.10542): it describes detecting single evoked responses in real time with feedback to the subject, and does not mention a maze or a cursor; the full text is behind a paywall and no free copy was found. Several secondary sources describe the maze demonstration but are not the paper. Check the full text before moving the first-human date. Tried again on 2026-10-17 and still not reached: IEEE Xplore returns no page to automated readers, no open copy of the 1977 paper exists (the open-access index lists none), and the 1973 review by the same author, which is free on the Annual Reviews site, could be opened in a browser but not read as text. No change to the date."
-      ],
+      "verify": [],
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The first-human record is the 1988 Illinois report of volunteers spelling words by attending to flashing letters, the first brain-controlled speller. Consumer headsets based on the same kind of signal reached shops in 2007 (NeuroSky), 2009 (a Mattel toy, Emotiv) and 2014 (Muse). The wide-use count is NeuroSky's own statement that over a million of its sensor chips are in circulation; the maker of the Muse headset says it has over half a million users. The hardware is cheap and the control is coarse, which is why this is the one upgrade on the branch anyone can buy.",
+      "notes": "The first-human record is the 1988 Illinois report of volunteers spelling words by attending to flashing letters, the first brain-controlled speller. Consumer headsets based on the same kind of signal reached shops in 2007 (NeuroSky), 2009 (a Mattel toy, Emotiv) and 2014 (Muse). The wide-use count is NeuroSky's own statement that over a million of its sensor chips are in circulation; the maker of the Muse headset says it has over half a million users. The hardware is cheap and the control is coarse, which is why this is the one upgrade on the branch anyone can buy. An earlier demonstration may exist and is not counted: a review in Communications of the ACM (McFarland and Wolpaw, May 2011, page 61, https://doi.org/10.1145/1941487.1941506) says that in the 1970s Jacques Vidal's users at the University of California, Los Angeles, looking at a flashing checkerboard, moved through a maze on a screen in real time by attending to its corners, and cites Vidal's 1977 paper (Proceedings of the IEEE 65(5), pages 633 to 641, https://doi.org/10.1109/PROC.1977.10542). That paper's full text is behind a paywall and no open copy was found, and its abstract (read on IEEE Xplore, 2026-10-17) speaks of classifying single brain responses in real time with feedback to the subject without mentioning a maze or a cursor. Vidal's 1973 review (Annual Review of Biophysics and Bioengineering 2, pages 157 to 180, read in full on 2026-10-17) describes a planned programme and says direct brain-computer communication \"still lies somewhat in the future\". The first-human date above stays 1988 until the 1977 paper itself has been read and the question of moving it has been ruled on.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
@@ -3308,7 +3304,7 @@
     "long_shots": 2,
     "examples": 0,
     "branches_with_upgrades": 7,
-    "to_verify": 2,
+    "to_verify": 0,
     "siblings": 5
   },
   "last_checked": {
