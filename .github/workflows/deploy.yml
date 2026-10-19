@@ -37,6 +37,8 @@ jobs:
         run: python3 scripts/export.py --check
       - name: Test the headline file
         run: python3 scripts/test_headline.py
+      - name: Test the rules a reading is held to
+        run: python3 scripts/test_reading_rules.py
       - name: Install and build
         working-directory: site
         run: |

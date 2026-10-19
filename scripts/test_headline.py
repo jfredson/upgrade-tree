@@ -18,6 +18,7 @@ export before committing.
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -92,6 +93,10 @@ class StaleOrMissingIsRefused(unittest.TestCase):
         readings = self.data / "readings"
         newest = sorted(readings.glob("*.toml"))[-1]
         text = newest.read_text().replace(f"date = {newest.stem[:10]}", "date = 2099-01-04", 1)
+        # a record dated after 2026-10-19 also carries what the reading rules ask of it
+        # (docs/weekly-reading.md, decision 13): the register-aimed search's sites, and the pages opened
+        text = re.sub(r"^(verdict = .*)$", r'\1\nregister = ["example.org"]', text, flags=re.M)
+        text = re.sub(r"^sources = (\[.*\])$", r"sources = \1\nopened = \1", text, flags=re.M)
         (readings / "2099-01-04.toml").write_text(text)
         problems = self.problems()
         self.assertTrue(any("last_reading" in p for p in problems), problems)

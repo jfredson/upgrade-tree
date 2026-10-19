@@ -23,7 +23,10 @@ John. Modelled on The Belt Equation's `docs/scan-procedure.md`.
   under "The reading record"), and this file.
 - Scope: if no file in `data/readings/` is dated this calendar month, scope is `monthly` and you
   read every upgrade whose `status` is `tracked`; otherwise scope is `weekly` and you read every
-  tracked upgrade whose `horizon` is not `top`.
+  tracked upgrade whose `horizon` is not `top`. Count them from the record before you start and
+  write that number in the header (`upgrades_read`) and in the file's opening comment; do not copy
+  a number from a document (at 2026-10-18 it is 33 weekly and 35 monthly, with two upgrades at
+  the top). The export refuses a record that reads any other set than its scope asks for.
 - Load the record with Python's `tomllib` to get the list; do not parse it by hand:
 
       python3 -c "import tomllib,glob; [print(u['id'], u['horizon'], u['stage']) for f in sorted(glob.glob('data/*.toml')) if 'branches' not in f for u in tomllib.load(open(f,'rb'))['upgrade']]"
@@ -38,22 +41,41 @@ order within each file):
    floor: at least one search aimed at the kind of record the entry names (a journal, a
    regulator's register, a named company's newsroom) and one at wider reporting, worded
    differently, and both listed in the item's `queries`. The export refuses an item with fewer
-   than two unless it is `quiet` and `found` says why. Ask for the past week (the past five
+   than two unless it is `quiet` and `found` says why. Then run one more search, aimed at the
+   register (added 2026-10-18): limit it, with the search tool's `allowed_domains`, to the site of
+   the regulator, trial registry, journal or maker that the entry's `source` line names (for
+   example `fda.gov`, `ema.europa.eu`, `clinicaltrials.gov`, `pubmed.ncbi.nlm.nih.gov`, or the
+   journal's own address), list it with the others in `queries`, and put the sites in the item's
+   `register` list. The tool cannot limit by date but it can by site, and this is the search most
+   likely to turn up a primary record. Ask for the past week (the past five
    weeks for an upgrade read monthly). A search counts toward an upgrade only if it was aimed at
    it; a search first run for another upgrade and listed again carries a `reused` line naming
    the search as written, that upgrade, and in one line why it bears on this one. If the upgrade
    has a `verify` list, give each claim on it a search of its own aimed at the record it names,
    and say in `found` what the record shows for each claim; you may not edit or clear the list,
    so a claim the record settles either way is a `flagged` item with the finding in `for_john`.
-2. Read the results that bear on the test, literally. The standard is the record's own: two
+2. Read the results that bear on the test, literally, and open what you cite (added 2026-10-18).
+   Search results are summaries. For a `noted`, `stage-change` or `flagged` item, open every
+   record you mean to cite with the page-reading tool (WebFetch) and read it; cite the maker's,
+   regulator's or journal's own page where one exists, not a news page about it. `sources` lists
+   only pages you opened, and `opened` lists the same addresses (the export refuses a source that
+   is not in `opened`). A page that refuses to open is not cited as read: say in `found` that it
+   refused and what the summary claimed, and do not try to get round the refusal. A record older
+   than the window that the entry already holds is not news: it is `quiet`, with the fact in
+   `found`. The standard is the record's own: two
    people reading the test would agree whether it has happened. A target date, a plan, a funding
    round, a press claim, a demonstration video and a company's statement that a patient has been
    treated are not the record unless the entry's `source` line says the company's own release
    counts. A preprint is not a paper unless the entry says so.
 3. Give one verdict:
-   - `quiet`: nothing in the window bears on the test.
-   - `noted`: something relevant happened and no stage moves; `found` says what and why not,
-     and `sources` lists the record read. Say in `found` if it was widely reported.
+   - `quiet` (redefined 2026-10-18): nothing about the upgrade turned up in the search results
+     for the window. It means nothing was found, not that nothing happened; write `found` as
+     "Nothing dated YYYY-MM-DD to YYYY-MM-DD turned up in the search results", then what the
+     nearest results were. It is also the verdict for an older record the entry already holds.
+   - `noted` (narrowed 2026-10-18): something relevant is dated inside the window, or is new to
+     the record, and no stage moves; `found` says what and why not, and `sources` lists the
+     record you opened and read. Not for material older than the window that the entry already
+     holds. Say in `found` if it was widely reported.
    - `stage-change`: the next rung's test is met on a primary record of the kind the entry
      names, dated within the window or since the entry was last checked. Move the stage one
      rung (step 2). Only one rung per reading per upgrade. `sources` lists the record, and a
@@ -120,8 +142,10 @@ Write `data/readings/YYYY-MM-DD.toml` exactly in the shape given in `docs/upgrad
 under "The reading record": a `[reading]` table with `date`, `ran_at` (universal time, from
 `date -u +%Y-%m-%dT%H:%M:%SZ`), `scope`, `upgrades_read`, `searches`, `commit_before` and
 `by = "scheduled"`, then one `[[item]]` per upgrade read, in the order read, with `upgrade`,
-`verdict`, `queries`, `found` (one to three plain sentences, absolute dates), `sources` for
-every verdict but `quiet`, `moved_from` and `moved_to` for a stage change, `for_john` for a
+`verdict`, `queries`, `register` (the sites the register-aimed search was limited to, from the
+reading of 2026-10-19), `found` (one to three plain sentences, absolute dates), `sources` and
+`opened` for every verdict but `quiet` (`opened` lists the pages you opened, and every source
+must be among them), `moved_from` and `moved_to` for a stage change, `for_john` for a
 flagged item, `reused` where step 1 asked for it. If the folder already has a file with today's
 date, suffix `-2`. Then run `python3 scripts/export.py`; it must pass (it rewrites the headline
 file with this reading's date, so the check at step 5 can pass).

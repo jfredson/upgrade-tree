@@ -95,8 +95,8 @@ export const verdictLabel: Record<Verdict, string> = {
 
 /** The same four, in a sentence, for the key on the reading page and the upgrade pages. */
 export const verdictMeaning: Record<Verdict, string> = {
-  quiet: 'Nothing in the week bore on what would count for this upgrade.',
-  noted: 'Something relevant happened and it did not meet the test for the next stage, so nothing changed.',
+  quiet: 'Nothing about this upgrade turned up in the search results for the week. The search tool cannot limit results by date, so this means nothing was found, not that nothing happened.',
+  noted: 'Something relevant, dated in the week or new to the record, turned up and it did not meet the test for the next stage, so nothing changed.',
   'stage-change': 'The next stage was reached, on a record of the kind the upgrade itself names, and the reading moved it one stage.',
   flagged: 'Something the reading is not allowed to do on its own, written up for me to rule on.',
 };

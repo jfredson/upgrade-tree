@@ -74,8 +74,10 @@ reading it from John correcting the scanner.
 Every upgrade whose status is `tracked` is read every week, with one exception: an upgrade at
 the top of the ladder (`horizon = "top"`, already in wide use) has no rung left to reach and is
 read only on the first reading of each calendar month, to catch a withdrawal or a recount. With
-thirty-five upgrades, three of them at the top, a weekly reading is about thirty-two upgrades at
-two to four searches each, roughly a hundred searches.
+thirty-five upgrades, two of them at the top (corrected 2026-10-18; this said three), a weekly
+reading is 33 upgrades at two to four searches each, plus one search aimed at the register, so
+roughly a hundred searches. The export refuses a newest reading that reads any other set than
+its scope asks for, and the record's header count is the number of items it holds.
 
 This is simpler than The Belt Equation's split (near-term leaves weekly, the whole tree
 monthly) because this tree is a third the size and most of its entries are near-term. If the
@@ -95,6 +97,14 @@ why it bears on this one. Searches ask for the past week, or the past five weeks
 read monthly. If the upgrade has a `verify` list, each claim on it gets a search of its own
 aimed at the record it names, and `found` says what the record shows for each claim.
 
+**One more search, aimed at the register** (ruled by John 2026-10-18, on the audit of the first
+cloud reading). The search tool cannot limit results to a date, but it can limit them to a
+site. So for every upgrade one search is run limited to the site of the register, regulator,
+trial registry or journal that the entry's `source` line names (for example `fda.gov`,
+`ema.europa.eu`, `clinicaltrials.gov`, `pubmed.ncbi.nlm.nih.gov` or the journal's own address).
+It is one of the item's `queries`, and the sites it was limited to go in the item's `register`
+list. It is in addition to the two to four searches above.
+
 The `watch` field is new on the upgrade record (optional; `docs/upgrade-schema.md`): a short
 list of extra search terms, for the cases where the plain words of the test miss a product
 name, a trial name or a term of art. It is a search aid, and nothing on the site rests on it;
@@ -108,17 +118,31 @@ a funding round, a press claim, a demonstration video and a company's statement 
 has been dosed are not the record unless the entry's `source` line says the company's own
 release counts. A paper in a journal is the record when the entry asks for one, and a preprint
 is not, unless the entry says so. The reading is of the past week; an older record the entry
-missed is a `flagged` item, not a stage change, because dating the rung is John's.
+missed is a `flagged` item, not a stage change, because dating the rung is John's. An older
+record the entry already holds is not news: it is `quiet`, and `found` states the fact.
+
+**Open what you cite** (ruled 2026-10-18). Search results are summaries, and a summary is not the
+record. For a `noted`, `stage-change` or `flagged` item the reading opens every record it cites
+with the page-reading tool and reads it, and cites the maker's, regulator's or journal's own
+page where one exists, not a news page about it. `sources` lists only pages that were opened,
+and the same addresses are listed in `opened` (the export refuses a source that was not).
+A page that refuses to open is not cited as read; `found` says it refused and what the summary
+claimed.
 
 ## The four verdicts
 
-- **`quiet`**: nothing in the week bore on the test. No source needed.
-- **`noted`**: something relevant happened and no stage moves; `found` says what and why not,
-  and `sources` lists the record read. This is the verdict for most real news: a new trial, a
-  new patient, a bigger number on a rung already reached, a company announcement without the
-  record the entry names. When the thing was widely reported, say so in `found`, because those
-  items are the ones the story page will want as "widely reported, moved nothing" once the
-  ledger exists.
+- **`quiet`** (redefined 2026-10-18): nothing about the upgrade turned up in the search results
+  for the week. It means nothing was found, not that nothing happened, because the search tool
+  cannot limit results to a date; the reading page's key says so. No source needed. This is also
+  the verdict for an older record the entry already holds: `found` states the fact (for example
+  "the approval of 2026-04-23 is already in the entry").
+- **`noted`** (narrowed 2026-10-18): something relevant is dated inside the week, or is new to
+  the record, and no stage moves; `found` says what and why not, and `sources` lists the record,
+  opened and read. This is the verdict for real news: a new trial, a new patient, a bigger number
+  on a rung already reached, a company announcement without the record the entry names. Material
+  older than the window that the entry already holds is not `noted`. When the thing was widely
+  reported, say so in `found`, because those items are the ones the story page will want as
+  "widely reported, moved nothing" once the ledger exists.
 - **`stage-change`**: the next rung's test is met on a primary record of the kind the entry
   names. The scanner moves the stage one rung, with a revision marked as its own, and `sources`
   lists the record (and a second, independent one where there is one). Only one rung per
@@ -176,7 +200,9 @@ the site if a record breaks it. In short: a `[reading]` table with the date, the
 finished, the scope, how many upgrades were read, how many searches were run and the commit
 it read; then one `[[item]]` per upgrade read, in the order read, with the upgrade's id, the
 verdict, every search run, one to three plain sentences on what was found, the sources for every
-verdict but `quiet`, and `for_john` on a flagged item. A record may carry `test = true` to mark a
+verdict but `quiet`, and `for_john` on a flagged item. From the reading of 2026-10-19 every item
+also carries `register` (the sites its register-aimed search was limited to) and every item that
+is not quiet carries `opened` (the pages it opened, a superset of its `sources`). A record may carry `test = true` to mark a
 hand-made fixture; the site labels such a record everywhere it appears.
 
 ## What the reader sees
@@ -316,6 +342,18 @@ ruled yet unless the line says so (item 12, proposed 2026-10-17, was ruled as pr
     read the same news. Alternative: let the scanner copy a one-rung move across when the
     sibling's `stage_record` is a record of the kind this entry's `source` names; faster, and
     the first audit can say whether the flags were all clean copies.
+
+13. **Five changes from the audit of the first cloud reading, ruled by John 2026-10-18 ("yes to
+    all five").** High confidence on each; the audit (`docs/readings/audit-2026-10-18.md`) gives
+    the evidence and the alternatives. (1) The count of upgrades at the top is two and a weekly
+    reading is 33, with the export refusing a newest record that reads another set. (2) `noted`
+    means dated inside the week or new to the record; older held material is `quiet` with the fact
+    in `found`. Alternative kept open: label older items on the page. (3) A reading opens every
+    record it cites for a non-quiet item, cites the maker's, regulator's or journal's own page,
+    lists the pages in `opened`, and runs one more search limited to the register's site. The
+    extra search costs about 33 searches a week; revisit if it finds nothing in the first month.
+    (4) The export script stamps the Pacific date, not the machine's. (5) `quiet` means nothing
+    turned up in the search results; the key on the reading page says so.
 
 ## Deferred, and why
 
