@@ -2,6 +2,9 @@
 // The story so far: the changelog, rendered day by day from CHANGELOG.md (scripts/export.py).
 import Base from '../layouts/Base.astro';
 import { changelog, longDate, REPO } from '../lib/tree';
+import { datedPosts, postPath } from '../lib/news';
+const newsPosts = await datedPosts();
+const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
 ---
 
 <Base title="The story so far · The Upgrade Tree" description="Every change to the record, the stage ladder and the site, with the date it was made.">
@@ -20,6 +23,7 @@ import { changelog, longDate, REPO } from '../lib/tree';
           <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
           <ul>
             {d.items.map((item) => <li>{item}</li>)}
+            {postsFor(d.date).map((p) => <li class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</li>)}
           </ul>
         </li>
       ))}

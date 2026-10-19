@@ -39,6 +39,8 @@ jobs:
         run: python3 scripts/test_headline.py
       - name: Test the rules a reading is held to
         run: python3 scripts/test_reading_rules.py
+      - name: Check the news posts
+        run: python3 scripts/test_news.py && python3 scripts/export.py && python3 scripts/check_news.py
       - name: Install and build
         working-directory: site
         run: |

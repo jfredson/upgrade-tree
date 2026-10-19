@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import StageBadge from '../../../components/StageBadge.astro';
 import { tree, branchByKey, statusLabel, longDate, hostOf, issueUrl, REPO, type Upgrade } from '../../../lib/tree';
 import { readingsFor, verdictLabel } from '../../../lib/readings';
+import { postsAbout, postPath } from '../../../lib/news';
 
 export function getStaticPaths() {
   return tree.upgrades.map((u) => ({ params: { branch: u.branch, id: u.id }, props: { upgrade: u } }));
@@ -20,6 +21,7 @@ const recordFile = `${REPO}/blob/main/data/${u.branch}.toml`;
 // Belt Equation's node page, "The last checks", on 2026-10-16): the date and the verdict in a
 // line, the sentence the reading wrote when opened.
 const lastReadings = readingsFor(u.id).slice(0, 3);
+const inTheNews = await postsAbout(u.id); // rule 4.14: computed from the posts, never written into the record
 const description = u.description.length > 200 ? u.description.slice(0, 197) + '…' : u.description;
 ---
 
@@ -34,6 +36,10 @@ const description = u.description.length > 200 ? u.description.slice(0, 197) + '
       {u.long_shot && <span class="chip accent">Long shot, kept on the tree on purpose</span>}
     </div>
   </section>
+
+  {inTheNews.length > 0 && (
+    <div class="in-the-news"><span class="k">In the news</span>{inTheNews.map((p, i) => <>{i > 0 ? <br /> : ''}<a href={postPath(p)}>{p.data.title}</a> · {longDate(p.data.date)}</>)}</div>
+  )}
 
   <div class="record">
     <div class="prose">

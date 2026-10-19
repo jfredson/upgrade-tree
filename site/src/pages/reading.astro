@@ -11,6 +11,7 @@
 // pattern's, "This week's reading"; the address is /reading/.
 import Base from '../layouts/Base.astro';
 import { tree, longDate } from '../lib/tree';
+import { datedPosts, postPath } from '../lib/news';
 import {
   readings, latestReading, verdictLabel, verdictMeaning, scopeLabel, readingSummary, plainCount, ranAtLabel,
   type Reading, type ReadingItem, type Verdict,
@@ -31,6 +32,8 @@ const groups = latestReading ? groupByBranch(latestReading) : [];
 const description = latestReading
   ? `The Upgrade Tree's weekly reading: ${readingSummary(latestReading)} on ${longDate(latestReading.date)}. Every upgrade checked, what was searched, what was found, and the verdict.`
   : "The Upgrade Tree's weekly reading of the upgrades against the news. The first reading has not run yet.";
+const newsPosts = await datedPosts();
+const postFor = (id: string) => newsPosts.find((p) => p.data.records.includes(id)) ?? null; // rule 4.14
 ---
 
 <Base title="This week's reading · The Upgrade Tree" description={description}>
@@ -139,6 +142,9 @@ const description = latestReading
                 )}
                 {item.picked_up && (
                   <p class="card-john dim">Taken off my list on {longDate(item.picked_up.on)}, by {item.picked_up.how}.</p>
+                )}
+                {item.picked_up && postFor(item.upgrade) && (
+                  <p class="card-john">In the news: <a href={postPath(postFor(item.upgrade)!)}>{postFor(item.upgrade)!.data.title}</a>.</p>
                 )}
                 <div class="card-foot">
                   {item.sources.length > 0 && (
