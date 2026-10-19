@@ -23,7 +23,7 @@ const lastReadings = readingsFor(u.id).slice(0, 3);
 const description = u.description.length > 200 ? u.description.slice(0, 197) + '…' : u.description;
 ---
 
-<Base title={`${u.name} — The Upgrade Tree`} description={description}>
+<Base title={`${u.name} · The Upgrade Tree`} description={description}>
   <section class="hero wide">
     <p class="eyebrow"><a href="/branches/">The branches</a> · <a href={branch.path}>{branch.name}</a> · {u.horizon_label.toLowerCase()}</p>
     <h1>{u.name}</h1>

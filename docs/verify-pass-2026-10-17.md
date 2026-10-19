@@ -45,6 +45,11 @@ Pages and files opened:
 Outcome: the paper cannot be read. The question is parked: the record states what is and is not
 known and the first-human date stays 1988. A decision task for John is on the roadmap.
 
+Update, 2026-10-18: John bought the paper and it was read in full (nine pages, text layer and the
+figures themselves). It reports the maze experiment (pages 636 to 638), so the question is no longer
+parked; the change to the leaf and the reasoning are in `data/link.toml` and the changelog of the
+same day, and wait on John's ruling on the date.
+
 ## 2. The first mitochondrial-donation child's birth date (`data/inheritance.toml`)
 
 Searches:
