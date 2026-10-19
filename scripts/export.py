@@ -98,6 +98,31 @@ SIBLING_SITE = "https://outrunningageing.com"
 SIBLING_SITE_NAME = "Outrunning Ageing"
 SIBLING_ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 URL_RE = re.compile(r"^https?://\S+$")
+
+
+def today_pacific(now_utc: dt.datetime | None = None) -> dt.date:
+    """Today's date in Pacific time, whatever clock the machine keeps (ruled by John 2026-10-18).
+
+    The reading runs at 18:00 Pacific on Sundays, which is already Monday in universal time, and
+    a cloud workspace keeps universal time; `date.today()` there stamped the site's data and the
+    headline file a day ahead of the reading's own date. Uses the system's time-zone database,
+    and falls back to the United States rule (daylight time from the second Sunday of March at
+    02:00 to the first Sunday of November at 02:00) when the machine has none."""
+    now = now_utc or dt.datetime.now(dt.timezone.utc)
+    try:
+        from zoneinfo import ZoneInfo
+        return now.astimezone(ZoneInfo("America/Los_Angeles")).date()
+    except Exception:  # no time-zone database on this machine
+        def nth_sunday(year: int, month: int, n: int) -> dt.date:
+            d = dt.date(year, month, 1)
+            d += dt.timedelta(days=(6 - d.weekday()) % 7)
+            return d + dt.timedelta(weeks=n - 1)
+        y = now.year
+        start = dt.datetime.combine(nth_sunday(y, 3, 2), dt.time(10), tzinfo=dt.timezone.utc)  # 02:00 PST
+        end = dt.datetime.combine(nth_sunday(y, 11, 1), dt.time(9), tzinfo=dt.timezone.utc)    # 02:00 PDT
+        hours = -7 if start <= now < end else -8
+        return (now + dt.timedelta(hours=hours)).date()
+
 DATE_HEADER = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
 # The claims (docs/upgrade-schema.md, "The claim record", added 2026-10-16).
@@ -138,6 +163,12 @@ READING_SCOPES = {"weekly", "monthly"}
 READING_FIELDS = ["date", "ran_at", "scope", "upgrades_read", "searches", "commit_before"]
 READING_BY = {"hand", "scheduled"}
 READING_NAME = re.compile(r"^(\d{4}-\d{2}-\d{2})(-\d+)?$")
+# Ruled by John 2026-10-18 on the audit of the first cloud reading (docs/readings/audit-2026-10-18.md):
+# from the reading of this date, an item that is not quiet lists the pages it opened (and cites
+# only those), and every item names the sites its register-aimed search was limited to. Earlier
+# records are never edited, so they are not held to it.
+READING_OPENED_FROM = "2026-10-19"
+DOMAIN_RE = re.compile(r"^[a-z0-9-]+(\.[a-z0-9-]+)+$")
 # A search listed again under a second upgrade carries a `reused` line: the search as written,
 # the upgrade it was first run for, and why it bears on this one. The script cannot judge the
 # reason, only that there is one: with the search, any id and these linking words taken out,
@@ -538,7 +569,7 @@ def load_claims(folder: Path, branches: list[dict], upgrades: list[dict]) -> dic
         "first_when": claims[0]["when"] if claims else None,
         "last_when": claims[-1]["when"] if claims else None,
     }
-    return {"exported_on": dt.date.today().isoformat(), "claims": claims,
+    return {"exported_on": today_pacific().isoformat(), "claims": claims,
             "not_entered": not_entered, "counts": counts}
 
 
@@ -662,7 +693,7 @@ def load_bandwidth(folder: Path, upgrades: list[dict]) -> dict:
             m["best"] = {"id": best["id"], "date": best["date"], "value": best["value"], "unit": best["unit"],
                          "plot_value": best["plot_value"], "peer_reviewed": best["peer_reviewed"]}
     return {
-        "exported_on": dt.date.today().isoformat(),
+        "exported_on": today_pacific().isoformat(),
         "measures": list(measures.values()),
         "points": points,
         "counts": {"points": len(points), "with_figures": sum(1 for p in points if p["plot_value"] is not None),
@@ -724,7 +755,7 @@ def export_tree(branches: list[dict], upgrades: list[dict]) -> dict:
         "siblings": sum(1 for u in live if u["sibling"]),
     }
     return {
-        "exported_on": dt.date.today().isoformat(),
+        "exported_on": today_pacific().isoformat(),
         "commit": git_commit(),
         "sibling_site": {"name": SIBLING_SITE_NAME, "url": SIBLING_SITE},
         "headline_stage": HEADLINE_STAGE,
@@ -814,9 +845,20 @@ def reused_problems(iwhere: str, reused, queries, ids: set[str]) -> list[str]:
     return problems
 
 
-def validate_readings(readings: list[dict], ids: set[str]) -> list[str]:
-    """Check every reading record against rule 9 of docs/upgrade-schema.md."""
+def expected_reading(tracked: dict[str, str], scope: str) -> set[str]:
+    """The upgrades a reading of this scope has to read: every tracked upgrade, less those at the
+    top of the ladder in a weekly reading (docs/weekly-reading.md, "Which upgrades get read when")."""
+    return {uid for uid, horizon in tracked.items() if scope == "monthly" or horizon != "top"}
+
+
+def validate_readings(readings: list[dict], ids: set[str], tracked: dict[str, str] | None = None) -> list[str]:
+    """Check every reading record against rule 9 of docs/upgrade-schema.md. `tracked` maps each
+    tracked upgrade's id to its horizon; with it, the newest real record is also checked for
+    reading exactly the upgrades its scope asks for (ruled 2026-10-18, after a header comment said
+    three upgrades were at the top and there are two)."""
     problems: list[str] = []
+    real = [r for r in readings if isinstance(r.get("reading"), dict) and not r["reading"].get("test")]
+    newest = max(real, key=lambda r: (r["_name_date"], r["_file"])) if real else None
     for raw in readings:
         where = raw["_where"]
         head = raw.get("reading")
@@ -846,6 +888,16 @@ def validate_readings(readings: list[dict], ids: set[str]) -> list[str]:
         if isinstance(head.get("upgrades_read"), int) and items and head["upgrades_read"] != len(items):
             problems.append(f"{where}: the [reading] table says {head['upgrades_read']} upgrades were read "
                             f"and the record holds {len(items)} item(s)")
+
+        if tracked is not None and raw is newest and head.get("scope") in READING_SCOPES and items:
+            want = expected_reading(tracked, head["scope"])
+            got = {i.get("upgrade") for i in items}
+            if got != want:
+                missing, extra = sorted(want - got), sorted(x for x in got - want if x)
+                problems.append(f"{where}: a {head['scope']} reading reads {len(want)} upgrades "
+                                f"and this one reads {len(got)}"
+                                + (f"; missing: {', '.join(missing)}" if missing else "")
+                                + (f"; not in this scope: {', '.join(extra)}" if extra else ""))
 
         seen: set[str] = set()
         for i, item in enumerate(items, 1):
@@ -883,6 +935,20 @@ def validate_readings(readings: list[dict], ids: set[str]) -> list[str]:
                                 "only 'quiet' may go without a source")
             elif any(not URL_RE.match(str(s).strip()) for s in sources):
                 problems.append(f"{iwhere}: every source must be a web address")
+            if raw["_name_date"] >= READING_OPENED_FROM and not head.get("test"):
+                register = item.get("register")
+                if not isinstance(register, list) or not register or any(not DOMAIN_RE.match(str(d)) for d in register):
+                    problems.append(f"{iwhere}: 'register' lists the sites the register-aimed search was limited "
+                                    "to (for example [\"fda.gov\"] or [\"nature.com\"]); every upgrade has one such search")
+                if verdict in ("noted", "stage-change", "flagged"):
+                    opened = item.get("opened")
+                    if not isinstance(opened, list) or not opened or any(not URL_RE.match(str(o).strip()) for o in opened):
+                        problems.append(f"{iwhere}: a verdict of '{verdict}' lists in 'opened' the pages the reading "
+                                        "opened and read, as web addresses; cite only pages that were opened")
+                    elif isinstance(sources, list):
+                        unopened = [s for s in sources if str(s).strip() not in {str(o).strip() for o in opened}]
+                        if unopened:
+                            problems.append(f"{iwhere}: 'sources' cites a page that is not in 'opened': {unopened[0]}")
             if verdict == "stage-change":
                 mf, mt = item.get("moved_from"), item.get("moved_to")
                 if mf not in STAGE_RANK or mt not in STAGE_RANK:
@@ -920,7 +986,8 @@ def export_readings(tree: dict, folder: Path) -> tuple[dict, list[str]]:
     reading whose reason names the reading's date."""
     by_id = {u["id"]: u for u in tree["upgrades"]}
     raw, problems = load_readings(folder)
-    problems += validate_readings(raw, set(by_id))
+    tracked = {uid: u["horizon"] for uid, u in by_id.items() if u["status"] == "tracked"}
+    problems += validate_readings(raw, set(by_id), tracked)
     if problems:
         return {}, problems
 
@@ -995,7 +1062,7 @@ def export_readings(tree: dict, folder: Path) -> tuple[dict, list[str]]:
         }
 
     return {
-        "exported_on": dt.date.today().isoformat(),
+        "exported_on": today_pacific().isoformat(),
         "readings": out,
         "waiting_on_john": waiting,
         "by_upgrade": dict(by_upgrade),

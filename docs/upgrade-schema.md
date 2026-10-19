@@ -172,7 +172,8 @@ script validates every file and refuses to build if one fails. Dates are Pacific
     ran_at = "2026-10-17T05:40:00Z" # when it finished, universal time
     scope = "weekly"               # "weekly" (every tracked upgrade not at the top) or
                                    # "monthly" (every tracked upgrade, the first run of the month)
-    upgrades_read = 32
+    upgrades_read = 33             # the number of items; the newest real record must read exactly the
+                                   # upgrades its scope asks for (33 weekly, 35 monthly at 2026-10-18)
     searches = 71
     commit_before = "5a7a6d3"      # the record the reading read
     by = "hand"                    # optional: "hand" for a run done by a person in a session,
@@ -182,9 +183,14 @@ script validates every file and refuses to build if one fails. Dates are Pacific
     [[item]]
     upgrade = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
     verdict = "noted"              # quiet, noted, stage-change or flagged
-    queries = ["...", "..."]       # at least two, except a quiet item whose found says why
+    queries = ["...", "..."]       # at least two, except a quiet item whose found says why; from the
+                                   # reading of 2026-10-19 one of them is the register-aimed search
+    register = ["fda.gov"]         # from the reading of 2026-10-19, every item: the sites that search
+                                   # was limited to (a regulator, registry, journal or maker)
     found = "One to three sentences on what the week held, read against the test."
-    sources = ["https://..."]      # required for every verdict but quiet
+    sources = ["https://..."]      # required for every verdict but quiet; pages that were opened
+    opened = ["https://..."]       # from the reading of 2026-10-19, every verdict but quiet: the
+                                   # pages the reading opened and read; every source is among them
     moved_from = "first-human"     # stage-change only: the rung before
     moved_to = "in-clinical-use"   # stage-change only: the rung after, one above moved_from
     for_john = "..."               # flagged only: the change it would have made, the record,
@@ -193,8 +199,9 @@ script validates every file and refuses to build if one fails. Dates are Pacific
                                    # the search as written in queries, that upgrade, and why it
                                    # bears on this one
 
-The four verdicts: `quiet` (nothing in the week bore on the test), `noted` (something relevant
-happened and no stage moves), `stage-change` (the next rung's test was met on a record of the
+The four verdicts: `quiet` (nothing about the upgrade turned up in the search results for the
+week, which is not the same as nothing happening; also an older record the entry already holds),
+`noted` (something relevant dated inside the week or new to the record, and no stage moves), `stage-change` (the next rung's test was met on a record of the
 kind the entry names, and the reading moved the stage one rung), `flagged` (something the
 reading may not do on its own, written up for John).
 
