@@ -1,0 +1,37 @@
+---
+// One news post (tracker pattern, rule 4.12), copied from Outrunning Ageing's, the model.
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { tree, claims, longDate } from '../../lib/tree';
+import { allPosts, cardPath, KIND_LABEL, type Post } from '../../lib/news';
+
+export async function getStaticPaths() {
+  return (await allPosts()).map((p) => ({ params: { slug: p.id }, props: { post: p } }));
+}
+const { post } = Astro.props as { post: Post };
+const { Content } = await render(post);
+const named = post.data.records.map((id) => {
+  const u = tree.upgrades.find((x) => x.id === id);
+  if (u) return { name: u.name, path: u.path };
+  const c = (claims as any).claims?.find((x: any) => x.id === id);
+  return c ? { name: c.title ?? c.id, path: `/claims/#${c.id}` } : null;
+}).filter(Boolean) as { name: string; path: string }[];
+---
+
+<Base title={`${post.data.title} · The Upgrade Tree`} description={post.data.summary} image={cardPath(post)}>
+  <section class="hero wide">
+    <p class="eyebrow"><a href="/news/">News</a> · {longDate(post.data.date)} · {KIND_LABEL[post.data.kind]}</p>
+    <h1>{post.data.title}</h1>
+    <p class="lede">{post.data.summary}</p>
+  </section>
+  <article class="post">
+    <Content />
+    {post.data.kind !== 'start-here' && (named.length > 0 || post.data.sources.length > 0) && (
+      <section class="post-record">
+        {named.length > 0 && <p class="rec">The record: {named.map((r, i) => <>{i > 0 ? ' · ' : ''}<a href={r.path}>{r.name}</a></>)}{post.data.reading && <> · the reading of <a href={`/reading/#${post.data.reading}`}>{longDate(post.data.reading)}</a></>} · <a href={`/story/#${post.data.date}`}>the story entry</a>.</p>}
+        {post.data.sources.length > 0 && <p class="sources">Sources: {post.data.sources.map((s, i) => <>{i > 0 ? ' · ' : ''}<a href={s.url} rel="noopener">{s.label}</a></>)}.</p>}
+      </section>
+    )}
+    <p class="news-follow">Follow the news: <a href="/news/feed.xml">the feed</a> · <a href="https://x.com/SentHorizons" rel="noopener">@SentHorizons on X</a>.</p>
+  </article>
+</Base>
