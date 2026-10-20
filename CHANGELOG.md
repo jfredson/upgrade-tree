@@ -4,7 +4,7 @@ Every change to the record, the stage ladder or the site, with absolute dates. N
 
 ## 2026-10-19
 
-- **The two news posts are rewritten as short stories for a reader new to the site, as John ruled for every tracker on 2026-10-19.** The post on Vidal's 1977 paper keeps its address and every fact, gains a plainer title ("A 1977 paper moves the first brain-to-computer link without surgery back eleven years") and a redrawn card, and ends with a dated line linking its first version. The opening "Start here" post, held for John's read since 2026-10-18, is rewritten the same way and is still not published. No record, stage or count changed.
+- **I rewrote the two news posts as short stories for a reader new to the site, the rule I set for every tracker on 2026-10-19.** The post on Vidal's 1977 paper keeps its address and every fact, gains a plainer title ("A 1977 paper moves the first brain-to-computer link without surgery back eleven years") and a redrawn card, and ends with a dated line linking its first version. The opening "Start here" post, held since 2026-10-18 until I had read it, is rewritten the same way and is still not published. No record, stage or count changed.
 
 ## 2026-10-18
 
