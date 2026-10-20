@@ -1,5 +1,5 @@
 # Upgrades under the Movement and body branch. Record layout: docs/upgrade-schema.md.
-# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by me the same
 # day). Every stage above idea-only has a date and a primary record; anything still written from
 # memory is in the entry's verify list.
 
@@ -59,7 +59,7 @@ stage_reached_on = 2014-06-26
 stage_record = "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN130034"
 notes = """
 The record is the FDA's database entry for its clearance of the ReWalk for home and community use,
-decided on 26 June 2014. Powered exoskeletons for paralysed users had been used in rehabilitation
+Decided on 26 June 2014. Powered exoskeletons for paralysed users had been used in rehabilitation
 clinics for several years before that. The next rung, in wide use, needs a counted population; the
 maker's annual report for 2024 gives 689 ReWalk units in home use and 131 in clinics at the end of
 that year, about 820 in all, which is a count but not yet many, and other makers publish none."""
@@ -123,7 +123,7 @@ alone (the OPRA system) was approved by the FDA under a humanitarian exemption o
 routinely in Sweden, Australia and elsewhere, but the version with implanted nerve and muscle
 electrodes, which is what "nerve control" means here, has no regulator's approval and is still a
 trial device. The entry therefore sits at first human, on the 2014 Swedish report of the first
-person to use one at home. If John would rather the leaf cover the bone anchor alone, the stage
+person to use one at home. If I would rather the leaf cover the bone anchor alone, the stage
 becomes in clinical use on the FDA's 2015 record and the name changes."""
 
 [[upgrade]]

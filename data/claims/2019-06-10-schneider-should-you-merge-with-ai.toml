@@ -7,7 +7,7 @@ critic = true
 when = "2019-06-10"
 occasion = "\"Should You Merge With A.I.?\", New York Times, \"Op-Eds From the Future\" series"
 status = "sourced"
-ruling = "Ruled by John 2026-10-16: a fiction-framed piece counts as a claim when the argument is in the author's own voice, with the framing recorded as a hedge."
+ruling = "Decided 2026-10-16: a fiction-framed piece counts as a claim when the argument is in the author's own voice, with the framing recorded as a hedge."
 source = """
 The piece under her own byline, dated 2019-06-10, at
 nytimes.com/2019/06/10/opinion/future-artificial-intelligence-transhumanism.html, read through an

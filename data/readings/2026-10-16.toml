@@ -5,7 +5,7 @@
 # against was the past five weeks (2026-09-11 to 2026-10-16); the record itself had been checked
 # against its primary sources the same day. This session was not to edit the upgrade records
 # (two other sessions were working in them), so anything that would have moved a stage is a
-# flagged item for John rather than a stage change.
+# flagged item for me rather than a stage change.
 
 [reading]
 date = 2026-10-16
@@ -135,7 +135,7 @@ verdict = "noted"
 queries = ["FDA approval psilocybin OR MDMA therapy 2026 Compass COMP360", "psychedelic therapy regulator approval prescription news October 2026"]
 found = "Nothing in the window moves the stage. In the United States, Compass Pathways' psilocybin (COMP360) is on an expedited review path (a priority voucher granted 2026-04-24, the application's last parts expected in the last quarter of 2026) with a decision expected late 2026 or early 2027, which would be a second regulator on the rung this entry already holds, not a new rung. On the claim still to check: the Australian regulator's page, which would not load on 2026-10-16 when the record was written, loaded tonight in a browser. It is titled 'Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists', published 3 February 2023, and says that from 1 July 2023 authorised psychiatrists may prescribe MDMA for post-traumatic stress disorder and psilocybin for treatment-resistant depression, under the Authorised Prescriber Scheme, with no approved product evaluated by the regulator. That is the wording the entry describes."
 sources = ["https://www.tga.gov.au/news/media-releases/change-classification-psilocybin-and-mdma-enable-prescribing-authorised-psychiatrists", "https://www.pharmavoice.com/news/fda-rfk-makary-compass-psilocybin-drug-approval/812697/"]
-# This item was first written as flagged, for John to clear the verify claim. Before the record
+# This item was first written as flagged, for me to clear the verify claim. Before the record
 # was published, the verify session working the same evening (merged into main as f51c2ed)
 # read the same page and cleared the line itself, so nothing waits on John and the verdict is
 # noted: the page was read and matches the entry. Changed before publication, 2026-10-16.
