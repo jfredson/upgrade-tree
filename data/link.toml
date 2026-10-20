@@ -77,7 +77,7 @@ description = """
 A person who can no longer speak tries to, and the implant reads the brain's instructions to the
 mouth and throat and turns them into words on a screen. In August 2023 two groups reported people
 with paralysis producing sixty to eighty words a minute this way, from large vocabularies, which is
-within sight of the hundred and fifty of ordinary conversation. It is the fastest a brain has yet
+within sight of the hundred and sixty of ordinary conversation. It is the fastest a brain has yet
 talked to a machine, and the first point on this branch's bandwidth series."""
 resolution = """
 A person who cannot speak intelligibly, through an implanted brain interface, produces text from
@@ -95,7 +95,13 @@ The record is the Stanford report of 62 words a minute from a 125,000-word vocab
 Francisco report published the same day reached 78 words a minute and drove a talking avatar. The
 first decoding of attempted speech in a paralysed person, in 2021, managed about fifteen words a
 minute from fifty words; a 2024 report cut the error rate to a few per cent. These figures, with
-their units as the papers give them, are the seed of the bandwidth series."""
+their units as the papers give them, are the seed of the bandwidth series. In June 2026 the
+University of California, Davis group reported the same kind of implant used by one man at home,
+without researchers, for nearly two years, at an average of 56 words a minute; it is on the
+series, and it does not change this entry's stage."""
+revisions = [
+  { date = 2026-10-20, field = "description", old = "the hundred and fifty of ordinary conversation", new = "the hundred and sixty of ordinary conversation", why = "The Stanford paper this entry rests on (Nature, 2023-08-23), read in full on 2026-10-20, puts natural conversation at 160 words a minute, the figure the bandwidth series' baseline already uses; the description said a hundred and fifty." },
+]
 
 [[upgrade]]
 id = "link-brain-implant-gives-a-person-touch-from-a-robotic-hand"

@@ -1,6 +1,6 @@
 {
   "computed_on": "2026-10-20",
-  "commit": "0153f2f",
+  "commit": "13672d4",
   "last_reading": "2026-10-18",
   "method": {
     "document": "docs/upgrade-schema.md",
@@ -45,12 +45,12 @@
   "second_number": {
     "name": "Brain-to-machine bandwidth",
     "latest": {
-      "id": "2024-uc-davis-speech-decoder",
-      "date": "2024-08-14",
+      "id": "2026-uc-davis-speech-implant-at-home",
+      "date": "2026-06-15",
       "measure": "text",
-      "value": 31.6,
+      "value": 56,
       "unit": "words a minute",
-      "plot_value": 31.6,
+      "plot_value": 56.0,
       "peer_reviewed": true,
       "upgrade": "link-brain-implant-turns-intended-speech-into-text"
     },
@@ -74,7 +74,7 @@
         "axis_unit": "bits a second"
       }
     },
-    "points": 8
+    "points": 9
   },
   "counts": {
     "branches": 7,
