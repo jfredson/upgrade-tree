@@ -1,5 +1,5 @@
 # Upgrades under the Lifespan and repair branch. Record layout: docs/upgrade-schema.md.
-# The first real list, written 2026-10-16 from the charter's leaf list (ruled by John the same
+# The first real list, written 2026-10-16 from the charter's leaf list (ruled by me the same
 # day), replacing the example entry seeded earlier that day. Every stage above idea-only has a
 # date and a primary record; anything still written from memory is in the entry's verify list.
 
@@ -40,7 +40,7 @@ this entry to first human. When more such drugs reach people this entry may spli
 drug. Outrunning Ageing keeps its own record of this upgrade under the same name, linked from here
 on 2026-10-17; the weekly reading checks that the two stages agree."""
 revisions = [
-  { date = 2026-10-17, field = "sibling", old = "none", new = "a-drug-adds-healthy-years-to-a-life", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug makes people live longer in good health', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+  { date = 2026-10-17, field = "sibling", old = "none", new = "a-drug-adds-healthy-years-to-a-life", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug makes people live longer in good health', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
 ]
 
 [[upgrade]]
@@ -73,12 +73,12 @@ Harvard report that restored vision in old mice by resetting cells in the eye is
 reversal of a lost function. A company founded on that work announced on 9 June 2026 that the
 first participant in its trial for two optic nerve diseases had been dosed. Under this entry's test
 the first-human rung needs a measured reversal in a person, not a dose, so the entry stays at shown
-in animals until the trial reports; if John would rather count the dose, the stage moves to first
+in animals until the trial reports; if I would rather count the dose, the stage moves to first
 human on the company's own release. Outrunning Ageing keeps its own record of this upgrade under
 the same name, linked from here on 2026-10-17, and holds the June 2026 dose as a separate entry of
 its own; the weekly reading checks that the two stages agree."""
 revisions = [
-  { date = 2026-10-17, field = "sibling", old = "none", new = "partially-resetting-cells-reverses-ageing-in-an-animal", why = "Cross-link to the matching entry on Outrunning Ageing, 'Partially resetting cells reverses ageing in a living animal', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+  { date = 2026-10-17, field = "sibling", old = "none", new = "partially-resetting-cells-reverses-ageing-in-an-animal", why = "Cross-link to the matching entry on Outrunning Ageing, 'Partially resetting cells reverses ageing in a living animal', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
 ]
 
 [[upgrade]]
@@ -116,7 +116,7 @@ failed in trials since; none is approved. Outrunning Ageing keeps its own record
 under the same name, linked from here on 2026-10-17; the weekly reading checks that the two stages
 agree."""
 revisions = [
-  { date = 2026-10-17, field = "sibling", old = "none", new = "drug-clears-aged-cells-from-a-person", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug clears aged cells from a person', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+  { date = 2026-10-17, field = "sibling", old = "none", new = "drug-clears-aged-cells-from-a-person", why = "Cross-link to the matching entry on Outrunning Ageing, 'A drug clears aged cells from a person', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
 ]
 
 [[upgrade]]
@@ -156,7 +156,7 @@ trial; the trials cleared in 2025 are the step before. Outrunning Ageing keeps i
 this upgrade under the same name, linked from here on 2026-10-17; the weekly reading checks that
 the two stages agree."""
 revisions = [
-  { date = 2026-10-17, field = "sibling", old = "none", new = "organ-from-a-gene-edited-pig-keeps-a-person-alive", why = "Cross-link to the matching entry on Outrunning Ageing, 'An organ from a gene-edited pig keeps a person alive', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+  { date = 2026-10-17, field = "sibling", old = "none", new = "organ-from-a-gene-edited-pig-keeps-a-person-alive", why = "Cross-link to the matching entry on Outrunning Ageing, 'An organ from a gene-edited pig keeps a person alive', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
 ]
 
 [[upgrade]]
@@ -194,5 +194,5 @@ given in the description. The later synthetic windpipe cases of the 2010s were f
 fraudulent and do not count. Outrunning Ageing keeps its own record of this upgrade under the same
 name, linked from here on 2026-10-17; the weekly reading checks that the two stages agree."""
 revisions = [
-  { date = 2026-10-17, field = "sibling", old = "none", new = "lab-grown-organ-works-in-a-person-for-a-year", why = "Cross-link to the matching entry on Outrunning Ageing, 'A printed or lab-grown organ works in a person for a year', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, ruled by John 2026-10-16)." },
+  { date = 2026-10-17, field = "sibling", old = "none", new = "lab-grown-organ-works-in-a-person-for-a-year", why = "Cross-link to the matching entry on Outrunning Ageing, 'A printed or lab-grown organ works in a person for a year', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
 ]
