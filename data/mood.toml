@@ -39,8 +39,9 @@ description = """
 The step beyond stimulating a region all day: an implant that listens to the brain, recognises the
 pattern that comes with a bad state, and stimulates only then. In 2021 a San Francisco group
 reported one woman with severe depression whose implant detected her own signature of low mood
-and responded to it, and whose depression lifted within weeks and stayed better. It is one person,
-which is what a first human is."""
+and responded to it with a few seconds of stimulation. Her symptom scores fell the morning after it
+was switched on, her depression score had more than halved twelve days later, and months later it
+was in the range counted as remission. It is one person, which is what a first human is."""
 resolution = """
 A person with a mood disorder carries an implant that detects a brain signal tied to their mood
 state and delivers stimulation in response without a human in the loop, and their symptoms improve
@@ -55,7 +56,20 @@ stage_record = "https://doi.org/10.1038/s41591-021-01480-w"
 notes = """
 The record is the 2021 Nature Medicine report of a single patient. Closed-loop implants that
 respond to brain signals were already approved for epilepsy (the NeuroPace system, 2013), which is
-where the hardware came from; for mood the only record is this one and a few patients since."""
+where the hardware came from; for mood the only record is this one and a few patients since.
+The paper, read in full on 2026-10-20, describes a woman of 36 whose depression had begun in
+childhood and had not responded to several drug combinations or to electroconvulsive therapy. A
+ten-day mapping stage with temporary electrodes found her marker (a rise in one band of fast
+activity in the amygdala, a region deep in the brain involved in emotion) and the place where
+stimulation helped; the implant then gave six seconds of stimulation each time it detected the
+marker, up to 300 times a day. Her score on a standard depression scale (the
+Montgomery–Åsberg scale) went from 33 to 14 after twelve days and below 10 several months later.
+The paper calls itself a proof of concept: it was not designed to show the treatment works, which
+it says would need a double-blind, randomised trial, and her clinicians were usually but not always
+blind to the stimulation."""
+revisions = [
+  { date = 2026-10-20, field = "description", old = "whose depression lifted within weeks and stayed better", new = "her symptom scores fell the morning after it was switched on, her depression score had more than halved twelve days later, and months later it was in the range counted as remission", why = "The 2021 Nature Medicine report, read in full on 2026-10-20, gives the timing: daily scores dropped the morning after closed-loop stimulation began, the Montgomery–Åsberg score fell from 33 to 14 at the first check after 12 days and below 10 (remission) several months later, and the effect held to the time of writing. 'Within weeks' understated the speed and said nothing of remission." },
+]
 
 [[upgrade]]
 id = "mood-psychedelic-therapy-approved-for-prescription"

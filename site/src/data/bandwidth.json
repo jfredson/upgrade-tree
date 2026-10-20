@@ -39,13 +39,13 @@
           "unit": "characters a minute",
           "plot_value": 18.0,
           "no_figure": false,
-          "what": "Attempted handwriting decoded into text: 90 characters a minute with 94.1 per cent raw accuracy online, and above 99 per cent offline with a general-purpose autocorrect. The paper compares it with smartphone typing in the participant's age group, 115 characters a minute.",
+          "what": "Attempted handwriting decoded into text: 90 characters a minute with 94.1 per cent raw accuracy online, and above 99 per cent offline with a general-purpose autocorrect. The paper compares it with smartphone typing in the participant's age group, 115 characters a minute. As errors: one character in seventeen wrong (5.9 per cent across the five test days, 5.4 on the last, where the speed levelled off at 90) and one word in four (25.1 per cent) as decoded live, falling to 0.89 per cent of characters and 3.4 per cent of words with the autocorrect applied afterwards. Writing his own answers to questions rather than copying, he reached 73.8 characters a minute.",
           "who": "Francis Willett and colleagues at Stanford (Jaimie Henderson and Krishna Shenoy, senior authors), in the BrainGate2 pilot trial.",
           "in_whom": "One man, T5, paralysed from the neck down by a spinal cord injury.",
-          "repeated": "A single participant. The paper reports consistency across its own decoder training runs and across ten days of data, not a second person.",
+          "repeated": "A single participant, tested on five days of copying sentences and two of free answers; the paper calls it a proof of concept in one person and says more work is needed to show it in others.",
           "peer_reviewed": true,
           "source": "https://doi.org/10.1038/s41586-021-03506-2",
-          "source_note": "Nature 593, pages 249 to 254, published 2021-05-12; the figures are in the abstract.",
+          "source_note": "Nature 593, pages 249 to 254, published 2021-05-12. The 90, 94.1, 99 and 115 figures are in the abstract; the error rates are in the Results and its Table 1, the free-typing figures in the Results. Full text read on 2026-10-20.",
           "upgrade": {
             "id": "link-wired-brain-implant-controls-a-cursor",
             "name": "A wired brain implant lets a paralysed person control a cursor",
@@ -64,11 +64,11 @@
           "no_figure": false,
           "what": "Attempted speech decoded into text: 62 words a minute, with a 23.8 per cent word error rate on a 125,000-word vocabulary and 9.1 per cent on a 50-word vocabulary. The paper calls it 3.4 times the previous record and says it begins to approach the speed of natural conversation, which it puts at 160 words a minute.",
           "who": "Francis Willett, Erin Kunz, Chaofei Fan and colleagues at Stanford (Jaimie Henderson, senior author), in the BrainGate2 pilot trial.",
-          "in_whom": "One person, T12, with bulbar-onset motor neurone disease, unable to produce intelligible speech.",
+          "in_whom": "One woman, T12, aged 67 during the study, with motor neurone disease that began in the muscles of speech about nine years before she enrolled, unable to produce intelligible speech.",
           "repeated": "A single participant, over five days of attempted speech aloud and three of silent attempts; the paper says the results must be confirmed in more people.",
           "peer_reviewed": true,
           "source": "https://doi.org/10.1038/s41586-023-06377-x",
-          "source_note": "Nature 620, pages 1031 to 1036, published 2023-08-23; the figures are in the abstract and the first results paragraph.",
+          "source_note": "Nature 620, pages 1031 to 1036, published 2023-08-23; the figures are in the abstract and the Results (Table 1), the participant's age and sex in the paper's reporting summary. Full text read on 2026-10-20. The paper itself says a word error rate near 24 per cent is probably not yet low enough for everyday use.",
           "upgrade": {
             "id": "link-brain-implant-turns-intended-speech-into-text",
             "name": "A brain implant turns intended speech into text at conversational speed",
@@ -122,6 +122,29 @@
           },
           "verify": [],
           "note": null
+        },
+        {
+          "id": "2026-uc-davis-speech-implant-at-home",
+          "date": "2026-06-15",
+          "measure": "text",
+          "value": 56,
+          "unit": "words a minute",
+          "plot_value": 56.0,
+          "no_figure": false,
+          "what": "Attempted speech decoded into text in everyday life at home, with no researcher present: an average of 56 words a minute across 183,060 sentences (1,960,163 words) over nearly two years, from a vocabulary of over 125,000 words. The accuracy of that everyday use was rated by the participant himself, sentence by sentence: he marked 92 per cent at least mostly right and 53.3 per cent exactly right. When he repeated sentences shown on a screen, so that errors could be counted, the decoder was right on more than 99 per cent of words at 30.6 words a minute speaking aloud and 96.5 per cent at 49.7 words a minute speaking silently. The same implant also moved a computer cursor, at 2.90 bits a second on the grid task.",
+          "who": "Nicholas Card, Sergey Stavisky, David Brandman and colleagues at the University of California, Davis, in the BrainGate2 pilot trial.",
+          "in_whom": "The same man as the 2024 point, T15, who has motor neurone disease and was 45 when he enrolled in 2023; four 64-electrode arrays in the speech area of the left side of the brain, wired through the skin.",
+          "repeated": "A single participant, who used it for more than 3,800 hours on 444 of 653 days; the paper says it is not yet known whether the results carry over to other people.",
+          "peer_reviewed": true,
+          "source": "https://doi.org/10.1038/s41591-026-04414-6",
+          "source_note": "Nature Medicine 32, pages 2504 to 2510, published online 2026-06-15. The 56 words a minute, the sentence and word counts, the 92 per cent and the 125,000 words are in the abstract; the 53.3 per cent, the copy-task figures and the cursor rate are in the Results. Full text read on 2026-10-20. The paper notes that accuracy in his own conversation was not as consistently high as on prompted sentences, and that the system needed daily setup by trained carers and could not leave the house.",
+          "upgrade": {
+            "id": "link-brain-implant-turns-intended-speech-into-text",
+            "name": "A brain implant turns intended speech into text at conversational speed",
+            "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/"
+          },
+          "verify": [],
+          "note": "Slower than the 2023 decoders. Its place in the series is that, to its authors' knowledge, it is the first speech implant used independently at home, here for nearly two years. The 56 words a minute is plotted; its accuracy rests on the participant's own ratings, not a count of errors, so it is not the same kind of figure as the others on this measure."
         }
       ],
       "baselines": [
@@ -357,13 +380,13 @@
       "unit": "characters a minute",
       "plot_value": 18.0,
       "no_figure": false,
-      "what": "Attempted handwriting decoded into text: 90 characters a minute with 94.1 per cent raw accuracy online, and above 99 per cent offline with a general-purpose autocorrect. The paper compares it with smartphone typing in the participant's age group, 115 characters a minute.",
+      "what": "Attempted handwriting decoded into text: 90 characters a minute with 94.1 per cent raw accuracy online, and above 99 per cent offline with a general-purpose autocorrect. The paper compares it with smartphone typing in the participant's age group, 115 characters a minute. As errors: one character in seventeen wrong (5.9 per cent across the five test days, 5.4 on the last, where the speed levelled off at 90) and one word in four (25.1 per cent) as decoded live, falling to 0.89 per cent of characters and 3.4 per cent of words with the autocorrect applied afterwards. Writing his own answers to questions rather than copying, he reached 73.8 characters a minute.",
       "who": "Francis Willett and colleagues at Stanford (Jaimie Henderson and Krishna Shenoy, senior authors), in the BrainGate2 pilot trial.",
       "in_whom": "One man, T5, paralysed from the neck down by a spinal cord injury.",
-      "repeated": "A single participant. The paper reports consistency across its own decoder training runs and across ten days of data, not a second person.",
+      "repeated": "A single participant, tested on five days of copying sentences and two of free answers; the paper calls it a proof of concept in one person and says more work is needed to show it in others.",
       "peer_reviewed": true,
       "source": "https://doi.org/10.1038/s41586-021-03506-2",
-      "source_note": "Nature 593, pages 249 to 254, published 2021-05-12; the figures are in the abstract.",
+      "source_note": "Nature 593, pages 249 to 254, published 2021-05-12. The 90, 94.1, 99 and 115 figures are in the abstract; the error rates are in the Results and its Table 1, the free-typing figures in the Results. Full text read on 2026-10-20.",
       "upgrade": {
         "id": "link-wired-brain-implant-controls-a-cursor",
         "name": "A wired brain implant lets a paralysed person control a cursor",
@@ -382,11 +405,11 @@
       "no_figure": false,
       "what": "Attempted speech decoded into text: 62 words a minute, with a 23.8 per cent word error rate on a 125,000-word vocabulary and 9.1 per cent on a 50-word vocabulary. The paper calls it 3.4 times the previous record and says it begins to approach the speed of natural conversation, which it puts at 160 words a minute.",
       "who": "Francis Willett, Erin Kunz, Chaofei Fan and colleagues at Stanford (Jaimie Henderson, senior author), in the BrainGate2 pilot trial.",
-      "in_whom": "One person, T12, with bulbar-onset motor neurone disease, unable to produce intelligible speech.",
+      "in_whom": "One woman, T12, aged 67 during the study, with motor neurone disease that began in the muscles of speech about nine years before she enrolled, unable to produce intelligible speech.",
       "repeated": "A single participant, over five days of attempted speech aloud and three of silent attempts; the paper says the results must be confirmed in more people.",
       "peer_reviewed": true,
       "source": "https://doi.org/10.1038/s41586-023-06377-x",
-      "source_note": "Nature 620, pages 1031 to 1036, published 2023-08-23; the figures are in the abstract and the first results paragraph.",
+      "source_note": "Nature 620, pages 1031 to 1036, published 2023-08-23; the figures are in the abstract and the Results (Table 1), the participant's age and sex in the paper's reporting summary. Full text read on 2026-10-20. The paper itself says a word error rate near 24 per cent is probably not yet low enough for everyday use.",
       "upgrade": {
         "id": "link-brain-implant-turns-intended-speech-into-text",
         "name": "A brain implant turns intended speech into text at conversational speed",
@@ -463,14 +486,37 @@
       },
       "verify": [],
       "note": null
+    },
+    {
+      "id": "2026-uc-davis-speech-implant-at-home",
+      "date": "2026-06-15",
+      "measure": "text",
+      "value": 56,
+      "unit": "words a minute",
+      "plot_value": 56.0,
+      "no_figure": false,
+      "what": "Attempted speech decoded into text in everyday life at home, with no researcher present: an average of 56 words a minute across 183,060 sentences (1,960,163 words) over nearly two years, from a vocabulary of over 125,000 words. The accuracy of that everyday use was rated by the participant himself, sentence by sentence: he marked 92 per cent at least mostly right and 53.3 per cent exactly right. When he repeated sentences shown on a screen, so that errors could be counted, the decoder was right on more than 99 per cent of words at 30.6 words a minute speaking aloud and 96.5 per cent at 49.7 words a minute speaking silently. The same implant also moved a computer cursor, at 2.90 bits a second on the grid task.",
+      "who": "Nicholas Card, Sergey Stavisky, David Brandman and colleagues at the University of California, Davis, in the BrainGate2 pilot trial.",
+      "in_whom": "The same man as the 2024 point, T15, who has motor neurone disease and was 45 when he enrolled in 2023; four 64-electrode arrays in the speech area of the left side of the brain, wired through the skin.",
+      "repeated": "A single participant, who used it for more than 3,800 hours on 444 of 653 days; the paper says it is not yet known whether the results carry over to other people.",
+      "peer_reviewed": true,
+      "source": "https://doi.org/10.1038/s41591-026-04414-6",
+      "source_note": "Nature Medicine 32, pages 2504 to 2510, published online 2026-06-15. The 56 words a minute, the sentence and word counts, the 92 per cent and the 125,000 words are in the abstract; the 53.3 per cent, the copy-task figures and the cursor rate are in the Results. Full text read on 2026-10-20. The paper notes that accuracy in his own conversation was not as consistently high as on prompted sentences, and that the system needed daily setup by trained carers and could not leave the house.",
+      "upgrade": {
+        "id": "link-brain-implant-turns-intended-speech-into-text",
+        "name": "A brain implant turns intended speech into text at conversational speed",
+        "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/"
+      },
+      "verify": [],
+      "note": "Slower than the 2023 decoders. Its place in the series is that, to its authors' knowledge, it is the first speech implant used independently at home, here for nearly two years. The 56 words a minute is plotted; its accuracy rests on the participant's own ratings, not a count of errors, so it is not the same kind of figure as the others on this measure."
     }
   ],
   "counts": {
-    "points": 8,
-    "with_figures": 7,
+    "points": 9,
+    "with_figures": 8,
     "baselines": 5,
     "to_verify": 0,
     "first_date": "2006-07-13",
-    "last_date": "2024-08-14"
+    "last_date": "2026-06-15"
   }
 }

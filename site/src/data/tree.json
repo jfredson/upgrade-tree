@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-10-20",
-  "commit": "0153f2f",
+  "commit": "13672d4",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -973,7 +973,7 @@
       "watch": [],
       "sibling": "organ-from-a-gene-edited-pig-keeps-a-person-alive",
       "sibling_url": "https://outrunningageing.com/leaves/organ-from-a-gene-edited-pig-keeps-a-person-alive/",
-      "notes": "The record is the University of Maryland's own announcement of David Bennett's pig heart transplant, performed on 7 January 2022; the peer-reviewed case report followed in June 2022. The animal record is the 2018 Munich report of baboons living for months on pig hearts. Pig kidneys followed in 2024 (Boston, then New York). The longest published case is a Boston man who lived 271 days on a pig kidney in 2025 before receiving a human one, reported in The Lancet in September 2026; the maker of that kidney said the same month that another patient had passed nine months and was still going. The next rung, in clinical use, needs a regulator's approval for use outside a trial; the trials cleared in 2025 are the step before. Outrunning Ageing keeps its own record of this upgrade under the same name, linked from here on 2026-10-17; the weekly reading checks that the two stages agree.",
+      "notes": "The record is the University of Maryland's own announcement of David Bennett's pig heart transplant, performed on 7 January 2022; the peer-reviewed case report followed in June 2022. The animal record is the 2018 Munich report of baboons living for months on pig hearts, read in full on 2026-10-20: fourteen baboons had their own hearts replaced by gene-edited pig hearts, in three groups as the method changed. In the last group of five, whose donor hearts were kept pumped through with a cold oxygenated solution containing blood cells until they went in, and whose growth was held back with drugs and lower blood pressure, four lived at least three months: two were put down in good health at the study's planned end of 90 days, and two were kept to 182 and 195 days; the fifth was put down at 51 days for a blocked lymph duct. Before it, the longest a baboon had lived on a pig heart in place of its own was 57 days. Pig kidneys followed in 2024 (Boston, then New York). The longest published case is a Boston man who lived 271 days on a pig kidney in 2025 before receiving a human one, reported in The Lancet in September 2026; the maker of that kidney said the same month that another patient had passed nine months and was still going. The next rung, in clinical use, needs a regulator's approval for use outside a trial; the trials cleared in 2025 are the step before. Outrunning Ageing keeps its own record of this upgrade under the same name, linked from here on 2026-10-17; the weekly reading checks that the two stages agree.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
@@ -1379,7 +1379,7 @@
       "branch": "link",
       "branch_name": "The link to machines",
       "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
-      "description": "A person who can no longer speak tries to, and the implant reads the brain's instructions to the mouth and throat and turns them into words on a screen. In August 2023 two groups reported people with paralysis producing sixty to eighty words a minute this way, from large vocabularies, which is within sight of the hundred and fifty of ordinary conversation. It is the fastest a brain has yet talked to a machine, and the first point on this branch's bandwidth series.",
+      "description": "A person who can no longer speak tries to, and the implant reads the brain's instructions to the mouth and throat and turns them into words on a screen. In August 2023 two groups reported people with paralysis producing sixty to eighty words a minute this way, from large vocabularies, which is within sight of the hundred and sixty of ordinary conversation. It is the fastest a brain has yet talked to a machine, and the first point on this branch's bandwidth series.",
       "resolution": "A person who cannot speak intelligibly, through an implanted brain interface, produces text from attempted speech at forty words a minute or more from a vocabulary of a thousand words or more, with the error rate stated, in a peer-reviewed report.",
       "source": "Peer-reviewed reports giving the words per minute, the vocabulary size and the error rate",
       "horizon": "leaf",
@@ -1398,12 +1398,20 @@
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
-      "revisions": [],
+      "revisions": [
+        {
+          "date": "2026-10-20",
+          "field": "description",
+          "old": "the hundred and fifty of ordinary conversation",
+          "new": "the hundred and sixty of ordinary conversation",
+          "why": "The Stanford paper this entry rests on (Nature, 2023-08-23), read in full on 2026-10-20, puts natural conversation at 160 words a minute, the figure the bandwidth series' baseline already uses; the description said a hundred and fifty."
+        }
+      ],
       "verify": [],
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The record is the Stanford report of 62 words a minute from a 125,000-word vocabulary; a San Francisco report published the same day reached 78 words a minute and drove a talking avatar. The first decoding of attempted speech in a paralysed person, in 2021, managed about fifteen words a minute from fifty words; a 2024 report cut the error rate to a few per cent. These figures, with their units as the papers give them, are the seed of the bandwidth series.",
+      "notes": "The record is the Stanford report of 62 words a minute from a 125,000-word vocabulary; a San Francisco report published the same day reached 78 words a minute and drove a talking avatar. The first decoding of attempted speech in a paralysed person, in 2021, managed about fifteen words a minute from fifty words; a 2024 report cut the error rate to a few per cent. These figures, with their units as the papers give them, are the seed of the bandwidth series. In June 2026 the University of California, Davis group reported the same kind of implant used by one man at home, without researchers, for nearly two years, at an average of 56 words a minute; it is on the series, and it does not change this entry's stage.",
       "example": false,
       "depends_on_refs": [
         {
@@ -2276,7 +2284,7 @@
       "branch": "mood",
       "branch_name": "Mood and drive",
       "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/",
-      "description": "The step beyond stimulating a region all day: an implant that listens to the brain, recognises the pattern that comes with a bad state, and stimulates only then. In 2021 a San Francisco group reported one woman with severe depression whose implant detected her own signature of low mood and responded to it, and whose depression lifted within weeks and stayed better. It is one person, which is what a first human is.",
+      "description": "The step beyond stimulating a region all day: an implant that listens to the brain, recognises the pattern that comes with a bad state, and stimulates only then. In 2021 a San Francisco group reported one woman with severe depression whose implant detected her own signature of low mood and responded to it with a few seconds of stimulation. Her symptom scores fell the morning after it was switched on, her depression score had more than halved twelve days later, and months later it was in the range counted as remission. It is one person, which is what a first human is.",
       "resolution": "A person with a mood disorder carries an implant that detects a brain signal tied to their mood state and delivers stimulation in response without a human in the loop, and their symptoms improve by a clinically meaningful amount on a standard scale, in a peer-reviewed report.",
       "source": "Peer-reviewed reports of the implanted patients; the regulator's approval record if it comes",
       "horizon": "mid",
@@ -2293,12 +2301,20 @@
       "long_shot": false,
       "mechanism": null,
       "breaking_point": null,
-      "revisions": [],
+      "revisions": [
+        {
+          "date": "2026-10-20",
+          "field": "description",
+          "old": "whose depression lifted within weeks and stayed better",
+          "new": "her symptom scores fell the morning after it was switched on, her depression score had more than halved twelve days later, and months later it was in the range counted as remission",
+          "why": "The 2021 Nature Medicine report, read in full on 2026-10-20, gives the timing: daily scores dropped the morning after closed-loop stimulation began, the Montgomery–Åsberg score fell from 33 to 14 at the first check after 12 days and below 10 (remission) several months later, and the effect held to the time of writing. 'Within weeks' understated the speed and said nothing of remission."
+        }
+      ],
       "verify": [],
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The record is the 2021 Nature Medicine report of a single patient. Closed-loop implants that respond to brain signals were already approved for epilepsy (the NeuroPace system, 2013), which is where the hardware came from; for mood the only record is this one and a few patients since.",
+      "notes": "The record is the 2021 Nature Medicine report of a single patient. Closed-loop implants that respond to brain signals were already approved for epilepsy (the NeuroPace system, 2013), which is where the hardware came from; for mood the only record is this one and a few patients since. The paper, read in full on 2026-10-20, describes a woman of 36 whose depression had begun in childhood and had not responded to several drug combinations or to electroconvulsive therapy. A ten-day mapping stage with temporary electrodes found her marker (a rise in one band of fast activity in the amygdala, a region deep in the brain involved in emotion) and the place where stimulation helped; the implant then gave six seconds of stimulation each time it detected the marker, up to 300 times a day. Her score on a standard depression scale (the Montgomery–Åsberg scale) went from 33 to 14 after twelve days and below 10 several months later. The paper calls itself a proof of concept: it was not designed to show the treatment works, which it says would need a double-blind, randomised trial, and her clinicians were usually but not always blind to the stimulation.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
