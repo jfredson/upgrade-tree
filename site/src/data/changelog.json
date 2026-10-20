@@ -3,6 +3,12 @@
   "intro": "Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.",
   "days": [
     {
+      "date": "2026-10-19",
+      "items": [
+        "**I rewrote the two news posts as short stories for a reader new to the site, the rule I set for every tracker on 2026-10-19.** The post on Vidal's 1977 paper keeps its address and every fact, gains a plainer title (\"A 1977 paper moves the first brain-to-computer link without surgery back eleven years\") and a redrawn card, and ends with a dated line linking its first version. The opening \"Start here\" post, held since 2026-10-18 until I had read it, is rewritten the same way and is still not published. No record, stage or count changed."
+      ]
+    },
+    {
       "date": "2026-10-18",
       "items": [
         "**Five changes to the weekly reading, from the audit of its first cloud run, as John ruled on 2026-10-18 (\"yes to all five\").** The audit is `docs/readings/audit-2026-10-18.md`. (1) The documents now say two upgrades sit at the top of the ladder and a weekly reading is 33, and the export refuses a newest reading that reads any other set than its scope asks for. (2) `noted` means dated inside the week or new to the record; an older record the entry already holds is `quiet`, with the fact in `found`. (3) A reading opens every record it cites for a non-quiet item, cites the maker's, regulator's or journal's own page, lists the pages in a new `opened` field, and runs one more search limited to the register's site, whose sites go in a new `register` field; the export holds records from the reading of 2026-10-19 to both. (4) The export script stamps the site's data and the headline file with the Pacific date, not the machine's universal-time date (the first cloud run had stamped 2026-10-19 on a reading of 2026-10-18); `scripts/test_reading_rules.py` tests this and the rules above, and the deploy runs it. (5) The reading page's key now says `quiet` means nothing turned up in the search results, not that nothing happened. No record, stage or count changed.",
