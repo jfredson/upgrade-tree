@@ -1,5 +1,5 @@
 {
-  "exported_on": "2026-10-20",
+  "exported_on": "2026-10-21",
   "readings": [
     {
       "date": "2026-10-18",
@@ -372,7 +372,7 @@
         },
         {
           "upgrade": "mood-treatment-removes-a-specific-fear-memory",
-          "upgrade_name": "A treatment removes a specific fear memory on purpose",
+          "upgrade_name": "A treatment removes a specific fear memory",
           "branch": "mood",
           "branch_name": "Mood and drive",
           "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
@@ -492,7 +492,7 @@
         },
         {
           "upgrade": "inheritance-child-born-from-a-gene-edited-embryo",
-          "upgrade_name": "A child is born from an embryo whose genes were edited on purpose",
+          "upgrade_name": "A child is born from a gene-edited embryo",
           "branch": "inheritance",
           "branch_name": "Inheritance",
           "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
@@ -1092,7 +1092,7 @@
         },
         {
           "upgrade": "mood-treatment-removes-a-specific-fear-memory",
-          "upgrade_name": "A treatment removes a specific fear memory on purpose",
+          "upgrade_name": "A treatment removes a specific fear memory",
           "branch": "mood",
           "branch_name": "Mood and drive",
           "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
@@ -1212,7 +1212,7 @@
         },
         {
           "upgrade": "inheritance-child-born-from-a-gene-edited-embryo",
-          "upgrade_name": "A child is born from an embryo whose genes were edited on purpose",
+          "upgrade_name": "A child is born from a gene-edited embryo",
           "branch": "inheritance",
           "branch_name": "Inheritance",
           "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",

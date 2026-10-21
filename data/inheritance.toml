@@ -5,7 +5,7 @@
 
 [[upgrade]]
 id = "inheritance-child-born-from-a-gene-edited-embryo"
-name = "A child is born from an embryo whose genes were edited on purpose"
+name = "A child is born from a gene-edited embryo"
 branch = "inheritance"
 description = """
 The genes of a human embryo are changed before it is implanted, and a child is born carrying the
@@ -131,7 +131,7 @@ status = "tracked"
 depends_on = []
 stage = "idea-only"
 notes = """
-The charter expected this leaf at shown in animals. The test above is stricter on purpose, because
+The charter expected this leaf at shown in animals. The test above is stricter by choice, because
 the words "carried to birth" promise the whole pregnancy and no animal result delivers it: the 2017
 Philadelphia lambs entered the bag at 104 to 135 days of a 145-day gestation, and the 2021 Israeli
 mouse embryos stopped at day 11 of about 20. A company working on extinct-species revival has said

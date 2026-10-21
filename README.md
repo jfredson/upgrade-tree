@@ -1,8 +1,8 @@
 # The Upgrade Tree
 
-How much of a human being can we change on purpose today?
+How much of a human being can we change with technology today?
 
-The Upgrade Tree is a public count. It lists the specific ways a person can be changed on purpose (an implant that gives back some sight, a pill meant to slow ageing, a chip that lets a paralysed person type by thought), sorted under seven branches: senses; movement and body; memory and thinking; mood and drive; lifespan and repair; inheritance; and the link to machines. Each upgrade carries a plain test of what would count as a person having it, the public record that settles that, and a stage on a five-rung ladder: idea only, shown in animals, first human, in clinical use, in wide use. The headline is the count of upgrades that have reached a first human. The second number, how much information can pass between a brain and a computer each second, is watched on the link-to-machines branch.
+The Upgrade Tree is a public count. It lists the specific ways technology can change a person (an implant that gives back some sight, a pill meant to slow ageing, a chip that lets a paralysed person type by thought), sorted under seven branches: senses; movement and body; memory and thinking; mood and drive; lifespan and repair; inheritance; and the link to machines. Each upgrade carries a plain test of what would count as a person having it, the public record that settles that, and a stage on a five-rung ladder: idea only, shown in animals, first human, in clinical use, in wide use. The headline is the count of upgrades that have reached a first human. The second number, how much information can pass between a brain and a computer each second, is watched on the link-to-machines branch.
 
 There are no probabilities. A stage, a date and a record say what has happened; the project does not guess about what will. That is the difference from its sibling, The Belt Equation (beltequation.com), which gives every event odds.
 

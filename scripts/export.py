@@ -1082,7 +1082,7 @@ def export_readings(tree: dict, folder: Path) -> tuple[dict, list[str]]:
 def headline_words(count: int, total: int) -> str:
     """The count in the words the home page uses under it."""
     one = count == 1
-    return (f"{count} of {total} {'way' if one else 'ways'} of changing a human being on purpose "
+    return (f"{count} of {total} {'way' if one else 'ways'} of changing a human being with technology "
             f"{'has' if one else 'have'} been tried in at least one living person")
 
 

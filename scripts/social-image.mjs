@@ -1,4 +1,4 @@
-// Makes the social preview image, site/public/social-preview.png (1200 by 630): what link previews
+// Makes the social preview image, site/public/social-preview-2026-10-21.png (1200 by 630; the date in the name changes whenever the wording does, so link previews fetch the new picture): what link previews
 // on iMessage, Slack, X, Reddit and the rest show when The Upgrade Tree is shared. Drawn in the "Plate" skin's own
 // tokens (site/src/styles/skin.css), carrying the site's name, the question from its home page and its
 // address; no stock picture. The proposed rule is design/tracker-pattern.md in sentient-horizons.
@@ -77,14 +77,14 @@ function buildPlate() {
 ${figure}
 ${nameLine({ name: 'The Upgrade Tree', x: 72, y: 116, fill: accent })}
 ${textBlock({
-    lines: ['How much of a human', 'being can we change', 'on purpose today?'],
+    lines: ['How much of a human', 'being can we change', 'with technology today?'],
     x: 72, y: 220, size: 64, lead: 78, fill: text,
   })}
 ${domainLine({ domain: 'theupgradetree.com', x: 72, y: 540, fill: muted })}`);
 }
 
 
-const out = fileURLToPath(new URL('../site/public/social-preview.png', import.meta.url));
+const out = fileURLToPath(new URL('../site/public/social-preview-2026-10-21.png', import.meta.url));
 // ---- the news posts' cards (tracker pattern, rule 4.15; John 2026-10-18) ----------------------------
 // `node scripts/social-image.mjs --posts [file ...]` draws one card per post in site/src/content/news/
 // (or the files named) to site/public/news/<slug>-card.png: the site's name line, the post's title as
@@ -125,7 +125,7 @@ if (argv[0] === '--posts') {
     console.log('wrote', join(outDir, `${slug}-card.png`));
   }
 } else {
-  const out = fileURLToPath(new URL('../site/public/social-preview.png', import.meta.url));
+  const out = fileURLToPath(new URL('../site/public/social-preview-2026-10-21.png', import.meta.url));
   await sharp(Buffer.from(buildPlate())).png({ compressionLevel: 9 }).toFile(out);
   console.log('wrote', out);
 }

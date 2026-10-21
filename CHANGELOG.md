@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-10-21
+
+- **The site now asks "How much of a human being can we change with technology today?", in place of "on purpose", as I ruled on 2026-10-21.** "On purpose" is what you say to rule out an accident, which nobody had raised, and it hid the real line the tree draws: between changes made with a device, a drug, a procedure or a machine a person uses, and everything else that changes a person, such as growing up, ageing or school. The headline now reads "ways of changing a human being with technology", and so do the home page, the method page, the claims page, the footer, the link preview and the share picture (redrawn, at a new address, `/social-preview-2026-10-21.png`). Where a sentence already says "a device, a drug or a procedure", the words are simply gone. Two upgrade names are shorter: "A treatment removes a specific fear memory" and "A child is born from a gene-edited embryo"; their addresses are unchanged. The mood branch keeps its condition that a change is one the person chose. No count, stage, test or address moved; the count stays at 28 of 35. The wording proposal is `docs/proposals/2026-10-21-on-purpose-wording.md`.
+
 ## 2026-10-20
 
 - **Five papers this tracker leans on were read in full against the record on 2026-10-20.** No stage moved and the headline count is unchanged at 28 of 35. One point was added to the speed chart, and four entries were made more exact.

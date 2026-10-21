@@ -4,7 +4,9 @@ Written 2026-10-21, at John's request: "Can we review the use of the words 'on p
 for the Upgrade Tree project? Something about that just feels off. There has to be a better way to
 say what we are trying to convey for that project."
 
-**This is a proposal. Nothing live has changed.** It lists every public use of the phrase, says why
+**Applied on 2026-10-21.** John ruled the same day: "'with technology' works. Let's go ahead and push that update live site wide." The recommendation below went live in the same pull request; besides it, three editorial notes that said "on purpose" in its ordinary sense now say "by choice". The two upgrade tests that use the words (the wired cursor implant and the fear-memory treatment), the long-shot label and the changelog's past entries are unchanged. The text below is the proposal as written.
+
+~~This is a proposal. Nothing live has changed.~~ It lists every public use of the phrase, says why
 it reads off, sets out four other ways to say it with the headline, home page, definition and
 today's share pair written out for each, and recommends one. John picks; a later session makes the
 change.

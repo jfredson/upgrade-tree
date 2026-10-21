@@ -24,6 +24,8 @@ const news = defineCollection({
     before: z.string().optional(),
     after: z.string().optional(),
     stand_in: z.boolean().default(false),
+    // The day the post's card was last redrawn; it goes into the card's address so link previews fetch the new one.
+    card_version: isoDate.optional(),
   }),
 });
 

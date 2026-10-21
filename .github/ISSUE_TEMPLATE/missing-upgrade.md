@@ -1,6 +1,6 @@
 ---
 name: Name a missing upgrade
-about: A way of changing a person on purpose that the tree does not list
+about: A way technology can change a person that the tree does not list
 title: "Missing upgrade: "
 labels: missing-upgrade
 ---

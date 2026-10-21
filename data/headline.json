@@ -1,6 +1,6 @@
 {
-  "computed_on": "2026-10-20",
-  "commit": "13672d4",
+  "computed_on": "2026-10-21",
+  "commit": "db6c8f3",
   "last_reading": "2026-10-18",
   "method": {
     "document": "docs/upgrade-schema.md",
@@ -13,7 +13,7 @@
     "count": 28,
     "total": 35,
     "stage": "first-human",
-    "words": "28 of 35 ways of changing a human being on purpose have been tried in at least one living person"
+    "words": "28 of 35 ways of changing a human being with technology have been tried in at least one living person"
   },
   "by_stage": [
     {

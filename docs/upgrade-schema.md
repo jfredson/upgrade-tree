@@ -13,7 +13,7 @@ this folder and in the scripts.
 
 ## What an upgrade is
 
-An upgrade is one specific technology that changes a human being on purpose: a device, a drug,
+An upgrade is one specific technology that changes how a human body or mind works: a device, a drug,
 a procedure or a practice. It has a plain name, a description, a test that says what would count
 as a person having it (so that two readers agree), a source that says who settles that, a place
 on one of the seven branches, and a stage. An upgrade without a test is not an upgrade.
