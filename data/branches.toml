@@ -41,11 +41,11 @@ figure_region = "mind"
 key = "mood"
 order = 4
 name = "Mood and drive"
-tagline = "How we feel, what we want, and whether that can be set on purpose."
+tagline = "How we feel, what we want, and whether we can choose to change it."
 meaning = """
 Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels
-or what they are driven to do, by a drug, a device or a procedure, on purpose and for a reason
-the person chose."""
+or what they are driven to do, by a drug, a device or a procedure, for a reason the person
+chose."""
 figure_region = "mood"
 
 [[branch]]

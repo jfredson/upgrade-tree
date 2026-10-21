@@ -1,6 +1,6 @@
 {
-  "exported_on": "2026-10-20",
-  "commit": "13672d4",
+  "exported_on": "2026-10-21",
+  "commit": "db6c8f3",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -223,8 +223,8 @@
       "key": "mood",
       "order": 4,
       "name": "Mood and drive",
-      "tagline": "How we feel, what we want, and whether that can be set on purpose.",
-      "meaning": "Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels or what they are driven to do, by a drug, a device or a procedure, on purpose and for a reason the person chose.",
+      "tagline": "How we feel, what we want, and whether we can choose to change it.",
+      "meaning": "Mood, motivation, fear, pleasure and the will to act. An upgrade here changes how a person feels or what they are driven to do, by a drug, a device or a procedure, for a reason the person chose.",
       "figure_region": "mood",
       "path": "/branches/mood/",
       "count": 4,
@@ -263,7 +263,7 @@
         },
         {
           "id": "mood-treatment-removes-a-specific-fear-memory",
-          "name": "A treatment removes a specific fear memory on purpose",
+          "name": "A treatment removes a specific fear memory",
           "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
           "stage": "first-human",
           "stage_label": "First human"
@@ -365,7 +365,7 @@
         },
         {
           "id": "inheritance-child-born-from-a-gene-edited-embryo",
-          "name": "A child is born from an embryo whose genes were edited on purpose",
+          "name": "A child is born from a gene-edited embryo",
           "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
           "stage": "first-human",
           "stage_label": "First human"
@@ -611,7 +611,7 @@
     },
     {
       "id": "inheritance-child-born-from-a-gene-edited-embryo",
-      "name": "A child is born from an embryo whose genes were edited on purpose",
+      "name": "A child is born from a gene-edited embryo",
       "branch": "inheritance",
       "branch_name": "Inheritance",
       "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
@@ -712,7 +712,7 @@
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The charter expected this leaf at shown in animals. The test above is stricter on purpose, because the words \"carried to birth\" promise the whole pregnancy and no animal result delivers it: the 2017 Philadelphia lambs entered the bag at 104 to 135 days of a 145-day gestation, and the 2021 Israeli mouse embryos stopped at day 11 of about 20. A company working on extinct-species revival has said it aims to have a mammal born fully outside a body, with no peer-reviewed result yet. Either half would be an entry of its own if I want the partial results on the tree; the artificial womb for very premature babies, the human use of the 2017 work, is heading for trials and would belong on the Lifespan and repair branch.",
+      "notes": "The charter expected this leaf at shown in animals. The test above is stricter by choice, because the words \"carried to birth\" promise the whole pregnancy and no animal result delivers it: the 2017 Philadelphia lambs entered the bag at 104 to 135 days of a 145-day gestation, and the 2021 Israeli mouse embryos stopped at day 11 of about 20. A company working on extinct-species revival has said it aims to have a mammal born fully outside a body, with no peer-reviewed result yet. Either half would be an entry of its own if I want the partial results on the tree; the artificial womb for very premature babies, the human use of the 2017 work, is heading for trials and would belong on the Lifespan and repair branch.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
@@ -1850,7 +1850,7 @@
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "Why it is a leaf: the charter's question is how much of a person we can change on purpose, and a mind that routinely thinks with a machine is changed, even if nothing was implanted. The stage is in wide use because the technology is sold to the public everywhere and used by a counted population in the hundreds of millions, which is what the rung asks. The bar in the name, most adults daily, has not been shown by any survey this record could find. The Pew survey linked here, fielded in February 2026, puts the share of American adults who use an AI chatbot at about half, and the share who use one daily at 24 per cent; the Reuters Institute's six-country survey of mid-2025 put weekly use of any such tool at 34 per cent; the maker of the most used assistant said in October 2025 that more than 800 million people used it each week. The entry stays on the tree with the gap stated plainly, and the first representative survey to show a daily majority in any country will be added to the record when it appears.",
+      "notes": "Why it is a leaf: the charter's question is how much of a person we can change with technology, and a mind that routinely thinks with a machine is changed, even if nothing was implanted. The stage is in wide use because the technology is sold to the public everywhere and used by a counted population in the hundreds of millions, which is what the rung asks. The bar in the name, most adults daily, has not been shown by any survey this record could find. The Pew survey linked here, fielded in February 2026, puts the share of American adults who use an AI chatbot at about half, and the share who use one daily at 24 per cent; the Reuters Institute's six-country survey of mid-2025 put weekly use of any such tool at 34 per cent; the maker of the most used assistant said in October 2025 that more than 800 million people used it each week. The entry stays on the tree with the gap stated plainly, and the first representative survey to show a daily majority in any country will be added to the record when it appears.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],
@@ -2059,7 +2059,7 @@
       "branch": "mind",
       "branch_name": "Memory and thinking",
       "path": "/branches/mind/mind-drug-raises-a-measured-thinking-ability-in-healthy-adults/",
-      "description": "The pill that makes a healthy person smarter is one of the oldest promises on this tree, and the one with the least behind it. Stimulants make tired people more alert and quicker to react, and students take them for that. But alertness is not reasoning, and when healthy, rested adults are tested on memory or problem solving in properly controlled trials, the gains are small, inconsistent and rarely repeated. The entry is kept strict on purpose: it waits for a lasting gain in a thinking ability, not a shorter reaction time.",
+      "description": "The pill that makes a healthy person smarter is one of the oldest promises on this tree, and the one with the least behind it. Stimulants make tired people more alert and quicker to react, and students take them for that. But alertness is not reasoning, and when healthy, rested adults are tested on memory or problem solving in properly controlled trials, the gains are small, inconsistent and rarely repeated. The entry is kept strict by choice: it waits for a lasting gain in a thinking ability, not a shorter reaction time.",
       "resolution": "A placebo-controlled trial in healthy, rested adults, registered before it ran, finds that a drug raises a standard measure of reasoning, learning or memory (not alertness, wakefulness or reaction time) by a margin the trial was built to detect, and a second, independent group repeats the result.",
       "source": "Peer-reviewed trial reports with a registry entry; a regulator's approval for use in healthy people if it ever comes",
       "horizon": "root",
@@ -2134,7 +2134,7 @@
       "branch": "mood",
       "branch_name": "Mood and drive",
       "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
-      "description": "Psilocybin, the active part of certain mushrooms, and MDMA, given a few times under supervision with talking therapy, have in trials lifted depression and post-traumatic stress that nothing else had shifted. On 1 July 2023 Australia became the first country to let specially approved psychiatrists prescribe them, outside any trial. Other regulators have so far declined. It is on this branch because the change it makes is to how a person feels, on purpose and at their request.",
+      "description": "Psilocybin, the active part of certain mushrooms, and MDMA, given a few times under supervision with talking therapy, have in trials lifted depression and post-traumatic stress that nothing else had shifted. On 1 July 2023 Australia became the first country to let specially approved psychiatrists prescribe them, outside any trial. Other regulators have so far declined. It is on this branch because the change it makes is to how a person feels, at their request.",
       "resolution": "A regulator somewhere allows a doctor to prescribe a classic psychedelic (psilocybin, LSD, DMT, mescaline) or MDMA as a treatment for a named condition outside a trial, in the regulator's own published notice.",
       "source": "The regulator's own notice (Australia's Therapeutic Goods Administration, the United States Food and Drug Administration, the European Medicines Agency or an equivalent)",
       "horizon": "leaf",
@@ -2363,7 +2363,7 @@
     },
     {
       "id": "mood-treatment-removes-a-specific-fear-memory",
-      "name": "A treatment removes a specific fear memory on purpose",
+      "name": "A treatment removes a specific fear memory",
       "branch": "mood",
       "branch_name": "Mood and drive",
       "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
@@ -2545,7 +2545,7 @@
       "watch": [],
       "sibling": null,
       "sibling_url": null,
-      "notes": "The record is the 2005 Utah report of amputees with fine electrodes in the nerves of the stump who both moved a prosthetic arm and judged grip force and position through it without looking. The 2014 report of a Danish volunteer using a hand with nerve electrodes that fed back touch in real time is the first with a dexterous hand. Later in 2014 a Swedish group reported a bone-anchored arm with nerve and muscle electrodes used at home for over a year, and in 2020 the same group reported several people using such arms in daily life for years. Prosthetic hands with vibrating motors on the skin are sold commercially; the test here leaves them out on purpose, because the upgrade is touch restored to the nervous system, not a signal the person learns to read.",
+      "notes": "The record is the 2005 Utah report of amputees with fine electrodes in the nerves of the stump who both moved a prosthetic arm and judged grip force and position through it without looking. The 2014 report of a Danish volunteer using a hand with nerve electrodes that fed back touch in real time is the first with a dexterous hand. Later in 2014 a Swedish group reported a bone-anchored arm with nerve and muscle electrodes used at home for over a year, and in 2020 the same group reported several people using such arms in daily life for years. Prosthetic hands with vibrating motors on the skin are sold commercially; the test here leaves them out by choice, because the upgrade is touch restored to the nervous system, not a signal the person learns to read.",
       "example": false,
       "depends_on_refs": [],
       "needed_by": [],

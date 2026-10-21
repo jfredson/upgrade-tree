@@ -52,7 +52,7 @@ https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2
 Every page's footer carries the subject notice John ruled on 2026-10-17, one line between the
 attribution line and the family line, in the place and register of Outrunning Ageing's medical
 notice: the site records what has been shown and what has been promised about changing a human
-being on purpose; it recommends nothing, and nothing on it is medical advice.
+being with technology; it recommends nothing, and nothing on it is medical advice.
 
 ## Commands
 

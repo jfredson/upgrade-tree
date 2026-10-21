@@ -14,7 +14,7 @@ export const KIND_LABEL: Record<string, string> = {
 };
 
 export const postPath = (p: Post) => `/news/${p.id}/`;
-export const cardPath = (p: Post) => `/news/${p.id}-card.png`;
+export const cardPath = (p: Post) => `/news/${p.id}-card.png${p.data.card_version ? `?v=${p.data.card_version}` : ''}`;
 
 /** Every post, newest first; the opener is excluded unless asked for. */
 export async function allPosts(): Promise<Post[]> {

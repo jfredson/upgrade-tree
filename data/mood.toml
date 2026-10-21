@@ -80,7 +80,7 @@ Psilocybin, the active part of certain mushrooms, and MDMA, given a few times un
 with talking therapy, have in trials lifted depression and post-traumatic stress that nothing else
 had shifted. On 1 July 2023 Australia became the first country to let specially approved
 psychiatrists prescribe them, outside any trial. Other regulators have so far declined. It is on
-this branch because the change it makes is to how a person feels, on purpose and at their request."""
+this branch because the change it makes is to how a person feels, at their request."""
 resolution = """
 A regulator somewhere allows a doctor to prescribe a classic psychedelic (psilocybin, LSD, DMT,
 mescaline) or MDMA as a treatment for a named condition outside a trial, in the regulator's own
@@ -106,7 +106,7 @@ Australian scheme are in the low hundreds."""
 
 [[upgrade]]
 id = "mood-treatment-removes-a-specific-fear-memory"
-name = "A treatment removes a specific fear memory on purpose"
+name = "A treatment removes a specific fear memory"
 branch = "mood"
 description = """
 A memory, when recalled, becomes briefly unstable and has to be stored again; a drug given in that

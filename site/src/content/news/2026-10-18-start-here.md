@@ -1,7 +1,8 @@
 ---
-title: "Start here: of 35 ways to change a human being on purpose, 28 have been tried in a person"
+title: "Start here: of 35 ways to change a human being with technology, 28 have been tried in a person"
 date: 2026-10-18
 kind: start-here
+card_version: 2026-10-21
 summary: Some people expect humans to improve themselves with devices, drugs and surgery, and in the end to merge with their machines. This site counts what has actually been done, from the public record, and this post explains where the count stood on 18 October 2026 and how to follow it.
 sources:
   - label: The headline file, the count as it stands
@@ -12,7 +13,7 @@ sources:
 
 One idea about the future says that as machines get smarter, people keep up by joining with them: sharper senses, better memory, a longer life, and in the end a direct line from the brain to a computer. Some of that is already happening, and some of it is only talk. I wanted to know which was which, and it turns out the answer can be written as a list.
 
-The Upgrade Tree is that list, kept in the open. It asks one question: how much of a human being can we change on purpose today? Not in a story, and not someday, but with a device, a drug or a procedure that at least one person has actually had, counted from the public record. Each change is an upgrade on the tree, with a plain statement of what would count as a person having it and the kind of record that settles it, such as a regulator's approval or a peer-reviewed paper (one checked by other scientists before it was published). The site gives no odds on what will happen. It says what has happened, when, and where the record is, so that anyone can check an entry or argue with it.
+The Upgrade Tree is that list, kept in the open. It asks one question: how much of a human being can we change with technology today? Not in a story, and not someday, but with a device, a drug or a procedure that at least one person has actually had, counted from the public record. Each change is an upgrade on the tree, with a plain statement of what would count as a person having it and the kind of record that settles it, such as a regulator's approval or a peer-reviewed paper (one checked by other scientists before it was published). The site gives no odds on what will happen. It says what has happened, when, and where the record is, so that anyone can check an entry or argue with it.
 
 ## Where the Count Stands
 

@@ -19,14 +19,14 @@ interface Props {
 
 const {
   title = 'The Upgrade Tree',
-  description = 'How much of a human being can we change on purpose today? A public count of the upgrades that have reached a first human, a clinic, or wide use, branch by branch, and a watch on the link between brains and machines.',
+  description = 'How much of a human being can we change with technology today? A public count of the upgrades that have reached a first human, a clinic, or wide use, branch by branch, and a watch on the link between brains and machines.',
   noindex = false,
   image,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-// The preview picture link cards show (site/public/social-preview.png, made by scripts/social-image.mjs); an absolute address, as the tags require.
-const socialImage = new URL(image ?? '/social-preview.png', Astro.site).href;
+// The preview picture link cards show (site/public/social-preview-2026-10-21.png, made by scripts/social-image.mjs); an absolute address, as the tags require.
+const socialImage = new URL(image ?? '/social-preview-2026-10-21.png', Astro.site).href;
 const currentYear = new Date().getFullYear();
 // "16 October 2026" for the footer; the design standard writes dates out there.
 const longDate = (iso: string) => {
@@ -79,7 +79,7 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    {!image && <meta property="og:image:alt" content="The Upgrade Tree: How much of a human being can we change on purpose today?" />}
+    {!image && <meta property="og:image:alt" content="The Upgrade Tree: How much of a human being can we change with technology today?" />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={socialImage} />
   </head>
@@ -92,7 +92,7 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
       <div class="container footer-grid">
         <div>
           <span class="footer-brand">The Upgrade Tree</span>
-          <p class="footer-tag">A public count of how much of a human being we can change on purpose today, and a watch on the link between brains and machines.</p>
+          <p class="footer-tag">A public count of how much of a human being we can change with technology today, and a watch on the link between brains and machines.</p>
           <p class="footer-links">
             <a href="/branches/">The seven branches</a>
             <a href="/claims/">The claims</a>
@@ -105,7 +105,7 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
           <p class="footer-meta">
             © {currentYear} John Fredrickson. Last built {longDate(tree.exported_on)}{tree.commit ? ` (version ${tree.commit})` : ''} from {builtFrom}. Free to reuse with credit (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>); code under the MIT licence.
           </p>
-          <p class="footer-notice">This site records what has been shown and what has been promised about changing a human being on purpose. It recommends nothing, and nothing on it is medical advice.</p>
+          <p class="footer-notice">This site records what has been shown and what has been promised about changing a human being with technology. It recommends nothing, and nothing on it is medical advice.</p>
           <p class="footer-parent"><a href="https://sentient-horizons.com/projects/" rel="noopener">A Sentient Horizons project.</a></p>
           <p class="footer-follow"><a href="https://x.com/SentHorizons" rel="noopener">Follow on X</a></p>
         </div>
