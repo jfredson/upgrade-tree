@@ -135,3 +135,46 @@ export function readingSummary(reading: Reading): string {
   const joined = parts.length === 1 ? parts[0] : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
   return `${read}, ${joined}`;
 }
+
+/** The reading page's one-line form of a note (tracker pattern rule 4.1, approved by John
+    2026-10-21; copied from Outrunning Ageing's site/src/lib/records.ts): its first sentence, and the
+    rest for when the entry is opened. Nothing is rewritten; the split is at the first full stop,
+    question or exclamation mark followed by a space and a capital, a digit or an opening bracket,
+    skipping initials ("U.S.") and the common abbreviations. A note with no such break is all line. */
+const ABBREVIATIONS = /(?:^|\s)(?:e\.g|i\.e|etc|vs|cf|al|Dr|Mr|Mrs|Ms|Prof|St|No|Fig|approx|Inc|Ltd|Co|Jr|Sr)\.$/;
+export function splitFirstSentence(note: string): { line: string; rest: string } {
+  const text = note.replace(/\s+/g, ' ').trim();
+  const breakAt = /[.!?]["'’”)]?\s+(?=[A-Z0-9(“"‘'])/g;
+  let m: RegExpExecArray | null;
+  while ((m = breakAt.exec(text)) !== null) {
+    const upTo = text.slice(0, m.index + 1);
+    if (ABBREVIATIONS.test(upTo) || /(?:^|[\s.])[A-Z]\.$/.test(upTo)) continue;
+    const end = m.index + m[0].trimEnd().length;
+    return { line: text.slice(0, end), rest: text.slice(end).trim() };
+  }
+  return { line: text, rest: '' };
+}
+
+/** Which entries open by default: every verdict but quiet ("Nothing new"), so a stage that moved,
+    anything waiting on me or since ruled, and anything noted. A ruled item opens too. */
+export const opensByDefault = (item: ReadingItem): boolean => item.verdict !== 'quiet' || item.picked_up !== null;
+
+/** "33 checked · 25 nothing new · 8 no change", in the verdicts' own public words. A flagged item
+    taken off my list since is counted as "left for me and since ruled", matching its "Ruled" badge. */
+export function readingCountLine(reading: Reading): string {
+  const parts = [`${reading.upgrades_read} checked`];
+  const order: Verdict[] = ['stage-change', 'flagged', 'noted', 'quiet'];
+  for (const v of order) {
+    if (v === 'flagged') {
+      const flagged = reading.items.filter((i) => i.verdict === 'flagged');
+      const open = flagged.filter((i) => !i.picked_up).length;
+      const ruled = flagged.length - open;
+      if (open) parts.push(`${open} ${verdictLabel.flagged.toLowerCase()}`);
+      if (ruled) parts.push(`${ruled} left for me and since ruled`);
+      continue;
+    }
+    const n = reading.counts[v];
+    if (n) parts.push(`${n} ${verdictLabel[v].toLowerCase()}`);
+  }
+  return parts.join(' · ');
+}

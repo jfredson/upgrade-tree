@@ -1,0 +1,68 @@
+---
+// One reading's entries in one column, grouped by branch (tracker pattern rule 4.1, the layout John
+// approved 2026-10-21 in place of the card grid; copied from Outrunning Ageing's
+// components/ReadingEntries.astro). Each entry is one row when closed: the upgrade, its verdict
+// badge, and the first sentence of what was found. Opening it shows the rest of the note, anything
+// left for me and how it was ruled, the searches and the sources. "Nothing new" entries start
+// closed; every other verdict starts open. A native <details>, so it needs no JavaScript and works
+// with a keyboard and a screen reader. The latest reading and the earlier ones both use it.
+import { tree, longDate } from '../lib/tree';
+import { datedPosts, postPath } from '../lib/news';
+import { verdictLabel, splitFirstSentence, opensByDefault, type Reading } from '../lib/readings';
+
+interface Props { reading: Reading }
+const { reading } = Astro.props;
+const newsPosts = await datedPosts();
+const postFor = (id: string) => newsPosts.find((p) => p.data.records.includes(id)) ?? null; // rule 4.14
+
+// Items grouped by branch, in the order the home page lists the branches.
+const groups = tree.branches
+  .map((b) => ({ key: b.key, name: b.name, path: b.path, items: reading.items.filter((i) => i.branch === b.key) }))
+  .filter((g) => g.items.length > 0);
+const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+---
+
+{groups.map((g) => (
+  <div class="link-group">
+    <div class="link-head">
+      <h3><span class="dim">Branch: </span><a href={g.path}>{g.name}</a></h3>
+      <span class="dim">{plural(g.items.length, 'upgrade', 'upgrades')} read</span>
+    </div>
+    <div class="reading-rows">
+      {g.items.map((item) => {
+        const { line, rest } = splitFirstSentence(item.found);
+        const post = item.picked_up ? postFor(item.upgrade) : null;
+        return (
+          <details class={`reading-row v-${item.verdict}`} id={`${reading.date}-${item.upgrade}`} open={opensByDefault(item)}>
+            <summary>
+              <span class="row-head">
+                <span class="row-name">{item.upgrade_name}</span>
+                <span class="row-tags">
+                  <span class={`badge v-${item.verdict}`}>{item.picked_up ? 'Ruled' : verdictLabel[item.verdict]}</span>
+                </span>
+              </span>
+              <span class="row-line">{line}</span>
+            </summary>
+            <div class="row-body">
+              {item.verdict === 'stage-change' && (
+                <p class="card-move"><strong>{item.moved_from_label}</strong> to <strong>{item.moved_to_label}</strong></p>
+              )}
+              {rest && <p class="card-found">{rest}</p>}
+              {item.for_john && <p class="card-john"><strong>For me:</strong>{' '}{item.for_john}</p>}
+              {item.picked_up && <p class="card-john dim">Taken off my list on {longDate(item.picked_up.on)}, by {item.picked_up.how}.</p>}
+              {post && <p class="card-john">In the news: <a href={postPath(post)}>{post.data.title}</a>.</p>}
+              <div class="row-searches">
+                <p>{plural(item.queries.length, 'search', 'searches')}{item.sources.length > 0 ? `, ${plural(item.sources.length, 'source', 'sources')}` : ''}:</p>
+                <ul>
+                  {item.queries.map((q) => <li>{q}</li>)}
+                  {item.sources.map((s) => <li><a href={s} rel="noopener nofollow">{s}</a></li>)}
+                </ul>
+              </div>
+              <p class="row-link"><a href={item.path}>Go to the upgrade's page</a></p>
+            </div>
+          </details>
+        );
+      })}
+    </div>
+  </div>
+))}
