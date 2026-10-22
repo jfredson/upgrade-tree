@@ -1,0 +1,33 @@
+---
+// About: why the site keeps count, then how the numbers are worked out, then every change, dated.
+// Made on 2026-10-21 from the Method and Story pages when the top bar was simplified (tracker
+// pattern rule 4.21, ruled by John that day): the two pages' text is kept as it was, in
+// components/AboutMethod.astro and components/AboutStory.astro, and /method/ and /story/ redirect
+// to their parts here. The opening uses the home page's own words.
+import Base from '../layouts/Base.astro';
+import AboutMethod from '../components/AboutMethod.astro';
+import AboutStory from '../components/AboutStory.astro';
+---
+
+<Base title="About The Upgrade Tree: why keep count, how the numbers are worked out, and every change" description="Why the site counts the ways technology can change a human being today, how an upgrade's stage is decided, and every change to the record with its date.">
+  <section class="hero">
+    <p class="eyebrow">About</p>
+    <h1>Why keep count, and how it works</h1>
+    <p class="lede">One idea about the future says that as machines get smarter, people keep up by joining with them: better senses, better memory, a direct line from brain to computer. Whether that is happening is a question with an answer, and the answer is a list. This site is that list, kept in the open so that anyone can check an entry, argue with a stage, or add what is missing.</p>
+    <ul class="about-toc">
+      <li><a href="#method">How the numbers are worked out</a></li>
+      <li><a href="#story">The story so far</a>, every change with its date</li>
+      <li><a href="/reading/">This week's reading</a>, where every upgrade is checked against the news each week</li>
+      <li><a href="/disagree/">Feedback</a>, if something here is wrong</li>
+    </ul>
+  </section>
+
+  <AboutMethod />
+  <AboutStory />
+</Base>
+
+<style>
+  .about-toc { margin: 18px 0 0; padding-left: 1.1em; font-size: 16px; line-height: 1.7; }
+  :global(.about-part) { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 48px; scroll-margin-top: 70px; }
+  :global(.about-h) { font-size: clamp(30px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 14px; }
+</style>

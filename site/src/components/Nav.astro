@@ -11,18 +11,18 @@
 // one or two words per page, and Home drops (the site's name is the home link); the full
 // plain names stay as the page titles and in the footer.
 const path = Astro.url.pathname;
+// Simplified on 2026-10-21 (tracker pattern rule 4.21, ruled by John that day): the pages a reader
+// would come for, then Family beside the theme switch (rule 4.9). Method and Story became the two parts
+// of About; this week's reading keeps its page and is linked from the footer, About, News and the home
+// page; Feedback and Source moved to the footer.
 const primary = [
   { href: '/branches/', label: 'Branches' },
-  { href: '/reading/', label: 'Reading' },
-  { href: '/news/', label: 'News' }, // tracker pattern rule 4.10, John 2026-10-18
   { href: '/claims/', label: 'Claims' },
-  { href: '/story/', label: 'Story' },
+  { href: '/news/', label: 'News' }, // tracker pattern rule 4.10
+  { href: '/about/', label: 'About' },
 ];
 const secondary = [
-  { href: '/method/', label: 'Method' },
-  { href: '/disagree/', label: 'Feedback' },
-  { href: 'https://github.com/jfredson/upgrade-tree', label: 'Source' },
-  { href: 'https://sentient-horizons.com/projects/', label: 'Family' }, // the family's Projects page; tracker pattern rule 4.9, John 2026-10-17
+  { href: 'https://sentient-horizons.com/projects/', label: 'Family' }, // the family's Projects page; tracker pattern rule 4.9
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---

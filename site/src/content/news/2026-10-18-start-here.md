@@ -8,7 +8,7 @@ sources:
   - label: The headline file, the count as it stands
     url: https://theupgradetree.com/data/headline.json
   - label: The method
-    url: https://theupgradetree.com/method/
+    url: https://theupgradetree.com/about/#method
 ---
 
 One idea about the future says that as machines get smarter, people keep up by joining with them: sharper senses, better memory, a longer life, and in the end a direct line from the brain to a computer. Some of that is already happening, and some of it is only talk. I wanted to know which was which, and it turns out the answer can be written as a list.
@@ -31,7 +31,7 @@ Alongside the count is [a log of 27 claims](/claims/) made between 2000 and 2026
 
 Every Sunday evening, Pacific time, the site checks the upgrades against the past week's news and writes down what it found, whether or not anything moved ([the Reading page](https://theupgradetree.com/reading/)). The few upgrades that are already in wide use, with no stage left to climb, are checked once a month. A check may move an upgrade up one stage, and only on a record of the kind that upgrade names, never on press coverage, a company's claim or a demonstration video. Anything else is left for me to rule on.
 
-[The Story](https://theupgradetree.com/story/) lists every change with its date, [the Branches](https://theupgradetree.com/branches/) lead to every upgrade and its records, the speed chart is on [the link-to-machines branch](https://theupgradetree.com/branches/link/#bandwidth), and [the Method](https://theupgradetree.com/method/) explains how the count is worked out and who does what. Think a number here is wrong? [Here's how to tell me, and what happens next](https://theupgradetree.com/disagree/). Every new post goes out on [the news feed](https://theupgradetree.com/news/feed.xml), and a quiet week gets no post.
+[The Story](https://theupgradetree.com/about/#story) lists every change with its date, [the Branches](https://theupgradetree.com/branches/) lead to every upgrade and its records, the speed chart is on [the link-to-machines branch](https://theupgradetree.com/branches/link/#bandwidth), and [the Method](https://theupgradetree.com/about/#method) explains how the count is worked out and who does what. Think a number here is wrong? [Here's how to tell me, and what happens next](https://theupgradetree.com/disagree/). Every new post goes out on [the news feed](https://theupgradetree.com/news/feed.xml), and a quiet week gets no post.
 
 ## The Most Interesting News So Far
 
@@ -39,7 +39,7 @@ The first weekly check, on 16 October 2026, caught a mistake made that same day.
 
 The oldest record for the simplest link between a brain and a machine moved back eleven years. That link is [a headset worn on the scalp that controls a device without surgery](/branches/link/link-scalp-headset-controls-a-device-without-surgery/), and its first human had been dated to [a speller published in December 1988](https://doi.org/10.1016/0013-4694(88)90149-6). On 18 October 2026 [a paper published in May 1977](https://doi.org/10.1109/PROC.1977.10542) by [Jacques Vidal](https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface#History) of the [University of California, Los Angeles](https://en.wikipedia.org/wiki/University_of_California,_Los_Angeles) was read in full. Its volunteers, with electrodes on the scalp and no surgery, steered a symbol through a simple maze on a screen, and I ruled the same day that it counts. No count changed. [The news post on that ruling](/news/2026-10-18-the-scalp-headset-first-human-moves-to-1977/) tells the story.
 
-The claims log has had corrections of its own. The entry for the historian [Yuval Noah Harari](https://en.wikipedia.org/wiki/Yuval_Noah_Harari) said the word "hackable" never appears in his 2020 talk at [Davos](https://en.wikipedia.org/wiki/World_Economic_Forum), the yearly meeting of the World Economic Forum. Listening again found "We are now hackable animals" about twelve minutes in, where the automatic captions had heard "packable animals" ([the Story](/story/)). And [Neuralink's own home page](https://neuralink.com/), read on 16 October 2026, does not mention artificial intelligence, symbiosis or merging anywhere ([the Claims](/claims/)).
+The claims log has had corrections of its own. The entry for the historian [Yuval Noah Harari](https://en.wikipedia.org/wiki/Yuval_Noah_Harari) said the word "hackable" never appears in his 2020 talk at [Davos](https://en.wikipedia.org/wiki/World_Economic_Forum), the yearly meeting of the World Economic Forum. Listening again found "We are now hackable animals" about twelve minutes in, where the automatic captions had heard "packable animals" ([the Story](/about/#story)). And [Neuralink's own home page](https://neuralink.com/), read on 16 October 2026, does not mention artificial intelligence, symbiosis or merging anywhere ([the Claims](/claims/)).
 
 ## What to Watch For
 

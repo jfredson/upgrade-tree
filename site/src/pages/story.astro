@@ -1,35 +1,18 @@
 ---
-// The story so far: the changelog, rendered day by day from CHANGELOG.md (scripts/export.py).
-import Base from '../layouts/Base.astro';
-import { changelog, longDate, REPO } from '../lib/tree';
-import { datedPosts, postPath } from '../lib/news';
-const newsPosts = await datedPosts();
-const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
+// /story/ became part of /about/ on 2026-10-21, when the top bar was simplified (tracker pattern rule 4.21).
+// A plain redirect would drop the part of an old link after "#" (one day of the story), so this page
+// keeps it: /story/#x goes to /about/#x, and /story/ alone to /about/#story. Without scripts, the refresh
+// and the link still reach the right part of the page.
 ---
-
-<Base title="The story so far · The Upgrade Tree" description="Every change to the record, the stage ladder and the site, with the date it was made.">
-  <section class="hero">
-    <p class="eyebrow">The story so far</p>
-    <h1>Every change, dated</h1>
-    <p class="lede">
-      {changelog.intro || 'Newest first. Each day lists what changed in the record, the rules, or the site.'}
-    </p>
-  </section>
-
-  <section class="section narrow">
-    <ul class="days">
-      {changelog.days.map((d) => (
-        <li id={d.date}>
-          <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
-          <ul>
-            {d.items.map((item) => <li>{item}</li>)}
-            {postsFor(d.date).map((p) => <li class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</li>)}
-          </ul>
-        </li>
-      ))}
-    </ul>
-    <p class="dim" style="font-size: 14px; margin-top: 24px;">
-      This page is the repository's changelog as written: <a href={`${REPO}/blob/main/CHANGELOG.md`} rel="noopener">CHANGELOG.md</a>.
-    </p>
-  </section>
-</Base>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Moved to About · The Upgrade Tree</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://theupgradetree.com/about/#story" />
+    <script is:inline>location.replace('/about/' + (location.hash || '#story'));</script>
+    <meta http-equiv="refresh" content="0;url=/about/#story" />
+  </head>
+  <body><a href="/about/#story">This page is now part of About.</a></body>
+</html>
