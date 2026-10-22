@@ -214,8 +214,14 @@ Three surfaces, the tracker pattern's section 5 (ruled by John 2026-10-16):
   reading" as links. The date is the reading's, written out. Before the first reading it says in
   words that none has run.
 - **"This week's reading"** at `/reading/`, linked from the home page, About, News and the footer (it left the top bar on 2026-10-21, under tracker pattern rule 4.21): the latest reading at
-  the top with its counts and a badge per verdict, the items grouped by branch, the flagged items
-  waiting on John, earlier readings collapsed below, and a key saying what each verdict means.
+  the top with its counts in a line under the page heading, the flagged items waiting on John,
+  the items grouped by branch, earlier readings collapsed below, and a key saying what each
+  verdict means. Since 2026-10-21 (approved by John) the items are one column, not a grid of
+  cards: each is one row when closed (the upgrade, its verdict badge, and the first sentence of
+  what was found), and opening it shows the rest of the note, anything left for John and how it
+  was ruled, the searches, the sources and a link to the upgrade's page. "Nothing new" (quiet)
+  items start closed; "A stage moved", "Waiting on me", "Ruled" and "No change" start open.
+  Earlier readings use the same rows.
 - **Each upgrade's page**: its last three readings, the date and the verdict in a line, the
   sentence it wrote when opened.
 
