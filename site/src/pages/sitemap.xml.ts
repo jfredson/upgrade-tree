@@ -7,7 +7,7 @@ import type { APIRoute } from 'astro';
 import { tree } from '../lib/tree';
 
 export const GET: APIRoute = ({ site }) => {
-  const staticPaths = ['/', '/branches/', '/claims/', '/reading/', '/method/', '/story/', '/disagree/'];
+  const staticPaths = ['/', '/branches/', '/claims/', '/reading/', '/about/', '/disagree/'];
   const urls: { loc: string; lastmod?: string }[] = [
     ...staticPaths.map((p) => ({ loc: p })),
     ...tree.branches.map((b) => ({ loc: b.path })),

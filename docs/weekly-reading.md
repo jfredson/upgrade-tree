@@ -213,7 +213,7 @@ Three surfaces, the tracker pattern's section 5 (ruled by John 2026-10-16):
   read, none moved" (or "one moved: the pig kidney"), with the moved upgrade and "the week's
   reading" as links. The date is the reading's, written out. Before the first reading it says in
   words that none has run.
-- **"This week's reading"** at `/reading/`, in the top bar's heavier tier: the latest reading at
+- **"This week's reading"** at `/reading/`, linked from the home page, About, News and the footer (it left the top bar on 2026-10-21, under tracker pattern rule 4.21): the latest reading at
   the top with its counts and a badge per verdict, the items grouped by branch, the flagged items
   waiting on John, earlier readings collapsed below, and a key saying what each verdict means.
 - **Each upgrade's page**: its last three readings, the date and the verdict in a line, the

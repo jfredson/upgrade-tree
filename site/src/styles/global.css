@@ -548,3 +548,7 @@ a.dim:hover { color: var(--accent); }
 
 .in-the-news-line { font-family: var(--sans); font-size: 13.5px; color: var(--text-soft); margin: -6px 0 10px; }
 
+
+/* The story's dated lines quote raw web addresses, which do not break on their own and pushed the page
+   sideways on a phone (found 2026-10-21, while checking the five-page bar). Long words may break anywhere. */
+.days { overflow-wrap: anywhere; }

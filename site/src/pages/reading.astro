@@ -207,6 +207,6 @@ const postFor = (id: string) => newsPosts.find((p) => p.data.records.includes(id
     {readings.counts.readings === 0
       ? 'No reading has run yet.'
       : `${readings.counts.readings} reading${readings.counts.readings === 1 ? '' : 's'} on the record, ${readings.counts.items} upgrade check${readings.counts.items === 1 ? '' : 's'} in all${readings.counts.test_readings ? `, ${readings.counts.test_readings} of them a hand-made test record` : ''}.`}
-    <span class="sep">|</span><a href="/branches/">The branches</a><span class="sep">|</span><a href="/story/">The story so far</a>
+    <span class="sep">|</span><a href="/branches/">The branches</a><span class="sep">|</span><a href="/about/#story">The story so far</a>
   </p>
 </Base>
