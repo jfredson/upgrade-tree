@@ -35,6 +35,10 @@ const longDate = (iso: string) => {
 };
 const c = tree.counts;
 const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's'} across seven branches, ${c.first_human_or_beyond} of them tried in at least one person`;
+// Bump when the icon set changes, so browsers that keep their own copy of the icon (Safari above
+// all) fetch the new one (2026-10-23, family-wide on John's word). The same tag is in
+// public/site.webmanifest.
+const iconVersion = '2';
 ---
 
 <!doctype html>
@@ -63,13 +67,13 @@ const builtFrom = `a record of ${c.upgrades} upgrade${c.upgrades === 1 ? '' : 's
     <meta name="author" content="John Fredrickson" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`/favicon.svg?v=${iconVersion}`} />
     <link rel="alternate" type="application/rss+xml" title="The Upgrade Tree · News" href="/news/feed.xml" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href={`/favicon-32.png?v=${iconVersion}`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`/favicon-16.png?v=${iconVersion}`} />
+    <link rel="icon" href={`/favicon.ico?v=${iconVersion}`} sizes="any" />
+    <link rel="apple-touch-icon" href={`/apple-touch-icon.png?v=${iconVersion}`} />
+    <link rel="manifest" href={`/site.webmanifest?v=${iconVersion}`} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="The Upgrade Tree" />
     <meta property="og:url" content={canonical} />
