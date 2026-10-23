@@ -96,6 +96,30 @@ const years = bandwidth.counts.first_date && bandwidth.counts.last_date ? `${ban
           </p>
         )}
         {cursorBest && cursorBestReviewed && <p><strong>{pointingLead}</strong>{pointingRest}</p>}
+        <p>
+          <strong>A caution about what this number can show.</strong> A faster link helps only if the link is what
+          holds a person back. In <a href="https://doi.org/10.1016/j.neuron.2024.11.008" rel="noopener">a paper in the
+          journal <em>Neuron</em></a> published in December 2024, the neuroscientists Jieyu Zheng and Markus Meister
+          estimate that the deliberate things people do, from typing and speaking to memorising cards in memory contests,
+          carry information at about 10 bits a second, while our senses take in about a billion. (A bit is the smallest
+          piece of information, a single yes or no.) On their reading the limit lies in thinking itself, not in the
+          fingers or the mouth, and nobody yet knows why it is so low. They take on the merger argument by name, calling
+          the hope for a much faster link &ldquo;the Musk illusion&rdquo; after
+          <a href="https://en.wikipedia.org/wiki/Elon_Musk" rel="noopener">Elon Musk</a>, and predict that his brain,
+          linked to a computer, would communicate at about 10 bits a second
+          (<a href="/claims/#2024-12-17-zheng-meister-the-musk-illusion">their claim, in the log</a>). Not everyone
+          counts the same way: <a href="https://sauerbreilab.org/" rel="noopener">Britton Sauerbrei</a>, a
+          neuroscientist at <a href="https://en.wikipedia.org/wiki/Case_Western_Reserve_University" rel="noopener">Case
+          Western Reserve University</a>, told
+          <a href="https://carlzimmer.com/the-speed-of-human-thought-lags-far-behind-your-internet-connection-study-finds/" rel="noopener"><em>The
+          New York Times</em></a> that the estimate leaves out the unconscious signals the body uses to stand and walk,
+          which would make the rate far higher, though for conscious tasks he called their argument &ldquo;pretty
+          airtight&rdquo;. So far the figures here fit their view: the best pointing figure is about what an engineer
+          manages with a mouse, and the best text figure is below a fast typist. If they are right, these lines will
+          level off near the rates a reader already has, and the value of a brain link will lie in what it gives back to
+          people who cannot type or speak. A brain link that carried text or pointing well above those rates would be
+          evidence against them, and it would show up here first.
+        </p>
       </div>
 
       {bandwidth.measures.map((m) => <BandwidthChart measure={m} />)}

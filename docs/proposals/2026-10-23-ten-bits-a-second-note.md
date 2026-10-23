@@ -5,7 +5,9 @@ branch about the 10 bits a second finding, for me to review." It grew out of the
 essay draft on Sam Altman's AI device, where a check of the merger argument against current brain
 science turned up the finding.
 
-**This is a proposal. Nothing live has changed.** John picks; a later session makes the change.
+**Applied on 2026-10-23.** John approved the paragraph and the critic entry on 2026-10-23, through the weekend coordinating session, after a search for published replies. The search found no formal reply; the paragraph as it went live adds one sentence on the strongest objection found (Britton Sauerbrei, quoted in The New York Times, 2024-12-26), says "the deliberate things people do" where this draft said "everything people do", and links the journal's own page, which is free to read. The text below is the proposal as written.
+
+~~This is a proposal. Nothing live has changed.~~
 
 ## 1. The finding, and why it bears on the tree
 

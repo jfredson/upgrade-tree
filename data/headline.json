@@ -1,6 +1,6 @@
 {
-  "computed_on": "2026-10-21",
-  "commit": "db6c8f3",
+  "computed_on": "2026-10-23",
+  "commit": "c273b7b",
   "last_reading": "2026-10-18",
   "method": {
     "document": "docs/upgrade-schema.md",
@@ -80,7 +80,7 @@
     "branches": 7,
     "upgrades": 35,
     "long_shots": 2,
-    "claims": 27,
+    "claims": 28,
     "readings": 2,
     "waiting_on_john": 0,
     "siblings": 5
