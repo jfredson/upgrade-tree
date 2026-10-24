@@ -1,6 +1,6 @@
 The data in data/ (the TOML and JSON files, and the files in its folders) is licensed
 under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/.
-Copyright (c) 2026 John Fredrickson. The scripts in scripts/ are under the MIT licence
+Copyright (c) 2026 John Andrew Fredrickson. The scripts in scripts/ are under the MIT licence
 in LICENSE. How to cite: see README.md.
 
 Any quotation inside a record is a short excerpt from its cited source, included so the
