@@ -40,6 +40,8 @@ The domains theupgradetree.com and upgradetree.com were attached as custom domai
 
 The record in `data/` is under Creative Commons Attribution 4.0 (`LICENSE-DATA`): reuse it freely, with credit. The scripts and the site are under the MIT licence (`LICENSE`).
 
+When you reuse the data or the text, please credit it as: *The Upgrade Tree*, by John Andrew Fredrickson, a Sentient Horizons project, https://theupgradetree.com/
+
 ## Author
 
 John Fredrickson, with Claude as a working partner. Published under the Sentient Horizons project.

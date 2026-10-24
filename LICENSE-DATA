@@ -1,10 +1,12 @@
-The data in data/ (the TOML files) is licensed under the Creative Commons Attribution
-4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/.
+The data in data/ (the TOML and JSON files, and the files in its folders) is licensed
+under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/.
 Copyright (c) 2026 John Fredrickson. The scripts in scripts/ are under the MIT licence
 in LICENSE. How to cite: see README.md.
 
-Quotes in data/statements.csv are short excerpts from the cited sources, included so
-each row can be checked; their copyright stays with their authors and publishers.
+Any quotation inside a record is a short excerpt from its cited source, included so the
+record can be checked; its copyright stays with its author and publisher.
+
+Please credit as: The Upgrade Tree, by John Andrew Fredrickson, a Sentient Horizons project, https://theupgradetree.com/
 
 ----
 
