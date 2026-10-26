@@ -3,6 +3,18 @@
   "intro": "Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.",
   "days": [
     {
+      "date": "2026-10-25",
+      "items": [
+        "Weekly reading (scheduled task, 2026-10-25): 33 upgrades read, 0 moved, 1 flagged for John (the upgrade \"Partially resetting cells reverses ageing in a living animal\", about a first-in-person trial of a reprogramming gene therapy for the eye); record at data/readings/2026-10-25.toml."
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "items": [
+        "**The link to machines now carries a caution about what its second number can show, and the claims log has its first entry from scientists who measured that number.** In [a paper in *Neuron*](https://doi.org/10.1016/j.neuron.2024.11.008) published in December 2024, the neuroscientists Jieyu Zheng and Markus Meister estimate that the deliberate things people do carry about 10 bits of information a second, and they predict that a brain link will not beat that, calling the hope for one \"the Musk illusion\". The link branch page now says so beside the speed charts, with the strongest objection found in a search for replies (the neuroscientist Britton Sauerbrei, who says the estimate leaves out the unconscious control of standing and walking), and says what would show the paper wrong. The paper is entered in the claims log as a critic (`2024-12-17-zheng-meister-the-musk-illusion`). No record of an upgrade, stage, figure or count changed; the count stays at 28 of 35. The proposal is `docs/proposals/2026-10-23-ten-bits-a-second-note.md`."
+      ]
+    },
+    {
       "date": "2026-10-21",
       "items": [
         "**The top bar is simpler: Branches · Claims · News · About, with Family beside the light/dark switch.** The method page and the story so far are now the two parts of one About page, which opens with why the site keeps count; their text is unchanged, and their old addresses (`/method/` and `/story/`, including a link to one day of the story) land on the matching part. This week's reading keeps its page and its address, and is linked from the home page, About, News and the footer. Feedback and the source code moved to the footer. No record, stage, count or other address changed.",

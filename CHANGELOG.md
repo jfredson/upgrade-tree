@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-10-25
+
+- Weekly reading (scheduled task, 2026-10-25): 33 upgrades read, 0 moved, 1 flagged for John (the upgrade "Partially resetting cells reverses ageing in a living animal", about a first-in-person trial of a reprogramming gene therapy for the eye); record at data/readings/2026-10-25.toml.
+
 ## 2026-10-23
 
 - **The link to machines now carries a caution about what its second number can show, and the claims log has its first entry from scientists who measured that number.** In [a paper in *Neuron*](https://doi.org/10.1016/j.neuron.2024.11.008) published in December 2024, the neuroscientists Jieyu Zheng and Markus Meister estimate that the deliberate things people do carry about 10 bits of information a second, and they predict that a brain link will not beat that, calling the hope for one "the Musk illusion". The link branch page now says so beside the speed charts, with the strongest objection found in a search for replies (the neuroscientist Britton Sauerbrei, who says the estimate leaves out the unconscious control of standing and walking), and says what would show the paper wrong. The paper is entered in the claims log as a critic (`2024-12-17-zheng-meister-the-musk-illusion`). No record of an upgrade, stage, figure or count changed; the count stays at 28 of 35. The proposal is `docs/proposals/2026-10-23-ten-bits-a-second-note.md`.

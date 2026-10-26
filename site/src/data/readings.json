@@ -1,6 +1,721 @@
 {
-  "exported_on": "2026-10-23",
+  "exported_on": "2026-10-25",
   "readings": [
+    {
+      "date": "2026-10-25",
+      "ran_at": "2026-10-26T01:08:14Z",
+      "scope": "weekly",
+      "upgrades_read": 33,
+      "searches": 100,
+      "commit_before": "5988375",
+      "by": "scheduled",
+      "test": false,
+      "file": "2026-10-25.toml",
+      "counts": {
+        "quiet": 32,
+        "noted": 0,
+        "stage-change": 0,
+        "flagged": 1
+      },
+      "items": [
+        {
+          "upgrade": "senses-implant-restores-sight-to-a-blind-person",
+          "upgrade_name": "An implant gives a blind person back some sight",
+          "branch": "senses",
+          "branch_name": "Senses",
+          "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/",
+          "verdict": "quiet",
+          "queries": [
+            "retinal implant blind trial results October 2026 peer-reviewed",
+            "bionic eye vision restored blind patients news this week",
+            "retinal prosthesis approval PRIMA Science Corporation (limited to fda.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a March 2026 report of a wireless retinal implant for advanced age-related macular degeneration in a major medical journal (older than the window, and not yet read as a record for this entry), a Science Corporation device still described as under investigation with no approval decision found, and older bionic eye coverage from 2013 to 2018. The entry already holds the 2013-02-13 approval record.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "senses-gene-therapy-restores-sight-in-an-inherited-blindness",
+          "upgrade_name": "A gene therapy restores sight in an inherited blindness",
+          "branch": "senses",
+          "branch_name": "Senses",
+          "path": "/branches/senses/senses-gene-therapy-restores-sight-in-an-inherited-blindness/",
+          "verdict": "quiet",
+          "queries": [
+            "gene therapy inherited retinal disease sight trial results October 2026",
+            "gene therapy blindness approval retinitis pigmentosa news week",
+            "retinal gene therapy approval Luxturna OR botaretigene OR sepofarsen (limited to fda.gov and ema.europa.eu)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a September 2026 trade recap mentioning a pivotal gene therapy readout in X-linked retinitis pigmentosa, early data from one adult in a BEST1 trial, and a European Medicines Agency concept paper on trial guidance for inherited retinal diseases whose consultation opened 2026-10-12 (before the window, and guidance, not an approval). The entry already holds the 2017-12-19 approval record.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "senses-gene-therapy-restores-hearing-in-a-child-born-deaf",
+          "upgrade_name": "A gene therapy restores hearing in a child born deaf",
+          "branch": "senses",
+          "branch_name": "Senses",
+          "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/",
+          "verdict": "quiet",
+          "queries": [
+            "Otarmeni OTOF gene therapy deaf children hearing results",
+            "lunsotogene parvec otoferlin gene therapy news October 2026",
+            "Otarmeni lunsotogene parvec OTOF (limited to fda.gov and ema.europa.eu)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the United States approval of 2026-04-23 that the entry already holds, the European Medicines Agency accepting the application for review on 2026-05-22, and trial updates from a spring 2026 gene therapy society meeting and a later audiology congress. No European decision turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
+          "upgrade_name": "An implant in the visual cortex gives sight with no working eyes",
+          "branch": "senses",
+          "branch_name": "Senses",
+          "path": "/branches/senses/senses-implant-in-the-visual-cortex-gives-sight-without-eyes/",
+          "verdict": "quiet",
+          "queries": [
+            "cortical visual prosthesis blind volunteer electrodes phosphenes study 2026",
+            "brain implant gives blind people sight Neuralink Blindsight Gennaris first patient",
+            "visual cortex prosthesis phosphenes blind participant (limited to pubmed.ncbi.nlm.nih.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a November 2025 paper in Science Advances on two blind volunteers with a 100-electrode brain array, a 2025 case study on eye tracking with cortical implants in people without eyes, and early 2026 reports that Neuralink's Blindsight had not yet been implanted in a person. The entry already holds the 1968 first-human record.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "senses-device-gives-a-person-a-new-sense",
+          "upgrade_name": "A device gives a person a sense no human is born with",
+          "branch": "senses",
+          "branch_name": "Senses",
+          "path": "/branches/senses/senses-device-gives-a-person-a-new-sense/",
+          "verdict": "quiet",
+          "queries": [
+            "sensory substitution magnetic sense device implant new sense human study 2026",
+            "people gain infrared OR magnetic OR ultrasound sense wearable device experiment news",
+            "new sense humans magnetic field detection implant participants better than chance (limited to pubmed.ncbi.nlm.nih.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a 2025 infrared contact lens study known only from a secondary summary, older wearable direction-sense belt and haptic compass projects, and 2019 and 2022 studies of a possible natural human magnetic sense. No peer-reviewed report from the window turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch",
+          "upgrade_name": "A prosthetic arm moves by thought and feeds back touch",
+          "branch": "movement",
+          "branch_name": "Movement and body",
+          "path": "/branches/movement/movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch/",
+          "verdict": "quiet",
+          "queries": [
+            "bionic hand sensory feedback nerve stimulation amputee study October 2026",
+            "prosthetic hand touch feedback amputees news this week",
+            "prosthetic hand sensory feedback nerve amputee (limited to pubmed.ncbi.nlm.nih.gov, science.org, nature.com, fda.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were peer-reviewed two-way hand reports from 2006 to 2019 (Utah, Lausanne and Rome groups, Science Translational Medicine, Science Robotics) and 2014 and 2019 news coverage, all older records the entry already holds or that sit at the same rung. No regulator's approval of a two-way hand, which the next rung needs, turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "movement-powered-exoskeleton-lets-a-paralysed-person-walk",
+          "upgrade_name": "A powered exoskeleton lets a paralysed person walk",
+          "branch": "movement",
+          "branch_name": "Movement and body",
+          "path": "/branches/movement/movement-powered-exoskeleton-lets-a-paralysed-person-walk/",
+          "verdict": "quiet",
+          "queries": [
+            "powered exoskeleton spinal cord injury FDA clearance October 2026",
+            "exoskeleton paralysed walk news ReWalk Lifeward Ekso week",
+            "exoskeleton spinal cord injury clearance (limited to fda.gov, accessdata.fda.gov, lifewardltd.com)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older clearances (ReWalk 2014, Indego, Wandercraft 2024, ReWalk 7 in 2025) and 2025 company news, all on the rung the entry already holds. The register-aimed search returned only trial listings. No counted population large enough for the next rung (wide use) was found.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "movement-spinal-implant-lets-a-paralysed-person-walk-again",
+          "upgrade_name": "A spinal implant lets a paralysed person walk again on their own legs",
+          "branch": "movement",
+          "branch_name": "Movement and body",
+          "path": "/branches/movement/movement-spinal-implant-lets-a-paralysed-person-walk-again/",
+          "verdict": "quiet",
+          "queries": [
+            "spinal cord stimulation implant paralysed walking study published October 2026",
+            "epidural stimulation paralysis walk again new trial results",
+            "spinal cord injury epidural stimulation walking (limited to nejm.org, nature.com, pubmed.ncbi.nlm.nih.gov, fda.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2018 reports (Louisville, Mayo Clinic, Lausanne), the 2022 Lausanne papers, a 2025 single-patient case report, and a trial registered in late 2025 at Zhejiang University that is still recruiting (primary completion estimated June 2027). No regulator's approval of an implant for this use turned up, which the next rung needs.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "movement-bone-anchored-prosthetic-limb-with-nerve-control",
+          "upgrade_name": "A prosthetic limb fixed to the bone with nerve control",
+          "branch": "movement",
+          "branch_name": "Movement and body",
+          "path": "/branches/movement/movement-bone-anchored-prosthetic-limb-with-nerve-control/",
+          "verdict": "quiet",
+          "queries": [
+            "osseointegrated bone-anchored prosthesis implanted nerve electrodes daily life 2026",
+            "mind-controlled bionic arm anchored to bone amputee news",
+            "osseointegrated prosthesis neuromuscular electrodes (limited to pubmed.ncbi.nlm.nih.gov, science.org, fda.gov, stm.sciencemag.org)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The newest result was the news report dated 2026-09-17 (opened: https://www.news-medical.net/news/20260917/First-US-patient-receives-a-mind-controlled-bone-anchored-bionic-arm.aspx) of the first United States patient given the bone anchor with nerve and muscle electrodes, in an eight-person study under an FDA investigational exemption; the surgery was 2026-07-15, the man is still recovering, and there is no peer-reviewed report or approval. It is older than the window and was already noted in the reading of 2026-10-18. The other results were the 2014 and 2020 Swedish reports and a 2025 knee study; no approval of the combination turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body",
+          "upgrade_name": "A gene therapy builds stronger muscle in a healthy body",
+          "branch": "movement",
+          "branch_name": "Movement and body",
+          "path": "/branches/movement/movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body/",
+          "verdict": "quiet",
+          "queries": [
+            "myostatin gene therapy healthy adults muscle mass strength 2026",
+            "gene therapy muscle growth follistatin healthy volunteers trial",
+            "myostatin follistatin healthy volunteers gene therapy (limited to clinicaltrials.gov, pubmed.ncbi.nlm.nih.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were two registered healthy-volunteer follistatin gene therapy trials (a klotho and follistatin plasmid trial, and an AAV9 follistatin safety trial for ages 45 to 75, recruiting, 12 people planned); both registry pages refused to show their contents when opened, so they are not cited and their registration dates are not known to me, and a registry listing is a plan, not a person treated. Also a March 2026 commentary and a 2026 Nature Communications genetics study of myostatin gene variants (observational, not a therapy). No peer-reviewed measurement of muscle gain in a healthy adult turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mind-brain-implant-improves-memory-recall-in-a-person",
+          "upgrade_name": "A brain implant improves memory recall in a person",
+          "branch": "mind",
+          "branch_name": "Memory and thinking",
+          "path": "/branches/mind/mind-brain-implant-improves-memory-recall-in-a-person/",
+          "verdict": "quiet",
+          "queries": [
+            "implanted electrodes stimulation improves memory recall patients peer-reviewed study October 2026",
+            "brain implant memory boost news this week",
+            "intracranial stimulation memory encoding randomized"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were press coverage from 2017 and 2018 of the University of Pennsylvania and University of Southern California memory implant work (an older record the entry already holds), and non-invasive scalp stimulation trials on PubMed. No regulator approval of a memory device turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults",
+          "upgrade_name": "A drug raises a measured thinking ability in healthy adults",
+          "branch": "mind",
+          "branch_name": "Memory and thinking",
+          "path": "/branches/mind/mind-drug-raises-a-measured-thinking-ability-in-healthy-adults/",
+          "verdict": "quiet",
+          "queries": [
+            "drug improves reasoning memory healthy adults placebo-controlled trial 2026 cognitive enhancer",
+            "smart drug nootropic study healthy volunteers learning improvement October 2026",
+            "placebo-controlled healthy adults cognition drug trial replication"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were small supplement trials (a 2026 scallop-derived plasmalogen trial in 68 adults, a 2026 Cistanche and Ginkgo combination trial), a 2025 null result for a nootropic stack, and older modafinil work. None is a registered drug trial with an independent repeat, so none bears on the test.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mind-ai-assistant-used-daily-by-most-adults-in-a-country",
+          "upgrade_name": "An always-on AI assistant is used daily by most adults in a country",
+          "branch": "mind",
+          "branch_name": "Memory and thinking",
+          "path": "/branches/mind/mind-ai-assistant-used-daily-by-most-adults-in-a-country/",
+          "verdict": "quiet",
+          "queries": [
+            "Pew Research Center AI chatbot use daily share of adults survey October 2026",
+            "survey percent of adults use ChatGPT or AI assistant every day nationally representative",
+            "adults AI use survey daily"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest result is the Pew Research Center survey of 5,119 US adults (fielded 2026-02-17 to 2026-02-23, published 2026-06-17) that the entry already holds, which puts daily chatbot use at about 24 percent, below the more-than-half bar. A separate Elon University survey reported by local news put daily use at 34 percent, also below the bar and not confirmed as a share of all adults.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mind-electrical-stimulation-improves-learning-in-healthy-adults",
+          "upgrade_name": "Electrical stimulation improves learning in healthy adults",
+          "branch": "mind",
+          "branch_name": "Memory and thinking",
+          "path": "/branches/mind/mind-electrical-stimulation-improves-learning-in-healthy-adults/",
+          "verdict": "quiet",
+          "queries": [
+            "transcranial direct current stimulation sham-controlled learning healthy adults study 2026",
+            "brain stimulation helps people learn faster new research",
+            "tDCS tACS sham learning skill healthy participants"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were trial registry entries without outcomes and older sham-controlled studies (a 2024 theta-gamma stimulation study with a null result in young adults, and earlier scalp stimulation motor learning papers). The entry already holds the 2003 first-human report.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mood-brain-implant-lifts-severe-depression",
+          "upgrade_name": "A brain implant lifts severe depression",
+          "branch": "mood",
+          "branch_name": "Mood and drive",
+          "path": "/branches/mood/mood-brain-implant-lifts-severe-depression/",
+          "verdict": "quiet",
+          "queries": [
+            "deep brain stimulation treatment-resistant depression trial results 2026",
+            "FDA approval deep brain stimulation depression Abbott Medtronic Motif Neurotech implant news",
+            "deep brain stimulation depression"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a registry entry showing the FORESEE III trial of deep brain stimulation (Freiburg) completed 2026-01-07 with no results posted, Abbott's 2022 Breakthrough Device designation (not an approval), and a 2025 review stating no regulator has approved deep brain stimulation for depression.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mood-closed-loop-implant-detects-and-corrects-a-mood-state",
+          "upgrade_name": "A closed-loop implant detects a mood state and corrects it automatically",
+          "branch": "mood",
+          "branch_name": "Mood and drive",
+          "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/",
+          "verdict": "quiet",
+          "queries": [
+            "closed-loop brain implant detects mood state automatically stimulates depression patient 2026",
+            "responsive neurostimulation depression biomarker adaptive stimulation Sheth Chang UCSF news",
+            "closed-loop adaptive stimulation depression mood"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2021 Nature Medicine single-patient report the entry already holds, and registry entries for ongoing controlled trials (closed-loop versus open-loop versus sham in bipolar depression, and closed-loop scalp stimulation) with no results posted.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mood-psychedelic-therapy-approved-for-prescription",
+          "upgrade_name": "A psychedelic therapy is approved for prescription",
+          "branch": "mood",
+          "branch_name": "Mood and drive",
+          "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/",
+          "verdict": "quiet",
+          "queries": [
+            "psilocybin MDMA approved prescription regulator announcement October 2026",
+            "psychedelic therapy approval FDA Compass Pathways COMP360 NDA decision Lykos MDMA",
+            "psilocybin MDMA psychedelic approval prescribing notice"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The entry already holds the Australian Therapeutic Goods Administration notice allowing authorised psychiatrists to prescribe from 2023-07-01. Nearest results: Compass Pathways has a rolling FDA application and a priority voucher (April 2026) with final modules expected in the fourth quarter of 2026 and no decision reported, and Australian prescriber figures to 2026-07-31.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "mood-treatment-removes-a-specific-fear-memory",
+          "upgrade_name": "A treatment removes a specific fear memory",
+          "branch": "mood",
+          "branch_name": "Mood and drive",
+          "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/",
+          "verdict": "quiet",
+          "queries": [
+            "erase fear memory reconsolidation drug propranolol study 2026 peer-reviewed",
+            "scientists remove specific fear memory humans new treatment news",
+            "fear memory reconsolidation blockade humans randomized control"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older human studies (2009 propranolol work the entry already holds, a 2017 doxycycline trial, a 2024 minocycline trial of 105 adults, a 2020 propranolol study of 127 volunteers), some with mixed or null replications.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "lifespan-a-drug-adds-healthy-years-to-a-life",
+          "upgrade_name": "A drug makes people live longer in good health",
+          "branch": "lifespan",
+          "branch_name": "Lifespan and repair",
+          "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/",
+          "verdict": "quiet",
+          "queries": [
+            "rapamycin metformin placebo-controlled trial healthy lifespan humans results published",
+            "longevity drug randomized trial extends healthspan people October 2026",
+            "longevity drug trial healthspan placebo aging"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the one-year rapamycin trial (PEARL, no effect on its main measure, preprint and 2025 paper), a $38 million trial (VITAL-H) announced in April 2026 that has not reported, and the unfunded metformin trial (TAME). No placebo-controlled human trial showing longer life or more disease-free years turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal",
+          "upgrade_name": "Partially resetting cells reverses ageing in a living animal",
+          "branch": "lifespan",
+          "branch_name": "Lifespan and repair",
+          "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/",
+          "verdict": "flagged",
+          "queries": [
+            "partial reprogramming Yamanaka factors reverse ageing mice epigenetic clock study",
+            "Life Biosciences ER-100 first human trial partial epigenetic reprogramming optic neuropathy",
+            "partial reprogramming ageing first-in-human trial"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results for a new peer-reviewed report. But the searches found that Life Biosciences began a first-in-person trial of ER-100 (a gene therapy giving three reprogramming genes to the eye, registry number NCT07290244), with the first patient dosed by 2026-06-09 per trade press (Nature's daily briefing reported it too, but that page refused to open without a login, so only its summary is relied on). On 2026-10-08 the company's own release reported three people with glaucoma treated and followed 56 days, safe so far, with two showing better visual-field scores; no biological-age marker was reported and it is not a peer-reviewed paper. The entry does not hold any of this. It is older than the window.",
+          "sources": [
+            "https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/"
+          ],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": "Change I would have made: either nothing (stay at shown in animals) or move the stage up one rung to first human, dated by the first dosing (about 2026-06-09, the exact date unconfirmed). I stopped because the entry's test and the ladder disagree. The ladder says first human is reached when at least one person has had the treatment with a public record; the entry's test says the first-human rung needs a measured biological-age marker or restored tissue function moved towards youth, compared with controls, in a peer-reviewed report. Under the entry's test it is not met: the 2026-10-08 company release has three people, no control group, no age marker, and no journal paper. Under the ladder wording it arguably is met. The record is a record older than the window that the entry missed. Please rule which wording governs, and whether to add a watch term such as ER-100 or Life Biosciences.",
+          "picked_up": null
+        },
+        {
+          "upgrade": "lifespan-a-drug-clears-aged-cells-from-a-persons-body",
+          "upgrade_name": "A drug clears aged cells from a person's body",
+          "branch": "lifespan",
+          "branch_name": "Lifespan and repair",
+          "path": "/branches/lifespan/lifespan-a-drug-clears-aged-cells-from-a-persons-body/",
+          "verdict": "quiet",
+          "queries": [
+            "senolytic drug trial humans senescent cells reduced biopsy dasatinib quercetin fisetin results",
+            "senolytic clinical trial results aged cells cleared people October 2026",
+            "senolytic senescent cells trial participants",
+            "Senolytics dasatinib quercetin MASH proof-of-principle randomized controlled trial Nature Metabolism 2026 published"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest result was a Nature Metabolism paper on dasatinib plus quercetin in fatty liver disease, a randomised trial with 31 people, which an aggregator dated 2026-10-02 (journal page refused to open without a login, so the date and any senescent-cell result are unconfirmed); it is before the window, and the entry is already at first human since 2019-09-18, with the next rung needing a regulator's approval or routine clinical use, which none of the results shows.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive",
+          "upgrade_name": "An organ from a gene-edited pig keeps a person alive",
+          "branch": "lifespan",
+          "branch_name": "Lifespan and repair",
+          "path": "/branches/lifespan/lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive/",
+          "verdict": "quiet",
+          "queries": [
+            "pig kidney xenotransplant patient survives gene-edited transplant center announces",
+            "xenotransplantation pig organ clinical trial October 2026 eGenesis United Therapeutics",
+            "pig kidney transplant trial clearance patient"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the first trial transplant at NYU Langone Health on 2025-11-03, the eGenesis trial clearance of 2025, and the 271-day pig kidney case at Massachusetts General Hospital, all older than the window. The entry already holds the first-human rung since 2022-01-07, and no approval record for the next rung turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "lifespan-lab-grown-organ-works-in-a-person-for-a-year",
+          "upgrade_name": "A printed or lab-grown organ works in a person for a year",
+          "branch": "lifespan",
+          "branch_name": "Lifespan and repair",
+          "path": "/branches/lifespan/lifespan-lab-grown-organ-works-in-a-person-for-a-year/",
+          "verdict": "quiet",
+          "queries": [
+            "lab-grown bioengineered organ implanted in patient functioning one year follow-up",
+            "3D printed bioprinted organ transplant human trial trachea bladder esophagus 2026",
+            "engineered organ implanted patients follow-up report"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the older Wake Forest bladder, urethra and vagina follow-up reports (2006 to 2014), a registered bioprinted windpipe trial in Seoul with no results, and a 2024 paper on an engineered heart tissue graft, none of which settles a new rung.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "inheritance-child-born-from-a-gene-edited-embryo",
+          "upgrade_name": "A child is born from a gene-edited embryo",
+          "branch": "inheritance",
+          "branch_name": "Inheritance",
+          "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/",
+          "verdict": "quiet",
+          "queries": [
+            "gene-edited embryo live birth confirmed child October 2026",
+            "heritable genome editing baby born inquiry government statement this week",
+            "germline embryo editing birth report"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a National Public Radio piece of 2026-09-29 on the start-up Origin Genomics and the US ban on making gene-edited babies, a report of June 2026 on editing embryos not meant for pregnancy, and a Japanese cabinet bill of April 2026 to ban genome-edited babies; none reports a new birth. The only confirmed birth remains the 2018 one the entry already holds.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "inheritance-baby-born-with-donor-mitochondria",
+          "upgrade_name": "A baby is born with donor mitochondria to avoid an inherited disease",
+          "branch": "inheritance",
+          "branch_name": "Inheritance",
+          "path": "/branches/inheritance/inheritance-baby-born-with-donor-mitochondria/",
+          "verdict": "quiet",
+          "queries": [
+            "mitochondrial donation babies born HFEA licence Newcastle",
+            "mitochondrial replacement therapy children born new report October 2026",
+            "mitochondrial donation licence births"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the Human Fertilisation and Embryology Authority's 2025 comment on two New England Journal of Medicine papers reporting eight babies born after mitochondrial donation at Newcastle, which is older than the window and adds nothing the entry (already at in clinical use since 2017-03-15) lacks.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "inheritance-embryos-chosen-by-a-genetic-score-for-traits",
+          "upgrade_name": "Embryos are chosen by a genetic score for traits, not disease",
+          "branch": "inheritance",
+          "branch_name": "Inheritance",
+          "path": "/branches/inheritance/inheritance-embryos-chosen-by-a-genetic-score-for-traits/",
+          "verdict": "quiet",
+          "queries": [
+            "embryo screening polygenic score IQ height Nucleus Orchid Herasight clinic",
+            "polygenic embryo selection regulator news week October 2026",
+            "embryo selection traits genetic score"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were National Public Radio coverage of 2026-05-06 on companies offering trait selection, a Hokkaido University review of 2026-03-30 on how countries regulate it, and a registered trial of score-based selection (NCT07841769) with no date in the window. The register-aimed search on the company sites returned only general papers and preprints.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "inheritance-mammal-carried-to-birth-in-an-artificial-womb",
+          "upgrade_name": "A mammal is carried to birth in an artificial womb",
+          "branch": "inheritance",
+          "branch_name": "Inheritance",
+          "path": "/branches/inheritance/inheritance-mammal-carried-to-birth-in-an-artificial-womb/",
+          "verdict": "quiet",
+          "queries": [
+            "artificial womb mammal from fertilisation to birth outside body peer-reviewed",
+            "ex vivo uterus embryo ectogenesis lamb mouse born new study October 2026",
+            "artificial womb ex utero development mammal"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a January 2026 systematic review of 22 artificial-womb animal studies, a 2025 Nature Communications paper on mouse embryo implantation outside the body (stops before birth), and the 2021 Nature paper on mouse embryos grown outside a womb to mid-pregnancy; none reaches a live birth from fertilisation or before mid-gestation.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-wireless-brain-implant-controls-a-computer",
+          "upgrade_name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/",
+          "verdict": "quiet",
+          "queries": [
+            "fully implanted wireless brain-computer interface paralysed patient cursor control peer-reviewed October 2026",
+            "wireless brain chip implant first patients Neuralink Paradromics Synchron Precision news this week",
+            "wireless implanted brain-computer interface patient computer control (limited to nejm.org and nature.com)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2016 New England Journal of Medicine report the entry already holds, a 2020 stent-electrode study, trial registrations for a Chinese wireless implant, and preprints that are not peer-reviewed papers. The stage is already first human, and no regulator approval turned up.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-wired-brain-implant-controls-a-cursor",
+          "upgrade_name": "A wired brain implant lets a paralysed person control a cursor",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/",
+          "verdict": "quiet",
+          "queries": [
+            "intracortical brain-computer interface tetraplegia cursor control new study October 2026",
+            "BrainGate participants cursor control intracortical implant news this week",
+            "BrainGate intracortical cursor paralysis (limited to braingate.org and nature.com)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older BrainGate reports (2006, 2011, 2018) and 2025 preprints on array longevity and home use. The stage is already first human, reached 1998-06-01.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-brain-implant-turns-intended-speech-into-text",
+          "upgrade_name": "A brain implant turns intended speech into text at conversational speed",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/",
+          "verdict": "quiet",
+          "queries": [
+            "speech neuroprosthesis words per minute vocabulary error rate paper October 2026",
+            "brain implant decodes attempted speech into text ALS stroke patient new study",
+            "speech brain-computer interface decoding attempted speech (limited to nature.com and nejm.org)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2023 Nature reports the entry already holds and a 2024 New England Journal of Medicine report. One search result listed a 2026 Nature Medicine paper on long-term home use of a speech and cursor implant (about 56 words a minute, a 125,000-word vocabulary), but the page refused to open (it redirected to a sign-in page) and no publication date could be read, so it is not cited and not treated as dated in the window. The stage is already first human, and the next rung needs a regulator's approval or routine clinical use, which nothing showed.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-brain-implant-gives-a-person-touch-from-a-robotic-hand",
+          "upgrade_name": "A brain implant gives a person touch from a robotic hand",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-brain-implant-gives-a-person-touch-from-a-robotic-hand/",
+          "verdict": "quiet",
+          "queries": [
+            "intracortical microstimulation somatosensory cortex robotic hand touch paralysis study October 2026",
+            "bionic hand sense of touch brain stimulation tetraplegia news this week",
+            "intracortical microstimulation touch robotic hand (limited to science.org and nature.com)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2016 Science Translational Medicine report the entry already holds, a 2021 Science paper, a May 2025 Nature Communications study, and a Nature Reviews article from 2026 whose page refused to open (sign-in redirect) and whose date could not be read. The stage is already first human.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-uploaded-animal-brain-reproduces-what-it-learned",
+          "upgrade_name": "An uploaded animal brain reproduces something it learned",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-uploaded-animal-brain-reproduces-what-it-learned/",
+          "verdict": "quiet",
+          "queries": [
+            "whole brain emulation animal learned task simulation performs task connectome study 2026",
+            "uploaded fly worm brain simulation learns behaviour emulation news this week",
+            "connectome simulation reproduces learned behaviour (limited to nature.com and biorxiv.org)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a March 2026 company demonstration of a simulated fruit fly body (innate walking and grooming, no learned task, no peer-reviewed paper) and an August 2026 preprint on a fly brain model fitted to spontaneous activity. Neither meets the test, which needs a trained animal, a readout and a peer-reviewed report.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        },
+        {
+          "upgrade": "link-brain-link-carries-more-information-than-speech",
+          "upgrade_name": "A brain link carries more information per second than speech",
+          "branch": "link",
+          "branch_name": "The link to machines",
+          "path": "/branches/link/link-brain-link-carries-more-information-than-speech/",
+          "verdict": "quiet",
+          "queries": [
+            "brain-computer interface information transfer rate bits per second record sustained 2026",
+            "brain implant faster than speech bits per second Neuralink Blindsight record new paper",
+            "brain-computer interface bits per second information rate (limited to nature.com and pubmed.ncbi.nlm.nih.gov)"
+          ],
+          "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a maker's conference poster claiming over 200 bits a second in sheep (not a person, not peer-reviewed), a 2023 preprint of about 50 bits a second for a scalp system, and 2026 papers saying rates are limited to around 10 bits a second. None is a peer-reviewed human report above forty bits a second over ten minutes.",
+          "sources": [],
+          "moved_from": null,
+          "moved_to": null,
+          "moved_from_label": null,
+          "moved_to_label": null,
+          "for_john": null,
+          "picked_up": null
+        }
+      ]
+    },
     {
       "date": "2026-10-18",
       "ran_at": "2026-10-19T01:07:19Z",
@@ -1434,9 +2149,50 @@
       ]
     }
   ],
-  "waiting_on_john": [],
+  "waiting_on_john": [
+    {
+      "reading_date": "2026-10-25",
+      "reading_file": "2026-10-25.toml",
+      "test": false,
+      "upgrade": "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal",
+      "upgrade_name": "Partially resetting cells reverses ageing in a living animal",
+      "branch": "lifespan",
+      "branch_name": "Lifespan and repair",
+      "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/",
+      "verdict": "flagged",
+      "queries": [
+        "partial reprogramming Yamanaka factors reverse ageing mice epigenetic clock study",
+        "Life Biosciences ER-100 first human trial partial epigenetic reprogramming optic neuropathy",
+        "partial reprogramming ageing first-in-human trial"
+      ],
+      "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results for a new peer-reviewed report. But the searches found that Life Biosciences began a first-in-person trial of ER-100 (a gene therapy giving three reprogramming genes to the eye, registry number NCT07290244), with the first patient dosed by 2026-06-09 per trade press (Nature's daily briefing reported it too, but that page refused to open without a login, so only its summary is relied on). On 2026-10-08 the company's own release reported three people with glaucoma treated and followed 56 days, safe so far, with two showing better visual-field scores; no biological-age marker was reported and it is not a peer-reviewed paper. The entry does not hold any of this. It is older than the window.",
+      "sources": [
+        "https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/"
+      ],
+      "moved_from": null,
+      "moved_to": null,
+      "moved_from_label": null,
+      "moved_to_label": null,
+      "for_john": "Change I would have made: either nothing (stay at shown in animals) or move the stage up one rung to first human, dated by the first dosing (about 2026-06-09, the exact date unconfirmed). I stopped because the entry's test and the ladder disagree. The ladder says first human is reached when at least one person has had the treatment with a public record; the entry's test says the first-human rung needs a measured biological-age marker or restored tissue function moved towards youth, compared with controls, in a peer-reviewed report. Under the entry's test it is not met: the 2026-10-08 company release has three people, no control group, no age marker, and no journal paper. Under the ladder wording it arguably is met. The record is a record older than the window that the entry missed. Please rule which wording governs, and whether to add a watch term such as ER-100 or Life Biosciences.",
+      "picked_up": null
+    }
+  ],
   "by_upgrade": {
     "senses-implant-restores-sight-to-a-blind-person": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a March 2026 report of a wireless retinal implant for advanced age-related macular degeneration in a major medical journal (older than the window, and not yet read as a record for this entry), a Science Corporation device still described as under investigation with no approval decision found, and older bionic eye coverage from 2013 to 2018. The entry already holds the 2013-02-13 approval record.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1468,6 +2224,20 @@
     ],
     "senses-gene-therapy-restores-sight-in-an-inherited-blindness": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a September 2026 trade recap mentioning a pivotal gene therapy readout in X-linked retinitis pigmentosa, early data from one adult in a BEST1 trial, and a European Medicines Agency concept paper on trial guidance for inherited retinal diseases whose consultation opened 2026-10-12 (before the window, and guidance, not an approval). The entry already holds the 2017-12-19 approval record.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1497,6 +2267,20 @@
       }
     ],
     "senses-gene-therapy-restores-hearing-in-a-child-born-deaf": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the United States approval of 2026-04-23 that the entry already holds, the European Medicines Agency accepting the application for review on 2026-05-22, and trial updates from a spring 2026 gene therapy society meeting and a later audiology congress. No European decision turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1534,6 +2318,20 @@
     ],
     "senses-implant-in-the-visual-cortex-gives-sight-without-eyes": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a November 2025 paper in Science Advances on two blind volunteers with a 100-electrode brain array, a 2025 case study on eye tracking with cortical implants in people without eyes, and early 2026 reports that Neuralink's Blindsight had not yet been implanted in a person. The entry already holds the 1968 first-human record.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1563,6 +2361,20 @@
       }
     ],
     "senses-device-gives-a-person-a-new-sense": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a 2025 infrared contact lens study known only from a secondary summary, older wearable direction-sense belt and haptic compass projects, and 2019 and 2022 studies of a possible natural human magnetic sense. No peer-reviewed report from the window turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1594,6 +2406,20 @@
     ],
     "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were peer-reviewed two-way hand reports from 2006 to 2019 (Utah, Lausanne and Rome groups, Science Translational Medicine, Science Robotics) and 2014 and 2019 news coverage, all older records the entry already holds or that sit at the same rung. No regulator's approval of a two-way hand, which the next rung needs, turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1623,6 +2449,20 @@
       }
     ],
     "movement-powered-exoskeleton-lets-a-paralysed-person-walk": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older clearances (ReWalk 2014, Indego, Wandercraft 2024, ReWalk 7 in 2025) and 2025 company news, all on the rung the entry already holds. The register-aimed search returned only trial listings. No counted population large enough for the next rung (wide use) was found.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1657,6 +2497,20 @@
     ],
     "movement-spinal-implant-lets-a-paralysed-person-walk-again": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2018 reports (Louisville, Mayo Clinic, Lausanne), the 2022 Lausanne papers, a 2025 single-patient case report, and a trial registered in late 2025 at Zhejiang University that is still recruiting (primary completion estimated June 2027). No regulator's approval of an implant for this use turned up, which the next rung needs.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1688,6 +2542,20 @@
       }
     ],
     "movement-bone-anchored-prosthetic-limb-with-nerve-control": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The newest result was the news report dated 2026-09-17 (opened: https://www.news-medical.net/news/20260917/First-US-patient-receives-a-mind-controlled-bone-anchored-bionic-arm.aspx) of the first United States patient given the bone anchor with nerve and muscle electrodes, in an eight-person study under an FDA investigational exemption; the surgery was 2026-07-15, the man is still recovering, and there is no peer-reviewed report or approval. It is older than the window and was already noted in the reading of 2026-10-18. The other results were the 2014 and 2020 Swedish reports and a 2025 knee study; no approval of the combination turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1723,6 +2591,20 @@
     ],
     "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were two registered healthy-volunteer follistatin gene therapy trials (a klotho and follistatin plasmid trial, and an AAV9 follistatin safety trial for ages 45 to 75, recruiting, 12 people planned); both registry pages refused to show their contents when opened, so they are not cited and their registration dates are not known to me, and a registry listing is a plan, not a person treated. Also a March 2026 commentary and a 2026 Nature Communications genetics study of myostatin gene variants (observational, not a therapy). No peer-reviewed measurement of muscle gain in a healthy adult turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1755,6 +2637,20 @@
     ],
     "mind-brain-implant-improves-memory-recall-in-a-person": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were press coverage from 2017 and 2018 of the University of Pennsylvania and University of Southern California memory implant work (an older record the entry already holds), and non-invasive scalp stimulation trials on PubMed. No regulator approval of a memory device turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1784,6 +2680,20 @@
       }
     ],
     "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were small supplement trials (a 2026 scallop-derived plasmalogen trial in 68 adults, a 2026 Cistanche and Ginkgo combination trial), a 2025 null result for a nootropic stack, and older modafinil work. None is a registered drug trial with an independent repeat, so none bears on the test.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1815,6 +2725,20 @@
     ],
     "mind-ai-assistant-used-daily-by-most-adults-in-a-country": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest result is the Pew Research Center survey of 5,119 US adults (fielded 2026-02-17 to 2026-02-23, published 2026-06-17) that the entry already holds, which puts daily chatbot use at about 24 percent, below the more-than-half bar. A separate Elon University survey reported by local news put daily use at 34 percent, also below the bar and not confirmed as a share of all adults.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1844,6 +2768,20 @@
       }
     ],
     "mind-electrical-stimulation-improves-learning-in-healthy-adults": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were trial registry entries without outcomes and older sham-controlled studies (a 2024 theta-gamma stimulation study with a null result in young adults, and earlier scalp stimulation motor learning papers). The entry already holds the 2003 first-human report.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1875,6 +2813,20 @@
     ],
     "mood-brain-implant-lifts-severe-depression": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a registry entry showing the FORESEE III trial of deep brain stimulation (Freiburg) completed 2026-01-07 with no results posted, Abbott's 2022 Breakthrough Device designation (not an approval), and a 2025 review stating no regulator has approved deep brain stimulation for depression.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1905,6 +2857,20 @@
     ],
     "mood-closed-loop-implant-detects-and-corrects-a-mood-state": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2021 Nature Medicine single-patient report the entry already holds, and registry entries for ongoing controlled trials (closed-loop versus open-loop versus sham in bipolar depression, and closed-loop scalp stimulation) with no results posted.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1934,6 +2900,20 @@
       }
     ],
     "mood-psychedelic-therapy-approved-for-prescription": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The entry already holds the Australian Therapeutic Goods Administration notice allowing authorised psychiatrists to prescribe from 2023-07-01. Nearest results: Compass Pathways has a rolling FDA application and a priority voucher (April 2026) with final modules expected in the fourth quarter of 2026 and no decision reported, and Australian prescriber figures to 2026-07-31.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -1970,6 +2950,20 @@
     ],
     "mood-treatment-removes-a-specific-fear-memory": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older human studies (2009 propranolol work the entry already holds, a 2017 doxycycline trial, a 2024 minocycline trial of 105 adults, a 2020 propranolol study of 127 volunteers), some with mixed or null replications.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -1999,6 +2993,20 @@
       }
     ],
     "lifespan-a-drug-adds-healthy-years-to-a-life": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the one-year rapamycin trial (PEARL, no effect on its main measure, preprint and 2025 paper), a $38 million trial (VITAL-H) announced in April 2026 that has not reported, and the unfunded metformin trial (TAME). No placebo-controlled human trial showing longer life or more disease-free years turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2030,6 +3038,22 @@
     ],
     "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "flagged",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results for a new peer-reviewed report. But the searches found that Life Biosciences began a first-in-person trial of ER-100 (a gene therapy giving three reprogramming genes to the eye, registry number NCT07290244), with the first patient dosed by 2026-06-09 per trade press (Nature's daily briefing reported it too, but that page refused to open without a login, so only its summary is relied on). On 2026-10-08 the company's own release reported three people with glaucoma treated and followed 56 days, safe so far, with two showing better visual-field scores; no biological-age marker was reported and it is not a peer-reviewed paper. The entry does not hold any of this. It is older than the window.",
+        "sources": [
+          "https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/"
+        ],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": "Change I would have made: either nothing (stay at shown in animals) or move the stage up one rung to first human, dated by the first dosing (about 2026-06-09, the exact date unconfirmed). I stopped because the entry's test and the ladder disagree. The ladder says first human is reached when at least one person has had the treatment with a public record; the entry's test says the first-human rung needs a measured biological-age marker or restored tissue function moved towards youth, compared with controls, in a peer-reviewed report. Under the entry's test it is not met: the 2026-10-08 company release has three people, no control group, no age marker, and no journal paper. Under the ladder wording it arguably is met. The record is a record older than the window that the entry missed. Please rule which wording governs, and whether to add a watch term such as ER-100 or Life Biosciences.",
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2059,6 +3083,20 @@
       }
     ],
     "lifespan-a-drug-clears-aged-cells-from-a-persons-body": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest result was a Nature Metabolism paper on dasatinib plus quercetin in fatty liver disease, a randomised trial with 31 people, which an aggregator dated 2026-10-02 (journal page refused to open without a login, so the date and any senescent-cell result are unconfirmed); it is before the window, and the entry is already at first human since 2019-09-18, with the next rung needing a regulator's approval or routine clinical use, which none of the results shows.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2090,6 +3128,20 @@
     ],
     "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the first trial transplant at NYU Langone Health on 2025-11-03, the eGenesis trial clearance of 2025, and the 271-day pig kidney case at Massachusetts General Hospital, all older than the window. The entry already holds the first-human rung since 2022-01-07, and no approval record for the next rung turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2119,6 +3171,20 @@
       }
     ],
     "lifespan-lab-grown-organ-works-in-a-person-for-a-year": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the older Wake Forest bladder, urethra and vagina follow-up reports (2006 to 2014), a registered bioprinted windpipe trial in Seoul with no results, and a 2024 paper on an engineered heart tissue graft, none of which settles a new rung.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2150,6 +3216,20 @@
     ],
     "inheritance-child-born-from-a-gene-edited-embryo": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a National Public Radio piece of 2026-09-29 on the start-up Origin Genomics and the US ban on making gene-edited babies, a report of June 2026 on editing embryos not meant for pregnancy, and a Japanese cabinet bill of April 2026 to ban genome-edited babies; none reports a new birth. The only confirmed birth remains the 2018 one the entry already holds.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2179,6 +3259,20 @@
       }
     ],
     "inheritance-baby-born-with-donor-mitochondria": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the Human Fertilisation and Embryology Authority's 2025 comment on two New England Journal of Medicine papers reporting eight babies born after mitochondrial donation at Newcastle, which is older than the window and adds nothing the entry (already at in clinical use since 2017-03-15) lacks.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2210,6 +3304,20 @@
     ],
     "inheritance-embryos-chosen-by-a-genetic-score-for-traits": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were National Public Radio coverage of 2026-05-06 on companies offering trait selection, a Hokkaido University review of 2026-03-30 on how countries regulate it, and a registered trial of score-based selection (NCT07841769) with no date in the window. The register-aimed search on the company sites returned only general papers and preprints.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2239,6 +3347,20 @@
       }
     ],
     "inheritance-mammal-carried-to-birth-in-an-artificial-womb": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a January 2026 systematic review of 22 artificial-womb animal studies, a 2025 Nature Communications paper on mouse embryo implantation outside the body (stops before birth), and the 2021 Nature paper on mouse embryos grown outside a womb to mid-pregnancy; none reaches a live birth from fertilisation or before mid-gestation.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2270,6 +3392,20 @@
     ],
     "link-wireless-brain-implant-controls-a-computer": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2016 New England Journal of Medicine report the entry already holds, a 2020 stent-electrode study, trial registrations for a Chinese wireless implant, and preprints that are not peer-reviewed papers. The stage is already first human, and no regulator approval turned up.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2300,6 +3436,20 @@
     ],
     "link-wired-brain-implant-controls-a-cursor": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were older BrainGate reports (2006, 2011, 2018) and 2025 preprints on array longevity and home use. The stage is already first human, reached 1998-06-01.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2329,6 +3479,20 @@
       }
     ],
     "link-brain-implant-turns-intended-speech-into-text": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2023 Nature reports the entry already holds and a 2024 New England Journal of Medicine report. One search result listed a 2026 Nature Medicine paper on long-term home use of a speech and cursor implant (about 56 words a minute, a 125,000-word vocabulary), but the page refused to open (it redirected to a sign-in page) and no publication date could be read, so it is not cited and not treated as dated in the window. The stage is already first human, and the next rung needs a regulator's approval or routine clinical use, which nothing showed.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2363,6 +3527,20 @@
     ],
     "link-brain-implant-gives-a-person-touch-from-a-robotic-hand": [
       {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were the 2016 Science Translational Medicine report the entry already holds, a 2021 Science paper, a May 2025 Nature Communications study, and a Nature Reviews article from 2026 whose page refused to open (sign-in redirect) and whose date could not be read. The stage is already first human.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
+      {
         "date": "2026-10-18",
         "scope": "weekly",
         "by": "scheduled",
@@ -2392,6 +3570,20 @@
       }
     ],
     "link-uploaded-animal-brain-reproduces-what-it-learned": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a March 2026 company demonstration of a simulated fruit fly body (innate walking and grooming, no learned task, no peer-reviewed paper) and an August 2026 preprint on a fly brain model fitted to spontaneous activity. Neither meets the test, which needs a trained animal, a readout and a peer-reviewed report.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2425,6 +3617,20 @@
       }
     ],
     "link-brain-link-carries-more-information-than-speech": [
+      {
+        "date": "2026-10-25",
+        "scope": "weekly",
+        "by": "scheduled",
+        "test": false,
+        "file": "2026-10-25.toml",
+        "verdict": "quiet",
+        "found": "Nothing dated 2026-10-18 to 2026-10-25 turned up in the search results. The nearest results were a maker's conference poster claiming over 200 bits a second in sheep (not a person, not peer-reviewed), a 2023 preprint of about 50 bits a second for a scalp system, and 2026 papers saying rates are limited to around 10 bits a second. None is a peer-reviewed human report above forty bits a second over ten minutes.",
+        "sources": [],
+        "moved_from_label": null,
+        "moved_to_label": null,
+        "for_john": null,
+        "picked_up": null
+      },
       {
         "date": "2026-10-18",
         "scope": "weekly",
@@ -2491,10 +3697,10 @@
     ]
   },
   "counts": {
-    "readings": 2,
-    "real_readings": 2,
+    "readings": 3,
+    "real_readings": 3,
     "test_readings": 0,
-    "items": 68,
-    "waiting_on_john": 0
+    "items": 101,
+    "waiting_on_john": 1
   }
 }
