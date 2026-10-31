@@ -95,8 +95,18 @@ class StaleOrMissingIsRefused(unittest.TestCase):
         text = newest.read_text().replace(f"date = {newest.stem[:10]}", "date = 2099-01-04", 1)
         # a record dated after 2026-10-19 also carries what the reading rules ask of it
         # (docs/weekly-reading.md, decision 13): the register-aimed search's sites, and the pages opened
-        text = re.sub(r"^(verdict = .*)$", r'\1\nregister = ["example.org"]', text, flags=re.M)
-        text = re.sub(r"^sources = (\[.*\])$", r"sources = \1\nopened = \1", text, flags=re.M)
+        # (added only to an item that lacks them: readings from 2026-10-25 on carry them already,
+        # and a second copy of a key is a TOML error)
+        items = text.split("\n[[item]]")
+        for i, item in enumerate(items):
+            if i == 0:
+                continue
+            if "\nregister = " not in item:
+                item = re.sub(r"^(verdict = .*)$", r'\1\nregister = ["example.org"]', item, count=1, flags=re.M)
+            if "\nopened = " not in item:
+                item = re.sub(r"^sources = (\[.*\])$", r"sources = \1\nopened = \1", item, count=1, flags=re.M)
+            items[i] = item
+        text = "\n[[item]]".join(items)
         (readings / "2099-01-04.toml").write_text(text)
         problems = self.problems()
         self.assertTrue(any("last_reading" in p for p in problems), problems)
