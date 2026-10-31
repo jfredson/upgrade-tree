@@ -1,0 +1,42 @@
+# Added 2026-10-31 from the two posts of 2026-10-30; the news post of 2026-10-31 sets both beside the record.
+[claim]
+id = "2026-10-30-musk-x-telepathy-bandwidth"
+speaker = "Elon Musk"
+role = "Owner and co-founder of Neuralink"
+when = "2026-10-30"
+when_note = "The post's own time is 04:06 universal time on 2026-10-30, which is 21:06 Pacific on 2026-10-29. Four minutes later he quoted this post in the Blindsight post (the next entry)."
+occasion = "Post on X"
+status = "sourced"
+source = """
+The post at x.com/elonmusk/status/2116018780111597911, dated 2026-10-30 (04:06 universal time by
+the post's own data). Read on 2026-10-31 through a public mirror of X's post data
+(api.fxtwitter.com/elonmusk/status/2116018780111597911), which returns the post's text, its time and
+the posts it quotes; the page on x.com itself was not opened, because no session of this project can
+open x.com. The 2020 entry in this log was read the same way, from X's own embed data for the post."""
+source_url = "https://x.com/elonmusk/status/2116018780111597911"
+checked_how = "Read on 2026-10-31 from a public mirror of X's own data for the post (api.fxtwitter.com), which gave the text below word for word, the time 2026-10-30 04:06 universal time, and the post's id. The same mirror returned this post a second time as the post quoted by the Blindsight post, with the same text."
+words = "Output bandwidth will vastly exceed the fastest human speech or typing in a few years"
+words_locator = "the post's third sentence; the whole post is four sentences"
+claimed = """
+The post names Telepathy as Neuralink's first product and says it enables high-speed communication
+with computers or humans simply by thinking. Its claim about the future is the one quoted: that the
+rate at which a person can get information out through the device will vastly exceed the fastest
+human speech or typing, in a few years. It closes with "Read that sentence again." No number, no
+measurement and no date are given; "a few years" from October 2026 is read here as by about 2029 to
+2030. The company's own figures at the time of the post (its update of 2026-10-01) are a record of
+11.32 bits a second for one trial participant moving a cursor, a median of roughly 10, and typing
+of up to 40 words a minute by imagined finger movement (its update of 2026-01-28), all measured by
+the company and none peer reviewed."""
+not_in_source = "No figure, no date, no study and no participant. Nothing about artificial intelligence, symbiosis or merging; the post is about the product's speed."
+bears_on = ["link", "link-brain-link-carries-more-information-than-speech"]
+bears_on_note = """
+The link branch's second number, the best demonstrated rate from a brain to a machine
+(data/bandwidth.toml), and the upgrade that would settle it: a brain link carrying more information
+a second than speech, which stands at idea only and asks for a sustained rate above forty bits a
+second in a peer-reviewed report. What would settle this claim: a measured rate above the fastest
+typing or speech, in a peer-reviewed report or the company's own measurement, by about 2029 to
+2030. Speech carries about 39 bits a second (Coupé and colleagues, 2019) and an advanced typist
+about 10 (Zheng and Meister, 2024), both in the bandwidth series' baselines."""
+coverage = ["Neuralink's own updates page carried no post about the claim as of 2026-10-31; the company's most recent update, of 2026-10-29, is about a 72-hour engineering sprint with a participant in its speech study."]
+why_here = "Musk's own words, with a named product, a stated mechanism and a timeframe, which is what the charter asks of a claim entry; and the first entry in the log that puts a date on the bandwidth promise the merger argument rests on."
+notes = "The news post of 2026-10-31 (site/src/content/news/) quotes this post in full beside the record; the log keeps one phrase, as its rule says."

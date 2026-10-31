@@ -1,5 +1,5 @@
 {
-  "exported_on": "2026-10-25",
+  "exported_on": "2026-10-31",
   "claims": [
     {
       "id": "2000-02-01-warwick-wired-cyborg-essay",
@@ -1605,6 +1605,104 @@
       "notes": null,
       "verify": [],
       "file": "data/claims/2026-10-16-neuralink-company-website.toml"
+    },
+    {
+      "id": "2026-10-30-musk-x-blindsight-ready",
+      "speaker": "Elon Musk",
+      "role": "Owner and co-founder of Neuralink",
+      "critic": false,
+      "when": "2026-10-30",
+      "when_label": "30 October 2026",
+      "when_note": "The post's own time is 04:10 universal time on 2026-10-30, which is 21:10 Pacific on 2026-10-29. It quotes his Telepathy post of four minutes earlier (the previous entry).",
+      "released_on": null,
+      "occasion": "Post on X",
+      "status": "sourced",
+      "ruling": null,
+      "source": "The post at x.com/elonmusk/status/2116019939056513218, dated 2026-10-30 (04:10 universal time by the post's own data). Read on 2026-10-31 through a public mirror of X's post data (api.fxtwitter.com/elonmusk/status/2116019939056513218), which returns the post's text, its time and the post it quotes; the page on x.com itself was not opened, because no session of this project can open x.com. The 2020 entry in this log was read the same way, from X's own embed data for the post.",
+      "source_url": "https://x.com/elonmusk/status/2116019939056513218",
+      "source_locator": null,
+      "checked_how": "Read on 2026-10-31 from a public mirror of X's own data for the post (api.fxtwitter.com), which gave the text word for word, the time 2026-10-30 04:10 universal time, the post's id, and the quoted Telepathy post.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
+      "words": "It is ready from an engineering standpoint. Just waiting on regulatory approval.",
+      "words_locator": "the post's second and third sentences; the whole post is three sentences",
+      "claimed": "The post names Blindsight as Neuralink's second product and says it will, as the name suggests, enable even those who are completely blind or have never seen to see. Its claim about the present is the one quoted: the device is ready from an engineering standpoint and is waiting only on regulatory approval. No regulator, no application, no trial and no date are named. The public record at the time of the post: the United States Food and Drug Administration gave Blindsight a Breakthrough Device designation on 2024-09-17, which speeds a device's review and is not an approval; Neuralink's trials page listed two active trials, both for paralysis, and the United States trial registry listed seven Neuralink studies, none for sight; and Musk had said in June 2025 that the first implants for vision would come in the next six to twelve months, which had passed. No person is known to have the device.",
+      "not_in_source": "No regulator or country, no application, no trial, no date, and no account of what a person with the device would see. Nothing about artificial intelligence or merging.",
+      "bears_on": [
+        {
+          "kind": "branch",
+          "key": "link",
+          "name": "The link to machines",
+          "path": "/branches/link/"
+        },
+        {
+          "kind": "upgrade",
+          "key": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
+          "name": "An implant in the visual cortex gives sight with no working eyes",
+          "path": "/branches/senses/senses-implant-in-the-visual-cortex-gives-sight-without-eyes/",
+          "branch": "senses",
+          "stage_label": "First human"
+        }
+      ],
+      "bears_on_note": "The upgrade an implant in the visual cortex gives sight with no working eyes, at first human since 1968 (Brindley and Lewin), whose next stage, in clinical use, asks for a regulator's approval record; and the link branch, where the log keeps the Musk and Neuralink entries. What would settle this claim: a regulator's approval record, which would also move the upgrade one stage, and a peer-reviewed report of what the first patients see. A first implant in a person would be news but would not move the upgrade, which has had a first human since 1968. The upgrade's record holds no report of a person blind from birth seeing through such an implant, so the post's \"have never seen\" goes beyond anything in the record.",
+      "coverage": [
+        "Neuralink's own updates page carried no post about the claim as of 2026-10-31. Its last post naming Blindsight is the Breakthrough Device designation announcement of 2024-09-17."
+      ],
+      "paraphrase": null,
+      "why_here": "Musk's own words, with a named product, a claimed state of readiness and a named obstacle; and the only one of his statements about Blindsight in this log that can be checked against a dated regulatory record.",
+      "notes": "The news post of 2026-10-31 (site/src/content/news/) quotes this post in full beside the record; the log keeps one phrase, as its rule says. Musk's earlier timing statement for Blindsight (first implants for vision within six to twelve months, said at a Y Combinator event in June 2025 and quoted by MobiHealthNews on 2025-06-23) is in the news post's sources and is not entered as a claim of its own; it is held on a reporter's account, and the reading of 2026-10-31 did not reach a recording.",
+      "verify": [],
+      "file": "data/claims/2026-10-30-musk-x-blindsight-ready.toml"
+    },
+    {
+      "id": "2026-10-30-musk-x-telepathy-bandwidth",
+      "speaker": "Elon Musk",
+      "role": "Owner and co-founder of Neuralink",
+      "critic": false,
+      "when": "2026-10-30",
+      "when_label": "30 October 2026",
+      "when_note": "The post's own time is 04:06 universal time on 2026-10-30, which is 21:06 Pacific on 2026-10-29. Four minutes later he quoted this post in the Blindsight post (the next entry).",
+      "released_on": null,
+      "occasion": "Post on X",
+      "status": "sourced",
+      "ruling": null,
+      "source": "The post at x.com/elonmusk/status/2116018780111597911, dated 2026-10-30 (04:06 universal time by the post's own data). Read on 2026-10-31 through a public mirror of X's post data (api.fxtwitter.com/elonmusk/status/2116018780111597911), which returns the post's text, its time and the posts it quotes; the page on x.com itself was not opened, because no session of this project can open x.com. The 2020 entry in this log was read the same way, from X's own embed data for the post.",
+      "source_url": "https://x.com/elonmusk/status/2116018780111597911",
+      "source_locator": null,
+      "checked_how": "Read on 2026-10-31 from a public mirror of X's own data for the post (api.fxtwitter.com), which gave the text below word for word, the time 2026-10-30 04:06 universal time, and the post's id. The same mirror returned this post a second time as the post quoted by the Blindsight post, with the same text.",
+      "captions_url": null,
+      "transcript_check": null,
+      "also_checked": [],
+      "words": "Output bandwidth will vastly exceed the fastest human speech or typing in a few years",
+      "words_locator": "the post's third sentence; the whole post is four sentences",
+      "claimed": "The post names Telepathy as Neuralink's first product and says it enables high-speed communication with computers or humans simply by thinking. Its claim about the future is the one quoted: that the rate at which a person can get information out through the device will vastly exceed the fastest human speech or typing, in a few years. It closes with \"Read that sentence again.\" No number, no measurement and no date are given; \"a few years\" from October 2026 is read here as by about 2029 to 2030. The company's own figures at the time of the post (its update of 2026-10-01) are a record of 11.32 bits a second for one trial participant moving a cursor, a median of roughly 10, and typing of up to 40 words a minute by imagined finger movement (its update of 2026-01-28), all measured by the company and none peer reviewed.",
+      "not_in_source": "No figure, no date, no study and no participant. Nothing about artificial intelligence, symbiosis or merging; the post is about the product's speed.",
+      "bears_on": [
+        {
+          "kind": "branch",
+          "key": "link",
+          "name": "The link to machines",
+          "path": "/branches/link/"
+        },
+        {
+          "kind": "upgrade",
+          "key": "link-brain-link-carries-more-information-than-speech",
+          "name": "A brain link carries more information per second than speech",
+          "path": "/branches/link/link-brain-link-carries-more-information-than-speech/",
+          "branch": "link",
+          "stage_label": "Idea only"
+        }
+      ],
+      "bears_on_note": "The link branch's second number, the best demonstrated rate from a brain to a machine (data/bandwidth.toml), and the upgrade that would settle it: a brain link carrying more information a second than speech, which stands at idea only and asks for a sustained rate above forty bits a second in a peer-reviewed report. What would settle this claim: a measured rate above the fastest typing or speech, in a peer-reviewed report or the company's own measurement, by about 2029 to 2030. Speech carries about 39 bits a second (Coupé and colleagues, 2019) and an advanced typist about 10 (Zheng and Meister, 2024), both in the bandwidth series' baselines.",
+      "coverage": [
+        "Neuralink's own updates page carried no post about the claim as of 2026-10-31; the company's most recent update, of 2026-10-29, is about a 72-hour engineering sprint with a participant in its speech study."
+      ],
+      "paraphrase": null,
+      "why_here": "Musk's own words, with a named product, a stated mechanism and a timeframe, which is what the charter asks of a claim entry; and the first entry in the log that puts a date on the bandwidth promise the merger argument rests on.",
+      "notes": "The news post of 2026-10-31 (site/src/content/news/) quotes this post in full beside the record; the log keeps one phrase, as its rule says.",
+      "verify": [],
+      "file": "data/claims/2026-10-30-musk-x-telepathy-bandwidth.toml"
     }
   ],
   "not_entered": {
@@ -1676,8 +1774,8 @@
     ]
   },
   "counts": {
-    "claims": 28,
-    "sourced": 24,
+    "claims": 30,
+    "sourced": 26,
     "unsourced": 4,
     "critics": 7,
     "speakers": 14,
@@ -1685,6 +1783,6 @@
     "no_primary_found": 3,
     "to_verify": 0,
     "first_when": "2000-02-01",
-    "last_when": "2026-10-16"
+    "last_when": "2026-10-30"
   }
 }
