@@ -14,7 +14,9 @@ const named = post.data.records.map((id) => {
   const u = tree.upgrades.find((x) => x.id === id);
   if (u) return { name: u.name, path: u.path };
   const c = (claims as any).claims?.find((x: any) => x.id === id);
-  return c ? { name: c.title ?? c.id, path: `/claims/#${c.id}` } : null;
+  // A claim has no title of its own; name it by its speaker and date, never by its id (workspace rule: no bare ids on a public page).
+  const opening = c?.words ? ` ("${c.words.split(' ').slice(0, 6).join(' ')}…")` : '';
+  return c ? { name: `${c.speaker}'s claim of ${c.when_label}${opening}`, path: `/claims/#${c.id}` } : null;
 }).filter(Boolean) as { name: string; path: string }[];
 ---
 

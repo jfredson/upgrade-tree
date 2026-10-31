@@ -1,0 +1,44 @@
+# Added 2026-10-31 from the two posts of 2026-10-30; the news post of 2026-10-31 sets both beside the record.
+[claim]
+id = "2026-10-30-musk-x-blindsight-ready"
+speaker = "Elon Musk"
+role = "Owner and co-founder of Neuralink"
+when = "2026-10-30"
+when_note = "The post's own time is 04:10 universal time on 2026-10-30, which is 21:10 Pacific on 2026-10-29. It quotes his Telepathy post of four minutes earlier (the previous entry)."
+occasion = "Post on X"
+status = "sourced"
+source = """
+The post at x.com/elonmusk/status/2116019939056513218, dated 2026-10-30 (04:10 universal time by
+the post's own data). Read on 2026-10-31 through a public mirror of X's post data
+(api.fxtwitter.com/elonmusk/status/2116019939056513218), which returns the post's text, its time and
+the post it quotes; the page on x.com itself was not opened, because no session of this project can
+open x.com. The 2020 entry in this log was read the same way, from X's own embed data for the post."""
+source_url = "https://x.com/elonmusk/status/2116019939056513218"
+checked_how = "Read on 2026-10-31 from a public mirror of X's own data for the post (api.fxtwitter.com), which gave the text word for word, the time 2026-10-30 04:10 universal time, the post's id, and the quoted Telepathy post."
+words = "It is ready from an engineering standpoint. Just waiting on regulatory approval."
+words_locator = "the post's second and third sentences; the whole post is three sentences"
+claimed = """
+The post names Blindsight as Neuralink's second product and says it will, as the name suggests,
+enable even those who are completely blind or have never seen to see. Its claim about the present
+is the one quoted: the device is ready from an engineering standpoint and is waiting only on
+regulatory approval. No regulator, no application, no trial and no date are named. The public
+record at the time of the post: the United States Food and Drug Administration gave Blindsight a
+Breakthrough Device designation on 2024-09-17, which speeds a device's review and is not an
+approval; Neuralink's trials page listed two active trials, both for paralysis, and the United
+States trial registry listed seven Neuralink studies, none for sight; and Musk had said in June
+2025 that the first implants for vision would come in the next six to twelve months, which had
+passed. No person is known to have the device."""
+not_in_source = "No regulator or country, no application, no trial, no date, and no account of what a person with the device would see. Nothing about artificial intelligence or merging."
+bears_on = ["link", "senses-implant-in-the-visual-cortex-gives-sight-without-eyes"]
+bears_on_note = """
+The upgrade an implant in the visual cortex gives sight with no working eyes, at first human since
+1968 (Brindley and Lewin), whose next stage, in clinical use, asks for a regulator's approval
+record; and the link branch, where the log keeps the Musk and Neuralink entries. What would settle
+this claim: a regulator's approval record, which would also move the upgrade one stage, and a
+peer-reviewed report of what the first patients see. A first implant in a person would be news but
+would not move the upgrade, which has had a first human since 1968. The upgrade's record holds no
+report of a person blind from birth seeing through such an implant, so the post's "have never
+seen" goes beyond anything in the record."""
+coverage = ["Neuralink's own updates page carried no post about the claim as of 2026-10-31. Its last post naming Blindsight is the Breakthrough Device designation announcement of 2024-09-17."]
+why_here = "Musk's own words, with a named product, a claimed state of readiness and a named obstacle; and the only one of his statements about Blindsight in this log that can be checked against a dated regulatory record."
+notes = "The news post of 2026-10-31 (site/src/content/news/) quotes this post in full beside the record; the log keeps one phrase, as its rule says. Musk's earlier timing statement for Blindsight (first implants for vision within six to twelve months, said at a Y Combinator event in June 2025 and quoted by MobiHealthNews on 2025-06-23) is in the news post's sources and is not entered as a claim of its own; it is held on a reporter's account, and the reading of 2026-10-31 did not reach a recording."

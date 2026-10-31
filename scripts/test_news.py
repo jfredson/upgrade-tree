@@ -49,6 +49,15 @@ class NewsPosts(unittest.TestCase):
         bad = self.GOOD.replace("sources:\n  - label: The paper\n    url: https://example.org/paper\n", "")
         self.assertTrue(any("cites no source" in p for p in self.run_check(bad)))
 
+    def test_a_claim_made_in_the_window_counts_as_its_own_dated_change(self):
+        records = {"upgrades": [], "claims": [{"id": "a-claim", "when": "2026-10-17"}], "readings": []}
+        import check_news
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp); (d / "2026-10-18-a-leaf-moves.md").write_text(self.GOOD.replace("[a-leaf]", "[a-claim]").replace("rung-reached", "claim"), encoding="utf-8")
+            self.assertEqual(check_news.check(d, records)[0], [])
+            records["claims"][0]["when"] = "2026-09-01"
+            self.assertTrue(any("no dated change" in p for p in check_news.check(d, records)[0]))
+
     def test_the_opener_need_not_name_a_record(self):
         opener = self.GOOD.replace("kind: rung-reached", "kind: start-here").replace("records: [a-leaf]\n", "")
         self.assertEqual(self.run_check(opener, name="2026-10-18-start-here.md"), [])

@@ -15,8 +15,8 @@ a kind outside the seven; names no record, or one that does not exist (the opene
 address; states a figure (any digit) in a paragraph that carries no link (a Markdown link or a written-out https address) to a source or a record
 (a table is covered by the record links the page draws under the post; the frontmatter is not
 prose); or names a record that shows no dated change within fourteen days of the post's date
-(a revision, the rung reached, or a reading item ruled or moved), so a post cannot announce
-what the record does not show. The rules are John's of 2026-10-18.
+(a revision, the rung reached, a claim's own date, or a reading item ruled or moved), so a post
+cannot announce what the record does not show. The rules are John's of 2026-10-18.
 """
 from __future__ import annotations
 
@@ -95,7 +95,9 @@ def record_changed_near(rec: dict, when: date, readings: list[dict]) -> bool:
     for rv in rec.get("revisions") or []:
         if rv.get("date"):
             dates.append(str(rv["date"]))
-    for key in ("stage_reached_on", "added_on", "date"):
+    # An upgrade changes on a revision or a rung; a claim's dated change is the occasion itself (its
+    # `when`), so a post about a claim made in the window can name it (added 2026-10-31).
+    for key in ("stage_reached_on", "added_on", "date", "when"):
         if rec.get(key):
             dates.append(str(rec[key]))
     for rd in readings:
