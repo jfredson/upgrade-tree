@@ -30,7 +30,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 // 2026-10-31). Only the tab title and the search engines' structured data change: the visible
 // heading, the share-card title and the inner pages' titles stay as they are.
 const isHome = Astro.url.pathname === '/';
-const homeTitle = 'The Upgrade Tree: how much of a human being can be changed today';
+const homeTitle = 'The Upgrade Tree: a public tracker of human augmentation and human enhancement';
 const tabTitle = isHome ? homeTitle : title;
 // What the site is, for search engines (schema.org WebSite), on the home page only: the name, the
 // bare name as an alternate name, the subject in one line, and the address. The parent site carries
