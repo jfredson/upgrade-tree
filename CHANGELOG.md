@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-11-01
+
+- **Weekly reading (scheduled task, 2026-11-01): 35 upgrades read, 0 moved, 0 flagged for John; record at data/readings/2026-11-01.toml.** Monthly reading, window 2026-09-27 to 2026-11-01; all 35 came back quiet, and the five shared entries agree with Outrunning Ageing.
+
 ## 2026-10-31
 
 - **The home page's browser-tab title now carries the subject: "The Upgrade Tree: a public tracker of human augmentation and human enhancement".** The two phrases are the ones people search for (chosen by John 2026-10-31; a line that described the site in its own words was tried first). The bare name is a common phrase in video games, and a check on 2026-10-31 of how the family's sites show up on Google when searched by name found this site indexed but not on the first page for it. The home page also gives search engines the site's name, its bare name as an alternate, its one-line description and its address as structured data (`site/src/layouts/Base.astro`). The visible heading, the share-card title and every inner page's title are unchanged. No record or count changed.
