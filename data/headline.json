@@ -1,7 +1,7 @@
 {
-  "computed_on": "2026-11-01",
-  "commit": "4e2187b",
-  "last_reading": "2026-11-01",
+  "computed_on": "2026-11-08",
+  "commit": "b4c6fb5",
+  "last_reading": "2026-11-08",
   "method": {
     "document": "docs/upgrade-schema.md",
     "headline_stage": "first-human",
@@ -81,7 +81,7 @@
     "upgrades": 35,
     "long_shots": 2,
     "claims": 30,
-    "readings": 4,
+    "readings": 5,
     "waiting_on_john": 0,
     "siblings": 5
   },

@@ -3,6 +3,12 @@
   "intro": "Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.",
   "days": [
     {
+      "date": "2026-11-08",
+      "items": [
+        "**Weekly reading (scheduled task, 2026-11-08): 33 upgrades read, 0 moved, 0 flagged for John; record at data/readings/2026-11-08.toml.** Weekly reading, window 2026-11-01 to 2026-11-08; 32 came back quiet and 1 was noted (Compass Pathways said on 2026-11-03 that its psilocybin filing would finish within two weeks; no stage moves), and the five shared entries agree with Outrunning Ageing."
+      ]
+    },
+    {
       "date": "2026-11-01",
       "items": [
         "**Weekly reading (scheduled task, 2026-11-01): 35 upgrades read, 0 moved, 0 flagged for John; record at data/readings/2026-11-01.toml.** Monthly reading, window 2026-09-27 to 2026-11-01; all 35 came back quiet, and the five shared entries agree with Outrunning Ageing."
