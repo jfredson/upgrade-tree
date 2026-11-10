@@ -72,13 +72,15 @@ The record is the 2016 Salk Institute report of partial reprogramming in live mi
 Harvard report that restored vision in old mice by resetting cells in the eye is the clearest
 reversal of a lost function. A company founded on that work announced on 9 June 2026 that the
 first participant in its trial for two optic nerve diseases had been dosed. Under this entry's test
-the first-human rung needs a measured reversal in a person, not a dose, so the entry stays at shown
-in animals until the trial reports; if I would rather count the dose, the stage moves to first
-human on the company's own release. Outrunning Ageing keeps its own record of this upgrade under
+the first-human stage needs a measured reversal in a person, not a dose, and I ruled on 2026-11-09
+that the test governs: the upgrade is that ageing is reversed, and treating someone does not show
+that anything was. The entry stays at shown in animals until a peer-reviewed report measures a
+marker of age in treated people. Outrunning Ageing keeps its own record of this upgrade under
 the same name, linked from here on 2026-10-17, and holds the June 2026 dose as a separate entry of
 its own; the weekly reading checks that the two stages agree."""
 revisions = [
   { date = 2026-10-17, field = "sibling", old = "none", new = "partially-resetting-cells-reverses-ageing-in-an-animal", why = "Cross-link to the matching entry on Outrunning Ageing, 'Partially resetting cells reverses ageing in a living animal', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
+  { date = 2026-11-09, field = "notes", old = "the stage stays until the trial reports, unless the dose is counted instead", new = "ruled: the stage stays at shown in animals; a trial in people is under way", why = "John's ruling of 2026-11-09 on the question the weekly reading of 2026-10-25 left for him. Life Biosciences' first trial in people of ER-100, a gene therapy that partly resets cells in the eye, is under way (trial registry entry NCT07290244, https://clinicaltrials.gov/study/NCT07290244, a safety trial in people with glaucoma or a sudden loss of blood flow to the optic nerve), and the company announced on 2026-06-09 that its first participant had been treated (https://www.lifebiosciences.com/life-biosciences-announces-first-patient-dosed-in-phase-1-trial-of-er-100-for-optic-neuropathies/). The stage ladder counts first human once any person has had a treatment with a public record; this entry's own test asks for a measured marker of age moved towards youth, in a peer-reviewed report. The entry's test governs, because the upgrade is that ageing is reversed and treating someone does not show that anything was. The stage stays at shown in animals, and the count stays at 28 of 35. The stage moves when a peer-reviewed report measures a marker of age in treated people." },
 ]
 
 [[upgrade]]

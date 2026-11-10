@@ -66,7 +66,9 @@ order within each file):
    people reading the test would agree whether it has happened. A target date, a plan, a funding
    round, a press claim, a demonstration video and a company's statement that a patient has been
    treated are not the record unless the entry's `source` line says the company's own release
-   counts. A preprint is not a paper unless the entry says so.
+   counts. A preprint is not a paper unless the entry says so. Where the entry's own test is
+   stricter than the ladder's wording, the entry's test governs (ruled by John 2026-11-09): a
+   record that meets the ladder but not the test is `noted`, not a stage change.
 3. Give one verdict:
    - `quiet` (redefined 2026-10-18): nothing about the upgrade turned up in the search results
      for the window. It means nothing was found, not that nothing happened; write `found` as

@@ -121,6 +121,13 @@ is not, unless the entry says so. The reading is of the past week; an older reco
 missed is a `flagged` item, not a stage change, because dating the rung is John's. An older
 record the entry already holds is not news: it is `quiet`, and `found` states the fact.
 
+**Where the entry's test is stricter than the ladder, the entry's test governs** (ruled by John
+2026-11-09, on the flag in the reading of 2026-10-25). The ladder's wording is general: "first
+human" is reached once any person has had a treatment with a public record. Some entries ask for
+more, for example a measured result in a person, because the upgrade is the result and not the
+treatment. A rung is reached when the entry's own test for it is met, and a record that meets the
+ladder's wording but not the test is `noted`, not a stage change.
+
 **Open what you cite** (ruled 2026-10-18). Search results are summaries, and a summary is not the
 record. For a `noted`, `stage-change` or `flagged` item the reading opens every record it cites
 with the page-reading tool and reads it, and cites the maker's, regulator's or journal's own

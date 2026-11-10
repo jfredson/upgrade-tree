@@ -195,6 +195,10 @@ script validates every file and refuses to build if one fails. Dates are Pacific
     moved_to = "in-clinical-use"   # stage-change only: the rung after, one above moved_from
     for_john = "..."               # flagged only: the change it would have made, the record,
                                    # and why it was not the scanner's to make
+    ruling = "..."                 # optional, flagged only, added after the fact: John's ruling,
+                                   # with his name and the date; the revision on the upgrade whose
+                                   # reason names the reading's date is what clears the flag
+                                   # (added 2026-11-09)
     reused = ["..."]               # a search first run for another upgrade and listed again:
                                    # the search as written in queries, that upgrade, and why it
                                    # bears on this one
