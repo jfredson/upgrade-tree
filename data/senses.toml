@@ -140,8 +140,8 @@ peer-reviewed report of two children in China, published on 8 January 2024; the 
 published in The Lancet sixteen days later, in which five of six children recovered hearing, is the
 first registered trial result and the stronger record. Several companies ran trials of the same
 idea in 2023 and 2024. When this record was written on 16 October 2026 it said no regulator had
-approved an OTOF gene therapy; the first weekly reading, the same day, found that it had, and I
-ruled the stage change on 16 October 2026."""
+approved an OTOF gene therapy; the first weekly reading, the same day, found that it had, and the
+stage moved on 16 October 2026."""
 revisions = [
   { date = 2026-10-16, field = "stage", old = "first-human", new = "in-clinical-use", why = "The first weekly reading found the FDA's accelerated approval of Otarmeni on 2026-04-23, the kind of record the entry names; the entry as written had missed it. Decided on 2026-10-16." },
 ]
