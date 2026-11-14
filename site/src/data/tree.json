@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-11-14",
-  "commit": "4dc7b1c",
+  "commit": "d3b38b6",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -1146,7 +1146,7 @@
           "field": "description",
           "old": "the first person was treated in June 2026, with no result yet reported",
           "new": "adds the company's early results of 2026-10-08: three people with glaucoma, 56 days, safe so far, a better field-of-vision test in two, not peer reviewed",
-          "why": "The description had fallen behind the record. Life Biosciences presented early results from its trial of ER-100 (trial registry entry NCT07290244) on 2026-10-08 at Eyecelerator, a meeting held with the American Academy of Ophthalmology's 2026 congress in New Orleans (announced at https://www.lifebiosciences.com/life-biosciences-to-present-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies-at-eyecelerator-2026/; results at https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/): three people with open-angle glaucoma given one dose, followed through day 56, no dose-limiting or serious side effects, and in two of the three at least 28 per cent of the points on a field-of-vision test improved by more than 4 decibels. The company calls the vision findings preliminary and the trial is designed to test safety. Fight Aging!, an independent blog, reported the same figures on 2026-10-19 (https://www.fightaging.org/archives/2026/10/life-biosciences-reports-initial-results-from-the-first-reprogramming-trial/); no independent report found adds anything the company did not say. Wording only: the results have no untreated group, no marker of age and no journal paper, so they do not meet the entry's test and the stage stays at shown in animals under John's ruling of 2026-11-09."
+          "why": "The description had fallen behind the record. Life Biosciences presented early results from its trial of ER-100 (trial registry entry NCT07290244) on 2026-10-08 at Eyecelerator, a meeting held with the American Academy of Ophthalmology's 2026 congress in New Orleans (announced at https://www.lifebiosciences.com/life-biosciences-to-present-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies-at-eyecelerator-2026/; results at https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/): three people with open-angle glaucoma given one dose, followed through day 56, no dose-limiting or serious side effects, and in two of the three at least 28 per cent of the points on a field-of-vision test improved by more than 4 decibels. The company calls the vision findings preliminary and the trial is designed to test safety. Fight Aging!, an independent blog, reported the same figures on 2026-10-19 (https://www.fightaging.org/archives/2026/10/life-biosciences-reports-initial-results-from-the-first-reprogramming-trial/); no independent report found adds anything the company did not say. Wording only: the results have no untreated group, no marker of age and no journal paper, so they do not meet the entry's test and the stage stays at shown in animals."
         }
       ],
       "verify": [],
