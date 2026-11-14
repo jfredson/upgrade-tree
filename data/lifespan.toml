@@ -53,7 +53,10 @@ and then off, in a live animal, they turn back some of the marks of age without 
 cell is. In 2016 mice with a premature-ageing disease lived longer when this was done to them, and
 in 2020 old mice regained sight after the nerve from the eye was reset. It is the most direct
 attempt yet to reverse ageing rather than slow it. The first person was given it, in one eye, in
-June 2026, with no result yet reported."""
+June 2026. On 8 October 2026 the company gave early results from three people with glaucoma,
+followed for 56 days: no serious side effects so far, and better scores on a test of the field of
+vision in two of the three. These are the company's own figures, from a small safety trial with no
+untreated group and no measure of age, and they have not been peer reviewed."""
 resolution = """
 A living animal given a brief, controlled dose of reprogramming genes afterwards has a measured
 marker of biological age (an epigenetic clock, a restored tissue function) moved towards youth,
@@ -77,10 +80,13 @@ that the test governs: the upgrade is that ageing is reversed, and treating some
 that anything was. The entry stays at shown in animals until a peer-reviewed report measures a
 marker of age in treated people. Outrunning Ageing keeps its own record of this upgrade under
 the same name, linked from here on 2026-10-17, and holds the June 2026 dose as a separate entry of
-its own; the weekly reading checks that the two stages agree."""
+its own; the weekly reading checks that the two stages agree. The company's early results of
+2026-10-08, from three people with glaucoma, do not meet this entry's test: they report safety and a
+test of the field of vision, not a marker of age, with no untreated group and no journal paper."""
 revisions = [
   { date = 2026-10-17, field = "sibling", old = "none", new = "partially-resetting-cells-reverses-ageing-in-an-animal", why = "Cross-link to the matching entry on Outrunning Ageing, 'Partially resetting cells reverses ageing in a living animal', which has pointed at this entry since 2026-10-16; the two sites keep their own records of the same test and the weekly reading compares the stages (Outrunning Ageing kickoff, item 7, decided 2026-10-16)." },
   { date = 2026-11-09, field = "notes", old = "the stage stays until the trial reports, unless the dose is counted instead", new = "ruled: the stage stays at shown in animals; a trial in people is under way", why = "John's ruling of 2026-11-09 on the question the weekly reading of 2026-10-25 left for him. Life Biosciences' first trial in people of ER-100, a gene therapy that partly resets cells in the eye, is under way (trial registry entry NCT07290244, https://clinicaltrials.gov/study/NCT07290244, a safety trial in people with glaucoma or a sudden loss of blood flow to the optic nerve), and the company announced on 2026-06-09 that its first participant had been treated (https://www.lifebiosciences.com/life-biosciences-announces-first-patient-dosed-in-phase-1-trial-of-er-100-for-optic-neuropathies/). The stage ladder counts first human once any person has had a treatment with a public record; this entry's own test asks for a measured marker of age moved towards youth, in a peer-reviewed report. The entry's test governs, because the upgrade is that ageing is reversed and treating someone does not show that anything was. The stage stays at shown in animals, and the count stays at 28 of 35. The stage moves when a peer-reviewed report measures a marker of age in treated people." },
+  { date = 2026-11-14, field = "description", old = "the first person was treated in June 2026, with no result yet reported", new = "adds the company's early results of 2026-10-08: three people with glaucoma, 56 days, safe so far, a better field-of-vision test in two, not peer reviewed", why = "The description had fallen behind the record. Life Biosciences presented early results from its trial of ER-100 (trial registry entry NCT07290244) on 2026-10-08 at Eyecelerator, a meeting held with the American Academy of Ophthalmology's 2026 congress in New Orleans (announced at https://www.lifebiosciences.com/life-biosciences-to-present-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies-at-eyecelerator-2026/; results at https://www.lifebiosciences.com/life-biosciences-announces-first-in-human-data-from-ongoing-phase-1-trial-evaluating-er-100-in-optic-neuropathies/): three people with open-angle glaucoma given one dose, followed through day 56, no dose-limiting or serious side effects, and in two of the three at least 28 per cent of the points on a field-of-vision test improved by more than 4 decibels. The company calls the vision findings preliminary and the trial is designed to test safety. Fight Aging!, an independent blog, reported the same figures on 2026-10-19 (https://www.fightaging.org/archives/2026/10/life-biosciences-reports-initial-results-from-the-first-reprogramming-trial/); no independent report found adds anything the company did not say. Wording only: the results have no untreated group, no marker of age and no journal paper, so they do not meet the entry's test and the stage stays at shown in animals under John's ruling of 2026-11-09." },
 ]
 
 [[upgrade]]
