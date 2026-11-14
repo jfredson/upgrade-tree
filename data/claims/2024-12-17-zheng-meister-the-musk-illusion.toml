@@ -8,7 +8,7 @@ when_note = "The date the paper was published online, which is how the tree date
 released_on = "2025-01-22"
 occasion = "Paper in the journal Neuron, \"The unbearable slowness of being: Why do we live at 10 bits/s?\", the section headed \"The Musk illusion\""
 status = "sourced"
-ruling = "Entered on John's approval of 2026-10-23, given through the weekend coordinating session after a search for published replies to the paper."
+ruling = "Entered on 2026-10-23, after a search for published replies to the paper, as the first entry in the log from scientists who measured the rate a brain link would have to beat."
 source = """
 The paper as the journal published it, doi 10.1016/j.neuron.2024.11.008, free to read on the
 journal's site (Cell Press's open archive). The authors' own copy is arXiv 2408.10234 (version 2),
