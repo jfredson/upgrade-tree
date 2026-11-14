@@ -9,6 +9,20 @@
 import Base from '../layouts/Base.astro';
 import Figure from '../components/Figure.astro';
 import { tree, longDate } from '../lib/tree';
+import { datedPosts, opener, postPath, KIND_LABEL } from '../lib/news';
+
+// The latest news, on the right of the first screen (the tracker family's home-page panel,
+// first built on The Belt Equation on 2026-11-14; both layouts considered are drawn in
+// sentient-horizons/design/proposals/home-latest-news-2026-11-14.md). Titles and links only: the
+// three newest posts, newest first, so a returning reader sees what is new the moment the page
+// opens. The pinned "Start here" post is not one of the three; it gets its own line underneath.
+// One dated post is enough to show the panel: its date tells the reader how fresh it is.
+const NEWS_ON_HOME = 3;
+const NEWS_MIN_POSTS = 1;
+const newsPosts = await datedPosts();
+const latestNews = newsPosts.length >= NEWS_MIN_POSTS ? newsPosts.slice(0, NEWS_ON_HOME) : [];
+const startHere = await opener();
+const hasNews = latestNews.length > 0;
 
 const c = tree.counts;
 const stages = tree.stages;
@@ -29,7 +43,7 @@ const movedLine = !checked
 ---
 
 <Base>
-  <section class="home-first">
+  <section class={`home-first${hasNews ? ' has-news' : ''}`}>
     <div class="first-main">
       <p class="eyebrow">A public count, kept in the open</p>
       <p class="big-number">{c.first_human_or_beyond}<small>of {c.upgrades}</small></p>
@@ -67,6 +81,7 @@ const movedLine = !checked
       </p>
     </div>
 
+    <div class="home-side">
     <div class="first-side figure-card">
       <p class="plate-label">Plate I · The seven branches</p>
       <Figure />
@@ -76,8 +91,53 @@ const movedLine = !checked
       </ul>
       <p class="figure-note">Each part of the figure is one of the seven branches, shaded by the furthest stage any upgrade under it has reached. Click a part to see what is there.</p>
     </div>
+    {latestNews.length > 0 && (
+      <aside class="side-news" aria-labelledby="side-news-title">
+        <div class="side-news-head">
+          <h2 class="plate-label" id="side-news-title">Latest news</h2>
+          <a href="/news/">All news</a>
+        </div>
+        <ul class="side-news-list">
+          {latestNews.map((p) => (
+            <li>
+              <p class="side-news-meta"><time datetime={p.data.date}>{longDate(p.data.date)}</time><span class="kind">{KIND_LABEL[p.data.kind]}</span></p>
+              <a class="side-news-title" href={postPath(p)}>{p.data.title}</a>
+            </li>
+          ))}
+        </ul>
+        {startHere && (
+          <p class="side-news-foot">New here? <a href={postPath(startHere)}>Start with the opening post</a>.</p>
+        )}
+      </aside>
+    )}
+    </div>
+    {hasNews && (
+    <div class="first-explain explain">
+    <p>
+      An <em>upgrade</em>, here, is one specific way technology can change how a person's body or mind works: an implant that
+      gives back some sight, a pill meant to slow ageing, a chip that lets a paralysed person type by
+      thought. Each one is written down with a plain test of what would count as a person having it,
+      the public record that settles that, and a <em>stage</em>: idea only, shown in animals, a first
+      human, in use by doctors, or in wide use. The stage is a fact about what has happened, not a
+      guess about what will. There are no odds on this site. The seven <em>branches</em> are the seven
+      things about a person that can be changed: what they sense, how they move, how they think and
+      remember, how they feel, how long they last, what they pass to their children, and how directly
+      they can be joined to a machine.
+    </p>
+    {examplesOnly && (
+      <p class="dim" style="font-size: 15px;">
+        The {c.upgrades} upgrades on the tree today are examples, seeded on 16 October 2026 to show how the
+        record works while the real list is written. Each says so on its page. The counts above will change
+        as the list fills in.
+      </p>
+    )}
+    </div>
+    )}
   </section>
 
+  {/* With the news panel under the figure the right column runs past the left one, so this
+      paragraph sits in the first screen's left column (above) and fills what would be a gap. */}
+  {!hasNews && (
   <section class="section explain narrow">
     <p>
       An <em>upgrade</em>, here, is one specific way technology can change how a person's body or mind works: an implant that
@@ -98,6 +158,7 @@ const movedLine = !checked
       </p>
     )}
   </section>
+  )}
 
   <section class="section">
     <div class="shead"><h2>The seven branches</h2><span>what is recorded under each</span></div>
