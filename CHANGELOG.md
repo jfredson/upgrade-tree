@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-11-15
+
+- **The check that runs before every deploy now also stops notes that talk about the author in the third person** (`scripts/check_site.py`, with tests in `scripts/test_check_site.py`, which the deploy now runs; decided 2026-11-15). Since 2026-11-14 it has stopped working notes addressed to me. Five phrase patterns are added for notes that name me in the third person or describe how a page was opened, the same five The Quiet Galaxy added the same day. A name followed by a surname still passes. The built site passed the wider check as it stood, so no wording changes. No record, stage or count changes.
+
 ## 2026-11-14
 
 - **Every deploy now checks the built site for notes addressed to John** (`scripts/check_site.py`, decided 2026-11-14), the same check The Belt Equation runs. It stops the deploy if a page carries a working note written to me, such as what was waiting for my decision or who ruled, and the rule it enforces is written in `CLAUDE.md`.
