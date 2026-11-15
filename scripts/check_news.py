@@ -18,8 +18,8 @@ prose); or names a record that shows no dated change within fourteen days of the
 (a revision, the rung reached, a claim's own date, or a reading item ruled or moved), so a post
 cannot announce what the record does not show. The rules are John's of 2026-10-18.
 
-The year in review (proposed 2026-11-15, after John asked on 2026-11-15 for a post at the end of each
-year on the year's findings and what to watch next; it waits on his ruling). A post of kind
+The year in review (ruled by John on 2026-11-15 for all five tracker sites, after he asked the same day
+for a post at the end of each year on the year's findings and what to watch next). A post of kind
 "year-in-review" looks back over a whole year, so the fourteen-day window does not fit it. Instead,
 every record it names must show a dated change in the post's own calendar year, so it still cannot
 announce what the record does not show, and there is at most one such post per year.

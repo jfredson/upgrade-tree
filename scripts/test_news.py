@@ -62,7 +62,8 @@ class NewsPosts(unittest.TestCase):
         opener = self.GOOD.replace("kind: rung-reached", "kind: start-here").replace("records: [a-leaf]\n", "")
         self.assertEqual(self.run_check(opener, name="2026-10-18-start-here.md"), [])
 
-    # The year in review (proposed 2026-11-15; waits on John's ruling).
+    # The year in review (ruled by John on 2026-11-15): the kind is accepted and the fourteen-day window does
+    # not apply to it; a record with no change that year is refused; a second review in one year is refused.
     REVIEW = GOOD.replace("date: 2026-10-18", "date: 2026-12-28").replace("kind: rung-reached", "kind: year-in-review")
 
     def test_a_year_in_review_needs_a_change_in_its_year_not_within_fourteen_days(self):
