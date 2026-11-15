@@ -4,6 +4,12 @@
 // The story so far: the changelog, rendered day by day from CHANGELOG.md (scripts/export.py).
 import { changelog, longDate, REPO } from '../lib/tree';
 import { datedPosts, postPath } from '../lib/news';
+import MarkdownIt from 'markdown-it';
+// The changelog is written in Markdown (bold, code, links). Until 2026-11-14 its lines were
+// printed as plain text, so readers saw the ** and [text](url) marks; now each line is rendered
+// inline. Raw HTML in the changelog is not passed through.
+const md = new MarkdownIt({ html: false, linkify: false });
+const inline = (text: string) => md.renderInline(text);
 const newsPosts = await datedPosts();
 const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
 ---
@@ -22,7 +28,7 @@ const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date)
         <li id={d.date}>
           <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
           <ul>
-            {d.items.map((item) => <li>{item}</li>)}
+            {d.items.map((item) => <li set:html={inline(item)} />)}
             {postsFor(d.date).map((p) => <li class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</li>)}
           </ul>
         </li>
