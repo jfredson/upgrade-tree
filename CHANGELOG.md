@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-12-28
+
+- **A look back at 2026 and ahead to 2027, in the news.** The post sets out what happened this year to the changes the site follows, what the site found after it opened in October, and dated events in 2027 that could move a stage or the count. It needed a new kind of news post, "the year in review": one a year, and every upgrade or claim it names must show a dated change in that year, so it cannot announce what the record does not show. No stage, count or record changed.
+
 ## 2026-11-14
 
 - **Every deploy now checks the built site for notes addressed to John** (`scripts/check_site.py`, decided 2026-11-14), the same check The Belt Equation runs. It stops the deploy if a page carries a working note written to me, such as what was waiting for my decision or who ruled, and the rule it enforces is written in `CLAUDE.md`.

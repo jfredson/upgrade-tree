@@ -6,7 +6,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-export const NEWS_KINDS = ['start-here', 'rung-reached', 'estimate-revised', 'flagged-item-ruled', 'claim', 'headline-moved', 'method-changed'] as const;
+export const NEWS_KINDS = ['start-here', 'rung-reached', 'estimate-revised', 'flagged-item-ruled', 'claim', 'headline-moved', 'method-changed', 'year-in-review'] as const;
 
 // YAML reads a bare 2026-10-18 as a date; the site keeps dates as YYYY-MM-DD strings.
 const isoDate = z.union([z.string().regex(/^\d{4}-\d{2}-\d{2}$/), z.date().transform((d) => d.toISOString().slice(0, 10))]);
