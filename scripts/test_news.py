@@ -62,6 +62,28 @@ class NewsPosts(unittest.TestCase):
         opener = self.GOOD.replace("kind: rung-reached", "kind: start-here").replace("records: [a-leaf]\n", "")
         self.assertEqual(self.run_check(opener, name="2026-10-18-start-here.md"), [])
 
+    # The year in review (ruled by John on 2026-11-15): the kind is accepted and the fourteen-day window does
+    # not apply to it; a record with no change that year is refused; a second review in one year is refused.
+    REVIEW = GOOD.replace("date: 2026-10-18", "date: 2026-12-28").replace("kind: rung-reached", "kind: year-in-review")
+
+    def test_a_year_in_review_needs_a_change_in_its_year_not_within_fourteen_days(self):
+        self.assertEqual(self.run_check(self.REVIEW, name="2026-12-28-the-year.md"), [])
+
+    def test_a_year_in_review_refuses_a_record_with_no_change_that_year(self):
+        old = {"upgrades": [{"id": "a-leaf", "revisions": [{"date": "2025-12-31"}], "stage_reached_on": "2027-01-01"}], "claims": [], "readings": []}
+        import check_news
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp); (d / "2026-12-28-the-year.md").write_text(self.REVIEW, encoding="utf-8")
+            self.assertTrue(any("no dated change in 2026" in p for p in check_news.check(d, old)[0]))
+
+    def test_there_is_one_year_in_review_a_year(self):
+        import check_news
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            (d / "2026-12-28-the-year.md").write_text(self.REVIEW, encoding="utf-8")
+            (d / "2026-12-30-the-year-again.md").write_text(self.REVIEW.replace("2026-12-28", "2026-12-30"), encoding="utf-8")
+            self.assertTrue(any("one per year" in p for p in check_news.check(d, self.RECORDS)[0]))
+
 
 
 

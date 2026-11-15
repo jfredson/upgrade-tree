@@ -18,6 +18,12 @@ prose); or names a record that shows no dated change within fourteen days of the
 (a revision, the rung reached, a claim's own date, or a reading item ruled or moved), so a post
 cannot announce what the record does not show. The rules are John's of 2026-10-18.
 
+The year in review (ruled by John on 2026-11-15 for all five tracker sites, after he asked the same day
+for a post at the end of each year on the year's findings and what to watch next). A post of kind
+"year-in-review" looks back over a whole year, so the fourteen-day window does not fit it. Instead,
+every record it names must show a dated change in the post's own calendar year, so it still cannot
+announce what the record does not show, and there is at most one such post per year.
+
 Pictures (tracker pattern, rule 4.23, in force since 2026-11-14). A post may show real photographs
 of its event. The check refuses a post whose picture: is not written as a <figure> with an <img> and
 a <figcaption>; is loaded from another site and not from /news/ here; has no description (alt); has
@@ -37,7 +43,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-KINDS = {"start-here", "rung-reached", "estimate-revised", "flagged-item-ruled", "claim", "headline-moved", "method-changed"}
+KINDS = {"start-here", "rung-reached", "estimate-revised", "flagged-item-ruled", "claim", "headline-moved", "method-changed", "year-in-review"}
 WINDOW_DAYS = 14
 NAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-([a-z0-9]+(?:-[a-z0-9]+)*)\.md$")
 
@@ -99,7 +105,10 @@ def paragraphs(body: str) -> list[str]:
 
 
 def record_changed_near(rec: dict, when: date, readings: list[dict]) -> bool:
-    lo, hi = when - timedelta(days=WINDOW_DAYS), when + timedelta(days=WINDOW_DAYS)
+    return record_changed_between(rec, when - timedelta(days=WINDOW_DAYS), when + timedelta(days=WINDOW_DAYS), readings)
+
+
+def record_changed_between(rec: dict, lo: date, hi: date, readings: list[dict]) -> bool:
     dates: list[str] = []
     for rv in rec.get("revisions") or []:
         if rv.get("date"):
@@ -123,6 +132,12 @@ def record_changed_near(rec: dict, when: date, readings: list[dict]) -> bool:
         except ValueError:
             pass
     return False
+
+
+def record_changed_in_year(rec: dict, year: int, readings: list[dict]) -> bool:
+    """For a year in review: does the record show a dated change in that calendar year? The same dates
+    as record_changed_near, read over the whole year rather than fourteen days either side."""
+    return record_changed_between(rec, date(year, 1, 1), date(year, 12, 31), readings)
 
 
 PHOTO_FIELDS = ("source", "credit", "licence", "licence_url", "read_on")
@@ -199,6 +214,7 @@ def check(posts_dir: Path, records: dict, pictures_dir: Path | None = None) -> t
     readings = records.get("readings") or []
     files = sorted(p for p in posts_dir.glob("*.md")) if posts_dir.exists() else []
     openers = 0
+    reviews: dict[str, int] = {}
     for path in files:
         name = path.name
         m = NAME_RE.match(name)
@@ -232,13 +248,21 @@ def check(posts_dir: Path, records: dict, pictures_dir: Path | None = None) -> t
             when = date.fromisoformat(fm.get("date") or m.group(1))
         except ValueError:
             when = None
-        if when and kind != "start-here":
+        if when and kind == "year-in-review":
+            reviews[str(when.year)] = reviews.get(str(when.year), 0) + 1
+            for rid in recs:
+                if rid in by_id and not record_changed_in_year(by_id[rid], when.year, readings):
+                    problems.append(f"{name}: {rid} shows no dated change in {when.year}; a year in review names only what changed that year")
+        elif when and kind != "start-here":
             for rid in recs:
                 if rid in by_id and not record_changed_near(by_id[rid], when, readings):
                     problems.append(f"{name}: {rid} shows no dated change within {WINDOW_DAYS} days of {when}; a post cannot announce what the record does not show")
         for i, para in enumerate(paragraphs(body), 1):
             if re.search(r"\d", para) and "](" not in para and "https://" not in para:
                 problems.append(f"{name}: paragraph {i} states a figure with no link to a source or a record: {para[:70]!r}")
+    for year, n_reviews in reviews.items():
+        if n_reviews > 1:
+            problems.append(f"{posts_dir}: {n_reviews} posts of kind year-in-review for {year}; there is one per year")
     if openers > 1:
         problems.append(f"{posts_dir}: {openers} posts of kind start-here; there is one per site")
     return problems, len(files)
