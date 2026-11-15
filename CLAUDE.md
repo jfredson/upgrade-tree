@@ -30,6 +30,17 @@ The Sentient Horizons design standard (section 1a, ruled by John 2026-10-08) app
 On a public page an upgrade is an upgrade, a branch is a branch, a stage is a stage, and the
 test is "what would count". Explain an idea in ordinary words before naming it.
 
+## Public text is written for visitors
+
+Decided by John on 2026-11-14, after a review of the live site found notes to him on public pages.
+`CHANGELOG.md` (shown word for word on the About page), each upgrade's `notes` and the reasons
+on its dated changes appear on public pages, so each is written for a visitor: what changed or was decided,
+and why. Never who was told, who ruled or what is waiting for whom ("flagged for John", "John's
+ruling", "waiting on me"), and never how the work was done (which computer, a session, a routine, a
+pull request or a commit). A question for John goes on the roadmap, not in the record.
+`scripts/check_site.py` reads the built site after every build and stops the deploy if a page
+carries one of those phrases, the check The Belt Equation has run since 2026-10-27.
+
 ## Design
 
 The site wears its own skin, "Plate" (paper, ink and one green; ruled by John 2026-10-16 from the
