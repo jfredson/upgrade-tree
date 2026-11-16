@@ -5,6 +5,7 @@
     {
       "date": "2026-11-15",
       "items": [
+        "**Weekly reading (scheduled task, 2026-11-15): 33 upgrades read, 0 moved, 0 left for a decision; record at data/readings/2026-11-15.toml.** Weekly reading, window 2026-11-08 to 2026-11-15; 30 came back quiet and 3 were noted (Compass Pathways finished its United States psilocybin application on 2026-11-09, a company results release from Opus Genetics on 2026-11-10, and a news item on a walking exoskeleton on 2026-11-10; no stage moves), and the five shared entries agree with Outrunning Ageing.",
         "**The check that runs before every deploy now also stops notes that talk about the author in the third person** (`scripts/check_site.py`, with tests in `scripts/test_check_site.py`, which the deploy now runs; decided 2026-11-15). Since 2026-11-14 it has stopped working notes addressed to me. Five phrase patterns are added for notes that name me in the third person or describe how a page was opened, the same five The Quiet Galaxy added the same day. A name followed by a surname still passes. The built site passed the wider check as it stood, so no wording changes. No record, stage or count changes."
       ]
     },
