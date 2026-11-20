@@ -2,6 +2,10 @@
 
 Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
 
+## 2026-11-20
+
+- **DRAFT on a branch, not yet approved or published: the About page no longer describes entries as carrying unchecked claims, and the deploy check now stops any page that admits a fact was written without being checked** (`site/src/components/AboutMethod.astro`, `scripts/check_site.py`; decided 2026-11-20). No entry carries such a list today. The check cannot pass yet: this file is printed on the Story page, and two of its older lines use the phrase the check now stops. Those lines, and whether the Story page should print this file at all, are left for a decision before this branch is merged.
+
 ## 2026-11-15
 
 - **Weekly reading (scheduled task, 2026-11-15): 33 upgrades read, 0 moved, 0 left for a decision; record at data/readings/2026-11-15.toml.** Weekly reading, window 2026-11-08 to 2026-11-15; 30 came back quiet and 3 were noted (Compass Pathways finished its United States psilocybin application on 2026-11-09, a company results release from Opus Genetics on 2026-11-10, and a news item on a walking exoskeleton on 2026-11-10; no stage moves), and the five shared entries agree with Outrunning Ageing.
