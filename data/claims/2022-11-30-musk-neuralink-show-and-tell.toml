@@ -1,0 +1,42 @@
+[claim]
+id = "2022-11-30-musk-neuralink-show-and-tell"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2022-11-30"
+when_note = "The evening of 2022-11-30 Pacific time; the recording was uploaded 2022-12-01. Neuralink's own list of updates dates the event Nov 30, 2022."
+occasion = "\"Show and Tell, Fall 2022\", Neuralink"
+status = "sourced"
+source = """
+Neuralink's own recording, YouTube video id YreDYmXTYi4 (Neuralink channel, uploaded 2022-12-01,
+2 h 48 min). The company's own chapter list names his opening segment "Intro & Overview (Elon)",
+from 16:06 to 36:38, and the next speaker begins at 37:16 with "thanks Elon". Attribution rests on
+that, not on a speaker-labelled transcript. The passage runs 18:33 to 21:40."""
+source_url = "https://www.youtube.com/watch?v=YreDYmXTYi4"
+source_locator = "18:33 to 21:40"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 21:02 and Whisper at 21:01. No person has listened to the recording; the project's rule does not need one."
+words = "this is the fundamental limitation that I think we need to address to mitigate the long-term risk of artificial intelligence"
+words_locator = "at 21:02 to 21:09"
+claimed = """
+After describing the near-term medical aims, he says he will talk a little about the long-term
+goal, which he warns will sound a little esoteric and which he calls his prime motivation: what
+to do about artificial intelligence much smarter than any human, how to reduce that risk for the
+species, and how, even if the AI is benevolent, people take part at all (he says "go along for the
+ride"). His answer is that the biggest limit is how quickly a person can exchange information with
+a computer. People are already cyborgs in a way, he says, because a phone and a computer are
+extensions of oneself, but thumbs and speech send perhaps ten to a hundred bits per second while
+a computer communicates at gigabits or terabits. He calls this the limitation to address. He then
+says this explanation will appeal to a niche audience, that it is a very difficult problem, and
+that even if the company does not succeed at it he is confident it will solve many brain and
+spine injury problems along the way."""
+not_in_source = "He does not say merge or symbiosis in this passage, and he gives no date for the long-term goal."
+bears_on = ["link"]
+bears_on_note = "The link to machines: a restatement, at the company's 2022 event, of the reason he gives for a high-speed link between brain and computer."
+notes = """
+A questioner near the end (2:42:51) describes this as his very long-term aspiration to have
+high-speed communication with advanced AI; in his answer he says the company will make the
+input and output device and expects others to build on it."""
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

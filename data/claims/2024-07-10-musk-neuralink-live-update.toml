@@ -1,0 +1,44 @@
+[claim]
+id = "2024-07-10-musk-neuralink-live-update"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2024-07-10"
+when_note = "The recording's own description says it was originally broadcast live on X on July 10, 2024, and Neuralink's own list of updates dates it Jul 10, 2024; the copy on YouTube was uploaded 2024-08-26."
+released_on = "2024-08-26"
+occasion = "Neuralink live update on the first person in its trial, broadcast on X"
+status = "sourced"
+source = """
+Neuralink's own recording, YouTube video id Ux5AiKmra-E ("Neuralink Live Update - July 2024",
+Neuralink channel, uploaded 2024-08-26, 55 min 46 s). The recording carries no speaker labels. The
+speaker of the passage is the host, who opens the broadcast and asks the others to introduce
+themselves; a later speaker (14:50) refers to "those tiny wires that Elon mentioned", which is how
+the host had described the device at about 4:01. Attribution rests on that. The passage runs 2:09
+to 2:46, with a second passage at 11:24 to 12:18. The original broadcast on X was not opened."""
+source_url = "https://www.youtube.com/watch?v=Ux5AiKmra-E"
+source_locator = "2:09 to 2:46, and 11:24 to 12:18"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 2:38 and Whisper at 2:37. No person has listened to the recording; the project's rule does not need one."
+words = "closer symbiosis between human intelligence and digital intelligence"
+words_locator = "at 2:38 to 2:44"
+claimed = """
+Introducing the company's first product, which lets a person with paralysis control a phone or
+computer by thought, he says it is part of an overall goal of a very high-speed connection between
+the brain and the rest of the world and its computers. The long-term goal, which he says sounds a
+little esoteric, is to reduce the risk that AI poses to civilisation by having what he calls a
+sort of closer symbiosis between human intelligence and digital intelligence. He adds at once that
+this will take many years, and that along the way the company will help with brain and spinal
+injuries. Later (11:24 to 12:18), after the first participant's cursor-control record, he says the
+potential is ultimately megabit-level communication, that a person normally puts out less than one
+bit per second averaged over a day, and that speed matters for symbiosis between people and AI
+because it lets a person communicate at a speed the AI can follow."""
+not_in_source = "He gives no date for the long-term goal beyond saying it will take many years."
+bears_on = ["link"]
+bears_on_note = "The link to machines: the merger goal restated at the first public update on a person using the implant."
+
+[[claim.also_checked]]
+words = "that'll take many years"
+at = "2:45"
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

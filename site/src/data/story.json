@@ -2,6 +2,80 @@
   "sibling_site": "Outrunning Ageing",
   "days": [
     {
+      "date": "2026-11-20",
+      "added": {
+        "upgrades": [],
+        "claims": [
+          {
+            "name": "Kevin Warwick (2002)",
+            "path": "/claims/#2002-warwick-i-cyborg"
+          },
+          {
+            "name": "Nick Bostrom (2005)",
+            "path": "/claims/#2005-06-bostrom-in-defense-of-posthuman-dignity"
+          },
+          {
+            "name": "Joseph Corabi and Susan Schneider (2012)",
+            "path": "/claims/#2012-corabi-schneider-the-metaphysics-of-uploading"
+          },
+          {
+            "name": "Elon Musk (2016)",
+            "path": "/claims/#2016-06-01-musk-code-conference-neural-lace"
+          },
+          {
+            "name": "Elon Musk (2018)",
+            "path": "/claims/#2018-09-06-musk-joe-rogan-experience-1169"
+          },
+          {
+            "name": "Elon Musk (2018)",
+            "path": "/claims/#2018-11-25-musk-axios-on-hbo"
+          },
+          {
+            "name": "Susan Schneider (2019)",
+            "path": "/claims/#2019-schneider-artificial-you"
+          },
+          {
+            "name": "Yuval Noah Harari (2019)",
+            "path": "/claims/#2019-04-22-harari-stanford-coming-ai-upheaval"
+          },
+          {
+            "name": "Elon Musk (2019)",
+            "path": "/claims/#2019-08-29-musk-world-ai-conference-shanghai"
+          },
+          {
+            "name": "Elon Musk (2022)",
+            "path": "/claims/#2022-11-30-musk-neuralink-show-and-tell"
+          },
+          {
+            "name": "Ray Kurzweil (2024)",
+            "path": "/claims/#2024-03-12-kurzweil-joe-rogan-experience-2117"
+          },
+          {
+            "name": "Elon Musk (2024)",
+            "path": "/claims/#2024-07-10-musk-neuralink-live-update"
+          },
+          {
+            "name": "Tom Oxley (2024)",
+            "path": "/claims/#2024-07-19-oxley-forbes-australia"
+          },
+          {
+            "name": "Elon Musk (2024)",
+            "path": "/claims/#2024-08-02-musk-lex-fridman-podcast-438"
+          },
+          {
+            "name": "Elon Musk (2025)",
+            "path": "/claims/#2025-06-27-musk-neuralink-summer-update"
+          }
+        ],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": []
+    },
+    {
       "date": "2026-11-15",
       "added": {
         "upgrades": [],

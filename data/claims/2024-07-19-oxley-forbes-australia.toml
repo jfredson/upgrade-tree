@@ -1,0 +1,33 @@
+[claim]
+id = "2024-07-19-oxley-forbes-australia"
+added_on = 2026-11-20
+speaker = "Tom Oxley"
+role = "chief executive of Synchron"
+when = "2024-07-19"
+when_note = "The date printed on the article; the day of the interview is not given."
+occasion = "Interview with Forbes Australia"
+status = "unsourced"
+ruling = "Decided 2026-10-16: a written-up interview is a reporter's account, not the speaker's own words."
+source = """
+Unsourced, coverage only. The source is the Forbes Australia article headlined Synchron hooks up
+human brain direct to AI, by Mark Whittaker, dated July 19, 2024 on the page, at
+forbes.com.au/covers/innovation/synchron-hooks-up-human-brain-direct-to-ai/. The piece reports
+an interview with Oxley about the company adding an AI language model to its brain implant's
+software, so that a patient can pick from suggested replies; no recording of the interview was
+published, and its date is not given. Whittaker is the source of every paraphrase below."""
+source_url = "https://www.forbes.com.au/covers/innovation/synchron-hooks-up-human-brain-direct-to-ai/"
+checked_how = "The published article, retrieved and read on 2026-11-20. None of the speaker's words are quoted here: Whittaker's account has Oxley saying the mission is to help people whose bodies are failing, and is not to achieve transhumanism."
+claimed = """
+Whittaker reports Oxley as accepting that joining AI to a brain implant is a step towards
+transhumanism (using technology to push healthy people beyond human limits), while saying that
+is not why the company is doing it and not where it is heading. In the reported remarks Oxley
+says these are all small steps and that he is honestly not sure how to think about
+transhumanism. He does expect a moment when brain-computer links pass the level of control the
+human body can achieve, and says that moment is out there, but that the company is not thinking
+about it and is focused on people whose bodies are failing. He calls talk of transhumanism
+dangerous because it takes attention from that mission, says the moral and ethical questions
+will have to be taken very seriously, and says he does not yet have a moral framework for
+transhumanism that he is comfortable with. He does not say merge."""
+bears_on = ["link", "link-brain-link-carries-more-information-than-speech"]
+bears_on_note = "The link to machines; and the long shot of a brain link that carries more than speech, since the moment he describes is the one where a link outdoes the body."
+notes = "An earlier Forbes Australia profile of the company by the same writer, dated August 13, 2023, is open only to subscribers beyond its opening paragraphs; the part that can be read does not mention transhumanism."

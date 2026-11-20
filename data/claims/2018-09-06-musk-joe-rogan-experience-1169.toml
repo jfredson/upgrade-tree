@@ -1,0 +1,43 @@
+[claim]
+id = "2018-09-06-musk-joe-rogan-experience-1169"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2018-09-06"
+when_note = "The episode went out live; YouTube's page for the full episode gives the start of the broadcast as 04:32 on 2018-09-07 universal time, which is the evening of 2018-09-06 in California."
+occasion = "The Joe Rogan Experience, episode 1169, a live podcast conversation with Joe Rogan"
+status = "sourced"
+source = """
+A clip of the passage on the JRE Clips channel, YouTube video id Ra3fv8gl6NE ("Joe Rogan - Elon Musk on
+Artificial Intelligence", published 2018-09-06 Pacific time, 25 min), whose
+description says it is taken from episode 1169 and links to it. The full episode (video id
+ycPr5-27vSI, "Joe Rogan Experience #1169 - Elon Musk", PowerfulJRE channel, 2 h 37 min) plays only
+for a signed-in viewer who confirms their age, so the clip was used and the times given are times
+in the clip. The passage runs about 14:31 to 16:38, with a further remark at about 20:13 to 20:29."""
+source_url = "https://www.youtube.com/watch?v=Ra3fv8gl6NE"
+source_locator = "in the clip, about 14:31 to 16:38, and 20:13 to 20:29"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions of the clip and a second automatic transcription made from its audio, both at 14:59. The two also agree on the words about effectively merging with AI (both at 16:04). The rest of the account was read in the captions. No person has listened to the recording; the project's rule does not need one."
+words = "if you can't beat it join it"
+words_locator = "at 14:58 to 15:02"
+also_checked = [
+  { words = "effectively merge with AI", at = "at 16:00 to 16:08" },
+]
+claimed = """
+Rogan asks whether people are likely to merge with this technology or be replaced by it. He
+answers that the merge scenario with AI seems like probably the best one for us, and adds the
+line about joining what cannot be beaten. From a long-term existential standpoint, he says, that
+is the purpose of Neuralink: a high-bandwidth interface to the brain, because communicating
+through fingers is too slow. He says the company will have something interesting to announce in a
+few months and declines to say more. Asked for the best case, he says people effectively merge
+with AI, which would serve as a third layer of thinking on top of the two the brain already has.
+Later in the same passage he says he thinks human-machine symbiosis can be held on to through the
+long term, and that people may then decide whether to keep their biological selves. Hedged:
+probably the best, I think, best-case scenario. Moments earlier he says the outcome of AI could be
+terrible or great and that the one sure thing is that people will not control it."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade."
+why_here = "The earliest use in this record of the join-it line, which he repeated in Shanghai in 2019 and in a post in 2020."
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

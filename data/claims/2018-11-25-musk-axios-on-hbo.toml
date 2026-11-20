@@ -1,0 +1,55 @@
+[claim]
+id = "2018-11-25-musk-axios-on-hbo"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2018-11-25"
+when_note = "The day HBO published the clip. Neither HBO's page nor Axios's written account, dated 2018-11-26, says what day the interview was recorded."
+occasion = "Interview with Mike Allen and Jim VandeHei for the television programme Axios on HBO"
+status = "sourced"
+source = """
+HBO's own clip from the programme, YouTube video id y6GEugjulPw ("Axios: Merging AI & Man - Elon
+Musk's Vision for The Future", HBO channel, published 2018-11-25, 1 min 28 s), which carries HBO's
+own subtitles. The full episode is on HBO's paid service and was not reached. Axios's written
+account of the interview ("Elon Musk: Humans must merge with machines", by Mike Allen and Jim
+VandeHei, 2018-11-26) was read on its own site."""
+source_url = "https://www.youtube.com/watch?v=y6GEugjulPw"
+source_locator = "the whole clip, 00:00 to 01:28"
+checked_how = "Two automatic transcripts differ on a word; settled by a third source. On 2026-11-20 YouTube's automatic captions of this clip were read and are unusable: they render the whole clip as a few unrelated sentences and contain none of the quoted words. A second automatic transcription made from the audio has the quoted words at 00:33 and the words about a chip and a bunch of tiny wires at 00:18. A larger model of the same kind would not settle it, because the fault is in the captions, so the third source is the next the rule names, an official transcript: HBO's own subtitles on the clip, which read 'would be to achieve a symbiosis with artificial intelligence' at 00:32 and 'A chip and a bunch of tiny wires' at 00:18, the same as the second transcript. No person has listened to the recording; the project's rule does not need one."
+words = "achieve a symbiosis with artificial intelligence"
+words_locator = "at 00:30 to 00:36"
+also_checked = [
+  { words = "a chip and a bunch of tiny wires", at = "at 00:17 to 00:21" },
+]
+claimed = """
+Asked how Neuralink's device would work, he says: a chip and a bunch of tiny wires, put in by
+surgery. He says the long-term aspiration for the company would be a symbiosis with AI, and a
+spreading of intelligence widely enough that it is not held as a monopoly, in purely digital form,
+by governments and large corporations. One interviewer puts it to him that to beat machines people
+basically have to merge with machines, and he answers that this is most likely so. If billions of people
+had a high-bandwidth link to what he calls the AI extension of themselves, he says, it would make
+everyone very much smarter. Axios's written account of the same interview also quotes him saying
+that digital intelligence will exceed biological intelligence by a substantial margin; that
+passage is not in HBO's clip."""
+not_in_source = "The words of Axios's headline, that humans must merge with machines. The merge wording in the clip is the interviewer's, and he answers that this is most likely so."
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade."
+coverage = ["Axios, 2018-11-26, under the headline \"Elon Musk: Humans must merge with machines\", a tighter claim than the clip."]
+
+[claim.transcript_check]
+result = "settled"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"
+settled_by = "official-transcript"
+settled_with = "HBO's own subtitles on the clip, read on 2026-11-20; they have the quoted words as the second automatic transcript has them"
+
+[[claim.transcript_check.readings]]
+passage = "achieve a symbiosis with artificial intelligence (about 00:32)"
+captions = "none of these words; the automatic captions render the clip as unrelated sentences"
+whisper = "achieve a symbiosis with artificial intelligence"
+third = "achieve a symbiosis with artificial intelligence (HBO's subtitles)"
+
+[[claim.transcript_check.readings]]
+passage = "a chip and a bunch of tiny wires (about 00:18)"
+captions = "none of these words"
+whisper = "a chip and a bunch of tiny wires"
+third = "A chip and a bunch of tiny wires (HBO's subtitles)"

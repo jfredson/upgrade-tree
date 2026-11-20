@@ -1,0 +1,41 @@
+[claim]
+id = "2024-03-12-kurzweil-joe-rogan-experience-2117"
+added_on = 2026-11-20
+speaker = "Ray Kurzweil"
+when = "2024-03-12"
+when_note = "The day the episode was published; the day it was recorded is not given."
+occasion = "The Joe Rogan Experience, episode 2117, a podcast interview"
+status = "sourced"
+source = """
+The episode on the show's own YouTube channel, PowerfulJRE, video id w4vrOUau2iY ("Joe Rogan
+Experience #2117 - Ray Kurzweil", uploaded 2024-03-12, 2 hours 3 minutes). There are two
+speakers, the host and Kurzweil, both on camera. The passages run 31:30 to 31:58, 44:43 to 45:40
+and 49:55 to 51:10."""
+source_url = "https://www.youtube.com/watch?v=w4vrOUau2iY"
+source_locator = "31:30 to 31:58, 44:43 to 45:40 and 49:55 to 51:10"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions and a second, separate machine transcription of the audio, at 31:41 in each. The sentence giving 2045 as the date, which the account also rests on, was found in both at 45:05. The rest of the account was read from the automatic captions alone; at 50:04 they print the year he gives as 245, and the host's next question repeats it as 2045. No person has listened to the recording."
+words = "we're merging with these kinds of computers and making ourselves smarter by merging with it"
+words_locator = "at 31:41 to 31:49"
+also_checked = [
+  { words = "multiply our intelligence a millionfold and that's 2045", at = "at 45:03 to 45:11" },
+]
+claimed = """
+People see computers that can write software as competition, he says; he sees them as adding to
+our own intelligence. We are merging with these computers, and eventually they will go inside
+the brain and make us smarter at once, in the way extra connections inside the brain did. Asked
+why he would stay biological rather than move into an electronic body, he says that ultimately
+that is what we will be able to do. He gives his date: the Singularity, as he uses the word, is
+when we multiply our intelligence a millionfold, and that is 2045, about twenty years off, by
+which time most of a person's intelligence would be handled by the computer part of themselves.
+Asked how long before a link inside the brain is in use, he says it has to be by 2045, and when
+the host asks where the date comes from he points to the chart he brought, of how much computing a
+dollar buys over time, and to the growth of software. He agrees with the host that, following that curve, what happens
+in 2045 is inevitable. Stated as prediction with a date, and with little hedging."""
+bears_on = ["link", "mind"]
+bears_on_note = "The link to machines (a connection inside the brain) and memory and thinking."
+notes = "The host closes the episode by naming Kurzweil's book, whose subtitle is \"When We Merge with AI\", and Kurzweil says it comes out in June."
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

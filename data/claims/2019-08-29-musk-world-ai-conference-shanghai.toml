@@ -1,0 +1,40 @@
+[claim]
+id = "2019-08-29-musk-world-ai-conference-shanghai"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2019-08-29"
+when_note = "The recording was broadcast live; YouTube's page for it gives the start of the broadcast as 07:13 on 2019-08-29 universal time, mid-afternoon the same day in Shanghai."
+occasion = "World Artificial Intelligence Conference, Shanghai, on stage in conversation with Jack Ma"
+status = "sourced"
+source = """
+The live recording published by New China TV, the Xinhua news agency's channel, YouTube video id
+f3lUEnMaiAU ("Jack Ma and Elon Musk hold debate in Shanghai", 2019-08-29, 47 min). No upload by
+the conference itself was found. The passage runs about 02:27 to 04:34; a further remark is at
+about 26:43 to 27:01."""
+source_url = "https://www.youtube.com/watch?v=f3lUEnMaiAU"
+source_locator = "about 02:27 to 04:34, and 26:43 to 27:01"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions of the recording and a second automatic transcription made from its audio: the captions place them at 02:50 and the second transcript at 02:49. He stumbles into the line, starting it twice; the quoted words are the second, complete run. The two also agree on the words about a high-bandwidth interface to the brain (03:08 and 03:09). The rest of the account was read in the captions. No person has listened to the recording; the project's rule does not need one."
+words = "if you can't beat them join them"
+words_locator = "at 02:47 to 02:53"
+also_checked = [
+  { words = "a high bandwidth interface to the brain", at = "at 03:03 to 03:12" },
+]
+claimed = """
+Having said that AI will be vastly smarter than people, he is asked what to do in that situation.
+He says he is not sure and hopes the machines are nice, then offers what he calls the old saying
+about joining what cannot be beaten, and says that is what Neuralink is about: whether people can
+go along for the ride with AI. He says there should be other companies like it, building a
+high-bandwidth interface to the brain. People are already cyborgs, he says, because they are so
+bound up with their phones and computers, but the link to the phone is very slow, and even if AI
+turns out benign people will simply be too slow for it. Later, talking about education, he says
+that down the road, with Neuralink, a person could load in any subject or skill at once, as in the
+film The Matrix. He gives no date for any of it."""
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade."
+coverage = ["CGTN, 2019-08-29, which names the occasion as the 2019 World Artificial Intelligence Conference in Shanghai and reports the disagreement between the two men, not the join-them line."]
+why_here = "A restatement, six weeks after the Neuralink launch event, of the join-them line he first used on a podcast in 2018."
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

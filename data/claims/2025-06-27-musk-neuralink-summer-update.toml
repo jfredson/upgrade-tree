@@ -1,0 +1,53 @@
+[claim]
+id = "2025-06-27-musk-neuralink-summer-update"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2025-06-27"
+when_note = "The recording was uploaded 2025-06-27, and Neuralink's own list of updates dates the event Jun 27, 2025."
+occasion = "\"Neuralink Update, Summer 2025\", Neuralink"
+status = "sourced"
+source = """
+Neuralink's own recording, YouTube video id FASMejN_5gs ("Neuralink Update, Summer 2025",
+Neuralink channel, uploaded 2025-06-27, 1 h). The company's own chapter list names his opening
+segment "Intro & Overview (Elon)", from 0:30 to 12:39, and the next speaker begins "as Elon
+mentioned" (12:46). Attribution rests on that, not on a speaker-labelled transcript. The passage
+runs 10:17 to 11:49."""
+source_url = "https://www.youtube.com/watch?v=FASMejN_5gs"
+source_locator = "10:17 to 11:49"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 11:38 and Whisper at 11:37. No person has listened to the recording; the project's rule does not need one."
+words = "in order for the collective will of humanity to match the will of artificial intelligence"
+words_locator = "at 11:36 to 11:45"
+claimed = """
+After the medical products (control of a computer for people with paralysis, then sight for people
+who are blind), he says that ultimately he thinks the work helps reduce the risk that artificial
+intelligence poses to civilisation. People already have three layers of thinking, he says:
+instinct, the higher planning of the cortex, and a third layer of phones, computers and
+applications, so that people are already cyborgs. The connection between the cortex and that
+digital layer is limited by speech, by how fast fingers move and by how fast the eyes take
+information in, and he thinks it very important to remove that limit so that what humanity
+collectively wants can match what artificial intelligence wants. He adds: that is his intuition,
+at least. Earlier in the same segment he says the aim is to go from about one bit per second to
+megabits and then gigabits, which he says would be a fundamental change to what it means to be
+human (8:36), and that all of it will happen slowly, over several years, with regulators' approval
+at each step (about 4:30)."""
+not_in_source = "He does not say merge or symbiosis in his own remarks here, and he gives no date."
+bears_on = ["link"]
+bears_on_note = "The link to machines: the merger goal restated at the company's 2025 update, when seven people had the implant."
+notes = """
+The company's own description under the recording invites people to join it "to build the
+machine that builds the machine to merge with machines". In the same recording the company's
+president, DJ Seo, says the goal for 2028 includes starting to show what it would be like to
+integrate with AI (23:04 to 23:22). Neither is entered as a separate claim."""
+
+[[claim.also_checked]]
+words = "this helps mitigate the civilizational risk of artificial intelligence"
+at = "10:17"
+
+[[claim.also_checked]]
+words = "that's my intuition at least"
+at = "11:47"
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

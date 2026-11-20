@@ -1,0 +1,51 @@
+[claim]
+id = "2019-04-22-harari-stanford-coming-ai-upheaval"
+added_on = 2026-11-20
+speaker = "Yuval Noah Harari"
+when = "2019-04-22"
+occasion = "Stanford University, \"The Coming AI Upheaval\", a public conversation with the computer scientist Fei-Fei Li, moderated by Nicholas Thompson"
+status = "sourced"
+source = """
+The recording on Harari's own YouTube channel, video id d4rBh6DBHyw ("Fei-Fei Li & Yuval Noah
+Harari in Conversation - The Coming AI Upheaval", uploaded 2019-04-24, 1 hour 30 minutes). The
+date of the evening, Monday 2019-04-22, is from the Stanford Humanities Center's page for the
+event
+(shc.stanford.edu/stanford-humanities-center/events/yuval-noah-harari-conversation-fei-fei-li-coming-ai-upheaval).
+The speakers are on camera, so who is speaking is not in question. The passages run 11:40 to
+15:20 and 22:50 to 25:10."""
+source_url = "https://www.youtube.com/watch?v=d4rBh6DBHyw"
+source_locator = "11:40 to 15:20 and 22:50 to 25:10"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted sentence was found in both YouTube's automatic captions and a second, separate machine transcription of the audio (captions at 12:35, the second transcript at 12:34). The three-way phrase about manipulating, enhancing or replacing, which the account also rests on, was found in both at 13:30. No person has listened to the recording."
+words = "biological knowledge multiplied by computing power multiplied by data equals the ability to hack humans"
+words_locator = "at 12:30 to 12:45"
+also_checked = [
+  { words = "manipulate me enhance me or replace me", at = "at 13:24 to 13:34" },
+]
+claimed = """
+Questions that used to belong to philosophy, he says, are moving to engineering, and engineers
+and their investors will not wait. He sums the danger up as a formula: knowledge of biology,
+times computing power, times data, gives the ability to hack humans. He says we have not seen
+anything yet, because the link between brain science and computing is not complete. By hacking
+a human he means an algorithm that understands a person better than the person does, and that
+can then be used to manipulate, enhance or replace that person. Even when the purpose is
+enhancement, he asks who decides what a good enhancement is, since the usual answers (the
+customer, the voter, one's own feelings) stop working once people can be hacked at scale. Asked
+later what hacking the brain will look like, he answers much more of the same on a larger scale:
+more of a person's decisions handed to an algorithm, and, in a dictatorship, round-the-clock
+tracking by sensors on the body, which he says might be possible in twenty or thirty years.
+Hedged throughout: the link is not complete, and the dates are a might. He does not speak of
+implants or of merging with machines in these passages; the enhancement he has in mind is done
+to people by whoever holds the data."""
+bears_on = ["mind", "mood"]
+bears_on_note = "Memory and thinking, and mood and drive: the claim is about reading, steering and enhancing people from outside, not about implanting them."
+notes = """
+Fei-Fei Li answers on the night that the technology is
+still very far from this, and that she does not know how many decades away it is. A written
+transcript of the evening, republished by the Michael Dukakis Institute
+(dukakis.org/news-and-events/will-ai-enhance-or-hack-humanity/), gives the same words for the
+quoted sentence."""
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

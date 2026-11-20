@@ -1,0 +1,47 @@
+[claim]
+id = "2016-06-01-musk-code-conference-neural-lace"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2016-06-01"
+when_note = "The recording was published on 2016-06-02. An account published that day by the Irish radio station Newstalk says he spoke at the conference the day before, and ScienceAlert's account says he spoke on the Wednesday; 2016-06-01 was a Wednesday."
+occasion = "Code Conference 2016, Rancho Palos Verdes, California, on stage, interviewed by Kara Swisher and Walt Mossberg"
+status = "sourced"
+source = """
+The conference's own recording of the whole interview, YouTube video id wsixsRI-Sz4 ("Elon Musk |
+Full interview | Code Conference 2016", published 2016-06-02, 1 h 24 min, on the channel that
+carries the Code Conference recordings, now named On with Kara Swisher). The passage runs about
+56:28 to 01:01:54. The same channel also published the passage on its own as a five-minute clip,
+video id ZrGPuUQsDjo ("We are already cyborgs")."""
+source_url = "https://www.youtube.com/watch?v=wsixsRI-Sz4"
+source_locator = "about 56:28 to 01:01:54"
+checked_how = "Two automatic transcripts agree. On 2026-11-20 the quoted words were found in both YouTube's automatic captions of the full interview and a second automatic transcription made from its audio: the captions place them at 01:00:10 and the second transcript at 01:00:09. The two also agree on the words about a third layer above the cortex (both at 58:19) and on the name neural lace (56:48 and 56:41). The rest of the account was read in the captions. No person has listened to the recording; the project's rule does not need one."
+words = "effectively merging in a symbiotic way with digital intelligence"
+words_locator = "at 01:00:08 to 01:00:16"
+also_checked = [
+  { words = "a third layer above the cortex", at = "at 58:15 to 58:22" },
+  { words = "a neural lace", at = "at 56:42 to 56:48" },
+]
+claimed = """
+Unprompted, near the end of the interview, he names something he thinks will be quite important
+and that he knows of no company working on seriously: a neural lace. His reasoning: at any rate of
+progress in AI, people will be left far behind, and even in what he calls a benign situation they
+would be so far below it in intelligence that they would be like a pet, a house cat. The answer
+that to him seems maybe the best is to add a digital layer, a third layer above the cortex,
+working with the rest of the brain as the cortex works with the older part beneath it. He says
+people are already cyborgs because of their phones and computers, and that the limit is how slowly
+information gets out of a person, two thumbs tapping on a phone. Merging with digital
+intelligence, he says, mostly comes down to removing that limit with some sort of direct link to
+the cortex. Pressed on whether that means surgery, he says not necessarily: it could go in through
+the veins and arteries rather than through the skull. With a high-bandwidth link, he says, a
+person is no longer a house cat. Hedged throughout: one of the solutions, maybe the best, some
+sort of."""
+not_in_source = "A company of his own, a date, or a device. He says he knows of no company working on it seriously; Neuralink is not named."
+bears_on = ["link"]
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade."
+coverage = ["Newstalk on 2016-06-02, Business Insider (carried by the South China Morning Post) on 2016-06-02, Inverse on 2016-06-04 and ScienceAlert on 2016-06-09, most leading with the house cat."]
+why_here = "The earliest occasion in this record on which he describes a digital layer added to the brain, eight months before the World Governments Summit remarks."
+
+[claim.transcript_check]
+result = "agree"
+checked_on = 2026-11-20
+whisper_model = "mlx-community/whisper-large-v3-turbo"

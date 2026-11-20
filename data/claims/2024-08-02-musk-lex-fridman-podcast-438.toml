@@ -1,0 +1,34 @@
+[claim]
+id = "2024-08-02-musk-lex-fridman-podcast-438"
+added_on = 2026-11-20
+speaker = "Elon Musk"
+when = "2024-08-02"
+occasion = "Lex Fridman Podcast, episode 438"
+status = "sourced"
+source = """
+The episode on YouTube, video id Kbk9BiPhm7o (Lex Fridman channel, uploaded 2024-08-02, titled
+"Elon Musk: Neuralink and the Future of Humanity"), with the official transcript at
+lexfridman.com/elon-musk-and-neuralink-team-transcript (the page says it is human generated and
+may have errors; its own publication date is 2024-08-02). Speaker names are labels in that
+transcript. His part runs from 0:49 to 1:28:12; the passage is at 10:09, and he returns to the
+subject from 29:57 to 34:16 under the transcript's heading "Merging with AI"."""
+source_url = "https://lexfridman.com/elon-musk-and-neuralink-team-transcript"
+source_locator = "10:09 to 10:45, and 29:57 to 34:16"
+checked_how = "The official transcript, read on 2026-11-20."
+words = "the long-term aspiration of Neuralink is to improve the AI human symbiosis by increasing the bandwidth of the communication"
+words_locator = "at 10:09"
+claimed = """
+After arguing that people communicate very slowly (less than one bit per second averaged over a
+day), he says the long-term aspiration of the company is to improve the symbiosis between people
+and AI by raising the speed of communication, because even in the most benign case an AI that
+communicates at terabits per second would get bored waiting for a person; it would be, he says,
+like talking to a tree. Asked later whether the implant is the best current approach to AI safety
+(29:57), he hedges: it is an idea that may help, and he would not call it a panacea or a sure
+thing. He thinks output speed could rise by three, maybe six, maybe more orders of magnitude,
+which would better align what people collectively want with AI. He says he expects hundreds of
+millions of people to have the implant within a couple of decades, if it is extremely safe and
+gives superhuman abilities, and that people would then be some sort of futuristic cyborg; he adds
+that this is not around the corner, and puts it at ten to fifteen years."""
+not_in_source = "The phrase about merging with AI is the interviewer's (13:19) and the transcript's chapter heading; Musk answers \"Pretty much\" and does not use the word himself in these passages."
+bears_on = ["link"]
+bears_on_note = "The link to machines: the merger goal restated in the year the first person received the implant."

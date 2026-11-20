@@ -1,0 +1,39 @@
+[claim]
+id = "2019-schneider-artificial-you"
+added_on = 2026-11-20
+speaker = "Susan Schneider"
+role = "philosopher"
+critic = true
+when = "2019"
+when_note = "The year of publication as Google Books gives it; the day was not confirmed."
+occasion = "\"Artificial You: AI and the Future of Your Mind\", a book"
+status = "sourced"
+source = """
+Susan Schneider, "Artificial You: AI and the Future of Your Mind", Princeton University Press,
+2019, ISBN 9780691180144, 180 pages, through Google Books
+(books.google.com/books?id=L8iXDwAAQBAJ). The pages that carry the argument are not in the open
+preview, so they were read through the book's search, which shows a few lines around each match
+with the page number. Chapter 5 is "Could You Merge with AI?" (from page 72), chapter 6 "Getting
+a Mindscan" (from page 82) and chapter 8 "Is Your Mind a Software Program?" (from page 120)."""
+source_url = "https://books.google.com/books?id=L8iXDwAAQBAJ"
+source_locator = "page 146, in chapter 8; also pages 70, 87, 88, 124 and 137"
+checked_how = "The published text, by search-inside snippets, on 2026-11-20. Each passage was read as the few lines the search shows, not as a full page."
+words = "Uploading, at least as a means of survival, rests on flawed conceptual foundations."
+words_locator = "page 146"
+claimed = """
+She calls the idea that a human could merge with AI a philosophical minefield, resting on old
+problems without clear solutions (page 70). On uploading, moving a mind from a brain to a
+computer, her verdict is that it does not work as a way to stay alive. If a person is a pattern
+that can be copied, she writes, then only someone who wanted a replacement for themselves would
+sign up (page 87); and a copy running the same program would be a different individual of the
+same type, when a person's survival depends on the individual, not the type (pages 136 and
+137). She argues the view that the mind is a software program has a serious flaw, because a
+program is an abstract thing (page 132). She says these considerations lead her to resist what
+she calls the siren song of digital immortality, despite her broadly transhumanist views (page
+124). She separates uploading from slower routes: adding AI parts inside the head that
+gradually replace brain tissue would not be uploading (page 88), and she asks whether those are
+ruled out too. Hedged: she writes at least as a means of survival, and goes on to ask whether
+uploading might still benefit our species in other ways (page 146)."""
+not_in_source = "The word suicide, which is in the headline of her Financial Times piece of the same year, is not in the book: a search of the whole text finds no match."
+bears_on = ["link", "link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The link to machines and the uploading long shot: the position is that an upload, even a faithful one, would not be the person who went in."

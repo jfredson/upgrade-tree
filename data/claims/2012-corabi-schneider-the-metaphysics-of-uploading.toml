@@ -1,0 +1,36 @@
+[claim]
+id = "2012-corabi-schneider-the-metaphysics-of-uploading"
+added_on = 2026-11-20
+speaker = "Joseph Corabi and Susan Schneider"
+role = "philosophers"
+critic = true
+when = "2012"
+when_note = "The year of the journal volume, from an open index of scholarly papers (OpenAlex). The copy read is the authors' manuscript, which is headed forthcoming and gives no date of its own."
+occasion = "\"The Metaphysics of Uploading\", a paper in the Journal of Consciousness Studies"
+status = "sourced"
+source = """
+Joseph Corabi and Susan Schneider, "The Metaphysics of Uploading", Journal of Consciousness
+Studies, volume 19, 2012, written for the journal's set of replies to David Chalmers's paper on
+the singularity. Read in the authors' manuscript, a twenty-page file linked from the papers page
+of Schneider's own site (schneiderwebsite.com/papers.html). The manuscript is headed as
+forthcoming in the journal, so its wording may differ in small ways from the printed version,
+which was not reached, and it does not carry the journal's page numbers."""
+source_url = "http://schneiderwebsite.com/Susan_Schneiders_Website/Research_files/The%20Metaphysics%20of%20Uploading%20.pdf"
+source_locator = "the introduction, page 1 of the manuscript"
+checked_how = "The authors' manuscript on Schneider's own site, downloaded and read on 2026-11-20. The printed journal version was not reached."
+words = "the philosophical case for surviving uploading is weak. When you upload, you are probably dying."
+words_locator = "the introduction, page 1 of the manuscript"
+claimed = """
+By an upload they mean a creature whose thoughts and sensations have been moved from a brain to
+computer hardware. They argue that a person who uploads in order to go on living is probably
+dying instead, and that what comes out is at best a psychological duplicate. Their reasons turn
+on what a person is: on the main accounts of what makes someone the same individual over time,
+the sudden jump from a brain to a machine is not something a person can survive, and they say
+this holds whether or not the mind is purely physical. They reach the same verdict, with less
+confidence, about gradual uploading, where the brain is replaced piece by piece, and say that
+uploading which leaves the original brain intact is not likely to preserve identity either.
+Hedged: probably, and they have no quarrel with someone who only wants a mental duplicate to
+carry on their work."""
+bears_on = ["link-uploaded-animal-brain-reproduces-what-it-learned"]
+bears_on_note = "The uploading long shot on the link-to-machines branch. Their argument is not that a copy could not be made, but that the copy would not be the person."
+notes = "Schneider's papers page says the paper was reprinted, with a postscript answering Chalmers's reply, in a 2014 Wiley-Blackwell collection edited by Russell Blackford; that version was not read."

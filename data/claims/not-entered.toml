@@ -1,4 +1,4 @@
-# What was looked for and not found, and what is noted but not yet checked. Moved from the
+# What was looked for and not found, and what could not be reached. Moved from the
 # TimeAssembler "Claims log" document on 2026-10-16, as it stood there. Neither list is a claim.
 # Layout: docs/upgrade-schema.md, "The claim record".
 
@@ -13,58 +13,46 @@ fascinating, reported from a 2021 talk at the Canadian Undergraduate Conference 
 Intelligence for which no recording was located."""
 result = "Unsourced: no dated recording or text in her own words about merging was found. Not entered as a claim."
 
-[[to_add]]
-lead = "Musk, 2016-06-01, Code Conference (Recode), first public \"neural lace\" remarks about a digital layer above the cortex."
-status = "Recording not yet pulled."
+[[checked]]
+who = "Andrew Jackson"
+role = "professor of neural interfaces, Newcastle University"
+checked = """
+The Guardian's article of 2019-07-17 on the Neuralink launch ("Elon Musk unveils plan to build
+mind-reading implants") and four archived copies of it from that day and the next; the Guardian's
+own listings for its Elon Musk and neuroscience topics from 16 to 21 July 2019; and the Science
+Media Centre's pages on Neuralink, the earliest of which is from August 2020. Read on 2026-11-20."""
+result = "No remark by him about the July 2019 launch was found: the article quotes only Elon Musk and Neuralink's head neurosurgeon. His remarks of August 2020 are entered as a claim."
+
+[[checked]]
+who = "Neuralink"
+role = "the company's 2021 videos of a monkey playing a video game by brain signal"
+checked = """
+The company's video "Monkey MindPong" (published 2021-04-08), read in full through its automatic
+captions, and its written piece "Pager Plays MindPong", read in full on 2026-11-20. A second short
+video published the same day has no captions and was not read."""
+result = "No statement about merging with machines: the only goal stated is to let a person with paralysis use a computer or phone by brain activity alone. Not entered as a claim."
+
+# Sources that could not be reached on 2026-11-20. This list is kept for whoever works on the
+# record and is not shown on the site (decided 2026-11-20: a statement nobody has read does not
+# sit on a public page). The fourteen leads that stood here until then were each checked that
+# day: eleven occasions became claims, two are in the list above, and these are what is left.
 
 [[to_add]]
-lead = "Musk, 2018-11, Axios on HBO interview: digital intelligence exceeding biological intelligence by a substantial margin, and the chip with tiny wires."
-status = "Recording not yet pulled."
+lead = "Nicolelis, \"The Relativistic Brain\" (2015): the book's text. No preview, no search inside and no library copy online; only the lab's announcement of 2015-05-04 describing the book was read."
+status = "Not reachable without the book."
 
 [[to_add]]
-lead = "Musk, 2019-08-29, World AI Conference, Shanghai, conversation with Jack Ma, and the 2018-09-06 Joe Rogan appearance: earlier uses of the join-them line."
-status = "Not yet checked."
+lead = "Warwick and co-authors, \"Thought communication and control: a first step using radiotelegraphy\" (IEE Proceedings - Communications, 2004): the full text. The university's record says the full text is not archived there, and no open copy was found."
+status = "Not reachable without access to the journal."
 
 [[to_add]]
-lead = "Musk, 2024-08-02, Lex Fridman episode 438 at 10:09: the long-term aspiration of Neuralink is to improve the AI-human symbiosis (official transcript, located 2026-10-16 while sourcing the DJ Seo entry)."
-status = "Not yet written up as its own entry."
+lead = "Schneider, Financial Times, 2019-08-14: the body of the piece. The page answers with a security check. The claim is entered from its headline."
+status = "Not reachable without a subscription."
 
 [[to_add]]
-lead = "Neuralink progress events 2021 (monkey playing Pong) and the 2024 to 2025 patient updates, for any restatement of the merger goal (the 2022-11-30 Show and Tell is now entered for DJ Seo; Musk's own remarks at it are not yet entered)."
-status = "Not yet checked."
+lead = "Musk, Joe Rogan Experience 1169 (2018-09-06): the full episode, which asks for a sign-in. The claim is entered from a 25-minute clip of it."
+status = "Not reachable without a sign-in."
 
 [[to_add]]
-lead = "Listening pass: the Harari 2018-01-24 Davos passages and the DJ Seo 2022-11-30 passage rest on auto-captions and should be checked against audio before either quote is published."
-status = "Not yet done."
-
-[[to_add]]
-lead = "Harari, 2020-01-23, Davos, \"How to Survive the 21st Century\": the hack-humans formula, auto-captions pulled, not yet written up. Also the 2019-04-22 Stanford conversation with Fei-Fei Li, not checked."
-status = "Captions pulled; not yet written up."
-
-[[to_add]]
-lead = "Schneider, 2019-08 Financial Times op-ed: body text behind a paywall; needs someone with access. Her 2019 book's uploading chapter and the 2012 Corabi and Schneider paper, not retrieved."
-status = "Needs someone with access."
-
-[[to_add]]
-lead = "Warwick, \"I, Cyborg\" (2002), for a page reference; and the full text of the 2004 Irena-link paper, which the publisher's site refused."
-status = "Not yet reached."
-
-[[to_add]]
-lead = "Bostrom, \"In Defense of Posthuman Dignity\" (Bioethics, 2005): confirmed on his site, not yet written up."
-status = "Not yet written up."
-
-[[to_add]]
-lead = "Kurzweil, Joe Rogan Experience episode 2117 (2024): a spoken 2045 merge claim, not pursued because the TED talk was fully sourced."
-status = "Not pursued."
-
-[[to_add]]
-lead = "Oxley, 2023 Forbes Australia interview on transhumanism."
-status = "Lead only."
-
-[[to_add]]
-lead = "Jackson, 2019-07-17 Guardian remarks after the Neuralink launch."
-status = "Not reached."
-
-[[to_add]]
-lead = "Nicolelis, \"The Relativistic Brain\" (2015): the full argument that the brain is not computable."
-status = "Not retrieved."
+lead = "Musk, Axios on HBO (November 2018): the full episode, which is on a paid service. The claim is entered from the broadcaster's own short clip."
+status = "Not reachable without a subscription."

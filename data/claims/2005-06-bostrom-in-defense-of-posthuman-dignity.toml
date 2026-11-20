@@ -1,0 +1,38 @@
+[claim]
+id = "2005-06-bostrom-in-defense-of-posthuman-dignity"
+added_on = 2026-11-20
+speaker = "Nick Bostrom"
+role = "Oxford philosopher"
+when = "2005-06"
+when_note = "The month the journal issue was published, from the publisher's record for the paper. The paper's own notes say earlier versions were presented in 2003, at a seminar in Oxford, at the Transvision conference at Yale and at a European Science Foundation workshop."
+occasion = "\"In Defense of Posthuman Dignity\", a paper in the journal Bioethics"
+status = "sourced"
+source = """
+The paper on the author's own site at nickbostrom.com/ethics/dignity, which gives its publication
+as Bioethics, volume 19, number 3, 2005, pages 202 to 214 (the site spells the journal title
+"In Defence of Posthuman Dignity"). The publisher's record, DOI 10.1111/j.1467-8519.2005.00437.x,
+dates the issue June 2005. The site's copy is a web page without the journal's page numbers, so
+passages are placed by section."""
+source_url = "https://nickbostrom.com/ethics/dignity"
+source_locator = "the section \"Why we need posthuman dignity\", last paragraph"
+checked_how = "The published text on the author's site, downloaded and read on 2026-11-20; the date checked against the publisher's record the same day."
+words = "there is no need to behave as if there were a deep moral difference between technological and other means of enhancing human lives"
+words_locator = "the section \"Why we need posthuman dignity\", last paragraph, of how things look from the transhumanist standpoint"
+claimed = """
+He sets out two camps. Transhumanists hold that technologies for enhancing people should be
+widely available and that individuals should have broad freedom to use them on themselves;
+their opponents, whom he calls bioconservatives, want broad bans because they think enhancement
+would undermine human dignity. He writes that enhancements may possibly make us or our
+descendants what he calls posthuman: beings with indefinitely long healthy lives, much greater
+intellectual abilities and control of their own emotions. The technologies he has in view
+include genetic engineering and information technology now, and artificial intelligence and
+advanced nanotechnology later. He answers two fears: that being posthuman would itself be
+degrading, and that enhanced and unenhanced people would turn on each other. His own position
+is that dignity lies in what we are and can become, not in where we came from, so beings
+changed by technology can have it too; we already differ so far from our hunter-gatherer
+ancestors, he writes, that to them we might look posthuman. Hedged: he grants that not every
+change is progress and that some ways of altering human nature would be debasing. The claim is
+about what should be allowed and respected, not a forecast with a date, and it does not single
+out machines: the paper's examples are mostly genetic."""
+bears_on = ["lifespan", "mind", "mood", "inheritance"]
+bears_on_note = "Lifespan and repair, memory and thinking, mood and drive (he names control of one's own emotions), and inheritance (most of the paper's examples are genetic changes to children)."

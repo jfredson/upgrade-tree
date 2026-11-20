@@ -1,0 +1,48 @@
+[claim]
+id = "2002-warwick-i-cyborg"
+added_on = 2026-11-20
+speaker = "Kevin Warwick"
+role = "professor at Reading University, and the subject of the implant experiments the book describes"
+when = "2002"
+when_note = "The book's year of publication. Its preface is dated August 2002; the day it went on sale was not found."
+occasion = "\"I, Cyborg\", a book"
+status = "sourced"
+source = """
+Kevin Warwick, "I, Cyborg", London: Century, 2002, ISBN 0712669884, viii and 312 pages, in the
+Internet Archive's scan of the printed book (archive.org/details/icyborg0000warw). The scan can
+be borrowed in full only with an account, which was not used. Without one, its opening pages
+can be read as page images, and they include the preface (page viii) and page 1; the rest can
+be searched, and the search returns the sentences around each match. The later passages below
+were read that way, and their page numbers are worked out from the scan's numbering (page 1 is
+the scan's thirteenth image), not seen on the page."""
+source_url = "https://archive.org/details/icyborg0000warw"
+source_locator = "page 1; also the preface (page viii) and, by search, pages 291, 301, 303 and 304"
+checked_how = "The published text. Page 1 and the preface were read as page images of the scanned book on 2026-11-20; the later passages were read as search results from the same scan that day."
+words = "The ability to change myself, to upgrade my human form with the aid of technology."
+words_locator = "page 1, of what fate gave him along with being born human"
+claimed = """
+The book opens with him saying he was born human by chance and has the power to change that:
+to link his body directly with silicon and become a cyborg, part human and part machine, in a
+world he says will most likely be the next evolutionary step for humankind. The preface puts it
+as a question: machines already outperform people at parts of intelligence, so rather than
+admit defeat, can we join forces and upgrade the human form by linking directly with
+technology? Near the end he draws his conclusions from the 2002 nerve implant. Helping a person
+with a disability is one thing and upgrading a healthy person another, he writes, and he calls
+that the crux of the moral question; but he has no doubt that direct brain implants will make
+it possible to upgrade human intellect. He gives a time: within the next fifteen years it
+should be possible to upgrade memory, improve mathematical ability and greatly widen what a
+person knows by linking human and machine brains, even in a limited way. He expects people to
+communicate by thought signals alone, which he calls a technological telepathy, and says he
+will spend the next fifteen to twenty years trying to bring it about. Stated with confidence
+and little hedging; should be possible and most likely are the hedges."""
+bears_on = ["link", "mind", "link-brain-link-carries-more-information-than-speech"]
+bears_on_note = "The link to machines; memory and thinking (the upgrades he names are memory, mathematics and knowledge); and the long shot of a brain link that carries more than speech, which is what his thought communication would need."
+notes = """
+The book also gives the day and time of the nerve-to-nerve session with his wife Irena, which
+the papers on the experiment do not: 2.14 p.m. on 10 June 2002, in his laboratory at Reading
+University (page 291, read as a search result). He calls it the first direct communication
+from one nervous system to another. The paper that reports that session (Warwick and others,
+"Thought communication and control: a first step using radiotelegraphy", IEE Proceedings -
+Communications, volume 151, number 3, 2004, DOI 10.1049/ip-com:20040409) is still read here only
+in its summary: the University of Reading's repository says it holds no copy of the full text,
+and no openly posted copy was found."""
