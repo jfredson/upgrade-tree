@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2026-10-16-neuralink-company-website"
+added_on = 2026-10-16
 speaker = "Neuralink"
 role = "the company, on its own website"
 when = "2026-10-16"

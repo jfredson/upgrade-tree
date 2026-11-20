@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2020-07-09-musk-twitter-join-em"
+added_on = 2026-10-16
 speaker = "Elon Musk"
 when = "2020-07-09"
 when_note = "The post's own time is 07:01 universal time on 2020-07-09, which is 00:01 Pacific; the 02:01 first noted from a search result is the same moment in United States Central time."

@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2014-03-02-schneider-the-philosophy-of-her"
+added_on = 2026-10-16
 speaker = "Susan Schneider"
 role = "philosopher"
 critic = true

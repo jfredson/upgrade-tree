@@ -75,6 +75,7 @@ Required fields are marked. Everything else may be left out until it is known.
 | Field | Required | Meaning |
 |---|---|---|
 | `id` | yes | Stable identifier: the branch key, a dash, then a short lowercase slug with dashes, like `senses-implant-restores-sight-to-a-blind-person`. Never renamed once published; retire it with `status = "superseded"` and point to the replacement. |
+| `added_on` | yes | The day the entry was first written into the record (`2026-10-16`). The About page's day-by-day list is built from it. Added 2026-11-20. |
 | `name` | yes | Plain-language name, one line, readable by someone outside the project. |
 | `branch` | yes | One of the seven branch keys. Must match the file it lives in. |
 | `description` | yes | Two to four sentences: what the upgrade is and why it is on the tree. |
@@ -144,6 +145,7 @@ If any rule fails, nothing is written and the build stops.
 
     [[upgrade]]
     id = "link-wireless-brain-implant-controls-a-computer"
+    added_on = 2026-10-16
     name = "A fully implanted wireless brain chip lets a paralysed person control a computer"
     branch = "link"
     description = """..."""
@@ -249,6 +251,7 @@ Each file holds one `[claim]` table.
 | Field | Required | Meaning |
 |---|---|---|
 | `id` | yes | The file name without `.toml`: the date as far as it is known (`2017-02-13`, `2003-10` or `2005`), a dash, a short lowercase slug. Never renamed. |
+| `added_on` | yes | The day the entry was first written into the record (`2026-10-16`). The About page's day-by-day list is built from it. Added 2026-11-20. |
 | `speaker` | yes | Who said it, as a plain name. For a company's own statement, the company. |
 | `role` | no | The role the speaker held at the time, where it matters. |
 | `critic` | no | `true` when the entry is a critic of the merger idea, entered on the same terms as its advocates (the log marks these in their headings). |
@@ -369,6 +372,7 @@ cannot share an axis without an assumption the source did not make:
 | Field | Required | Meaning |
 |---|---|---|
 | `id` | yes | Lowercase slug, unique. |
+| `added_on` | yes | The day the entry was first written into the record (`2026-10-16`). The About page's day-by-day list is built from it. Added 2026-11-20. |
 | `date` | yes | Publication date of the paper or release, as the charter dates milestones. |
 | `measure` | yes | A `measure` key. |
 | `value` | unless `no_figure` | The figure, as the source gave it. |

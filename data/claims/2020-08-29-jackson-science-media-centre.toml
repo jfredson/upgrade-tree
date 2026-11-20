@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2020-08-29-jackson-science-media-centre"
+added_on = 2026-10-16
 speaker = "Andrew Jackson"
 role = "professor of neural interfaces, Newcastle University"
 critic = true

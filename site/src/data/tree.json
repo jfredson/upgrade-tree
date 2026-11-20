@@ -1,6 +1,6 @@
 {
   "exported_on": "2026-11-20",
-  "commit": "a3c73c7",
+  "commit": "88845fb",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -455,6 +455,7 @@
   "upgrades": [
     {
       "id": "inheritance-baby-born-with-donor-mitochondria",
+      "added_on": "2026-10-16",
       "name": "A baby is born with donor mitochondria to avoid an inherited disease",
       "branch": "inheritance",
       "branch_name": "Inheritance",
@@ -536,6 +537,7 @@
     },
     {
       "id": "inheritance-embryos-chosen-by-a-genetic-score-for-traits",
+      "added_on": "2026-10-16",
       "name": "Embryos are chosen by a genetic score for traits, not disease",
       "branch": "inheritance",
       "branch_name": "Inheritance",
@@ -611,6 +613,7 @@
     },
     {
       "id": "inheritance-child-born-from-a-gene-edited-embryo",
+      "added_on": "2026-10-16",
       "name": "A child is born from a gene-edited embryo",
       "branch": "inheritance",
       "branch_name": "Inheritance",
@@ -686,6 +689,7 @@
     },
     {
       "id": "inheritance-mammal-carried-to-birth-in-an-artificial-womb",
+      "added_on": "2026-10-16",
       "name": "A mammal is carried to birth in an artificial womb",
       "branch": "inheritance",
       "branch_name": "Inheritance",
@@ -761,6 +765,7 @@
     },
     {
       "id": "lifespan-a-drug-clears-aged-cells-from-a-persons-body",
+      "added_on": "2026-10-16",
       "name": "A drug clears aged cells from a person's body",
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
@@ -850,6 +855,7 @@
     },
     {
       "id": "lifespan-lab-grown-organ-works-in-a-person-for-a-year",
+      "added_on": "2026-10-16",
       "name": "A printed or lab-grown organ works in a person for a year",
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
@@ -933,6 +939,7 @@
     },
     {
       "id": "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive",
+      "added_on": "2026-10-16",
       "name": "An organ from a gene-edited pig keeps a person alive",
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
@@ -1022,6 +1029,7 @@
     },
     {
       "id": "lifespan-a-drug-adds-healthy-years-to-a-life",
+      "added_on": "2026-10-16",
       "name": "A drug makes people live longer in good health",
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
@@ -1105,6 +1113,7 @@
     },
     {
       "id": "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal",
+      "added_on": "2026-10-16",
       "name": "Partially resetting cells reverses ageing in a living animal",
       "branch": "lifespan",
       "branch_name": "Lifespan and repair",
@@ -1202,6 +1211,7 @@
     },
     {
       "id": "link-scalp-headset-controls-a-device-without-surgery",
+      "added_on": "2026-10-16",
       "name": "A headset worn on the scalp controls a device without surgery",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1298,6 +1308,7 @@
     },
     {
       "id": "link-brain-implant-gives-a-person-touch-from-a-robotic-hand",
+      "added_on": "2026-10-16",
       "name": "A brain implant gives a person touch from a robotic hand",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1389,6 +1400,7 @@
     },
     {
       "id": "link-brain-implant-turns-intended-speech-into-text",
+      "added_on": "2026-10-16",
       "name": "A brain implant turns intended speech into text at conversational speed",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1490,6 +1502,7 @@
     },
     {
       "id": "link-wireless-brain-implant-controls-a-computer",
+      "added_on": "2026-10-16",
       "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1575,6 +1588,7 @@
     },
     {
       "id": "link-wired-brain-implant-controls-a-cursor",
+      "added_on": "2026-10-16",
       "name": "A wired brain implant lets a paralysed person control a cursor",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1678,6 +1692,7 @@
     },
     {
       "id": "link-brain-link-carries-more-information-than-speech",
+      "added_on": "2026-10-16",
       "name": "A brain link carries more information per second than speech",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1763,6 +1778,7 @@
     },
     {
       "id": "link-uploaded-animal-brain-reproduces-what-it-learned",
+      "added_on": "2026-10-16",
       "name": "An uploaded animal brain reproduces something it learned",
       "branch": "link",
       "branch_name": "The link to machines",
@@ -1838,6 +1854,7 @@
     },
     {
       "id": "mind-ai-assistant-used-daily-by-most-adults-in-a-country",
+      "added_on": "2026-10-16",
       "name": "An always-on AI assistant is used daily by most adults in a country",
       "branch": "mind",
       "branch_name": "Memory and thinking",
@@ -1913,6 +1930,7 @@
     },
     {
       "id": "mind-brain-implant-improves-memory-recall-in-a-person",
+      "added_on": "2026-10-16",
       "name": "A brain implant improves memory recall in a person",
       "branch": "mind",
       "branch_name": "Memory and thinking",
@@ -1994,6 +2012,7 @@
     },
     {
       "id": "mind-electrical-stimulation-improves-learning-in-healthy-adults",
+      "added_on": "2026-10-16",
       "name": "Electrical stimulation improves learning in healthy adults",
       "branch": "mind",
       "branch_name": "Memory and thinking",
@@ -2069,6 +2088,7 @@
     },
     {
       "id": "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults",
+      "added_on": "2026-10-16",
       "name": "A drug raises a measured thinking ability in healthy adults",
       "branch": "mind",
       "branch_name": "Memory and thinking",
@@ -2144,6 +2164,7 @@
     },
     {
       "id": "mood-psychedelic-therapy-approved-for-prescription",
+      "added_on": "2026-10-16",
       "name": "A psychedelic therapy is approved for prescription",
       "branch": "mood",
       "branch_name": "Mood and drive",
@@ -2219,6 +2240,7 @@
     },
     {
       "id": "mood-brain-implant-lifts-severe-depression",
+      "added_on": "2026-10-16",
       "name": "A brain implant lifts severe depression",
       "branch": "mood",
       "branch_name": "Mood and drive",
@@ -2294,6 +2316,7 @@
     },
     {
       "id": "mood-closed-loop-implant-detects-and-corrects-a-mood-state",
+      "added_on": "2026-10-16",
       "name": "A closed-loop implant detects a mood state and corrects it automatically",
       "branch": "mood",
       "branch_name": "Mood and drive",
@@ -2377,6 +2400,7 @@
     },
     {
       "id": "mood-treatment-removes-a-specific-fear-memory",
+      "added_on": "2026-10-16",
       "name": "A treatment removes a specific fear memory",
       "branch": "mood",
       "branch_name": "Mood and drive",
@@ -2458,6 +2482,7 @@
     },
     {
       "id": "movement-powered-exoskeleton-lets-a-paralysed-person-walk",
+      "added_on": "2026-10-16",
       "name": "A powered exoskeleton lets a paralysed person walk",
       "branch": "movement",
       "branch_name": "Movement and body",
@@ -2533,6 +2558,7 @@
     },
     {
       "id": "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch",
+      "added_on": "2026-10-16",
       "name": "A prosthetic arm moves by thought and feeds back touch",
       "branch": "movement",
       "branch_name": "Movement and body",
@@ -2608,6 +2634,7 @@
     },
     {
       "id": "movement-bone-anchored-prosthetic-limb-with-nerve-control",
+      "added_on": "2026-10-16",
       "name": "A prosthetic limb fixed to the bone with nerve control",
       "branch": "movement",
       "branch_name": "Movement and body",
@@ -2683,6 +2710,7 @@
     },
     {
       "id": "movement-spinal-implant-lets-a-paralysed-person-walk-again",
+      "added_on": "2026-10-16",
       "name": "A spinal implant lets a paralysed person walk again on their own legs",
       "branch": "movement",
       "branch_name": "Movement and body",
@@ -2758,6 +2786,7 @@
     },
     {
       "id": "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body",
+      "added_on": "2026-10-16",
       "name": "A gene therapy builds stronger muscle in a healthy body",
       "branch": "movement",
       "branch_name": "Movement and body",
@@ -2833,6 +2862,7 @@
     },
     {
       "id": "senses-cochlear-implant-gives-a-deaf-person-hearing",
+      "added_on": "2026-10-16",
       "name": "A cochlear implant gives a deaf person hearing",
       "branch": "senses",
       "branch_name": "Senses",
@@ -2919,6 +2949,7 @@
     },
     {
       "id": "senses-gene-therapy-restores-hearing-in-a-child-born-deaf",
+      "added_on": "2026-10-16",
       "name": "A gene therapy restores hearing in a child born deaf",
       "branch": "senses",
       "branch_name": "Senses",
@@ -3012,6 +3043,7 @@
     },
     {
       "id": "senses-gene-therapy-restores-sight-in-an-inherited-blindness",
+      "added_on": "2026-10-16",
       "name": "A gene therapy restores sight in an inherited blindness",
       "branch": "senses",
       "branch_name": "Senses",
@@ -3098,6 +3130,7 @@
     },
     {
       "id": "senses-implant-restores-sight-to-a-blind-person",
+      "added_on": "2026-10-16",
       "name": "An implant gives a blind person back some sight",
       "branch": "senses",
       "branch_name": "Senses",
@@ -3179,6 +3212,7 @@
     },
     {
       "id": "senses-device-gives-a-person-a-new-sense",
+      "added_on": "2026-10-16",
       "name": "A device gives a person a sense no human is born with",
       "branch": "senses",
       "branch_name": "Senses",
@@ -3254,6 +3288,7 @@
     },
     {
       "id": "senses-implant-in-the-visual-cortex-gives-sight-without-eyes",
+      "added_on": "2026-10-16",
       "name": "An implant in the visual cortex gives sight with no working eyes",
       "branch": "senses",
       "branch_name": "Senses",

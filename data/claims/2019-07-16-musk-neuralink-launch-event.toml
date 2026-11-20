@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2019-07-16-musk-neuralink-launch-event"
+added_on = 2026-10-16
 speaker = "Elon Musk"
 when = "2019-07-16"
 when_note = "The evening of 2019-07-16 Pacific time; the recording was uploaded 2019-07-17."

@@ -30,12 +30,11 @@ import export  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-CHANGELOG = ROOT / "CHANGELOG.md"
 HEADLINE = DATA / export.HEADLINE_NAME
 
 
 def expected_from(data: Path) -> dict:
-    return export.load_everything(data, data / "readings", CHANGELOG)["headline"]
+    return export.load_everything(data, data / "readings")["headline"]
 
 
 class CommittedHeadlineFile(unittest.TestCase):

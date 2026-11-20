@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2017-12-07-altman-the-merge"
+added_on = 2026-10-16
 speaker = "Sam Altman"
 role = "then president of Y Combinator"
 when = "2017-12-07"

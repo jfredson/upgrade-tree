@@ -1,41 +1,65 @@
 ---
-// The story so far, moved here from pages/story.astro on 2026-10-21 when the top bar was simplified
-// (tracker pattern rule 4.21, ruled by John that day). The text is unchanged; it is the second part of /about/.
-// The story so far: the changelog, rendered day by day from CHANGELOG.md (scripts/export.py).
-import { changelog, longDate, REPO } from '../lib/tree';
+// The story so far, the second part of /about/ (moved here from pages/story.astro on 2026-10-21).
+// Until 2026-11-20 this printed the repository's change log as written, which put working notes
+// in front of visitors. Decided by John that day, the way Outrunning Ageing has worked since
+// 2026-10-18: the section is built only from the records' own dated changes (scripts/export.py,
+// what_changed), one plain line per day, each part linked to the change it names. Nothing here is
+// copied from the change log, and no id, field name or file name is shown.
+import { story, tree, longDate, type StoryRef } from '../lib/tree';
 import { datedPosts, postPath } from '../lib/news';
-import MarkdownIt from 'markdown-it';
-// The changelog is written in Markdown (bold, code, links). Until 2026-11-14 its lines were
-// printed as plain text, so readers saw the ** and [text](url) marks; now each line is rendered
-// inline. Raw HTML in the changelog is not passed through.
-const md = new MarkdownIt({ html: false, linkify: false });
-const inline = (text: string) => md.renderInline(text);
+
 const newsPosts = await datedPosts();
 const postsFor = (date: string) => newsPosts.filter((p) => p.data.date === date); // rule 4.14
+
+const capital = (t: string, first: boolean) => (first ? t.charAt(0).toUpperCase() + t.slice(1) : t);
+// An upgrade's name opens with a capital; inside a line it is written from a small letter, unless
+// its first word is written in capitals throughout.
+const name = (t: string, first: boolean) => (first || /^[A-Z][A-Z]/.test(t) ? t : t.charAt(0).toLowerCase() + t.slice(1));
 ---
 
   <section class="hero about-part" id="story">
     <p class="eyebrow">The story so far</p>
-    <h2 class="about-h">Every change, dated</h2>
+    <h2 class="about-h">What changed, day by day</h2>
     <p class="lede">
-      {changelog.intro || 'Newest first. Each day lists what changed in the record, the rules, or the site.'}
+      One line for each day the record changed, newest first, made from the record itself: an upgrade
+      moving up a stage, a date revised, an upgrade, a claim or a figure added, an entry brought up to
+      date, a reading run. Each line links to the change it names.
     </p>
   </section>
 
   <section class="section narrow">
     <ul class="days">
-      {changelog.days.map((d) => (
-        <li id={d.date}>
-          <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
-          <ul>
-            {d.items.map((item) => <li set:html={inline(item)} />)}
-            {postsFor(d.date).map((p) => <li class="in-the-news-line">In the news: <a href={postPath(p)}>{p.data.title}</a>.</li>)}
-          </ul>
-        </li>
-      ))}
+      {story.days.map((d) => {
+        const list = (items: StoryRef[], first: boolean) =>
+          items.map((it, i) => <>{i === 0 ? '' : i === items.length - 1 ? ' and ' : ', '}<a href={it.path}>{name(it.name, first && i === 0)}</a></>);
+
+        const parts: any[] = [];
+        d.moves.forEach((m) => parts.push((first: boolean) => <><a href={m.upgrade.path}>{name(m.upgrade.name, first)}</a> moved up a stage, from {m.from.toLowerCase()} to {m.to.toLowerCase()}</>));
+        d.dates.forEach((x) => parts.push((first: boolean) => <><a href={x.upgrade.path}>{name(x.upgrade.name, first)}</a>: the date it reached {x.stage ? `the stage “${x.stage.toLowerCase()}”` : 'its stage'} was revised, from {longDate(x.old)} to {longDate(x.new)}</>));
+        // Three or fewer are named; more are counted, with a link to the page that lists them.
+        const a = d.added;
+        if (a.upgrades.length > 3) parts.push((first: boolean) => <a href="/branches/">{capital(`${a.upgrades.length} upgrades were added`, first)}</a>);
+        else if (a.upgrades.length > 0) parts.push((first: boolean) => <>{list(a.upgrades, first)} {a.upgrades.length === 1 ? 'was' : 'were'} added</>);
+        const oneSpeaker = a.claims.length > 1 && a.claims.every((c) => c.name === a.claims[0].name);
+        if (oneSpeaker) parts.push((first: boolean) => <a href="/claims/">{capital(`${a.claims.length} claims by ${a.claims[0].name} were added`, first)}</a>);
+        else if (a.claims.length > 3) parts.push((first: boolean) => <a href="/claims/">{capital(`${a.claims.length} claims were added`, first)}</a>);
+        else if (a.claims.length > 0) parts.push((first: boolean) => <>{capital(a.claims.length === 1 ? 'a claim by ' : 'claims by ', first)}{a.claims.map((c, i) => <>{i === 0 ? '' : i === a.claims.length - 1 ? ' and ' : ', '}<a href={c.path}>{c.name}</a></>)} {a.claims.length === 1 ? 'was' : 'were'} added</>);
+        if (a.points.length > 0) parts.push((first: boolean) => <a href="/branches/link/#bandwidth">{capital(a.points.length === 1 ? 'one figure was added to the speed chart' : `${a.points.length} figures were added to the speed chart`, first)}</a>);
+        if (d.linked.length > 3) parts.push((first: boolean) => <>{capital(`${d.linked.length} upgrades were linked to their matching entries on `, first)}<a href={tree.sibling_site.url} rel="noopener">{story.sibling_site}</a></>);
+        else if (d.linked.length > 0) parts.push((first: boolean) => <>{list(d.linked, first)} {d.linked.length === 1 ? 'was linked to its matching entry' : 'were linked to their matching entries'} on <a href={tree.sibling_site.url} rel="noopener">{story.sibling_site}</a></>);
+        d.updated.forEach((u) => parts.push((first: boolean) => <>{capital('the entry for ', first)}<a href={u.path}>{name(u.name, false)}</a> was brought up to date</>));
+        d.readings.forEach((r) => parts.push((first: boolean) => <><a href={r.path}>{capital(`the ${r.scope} reading ran`, first)}</a>: {r.upgrades_read} upgrades read, {r.moved === 0 ? 'none moved' : r.moved === 1 ? 'one moved' : `${r.moved} moved`}</>));
+        return (
+          <li id={d.date}>
+            <h2><a href={`#${d.date}`} class="u-link-reset" style="color: inherit;">{longDate(d.date)}</a></h2>
+            <p class="day-line">{parts.map((part, i) => <>{i > 0 ? '; ' : ''}{part(i === 0)}</>)}.</p>
+            {postsFor(d.date).map((p) => <p class="in-the-news-line" style="margin: 6px 0 0;">In the news: <a href={postPath(p)}>{p.data.title}</a>.</p>)}
+          </li>
+        );
+      })}
     </ul>
-    <p class="dim" style="font-size: 14px; margin-top: 24px;">
-      This page is the repository's changelog as written: <a href={`${REPO}/blob/main/CHANGELOG.md`} rel="noopener">CHANGELOG.md</a>.
-    </p>
   </section>
 
+<style>
+  .day-line { margin: 0; font-size: 16px; line-height: 1.6; color: var(--text-soft); }
+</style>

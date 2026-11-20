@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""The Upgrade Tree: turn the record in data/ and the changelog into JSON for the website.
+"""The Upgrade Tree: turn the record in data/ into JSON for the website.
 
 Plain Python, standard library only. Run from anywhere:
 
-    python3 scripts/export.py                  write site/src/data/tree.json, changelog.json,
+    python3 scripts/export.py                  write site/src/data/tree.json, story.json,
                                                claims.json, bandwidth.json and readings.json,
                                                then the headline file, data/headline.json, and
                                                its public copy, site/public/data/headline.json
@@ -44,7 +44,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = ROOT / "data"
 DEFAULT_READINGS = ROOT / "data" / "readings"
 DEFAULT_OUT = ROOT / "site" / "src" / "data"
-DEFAULT_CHANGELOG = ROOT / "CHANGELOG.md"
 # The headline file (added 2026-10-17): the committed copy other sites read from the repository,
 # and the copy the build serves from the site at /data/headline.json (ruled by John 2026-10-17).
 HEADLINE_NAME = "headline.json"
@@ -80,7 +79,9 @@ STATUSES = {"tracked", "withdrawn", "superseded"}
 REGIONS = {"senses", "movement", "mind", "mood", "lifespan", "inheritance", "link"}
 
 REQUIRED_BRANCH = ["key", "order", "name", "tagline", "meaning", "figure_region"]
-REQUIRED_UPGRADE = ["id", "name", "branch", "description", "resolution", "source",
+# `added_on` (2026-11-20): the day the entry was first written into the record. The About page's
+# "what changed" list is built from it, so every upgrade, claim and chart point carries one.
+REQUIRED_UPGRADE = ["id", "added_on", "name", "branch", "description", "resolution", "source",
                     "horizon", "status", "stage"]
 # Every field an upgrade may carry (docs/upgrade-schema.md, "The upgrade record"). Anything else
 # is refused, so a misspelt field name is caught instead of silently dropped (added 2026-10-17
@@ -123,12 +124,11 @@ def today_pacific(now_utc: dt.datetime | None = None) -> dt.date:
         hours = -7 if start <= now < end else -8
         return (now + dt.timedelta(hours=hours)).date()
 
-DATE_HEADER = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
 # The claims (docs/upgrade-schema.md, "The claim record", added 2026-10-16).
 CLAIM_ID_RE = re.compile(r"^\d{4}(-\d{2}){0,2}(-[a-z0-9]+)+$")
 WHEN_RE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
-REQUIRED_CLAIM = ["id", "speaker", "when", "occasion", "status", "source", "source_url",
+REQUIRED_CLAIM = ["id", "added_on", "speaker", "when", "occasion", "status", "source", "source_url",
                   "checked_how", "claimed", "bears_on"]
 CLAIM_STATUSES = {"sourced", "unsourced"}
 MAX_PHRASE_WORDS = 25
@@ -144,7 +144,7 @@ TRANSCRIPT_READING_FIELDS = ["passage", "captions", "whisper", "third"]
 
 # The bandwidth series (docs/upgrade-schema.md, "The bandwidth series", added 2026-10-16).
 REQUIRED_MEASURE = ["key", "name", "unit", "meaning"]
-REQUIRED_POINT = ["id", "date", "measure", "what", "who", "in_whom", "repeated", "peer_reviewed", "source"]
+REQUIRED_POINT = ["id", "added_on", "date", "measure", "what", "who", "in_whom", "repeated", "peer_reviewed", "source"]
 REQUIRED_BASELINE = ["id", "measure", "label", "value", "unit", "who", "source"]
 # How a figure in one unit is shown on a measure's axis. Characters become words at five a word,
 # the convention typing speed is measured by; nothing else converts.
@@ -322,6 +322,7 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                                 "a lowercase slug with single dashes")
             try:
                 reached = iso(u.get("stage_reached_on"))
+                added_on = iso(u["added_on"])
                 earlier = [{"stage": e["stage"], "reached_on": iso(e["reached_on"]), "record": e["record"]}
                            for e in u.get("earlier_stages", []) if "stage" in e]
                 revisions = [{"date": iso(r.get("date")), "field": r.get("field"), "old": r.get("old"),
@@ -330,7 +331,7 @@ def load_upgrades(folder: Path, branches: list[dict]) -> list[dict]:
                 problems.append(f"{where}: {e}")
                 continue
             upgrades.append({
-                "id": u["id"], "name": u["name"], "branch": u["branch"], "branch_name": b["name"],
+                "id": u["id"], "added_on": added_on, "name": u["name"], "branch": u["branch"], "branch_name": b["name"],
                 "path": f"/branches/{b['key']}/{u['id']}/",
                 "description": one_paragraph(u["description"]),
                 "resolution": one_paragraph(u["resolution"]),
@@ -511,8 +512,13 @@ def load_claims(folder: Path, branches: list[dict], upgrades: list[dict]) -> dic
         except SchemaError as e:
             problems.append(f"{where}: released_on: {e}")
             released = None
+        try:
+            claim_added_on = iso(c["added_on"])
+        except SchemaError as e:
+            problems.append(f"{where}: added_on: {e}")
+            claim_added_on = None
         claims.append({
-            "id": c["id"], "speaker": c["speaker"], "role": c.get("role"),
+            "id": c["id"], "added_on": claim_added_on, "speaker": c["speaker"], "role": c.get("role"),
             "critic": bool(c.get("critic", False)),
             "when": when, "when_label": when_label(when), "when_note": one_paragraph(c.get("when_note")) or None,
             "released_on": released, "occasion": one_paragraph(c["occasion"]),
@@ -641,11 +647,12 @@ def load_bandwidth(folder: Path, upgrades: list[dict]) -> dict:
                 upgrade_ref = {"id": u["id"], "name": u["name"], "path": u["path"]}
         try:
             date = iso(pt["date"])
+            point_added_on = iso(pt["added_on"])
         except SchemaError as e:
-            problems.append(f"{where}: date: {e}")
+            problems.append(f"{where}: date or added_on: {e}")
             continue
         points.append({
-            "id": pt["id"], "date": date, "measure": pt["measure"],
+            "id": pt["id"], "added_on": point_added_on, "date": date, "measure": pt["measure"],
             "value": pt.get("value"), "unit": pt.get("unit"), "plot_value": plot_value,
             "no_figure": no_figure,
             "what": one_paragraph(pt["what"]), "who": one_paragraph(pt["who"]),
@@ -768,27 +775,79 @@ def export_tree(branches: list[dict], upgrades: list[dict]) -> dict:
     }
 
 
-def export_changelog(path: Path) -> dict:
-    """Split CHANGELOG.md into its dated days, each a list of bullet lines (newest first)."""
-    days: list[dict] = []
-    intro: list[str] = []
-    current: dict | None = None
-    for raw in path.read_text().splitlines():
-        line = raw.rstrip()
-        m = DATE_HEADER.match(line)
-        if m:
-            current = {"date": m.group(1), "items": []}
-            days.append(current)
+def what_changed(tree: dict, claims: dict, bandwidth: dict, readings: dict) -> dict:
+    """The About page's "what changed" list: one entry per day, newest first, made only from the
+    records' own dated changes. Nothing in it is copied from CHANGELOG.md, which the site stopped
+    showing on 2026-11-20 (decided by John that day, the way Outrunning Ageing has worked since
+    2026-10-18): a change log is written for whoever works on the repository, and printing it put
+    working notes in front of visitors.
+
+    What a day can hold, each from a field a record already carries:
+      added      upgrades, claims and speed-chart points whose `added_on` is that day
+      moves      an upgrade's revision of `stage` (it moved up the ladder)
+      dates      a revision of `stage_reached_on` or `earlier_stages` (the date of a stage changed)
+      linked     a revision of `sibling` (linked to its matching entry on the sibling site)
+      updated    a revision of any other field (the description or the notes were brought up to date)
+      readings   a weekly reading run that day
+    A day on which only wording, pages or rules changed does not appear: the record holds no dated
+    change for it. Every part carries the name and address of what it is about, so the page can
+    link each line to the change it names; no id, field name or file name is passed for display.
+    """
+    days: dict[str, dict] = {}
+
+    def day(date: str) -> dict:
+        return days.setdefault(date, {"date": date, "added": {"upgrades": [], "claims": [], "points": []},
+                                      "moves": [], "dates": [], "linked": [], "updated": [], "readings": []})
+
+    label = {st["key"]: st["label"] for st in STAGES}
+
+    def earlier(value) -> tuple[str | None, str | None]:
+        """An `earlier_stages` revision writes its old and new values as "stage, date, record"."""
+        parts = [x.strip() for x in str(value).split(",")]
+        if len(parts) >= 2 and parts[0] in label and re.match(r"^\d{4}-\d{2}-\d{2}$", parts[1]):
+            return parts[0], parts[1]
+        return None, None
+
+    for u in tree["upgrades"]:
+        ref = {"name": u["name"], "path": u["path"]}
+        if u.get("added_on") and not u.get("example"):
+            day(u["added_on"])["added"]["upgrades"].append(ref)
+        for rv in u["revisions"]:
+            if not rv.get("date"):
+                continue
+            d, field = day(rv["date"]), rv.get("field")
+            if field == "stage" and rv.get("old") in label and rv.get("new") in label:
+                d["moves"].append({"upgrade": ref, "from": label[rv["old"]], "to": label[rv["new"]]})
+            elif field == "stage_reached_on":
+                # The date belongs to the stage the upgrade held that day: its present stage, unless
+                # the stage has moved since, in which case the line names no stage.
+                moved_since = any(x.get("field") == "stage" and (x.get("date") or "") > rv["date"] for x in u["revisions"])
+                d["dates"].append({"upgrade": ref, "stage": None if moved_since else u["stage_label"],
+                                   "old": str(rv.get("old")), "new": str(rv.get("new"))})
+            elif field == "earlier_stages":
+                (stage_old, old), (stage_new, new) = earlier(rv.get("old")), earlier(rv.get("new"))
+                if old and new and stage_old == stage_new:
+                    d["dates"].append({"upgrade": ref, "stage": label[stage_new], "old": old, "new": new})
+                elif ref not in d["updated"]:
+                    d["updated"].append(ref)
+            elif field == "sibling":
+                d["linked"].append(ref)
+            elif ref not in d["updated"]:
+                d["updated"].append(ref)
+    for c in claims["claims"]:
+        if c.get("added_on"):
+            day(c["added_on"])["added"]["claims"].append(
+                {"name": f"{c['speaker']} ({str(c['when'])[:4]})", "path": f"/claims/#{c['id']}"})
+    for pt in bandwidth["points"]:
+        if pt.get("added_on"):
+            day(pt["added_on"])["added"]["points"].append({"name": pt["who"], "path": "/branches/link/#bandwidth"})
+    for rd in readings["readings"]:
+        if rd.get("test"):
             continue
-        if current is None:
-            if line and not line.startswith("# "):
-                intro.append(line)
-            continue
-        if line.startswith("- "):
-            current["items"].append(line[2:].strip())
-        elif line.strip() and current["items"]:
-            current["items"][-1] += " " + line.strip()
-    return {"source": path.name, "intro": " ".join(intro), "days": days}
+        day(rd["date"])["readings"].append({"path": "/reading/", "scope": rd["scope"],
+                                            "upgrades_read": rd["upgrades_read"],
+                                            "moved": rd["counts"]["stage-change"]})
+    return {"sibling_site": SIBLING_SITE_NAME, "days": [days[k] for k in sorted(days, reverse=True)]}
 
 
 # ------------------------------------------------------- the weekly reading
@@ -1196,19 +1255,19 @@ def write_headline(path: Path, headline: dict, public_dir: Path | None) -> list[
     return written
 
 
-def load_everything(data: Path, readings_dir: Path, changelog_path: Path) -> dict:
+def load_everything(data: Path, readings_dir: Path) -> dict:
     """Validate the whole record and build every export from it. Raises SchemaError."""
     branches = load_branches(data)
     upgrades = load_upgrades(data, branches)
     tree = export_tree(branches, upgrades)
-    changelog = export_changelog(changelog_path)
     claims = load_claims(data, branches, upgrades)
     bandwidth = load_bandwidth(data, upgrades)
     readings, reading_problems = export_readings(tree, readings_dir)
     if reading_problems:
         raise SchemaError("\n".join(reading_problems))
     headline = build_headline(tree, bandwidth, claims, readings)
-    return {"tree": tree, "changelog": changelog, "claims": claims, "bandwidth": bandwidth,
+    story = what_changed(tree, claims, bandwidth, readings)
+    return {"tree": tree, "story": story, "claims": claims, "bandwidth": bandwidth,
             "readings": readings, "headline": headline}
 
 
@@ -1221,7 +1280,6 @@ def main(argv: list[str] | None = None) -> int:
                         help="validate and print the counts, write nothing; refuse a missing or stale headline file")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA)
-    parser.add_argument("--changelog", type=Path, default=DEFAULT_CHANGELOG)
     parser.add_argument("--readings", type=Path, default=None,
                         help="the folder of weekly reading records (default: DATA/readings)")
     parser.add_argument("--headline", type=Path, default=None,
@@ -1233,19 +1291,19 @@ def main(argv: list[str] | None = None) -> int:
     headline_path = args.headline or (args.data / HEADLINE_NAME)
 
     try:
-        loaded = load_everything(args.data, readings_dir, args.changelog)
+        loaded = load_everything(args.data, readings_dir)
     except SchemaError as e:
         print("The record does not follow docs/upgrade-schema.md; nothing written.", file=sys.stderr)
         print(str(e), file=sys.stderr)
         return 1
-    tree, changelog, claims = loaded["tree"], loaded["changelog"], loaded["claims"]
+    tree, story, claims = loaded["tree"], loaded["story"], loaded["claims"]
     bandwidth, readings, headline = loaded["bandwidth"], loaded["readings"], loaded["headline"]
 
     c = tree["counts"]
     print(f"{c['upgrades']} upgrade(s) across {c['branches_with_upgrades']} of 7 branches, "
           f"{c['first_human_or_beyond']} at a first human or beyond, {c['examples']} example(s), "
           f"{c['to_verify']} claim(s) to verify, {c['siblings']} linked to {SIBLING_SITE_NAME}, "
-          f"{len(changelog['days'])} changelog day(s), version {tree['commit'] or 'unknown'}")
+          f"{len(story['days'])} day(s) of dated changes, version {tree['commit'] or 'unknown'}")
     k = claims["counts"]
     print(f"{k['claims']} claim(s) by {k['speakers']} speaker(s), {k['sourced']} sourced and {k['unsourced']} unsourced, "
           f"{k['paraphrases']} with a circulating paraphrase ({k['no_primary_found']} with no primary source found), "
@@ -1274,11 +1332,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "tree.json").write_text(json.dumps(tree, indent=2, ensure_ascii=False) + "\n")
-    (args.out / "changelog.json").write_text(json.dumps(changelog, indent=2, ensure_ascii=False) + "\n")
+    (args.out / "story.json").write_text(json.dumps(story, indent=2, ensure_ascii=False) + "\n")
     (args.out / "claims.json").write_text(json.dumps(claims, indent=2, ensure_ascii=False) + "\n")
     (args.out / "bandwidth.json").write_text(json.dumps(bandwidth, indent=2, ensure_ascii=False) + "\n")
     (args.out / "readings.json").write_text(json.dumps(readings, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {args.out / 'tree.json'}, changelog.json, claims.json, bandwidth.json and readings.json")
+    print(f"wrote {args.out / 'tree.json'}, story.json, claims.json, bandwidth.json and readings.json")
     written = write_headline(headline_path, headline, args.public)
     print("wrote the headline file " + " and its public copy ".join(str(p) for p in written))
     return 0

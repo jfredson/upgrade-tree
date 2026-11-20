@@ -5,6 +5,7 @@
 
 [[upgrade]]
 id = "senses-implant-restores-sight-to-a-blind-person"
+added_on = 2026-10-16
 name = "An implant gives a blind person back some sight"
 branch = "senses"
 description = """
@@ -42,6 +43,7 @@ thousands, which no retinal implant has reached."""
 
 [[upgrade]]
 id = "senses-cochlear-implant-gives-a-deaf-person-hearing"
+added_on = 2026-10-16
 name = "A cochlear implant gives a deaf person hearing"
 branch = "senses"
 description = """
@@ -77,6 +79,7 @@ that February; the original has no web page of its own, so the library index ent
 
 [[upgrade]]
 id = "senses-gene-therapy-restores-sight-in-an-inherited-blindness"
+added_on = 2026-10-16
 name = "A gene therapy restores sight in an inherited blindness"
 branch = "senses"
 description = """
@@ -109,6 +112,7 @@ the thousands; the treated population is in the hundreds because the disease is 
 
 [[upgrade]]
 id = "senses-gene-therapy-restores-hearing-in-a-child-born-deaf"
+added_on = 2026-10-16
 name = "A gene therapy restores hearing in a child born deaf"
 branch = "senses"
 description = """
@@ -148,6 +152,7 @@ revisions = [
 
 [[upgrade]]
 id = "senses-implant-in-the-visual-cortex-gives-sight-without-eyes"
+added_on = 2026-10-16
 name = "An implant in the visual cortex gives sight with no working eyes"
 branch = "senses"
 description = """
@@ -178,6 +183,7 @@ mind."""
 
 [[upgrade]]
 id = "senses-device-gives-a-person-a-new-sense"
+added_on = 2026-10-16
 name = "A device gives a person a sense no human is born with"
 branch = "senses"
 description = """

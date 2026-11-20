@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2024-06-25-kurzweil-the-singularity-is-nearer"
+added_on = 2026-10-16
 speaker = "Ray Kurzweil"
 when = "2024-06-25"
 when_note = "The e-book and audiobook date, verified on the publisher's page; the hardcover date was seen only in a search summary of that page and is marked unverified to the day."

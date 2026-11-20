@@ -33,13 +33,32 @@ test is "what would count". Explain an idea in ordinary words before naming it.
 ## Public text is written for visitors
 
 Decided by John on 2026-11-14, after a review of the live site found notes to him on public pages.
-`CHANGELOG.md` (shown word for word on the About page), each upgrade's `notes` and the reasons
-on its dated changes appear on public pages, so each is written for a visitor: what changed or was decided,
-and why. Never who was told, who ruled or what is waiting for whom ("flagged for John", "John's
-ruling", "waiting on me"), and never how the work was done (which computer, a session, a routine, a
-pull request or a commit). A question for John goes on the roadmap, not in the record.
-`scripts/check_site.py` reads the built site after every build and stops the deploy if a page
-carries one of those phrases, the check The Belt Equation has run since 2026-10-27.
+Each upgrade's `notes`, the reasons on its dated changes, a claim's text and every line of a weekly
+reading except its search queries appear on public pages, so each is written for a visitor: what
+changed or was decided, and why. Never who was told, who ruled or what is waiting for whom ("flagged
+for John", "John's ruling", "waiting on me"), and never how the work was done (which computer, a
+session, a routine, a pull request or a commit). A question for John goes on the roadmap, not in
+the record. `scripts/check_site.py` reads the built site after every build and stops the deploy if
+a page carries one of those phrases, the check The Belt Equation has run since 2026-10-27.
+
+## The site does not show the change log
+
+Decided by John on 2026-11-20. Until then the About page printed `CHANGELOG.md` word for word, and
+it showed visitors tool names, file names and two lines saying facts had been "written from
+memory". Now the "story so far" part of the About page is built only from the records' own dated
+changes (`scripts/export.py`, `what_changed`), one plain line per day: an upgrade moving up a
+stage, a date revised, an upgrade, claim or speed-chart figure added, an entry brought up to date,
+a reading run. This is how Outrunning Ageing has worked since 2026-10-18. What follows from it:
+
+- `CHANGELOG.md` is the working record for whoever works on the repository. Nothing in it reaches
+  a page, so it may name files and scripts. Before showing any other raw record text on a page,
+  ask John.
+- Every upgrade, every claim and every point on the speed chart carries `added_on`, the day it was
+  first written into the record. The export refuses one without it.
+- A change a visitor should be able to find is a dated revision on the record, not only a line in
+  the change log.
+- The words "from memory" on a built page stop the deploy. They are an alarm that a fact has not
+  been checked against a source: check the fact, do not reword the line.
 
 ## Design
 

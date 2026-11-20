@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2000-02-01-warwick-wired-cyborg-essay"
+added_on = 2026-10-16
 speaker = "Kevin Warwick"
 role = "professor of cybernetics at the University of Reading"
 when = "2000-02-01"

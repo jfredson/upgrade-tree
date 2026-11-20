@@ -3,6 +3,7 @@
   "claims": [
     {
       "id": "2000-02-01-warwick-wired-cyborg-essay",
+      "added_on": "2026-10-16",
       "speaker": "Kevin Warwick",
       "role": "professor of cybernetics at the University of Reading",
       "critic": false,
@@ -55,6 +56,7 @@
     },
     {
       "id": "2003-10-warwick-archives-of-neurology",
+      "added_on": "2026-10-16",
       "speaker": "Kevin Warwick and seven co-authors",
       "role": "professor of cybernetics at the University of Reading, and the paper's subject",
       "critic": false,
@@ -107,6 +109,7 @@
     },
     {
       "id": "2005-bostrom-transhumanist-values",
+      "added_on": "2026-10-16",
       "speaker": "Nick Bostrom",
       "role": "Oxford philosopher",
       "critic": false,
@@ -152,6 +155,7 @@
     },
     {
       "id": "2005-09-26-kurzweil-the-singularity-is-near",
+      "added_on": "2026-10-16",
       "speaker": "Ray Kurzweil",
       "role": null,
       "critic": false,
@@ -208,6 +212,7 @@
     },
     {
       "id": "2013-02-17-nicolelis-aaas-boston",
+      "added_on": "2026-10-16",
       "speaker": "Miguel Nicolelis",
       "role": "Duke University neuroscientist",
       "critic": true,
@@ -251,6 +256,7 @@
     },
     {
       "id": "2014-03-02-schneider-the-philosophy-of-her",
+      "added_on": "2026-10-16",
       "speaker": "Susan Schneider",
       "role": "philosopher",
       "critic": true,
@@ -292,6 +298,7 @@
     },
     {
       "id": "2014-03-20-kurzweil-ted-hybrid-thinking",
+      "added_on": "2026-10-16",
       "speaker": "Ray Kurzweil",
       "role": null,
       "critic": false,
@@ -350,6 +357,7 @@
     },
     {
       "id": "2014-07-03-bostrom-superintelligence-chapter-2",
+      "added_on": "2026-10-16",
       "speaker": "Nick Bostrom",
       "role": "Oxford philosopher",
       "critic": false,
@@ -412,6 +420,7 @@
     },
     {
       "id": "2016-09-harari-homo-deus-chapter-1",
+      "added_on": "2026-10-16",
       "speaker": "Yuval Noah Harari",
       "role": null,
       "critic": false,
@@ -456,6 +465,7 @@
     },
     {
       "id": "2017-02-13-musk-world-governments-summit",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -504,6 +514,7 @@
     },
     {
       "id": "2017-04-20-musk-wait-but-why-neuralink-essay",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": "as reported by Tim Urban",
       "critic": false,
@@ -543,6 +554,7 @@
     },
     {
       "id": "2017-12-07-altman-the-merge",
+      "added_on": "2026-10-16",
       "speaker": "Sam Altman",
       "role": "then president of Y Combinator",
       "critic": false,
@@ -601,6 +613,7 @@
     },
     {
       "id": "2018-01-24-harari-davos-will-the-future-be-human",
+      "added_on": "2026-10-16",
       "speaker": "Yuval Noah Harari",
       "role": null,
       "critic": false,
@@ -664,6 +677,7 @@
     },
     {
       "id": "2018-04-05-musk-do-you-trust-this-computer",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -717,6 +731,7 @@
     },
     {
       "id": "2019-06-10-schneider-should-you-merge-with-ai",
+      "added_on": "2026-10-16",
       "speaker": "Susan Schneider",
       "role": "philosopher",
       "critic": true,
@@ -766,6 +781,7 @@
     },
     {
       "id": "2019-07-16-musk-neuralink-launch-event",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -826,6 +842,7 @@
     },
     {
       "id": "2019-08-14-schneider-financial-times-op-ed",
+      "added_on": "2026-10-16",
       "speaker": "Susan Schneider",
       "role": "philosopher",
       "critic": true,
@@ -870,6 +887,7 @@
     },
     {
       "id": "2020-07-09-musk-twitter-join-em",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -911,6 +929,7 @@
     },
     {
       "id": "2020-08-28-musk-neuralink-progress-update",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -957,6 +976,7 @@
     },
     {
       "id": "2020-08-29-jackson-science-media-centre",
+      "added_on": "2026-10-16",
       "speaker": "Andrew Jackson",
       "role": "professor of neural interfaces, Newcastle University",
       "critic": true,
@@ -1006,6 +1026,7 @@
     },
     {
       "id": "2021-05-27-nicolelis-inverse-interview",
+      "added_on": "2026-10-16",
       "speaker": "Miguel Nicolelis",
       "role": "Duke University neuroscientist",
       "critic": true,
@@ -1053,6 +1074,7 @@
     },
     {
       "id": "2022-04-oxley-ted-brain-implant-thoughts-into-text",
+      "added_on": "2026-10-16",
       "speaker": "Tom Oxley",
       "role": "chief executive of Synchron",
       "critic": false,
@@ -1108,6 +1130,7 @@
     },
     {
       "id": "2022-11-30-seo-neuralink-show-and-tell",
+      "added_on": "2026-10-16",
       "speaker": "DJ Seo",
       "role": "Neuralink co-founder",
       "critic": false,
@@ -1160,6 +1183,7 @@
     },
     {
       "id": "2024-06-25-kurzweil-the-singularity-is-nearer",
+      "added_on": "2026-10-16",
       "speaker": "Ray Kurzweil",
       "role": null,
       "critic": false,
@@ -1218,6 +1242,7 @@
     },
     {
       "id": "2024-08-02-seo-lex-fridman-podcast-438",
+      "added_on": "2026-10-16",
       "speaker": "DJ Seo",
       "role": "Neuralink co-founder and president",
       "critic": false,
@@ -1263,6 +1288,7 @@
     },
     {
       "id": "2024-12-17-zheng-meister-the-musk-illusion",
+      "added_on": "2026-10-23",
       "speaker": "Jieyu Zheng and Markus Meister",
       "role": "neuroscientists at the California Institute of Technology",
       "critic": true,
@@ -1518,6 +1544,7 @@
     },
     {
       "id": "2025-02-13-musk-world-governments-summit-remote",
+      "added_on": "2026-10-16",
       "speaker": "Elon Musk",
       "role": null,
       "critic": false,
@@ -1569,6 +1596,7 @@
     },
     {
       "id": "2026-10-16-neuralink-company-website",
+      "added_on": "2026-10-16",
       "speaker": "Neuralink",
       "role": "the company, on its own website",
       "critic": false,
@@ -1608,6 +1636,7 @@
     },
     {
       "id": "2026-10-30-musk-x-blindsight-ready",
+      "added_on": "2026-10-31",
       "speaker": "Elon Musk",
       "role": "Owner and co-founder of Neuralink",
       "critic": false,
@@ -1657,6 +1686,7 @@
     },
     {
       "id": "2026-10-30-musk-x-telepathy-bandwidth",
+      "added_on": "2026-10-31",
       "speaker": "Elon Musk",
       "role": "Owner and co-founder of Neuralink",
       "critic": false,

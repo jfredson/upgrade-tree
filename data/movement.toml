@@ -5,6 +5,7 @@
 
 [[upgrade]]
 id = "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch"
+added_on = 2026-10-16
 name = "A prosthetic arm moves by thought and feeds back touch"
 branch = "movement"
 description = """
@@ -38,6 +39,7 @@ touch restored to the nervous system, not a signal the person learns to read."""
 
 [[upgrade]]
 id = "movement-powered-exoskeleton-lets-a-paralysed-person-walk"
+added_on = 2026-10-16
 name = "A powered exoskeleton lets a paralysed person walk"
 branch = "movement"
 description = """
@@ -66,6 +68,7 @@ that year, about 820 in all, which is a count but not yet many, and other makers
 
 [[upgrade]]
 id = "movement-spinal-implant-lets-a-paralysed-person-walk-again"
+added_on = 2026-10-16
 name = "A spinal implant lets a paralysed person walk again on their own legs"
 branch = "movement"
 description = """
@@ -96,6 +99,7 @@ first human and not in clinical use."""
 
 [[upgrade]]
 id = "movement-bone-anchored-prosthetic-limb-with-nerve-control"
+added_on = 2026-10-16
 name = "A prosthetic limb fixed to the bone with nerve control"
 branch = "movement"
 description = """
@@ -128,6 +132,7 @@ becomes in clinical use on the FDA's 2015 record and the name changes."""
 
 [[upgrade]]
 id = "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body"
+added_on = 2026-10-16
 name = "A gene therapy builds stronger muscle in a healthy body"
 branch = "movement"
 description = """

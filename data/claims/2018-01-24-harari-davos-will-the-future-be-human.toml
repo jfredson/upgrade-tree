@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2018-01-24-harari-davos-will-the-future-be-human"
+added_on = 2026-10-16
 speaker = "Yuval Noah Harari"
 when = "2018-01-24"
 when_note = "The session date and time (15:15) are from the Forum's session page, reached only through search-engine snippets; a direct fetch was refused."

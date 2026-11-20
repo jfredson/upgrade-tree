@@ -5,6 +5,7 @@
 
 [[upgrade]]
 id = "lifespan-a-drug-adds-healthy-years-to-a-life"
+added_on = 2026-10-16
 name = "A drug makes people live longer in good health"
 branch = "lifespan"
 description = """
@@ -45,6 +46,7 @@ revisions = [
 
 [[upgrade]]
 id = "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal"
+added_on = 2026-10-16
 name = "Partially resetting cells reverses ageing in a living animal"
 branch = "lifespan"
 description = """
@@ -91,6 +93,7 @@ revisions = [
 
 [[upgrade]]
 id = "lifespan-a-drug-clears-aged-cells-from-a-persons-body"
+added_on = 2026-10-16
 name = "A drug clears aged cells from a person's body"
 branch = "lifespan"
 description = """
@@ -129,6 +132,7 @@ revisions = [
 
 [[upgrade]]
 id = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
+added_on = 2026-10-16
 name = "An organ from a gene-edited pig keeps a person alive"
 branch = "lifespan"
 description = """
@@ -176,6 +180,7 @@ revisions = [
 
 [[upgrade]]
 id = "lifespan-lab-grown-organ-works-in-a-person-for-a-year"
+added_on = 2026-10-16
 name = "A printed or lab-grown organ works in a person for a year"
 branch = "lifespan"
 description = """

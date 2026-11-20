@@ -1,0 +1,574 @@
+{
+  "sibling_site": "Outrunning Ageing",
+  "days": [
+    {
+      "date": "2026-11-15",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "weekly",
+          "upgrades_read": 33,
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [
+        {
+          "name": "Partially resetting cells reverses ageing in a living animal",
+          "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/"
+        }
+      ],
+      "readings": []
+    },
+    {
+      "date": "2026-11-09",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [
+        {
+          "name": "Partially resetting cells reverses ageing in a living animal",
+          "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/"
+        }
+      ],
+      "readings": []
+    },
+    {
+      "date": "2026-11-08",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "weekly",
+          "upgrades_read": 33,
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "monthly",
+          "upgrades_read": 35,
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "added": {
+        "upgrades": [],
+        "claims": [
+          {
+            "name": "Elon Musk (2026)",
+            "path": "/claims/#2026-10-30-musk-x-blindsight-ready"
+          },
+          {
+            "name": "Elon Musk (2026)",
+            "path": "/claims/#2026-10-30-musk-x-telepathy-bandwidth"
+          }
+        ],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": []
+    },
+    {
+      "date": "2026-10-25",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "weekly",
+          "upgrades_read": 33,
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "added": {
+        "upgrades": [],
+        "claims": [
+          {
+            "name": "Jieyu Zheng and Markus Meister (2024)",
+            "path": "/claims/#2024-12-17-zheng-meister-the-musk-illusion"
+          }
+        ],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [],
+      "readings": []
+    },
+    {
+      "date": "2026-10-20",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": [
+          {
+            "name": "Nicholas Card, Sergey Stavisky, David Brandman and colleagues at the University of California, Davis, in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          }
+        ]
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [],
+      "updated": [
+        {
+          "name": "A brain implant turns intended speech into text at conversational speed",
+          "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/"
+        },
+        {
+          "name": "A closed-loop implant detects a mood state and corrects it automatically",
+          "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/"
+        }
+      ],
+      "readings": []
+    },
+    {
+      "date": "2026-10-18",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [
+        {
+          "upgrade": {
+            "name": "A headset worn on the scalp controls a device without surgery",
+            "path": "/branches/link/link-scalp-headset-controls-a-device-without-surgery/"
+          },
+          "stage": "First human",
+          "old": "1988-12-01",
+          "new": "1977-05-01"
+        }
+      ],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "weekly",
+          "upgrades_read": 33,
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "added": {
+        "upgrades": [],
+        "claims": [],
+        "points": []
+      },
+      "moves": [],
+      "dates": [],
+      "linked": [
+        {
+          "name": "A drug clears aged cells from a person's body",
+          "path": "/branches/lifespan/lifespan-a-drug-clears-aged-cells-from-a-persons-body/"
+        },
+        {
+          "name": "A printed or lab-grown organ works in a person for a year",
+          "path": "/branches/lifespan/lifespan-lab-grown-organ-works-in-a-person-for-a-year/"
+        },
+        {
+          "name": "An organ from a gene-edited pig keeps a person alive",
+          "path": "/branches/lifespan/lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive/"
+        },
+        {
+          "name": "A drug makes people live longer in good health",
+          "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/"
+        },
+        {
+          "name": "Partially resetting cells reverses ageing in a living animal",
+          "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/"
+        }
+      ],
+      "updated": [],
+      "readings": []
+    },
+    {
+      "date": "2026-10-16",
+      "added": {
+        "upgrades": [
+          {
+            "name": "A baby is born with donor mitochondria to avoid an inherited disease",
+            "path": "/branches/inheritance/inheritance-baby-born-with-donor-mitochondria/"
+          },
+          {
+            "name": "Embryos are chosen by a genetic score for traits, not disease",
+            "path": "/branches/inheritance/inheritance-embryos-chosen-by-a-genetic-score-for-traits/"
+          },
+          {
+            "name": "A child is born from a gene-edited embryo",
+            "path": "/branches/inheritance/inheritance-child-born-from-a-gene-edited-embryo/"
+          },
+          {
+            "name": "A mammal is carried to birth in an artificial womb",
+            "path": "/branches/inheritance/inheritance-mammal-carried-to-birth-in-an-artificial-womb/"
+          },
+          {
+            "name": "A drug clears aged cells from a person's body",
+            "path": "/branches/lifespan/lifespan-a-drug-clears-aged-cells-from-a-persons-body/"
+          },
+          {
+            "name": "A printed or lab-grown organ works in a person for a year",
+            "path": "/branches/lifespan/lifespan-lab-grown-organ-works-in-a-person-for-a-year/"
+          },
+          {
+            "name": "An organ from a gene-edited pig keeps a person alive",
+            "path": "/branches/lifespan/lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive/"
+          },
+          {
+            "name": "A drug makes people live longer in good health",
+            "path": "/branches/lifespan/lifespan-a-drug-adds-healthy-years-to-a-life/"
+          },
+          {
+            "name": "Partially resetting cells reverses ageing in a living animal",
+            "path": "/branches/lifespan/lifespan-partially-resetting-cells-reverses-ageing-in-an-animal/"
+          },
+          {
+            "name": "A headset worn on the scalp controls a device without surgery",
+            "path": "/branches/link/link-scalp-headset-controls-a-device-without-surgery/"
+          },
+          {
+            "name": "A brain implant gives a person touch from a robotic hand",
+            "path": "/branches/link/link-brain-implant-gives-a-person-touch-from-a-robotic-hand/"
+          },
+          {
+            "name": "A brain implant turns intended speech into text at conversational speed",
+            "path": "/branches/link/link-brain-implant-turns-intended-speech-into-text/"
+          },
+          {
+            "name": "A fully implanted wireless brain chip lets a paralysed person control a computer",
+            "path": "/branches/link/link-wireless-brain-implant-controls-a-computer/"
+          },
+          {
+            "name": "A wired brain implant lets a paralysed person control a cursor",
+            "path": "/branches/link/link-wired-brain-implant-controls-a-cursor/"
+          },
+          {
+            "name": "A brain link carries more information per second than speech",
+            "path": "/branches/link/link-brain-link-carries-more-information-than-speech/"
+          },
+          {
+            "name": "An uploaded animal brain reproduces something it learned",
+            "path": "/branches/link/link-uploaded-animal-brain-reproduces-what-it-learned/"
+          },
+          {
+            "name": "An always-on AI assistant is used daily by most adults in a country",
+            "path": "/branches/mind/mind-ai-assistant-used-daily-by-most-adults-in-a-country/"
+          },
+          {
+            "name": "A brain implant improves memory recall in a person",
+            "path": "/branches/mind/mind-brain-implant-improves-memory-recall-in-a-person/"
+          },
+          {
+            "name": "Electrical stimulation improves learning in healthy adults",
+            "path": "/branches/mind/mind-electrical-stimulation-improves-learning-in-healthy-adults/"
+          },
+          {
+            "name": "A drug raises a measured thinking ability in healthy adults",
+            "path": "/branches/mind/mind-drug-raises-a-measured-thinking-ability-in-healthy-adults/"
+          },
+          {
+            "name": "A psychedelic therapy is approved for prescription",
+            "path": "/branches/mood/mood-psychedelic-therapy-approved-for-prescription/"
+          },
+          {
+            "name": "A brain implant lifts severe depression",
+            "path": "/branches/mood/mood-brain-implant-lifts-severe-depression/"
+          },
+          {
+            "name": "A closed-loop implant detects a mood state and corrects it automatically",
+            "path": "/branches/mood/mood-closed-loop-implant-detects-and-corrects-a-mood-state/"
+          },
+          {
+            "name": "A treatment removes a specific fear memory",
+            "path": "/branches/mood/mood-treatment-removes-a-specific-fear-memory/"
+          },
+          {
+            "name": "A powered exoskeleton lets a paralysed person walk",
+            "path": "/branches/movement/movement-powered-exoskeleton-lets-a-paralysed-person-walk/"
+          },
+          {
+            "name": "A prosthetic arm moves by thought and feeds back touch",
+            "path": "/branches/movement/movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch/"
+          },
+          {
+            "name": "A prosthetic limb fixed to the bone with nerve control",
+            "path": "/branches/movement/movement-bone-anchored-prosthetic-limb-with-nerve-control/"
+          },
+          {
+            "name": "A spinal implant lets a paralysed person walk again on their own legs",
+            "path": "/branches/movement/movement-spinal-implant-lets-a-paralysed-person-walk-again/"
+          },
+          {
+            "name": "A gene therapy builds stronger muscle in a healthy body",
+            "path": "/branches/movement/movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body/"
+          },
+          {
+            "name": "A cochlear implant gives a deaf person hearing",
+            "path": "/branches/senses/senses-cochlear-implant-gives-a-deaf-person-hearing/"
+          },
+          {
+            "name": "A gene therapy restores hearing in a child born deaf",
+            "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/"
+          },
+          {
+            "name": "A gene therapy restores sight in an inherited blindness",
+            "path": "/branches/senses/senses-gene-therapy-restores-sight-in-an-inherited-blindness/"
+          },
+          {
+            "name": "An implant gives a blind person back some sight",
+            "path": "/branches/senses/senses-implant-restores-sight-to-a-blind-person/"
+          },
+          {
+            "name": "A device gives a person a sense no human is born with",
+            "path": "/branches/senses/senses-device-gives-a-person-a-new-sense/"
+          },
+          {
+            "name": "An implant in the visual cortex gives sight with no working eyes",
+            "path": "/branches/senses/senses-implant-in-the-visual-cortex-gives-sight-without-eyes/"
+          }
+        ],
+        "claims": [
+          {
+            "name": "Kevin Warwick (2000)",
+            "path": "/claims/#2000-02-01-warwick-wired-cyborg-essay"
+          },
+          {
+            "name": "Kevin Warwick and seven co-authors (2003)",
+            "path": "/claims/#2003-10-warwick-archives-of-neurology"
+          },
+          {
+            "name": "Nick Bostrom (2005)",
+            "path": "/claims/#2005-bostrom-transhumanist-values"
+          },
+          {
+            "name": "Ray Kurzweil (2005)",
+            "path": "/claims/#2005-09-26-kurzweil-the-singularity-is-near"
+          },
+          {
+            "name": "Miguel Nicolelis (2013)",
+            "path": "/claims/#2013-02-17-nicolelis-aaas-boston"
+          },
+          {
+            "name": "Susan Schneider (2014)",
+            "path": "/claims/#2014-03-02-schneider-the-philosophy-of-her"
+          },
+          {
+            "name": "Ray Kurzweil (2014)",
+            "path": "/claims/#2014-03-20-kurzweil-ted-hybrid-thinking"
+          },
+          {
+            "name": "Nick Bostrom (2014)",
+            "path": "/claims/#2014-07-03-bostrom-superintelligence-chapter-2"
+          },
+          {
+            "name": "Yuval Noah Harari (2016)",
+            "path": "/claims/#2016-09-harari-homo-deus-chapter-1"
+          },
+          {
+            "name": "Elon Musk (2017)",
+            "path": "/claims/#2017-02-13-musk-world-governments-summit"
+          },
+          {
+            "name": "Elon Musk (2017)",
+            "path": "/claims/#2017-04-20-musk-wait-but-why-neuralink-essay"
+          },
+          {
+            "name": "Sam Altman (2017)",
+            "path": "/claims/#2017-12-07-altman-the-merge"
+          },
+          {
+            "name": "Yuval Noah Harari (2018)",
+            "path": "/claims/#2018-01-24-harari-davos-will-the-future-be-human"
+          },
+          {
+            "name": "Elon Musk (2018)",
+            "path": "/claims/#2018-04-05-musk-do-you-trust-this-computer"
+          },
+          {
+            "name": "Susan Schneider (2019)",
+            "path": "/claims/#2019-06-10-schneider-should-you-merge-with-ai"
+          },
+          {
+            "name": "Elon Musk (2019)",
+            "path": "/claims/#2019-07-16-musk-neuralink-launch-event"
+          },
+          {
+            "name": "Susan Schneider (2019)",
+            "path": "/claims/#2019-08-14-schneider-financial-times-op-ed"
+          },
+          {
+            "name": "Elon Musk (2020)",
+            "path": "/claims/#2020-07-09-musk-twitter-join-em"
+          },
+          {
+            "name": "Elon Musk (2020)",
+            "path": "/claims/#2020-08-28-musk-neuralink-progress-update"
+          },
+          {
+            "name": "Andrew Jackson (2020)",
+            "path": "/claims/#2020-08-29-jackson-science-media-centre"
+          },
+          {
+            "name": "Miguel Nicolelis (2021)",
+            "path": "/claims/#2021-05-27-nicolelis-inverse-interview"
+          },
+          {
+            "name": "Tom Oxley (2022)",
+            "path": "/claims/#2022-04-oxley-ted-brain-implant-thoughts-into-text"
+          },
+          {
+            "name": "DJ Seo (2022)",
+            "path": "/claims/#2022-11-30-seo-neuralink-show-and-tell"
+          },
+          {
+            "name": "Ray Kurzweil (2024)",
+            "path": "/claims/#2024-06-25-kurzweil-the-singularity-is-nearer"
+          },
+          {
+            "name": "DJ Seo (2024)",
+            "path": "/claims/#2024-08-02-seo-lex-fridman-podcast-438"
+          },
+          {
+            "name": "Elon Musk (2025)",
+            "path": "/claims/#2025-02-13-musk-world-governments-summit-remote"
+          },
+          {
+            "name": "Neuralink (2026)",
+            "path": "/claims/#2026-10-16-neuralink-company-website"
+          }
+        ],
+        "points": [
+          {
+            "name": "Leigh Hochberg and colleagues at Massachusetts General Hospital and Brown University, with Cyberkinetics Neurotechnology Systems (John Donoghue, senior author).",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Chethan Pandarinath, Paul Nuyujukian and colleagues at Stanford (Krishna Shenoy and Jaimie Henderson, senior authors), in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Chethan Pandarinath, Paul Nuyujukian and colleagues at Stanford (Krishna Shenoy and Jaimie Henderson, senior authors), in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Francis Willett and colleagues at Stanford (Jaimie Henderson and Krishna Shenoy, senior authors), in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Francis Willett, Erin Kunz, Chaofei Fan and colleagues at Stanford (Jaimie Henderson, senior author), in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Sean Metzger, Kaylo Littlejohn, Alexander Silva, David Moses, Margaret Seaton and colleagues at the University of California, San Francisco (Edward Chang, senior author).",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Neuralink, in its own progress post; measured by the company, not in a peer-reviewed paper.",
+            "path": "/branches/link/#bandwidth"
+          },
+          {
+            "name": "Nicholas Card, Sergey Stavisky, David Brandman and colleagues at the University of California, Davis, in the BrainGate2 pilot trial.",
+            "path": "/branches/link/#bandwidth"
+          }
+        ]
+      },
+      "moves": [
+        {
+          "upgrade": {
+            "name": "A gene therapy restores hearing in a child born deaf",
+            "path": "/branches/senses/senses-gene-therapy-restores-hearing-in-a-child-born-deaf/"
+          },
+          "from": "First human",
+          "to": "In clinical use"
+        }
+      ],
+      "dates": [
+        {
+          "upgrade": {
+            "name": "A headset worn on the scalp controls a device without surgery",
+            "path": "/branches/link/link-scalp-headset-controls-a-device-without-surgery/"
+          },
+          "stage": "In wide use",
+          "old": "2015-12-31",
+          "new": "2014-08-28"
+        }
+      ],
+      "linked": [],
+      "updated": [],
+      "readings": [
+        {
+          "path": "/reading/",
+          "scope": "monthly",
+          "upgrades_read": 35,
+          "moved": 0
+        }
+      ]
+    }
+  ]
+}

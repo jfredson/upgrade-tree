@@ -31,6 +31,7 @@ text."""
 
 [[point]]
 id = "2006-braingate-first-participant"
+added_on = 2026-10-16
 date = 2006-07-13
 measure = "cursor"
 no_figure = true
@@ -46,6 +47,7 @@ note = "Here as the series' starting mark: the first hundred-electrode implant i
 
 [[point]]
 id = "2017-braingate2-typing-correct-characters"
+added_on = 2026-10-16
 date = 2017-02-21
 measure = "text"
 value = 39.2
@@ -61,6 +63,7 @@ upgrade = "link-wired-brain-implant-controls-a-cursor"
 
 [[point]]
 id = "2017-braingate2-cursor-bits-per-second"
+added_on = 2026-10-16
 date = 2017-02-21
 measure = "cursor"
 value = 4.16
@@ -76,6 +79,7 @@ upgrade = "link-wired-brain-implant-controls-a-cursor"
 
 [[point]]
 id = "2021-stanford-handwriting-decoder"
+added_on = 2026-10-16
 date = 2021-05-12
 measure = "text"
 value = 90
@@ -91,6 +95,7 @@ upgrade = "link-wired-brain-implant-controls-a-cursor"
 
 [[point]]
 id = "2023-stanford-speech-decoder"
+added_on = 2026-10-16
 date = 2023-08-23
 measure = "text"
 value = 62
@@ -106,6 +111,7 @@ upgrade = "link-brain-implant-turns-intended-speech-into-text"
 
 [[point]]
 id = "2023-ucsf-speech-decoder-and-avatar"
+added_on = 2026-10-16
 date = 2023-08-23
 measure = "text"
 value = 78
@@ -121,6 +127,7 @@ upgrade = "link-brain-implant-turns-intended-speech-into-text"
 
 [[point]]
 id = "2024-neuralink-cursor-bits-per-second"
+added_on = 2026-10-16
 date = 2024-05-08
 measure = "cursor"
 value = 8.0
@@ -136,6 +143,7 @@ upgrade = "link-wireless-brain-implant-controls-a-computer"
 
 [[point]]
 id = "2024-uc-davis-speech-decoder"
+added_on = 2026-10-16
 date = 2024-08-14
 measure = "text"
 value = 31.6
@@ -151,6 +159,7 @@ upgrade = "link-brain-implant-turns-intended-speech-into-text"
 
 [[point]]
 id = "2026-uc-davis-speech-implant-at-home"
+added_on = 2026-10-20
 date = 2026-06-15
 measure = "text"
 value = 56

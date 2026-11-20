@@ -28,7 +28,7 @@ A Sentient Horizons project, sibling of The Belt Equation, The Quiet Galaxy and 
 - `scripts/export.py` validates the record and writes the JSON the site reads (`site/src/data/`, committed) and the headline file. `python3 scripts/export.py --check` validates without writing, and refuses a missing or stale headline file; `python3 scripts/test_headline.py` tests that check.
 - `scripts/check_quotes.py` checks the quoted words of claims held on YouTube recordings against two automatic transcripts and prints a table; it never writes to the record (`docs/check-quotes.md`). `scripts/sibling_check.py` compares the five shared entries with Outrunning Ageing's records and prints a verdict per pair.
 - `site/` is the website: an Astro 5 static site, deployed to Cloudflare Workers static assets. See `site/README.md`.
-- `CHANGELOG.md` records every change to the record, the rules or the site, with absolute dates. The site's Story page renders it.
+- `CHANGELOG.md` records every change to the record, the rules or the site, with absolute dates. The site does not show it (since 2026-11-20): the About page's "story so far" is built from the records' own dated changes.
 
 ## Deploying
 

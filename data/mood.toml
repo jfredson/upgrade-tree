@@ -5,6 +5,7 @@
 
 [[upgrade]]
 id = "mood-brain-implant-lifts-severe-depression"
+added_on = 2026-10-16
 name = "A brain implant lifts severe depression"
 branch = "mood"
 description = """
@@ -33,6 +34,7 @@ approval."""
 
 [[upgrade]]
 id = "mood-closed-loop-implant-detects-and-corrects-a-mood-state"
+added_on = 2026-10-16
 name = "A closed-loop implant detects a mood state and corrects it automatically"
 branch = "mood"
 description = """
@@ -73,6 +75,7 @@ revisions = [
 
 [[upgrade]]
 id = "mood-psychedelic-therapy-approved-for-prescription"
+added_on = 2026-10-16
 name = "A psychedelic therapy is approved for prescription"
 branch = "mood"
 description = """
@@ -106,6 +109,7 @@ Australian scheme are in the low hundreds."""
 
 [[upgrade]]
 id = "mood-treatment-removes-a-specific-fear-memory"
+added_on = 2026-10-16
 name = "A treatment removes a specific fear memory"
 branch = "mood"
 description = """

@@ -7,11 +7,11 @@ https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2
 ## How it fits together
 
     data/*.toml  ──┐                         ┌──►  site/src/data/*.json  ──►  astro build  ──►  dist/  ──►  wrangler deploy
-    CHANGELOG.md ──┤  scripts/export.py  ────┤
+                   ├  scripts/export.py  ────┤
                    │                         └──►  data/headline.json  ──►  site/public/data/headline.json  ──►  dist/data/headline.json
 
 - **Python owns the data.** `scripts/export.py` validates the record against
-  `docs/upgrade-schema.md` and writes `src/data/tree.json`, `changelog.json`, `claims.json`,
+  `docs/upgrade-schema.md` and writes `src/data/tree.json`, `story.json`, `claims.json`,
   `bandwidth.json` and `readings.json`. Every `npm run build` and `npm run dev` runs the export
   first, so the site always reflects the record in `data/`; the files are committed as well
   (a session regenerates them when the record changes), so a reader of the repository sees the
@@ -44,7 +44,7 @@ https://theupgradetree.jfredson.workers.dev serves the same build). Scaffolded 2
 | `/claims/` | The claims: what people have said about merging with machines, in date order, each with its one exact phrase, the plain account, the source and how the words were checked; beside them, what the seven branches have reached and the headline count (added 2026-10-16). |
 | `/reading/` | This week's reading: every weekly reading of the news against the upgrades, newest first, the items grouped by branch, the flagged items waiting on John, and a key to the four verdicts (added 2026-10-16). |
 | `/method/` | How a stage is decided, in plain words. |
-| `/story/` | The changelog, day by day. |
+| `/story/` | Now part of `/about/`: what changed in the record, one line per day, built from the records' own dated changes (not from `CHANGELOG.md`, since 2026-11-20). |
 | `/disagree/` | How to name a missing upgrade, question a stage or question a test. |
 | `/data/headline.json` | The headline file, the same bytes as `data/headline.json` in the repository (added 2026-10-17). |
 | `/sitemap.xml` | Every public page, built from the record (added 2026-10-17). |

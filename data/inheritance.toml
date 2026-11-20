@@ -5,6 +5,7 @@
 
 [[upgrade]]
 id = "inheritance-child-born-from-a-gene-edited-embryo"
+added_on = 2026-10-16
 name = "A child is born from a gene-edited embryo"
 branch = "inheritance"
 description = """
@@ -35,6 +36,7 @@ regulator to change its mind; the horizon is set long for that reason."""
 
 [[upgrade]]
 id = "inheritance-baby-born-with-donor-mitochondria"
+added_on = 2026-10-16
 name = "A baby is born with donor mitochondria to avoid an inherited disease"
 branch = "inheritance"
 description = """
@@ -78,6 +80,7 @@ population in the hundreds or more, and the total so far is in the tens."""
 
 [[upgrade]]
 id = "inheritance-embryos-chosen-by-a-genetic-score-for-traits"
+added_on = 2026-10-16
 name = "Embryos are chosen by a genetic score for traits, not disease"
 branch = "inheritance"
 description = """
@@ -112,6 +115,7 @@ record, since customers have used the scores."""
 
 [[upgrade]]
 id = "inheritance-mammal-carried-to-birth-in-an-artificial-womb"
+added_on = 2026-10-16
 name = "A mammal is carried to birth in an artificial womb"
 branch = "inheritance"
 description = """

@@ -4,7 +4,7 @@
 // tree.json from the repository before the headline file existed (2026-10-17: it now reads
 // data/headline.json).
 import treeJson from '../data/tree.json';
-import changelogJson from '../data/changelog.json';
+import storyJson from '../data/story.json';
 import claimsJson from '../data/claims.json';
 import bandwidthJson from '../data/bandwidth.json';
 
@@ -46,6 +46,8 @@ export type Revision = { date: string | null; field: string | null; old: unknown
 
 export type Upgrade = {
   id: string;
+  /** The day the entry was first written into the record. */
+  added_on: string;
   name: string;
   branch: string;
   branch_name: string;
@@ -115,7 +117,19 @@ export type Tree = {
   } | null;
 };
 
-export type Changelog = { source: string; intro: string; days: { date: string; items: string[] }[] };
+// "What changed", one entry per day, built from the records' own dated changes (scripts/export.py,
+// what_changed). Since 2026-11-20 the site no longer shows the repository's change log.
+export type StoryRef = { name: string; path: string };
+export type StoryDay = {
+  date: string;
+  added: { upgrades: StoryRef[]; claims: StoryRef[]; points: StoryRef[] };
+  moves: { upgrade: StoryRef; from: string; to: string }[];
+  dates: { upgrade: StoryRef; stage: string | null; old: string; new: string }[];
+  linked: StoryRef[];
+  updated: StoryRef[];
+  readings: { path: string; scope: 'weekly' | 'monthly'; upgrades_read: number; moved: number }[];
+};
+export type Story = { sibling_site: string; days: StoryDay[] };
 
 // The claims: what people have said about merging with machines (data/claims/, added 2026-10-16).
 export type BearsOn = { kind: 'branch' | 'upgrade'; key: string; name: string; path: string; branch?: string; stage_label?: string };
@@ -200,7 +214,7 @@ export type Bandwidth = {
 };
 
 export const tree = treeJson as Tree;
-export const changelog = changelogJson as Changelog;
+export const story = storyJson as Story;
 export const claims = claimsJson as Claims;
 export const bandwidth = bandwidthJson as Bandwidth;
 

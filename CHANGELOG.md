@@ -1,9 +1,10 @@
 # Changelog
 
-Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.
+Every change to the record, the stage ladder or the site, with absolute dates. Newest first. Since 2026-11-20 the site does not show this file: the About page's "story so far" is built from the records' own dated changes.
 
 ## 2026-11-20
 
+- **The "story so far" part of the About page no longer prints this change log. It is built from the records' own dated changes, one plain line per day** (decided 2026-11-20; `scripts/export.py`, `what_changed`; `site/src/components/AboutStory.astro`). A day's line can say that an upgrade moved up a stage, that a date was revised, that upgrades, claims or speed-chart figures were added, that an entry was brought up to date, or that a reading ran, and each part links to what it names. To make that possible every upgrade, claim and speed-chart point now carries `added_on`, the day it was first written into the record, filled in from the repository's history (35 upgrades and 27 claims on 2026-10-16, one claim on 2026-10-23, two on 2026-10-31; eight chart points on 2026-10-16 and one on 2026-10-20), and the export refuses a record without it. The export no longer reads this file or writes `changelog.json`; it writes `story.json`. A day on which only wording, pages or rules changed has no line, because the record holds no dated change for it. The deploy check passes. No stage, date of a fact, source or count changed.
 - **The About page no longer says that an entry can carry a list of statements still to be checked, and every build of the site is now stopped if a page says that a fact was written down without being checked against a source.** Nothing in the record rests on an unchecked statement today, and none has since 2026-10-17. If that wording ever appears on a page again, it means a statement needs checking before the page is published, so the build stops until the statement has been checked.
 - **Seven claims no longer say which computer their recordings were transcribed on, and twenty-one notes on claims and upgrades now say "upgrade" where they used a working word for one.** Wording only: no stage, date, source, quoted phrase or count changed. Every build of the site now also stops if a page names the computer a piece of work was done on.
 

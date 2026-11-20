@@ -1,6 +1,7 @@
 # Moved from the TimeAssembler "Claims log" document on 2026-10-16, as it stood there.
 [claim]
 id = "2005-09-26-kurzweil-the-singularity-is-near"
+added_on = 2026-10-16
 speaker = "Ray Kurzweil"
 when = "2005-09-26"
 when_note = "The publisher's on-sale date; retail listings and the author's excerpts page say 2005-09-22. Both come from the publisher's own materials; the on-sale date is used here."
