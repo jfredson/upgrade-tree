@@ -42,7 +42,7 @@ PHRASES = [
     r"\bhis call\b",
     r"\bhe ruled\b",
     r"reads it on return",
-    r"\bmy mac\b",
+    r"\b(my|this) mac\b",      # "run on this Mac" (added 2026-11-20: seven claims said it)
     r"cloud (session|workspace|routine)",
     r"pull request",
     r"\[draft\b",

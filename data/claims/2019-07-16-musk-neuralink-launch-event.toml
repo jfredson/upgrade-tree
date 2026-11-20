@@ -13,7 +13,7 @@ The merger passage runs about 05:30 to 08:21; a second remark is in the audience
 about 01:22:13 to 01:22:27."""
 source_url = "https://www.youtube.com/watch?v=r-vbh3t7WVI"
 source_locator = "about 05:30 to 08:21, and 01:22:13 to 01:22:27"
-checked_how = "Two automatic transcripts differ on a word; settled by a third source. On 2026-10-17 the quoted phrase was found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac (captions 5:56, Whisper 5:56). The account also rests on one word in the audience answer at about 01:22:15, in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence': the captions read it 'sympotic', Whisper large-v3-turbo reads 'sympathetic', and a larger Whisper model (large-v3, run on this Mac the same day) reads 'symbiotic', which is the entry's reading. No person has listened to the recording; the project's rule does not need one."
+checked_how = "Two automatic transcripts differ on a word; settled by a third source. On 2026-10-17 the quoted phrase was found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo) (captions 5:56, Whisper 5:56). The account also rests on one word in the audience answer at about 01:22:15, in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence': the captions read it 'sympotic', Whisper large-v3-turbo reads 'sympathetic', and a larger Whisper model (large-v3, run the same day) reads 'symbiotic', which is the entry's reading. No person has listened to the recording; the project's rule does not need one."
 words = "a sort of symbiosis with artificial intelligence"
 words_locator = "at 05:53 to 05:59"
 also_checked = [
@@ -31,7 +31,7 @@ solving brain diseases, is reducing the existential threat of AI. In the questio
 device will be paid for, he says someone who chooses symbiosis with AI could repay a loan with
 superhuman intelligence, and that the first order of business is making it work safely."""
 bears_on = ["link"]
-bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf."
+bears_on_note = "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade."
 coverage = ["Vice, Axios, Euronews and 1News on 2019-07-17, most leading with the symbiosis phrase and carrying the not-mandatory hedge."]
 
 [claim.transcript_check]
@@ -39,7 +39,7 @@ result = "settled"
 checked_on = 2026-10-17
 whisper_model = "mlx-community/whisper-large-v3-turbo"
 settled_by = "larger-model"
-settled_with = "OpenAI's Whisper large-v3 (mlx-community/whisper-large-v3-mlx), a larger model than the turbo version used for the second transcript, run on this Mac on 2026-10-17; it reads the word as symbiotic"
+settled_with = "OpenAI's Whisper large-v3 (mlx-community/whisper-large-v3-mlx), a larger model than the turbo version used for the second transcript, run on 2026-10-17; it reads the word as symbiotic"
 
 [[claim.transcript_check.readings]]
 passage = "if you want to be symbiotic with AI (audience answer about the loan, about 01:22:15)"

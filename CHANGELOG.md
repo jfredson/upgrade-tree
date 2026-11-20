@@ -4,7 +4,8 @@ Every change to the record, the stage ladder or the site, with absolute dates. N
 
 ## 2026-11-20
 
-- **DRAFT on a branch, not yet approved or published: the About page no longer describes entries as carrying unchecked claims, and the deploy check now stops any page that admits a fact was written without being checked** (`site/src/components/AboutMethod.astro`, `scripts/check_site.py`; decided 2026-11-20). No entry carries such a list today. The check cannot pass yet: this file is printed on the Story page, and two of its older lines use the phrase the check now stops. Those lines, and whether the Story page should print this file at all, are left for a decision before this branch is merged.
+- **The About page no longer says that an entry can carry a list of statements still to be checked, and every build of the site is now stopped if a page says that a fact was written down without being checked against a source.** Nothing in the record rests on an unchecked statement today, and none has since 2026-10-17. If that wording ever appears on a page again, it means a statement needs checking before the page is published, so the build stops until the statement has been checked.
+- **Seven claims no longer say which computer their recordings were transcribed on, and twenty-one notes on claims and upgrades now say "upgrade" where they used a working word for one.** Wording only: no stage, date, source, quoted phrase or count changed. Every build of the site now also stops if a page names the computer a piece of work was done on.
 
 ## 2026-11-15
 

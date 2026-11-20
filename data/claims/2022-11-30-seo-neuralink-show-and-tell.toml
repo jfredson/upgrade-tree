@@ -16,7 +16,7 @@ from South Korea at 13, which fits Seo. Attribution rests on that, not on a spea
 transcript. The passage runs 37:19 to 40:10."""
 source_url = "https://www.youtube.com/watch?v=YreDYmXTYi4"
 source_locator = "37:19 to 40:10"
-checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one."
+checked_how = "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one."
 words = "how do you create a high bandwidth generalized interface to the brain"
 words_locator = "at 39:14 to 39:22"
 claimed = """

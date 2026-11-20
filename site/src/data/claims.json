@@ -40,7 +40,7 @@
           "stage_label": "First human"
         }
       ],
-      "bears_on_note": "The link to machines; also the new-sense leaf on the senses branch (he raises an extra sense as a later aim).",
+      "bears_on_note": "The link to machines; also the new-sense upgrade on the senses branch (he raises an extra sense as a later aim).",
       "coverage": [],
       "paraphrase": {
         "repeated": "Warwick's own site describes the 1998 chip in softer terms, as carrying identification and medical data.",
@@ -92,7 +92,7 @@
           "stage_label": "First human"
         }
       ],
-      "bears_on_note": "The link to machines (a wired nerve implant controlling a device), and the new-sense leaf on the senses branch.",
+      "bears_on_note": "The link to machines (a wired nerve implant controlling a device), and the new-sense upgrade on the senses branch.",
       "coverage": [],
       "paraphrase": {
         "repeated": "\"First human to communicate telepathically\" and \"first cyborg\".",
@@ -239,7 +239,7 @@
           "stage_label": "Idea only"
         }
       ],
-      "bears_on_note": "The uploading long shot (an uploaded animal brain reproduces something it learned) on the link-to-machines branch; the position is that the leaf cannot be reached.",
+      "bears_on_note": "The uploading long shot (an uploaded animal brain reproduces something it learned) on the link-to-machines branch; the position is that the upgrade cannot be reached.",
       "coverage": [
         "Singularity Hub, 2013-03-10, repeating the same quotations faithfully."
       ],
@@ -335,7 +335,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "Memory and thinking (the always-on assistant leaf is the soft version of this; the nanobot version is a long shot), and the link to machines.",
+      "bears_on_note": "Memory and thinking (the always-on assistant upgrade is the soft version of this; the nanobot version is a long shot), and the link to machines.",
       "coverage": [],
       "paraphrase": {
         "repeated": "Nanobots will make us godlike.",
@@ -469,7 +469,7 @@
       "source": "Recording on the World Governments Summit YouTube channel, video id rCoFKUJ_8Yo (\"Mohammad Al Gergawi in a conversation with Elon Musk during WGS17\", uploaded 2017-02-15, 35 min). The passage runs about 24:48 to 27:14.",
       "source_url": "https://www.youtube.com/watch?v=rCoFKUJ_8Yo",
       "source_locator": "about 24:48 to 27:14",
-      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the official upload has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 26:15 and Whisper at 26:12 (the range given is widened to cover both). The thumb passage was read again in the captions on 2026-10-17 (26:54 to 26:59, \"10 bits per second or 100 if you being generous\", the captions dropping the \"'re\"), and the earlier Whisper reading of the same stretch has the same words. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the official upload has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 26:15 and Whisper at 26:12 (the range given is widened to cover both). The thumb passage was read again in the captions on 2026-10-17 (26:54 to 26:59, \"10 bits per second or 100 if you being generous\", the captions dropping the \"'re\"), and the earlier Whisper reading of the same stretch has the same words. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "agree",
@@ -492,7 +492,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [
         "Fortune, 2017-02-13, and many others that week; CNBC's 2018-02-13 anniversary recap. Most coverage led with \"must become cyborgs\", which is a tighter claim than the recording."
       ],
@@ -533,7 +533,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [],
       "paraphrase": null,
       "why_here": "This is the earliest Neuralink-era statement of the merger goal attributed to Musk, and the source most later merge-or-become-a-pet paraphrases trace to.",
@@ -586,7 +586,7 @@
           "path": "/branches/inheritance/"
         }
       ],
-      "bears_on_note": "The link to machines; memory and thinking (the always-on assistant leaf is his already-merged-by-phones point); inheritance (genetic enhancement).",
+      "bears_on_note": "The link to machines; memory and thinking (the always-on assistant upgrade is his already-merged-by-phones point); inheritance (genetic enhancement).",
       "coverage": [],
       "paraphrase": {
         "repeated": "The 2025 to 2075 window, and sometimes 2027, as Altman's prediction.",
@@ -614,7 +614,7 @@
       "source": "The Forum's recording, YouTube video id hL9uk4hKyg4 (World Economic Forum channel, uploaded 2018-01-25, 29 min). The session date, 2018-01-24 at 15:15, is from the Forum's session page (reached only through search-engine snippets; a direct fetch was refused). The passages run 4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00.",
       "source_url": "https://www.youtube.com/watch?v=hL9uk4hKyg4",
       "source_locator": "4:55 to 5:56, 7:20 to 7:45 and 13:29 to 14:00",
-      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track and no Forum transcript was found) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 4:56 and Whisper at 4:56. An earlier pass the same day, over the whole recording, also agreed on the other two passages (within about three seconds of the captions' times) and found the word hackable nowhere in the talk. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track and no Forum transcript was found) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 4:56 and Whisper at 4:56. An earlier pass the same day, over the whole recording, also agreed on the other two passages (within about three seconds of the captions' times) and found the word hackable nowhere in the talk. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "agree",
@@ -677,7 +677,7 @@
       "source": "The film itself. It premiered in Los Angeles on 2018-04-05 and streamed free online 2018-04-05 to 2018-04-08 at Musk's expense. The interview footage was recorded some time before release; the film does not date it. The link is an unofficial full upload on YouTube, video id 479tnO2pXkA (1 h 18 min), found on 2026-10-17 after the upload first used (video id 1-bLflj11fY, read 2026-10-16) was replaced by a 3-minute clip; the quoted line is at about 01:11:49 to 01:11:50 in both. The passage runs about 01:10:08 to 01:11:50.",
       "source_url": "https://www.youtube.com/watch?v=479tnO2pXkA",
       "source_locator": "about 01:10:08 to 01:11:50",
-      "checked_how": "Two automatic transcripts agree. YouTube's automatic captions of the upload this entry was first read from (video id 1-bLflj11fY, read 2026-10-16 and again 2026-10-17; the captions carry no speaker labels) have the quoted words at 1:11:49, and a transcription of the audio of the full copy linked here, made on 2026-10-17 by OpenAI's Whisper (model large-v3-turbo), run on this Mac, has them at 1:11:50. The words also match CNBC's own written transcription of the film (article of 2018-04-06) word for word, and sit in a stretch that is clearly Musk. The two transcripts come from two uploads of the same film, because the first upload is now a 3-minute clip of other material and the copy linked here has no captions. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. YouTube's automatic captions of the upload this entry was first read from (video id 1-bLflj11fY, read 2026-10-16 and again 2026-10-17; the captions carry no speaker labels) have the quoted words at 1:11:49, and a transcription of the audio of the full copy linked here, made on 2026-10-17 by OpenAI's Whisper (model large-v3-turbo), has them at 1:11:50. The words also match CNBC's own written transcription of the film (article of 2018-04-06) word for word, and sit in a stretch that is clearly Musk. The two transcripts come from two uploads of the same film, because the first upload is now a 3-minute clip of other material and the copy linked here has no captions. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": "https://www.youtube.com/watch?v=1-bLflj11fY",
       "transcript_check": {
         "result": "agree",
@@ -700,7 +700,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [
         "CNBC, 2018-04-06, \"Elon Musk warns A.I. could create an 'immortal dictator from which we can never escape'\" (published 13:40 UTC). The article quotes the dictator passage and the spread-widely passage, and says in its own voice that Musk believes humans should merge with AI to avoid becoming irrelevant. It does not quote any merge sentence from the film."
       ],
@@ -779,14 +779,14 @@
       "source": "Neuralink's own recording, YouTube video id r-vbh3t7WVI (\"Neuralink Launch Event\", Neuralink channel, uploaded 2019-07-17, 1 h 45 min). The event was the evening of 2019-07-16 Pacific time. The merger passage runs about 05:30 to 08:21; a second remark is in the audience questions at about 01:22:13 to 01:22:27.",
       "source_url": "https://www.youtube.com/watch?v=r-vbh3t7WVI",
       "source_locator": "about 05:30 to 08:21, and 01:22:13 to 01:22:27",
-      "checked_how": "Two automatic transcripts differ on a word; settled by a third source. On 2026-10-17 the quoted phrase was found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac (captions 5:56, Whisper 5:56). The account also rests on one word in the audience answer at about 01:22:15, in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence': the captions read it 'sympotic', Whisper large-v3-turbo reads 'sympathetic', and a larger Whisper model (large-v3, run on this Mac the same day) reads 'symbiotic', which is the entry's reading. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts differ on a word; settled by a third source. On 2026-10-17 the quoted phrase was found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo) (captions 5:56, Whisper 5:56). The account also rests on one word in the audience answer at about 01:22:15, in 'if you want to be symbiotic with AI, you could repay the loan with superhuman intelligence': the captions read it 'sympotic', Whisper large-v3-turbo reads 'sympathetic', and a larger Whisper model (large-v3, run the same day) reads 'symbiotic', which is the entry's reading. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "settled",
         "checked_on": "2026-10-17",
         "whisper_model": "mlx-community/whisper-large-v3-turbo",
         "settled_by": "larger-model",
-        "settled_with": "OpenAI's Whisper large-v3 (mlx-community/whisper-large-v3-mlx), a larger model than the turbo version used for the second transcript, run on this Mac on 2026-10-17; it reads the word as symbiotic",
+        "settled_with": "OpenAI's Whisper large-v3 (mlx-community/whisper-large-v3-mlx), a larger model than the turbo version used for the second transcript, run on 2026-10-17; it reads the word as symbiotic",
         "readings": [
           {
             "passage": "if you want to be symbiotic with AI (audience answer about the loan, about 01:22:15)",
@@ -814,7 +814,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [
         "Vice, Axios, Euronews and 1News on 2019-07-17, most leading with the symbiosis phrase and carrying the not-mandatory hedge."
       ],
@@ -855,7 +855,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The headline is about merging with AI; the entry names no leaf because the body was not read.",
+      "bears_on_note": "The headline is about merging with AI; the entry names no upgrade because the body was not read.",
       "coverage": [],
       "paraphrase": {
         "repeated": "The widely quoted line about a brain drain.",
@@ -899,7 +899,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [
         "Business Insider India, 2020-07-09, noting he had used the line before, on the Joe Rogan podcast and in his 2019 Shanghai conversation with Jack Ma."
       ],
@@ -924,7 +924,7 @@
       "source": "Neuralink's own recording, YouTube video id DVvmgjBL74w (\"Neuralink Progress Update, Summer 2020\", Neuralink channel, uploaded 2020-08-29, 1 h 13 min). The passage is in the team question round, about 01:09:02 to 01:09:56.",
       "source_url": "https://www.youtube.com/watch?v=DVvmgjBL74w",
       "source_locator": "about 01:09:02 to 01:09:56",
-      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 1:09:16 and Whisper at 1:09:16. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 1:09:16 and Whisper at 1:09:16. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "agree",
@@ -947,7 +947,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [],
       "paraphrase": null,
       "why_here": null,
@@ -1098,7 +1098,7 @@
           "path": "/branches/movement/"
         }
       ],
-      "bears_on_note": "The link to machines (the fully implanted wireless chip leaf and the bandwidth series), and movement and body.",
+      "bears_on_note": "The link to machines (the fully implanted wireless chip upgrade and the bandwidth series), and movement and body.",
       "coverage": [],
       "paraphrase": null,
       "why_here": null,
@@ -1121,7 +1121,7 @@
       "source": "Neuralink's own recording, YouTube video id YreDYmXTYi4 (Neuralink channel, uploaded 2022-12-01, 2 h 48 min; the event was the evening of 2022-11-30 Pacific time). His segment is listed in the company's own chapter list as \"Generalized Interface to the Brain (DJ)\" starting at 36:38; Musk hands over at 36:37, naming him as a founding team member, and the speaker at 37:19 says he moved from South Korea at 13, which fits Seo. Attribution rests on that, not on a speaker-labelled transcript. The passage runs 37:19 to 40:10.",
       "source_url": "https://www.youtube.com/watch?v=YreDYmXTYi4",
       "source_locator": "37:19 to 40:10",
-      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (the recording has no human-made subtitle track) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 39:15 and Whisper at 39:15. (An earlier run of Whisper with its default random retries once read the word bandwidth as 'bandless'; the check now runs it without retries, and it reads bandwidth.) No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "agree",
@@ -1203,7 +1203,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "Memory and thinking (the always-on assistant leaf as the soft version, the nanobot connection as the long shot); the link to machines.",
+      "bears_on_note": "Memory and thinking (the always-on assistant upgrade as the soft version, the nanobot connection as the long shot); the link to machines.",
       "coverage": [],
       "paraphrase": {
         "repeated": "\"When we merge with AI\", the title's framing.",
@@ -1531,7 +1531,7 @@
       "source": "Reuters' recording, YouTube video id eV396ioBs3g (\"LIVE: Elon Musk speaks at Dubai's World Governments Summit\", Reuters channel, 2025-02-13, 35 min). The relevant passage runs about 22:26 to 24:57.",
       "source_url": "https://www.youtube.com/watch?v=eV396ioBs3g",
       "source_locator": "about 22:26 to 24:57",
-      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (a machine-made track; searched across the whole file on 2026-10-16) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo), run on this Mac: the captions place them at 23:06 and Whisper at 23:05, inside the range given. An earlier pass the same day, over the whole recording, also agreed on the 99 percent remark and found none of the words listed as absent from the talk anywhere in it. No person has listened to the recording; the project's rule does not need one.",
+      "checked_how": "Two automatic transcripts agree. On 2026-10-17 the quoted words were found in both YouTube's automatic captions (a machine-made track; searched across the whole file on 2026-10-16) and a transcription of the audio made by OpenAI's Whisper (model large-v3-turbo): the captions place them at 23:06 and Whisper at 23:05, inside the range given. An earlier pass the same day, over the whole recording, also agreed on the 99 percent remark and found none of the words listed as absent from the talk anywhere in it. No person has listened to the recording; the project's rule does not need one.",
       "captions_url": null,
       "transcript_check": {
         "result": "agree",
@@ -1554,7 +1554,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [],
       "paraphrase": {
         "repeated": "A sentence circulating online as a quote from this talk says, roughly, that the only way humans escape being eliminated by AI is to voluntarily merge with machines and become a new species.",
@@ -1598,7 +1598,7 @@
           "path": "/branches/link/"
         }
       ],
-      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no leaf.",
+      "bears_on_note": "The log's introduction places the Musk and Neuralink entries on the link-to-machines branch; the entry itself names no upgrade.",
       "coverage": [],
       "paraphrase": null,
       "why_here": "It is the company's current public statement of purpose, and the gap between it and the 2019 to 2020 statements (reducing the existential threat of AI as the point of the company) is itself part of the record.",

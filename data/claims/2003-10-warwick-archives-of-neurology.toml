@@ -38,5 +38,5 @@ found in any primary source. The ultrasonic extra sense is in a 2005 conference 
 Systems, Man and Cybernetics, Waikoloa, 2005-10-10 to 12), abstract only, described there as a
 one-off trial."""
 bears_on = ["link", "senses-device-gives-a-person-a-new-sense"]
-bears_on_note = "The link to machines (a wired nerve implant controlling a device), and the new-sense leaf on the senses branch."
+bears_on_note = "The link to machines (a wired nerve implant controlling a device), and the new-sense upgrade on the senses branch."
 paraphrase = { repeated = "\"First human to communicate telepathically\" and \"first cyborg\".", seen = "Press framings of the 2002 implant; the grand claims (superhumans, a subspecies) come from the 2000 Wired essay and later interviews such as Scientific American, 2008-03-10, not from the papers.", differs = "The peer-reviewed wording is a first step toward thought communication; Discover magazine (November 2002) itself called the result barely more than cyborg baby talk.", primary_found = true }

@@ -30,7 +30,7 @@ throughout; the plan for a second implant linked to his wife and an internet lin
 are stated as intentions, not results. The essay opens with the line, often quoted, that he was
 born human by accident of fate; that line is really there, as its first words."""
 bears_on = ["link", "senses-device-gives-a-person-a-new-sense"]
-bears_on_note = "The link to machines; also the new-sense leaf on the senses branch (he raises an extra sense as a later aim)."
+bears_on_note = "The link to machines; also the new-sense upgrade on the senses branch (he raises an extra sense as a later aim)."
 paraphrase = { repeated = "Warwick's own site describes the 1998 chip in softer terms, as carrying identification and medical data.", seen = "kevinwarwick.com, Project Cyborg 1.0 page", differs = "The superhuman and second-class-citizen claims are in the Wired essay, not on the site's project page.", primary_found = true }
 notes = """
 His book "I, Cyborg" (Century, 2002; University of Illinois Press, 2004) could not be opened

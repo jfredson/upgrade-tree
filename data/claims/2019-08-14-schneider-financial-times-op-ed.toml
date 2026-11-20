@@ -21,7 +21,7 @@ claimed = """
 Only the headline is on the record here: that merging with AI would be suicide for the human
 mind. What the piece argues beyond its headline was not read."""
 bears_on = ["link"]
-bears_on_note = "The headline is about merging with AI; the entry names no leaf because the body was not read."
+bears_on_note = "The headline is about merging with AI; the entry names no upgrade because the body was not read."
 paraphrase = { repeated = "The widely quoted line about a brain drain.", seen = "Coverage only (Futurism, Observer), not anything read here.", differs = "Not found in anything read for this entry.", primary_found = false }
 notes = """
 Her book "Artificial You: AI and the Future of Your Mind" (Princeton University Press, hardcover

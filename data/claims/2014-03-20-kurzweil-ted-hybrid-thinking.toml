@@ -24,5 +24,5 @@ biological and non-biological thinking, with the non-biological part growing exp
 what he calls the law of accelerating returns. Stated as prediction, with both twenty years from
 now and the 2030s as his own timing; 2045 is not said in this passage."""
 bears_on = ["mind", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "link"]
-bears_on_note = "Memory and thinking (the always-on assistant leaf is the soft version of this; the nanobot version is a long shot), and the link to machines."
+bears_on_note = "Memory and thinking (the always-on assistant upgrade is the soft version of this; the nanobot version is a long shot), and the link to machines."
 paraphrase = { repeated = "Nanobots will make us godlike.", seen = "Lines such as this in coverage.", differs = "They come from a 2015 interview, not this talk.", primary_found = true }

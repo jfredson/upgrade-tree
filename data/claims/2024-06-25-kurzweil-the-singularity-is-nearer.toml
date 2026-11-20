@@ -30,5 +30,5 @@ earth profoundly for the better, on the condition that we meet the scientific, e
 political challenges, with the warning that if we fail our survival is in question. Page 192 says
 that with cloud models of the neocortex, thinking becomes a hybrid."""
 bears_on = ["mind", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "link"]
-bears_on_note = "Memory and thinking (the always-on assistant leaf as the soft version, the nanobot connection as the long shot); the link to machines."
+bears_on_note = "Memory and thinking (the always-on assistant upgrade as the soft version, the nanobot connection as the long shot); the link to machines."
 paraphrase = { repeated = "\"When we merge with AI\", the title's framing.", seen = "The book's title and jacket.", differs = "The publisher's framing; inside, the merge is the 2030s neocortex connection and the 2045 date is conditional.", primary_found = true }

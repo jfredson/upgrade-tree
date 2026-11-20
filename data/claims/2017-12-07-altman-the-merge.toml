@@ -29,5 +29,5 @@ destroy ourselves first; the merge is probably the best case against the alterna
 species competing for dominance; his guess is that we are either the biological bootloader for
 digital intelligence or we work out a successful merge; and he calls for worldwide coordination."""
 bears_on = ["link", "mind-ai-assistant-used-daily-by-most-adults-in-a-country", "inheritance"]
-bears_on_note = "The link to machines; memory and thinking (the always-on assistant leaf is his already-merged-by-phones point); inheritance (genetic enhancement)."
+bears_on_note = "The link to machines; memory and thinking (the always-on assistant upgrade is his already-merged-by-phones point); inheritance (genetic enhancement)."
 paraphrase = { repeated = "The 2025 to 2075 window, and sometimes 2027, as Altman's prediction.", seen = "Later coverage (for example around his 2025 brain-interface venture).", differs = "The text attributes the window to Silicon Valley chatter, and 2027 appears nowhere in it.", primary_found = true }

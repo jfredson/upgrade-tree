@@ -3,6 +3,13 @@
   "intro": "Every change to the record, the stage ladder or the site, with absolute dates. Newest first. The Story page on the site renders this file.",
   "days": [
     {
+      "date": "2026-11-20",
+      "items": [
+        "**The About page no longer says that an entry can carry a list of statements still to be checked, and every build of the site is now stopped if a page says that a fact was written down without being checked against a source.** Nothing in the record rests on an unchecked statement today, and none has since 2026-10-17. If that wording ever appears on a page again, it means a statement needs checking before the page is published, so the build stops until the statement has been checked.",
+        "**Seven claims no longer say which computer their recordings were transcribed on, and twenty-one notes on claims and upgrades now say \"upgrade\" where they used a working word for one.** Wording only: no stage, date, source, quoted phrase or count changed. Every build of the site now also stops if a page names the computer a piece of work was done on."
+      ]
+    },
+    {
       "date": "2026-11-15",
       "items": [
         "**Weekly reading (scheduled task, 2026-11-15): 33 upgrades read, 0 moved, 0 left for a decision; record at data/readings/2026-11-15.toml.** Weekly reading, window 2026-11-08 to 2026-11-15; 30 came back quiet and 3 were noted (Compass Pathways finished its United States psilocybin application on 2026-11-09, a company results release from Opus Genetics on 2026-11-10, and a news item on a walking exoskeleton on 2026-11-10; no stage moves), and the five shared entries agree with Outrunning Ageing.",

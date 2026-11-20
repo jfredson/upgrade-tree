@@ -130,7 +130,7 @@ earlier_stages = [
   { stage = "shown-in-animals", reached_on = 2000-08-17, record = "https://doi.org/10.1038/35021052" },
 ]
 notes = """
-The charter expected this leaf at shown in animals. The record supports first human: the 2009
+The charter expected this upgrade at shown in animals. The record supports first human: the 2009
 Amsterdam report erased a conditioned fear response in healthy volunteers with propranolol given
 after recall, and a 2015 report from the same group did it in people with a spider phobia, with the
 change still present three months later. The result has been repeated by the same group and has
