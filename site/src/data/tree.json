@@ -1,6 +1,6 @@
 {
-  "exported_on": "2026-11-15",
-  "commit": "842bdca",
+  "exported_on": "2026-11-22",
+  "commit": "0ea8071",
   "sibling_site": {
     "name": "Outrunning Ageing",
     "url": "https://outrunningageing.com"
@@ -3345,14 +3345,14 @@
     "siblings": 5
   },
   "last_checked": {
-    "date": "2026-11-15",
+    "date": "2026-11-22",
     "scope": "weekly",
     "by": "scheduled",
     "test": false,
     "upgrades_read": 33,
     "moved": 0,
     "flagged": 0,
-    "noted": 3,
+    "noted": 2,
     "flagged_waiting": 0,
     "movers": []
   }

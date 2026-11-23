@@ -1,0 +1,275 @@
+# The weekly reading of 2026-11-22, done by the scheduled cloud task. Layout: docs/upgrade-schema.md,
+# "The reading record"; procedure: docs/weekly-reading-prompt.md. Scope is weekly (a reading dated 2026-11-01
+# already exists this month), so the 33 tracked upgrades not at the top of the ladder were read. The window is
+# 2026-11-15 to 2026-11-22. The search tool cannot filter by date, so a quiet item means nothing dated in the
+# window turned up in the results, not that nothing exists. No upgrade has a list of claims to check.
+# The five shared entries were compared with Outrunning Ageing: 5 agree, 0 differ.
+
+[reading]
+date = 2026-11-22
+ran_at = "2026-11-23T02:07:32Z"
+scope = "weekly"
+upgrades_read = 33
+searches = 99
+commit_before = "0ea8071"
+by = "scheduled"
+
+[[item]]
+upgrade = "senses-implant-restores-sight-to-a-blind-person"
+verdict = "noted"
+queries = ["retinal implant blind patients peer-reviewed trial results November 2026", "bionic eye vision restoration news this week", "retinal prosthesis approval FDA past week (limited to fda.gov, accessdata.fda.gov)"]
+register = ["fda.gov", "accessdata.fda.gov"]
+found = "A Healio opinion column dated 2026-11-19 discusses the PRIMA retina implant, says it has a European CE mark and is being implanted commercially there, and cites the 2026 New England Journal of Medicine trial report and a company release of 2026-10-05; it does not mention any United States approval. It is commentary, not a new trial report or approval record, and the people in that trial had dry age-related macular degeneration, so no stage moves. The entry already holds the 2013 United States approval record for the Argus II."
+sources = ["https://www.healio.com/news/ophthalmology/20261119/blog-a-retina-implant-that-really-works"]
+opened = ["https://www.healio.com/news/ophthalmology/20261119/blog-a-retina-implant-that-really-works"]
+
+[[item]]
+upgrade = "senses-gene-therapy-restores-sight-in-an-inherited-blindness"
+verdict = "quiet"
+queries = ["gene therapy inherited retinal disease vision trial published November 2026", "gene therapy blindness approval news this week", "retinal gene therapy approval past week (limited to fda.gov, ema.europa.eu)"]
+register = ["fda.gov", "ema.europa.eu"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were a recap of retinal gene therapy milestones from 2026-11-09 and company trial updates from October 2026, none of them an approval or a peer-reviewed report in the window; the entry already holds the 2017-12-19 approval of Luxturna."
+
+[[item]]
+upgrade = "senses-gene-therapy-restores-hearing-in-a-child-born-deaf"
+verdict = "quiet"
+queries = ["OTOF gene therapy deafness hearing child peer-reviewed report November 2026", "Otarmeni lunsotogene parvec news this week", "Otarmeni OTOF lunsotogene parvec past week (limited to fda.gov, nejm.org, thelancet.com)"]
+register = ["fda.gov", "nejm.org", "thelancet.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the United States approval of Otarmeni on 2026-04-23, which the entry already holds, and earlier trial reports from 2024 to 2026."
+
+[[item]]
+upgrade = "senses-implant-in-the-visual-cortex-gives-sight-without-eyes"
+verdict = "quiet"
+queries = ["visual cortex implant electrodes blind volunteers peer-reviewed report November 2026", "brain implant restores vision to blind person Orion cortical prosthesis news this week", "cortical visual prosthesis blind phosphenes past week (limited to pubmed.ncbi.nlm.nih.gov, fda.gov, clinicaltrials.gov)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "fda.gov", "clinicaltrials.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were a visual cortex implant paper in JCI Insight with no date shown in the results, company reports on the Orion implant from January 2026 and older papers; none is an approval record."
+
+[[item]]
+upgrade = "senses-device-gives-a-person-a-new-sense"
+verdict = "quiet"
+queries = ["sensory substitution magnetic sense infrared ultrasound implant human new sense study November 2026", "wearable device gives humans new sense echolocation magnetoreception news this week", "novel sense device wearers detect magnetic field or infrared past week (limited to pubmed.ncbi.nlm.nih.gov, iopscience.iop.org, nature.com)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "iopscience.iop.org", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older coverage of magnetic implants and compass wearables, a 2025 report on infrared contact lenses and a rat study, none dated in the window."
+
+[[item]]
+upgrade = "movement-prosthetic-arm-moves-by-thought-and-feeds-back-touch"
+verdict = "quiet"
+queries = ["prosthetic hand sensory feedback nerve interface amputee study published November 2026", "bionic hand restores touch amputee news this week", "prosthetic hand nerve touch feedback amputee past week (limited to pubmed.ncbi.nlm.nih.gov, fda.gov, science.org, nature.com)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "fda.gov", "science.org", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were papers and news from 2014 to 2022 on nerve-connected hands that give back touch, which the entry already holds."
+
+[[item]]
+upgrade = "movement-powered-exoskeleton-lets-a-paralysed-person-walk"
+verdict = "quiet"
+queries = ["powered exoskeleton spinal cord injury FDA clearance personal use home November 2026", "exoskeleton paralysed people walk Ekso ReWalk Wandercraft news this week", "exoskeleton spinal cord injury clearance past week (limited to fda.gov, accessdata.fda.gov)"]
+register = ["fda.gov", "accessdata.fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the United States clearance of Wandercraft's Eve personal exoskeleton on 2026-08-11 (opened, a company release), a Wandercraft clinic report of 2026-11-10, and older ReWalk and Indego clearances; the entry already holds the 2014 clearance record."
+
+[[item]]
+upgrade = "movement-spinal-implant-lets-a-paralysed-person-walk-again"
+verdict = "quiet"
+queries = ["spinal cord stimulation implant paralysed walk again peer-reviewed study November 2026", "spinal implant paralysis walking ONWARD Medical news this week", "epidural spinal stimulation walking spinal cord injury past week (limited to nejm.org, nature.com, pubmed.ncbi.nlm.nih.gov, fda.gov)"]
+register = ["nejm.org", "nature.com", "pubmed.ncbi.nlm.nih.gov", "fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2018 New England Journal of Medicine report the entry already holds, a new walking trial registered at ClinicalTrials.gov with a last update in May 2026, and a company announcement of a first implant in a new study in September 2026."
+
+[[item]]
+upgrade = "movement-bone-anchored-prosthetic-limb-with-nerve-control"
+verdict = "quiet"
+queries = ["osseointegrated prosthesis nerve electrodes amputee daily life study published November 2026", "bone-anchored bionic arm implanted electrodes news this week", "osseointegrated neuromusculoskeletal prosthesis implanted electrodes past week (limited to stm.sciencemag.org, science.org, fda.gov, pubmed.ncbi.nlm.nih.gov)"]
+register = ["stm.sciencemag.org", "science.org", "fda.gov", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were a Shirley Ryan AbilityLab release of 2026-09-17 on the first United States patient in a bone-anchored arm study under an investigational device exemption (opened; not a peer-reviewed report or an approval), and earlier papers from the Chalmers group."
+
+[[item]]
+upgrade = "movement-gene-therapy-builds-stronger-muscle-in-a-healthy-body"
+verdict = "quiet"
+queries = ["myostatin gene therapy healthy adults muscle mass strength trial past week November 2026", "gene therapy build muscle healthy volunteers news this week", "myostatin follistatin gene therapy muscle healthy volunteers (limited to clinicaltrials.gov, pubmed.ncbi.nlm.nih.gov)"]
+register = ["clinicaltrials.gov", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were an older registry entry for an age-related muscle loss gene therapy trial (NCT07443826, recruiting, in older adults) and a December 2025 magazine piece, neither a peer-reviewed report in healthy adults."
+
+[[item]]
+upgrade = "mind-brain-implant-improves-memory-recall-in-a-person"
+verdict = "quiet"
+queries = ["deep brain stimulation memory improvement implanted electrodes study November 2026", "brain implant boosts memory recall patients new study this week", "memory stimulation implanted electrodes learning controlled study (limited to pubmed.ncbi.nlm.nih.gov, nature.com, fda.gov)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "nature.com", "fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older papers the entry already holds or that predate the window (the 2012 entorhinal stimulation paper, 2017 to 2019 closed-loop and hippocampal stimulation studies), and nothing from the regulator."
+
+[[item]]
+upgrade = "mind-drug-raises-a-measured-thinking-ability-in-healthy-adults"
+verdict = "quiet"
+queries = ["placebo-controlled trial drug improves reasoning memory healthy adults November 2026", "smart drug nootropic cognitive enhancement healthy people new trial this week", "cognitive enhancement drug healthy volunteers placebo-controlled (limited to clinicaltrials.gov, pubmed.ncbi.nlm.nih.gov)"]
+register = ["clinicaltrials.gov", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older modafinil, methylphenidate and supplement trials with mixed or null results, and a few registry entries with no results posted, none showing a replicated gain in reasoning, learning or memory."
+
+[[item]]
+upgrade = "mind-ai-assistant-used-daily-by-most-adults-in-a-country"
+verdict = "quiet"
+queries = ["survey share of adults use AI chatbot daily nationally representative November 2026", "majority of adults use AI assistant every day poll country new report", "AI use adults daily survey (limited to pewresearch.org, reutersinstitute.politics.ox.ac.uk, ons.gov.uk)"]
+register = ["pewresearch.org", "reutersinstitute.politics.ox.ac.uk", "ons.gov.uk"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest result was the Pew Research Center report of 2026-06-17 the entry already holds, which puts daily chatbot use at about a quarter of U.S. adults (24 percent), below the more-than-half the test asks for."
+
+[[item]]
+upgrade = "mind-electrical-stimulation-improves-learning-in-healthy-adults"
+verdict = "quiet"
+queries = ["transcranial direct current stimulation learning healthy adults sham-controlled study November 2026", "brain stimulation helps people learn faster new research this week", "tDCS learning sham-controlled healthy adults (limited to pubmed.ncbi.nlm.nih.gov, fda.gov)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older sham-controlled studies and meta-analyses with mixed findings, and nothing from the regulator."
+
+[[item]]
+upgrade = "mood-brain-implant-lifts-severe-depression"
+verdict = "quiet"
+queries = ["deep brain stimulation treatment-resistant depression trial results November 2026", "implant for severe depression FDA approval brain stimulator news this week", "deep brain stimulation depression approval (limited to fda.gov, pubmed.ncbi.nlm.nih.gov)"]
+register = ["fda.gov", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older trials and reviews, and the April 2026 clearance of a first-in-human trial of a small skull implant (a trial authorisation, not an approval); no regulator approval of an implant for depression turned up."
+
+[[item]]
+upgrade = "mood-closed-loop-implant-detects-and-corrects-a-mood-state"
+verdict = "quiet"
+queries = ["closed-loop responsive brain stimulation depression implant study November 2026", "implant that senses mood brain signal and stimulates automatically patient results this week", "closed-loop neurostimulation depression adaptive (limited to nature.com, pubmed.ncbi.nlm.nih.gov, fda.gov)"]
+register = ["nature.com", "pubmed.ncbi.nlm.nih.gov", "fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2021 Nature Medicine single-patient report the entry already holds and a registered feasibility trial (NCT04004169) with no results listed."
+
+[[item]]
+upgrade = "mood-psychedelic-therapy-approved-for-prescription"
+verdict = "quiet"
+queries = ["psilocybin MDMA prescribing approval regulator announcement November 2026", "psychedelic therapy approved prescription news this week", "psilocybin MDMA approval notice (limited to tga.gov.au, fda.gov, ema.europa.eu)"]
+register = ["tga.gov.au", "fda.gov", "ema.europa.eu"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were Australia's notice allowing authorised psychiatrists to prescribe psilocybin and MDMA from 2023-07-01, which the entry already holds, and the FDA's April 2026 fast-review vouchers, which are not an approval."
+
+[[item]]
+upgrade = "mood-treatment-removes-a-specific-fear-memory"
+verdict = "quiet"
+queries = ["erase specific fear memory reconsolidation propranolol study November 2026", "scientists remove fear memory humans drug while recalling new study this week", "fear memory reconsolidation blockade human control group (limited to pubmed.ncbi.nlm.nih.gov, nature.com)"]
+register = ["pubmed.ncbi.nlm.nih.gov", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older human studies of propranolol and other reconsolidation blockers (2010 to 2020) with mixed replication, and none new to the record."
+
+[[item]]
+upgrade = "lifespan-a-drug-adds-healthy-years-to-a-life"
+verdict = "noted"
+queries = ["randomized placebo-controlled trial drug lifespan healthy ageing results published November 2026", "longevity drug human trial news this week metformin rapamycin ageing", "ageing drug trial placebo lifespan results November 2026 (limited to fda.gov, clinicaltrials.gov, pubmed.ncbi.nlm.nih.gov)"]
+register = ["fda.gov", "clinicaltrials.gov", "pubmed.ncbi.nlm.nih.gov"]
+found = "The trial registry posted results on 2026-11-18 for a placebo-controlled trial of low-dose rapamycin on ovarian ageing in 50 women (blood level of a hormone that tracks egg supply, 12 months). It measures one organ's ageing marker, not longer life or time free of age-related disease, so it does not meet the test and no stage moves."
+sources = ["https://clinicaltrials.gov/api/v2/studies/NCT05836025"]
+opened = ["https://clinicaltrials.gov/api/v2/studies/NCT05836025"]
+
+[[item]]
+upgrade = "lifespan-partially-resetting-cells-reverses-ageing-in-an-animal"
+verdict = "quiet"
+queries = ["partial reprogramming Yamanaka factors reverse ageing mice peer-reviewed study November 2026", "epigenetic reprogramming rejuvenation first human trial Life Biosciences YouthBio news this week", "partial reprogramming ageing trial registry (limited to clinicaltrials.gov, nature.com, pubmed.ncbi.nlm.nih.gov)"]
+register = ["clinicaltrials.gov", "nature.com", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older mouse papers (2016, 2022, 2024) and June 2026 reports of the first person dosed in a safety trial of a reprogramming therapy in the eye, a safety trial that is not a result on the test"
+
+[[item]]
+upgrade = "lifespan-a-drug-clears-aged-cells-from-a-persons-body"
+verdict = "quiet"
+queries = ["senolytic trial humans fewer senescent cells peer-reviewed report November 2026", "dasatinib quercetin fisetin senescent cells clearance patients news this week", "senolytic senescent cell trial results (limited to clinicaltrials.gov, pubmed.ncbi.nlm.nih.gov, nature.com)"]
+register = ["clinicaltrials.gov", "pubmed.ncbi.nlm.nih.gov", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2019 kidney-disease report of fewer aged cells after treatment, which the entry already holds, and several later senolytic trial papers (bone, liver, eye, cancer) whose publication dates in the window could not be confirmed from the search results."
+
+[[item]]
+upgrade = "lifespan-organ-from-a-gene-edited-pig-keeps-a-person-alive"
+verdict = "quiet"
+queries = ["pig kidney xenotransplant patient transplant centre announces November 2026", "gene-edited pig organ transplant human survives months this week", "xenotransplantation pig kidney trial clearance patient (limited to fda.gov, clinicaltrials.gov, nyulangone.org, massgeneral.org)"]
+register = ["fda.gov", "clinicaltrials.gov", "nyulangone.org", "massgeneral.org"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2024 and 2025 Mass General and NYU Langone pig kidney cases, including the 271-day record and the NYU Langone clinical trial that began in November 2025, all older records the entry already holds."
+
+[[item]]
+upgrade = "lifespan-lab-grown-organ-works-in-a-person-for-a-year"
+verdict = "quiet"
+queries = ["lab-grown organ implanted in patient one year follow-up report November 2026", "bioengineered bladder windpipe kidney tissue-engineered organ transplant first patient news this week", "engineered organ implanted patient follow-up one year (limited to nature.com, pubmed.ncbi.nlm.nih.gov, thelancet.com, fda.gov)"]
+register = ["nature.com", "pubmed.ncbi.nlm.nih.gov", "thelancet.com", "fda.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older follow-up reports on lab-grown bladders (2006), vaginal organs (2014) and a windpipe (retracted), plus tissue-engineered vessel trials."
+
+[[item]]
+upgrade = "inheritance-child-born-from-a-gene-edited-embryo"
+verdict = "quiet"
+queries = ["baby born gene-edited embryo confirmed birth official inquiry November 2026", "heritable genome editing embryo clinic company pregnancy plans news this week", "heritable human genome editing embryo birth published report (limited to nature.com, science.org, pubmed.ncbi.nlm.nih.gov, who.int)"]
+register = ["nature.com", "science.org", "pubmed.ncbi.nlm.nih.gov", "who.int"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2018 birth records the entry already holds, a late September 2026 report that two start-ups are still in laboratory work on embryo editing, and a Nature piece on embryo base-editing research with no pregnancy."
+
+[[item]]
+upgrade = "inheritance-baby-born-with-donor-mitochondria"
+verdict = "quiet"
+queries = ["mitochondrial donation baby born Newcastle HFEA licence 2026", "mitochondrial replacement therapy babies born results Australia mitoHOPE news November 2026", "mitochondrial donation licence births (limited to hfea.gov.uk, nejm.org, nature.com)"]
+register = ["hfea.gov.uk", "nejm.org", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the July 2025 reports of eight births in Newcastle with the regulator's statement that 35 patients are approved, and a June 2026 Australian training-only licence, which is not a treatment licence."
+
+[[item]]
+upgrade = "inheritance-embryos-chosen-by-a-genetic-score-for-traits"
+verdict = "quiet"
+queries = ["Nucleus Genomics Orchid Herasight embryo selection IQ height polygenic score offer clinic November 2026", "polygenic embryo screening intelligence startup regulator ban statement this week", "embryo selection polygenic traits height IQ announcement (limited to nucleusgenomics.com, orchidhealth.com, herasight.com, nucleus.com)"]
+register = ["nucleusgenomics.com", "orchidhealth.com", "herasight.com", "nucleus.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the companies' existing offers, a trial listing by Nucleus Genomics first posted 2026-09-25 and not yet recruiting, and an advertising regulator's finding against one company's claims, all dated before the window."
+
+[[item]]
+upgrade = "inheritance-mammal-carried-to-birth-in-an-artificial-womb"
+verdict = "quiet"
+queries = ["artificial womb mammal birth from fertilisation peer-reviewed paper November 2026", "artificial womb ectogenesis lamb premature human trial FDA news this week", "ex utero embryo development mouse artificial uterus birth (limited to nature.com, pubmed.ncbi.nlm.nih.gov, cell.com, science.org)"]
+register = ["nature.com", "pubmed.ncbi.nlm.nih.gov", "cell.com", "science.org"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were mouse embryos grown outside the body only to about day 11 (2021 and 2022 papers), a 2026 Nature paper on mouse embryo models whose page could not be opened, and the 2017 premature lamb work, none reporting a live birth."
+
+[[item]]
+upgrade = "link-wireless-brain-implant-controls-a-computer"
+verdict = "quiet"
+queries = [
+  "fully implanted wireless brain-computer interface paralysis cursor peer-reviewed past week November 2026",
+  "Neuralink Blindsight Synchron Paradromics wireless implant patient news November 2026",
+  "wireless brain implant paralysis computer control study (limited to nejm.org, nature.com, pubmed.ncbi.nlm.nih.gov)",
+]
+register = ["nejm.org", "nature.com", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were older: the 2016 New England Journal of Medicine report the entry already holds, the 2022 to 2023 Stentrode safety study, and company news of first implants (Paradromics) that is not a peer-reviewed report."
+
+[[item]]
+upgrade = "link-wired-brain-implant-controls-a-cursor"
+verdict = "quiet"
+queries = [
+  "intracortical brain implant paralysis cursor control wired study published November 2026",
+  "BrainGate paralysed volunteer cursor new research this week",
+  "brain implant cursor paralysis electrodes Utah array (limited to pubmed.ncbi.nlm.nih.gov, journals.lww.com, nature.com)",
+]
+register = ["pubmed.ncbi.nlm.nih.gov", "journals.lww.com", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were a Nature Medicine paper of 2026-06-15 on long-term speech and cursor use, a BrainGate report of 2026-03-16, and the 1998 and 2006 reports the entry already rests on."
+
+[[item]]
+upgrade = "link-brain-implant-turns-intended-speech-into-text"
+verdict = "quiet"
+queries = [
+  "brain implant speech decoding words per minute vocabulary error rate paper November 2026",
+  "speech neuroprosthesis ALS stroke patient decodes attempted speech new study this week",
+  "speech neuroprosthesis attempted speech text words per minute (limited to nature.com, nejm.org, pubmed.ncbi.nlm.nih.gov)",
+]
+register = ["nature.com", "nejm.org", "pubmed.ncbi.nlm.nih.gov"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2023 Nature paper the entry already holds (62 words a minute), the 2024 New England Journal of Medicine and 2025 Nature reports, and a 2026-06-15 Nature Medicine paper, all older than the window."
+
+[[item]]
+upgrade = "link-brain-implant-gives-a-person-touch-from-a-robotic-hand"
+verdict = "quiet"
+queries = [
+  "brain implant touch sensation robotic hand paralysis somatosensory cortex microstimulation news November 2026",
+  "bionic hand sense of touch brain stimulation tetraplegia new study this week",
+  "intracortical microstimulation touch robotic hand finger sensation human (limited to science.org, pubmed.ncbi.nlm.nih.gov, nature.com)",
+]
+register = ["science.org", "pubmed.ncbi.nlm.nih.gov", "nature.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were the 2016 Science Translational Medicine report the entry already holds and later papers from 2024 and 2025 on grip-force touch feedback and long-term safety of the stimulation."
+
+[[item]]
+upgrade = "link-uploaded-animal-brain-reproduces-what-it-learned"
+verdict = "quiet"
+queries = [
+  "whole brain emulation animal learned task simulation connectome November 2026",
+  "uploaded mouse or fly brain simulation reproduces learned behavior new paper this week",
+  "whole-brain emulation simulation learned behavior animal readout (limited to nature.com, science.org, pubmed.ncbi.nlm.nih.gov, cell.com)",
+]
+register = ["nature.com", "science.org", "pubmed.ncbi.nlm.nih.gov", "cell.com"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were fruit fly brain models (a 2024 Nature model of the fly's wiring and a March 2026 company demonstration), which show innate behaviour and not a task the animal learned, and no peer-reviewed report met the test."
+
+[[item]]
+upgrade = "link-brain-link-carries-more-information-than-speech"
+verdict = "quiet"
+queries = [
+  "brain-computer interface bits per second information rate record paper November 2026",
+  "Neuralink bits per second record BCI throughput faster than speech this week",
+  "brain-computer interface information transfer rate bits per second sustained cursor typing (limited to nature.com, pubmed.ncbi.nlm.nih.gov, iopscience.iop.org)",
+]
+register = ["nature.com", "pubmed.ncbi.nlm.nih.gov", "iopscience.iop.org"]
+found = "Nothing dated 2026-11-15 to 2026-11-22 turned up in the search results. The nearest results were company figures, not peer-reviewed: Neuralink's 11.32 bits a second for cursor control (announced about 2026-10-01) and Paradromics' preprint figure of over 200 bits a second; a Society for Neuroscience release of 2026-11-14 announced meeting talks but gave no bit rate."
+
